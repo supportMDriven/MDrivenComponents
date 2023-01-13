@@ -1,0 +1,9 @@
+.chart div {
+  font: 24px sans-serif;
+  background-color: springgreen;
+  text-align: right;
+  padding: 10px;
+  margin: 1px;
+  color: white;
+  height:40px;
+}

@@ -1,0 +1,11 @@
+.draggable {
+    cursor: move;
+  }
+
+.svgRectStyle{
+    fill:blue;
+    stroke:pink;
+    stroke-width:5;
+    fill-opacity:0.1;
+    stroke-opacity:0.9;
+}

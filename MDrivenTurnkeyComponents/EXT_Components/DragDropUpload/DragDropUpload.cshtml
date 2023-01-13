@@ -1,0 +1,6 @@
+
+  <div class="drop-zone">
+    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+	<input file-upload ddupload type="file" vmclass="[ViewModelClassName]" id="[ViewModelClassName].[ViewModelColumnName]" ng-readonly="ViewModelRoot.VM_Status.[ViewModelClassName]_[ViewModelColumnName]_ReadOnly" class="drop-zone__input" hidden>
+	<span ng-bind="((1*ViewModelRoot.ViewData['FileUploadPercent__[ViewModelClassName].[ViewModelColumnName]'])| number:2)"></span>
+  </div>

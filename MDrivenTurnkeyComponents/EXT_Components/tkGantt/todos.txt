@@ -1,0 +1,22 @@
+x resize left and right
+x change row
+x fix datescaler sluggish zzom
+x fix datescaler document.mousemove
+x fix GanttRow size size from datescaler and avoid need for pixel margins
+x Add splitter between tree and rows
+x Special cursor on resize
+x Special cursor on move
+x Allow, move, resize start, stop
+x TimeItem style reef in data
+x Better TimeItem style
+x Take DS start and stop from server if exists
+x CreateTime by click drag
+x CollisionDetection
+x Dubbelcklick -> action
+Turn off weeks
+Draw span TimeItem
+ZeroLength TimeItem
+list be special time intervals som kan ritas i bakgrund för att visa Nått
+Länkar
+TodayLine
+Snapping

@@ -1,0 +1,77 @@
+<div id="paypal-button-container" amount="{{data.Amount}}" ></div>
+
+<div id="paypal-error" style="display:none">
+  <div>We seem to have a problem here</div>
+  <pre id="error-message"></pre>
+</div>
+
+<div id="paypal-cancel" style="display:none">
+  <h2>Canceled due to user request</h2>
+</div>
+
+
+<script>
+
+
+	function onCancel() {
+            document.getElementById('paypal-cancel').style.display = 'inline';
+            document.getElementById('paypal-end').style.display = 'none';
+        }
+        
+        function onError(err) {
+            document.getElementById('error-message').textContent = err.message;
+            document.getElementById('paypal-error').style.display = 'inline';
+        }
+
+
+if (typeof beenhere === 'undefined') {
+  beenhere=true;
+
+
+  var script = document.createElement('script');
+  script.onload = function () {
+    scriptloaded=true;
+    console.log('PayPal Script was loaded');
+   };
+  script.src = "https://www.paypal.com/sdk/js?client-id="+"[ViewModelColumnLabel]"; // need to send the client id as static data (label text) since this happens before we have access to data
+  document.head.appendChild(script); 
+  
+}
+
+if (typeof scriptloaded != 'undefined') {
+    //do stuff with the script
+    paypal.Buttons({
+    createOrder: function(data, actions) {
+      // This function sets up the details of the transaction, including the amount and line item details.
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: $("#paypal-button-container").attr("amount")	
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      // This function captures the funds from the transaction.
+      console.log('onApprove data ' + JSON.stringify(data));
+      var vmroot=angular.element('#paypal-button-container').controller().$scope.ViewModelRoot;
+      vmroot.OnApproveJson=JSON.stringify(data);
+      return actions.order.capture().then(function(details) {
+        // This function shows a transaction success message to your buyer.
+        console.log('onApprove details' + JSON.stringify(details));
+        var vmroot=angular.element('#paypal-button-container').controller().$scope.ViewModelRoot;
+        vmroot.OnApproveDetailsJson=JSON.stringify(details);
+        angular.element('#paypal-button-container').controller().viewClient.CallServerAction('[ViewModelClassName]','DoAfterPurchase')
+      });
+    },
+    onCancel: onCancel,
+    onError: onError
+  }).render('#paypal-button-container');
+    // This function displays Smart Payment Buttons on your web page.
+}
+
+
+</script>
+
+
+

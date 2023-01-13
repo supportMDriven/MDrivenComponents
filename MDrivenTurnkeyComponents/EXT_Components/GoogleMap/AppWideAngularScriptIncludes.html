@@ -1,0 +1,25 @@
+﻿<!--  
+  This file is referenced like this in the AngularApp.cshtml:
+
+
+@if (File.Exists(Server.MapPath("/EXT_Scripts/AppWideAngularScriptIncludes.html")))
+{
+  @Html.Raw(File.ReadAllText(Server.MapPath("/EXT_Scripts/AppWideAngularScriptIncludes.html")))
+}
+
+
+  -----------------
+  Intension for this file: To enable you to inject scripts that executes before angular compile - thus making it possible to add directives
+
+  Suggested usage in this file:
+
+   <script src="/EXT_Scripts/BoardComponentScriptsThatUseDirectivesAndSuch.js"></script>
+   <script src="/EXT_Scripts/GanttComponentScriptsThatUseDirectivesAndSuch.js"></script>
+   <script src="/EXT_Scripts/<YourScript>.js"></script>
+
+  
+  -->
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzpyUX1jemY7FL6d4CEigmALWHsCqFROA&callback=initMap">
+</script>

@@ -1,0 +1,13 @@
+<div  >
+  <svg id='theSVG' height='600px' width='100%' thesvg  >
+    <g class='draggable' ng-repeat="row in ViewModelRoot.Curr_MainDrawingView().ThingsInDrawing" 
+        ng-attr-transform="translate({{(row.x)}} {{(row.y)}})" ng-attr-vmclassid="{{row.VMClassId.asString}}">
+      <rect  class="svgRectStyle" x="-75" y="-75" width="150" height="150" >    
+      </rect>
+      <text x="0" y="70"  dominant-baseline="middle" text-anchor="middle">{{row.Text}} rowx{{row.x}} rowy{{row.y}}</text>  
+      <text x="0" y="80"  dominant-baseline="middle" text-anchor="middle">{{row.Text}}</text>  
+      <circle r="40" stroke="green" stroke-width="4" fill="pink"  />
+      <circle  r="20" stroke="green" stroke-width="4" fill="yellow"  />    
+    </g>
+  </svg>
+</div>
