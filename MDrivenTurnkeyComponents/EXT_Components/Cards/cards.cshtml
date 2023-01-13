@@ -1,0 +1,37 @@
+﻿
+<!-- put this style inside html so that it only effects layout when this is loaoded -->
+ <style>
+#globalNavWrapper{
+	 visibility: collapse;
+	  display: none;
+ }
+
+#globalContentWrapper{
+    margin-top: -50px;
+}
+
+#viewmodelWrapper {
+         overflow: visible;
+     }
+</style>
+
+<div id="cardshufflediv" class="findthis">
+  <div><button type="button" onclick="myShuffle()" class="button">{{data.ShuffleText}}</button>
+  
+  <button type="button" ng-click="StreamingViewModelClient.CallServerAction('Play','Back')" class="button">{{data.TextForBack}}</button> 
+  
+  </div>
+  <div ng-repeat="data in data.CardsGraphic" cards class="box back">
+      <div class="spin text">
+          <p class="header">{{data.Category}}</p>
+          <article class="colorPlate" ng-class="data.Color">
+          <p class="bodytext">{{data.Description}}</p>
+          <p class="followuptext">{{data.FollowUp}}</p>
+          <p class="followuptext"><button type="button" onclick="myClose(this)" class="closebutton">x</button></p>
+          </article>
+      </div>
+	
+  </div>
+  
+</div>
+

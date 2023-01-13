@@ -1,0 +1,167 @@
+body {
+    overflow:hidden;
+}
+
+#container {
+  height: 100%;
+  position:relative;
+}
+
+.spin {
+  box-shadow: 0 0 20px #222;
+  font-size: 50px;
+  text-align: center;
+  font-family: Asap, Avenir, Arial, sans-serif;
+  width: 137px;
+  height: 200px;
+  top:0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  margin-left: -75px;
+  margin-top: -75px;
+
+}
+
+.back .spin{
+	background: url("humanaback.png");
+  background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: transparent;		
+}
+
+.front .spin{
+	background: white;
+    color: black;		
+  width: 200px;
+  height: 292px;
+}
+
+.colorPlate{
+    margin: 5px  12px 0px 12px;
+    height: 75%; 
+    border-radius: 10px;
+    padding-top: 10px;
+    display: block;
+}
+
+
+
+.back .colorPlate{
+    display: none;
+    }
+    
+
+.back {
+		-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+}
+
+.front {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+
+.text {
+    color: black;
+	font-size:12px;
+    line-height: 16px;
+    -webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+    text-align: left;
+    margin:8px;
+}
+
+
+.header {
+    margin:14px;
+    font-weight:normal;
+    text-align: center;
+    margin:8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:18px;
+    font-weight: 100;
+}
+
+.bodytext {
+    font-size:12px;
+    font-weight:bold;
+    text-align: left;
+    margin: 8px;
+}
+
+
+.followuptext {
+    font-weight:normal;
+    text-align: left;
+    margin: 8px;
+}
+
+
+
+.box {
+    position: absolute;
+    background-color: #fff;
+    text-align: center;
+}
+
+.findthis {
+    /* background-color: #d0debb;    */
+    background-color: #E5788D;  /* lighter pink */
+    width: 100%;
+    position: relative;
+    height: 80%;
+    overflow:visible;
+     
+}
+
+
+.button {
+    /* background-color: #d0debb; Green */
+    background-color: #E5788D; /* lighter pink */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+body {
+/* background-color: #d0debb; green*/
+ background-color: #E5788D;  /* lighter pink */
+	
+}
+
+#cardshufflediv {
+    height: 80vh; /*vh*/
+    overflow: visible;
+}
+
+#viewmodelWrapper {
+    overflow: visible;
+}
+
+.back .closebutton{
+display: none;
+}
+
+
+
+.closebutton{
+ float:right;
+}
+
+
+ 
+
