@@ -2,6 +2,10 @@
 .board {
   background: #0079bf; }
 
+.Board{
+	height:100%;
+}
+
 .lists {
   display: grid;
   grid-template-rows: 100% 20px;
