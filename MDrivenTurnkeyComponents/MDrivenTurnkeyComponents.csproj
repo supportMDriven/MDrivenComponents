@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="EXT_Components\Cards\" />
-    <Folder Include="MDrivenMergeable\Map\Map_AssetsTK\SiteAssets\" />
   </ItemGroup>
 
 </Project>
