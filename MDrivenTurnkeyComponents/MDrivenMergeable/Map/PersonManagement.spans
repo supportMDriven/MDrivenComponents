@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="PersonManagement" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="1bba2e25-3b1e-4951-8eed-a109a4677873">
+  <Class>
+    <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Person" ExpressionActAsForActions="" id="9555b8d9-30e4-46b6-9c26-ed483e5acdf3">
+      <Class>
+        <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Person" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fc7ee456-c529-4b34-9475-f110ce526f44" />
+        <Column Name="Selected" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9a9aa9b5-1bfe-477a-bf3a-0ce5a3aaa5b9">
+          <ReferedNesting>
+            <Nesting Name="Details" idref="df687ea1-d220-4b0b-ad9b-e7b3774d003e" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllPersons" idref="0ef02034-9a74-420e-ab4f-857f309a8672" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="Details" ExpressionActAsForActions="" id="df687ea1-d220-4b0b-ad9b-e7b3774d003e">
+      <Class>
+        <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="6" YPos="0" id="d03b9f21-11de-4adc-b3ff-e523ce95142a" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Selected" idref="9a9aa9b5-1bfe-477a-bf3a-0ce5a3aaa5b9" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllPersons" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="Person.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="0ef02034-9a74-420e-ab4f-857f309a8672">
+      <ReferedNesting>
+        <Nesting Name="Person" idref="9555b8d9-30e4-46b6-9c26-ed483e5acdf3" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OneCardView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="800e8a1f-f2f4-4937-8c03-232d950d66a1">
+  <Class>
+    <Class Name="BoardCard" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+  </Class>
+  <Nesting>
+    <Nesting Name="PersonPickList" ExpressionActAsForActions="" id="01f9b2bb-8133-4497-80d0-d3d26f6f8171">
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="dd804afb-9f08-4549-a9f2-c32cfa70e19f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="PersonPickList" idref="37b2c6af-8ee1-46c2-b192-a1ea2515bec3" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="CardName" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="0ea9a428-574e-4de4-b8c9-e0d1def129a5" />
+    <Column Name="Progress" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Progress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="3" id="bdd69110-b0e0-4899-be61-3f1e917c13a1" />
+    <Column Name="TheList" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.BoardList" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="ace0f689-2202-4ed0-ba35-dc49aaf45f53">
+      <ColumnForPickList>
+        <Column Name="PersonPickList" idref="37b2c6af-8ee1-46c2-b192-a1ea2515bec3" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="PersonPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="BoardList.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="37b2c6af-8ee1-46c2-b192-a1ea2515bec3">
+      <ReferedNesting>
+        <Nesting Name="PersonPickList" idref="01f9b2bb-8133-4497-80d0-d3d26f6f8171" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vLat" InitialValue="" TypeName="Double" UserData="" />
+    <SpanVariable Name="vLng" InitialValue="" TypeName="Double" UserData="" />
+  </SpanVariables>
+</Span>

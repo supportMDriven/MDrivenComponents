@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="MainDiagram" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.1025" Id="f38c75ea-2666-4502-a81d-64d748117884">
+  <PlacedClass>
+    <PlacedClass ClassId="e5b111f1-8820-4634-b817-ad357fffdd6e" Color="-922779393" LastKnownName="Activity" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="76" ShowAttributes="False" ShowMethods="False" Size="1" x="256" y="296" id="7946267c-9823-4213-9bd8-be836abbe723">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="a9e77aa6-d818-4112-a1fe-7bedd2fed9cb">
+          <AssociationEnd>
+            <AssociationEnd Name="Activities" idref="31b684e4-aadc-4f09-b15d-eb0f84bf3170" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="2" ViaPointsStartsHere="True" x="-8" y="49" id="f3954ef4-2e29-4bda-b89a-72b5c8527250">
+          <AssociationEnd>
+            <AssociationEnd Name="Activity" idref="f9d1ffc9-db14-45e4-ac77-696e4905cc07" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="248" y="408" id="3de65692-9104-49f2-95dc-c62921bf208b">
+              <next>
+                <FreeAirViaPoint NextLegDrawKind="1" x="240" y="408" id="f45d6092-4e4f-4ff7-9749-8e9a067470fc">
+                  <next>
+                    <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="d2f9ff23-dcfa-4c88-a82e-2901c1d4aae2">
+                      <AssociationEnd>
+                        <AssociationEnd Name="ActivityActions" idref="4f4b36b5-93cc-4f87-98e6-a0b3e38d2c8f" />
+                      </AssociationEnd>
+                    </AssociationEndConnection>
+                  </next>
+                </FreeAirViaPoint>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Activity" idref="e5b111f1-8820-4634-b817-ad357fffdd6e" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="38" y="32" id="f7045f56-ed7f-4f03-896f-2185e44bbf16">
+          <Class>
+            <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-48" y="31" id="b28bf56b-6580-4ed2-8df7-00a6c56d0734">
+              <Class>
+                <Class Name="Activity" idref="e5b111f1-8820-4634-b817-ad357fffdd6e" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="f40ca4df-2c38-4ca4-84cd-fa5885727a89" Color="1692800256" LastKnownName="SysSuperClass" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="552" y="192" id="867edaf3-d085-40bc-af53-6be7f2c5589c">
+      <Class>
+        <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+      </Class>
+      <GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-57" y="16" id="7ec8d81c-68a9-4e5a-a56e-cd89e31c9c4f">
+          <Class>
+            <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+          </Class>
+        </GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-24" y="31" id="9af0b624-1515-4abf-9623-7a9b5ecfd375">
+          <Class>
+            <Class Name="ActivityAction" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+          </Class>
+        </GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-48" y="31" id="b28bf56b-6580-4ed2-8df7-00a6c56d0734">
+          <Class>
+            <Class Name="Activity" idref="e5b111f1-8820-4634-b817-ad357fffdd6e" />
+          </Class>
+        </GeneralizationConnection>
+      </GeneralizationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="d49370a7-3c25-43fc-9946-69c651349918" Color="1692800256" LastKnownName="ActivityAction" PickedFeatureVisibility="ShowAll" RenderedHeight="109" RenderedWidth="112" ShowAttributes="False" ShowMethods="False" Size="1" x="264" y="424" id="aeb660c8-456f-4d2c-9107-7aa0d7645cf4">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="d2f9ff23-dcfa-4c88-a82e-2901c1d4aae2">
+          <AssociationEnd>
+            <AssociationEnd Name="ActivityActions" idref="4f4b36b5-93cc-4f87-98e6-a0b3e38d2c8f" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ActivityAction" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="56" y="24" id="f03962e6-382d-4b33-a04d-364efe1b1224">
+          <Class>
+            <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-24" y="31" id="9af0b624-1515-4abf-9623-7a9b5ecfd375">
+              <Class>
+                <Class Name="ActivityAction" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="cbca18d7-9cf1-4c41-a567-15eccced61ab" Color="1692800256" LastKnownName="Project" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="131" ShowAttributes="False" ShowMethods="False" Size="1" x="240" y="144" id="fb99d873-3242-44a9-93d8-02e141a5aae0">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="16" y="73" id="5fd7c3b2-aff5-45ed-9c94-f63fb2d856da">
+          <AssociationEnd>
+            <AssociationEnd Name="Project" idref="8f7b6ec0-ab9a-4096-b3e7-db456dedd3f8" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="a9e77aa6-d818-4112-a1fe-7bedd2fed9cb">
+              <AssociationEnd>
+                <AssociationEnd Name="Activities" idref="31b684e4-aadc-4f09-b15d-eb0f84bf3170" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="65.5" y="40" id="11da0092-8ff6-4e37-b98b-557ce9603054">
+          <Class>
+            <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-57" y="16" id="7ec8d81c-68a9-4e5a-a56e-cd89e31c9c4f">
+              <Class>
+                <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Projects" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="4cb62196-a59d-413c-b0c0-54001dfe9a3d">
+  <Class>
+    <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+  </Class>
+  <Nesting>
+    <Nesting Name="RootList" ExpressionActAsForActions="" id="4d3896e4-1723-447e-96d0-4c460f4c069f">
+      <Class>
+        <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="79ba810f-7a59-4661-8857-210fbc8bb721">
+          <TaggedValue>
+            <TaggedValue Tag="DesignTimeColor" Value="#80FF8000" />
+          </TaggedValue>
+        </Column>
+        <Column Name="SubNodes" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Activities" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="-1" YPos="-6" id="5cbd4d20-e974-46ee-b7ac-3ba3599e9a1d">
+          <ReferedNesting>
+            <Nesting Name="Level1" idref="3e9fa57a-fcaa-492d-848b-5439a6460862" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="TimeItems" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self-&gt;asSet" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="-1" YPos="-3" id="3204d2c3-e0a1-450c-9030-512b6a18da85">
+          <ReferedNesting>
+            <Nesting Name="TimeItem" idref="f3d47cef-a280-4431-8fa4-cac8d036e31a" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="allowCreate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="false" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="b4318f57-6f13-4717-84fb-2ba3b3b4674b" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="RootNodes" idref="dad09470-63be-4cfe-bd5d-862192e31872" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="Level1" ExpressionActAsForActions="" id="3e9fa57a-fcaa-492d-848b-5439a6460862">
+      <Class>
+        <Class Name="Activity" idref="e5b111f1-8820-4634-b817-ad357fffdd6e" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="b26f7a82-37a7-4b49-8e27-376c6bfee36a" />
+        <Column Name="TimeItems" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ActivityActions" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="-25" id="5a1018ca-0420-4ada-aabd-ca77c1021081">
+          <ReferedNesting>
+            <Nesting Name="TimeItem2" idref="24b00401-2a09-4c28-9694-6c31e1d339cb" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="GanttTimeItemCreate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="let ti=ActivityAction.Create in&#xD;&#xA;(&#xD;&#xA;  ti.Start:=vTimeItemCreateStart;&#xD;&#xA;  ti.Stop:=vTimeItemCreateStop;&#xD;&#xA;  self.ActivityActions.Add(ti)&#xD;&#xA;)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="f79377d4-cac8-44e0-9114-29abf65588c6" />
+        <Column Name="allowCreate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="true" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="b14e6f35-8f27-4e8e-a08e-efeded4df9ff" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SubNodes" idref="5cbd4d20-e974-46ee-b7ac-3ba3599e9a1d" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TimeItem" ExpressionActAsForActions="" id="f3d47cef-a280-4431-8fa4-cac8d036e31a">
+      <Class>
+        <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Start" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CalculatedStart" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="587ae5ab-bd04-424f-9499-70c55168180e" />
+        <Column Name="Stop" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CalculatedStop" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="54cc5a2c-028a-4660-9765-fd0aecd0d602" />
+        <Column Name="InnerText" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="''" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="66df6e35-0236-45f2-a547-69d513b805d5" />
+        <Column Name="css" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'timespan'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="2e3ac65f-4c62-456c-ba11-c5ac8e435ee5" />
+        <Column Name="allowMove" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="false" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="85e23b6d-6001-4876-9a21-91e4481296f8" />
+        <Column Name="allowChangeRow" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="false" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="8be959d4-d9cc-4a7f-9caa-b05893583f25" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TimeItems" idref="3204d2c3-e0a1-450c-9030-512b6a18da85" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TimeItem2" ExpressionActAsForActions="" id="24b00401-2a09-4c28-9694-6c31e1d339cb">
+      <Class>
+        <Class Name="ActivityAction" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Start" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Start" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="675ca4e5-5036-4f11-8aae-813bbff142df" />
+        <Column Name="Stop" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Stop" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="7310e3dd-910a-43fd-8862-969ff662d75e" />
+        <Column Name="css" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="''" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="c67ed4fd-7d86-4950-9f35-f1dee995717c" />
+        <Column Name="allowMove" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="true" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="95ff98ed-ff6e-4209-afff-e0a99eb30d8b" />
+        <Column Name="allowResizeStart" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="true" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="683c45f7-f4e0-4dc5-af5a-395120f13111" />
+        <Column Name="allowResizeStop" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="true" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="5966be4d-f0a7-4c03-b183-0471b53cc61b" />
+        <Column Name="allowChangeRow" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="true" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="eb164b64-0e95-406c-8f32-2008961a14f7" />
+        <Column Name="InnerText" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="1edf9275-5911-4710-8c4b-f2d057933c70" />
+        <Column Name="Progress" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Progress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="a67aa727-c97d-44cb-b61f-b98da6635fb5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TimeItems" idref="5a1018ca-0420-4ada-aabd-ca77c1021081" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="SearchExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="a8d4ebe4-afcd-4e82-9686-150582ea9b95">
+      <Class>
+        <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Project.allinstances-&gt;select(a|a.Name.SqlLike('%'+vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="405623c3-2a3d-4b60-b559-e41cc0de1739" />
+      </OwnedColumns>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="RootNodes" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="dad09470-63be-4cfe-bd5d-862192e31872">
+      <ReferedNesting>
+        <Nesting Name="RootList" idref="4d3896e4-1723-447e-96d0-4c460f4c069f" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="tkGantt" />
+        <TaggedValue Tag="DesignTimeColor" Value="#80FF8000" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DateScalerStart" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vDateScalerStart" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="0" id="82b667ad-37a3-4377-8ef4-7cacbc17567c" />
+    <Column Name="DateScalerStop" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vDateScalerStop" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="1" id="1482f286-eb91-4703-844d-aad699408e05" />
+    <Column Name="SeekValue" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Search for" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="275583a3-125d-41ef-afd6-78299508e36d" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="cc97958f-f7c2-4fd1-910f-70fbbcf2e948" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vDateScalerStart" InitialValue="" TypeName="DateTime" UserData="'2017-07-01'" />
+    <SpanVariable Name="vDateScalerStop" InitialValue="" TypeName="DateTime" UserData="'2017-08-30'" />
+    <SpanVariable Name="vRowMoveTargetRow" InitialValue="" TypeName="SysSuperClass" UserData="" />
+    <SpanVariable Name="vRowMoveTimeItem" InitialValue="" TypeName="ActivityAction" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vTimeItemCreateStart" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vTimeItemCreateStop" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vTimeItemDoubleClick" InitialValue="" TypeName="SysSuperClass" UserData="" />
+  </SpanVariables>
+</Span>

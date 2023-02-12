@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="WorkBoard" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b2b913a7-44dc-49bf-8cfe-c864c6343b2a">
+  <Class>
+    <Class Name="BoardList" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+  </Class>
+  <Nesting>
+    <Nesting Name="BoardList" ExpressionActAsForActions="" id="6eb707a9-bc1b-4e4d-9e2a-974c85d2fdec">
+      <Class>
+        <Class Name="BoardList" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="2b18b6af-8635-440b-8eae-c6b783214a95">
+          <TaggedValue>
+            <TaggedValue Tag="DesignTimeColor" Value="#1278FF" />
+          </TaggedValue>
+        </Column>
+        <Column Name="BoardCards" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BoardCards" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="-6" id="1b67ee77-04e1-45ea-b763-87ea32e4d435">
+          <ReferedNesting>
+            <Nesting Name="BoardCard" idref="4bd495a0-18e7-40aa-9345-27be63223333" />
+          </ReferedNesting>
+          <TaggedValue>
+            <TaggedValue Tag="DesignTimeColor" Value="#1278FF" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="BoardLists" idref="85102a09-5222-4a39-86c1-ab0013885130" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="BoardCard" ExpressionActAsForActions="" id="4bd495a0-18e7-40aa-9345-27be63223333">
+      <Class>
+        <Class Name="BoardCard" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="d94f0b95-1d29-4e89-b287-c7e9d7ccd9b8">
+          <TaggedValue>
+            <TaggedValue Tag="DesignTimeColor" Value="#1278FF" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Presentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="0fae22a3-13b9-48da-92fa-68b5a7b321de">
+          <TaggedValue>
+            <TaggedValue Tag="DesignTimeColor" Value="#1278FF" />
+          </TaggedValue>
+        </Column>
+        <Column Name="status" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.Progress.isnull or (self.Progress=0) then&#xD;&#xA;  'red'&#xD;&#xA;else&#xD;&#xA;  if self.Progress&gt;=100 then&#xD;&#xA;    'green'&#xD;&#xA;   else&#xD;&#xA;     'yellow'&#xD;&#xA;    endif&#xD;&#xA;endif&#xD;&#xA;" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="8ce49f06-3263-499d-987d-1c706963d271">
+          <TaggedValue>
+            <TaggedValue Tag="DesignTimeColor" Value="#1278FF" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="BoardCards" idref="1b67ee77-04e1-45ea-b763-87ea32e4d435" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="BoardLists" ActionPeriodicityMillisec="-1" ColSpan="13" ColSpanWhenInGrid="1" ContentOverride="True" Expression="BoardList.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="13" StyleRef="" XPos="0" YPos="1" id="85102a09-5222-4a39-86c1-ab0013885130">
+      <PlacingContainer>
+        <PlacingContainer idref="1d6324d5-1155-4fe2-b4fa-1c549f4f7bf6" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="BoardList" idref="6eb707a9-bc1b-4e4d-9e2a-974c85d2fdec" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="Board" />
+        <TaggedValue Tag="DesignTimeColor" Value="#1278FF" />
+      </TaggedValue>
+    </Column>
+    <Column Name="MoveActionTargetList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vList" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="f7607854-a691-4c8c-9711-82a68f931636">
+      <PlacingContainer>
+        <PlacingContainer idref="1d6324d5-1155-4fe2-b4fa-1c549f4f7bf6" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="MoveActionTargetCard" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCard" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="70fb9bad-bcca-43ca-bac9-716beff7a0d1">
+      <PlacingContainer>
+        <PlacingContainer idref="1d6324d5-1155-4fe2-b4fa-1c549f4f7bf6" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="1d6324d5-1155-4fe2-b4fa-1c549f4f7bf6" />
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vCard" InitialValue="" TypeName="BoardCard" UserData="" />
+    <SpanVariable Name="vList" InitialValue="" TypeName="BoardList" UserData="" />
+    <SpanVariable Name="vNewVar1" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

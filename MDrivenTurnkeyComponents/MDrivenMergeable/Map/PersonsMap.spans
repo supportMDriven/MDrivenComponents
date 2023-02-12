@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="PersonsMap" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="8ade48df-3736-4b14-83b0-dda119c89031">
+  <Class>
+    <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Position" ExpressionActAsForActions="" id="959c04b9-8384-4439-8afb-8b9c36dccf4a">
+      <Class>
+        <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="color" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'yellow'&#xD;&#xA;" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9d3f37f6-f1f8-4f8f-946a-535dfec10954" />
+        <Column Name="lat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Latitude" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="94c4c6b3-4b2f-458b-aedd-9e76b49bc4d7" />
+        <Column Name="lng" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Longitude" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="d5686755-c99a-4e36-99bc-8ad4a2758d36" />
+        <Column Name="title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="f0c3d216-aa35-476b-8f48-438d1c8c3481" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Positions" idref="9afd4781-faff-4e54-8d12-1bdb2bbd92bf" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Positions" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="Person.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="15" StyleRef="" XPos="0" YPos="0" id="9afd4781-faff-4e54-8d12-1bdb2bbd92bf">
+      <PlacingContainer>
+        <PlacingContainer idref="d2a0843b-8f6e-419d-a38b-2c2f1dee070a" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Position" idref="959c04b9-8384-4439-8afb-8b9c36dccf4a" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="GoogleMap" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d2a0843b-8f6e-419d-a38b-2c2f1dee070a" />
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vLat" InitialValue="" TypeName="Double" UserData="" />
+    <SpanVariable Name="vLng" InitialValue="" TypeName="Double" UserData="" />
+  </SpanVariables>
+</Span>

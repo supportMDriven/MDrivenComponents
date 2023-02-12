@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="PersonSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="027cf7bd-7515-44c0-a9b8-ec89a20ab099">
+  <Class>
+    <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SearchExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="aa7ed5ed-2284-4b19-aae9-a8aa3ce43bef">
+      <Class>
+        <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Person.allinstances-&gt;select(a|a.Name.SqlLike('%'+vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cd7b4597-d32a-4607-b5ee-8f74576e6ba8" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting Name="SearchResultGrid" ExpressionActAsForActions="" id="49c77cf1-b956-47e4-8344-319243354b0d">
+      <Class>
+        <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="3b2474b5-e6a7-415e-bf0e-23b9c5c549c3" />
+        <Column Name="Longitude" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Longitude" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="1dffcba2-312b-408f-9264-5ffc783a5f97" />
+        <Column Name="Latitude" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Latitude" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="75746560-e888-4d52-a989-2a389651afc9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SearchResults" idref="1fef4cad-e97a-4f95-b0fc-79ea217ace77" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="SeekValue" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Search for" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="af178984-1182-436b-a71c-f3309c8f33c7" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="0" id="0e6bfc95-343f-4d6d-976a-0057347f8cd0" />
+    <Column Name="SearchResults" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="1fef4cad-e97a-4f95-b0fc-79ea217ace77">
+      <ReferedNesting>
+        <Nesting Name="SearchResultGrid" idref="49c77cf1-b956-47e4-8344-319243354b0d" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

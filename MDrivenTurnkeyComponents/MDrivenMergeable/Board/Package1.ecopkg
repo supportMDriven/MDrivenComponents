@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="dd9442a4-a948-443c-8307-167f1e6a5429">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="305f131d-d82d-49fa-8735-f894e1d58636">
+      <Feature>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="CreateTime:=DateTime.Now;&#xD;&#xA;self.Guid.newGuid()" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnUpdate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4ca4702c-1fa2-424c-8af7-bd252ed6e35f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ChangeTime:=DateTime.Now" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="ChangeTime" Multiplicity="" Visibility="Public" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Guid" Multiplicity="" Visibility="Public" id="6c4398ca-d6f8-4763-b162-77c675aa06dc">
+          <Type>
+            <Datatype idref="Guid" />
+          </Type>
+        </Attribute>
+        <Attribute Name="CreateTime" Multiplicity="" Visibility="Public" id="89803d28-5552-457f-bc84-33f0bf1ba9eb">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.TableMapping" Value="Children" />
+      </TaggedValue>
+    </Class>
+    <Class Name="BoardList" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="9ce29a2e-c2b1-42fe-866a-142c4eda6a14">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="e05de14b-05d2-4f2e-9c05-ed6971f8ed46">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922763136" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="BoardListBoardListBoardCardBoardCards" id="9ddd28c0-ce5a-4537-acb7-d8b16a968ff5">
+      <AssociationEnd>
+        <AssociationEnd Name="BoardList" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="d7dc0827-5aab-4738-becc-905722b4528b">
+          <Participant>
+            <Class Name="BoardList" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="BoardCards" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="12e4f1f5-cedb-49b1-965c-0498e9f88f85">
+          <Participant>
+            <Class Name="BoardCard" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="BoardCard" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d49370a7-3c25-43fc-9946-69c651349918">
+      <Feature>
+        <Attribute Name="Start" Multiplicity="" Visibility="Public" id="0d6760f7-46ac-404e-a85c-33462e885b29">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Stop" Multiplicity="" Visibility="Public" id="48fdecc4-ceaa-44ad-9041-2fdbc39677a2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="628a73bf-f5e8-4f27-9cc0-d72b021fa14f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Presentation" Multiplicity="" Visibility="Public" id="9660ddcc-3d66-488b-89f1-ec673819406d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Name" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Progress" Multiplicity="" Visibility="Public" id="9d86d138-0af9-4e19-8ccd-7c09fcc5224e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.PresentationUnit" Value="%" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Double" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922779393" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

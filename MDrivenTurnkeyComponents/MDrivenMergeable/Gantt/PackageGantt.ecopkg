@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="PackageGantt" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="dd9442a4-a948-443c-8307-167f1e6a5429">
+  <OwnedElement>
+    <Association Name="" EffectiveName="ProjectProjectActivityActivities" id="5186466c-445d-4091-bef7-e563c8d006f8">
+      <AssociationEnd>
+        <AssociationEnd Name="Project" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8f7b6ec0-ab9a-4096-b3e7-db456dedd3f8">
+          <Participant>
+            <Class Name="Project" idref="cbca18d7-9cf1-4c41-a567-15eccced61ab" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Activities" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="31b684e4-aadc-4f09-b15d-eb0f84bf3170">
+          <Participant>
+            <Class Name="Activity" idref="e5b111f1-8820-4634-b817-ad357fffdd6e" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="ActivityActivityActivityActionActivityActions" id="a0f94d31-7ed6-4330-a27b-59b052a3f4b2">
+      <AssociationEnd>
+        <AssociationEnd Name="Activity" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="f9d1ffc9-db14-45e4-ac77-696e4905cc07">
+          <Participant>
+            <Class Name="Activity" idref="e5b111f1-8820-4634-b817-ad357fffdd6e" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="ActivityActions" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="4f4b36b5-93cc-4f87-98e6-a0b3e38d2c8f">
+          <Participant>
+            <Class Name="ActivityAction" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Project" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cbca18d7-9cf1-4c41-a567-15eccced61ab">
+      <Feature>
+        <Attribute Name="CalculatedStart" Multiplicity="" Visibility="Public" id="36036a15-0b49-4116-ba1a-4a19adcacad4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Activities.ActivityActions-&gt;orderby(start)-&gt;first.Start" />
+            <TaggedValue Tag="persistence" Value="transient" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="56a9383f-8cac-4c0e-b9cf-71884a0ecc41">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="CalculatedStop" Multiplicity="" Visibility="Public" id="fde9ad96-57ed-4651-a7b4-06ff0d995af6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Activities.ActivityActions-&gt;orderby(stop)-&gt;last.Stop" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <Superclass>
+        <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922779393" />
+      </TaggedValue>
+    </Class>
+    <Class Name="ActivityAction" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d49370a7-3c25-43fc-9946-69c651349918">
+      <Feature>
+        <Attribute Name="Start" Multiplicity="" Visibility="Public" id="0d6760f7-46ac-404e-a85c-33462e885b29">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="State" Multiplicity="" Visibility="Public" id="1374f46e-d10c-4513-bfbc-59a1cb6eb891">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsStateAttribute" Value="True" />
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="'Planned'" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Stop" Multiplicity="" Visibility="Public" id="48fdecc4-ceaa-44ad-9041-2fdbc39677a2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="628a73bf-f5e8-4f27-9cc0-d72b021fa14f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Presentation" Multiplicity="" Visibility="Public" id="9660ddcc-3d66-488b-89f1-ec673819406d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Activity.Project.Name+'.'+ self.Activity.Name+'.'+ self.Name" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Progress" Multiplicity="" Visibility="Public" id="9d86d138-0af9-4e19-8ccd-7c09fcc5224e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.PresentationUnit" Value="%" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Double" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <Superclass>
+        <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922779393" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Activity" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="e5b111f1-8820-4634-b817-ad357fffdd6e">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="54c4d675-9f51-44d3-b805-6e83e81048f8">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <Superclass>
+        <Class Name="SysSuperClass" idref="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+      </TaggedValue>
+    </Class>
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="f40ca4df-2c38-4ca4-84cd-fa5885727a89" />
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

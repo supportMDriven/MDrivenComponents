@@ -1,0 +1,21 @@
+﻿
+
+
+	<div class="lists board" id="theDivForTheBoard"  ph-board  vmclassid="{{root.VMClassId.asString}}">
+
+      <div ng-repeat="boardlist in root.BoardLists" class="list boardlist" ph-boardlist vmclassid="{{boardlist.VMClassId.asString}}">
+        <div class="boardheader" 
+          ng-click="boardlist['vCurrent']=true;" ng-Dblclick="root.Execute('ClickOnHeader');">{{boardlist.Name}}</div>
+        <ul class="boardlist">
+          <li ng-repeat="card in boardlist.BoardCards"  ph-card class="card"  >
+            {{card.Text}}
+            <div  class="boardcardstatus {{card.status}}"></div>
+          </li>   
+        </ul>
+  			<div class="boardfooter" ng-click="boardlist['vCurrent']=true;" ng-Dblclick="root.Execute('ClickOnAddCard');">Add a card...</div>
+      </div>
+
+		
+</div>
+
+

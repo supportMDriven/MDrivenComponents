@@ -1,0 +1,19 @@
+<Model>
+  <Packages>
+    <Package Name="PackageGantt" FileName="PackageGantt" GUID="dd9442a4-a948-443c-8307-167f1e6a5429" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="MainDiagram" FileName="MainDiagram" GUID="f38c75ea-2666-4502-a81d-64d748117884" />
+  </Diagrams>
+  <Spans>
+    <Span Name="Projects" FileName="Projects" GUID="4cb62196-a59d-413c-b0c0-54001dfe9a3d" />
+    <Span Name="ActivityAction" FileName="ActivityAction" GUID="800e8a1f-f2f4-4937-8c03-232d950d66a1" />
+    <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

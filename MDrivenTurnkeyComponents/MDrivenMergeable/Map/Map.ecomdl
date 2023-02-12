@@ -1,0 +1,20 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="dd9442a4-a948-443c-8307-167f1e6a5429" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="MainDiagram" FileName="MainDiagram" GUID="f38c75ea-2666-4502-a81d-64d748117884" />
+  </Diagrams>
+  <Spans>
+    <Span Name="PersonSeeker" FileName="PersonSeeker" GUID="027cf7bd-7515-44c0-a9b8-ec89a20ab099" />
+    <Span Name="PersonManagement" FileName="PersonManagement" GUID="1bba2e25-3b1e-4951-8eed-a109a4677873" />
+    <Span Name="PersonsMap" FileName="PersonsMap" GUID="8ade48df-3736-4b14-83b0-dda119c89031" />
+    <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

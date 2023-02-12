@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="MainDiagram" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.1025" Id="f38c75ea-2666-4502-a81d-64d748117884">
+  <PlacedClass>
+    <PlacedClass ClassId="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" Color="1692800256" LastKnownName="Person" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="99" ShowAttributes="False" ShowMethods="False" Size="1" x="688" y="328" id="74230d54-8731-471b-b19c-626457bb517a">
+      <Class>
+        <Class Name="Person" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="123" LastKnownName="" RenderedHeight="123" RenderedWidth="157" Size="1" Width="157" x="720" y="448" id="fbe7ec1a-b0d8-4a2f-910a-d67992d11229">
+      <Span>
+        <Span Name="PersonsMap" idref="8ade48df-3736-4b14-83b0-dda119c89031" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="MainDiagram" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.1025" Id="f38c75ea-2666-4502-a81d-64d748117884">
+  <PlacedClass>
+    <PlacedClass ClassId="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" Color="1692800256" LastKnownName="BoardList" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="80" ShowAttributes="False" ShowMethods="False" Size="1" x="688" y="328" id="74230d54-8731-471b-b19c-626457bb517a">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-40" y="16" id="632d5ba1-e11a-4dbf-b226-8708a16f12e3">
+          <AssociationEnd>
+            <AssociationEnd Name="BoardList" idref="d7dc0827-5aab-4738-becc-905722b4528b" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="312" y="344" id="8aed7161-0877-4ee9-a6e2-6af91a6d510e">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="417b6b0f-0709-4922-8837-419029d8e506">
+                  <AssociationEnd>
+                    <AssociationEnd Name="BoardCards" idref="12e4f1f5-cedb-49b1-965c-0498e9f88f85" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="BoardList" idref="9ce29a2e-c2b1-42fe-866a-142c4eda6a14" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="d49370a7-3c25-43fc-9946-69c651349918" Color="1692800256" LastKnownName="BoardCard" PickedFeatureVisibility="ShowAll" RenderedHeight="97" RenderedWidth="106" ShowAttributes="False" ShowMethods="False" Size="1" x="264" y="424" id="aeb660c8-456f-4d2c-9107-7aa0d7645cf4">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="417b6b0f-0709-4922-8837-419029d8e506">
+          <AssociationEnd>
+            <AssociationEnd Name="BoardCards" idref="12e4f1f5-cedb-49b1-965c-0498e9f88f85" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="BoardCard" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="165" LastKnownName="" RenderedHeight="175" RenderedWidth="314" Size="1" Width="304" x="528" y="128" id="57fc64ab-1e10-4b58-8124-eafc6df0fa12">
+      <Span>
+        <Span Name="WorkBoard" idref="b2b913a7-44dc-49bf-8cfe-c864c6343b2a" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

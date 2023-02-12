@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ActivityAction" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="800e8a1f-f2f4-4937-8c03-232d950d66a1">
+  <Class>
+    <Class Name="ActivityAction" idref="d49370a7-3c25-43fc-9946-69c651349918" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="Activity" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Activity.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="86771b9c-b03c-4b2c-9b9f-974e1138fa41" />
+    <Column Name="Action" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="0ea9a428-574e-4de4-b8c9-e0d1def129a5" />
+    <Column Name="Start" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Start" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="1" id="408a4d88-ae97-4aaa-9b7d-e4d4a697f5c5" />
+    <Column Name="Stop" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Stop" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="2" id="828eea78-6bff-416f-8ef8-983e8ba018d6" />
+    <Column Name="Project" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="self.Presentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h2" XPos="0" YPos="0" id="7cd37bf8-db1d-4b66-a524-1b54bfaa9419" />
+    <Column Name="Progress" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Progress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="3" id="bdd69110-b0e0-4899-be61-3f1e917c13a1" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vLat" InitialValue="" TypeName="Double" UserData="" />
+    <SpanVariable Name="vLng" InitialValue="" TypeName="Double" UserData="" />
+  </SpanVariables>
+</Span>
