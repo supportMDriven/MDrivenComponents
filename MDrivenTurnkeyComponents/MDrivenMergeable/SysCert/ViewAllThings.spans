@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ViewAllThings" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="15a04ef5-e678-4fb7-835f-ae1aa1f5c416">
+  <Class>
+    <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllThing" ExpressionActAsForActions="" id="501ade70-1506-47f6-8ebc-3d463c58e0ce">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ContextAction Name="CreateThing" idref="5d1a8835-63b7-4758-8aca-63c867eb0587" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="SomeString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.SomeString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="2b800b33-d3b1-4d64-94d2-d006cf7adccd" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllThings" idref="ce714dff-3d86-418b-ae94-71efcc5e16e0" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="Detail" ExpressionActAsForActions="" id="e02a5400-dae9-419e-89d6-bf04e1b66532">
+      <Class>
+        <Class Name="SysCert" idref="319121f0-77d1-441a-aa36-b75d1e99d698" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a5f1dc71-ec7c-4963-858b-76432a2f74b7" />
+        <Column Name="KId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.KId" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="304666e7-1d8b-4992-9e86-f6bdabf5d2e3" />
+        <Column Name="Modulus" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Modulus" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="fc36b6b7-2402-4dc8-8423-87a0deee981e" />
+        <Column Name="Exponent" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Exponent" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="c052aaee-285b-4323-8cd9-7c13c8216cc5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Details" idref="e5a0a162-07ed-4ba0-b347-0747db188718" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="AddDetail" idref="34d12d29-975a-4174-ba7c-77c7145fbe9f" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ViewOneThing" idref="be8bb9b9-32da-4502-b6c4-5a95adea95d9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="AllThings" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="Thing.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="0" id="ce714dff-3d86-418b-ae94-71efcc5e16e0">
+      <PlacingContainer>
+        <PlacingContainer idref="d9a86b69-7ddc-4cf1-a541-597c9d0cf4c0" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="AllThing" idref="501ade70-1506-47f6-8ebc-3d463c58e0ce" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="GenerateTokenJWT" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vTokenJWT:=SysSingleton.oclSingleton.GenerateTokenJWT( 'Hans',  '' ,  '' ,  #2023-03-01 ,  'Secret!MycketLängreNyckelMinst128BitsSecret!MycketLängreNyckelMinst128Bits' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="05df8a85-e723-48c7-86e5-0a922f3b24ec">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vTokenJWT" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="04851d45-04cf-4d3a-ace7-c2713deed8eb">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Details" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysCert.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="3" id="e5a0a162-07ed-4ba0-b347-0747db188718">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Detail" idref="e02a5400-dae9-419e-89d6-bf04e1b66532" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="GenerateSysCert" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.GenerateSysCert( 'MyKeyId2' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="6b003f22-2386-4211-a01f-2a2e6de1d1d3">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="GenerateTokenJWTWithSysCert" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vTokenJWT:=SysSingleton.oclSingleton.GenerateTokenJWTWithSysCert( 'Hans',  '' ,  '' ,  #2023-03-01 ,  'MyKeyId2' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="1bf3cc93-ed3e-478f-94f6-cfd6d5cd8509">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="GenerateTokenSAML2WithSysCert" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vTokenJWT:=SysSingleton.oclSingleton.GenerateTokenSAML2WithSysCert( 'Hans',  'issuer' ,  'audience' ,  #2023-03-01 ,  'MyKeyId2' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="8" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="c4d1fc2f-ea45-4783-8fc5-e8713f5261ea">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="VerifySaml2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vUserOut:=SysSingleton.oclSingleton.VerifySAML2( vTokenJWT,  'MyKeyId2' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="9" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="938bfe5a-cd6f-44ed-b574-dfff4864f69c">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="vUserOut" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vUserOut" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="10" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="8c02f31a-94bb-4b53-b9e5-47c6057571ef">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="VerifyJTW" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vUserOut:=SysSingleton.oclSingleton.VerifyJWT( vTokenJWT)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="11" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="c38556f3-e50c-40bd-b347-b8b41be4b028">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="LogInJWT" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryLoginWithJWT?token='+vTokenJWT" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="12" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="9514f30d-bd86-4483-ae51-714d0ebcd7c5">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="GenerateTokenSAML2WithSysCertBase64" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vTokenJWT:=SysSingleton.oclSingleton.GenerateTokenSAML2WithSysCert( 'Hans',  'issuer' ,  'audience' ,  #2023-03-01 ,  'MyKeyId2' ).StringToBase64.Replace('/','_').Replace('+','-')" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="7" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="80a83638-4097-4143-bcdb-0b1ee910f6e9">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="LogInSAML2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryLoginWithSAML2?token='+vTokenJWT+'&amp;kid=MyKeyId2'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="13" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="3cef1dfb-3fc7-446a-b21b-f4792b197e88">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="AddSysCertFromCertString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.AddSysCertFromCertString( 'MyKeyId10',vCertData )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="1038f4fa-a2c9-44a4-8143-12efaaed8b74">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CertString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCertData " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PCMinSize="40" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="cdc80370-0496-40fd-8c9d-06fcd225593d">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d9a86b69-7ddc-4cf1-a541-597c9d0cf4c0">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vCertData" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vTokenJWT" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vUserOut" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="ForASPNETIdentity" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="7f5d5bb1-210b-4e82-9068-db661712522a">
+  <PlacedClass>
+    <PlacedClass ClassId="d463013a-d624-45c4-80fd-73d63fd488fa" Color="1692800256" LastKnownName="SysUserClaim" PickedFeatureVisibility="ShowAll" RenderedHeight="85" RenderedWidth="117" ShowAttributes="False" ShowMethods="False" Size="1" x="784" y="584" id="2427c751-c7cf-4d98-ba69-a93848448e8e">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-58.5" y="40" id="47ecd685-741f-47fb-9910-5317be017cd3">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUserClaims" idref="1ff32c2d-8e59-4b68-8250-3f08182d12ba" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="60" y="80" id="89feebf3-547a-47ab-b957-c517c17bc4e3">
+              <AssociationEnd>
+                <AssociationEnd Name="SysUser" idref="12532b0d-4a51-478d-aac8-906470b9eac5" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="0017d588-d3cf-433b-b763-93ae056419c3" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="95" RenderedWidth="120" ShowAttributes="False" ShowMethods="False" Size="1" x="223" y="378" id="2d70768a-97ce-4471-be8c-83b6ab81e6f8">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="60" y="64" id="4a3f5003-057f-4457-b7f4-4a6ef3a1e174">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUsers" idref="2e115e1e-fcc5-432d-b68b-b8416b0b36db" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="60" y="56" id="6d173cb9-6978-41b4-b639-b87d138ef314">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUser" idref="8847b309-9ee6-4258-8365-0b100f9c6108" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="60" y="80" id="89feebf3-547a-47ab-b957-c517c17bc4e3">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUser" idref="12532b0d-4a51-478d-aac8-906470b9eac5" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="a1d5a062-d4f0-4644-a025-cf78d8b94676">
+          <AssociationEnd>
+            <AssociationEnd Name="CurrentUser" idref="c58f940a-682a-461e-9c0e-b8536f8381bf" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-8" y="28" id="02bc5d0c-5714-4589-84e7-2b2da2227fe4">
+              <AssociationEnd>
+                <AssociationEnd Name="SysSingletonsCurrentUser" idref="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass Color="1692800256" LastKnownName="SysUserRole" PickedFeatureVisibility="ShowAll" RenderedHeight="28" RenderedWidth="108" ShowAttributes="False" ShowMethods="False" Size="1" x="632" y="344" id="9dfb2678-ddcf-4f7d-98a1-1e0c36268a2e">
+      <AssociationConnection>
+        <AssociationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-54" y="8" id="0e1d365d-e9b0-4117-a147-8af559bf8db4">
+          <Association>
+            <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
+          </Association>
+          <next>
+            <LinkClassConnectViaPoint AssociationId="" NextLegDrawKind="0" PercentFromStart="50" x="543.25" y="416" id="c352a7b6-85d0-4497-9818-03039d57a8a0">
+              <AssociationEndConnection>
+                <AssociationEndConnection idref="f7c19c89-f79b-496e-abe6-426f2c9b349c" />
+              </AssociationEndConnection>
+            </LinkClassConnectViaPoint>
+          </next>
+        </AssociationConnection>
+      </AssociationConnection>
+      <Class>
+        <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="56e1db7e-00b4-4273-bb39-1e8ad181328b" Color="1692800256" LastKnownName="SysRole" PickedFeatureVisibility="ShowAll" RenderedHeight="44" RenderedWidth="75" ShowAttributes="False" ShowMethods="False" Size="1" x="840" y="360" id="b18fd940-6094-4abd-9b08-58a918f8bea5">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-37.5" y="32" id="f7c19c89-f79b-496e-abe6-426f2c9b349c">
+          <AssociationConnection>
+            <LinkClassConnectViaPoint idref="c352a7b6-85d0-4497-9818-03039d57a8a0" />
+          </AssociationConnection>
+          <AssociationEnd>
+            <AssociationEnd Name="SysRoles" idref="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="60" y="64" id="4a3f5003-057f-4457-b7f4-4a6ef3a1e174">
+              <AssociationEnd>
+                <AssociationEnd Name="SysUsers" idref="2e115e1e-fcc5-432d-b68b-b8416b0b36db" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysRole" idref="56e1db7e-00b4-4273-bb39-1e8ad181328b" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="8ea431b6-73df-4536-a07a-751b01f5dd17" Color="1692800256" LastKnownName="SysExternalLogin" PickedFeatureVisibility="ShowAll" RenderedHeight="54" RenderedWidth="140" ShowAttributes="False" ShowMethods="False" Size="1" x="832" y="151" id="e7bd15e6-3d9a-4744-b008-232f6c204c5c">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-70" y="40" id="8c86f17b-03cd-4fd0-9c8d-cf5ef96e40ea">
+          <AssociationEnd>
+            <AssociationEnd Name="SysExternalLogins" idref="b08c5b53-7343-44df-8e77-52d2cfeb0e70" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="60" y="56" id="6d173cb9-6978-41b4-b639-b87d138ef314">
+              <AssociationEnd>
+                <AssociationEnd Name="SysUser" idref="8847b309-9ee6-4258-8365-0b100f9c6108" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="305f131d-d82d-49fa-8735-f894e1d58636" Color="1692800256" LastKnownName="SysSuperClass" PickedFeatureVisibility="ShowAll" RenderedHeight="96" RenderedWidth="124" ShowAttributes="False" ShowMethods="False" Size="1" x="424" y="56" id="f8e0d734-d748-41ec-b7bb-38e8dfcac74d">
+      <Class>
+        <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="28" RenderedWidth="109" ShowAttributes="False" ShowMethods="False" Size="1" x="230" y="147" id="f93a48db-c627-4124-85e1-a65183800504">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-8" y="28" id="02bc5d0c-5714-4589-84e7-2b2da2227fe4">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsCurrentUser" idref="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>
