@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="SystemClasses" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="NotDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.21550625" Id="d2b12ea9-3777-4416-8f92-e7bf963e7544">
+  <Category>
+    <Category Name="ServerSide" idref="62bee422-026e-4787-beb8-a7ccf5168c5a" />
+  </Category>
+  <PlacedClass>
+    <PlacedClass ClassId="a4d1db5a-e98e-4545-9310-f7e17d145ccd" Color="1692800256" LastKnownName="ResetPasswordTicket" PickedFeatureVisibility="ShowAll" RenderedHeight="275" RenderedWidth="160" ShowAttributes="False" ShowMethods="False" Size="1" x="496" y="296" id="327fd80c-6515-496b-b016-bb1b2563210d">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-80" y="72" id="61b2eda4-cc44-4a26-a8f1-8b3320d15712">
+          <AssociationEnd>
+            <AssociationEnd Name="ResetPasswordTickets" idref="0ee607f2-04d9-464b-9181-0dcb87db71b6" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ResetPasswordTicket" idref="a4d1db5a-e98e-4545-9310-f7e17d145ccd" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="132" ShowAttributes="False" ShowMethods="False" Size="1" x="72" y="72" id="3fe97eef-369a-41af-8b78-c8a54fb05585">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="66" y="48" id="9b61888d-3102-43da-acc3-9035b3948e0c">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsCurrentUser" idref="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-62.5" y="48" id="c767b6ce-7ba2-480a-88d7-a1b955f5bc91">
+              <AssociationEnd>
+                <AssociationEnd Name="CurrentUser" idref="c58f940a-682a-461e-9c0e-b8536f8381bf" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="0017d588-d3cf-433b-b763-93ae056419c3" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="167" RenderedWidth="125" ShowAttributes="False" ShowMethods="False" Size="1" x="264" y="176" id="d0fa1e73-7a02-440c-a59d-1747a6586a9d">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="62.5" y="112" id="1e5237e4-9b00-46f5-8aa8-769dfd9a2a99">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUser" idref="fe689c9b-5c7c-4751-a486-208006f75392" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-80" y="72" id="61b2eda4-cc44-4a26-a8f1-8b3320d15712">
+              <AssociationEnd>
+                <AssociationEnd Name="ResetPasswordTickets" idref="0ee607f2-04d9-464b-9181-0dcb87db71b6" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-62.5" y="48" id="c767b6ce-7ba2-480a-88d7-a1b955f5bc91">
+          <AssociationEnd>
+            <AssociationEnd Name="CurrentUser" idref="c58f940a-682a-461e-9c0e-b8536f8381bf" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedDiagrams>
+    <PlacedDiagram Color="-1765226296" Height="277.250734004864" LastKnownName="" RenderedHeight="277.250734004864" RenderedWidth="289.85942071462" Size="1" Width="289.85942071462" x="232" y="400" id="939948b8-c1f8-4dff-a3e1-ed2b3d3daa19">
+      <DrawnDiagram>
+        <AttributeStateDiagram idref="e5b44514-fff4-48ac-91cf-7875ac9c942a" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+  </PlacedDiagrams>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="218" LastKnownName="" RenderedHeight="228" RenderedWidth="319" Size="1" Width="309" x="760" y="40" id="4ea0e39f-a2a5-430a-ad6d-170f7714dca3">
+      <Span>
+        <Span Name="ResetPasswordPage" idref="393f1513-56e3-4c35-950f-b6267b8412b0" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="249" LastKnownName="" RenderedHeight="259" RenderedWidth="369" Size="1" Width="359" x="792" y="576" id="b520977d-650f-46a8-a59d-329cacd019a7">
+      <Span>
+        <Span Name="SS_ResetPassword" idref="b5d4ea18-1491-41e2-85b1-a868c393ec16" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="278" LastKnownName="" RenderedHeight="288" RenderedWidth="324" Size="1" Width="314" x="760" y="280" id="cea7f4dc-cc0c-4877-b77e-ceed0941dfef">
+      <Span>
+        <Span Name="SetPasswordPage" idref="b7df80bb-f22a-409c-b039-dedbecdae7e8" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

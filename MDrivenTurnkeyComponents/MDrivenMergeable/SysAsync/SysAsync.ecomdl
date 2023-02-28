@@ -1,0 +1,15 @@
+<Model>
+  <Packages>
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="AsyncTicketDiagram" FileName="AsyncTicketDiagram" GUID="19a236a3-6bb4-4303-8c2b-7a4aa9a36a4f" />
+  </Diagrams>
+  <Spans />
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

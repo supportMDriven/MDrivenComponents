@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allactions>
+  <MenuGroup Name="AutoForms" SortKey="99999" Id="c3c02ca4-0ae8-4197-a163-f3d227876321" />
+  <MenuGroup Name="Admin" SortKey="005" Id="7703ef1a-2899-42b3-9ba5-20c6262f2926" />
+  <MenuGroup Name="Edit" SortKey="002" Id="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
+  <MenuGroup Name="Views" SortKey="004" Id="6182c19b-652d-467c-a3cf-74147295b971" />
+  <MenuGroup Name="File" SortKey="001" Id="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+  <MenuGroup Name="Seekers" SortKey="003" Id="96b1e9f9-2cf6-4ddb-b4fa-630e97cdb9ed" />
+  <Symbol Name="statediagramsymbol" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='130' Foreground='DimGray'&gt;&lt;Run Text='S'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="StateDiagramSymbolID" />
+  <Symbol Name="triggermethod" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='Tr'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="TriggerMethodSymbolID" />
+  <Symbol Name="constrainedclass" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="ConstraintsSymbolID" />
+</allactions>

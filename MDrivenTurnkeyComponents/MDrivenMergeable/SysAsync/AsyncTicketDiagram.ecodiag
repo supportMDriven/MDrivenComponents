@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="AsyncTicketDiagram" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="19a236a3-6bb4-4303-8c2b-7a4aa9a36a4f">
+  <PlacedClass>
+    <PlacedClass ClassId="4b8cc276-7cc3-4678-b984-fd6c4b3e5894" Color="1692800256" LastKnownName="SysAsyncTicket" PickedFeatureVisibility="ShowAll" RenderedHeight="133" RenderedWidth="156" ShowAttributes="False" ShowMethods="False" Size="1" x="192" y="56" id="1b787a4d-9ee5-4289-a578-8048ca681ef8">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="78" y="64" id="56be0b82-eb1d-4fd5-983f-358e938c2533">
+          <AssociationEnd>
+            <AssociationEnd Name="SysAsyncTicketsRootObject" idref="4f53a596-3db5-4bd8-b706-a0a78dfc1daf" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysAsyncTicket" idref="4b8cc276-7cc3-4678-b984-fd6c4b3e5894" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="305f131d-d82d-49fa-8735-f894e1d58636" Color="1692800256" LastKnownName="SysSuperClass" PickedFeatureVisibility="ShowAll" RenderedHeight="132" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="496" y="56" id="2dde82d4-4c00-482c-8ab8-fb09bdee4c2c">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.49049850881234" LabelDistance="26.7618768313051" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-57" y="64" id="46796d7b-b8aa-4bce-bea7-9a18fd0c12b0">
+          <AssociationEnd>
+            <AssociationEnd Name="RootObject" idref="8b7105cd-f522-4950-80b2-ccf7f28c108f" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="78" y="64" id="56be0b82-eb1d-4fd5-983f-358e938c2533">
+              <AssociationEnd>
+                <AssociationEnd Name="SysAsyncTicketsRootObject" idref="4f53a596-3db5-4bd8-b706-a0a78dfc1daf" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="255" LastKnownName="" NoteContent="UEsDBBQAAAAIAOxgPlJfdgXIKQMAAPAKAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAALWWwW7bOBCGX4XQHtoeKlnZbrcbxAG8SdwUjYsiclqgN0YaS4QpUiCHsdWn36GsJMpaLlug0U3kx5mfP8khTzLIUWjFtrVUdhpViM1xkti8gprbuBa50VavMM51nWyEWm2To8nkbbLltUwaAxYUch8g8hGObcNzmEZdh7mDiC1hizMpSlUTOI2uYIURuxIKLkGUFbXMHOqIfbCXbVOB6kJdKH4roZhGcy4t7AJLrsppBOq1sxGbS705F2anfBd0qa99vIh9cvUtmMzdWhToPBCfOYnOQKad8eJuSNooN/whYbYfR/m0wjmvhWynUQalBnbzYdeaYSsp5Cdtai53TV/7iQ3bMjSAefW/RvGdhqZH/s9AabRTNOc/5vNJ95F3baNLw5uqjTPkquCmuBIl95popZbGwRPmjGKS247LH1HnwuYkhqbITTsAe68H5KWwqI3In8Tbx2ZK6d0WmEkEQ0vouckBaUNmT9tjRnKkHs32kUYLvxX2p88bgVxmtAM7YH/sGbeQgbICxR0czOCXlHSIPANMQ8BRCPgzBLwJAX+FgLch4O8Q8C4E/BM0ahIkgl6mQTPToJtp0M406GcaNDQNOpoGLU2Dnh6Nejo3vC9797VkOFxyW0HxDYweG7vg6Ms6+hP23gCsx6ALbnFmBVcX2wYMHjwnX7ghCO2okP4wjndS6QVDJ/Vp7dwHBvfGCPSg86sosBrP9MBc0fXheDme7r64Zhvv3g+K1wHgYdGeFsDTk8/c8I75iVvJX5Q05NqpwX1n716T66cLMCUwrIRltS5AMtLLWu2oCVjW2pltVb4U+RqQNRy9CEa3o1alEhYKdtt25OLcUOFTmb+ZTXySUK7Tk+RB5O/Tu/RKYQu5IyuYRbdaMaE6DdxLrYxW2lnZMr1r7R4L5hkVXQMvyDsD9xk3Yi2OmX/tWHru+L+4Ljp7YgWYCFXANm6qJhl4+4z63msmxbpf42PG+lT+ofSvAb5myYGBjJF5chWf607oyxcza+nUzHZyFoCVLl68+vl42vxyaur8ImDT7cxeRKZruNYaofA9C9/zKOI5/BsTPcyT9M/c0/8AUEsDBAoAAAAAAOxgPlLlnElrDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUjg0ZGM3ZWY5ODdhNjQwNjUiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAADsYD5SNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAOxgPlJfdgXIKQMAAPAKAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAADsYD5S5ZxJawwBAAAMAQAACwAAAAAAAAAAAAAAAAB1AwAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAADsYD5SNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAADGBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAAA9BgAAAAA=" RenderedHeight="265" RenderedWidth="452" Size="1" Width="442" x="312" y="248" id="05d81ea3-66f7-4b08-ae16-3812925a6c6e" />
+  </PlacedNote>
+</Diagram>

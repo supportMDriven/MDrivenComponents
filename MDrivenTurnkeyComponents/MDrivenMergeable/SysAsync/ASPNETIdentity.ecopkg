@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="eb18d545-8d55-4a15-b9ba-13e814742fec">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="305f131d-d82d-49fa-8735-f894e1d58636">
+      <Feature>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="CreateTime:=DateTime.Now;&#xD;&#xA;self.Guid.newGuid()" />
+          </TaggedValue>
+        </Method>
+        <Method Name="RunViewmodelAsync" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="1be207b2-6321-4c99-96e3-5725005cbf01">
+          <Parameter>
+            <Parameter Name="ViewModelName" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="SysAsyncTicket" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let ticket = SysAsyncTicket.Create in (&#xD;&#xA;  ticket.RootObject := self;&#xD;&#xA;  ticket.ViewModel := ViewModelName;&#xD;&#xA;  ticket&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnUpdate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4ca4702c-1fa2-424c-8af7-bd252ed6e35f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ChangeTime:=DateTime.Now" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="ChangeTime" Multiplicity="" Visibility="Public" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Guid" Multiplicity="" Visibility="Public" id="6c4398ca-d6f8-4763-b162-77c675aa06dc">
+          <Type>
+            <Datatype idref="Guid" />
+          </Type>
+        </Attribute>
+        <Attribute Name="CreateTime" Multiplicity="" Visibility="Public" id="89803d28-5552-457f-bc84-33f0bf1ba9eb">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="DoAsync" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="fcfdd0e5-2dab-4ec3-b9d0-a80cb189e829">
+          <Parameter>
+            <Parameter Name="methodName" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="SysAsyncTicket" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let ticket = SysAsyncTicket.Create in (&#xD;&#xA;  ticket.RootObject := self;&#xD;&#xA;  ticket.ViewModel := self.oclType.asString + '.' + methodName;&#xD;&#xA;  ticket&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.TableMapping" Value="Children" />
+      </TaggedValue>
+    </Class>
+    <Class Name="SysAsyncTicket" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="4b8cc276-7cc3-4678-b984-fd6c4b3e5894">
+      <Feature>
+        <Attribute Name="RootId" Multiplicity="" Visibility="Public" id="26956954-3a0e-4955-a879-af6692dedd56">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Priority" CodeComment="Priority 1 will precede priority 2, use high prio for short jobs that can be done first if queue" Multiplicity="" Visibility="Public" id="33b0e301-6cd0-498c-ae3d-a17ff0cafca6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="KeepReceiptMinutes" InitialValue="10" Multiplicity="" Visibility="Public" id="5b0d8361-6d33-416a-a82d-924b990f9e74">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ViewModel" Multiplicity="" Visibility="Public" id="6fb76fb4-3c50-41eb-b12a-de45b76f7f2d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ExecuteEarliest" Multiplicity="" Visibility="Public" id="b70a27bc-3b48-4997-8104-733255fb1907">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Error" Multiplicity="" Visibility="Public" id="b91a2d0a-dad0-4c48-b2e1-b5828ecdbf49">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DeleteTime" Multiplicity="" Visibility="Public" id="d641a9fe-5930-478a-86f2-3fa4e9316cb2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Done" Multiplicity="" Visibility="Public" id="e2827d4b-878a-4c02-aea3-9b9e22fd0729">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="SysSuperClassRootObjectSysAsyncTicketSysAsyncTicketsRootObject" id="a6ba4285-c1ae-4f05-a296-3837fcd11873">
+      <AssociationEnd>
+        <AssociationEnd Name="RootObject" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8b7105cd-f522-4950-80b2-ccf7f28c108f">
+          <Participant>
+            <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysAsyncTicketsRootObject" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="4f53a596-3db5-4bd8-b706-a0a78dfc1daf">
+          <Participant>
+            <Class Name="SysAsyncTicket" idref="4b8cc276-7cc3-4678-b984-fd6c4b3e5894" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>
