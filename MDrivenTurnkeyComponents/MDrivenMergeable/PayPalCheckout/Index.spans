@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="e1a2adb0-eb17-4683-b11c-59650c016699">
+  <Class>
+    <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+  </Class>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+  </TaggedValue>
+</Span>

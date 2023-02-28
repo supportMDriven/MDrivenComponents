@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="CalendarPackage" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="8c9141e9-297a-4f9a-be23-a747a29367f7">
+  <OwnedElement>
+    <Association Name="" EffectiveName="CalendarCalendarAllDaysInOrderDayAllDaysInOrder" id="0888c38e-ffec-4f1c-860c-6698de1612ab">
+      <AssociationEnd>
+        <AssociationEnd Name="CalendarAllDaysInOrder" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="7dab3134-60e5-4874-a091-5179d80ee75a">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="AllDaysInOrder" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="63213c06-2e2b-4222-8bbc-c9ed980b6ed3">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Month" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74">
+      <Constraint>
+        <Constraint Name="PreviousOnlyOne" Body="OCL: self.Previous-&gt;size&lt;=1" Description="Previous Month can only be a single Month" ErrorLevel="Error" IsDeleteConstraint="False" id="cb3ae278-7614-4788-b457-9da1184e4ba1" />
+      </Constraint>
+      <Feature>
+        <Method Name="SortDays" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="2cc1e01b-7bb8-4bd4-93b2-6b430ff4b2b0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let dl = Day.emptyList in(  self.Days-&gt;collect(d|dl.add(d));  self.Days-&gt;clear;  dl-&gt;orderBy(d|d.DayInMonth)-&gt;collect(d|self.Days.add(d)))" />
+          </TaggedValue>
+        </Method>
+        <Method Name="DiffMonths" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="32c79c68-79fb-4de6-be4f-10dbfc8f9c23">
+          <Parameter>
+            <Parameter Name="aMonth" Kind="In">
+              <Type>
+                <Datatype idref="Month" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Integer?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="((aMonth.Year.YearNumber - self.Year.YearNumber) * 12) +  aMonth.MonthNumber - self.MonthNumber" />
+          </TaggedValue>
+        </Method>
+        <Method Name="LinkDays" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="40c92701-e841-4468-83b7-8fd16a0550ba">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="-- Point previous month to this month's first day&#xD;&#xA;self.Previous.Days-&gt;Last.Tomorrow := self.Days-&gt;first;&#xD;&#xA;-- This month's days&#xD;&#xA;self.Days-&gt;forEach(d|d.Tomorrow := self.Days-&gt;select(nd|nd.DayInMonth = d.DayInMonth+1)-&gt;first);&#xD;&#xA;self.Days-&gt;forEach(d|d.DayOfWeek := d.CalculatedDayOfWeek)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="EnsureDays" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4707271a-75c9-47ef-b20d-885f691308fa">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Sequence{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31}&#xD;&#xA;-&gt;subSequence(1, DateTime.DaysInMonth(self.Year.YearNumber, self.MonthNumber))&#xD;&#xA;-&gt;difference(self.Days.DayInMonth)-&gt;orderBy(x|x)-&gt;collect&#xD;&#xA;(dn|&#xD;&#xA;  let d = Day.Create in&#xD;&#xA;  (&#xD;&#xA;    d.Month := self;&#xD;&#xA;    d.DayInMonth := dn;&#xD;&#xA;    d.EnsureCorrectDateFromOrdinals;&#xD;&#xA;    d.DayInYear := d.Date.DayOfYear&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="MonthOrdinal" Multiplicity="" Visibility="Public" id="4cc4f214-7bd6-4f53-b8d4-c35473272af4">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LastDate" Multiplicity="" Visibility="Public" id="4fd4919b-7da7-421f-be99-d568ae999ea9">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Days-&gt;Last.Date" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="IsNowOrAfter" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="543528d8-cdd5-4a4b-b1f5-b0f1f1e3cff6">
+          <Parameter>
+            <Parameter Name="aMonth" Kind="In">
+              <Type>
+                <Datatype idref="Month" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="(self.Year.YearNumber &gt; aMonth.Year.YearNumber) or ((self.Year = aMonth.Year) and (self.Monthnumber&gt;=aMonth.Monthnumber))&#xD;&#xA;" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="FirstDate" Multiplicity="" Visibility="Public" id="7288797c-231a-4b77-8bd7-49d473cfa93f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Days-&gt;first.Date" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="JumpMonths" CodeComment="This function is safe to always return an existing Day" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b47b507e-23fa-431b-a35e-e7b21fc5c80f">
+          <Parameter>
+            <Parameter Name="deltaMonths" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Month" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Month.GetMonthForMonthOrdinal(&#xD;&#xA;  (self.MonthOrdinal + deltaMonths).&#xD;&#xA;  max(Calendar.SO.AllMonthsInOrder-&gt;first.MonthOrdinal).&#xD;&#xA;  min(Calendar.SO.AllMonthsInOrder-&gt;last.MonthOrdinal)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="MonthNumber" Multiplicity="" Visibility="Public" id="c470ded0-4ff8-4dd4-a969-192e63958880">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="LinkWeeks" CodeComment="Links this month to the week in the month" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="ce573e97-c86a-4772-a7e5-1dd01707bb0a">
+          <Parameter>
+            <Parameter Name="aWeekDefinition" Kind="In">
+              <Type>
+                <Datatype idref="WeekDefinition" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Days.Weeks-&gt;select(w|w.WeekDefinition = aWeekDefinition)-&gt;asSet-&gt;forEach(w|self.Weeks.add(w))" />
+          </TaggedValue>
+        </Method>
+        <Method Name="GetMonthForMonthOrdinal" CodeComment="Efficient way to get a Day object for a DayOrdinal" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d3d7d890-ba8c-48ef-ac4f-99df64b743c5">
+          <Parameter>
+            <Parameter Name="aMonthOrdinal" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Month" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Month.allInstances-&gt;dictionary(d|d.MonthOrdinal, aMonthOrdinal)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="MonthAbbrevation" Multiplicity="" Visibility="Public" id="f336b81b-e21f-4297-b144-29ba6f894a03">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Year.YearNumber.asString + '-' + self.MonthNumber.toString('00')" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Year.asString + ' ' + self.MonthNumber.asString" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="MonthMonthsWeekWeeks" id="11227110-f9b2-4908-a53a-12f0ff22e36b">
+      <AssociationEnd>
+        <AssociationEnd Name="Months" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="fd5a8e58-73e1-48f4-9c1e-907e3f2e9bce">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Weeks" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="0dade47e-dca4-4cc7-b93c-1776d18b7034">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <Class>
+        <Class Name="MonthWeekLink" idref="9e54d6d2-d624-4bff-8f58-54b7a6a9a1c9" />
+      </Class>
+    </Association>
+    <Association Name="" EffectiveName="MonthMonthsMonthOfYearMonthOfYear" id="12254262-a5fa-41a7-9c42-0182ef49248d">
+      <AssociationEnd>
+        <AssociationEnd Name="MonthOfYear" IsNavigable="True" Multiplicity="1" Visibility="Public" id="209306b3-738c-4cbd-92ee-deeac6ed3684">
+          <Participant>
+            <Class Name="MonthOfYear" idref="a2a5fd45-d863-4631-b77b-34b94bf93a41" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Months" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2f3a2459-be0d-430d-91ef-da367ed24b19">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="MustBeEmpty" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="MonthAllMonthsInOrderCalendarCalendarAllMonthsInOrder" id="155d2a9b-0573-4034-bc25-8c809386627f">
+      <AssociationEnd>
+        <AssociationEnd Name="CalendarAllMonthsInOrder" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="83ce9c77-5736-4809-b4ca-a48e9b2f139f">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="AllMonthsInOrder" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="f9ff2fec-8e3d-49ab-8a58-4d3be6d1d8a0">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayDaysDayOfMonthDayOfMonth" id="1da2c479-75b0-4c37-9677-5468ca2a83bf">
+      <AssociationEnd>
+        <AssociationEnd Name="DayOfMonth" IsNavigable="True" Multiplicity="1" Visibility="Public" id="5289f76d-39a6-48c5-af49-8902ec44ee36">
+          <Participant>
+            <Class Name="DayOfMonth" idref="46bc47be-0890-4676-9c0a-3283ac5a8510" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Days" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="941eea25-f174-4703-bf08-a380387b668d">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayOfWeekNotWorkDaysWeekDefinitionWeekDefinitionNotWorkDays" id="23697f7a-9015-4b80-9880-9370fea7520e">
+      <AssociationEnd>
+        <AssociationEnd Name="WeekDefinitionNotWorkDays" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="2a933b36-4a4a-4b44-9f1f-c393efab4ec5">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="NotWorkDays" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="d21ebeb1-7e03-4767-98ba-8bae0097b64f">
+          <Participant>
+            <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayDaysMonthMonth" id="282b0382-4fb9-474d-9fd7-9a2d8774fcb5">
+      <AssociationEnd>
+        <AssociationEnd Name="Month" IsNavigable="True" Multiplicity="1" Visibility="Public" id="8a2b902b-c000-4496-af55-49c803508f24">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Days" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="cd5874b9-0d90-4ff0-8695-24e27e9df9e6">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="MustBeEmpty" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayFirstDayInCalendarCalendarCalendarFirstDayInCalendar" id="2a87d3c3-44bf-4f73-baa6-18d2d318cf2a">
+      <AssociationEnd>
+        <AssociationEnd Name="FirstDayInCalendar" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3bb76389-6f69-49c3-8c61-26ecea771699">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="CalendarFirstDayInCalendar" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="1e80ec56-6314-4181-97cd-a9c077adaf97">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekWeeksDayDays" id="2bf55bbd-1100-4a85-9845-81b263a305b6">
+      <AssociationEnd>
+        <AssociationEnd Name="Weeks" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c52a2300-05ae-4612-b620-3e8cfd9b4a75">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.LinkRoleName" Value="DayWeekLinks" />
+            <TaggedValue Tag="Eco.InnerLinkName" Value="Week" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Days" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2fecfafb-867a-40ca-872b-991eeb40d1c5">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.LinkRoleName" Value="DayWeekLinks" />
+            <TaggedValue Tag="Eco.InnerLinkName" Value="Day" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <Class>
+        <Class Name="DayWeekLink" idref="7bbaa7d1-efd3-47e2-b670-47e6079cc6d5" />
+      </Class>
+    </Association>
+    <Association Name="" EffectiveName="DayNext30DaysCalendarCalendarNext30Days" id="2d7a0f2a-5e9b-4825-8d63-9834a793405f">
+      <AssociationEnd>
+        <AssociationEnd Name="CalendarNext30Days" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="7790e09b-0bb4-48f5-90dc-051a80b1c348">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Next30Days" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a52a10a8-508f-447e-a1bd-266ac1bad1cb">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Day.allInstances-&gt;&#xD;&#xA;  select(d|&#xD;&#xA;    (d.Date &gt;= DateTime.Today) and &#xD;&#xA;    (d.Date &lt;= DateTime.Today.addDays(30))&#xD;&#xA;  )-&gt;orderBy(d|d.DayOrdinal)" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="CountryEffectiveCountrySysSingletonSysSingletonsEffectiveCountry" id="2ededb43-ab27-49e3-868f-2026c88a1fc7">
+      <AssociationEnd>
+        <AssociationEnd Name="EffectiveCountry" CodeComment="The current country for EffectiveUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="abcc3274-08c4-4b4e-a1ea-b767f7ec4204">
+          <Participant>
+            <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Country.allInstances-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsEffectiveCountry" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="9f1ae7a8-8ade-4190-82a2-1bcfba323b26">
+          <Participant>
+            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Class Name="Day" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2f5ad00a-77fd-47c1-8720-f28479a3ae46">
+      <Constraint>
+        <Constraint Name="PreviousOnlyOne" Body="OCL: self.Yesterday-&gt;size&lt;=1" Description="Yesterday can only be a single Day" ErrorLevel="Error" IsDeleteConstraint="False" id="705ca055-5bb9-4e8a-9cf1-5ea59bc7d0ad" />
+      </Constraint>
+      <Feature>
+        <Attribute Name="Date" Multiplicity="" Visibility="Public" id="3a907c95-440b-4400-9a75-1d4132eaca0a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="LinkWeeks" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4e7e9f7b-ec33-4dba-b9f5-002c0565e596">
+          <Parameter>
+            <Parameter Name="aWeekDefinition" Kind="In">
+              <Type>
+                <Datatype idref="WeekDefinition" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Weeks-&gt;remove(self.Weeks-&gt;select(w|w.WeekDefinition = aWeekDefinition)-&gt;first);&#xD;&#xA;let week = (self.DayInYear - self.DayOfWeek.DayNumber + 9) div 7 in&#xD;&#xA;(&#xD;&#xA;  if week = 0 then&#xD;&#xA;    self.Weeks.add(self.Month.Year.Previous.Weeks-&gt;select(w|w.WeekDefinition = aWeekDefinition)-&gt;orderBy(w|w.WeekNumber)-&gt;last)&#xD;&#xA;  else&#xD;&#xA;    let w = self.Month.Year.Weeks-&gt;select(w | (w.WeekDefinition = aWeekDefinition) and (w.WeekNumber = week))-&gt;first in&#xD;&#xA;    (&#xD;&#xA;      if w.notNull then &#xD;&#xA;        self.Weeks.add(w)&#xD;&#xA;      else&#xD;&#xA;        self.Weeks.add(self.Month.Year.Next.Weeks-&gt;select(w|w.WeekDefinition = aWeekDefinition)-&gt;orderBy(w|w.WeekNumber)-&gt;first)&#xD;&#xA;      endif&#xD;&#xA;    )&#xD;&#xA;  endif&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="WeekDayAbbr" Multiplicity="" Visibility="Public" id="5d027d82-5d9c-4c5a-9ea6-7374574053d3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Sequence{'sun','mon','tue','wed','thu','fri','sat'}.at0(self.Date.DayOfWeek)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="GetDayForDayOrdinal" CodeComment="Efficient way to get a Day object for a DayOrdinal" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5e753169-d227-4d8e-90a6-b17abe56551c">
+          <Parameter>
+            <Parameter Name="aDayOrdinal" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Day" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Day.allInstances-&gt;dictionary(d|d.DayOrdinal, aDayOrdinal)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Method Name="IsAfter" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7977f775-23b7-40fc-a5a6-1dbdee784bb4">
+          <Parameter>
+            <Parameter Name="aDay" Kind="In">
+              <Type>
+                <Datatype idref="Day" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.DayOrdinal &gt; aDay.DayOrdinal" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="DayInMonth" Multiplicity="" Visibility="Public" id="8083bbec-6dce-43c6-abb3-7350167157d8">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DayOrdinal" Multiplicity="" Visibility="Public" id="9c991860-9d8d-46a1-a3ca-135bd13b6976">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="GetDayForDate" CodeComment="Efficient way to get a Day object for a Date" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b266230d-4de5-4e0e-816b-cab6cd5df57f">
+          <Parameter>
+            <Parameter Name="aDate" Kind="In">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Day" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Day.allInstances-&gt;dictionary(d|d.Date, aDate.Date)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="BeforeToday" CodeComment="Return True for a day before today" Multiplicity="" Visibility="Public" id="b2b4c26c-9240-4014-8258-290f2ec2b849">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Calendar.SO.Today.IsAfter(self)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DayInYear" Multiplicity="" Visibility="Public" id="b88c19a8-1e1d-458f-accc-672a0360ae50">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="DaysBetween" CodeComment="Number of days between the two. Call on &quot;first/lowest&quot;. Pass latest" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="c77746b8-e29f-4463-a6f2-3ed216095b36">
+          <Parameter>
+            <Parameter Name="aDay" Kind="In">
+              <Type>
+                <Datatype idref="Day" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="(aDay.DayOrdinal - self.DayOrdinal)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="LinkDayOfMonth" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d42beb9e-9fa6-4f85-beda-502fd10c5fb0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.DayOfMonth := DayOfMonth.allInstances-&gt;select(dom|dom.Daynumber=self.DayInMonth)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Method Name="EnsureCorrectDateFromOrdinals" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="df178b99-f26b-4354-ab19-eb22b745473b">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Date := DateTime.Create(self.Month.Year.YearNumber, self.Month.MonthNumber, self.DayInMonth);&#xD;&#xA;self.Date" />
+          </TaggedValue>
+        </Method>
+        <Method Name="JumpDays" CodeComment="This function is safe to always return an existing Day" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="fd806403-e36e-4f3f-849a-27357c72e883">
+          <Parameter>
+            <Parameter Name="deltaDays" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Day" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Day.GetDayForDayOrdinal(&#xD;&#xA;  (self.DayOrdinal + deltaDays).&#xD;&#xA;  max(Calendar.SO.FirstDayInCalendar.DayOrdinal).&#xD;&#xA;  min(Calendar.SO.LastDayInCalendar.DayOrdinal)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Date.formatDateTime('yyyy-MM-dd')" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="DayLastDayInCalendarCalendarCalendarLastDayInCalendar" id="2fe4c95c-8acb-484e-a37f-30e2571ecc10">
+      <AssociationEnd>
+        <AssociationEnd Name="LastDayInCalendar" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="473249fa-8b94-4e44-a2b7-4e61ae2f2707">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="CalendarLastDayInCalendar" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="412488d0-f465-4be9-9f26-7b07c897c036">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayTodayCalendarCalendarToday" id="33418102-2d13-408b-a592-165d107b0228">
+      <AssociationEnd>
+        <AssociationEnd Name="Today" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a41d9b67-a46b-43cb-ae62-f442bb5a3193">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.ThisMonth.Days-&gt;select(d|d.Date = DateTime.Today)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="CalendarToday" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="8ca74295-b629-46ec-8aea-e3ffce46af7f">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="WeekDefinitionWeekDefinitionsFirstDayOfWeekDayOfWeekFirstDayOfWeek" id="3d47176d-134d-40b8-a35d-9a0ac722e7ee">
+      <AssociationEnd>
+        <AssociationEnd Name="FirstDayOfWeek" IsNavigable="True" Multiplicity="1" Visibility="Public" id="2f3106c7-5f7c-49ec-9681-a9a152049f57">
+          <Participant>
+            <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="WeekDefinitionsFirstDayOfWeek" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="631053f0-4249-437c-b5fe-28bcbb6a4e39">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayDays2DayOfWeekCalculatedDayOfWeek" id="3e295507-2b2e-4d8a-a13a-c708ed4307e1">
+      <AssociationEnd>
+        <AssociationEnd Name="CalculatedDayOfWeek" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9ec1300e-872d-481d-ae50-aea6ae0c4dea">
+          <Participant>
+            <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="DayOfWeek.allInstances-&gt;select(dow|dow.WeekDayAbbr = self.WeekDayAbbr)-&gt;first" />
+            <TaggedValue Tag="Eco.DelayedFetch" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Days2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="fb7634e3-c712-49b2-ba11-cd3ceb208d4f">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Class Name="DayOfMonth" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="46bc47be-0890-4676-9c0a-3283ac5a8510">
+      <Feature>
+        <Attribute Name="Daynumber" Multiplicity="" Visibility="Public" id="7c1e7b0e-db06-4605-83ed-1b587797d23e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureDaysOfMonth" CodeComment="If needed, Creates DayOfMonth objects (not for a specific year) and then links all the days of this year to the DayOfMonth objects." IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="e6646aac-da19-408b-8510-a5fa0154fad2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Sequence{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31}&#xD;&#xA;-&gt;difference(DayOfMonth.allInstances.Daynumber)-&gt;collect&#xD;&#xA;(dn|&#xD;&#xA;  let d = DayOfMonth.Create in&#xD;&#xA;  (&#xD;&#xA;    d.Daynumber := dn&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Daynumber.asString" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="WeekDefinitionWeekDefinitionsFirstWeekWeekFirstWeek" id="46faf221-24d4-4df7-bc6e-cdac8f4857c3">
+      <AssociationEnd>
+        <AssociationEnd Name="FirstWeek" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3109a29e-63f3-4deb-8470-16d36f1735c1">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="WeekDefinitionsFirstWeek" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="9ca389de-b613-458f-9e48-82a4779ba825">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="HourOfDay" AdditionalNamespaces="" CodeComment="From 0 to 23" IsAbstract="False" IsSealed="False" id="4c39bc95-4ee0-439d-bca7-5e704c8c33c9">
+      <Feature>
+        <Attribute Name="AmPmPresentation" Multiplicity="" Visibility="Public" id="08244364-a1be-4f3c-9acc-6edf05b2faf1">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="GetHourForTime" CodeComment="Efficient way to get a HourOfDay object for a DateTime" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0b033142-7b24-4d8f-a09c-930976f2974b">
+          <Parameter>
+            <Parameter Name="aDate" Kind="In">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="HourOfDay" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="HourOfDay.allInstances-&gt;dictionary(d|d.Hour, aDate.Hour)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Method Name="EnsureHoursOfDay" CodeComment="Created 24 hours if needed" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5286178d-0d5a-4ce3-af52-3ea88f840cc1">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Sequence{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23}&#xD;&#xA;-&gt;difference(HourOfDay.allInstances.Hour)-&gt;orderBy(x|x)-&gt;collect&#xD;&#xA;(hr|&#xD;&#xA;  let h = HourOfDay.Create in&#xD;&#xA;  (&#xD;&#xA;    h.Hour := hr;&#xD;&#xA;    h.Presentation := hr.toString('00')&#xD;&#xA;  )&#xD;&#xA;);&#xD;&#xA;Calendar.SO.AllHoursInOrder-&gt;clear;&#xD;&#xA;HourOfDay.allInstances-&gt;orderBy(h|h.Hour)-&gt;forEach(h|Calendar.SO.AllHoursInOrder.add(h))" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Presentation" Multiplicity="" Visibility="Public" id="7f22ef0e-888d-45d1-b0ad-c168c3336f85">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Hour" Multiplicity="" Visibility="Public" id="7f541306-b96a-4a6b-9552-51e67ead8cc5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Hour.toString('00')" />
+      </TaggedValue>
+    </Class>
+    <Class Name="WeekDefinition" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0">
+      <Feature>
+        <Method Name="UpdateOrderedLinks" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="1e76a3a8-65d7-4020-88ed-ee722afe8867">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.AllWeeksInOrder-&gt;clear;&#xD;&#xA;self.Weeks-&gt;orderBy(w|w.YearNumber, w.WeekNumber)-&gt;forEach(w|self.AllWeeksInOrder.add(w));&#xD;&#xA;self.Weeks-&gt;forEach(w|w.WeekOrdinal := self.AllWeeksInOrder.indexOf(w));&#xD;&#xA;self.FirstWeek := self.AllWeeksInOrder-&gt;first;&#xD;&#xA;self.LastWeek := self.AllWeeksInOrder-&gt;last" />
+          </TaggedValue>
+        </Method>
+        <Method Name="YearModulo" CodeComment="Used in WeeksInYear calculation" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="43eaf4d3-e41e-4b1d-a23d-b90d32b0c37b">
+          <Parameter>
+            <Parameter Name="aYearNumber" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let yc = (aYearNumber + (aYearNumber div 4) - (aYearNumber div 100) + (aYearNumber div 400)) in&#xD;&#xA;(&#xD;&#xA;  yc - ((yc div 7) * 7)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="LookupWeekFromOrdinal" CodeComment="Fast way to look up a week" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="52b06f14-e6a2-466f-b35f-5c9acf4870db">
+          <Parameter>
+            <Parameter Name="weekOrdinal" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Weeks-&gt;dictionary(w|w.WeekOrdinal, weekOrdinal)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Method Name="RecreateAllWeeks" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5312017a-5c1b-47e3-92ac-3e9761336fb3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Log := self.Log + 'Clearing weeks\r\n';&#xD;&#xA;self.Weeks.Delete;&#xD;&#xA;self.Log := self.Log + 'Cleared weeks\r\n';&#xD;&#xA;self.FixupWeeksForAllYears;&#xD;&#xA;self.Log := self.Log + 'RecreateAllWeeks done.\r\n'" />
+          </TaggedValue>
+        </Method>
+        <Method Name="EnsureISODefinition" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="56b59252-8669-44aa-b43a-436d1ab7f046">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="WeekDefinition" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let isoName = 'ISO' in &#xD;&#xA;(&#xD;&#xA;  DayOfWeek.EnsureDaysOfWeek;&#xD;&#xA;  let iso = if WeekDefinition.allInstances-&gt;select(wd|wd.Name=isoName)-&gt;notEmpty then&#xD;&#xA;    WeekDefinition.allInstances-&gt;select(wd|wd.Name=isoName)-&gt;first&#xD;&#xA;  else&#xD;&#xA;    WeekDefinition.create&#xD;&#xA;  endif in&#xD;&#xA;  (&#xD;&#xA;    iso.Name := isoName;&#xD;&#xA;    iso.FirstDayOfWeek := DayOfWeek.allInstances-&gt;orderBy(x|x.DayNumber)-&gt;first;&#xD;&#xA;    iso.NotWorkDays.add(DayOfWeek.allInstances-&gt;select(x|x.DayNumber=5)-&gt;first);&#xD;&#xA;    iso.NotWorkDays.add(DayOfWeek.allInstances-&gt;select(x|x.DayNumber=6)-&gt;first);&#xD;&#xA;    iso&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="WeeksInYear" CodeComment="Calculated 52 or 53 weeks in a given Year" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="843d80d3-b176-45a3-86a8-a659e7e1d42c">
+          <Parameter>
+            <Parameter Name="aYearNumber" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="52 + &#xD;&#xA;if (self.YearModulo(aYearNumber) = 4) or (self.YearModulo(aYearNumber-1) = 3) then &#xD;&#xA;  1 &#xD;&#xA;else &#xD;&#xA;  0 &#xD;&#xA;endif&#xD;&#xA;" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="88c858b8-6460-4744-938b-a8a4b4f695e6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="FixupWeeksForAllYears" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="9815bd4a-7f4e-4847-9a1a-cf10edcb7e5b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Year.allInstances-&gt;forEach(y|&#xD;&#xA;  self.Log := self.Log + 'Ensuring week objects for '+ y.YearNumber.asString +'\r\n';&#xD;&#xA;  self.EnsureWeeksForYear(y)&#xD;&#xA;);&#xD;&#xA;self.Log := self.Log + 'Updating ordered links\r\n';&#xD;&#xA;self.UpdateOrderedLinks;&#xD;&#xA;self.Log := self.Log + 'Linking weeks\r\n';&#xD;&#xA;self.LinkWeeksForYear();&#xD;&#xA;Year.allInstances-&gt;forEach(y|&#xD;&#xA;  self.Log := self.Log + 'Linking days for '+ y.YearNumber.asString +' to weeks\r\n';&#xD;&#xA;  y.Months.Days.LinkWeeks(self)&#xD;&#xA;);&#xD;&#xA;Month.allInstances-&gt;forEach(m|&#xD;&#xA;  self.Log := self.Log + 'Linking days for '+ m.asString +' to weeks\r\n';&#xD;&#xA;  m.LinkWeeks(self)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Log" Multiplicity="" Visibility="Public" id="a6ed5683-ba6a-4506-9a07-48adc7745631">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureWeeksForYear" CodeComment="Make sure there are weeks for the specified Year" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="bfa86ae0-6d10-4750-9d7e-dbcf88c501bf">
+          <Parameter>
+            <Parameter Name="vYearToGenerateWeeksFor" Kind="In">
+              <Type>
+                <Datatype idref="Year" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Sequence{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53}&#xD;&#xA;-&gt;subSequence(1, self.WeeksInYear(vYearToGenerateWeeksFor.YearNumber))-&gt;&#xD;&#xA;difference(self.Weeks-&gt;select(w|w.Year=vYearToGenerateWeeksFor).WeekNumber)-&gt;orderBy(x|x)-&gt;&#xD;&#xA;forEach(wn|&#xD;&#xA;  let w = Week.Create in&#xD;&#xA;  (&#xD;&#xA;    w.Year := vYearToGenerateWeeksFor;&#xD;&#xA;    w.WeekNumber := wn;&#xD;&#xA;    w.WeekDefinition := self&#xD;&#xA;  )&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;" />
+          </TaggedValue>
+        </Method>
+        <Method Name="LinkWeeksForYear" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="f9dd92ec-5cfe-47ca-ad8d-1695d4ec45d9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="-- Set the week's &quot;Next&quot; link for every week&#xD;&#xA;self.Weeks-&gt;forEach(w | &#xD;&#xA;  w.Next := self.Weeks-&gt;select(nw|nw.WeekOrdinal = w.WeekOrdinal+1)-&gt;first&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="YearNextYearPrevious" id="52e06086-7feb-492c-9a4f-446044076416">
+      <AssociationEnd>
+        <AssociationEnd Name="Previous" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="451eb45b-8dc2-4935-8233-f63ec74acc3c">
+          <Participant>
+            <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Embed" Value="False" />
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Next" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="d7d59e02-5131-44dd-920a-42ef248c2c51">
+          <Participant>
+            <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="CountryDefaultCountryForUsersSysSingletonSysSingletons" id="5c217c08-ab74-4e89-8a7d-7a82c6247560">
+      <AssociationEnd>
+        <AssociationEnd Name="DefaultCountryForUsers" IsNavigable="True" Multiplicity="1" Visibility="Public" id="b5b2ef32-863f-4e18-9e47-087ece096ca3">
+          <Participant>
+            <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletons" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="77f6aed8-aa10-4e91-9d82-06ad41e1bd68">
+          <Participant>
+            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekDefinitionWeekDefinitionCountryCountrys" id="5deccb64-09ca-4081-84c8-e378fff6c643">
+      <AssociationEnd>
+        <AssociationEnd Name="WeekDefinition" IsNavigable="True" Multiplicity="1" Visibility="Public" id="d20faf5f-34d4-4071-aaf1-d5fcd5619bc6">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Countrys" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="234851de-4dae-4120-8bec-7dfdff2c1403">
+          <Participant>
+            <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayFirstDayOfWeekWeekWeeks2" id="60f1f2b8-b17b-4477-bd14-07d2d6acb641">
+      <AssociationEnd>
+        <AssociationEnd Name="FirstDayOfWeek" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9dccb182-a255-4bd9-ad6e-931ef99ef9a0">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Days-&gt;orderBy(DayOrdinal)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Weeks2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="2f585a85-6670-4ea5-a168-3af096b2c942">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="WeekDefinitionWeekDefinition2WeekAllWeeksInOrder" id="75e1b748-1fa9-4da4-b502-9ee4eb14b8f0">
+      <AssociationEnd>
+        <AssociationEnd Name="WeekDefinition2" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="a81e70da-64ef-4eaa-877a-ed01eb6b3b39">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="AllWeeksInOrder" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="7065cf26-46e6-4362-8440-94d0c3abd197">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="DayWeekLink" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="7bbaa7d1-efd3-47e2-b670-47e6079cc6d5">
+      <Association>
+        <Association Name="WeekWeeksDayDays" idref="2bf55bbd-1100-4a85-9845-81b263a305b6" />
+      </Association>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.FormerNames" Value="WeekWeeksDayDays" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Year" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="7ed408e9-8600-4611-bb8a-c03431312040">
+      <Constraint>
+        <Constraint Name="PreviousOnlyOne" Body="OCL: self.Previous-&gt;size&lt;=1" Description="Previous Year can only be a single Year" ErrorLevel="Error" IsDeleteConstraint="False" id="de4560e3-89ef-4282-8a73-e78f276cac9f" />
+      </Constraint>
+      <Feature>
+        <Method Name="EnsureNextYear" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.Next.isNull" Visibility="Public" id="26339ec5-f3fd-4e53-8cce-9d0f74c247f5">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Year" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let ny = &#xD;&#xA;  if Year.GetYear(self.YearNumber+1)-&gt;notEmpty then&#xD;&#xA;    Year.GetYear(self.YearNumber+1)&#xD;&#xA;  else&#xD;&#xA;    Year.Create&#xD;&#xA;  endif in&#xD;&#xA;(&#xD;&#xA;  self.Next := ny;&#xD;&#xA;  ny.YearNumber := self.YearNumber +1;&#xD;&#xA;  ny.YearOrdinal := self.YearOrdinal +1;&#xD;&#xA;  ny.InitialiseYear;&#xD;&#xA;  ny&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="LinkMonths" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3caa8075-84e2-4ea7-adaf-a6285c48f9ae">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Previous.Months-&gt;Last.Next := self.Months-&gt;first;&#xD;&#xA;self.Months-&gt;collect(m|m.Next := self.Months-&gt;select(nm|nm.MonthNumber = m.MonthNumber+1)-&gt;first);&#xD;&#xA;self.Months.LinkDays" />
+          </TaggedValue>
+        </Method>
+        <Method Name="InitialiseYear" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3e883dc4-aa96-43f2-8bf8-80f679ed7d70">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Year" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.EnsureMonthsAndDays;&#xD;&#xA;self.SortMonthsAndDays;&#xD;&#xA;self.LinkMonths;&#xD;&#xA;self" />
+          </TaggedValue>
+        </Method>
+        <Method Name="EnsureMonthsAndDays" CodeComment="If needed, creates the months of this Year. Then calls each Month to ensure it's Days" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4b673506-495a-4b99-b955-9855f2549a7f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="-- Create missing months&#xD;&#xA;Sequence{1,2,3,4,5,6,7,8,9,10,11,12}-&gt;difference(self.Months.MonthNumber)-&gt;orderBy(x|x)-&gt;collect&#xD;&#xA;(mn|&#xD;&#xA;  let m = Month.Create in&#xD;&#xA;  (&#xD;&#xA;    m.Year := self;&#xD;&#xA;    m.MonthNumber := mn&#xD;&#xA;  )&#xD;&#xA;);&#xD;&#xA;-- Link MonthOfYear&#xD;&#xA;self.Months-&gt;forEach(m|m.MonthOfYear := MonthOfYear.allInstances-&gt;select(moy|moy.MonthNumber=m.MonthNumber)-&gt;first);&#xD;&#xA;-- Add days&#xD;&#xA;self.Months.EnsureDays;&#xD;&#xA;self.Months.Days.LinkDayOfMonth" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="FirstDaysDate" Multiplicity="" Visibility="Public" id="59c4bba3-916f-4f91-a423-7f66d44f93f3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="DateTime.Create(self.YearNumber, 1, 1)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="DeleteYear" CodeComment="Efficient deletion of a year" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5df08513-53e8-420b-ab9c-3e24b1108355">
+          <Parameter>
+            <Parameter Name="aYear" Kind="In">
+              <Type>
+                <Datatype idref="Year" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="aYear.Months;&#xD;&#xA;aYear.Months.Days;&#xD;&#xA;aYear.Months.Days.DayWeekLinks;&#xD;&#xA;aYear.Months.Days.DayWeekLinks.Week;&#xD;&#xA;aYear.Months.Days.Tomorrow;&#xD;&#xA;aYear.Months.Next;&#xD;&#xA;aYear.Weeks;&#xD;&#xA;aYear.Delete" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="YearOrdinal" Multiplicity="" Visibility="Public" id="648121d1-8614-4a20-9488-2b2263afc8a5">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="SortMonthsAndDays" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="71d7a643-ec04-4f7e-945f-d5c21d05b014">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let nl = Month.emptyList in&#xD;&#xA;(&#xD;&#xA;  self.Months-&gt;collect(m|nl.add(m));&#xD;&#xA;  self.Months-&gt;clear;&#xD;&#xA;  nl-&gt;orderBy(m|m.MonthNumber)-&gt;collect(m|self.Months.add(m))&#xD;&#xA;);&#xD;&#xA;self.Months.SortDays" />
+          </TaggedValue>
+        </Method>
+        <Method Name="GetYear" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7496947a-d1ac-42f7-a965-d7074a6bea86">
+          <Parameter>
+            <Parameter Name="aYearNumber" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Year" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Year.allInstances-&gt;select(y|y.YearNumber=aYearNumber)-&gt;first" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="YearNumber" Multiplicity="" Visibility="Public" id="929f5b7a-ead1-46db-9348-5325884085a0">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureAFewYears" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="db123f08-2d83-470a-9295-78e32dee3127">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="-- Need the very first year?&#xD;&#xA;if Year.allInstances-&gt;isEmpty then&#xD;&#xA;  let ny = Year.Create in&#xD;&#xA;  (&#xD;&#xA;    ny.YearNumber := DateTime.Date.Year-1;&#xD;&#xA;    ny.YearOrdinal := 0&#xD;&#xA;  )&#xD;&#xA;  else&#xD;&#xA;    0&#xD;&#xA;  endif;&#xD;&#xA;Year.GetYear(DateTime.Date.Year-1).InitialiseYear.&#xD;&#xA;  EnsureNextYear. -- This year&#xD;&#xA;  EnsureNextYear. -- Next year&#xD;&#xA;  EnsureNextYear. -- Two years from now&#xD;&#xA;  EnsureNextYear  -- Three year from now" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.YearNumber.toString" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Week" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="812208a0-40f0-4a59-86f2-cb4c9d1aecf7">
+      <Feature>
+        <Method Name="WeeksBetween" CodeComment="Number of weeks between. Call on &quot;first/lowest&quot;. Pass latest" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="07794bff-cfa0-4874-8823-f2eb4b8413bf">
+          <Parameter>
+            <Parameter Name="aWeek" Kind="In">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="(aWeek.WeekOrdinal - self.WeekOrdinal)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="EvenWeek" Multiplicity="" Visibility="Public" id="22071e68-793c-423e-b051-76c7165fd197">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="let w = self.WeekNumber in&#xD;&#xA;(&#xD;&#xA;  (w - (2 * (w div 2))) = 0&#xD;&#xA;)&#xD;&#xA;" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="WeekOrdinal" Multiplicity="" Visibility="Public" id="323ed2b1-7259-4672-9a08-024562899970">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="JumpWeeks" CodeComment="This function is safe to always return an existing Day" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3b031971-7da1-4307-8b68-758cc7a1b286">
+          <Parameter>
+            <Parameter Name="deltaWeeks" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Week.GetWeekForWeekOrdinal(&#xD;&#xA;  (self.WeekOrdinal + deltaWeeks).&#xD;&#xA;  max(self.WeekDefinition.FirstWeek.WeekOrdinal).&#xD;&#xA;  min(self.WeekDefinition.LastWeek.WeekOrdinal)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="WeekNumber" Multiplicity="" Visibility="Public" id="671c9f2a-4a40-46d4-9247-5bd26b6203b8">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="IsBefore" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7dcf2e72-ef26-4053-8b0e-b1d1a8dd5bb2">
+          <Parameter>
+            <Parameter Name="aWeek" Kind="In">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.WeekOrdinal &lt; aWeek.WeekOrdinal" />
+          </TaggedValue>
+        </Method>
+        <Method Name="IsThisWeekOrAfter" CodeComment="This week or the future" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8a84d046-fabb-44ff-a486-f7a02db4590c">
+          <Parameter>
+            <Parameter Name="aWeek" Kind="In">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.WeekOrdinal &gt;= aWeek.WeekOrdinal" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="YearNumber" Multiplicity="" Visibility="Public" id="aea0bc31-3e30-483a-b68d-98c6d26f0ec8">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Year.YearNumber" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="IsAfter" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="e19e147c-6641-462e-8ed6-59c08846b8e8">
+          <Parameter>
+            <Parameter Name="aWeek" Kind="In">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.WeekOrdinal &gt; aWeek.WeekOrdinal" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="IsInFuture" CodeComment="Next week and ahead for the current user" Multiplicity="" Visibility="Public" id="e67783c9-bafd-4cea-9019-7691f8331b22">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.WeekOrdinal &gt;= Calendar.SO.EffectiveUsersCurrentWeek.Next.WeekOrdinal" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="GetWeekForWeekOrdinal" CodeComment="Efficient way to get a Day object for a DayOrdinal" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="fbc2a939-b51b-4373-8196-d1e0272305a9">
+          <Parameter>
+            <Parameter Name="aWeekOrdinal" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Week" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Week.allInstances-&gt;dictionary(d|d.WeekOrdinal, aWeekOrdinal)-&gt;first" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Year.Yearnumber.toString + ':' + self.WeekNumber.asString" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="HourOfDayAllHoursInOrderCalendarCalendarAllHoursOfDay" id="8846adc9-d72d-46ee-8dd1-cf2d51ed4f62">
+      <AssociationEnd>
+        <AssociationEnd Name="CalendarAllHoursOfDay" IsNavigable="False" Multiplicity="1" Visibility="Public" id="4aa11593-01f1-4dd3-8ecb-a1bc3fe1b4f9">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="AllHoursInOrder" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ba1abecd-2c38-4685-be3e-0282fdf3f73c">
+          <Participant>
+            <Class Name="HourOfDay" idref="4c39bc95-4ee0-439d-bca7-5e704c8c33c9" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekWeeksWeekDefinitionWeekDefinition" id="8b4fdfaa-338d-4679-975f-46550ba881e7">
+      <AssociationEnd>
+        <AssociationEnd Name="WeekDefinition" IsNavigable="True" Multiplicity="1" Visibility="Public" id="2f47033d-3d9e-47ad-9007-2115176bd256">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Weeks" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="5f82868b-230e-4973-a7ab-141b72e25e82">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayOfWeekDayOfWeekDayDays" id="8cb8b66a-9591-4871-9c11-ffbd630b6a38">
+      <AssociationEnd>
+        <AssociationEnd Name="DayOfWeek" IsNavigable="True" Multiplicity="1" Visibility="Public" id="83bd9b60-01e1-435c-8be6-81822fe32f2c">
+          <Participant>
+            <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Days" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="1a99ab88-faa5-4c3f-803b-3f673e6731c6">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="MustBeEmpty" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="MonthPreviousMonthNext" id="8f180a81-4fd7-4447-9184-11675ad92a52">
+      <AssociationEnd>
+        <AssociationEnd Name="Previous" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4e55d1b8-0c10-47ab-843c-04268d56d5aa">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Embed" Value="False" />
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Next" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="48491db1-c8a1-4111-b7fe-7029730aa9bb">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Country" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="929da637-f9b6-4be3-b195-7ddde16aec88">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="a40e38cf-0849-4ac8-9a54-06aa51bcff91">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+      </TaggedValue>
+    </Class>
+    <Class Name="DayOfWeek" AdditionalNamespaces="" CodeComment="Day of the week, not a unique weekday" IsAbstract="False" IsSealed="False" id="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5">
+      <Feature>
+        <Attribute Name="FirstDayOfWeekForEffectiveUser" Multiplicity="" Visibility="Public" id="068b29ac-577c-4145-92b0-94d90319ff09">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="SysSingleton.oclSingleton.EffectiveCountry.WeekDefinition.FirstDayOfWeek = self" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="4473e669-5164-47b7-8c1f-8f227e77143b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="WeekDayAbbr" Multiplicity="" Visibility="Public" id="4c19a9c1-3ecd-48b7-b035-4d7861f2d0b8">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Name.substring(1,3).toLower" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureDaysOfWeek" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="6c6b7995-ae84-4efe-b331-d00f3cf7f143">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Sequence{0,1,2,3,4,5,6}-&gt;difference(DayOfWeek.AllInstances.DayNumber)-&gt;orderBy(x|x)-&gt;collect&#xD;&#xA;(mn|&#xD;&#xA;  let m = DayOfWeek.Create in&#xD;&#xA;  (&#xD;&#xA;    m.DayNumber := mn;&#xD;&#xA;    m.Name := Sequence{'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'}.at0(mn)&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="NotWorkDayForEffectiveUser" Multiplicity="" Visibility="Public" id="97196aab-2ee0-4c11-bd51-a18eb1d9306c">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="SysSingleton.oclSingleton.EffectiveCountry.WeekDefinition.NotWorkDays-&gt;includes(self)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DayNumber" Multiplicity="" Visibility="Public" id="e14e55c2-c4aa-46d5-959a-c2ef5401af0e">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Class Name="MonthWeekLink" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="9e54d6d2-d624-4bff-8f58-54b7a6a9a1c9">
+      <Association>
+        <Association Name="MonthMonthsWeekWeeks" idref="11227110-f9b2-4908-a53a-12f0ff22e36b" />
+      </Association>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Calendar" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="9ea09760-a7e0-406b-af25-9c82e251dcff">
+      <Feature>
+        <Method Name="Now" CodeComment="Get time with subscription every minute" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0abfedcf-1398-41ee-82c6-cefc3a7295cf">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let sm = Calendar.SO.ServerMinute in -- Subscribe&#xD;&#xA;(&#xD;&#xA;  DateTime.Now.AddMilliseconds(sm.Millisecond - sm.Millisecond)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="ClearCalendar" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="104ab627-6770-41ee-b520-bfbb6f831ee7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.LoadCalendarIntoMemory;&#xD;&#xA;Year.allInstances.delete;&#xD;&#xA;DayOfWeek.allInstances.delete;&#xD;&#xA;DayOfMonth.allInstances.delete;&#xD;&#xA;WeekDefinition.allInstances.delete;&#xD;&#xA;MonthOfYear.allInstances.delete" />
+          </TaggedValue>
+        </Method>
+        <Method Name="Date" CodeComment="Get Date with subscription" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="32f2927b-a138-4eab-9349-17e124e8ab82">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let sm = Calendar.SO.ServerMinute in -- Subscribe&#xD;&#xA;(&#xD;&#xA;  DateTime.Date.AddMilliseconds(sm.Millisecond - sm.Millisecond)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="SO" CodeComment="Shortcut for the Singelton object" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="357d9c8e-628a-4249-b0ef-28d41594207a">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Calendar" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Calendar.oclSingleton" />
+          </TaggedValue>
+        </Method>
+        <Method Name="UpdateOrdinalsOnCalendar" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3e62723b-e596-4e14-a688-307ac6bdd52a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.allYearsInOrder-&gt;forEach(y|y.YearOrdinal := self.allYearsInOrder.indexOf(y));&#xD;&#xA;self.allMonthsInOrder-&gt;forEach(m|m.MonthOrdinal := self.allMonthsInOrder.indexOf(m));&#xD;&#xA;self.allDaysInOrder-&gt;forEach(d|d.DayOrdinal := self.allDaysInOrder.indexOf(d));&#xD;&#xA;WeekDefinition.allInstances-&gt;forEach(wd|wd.UpdateOrderedLinks)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="FixupCalendar" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7a477a02-1157-45f0-ad2c-625efc1b776a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="-- Value stores for the calendar&#xD;&#xA;MonthOfYear.EnsureMonthsOfYear;&#xD;&#xA;DayOfWeek.EnsureDaysOfWeek;&#xD;&#xA;DayOfMonth.EnsureDaysOfMonth;&#xD;&#xA;HourOfDay.EnsureHoursOfDay;&#xD;&#xA;-- Main part of calendar&#xD;&#xA;Year.EnsureAFewYears;&#xD;&#xA;self.GenerateOrderedCalendarLinks;&#xD;&#xA;self.UpdateOrdinalsOnCalendar; -- This needs GenerateOrderedCalendarLinks&#xD;&#xA;-- Week definition&#xD;&#xA;WeekDefinition.EnsureISODefinition.FixupWeeksForAllYears" />
+          </TaggedValue>
+        </Method>
+        <Method Name="GenerateOrderedCalendarLinks" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="94373a8c-8156-4ae0-be91-a998feeededa">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.AllYearsInOrder-&gt;clear;&#xD;&#xA;Year.allInstances-&gt;orderBy(y|y.YearNumber)-&gt;collect(y|self.AllYearsInOrder.add(y));&#xD;&#xA;self.AllMonthsInOrder-&gt;clear;&#xD;&#xA;self.AllYearsInOrder-&gt;collect(y|y.Months-&gt;collect(m|self.AllMonthsInOrder.add(m)));&#xD;&#xA;self.AllDaysInOrder-&gt;clear;&#xD;&#xA;self.AllMonthsInOrder-&gt;collect(m|m.Days-&gt;collect(d|self.AllDaysInOrder.add(d)));&#xD;&#xA;self.FirstDayInCalendar := self.AllDaysInOrder-&gt;First;&#xD;&#xA;self.LastDayInCalendar := self.AllDaysInOrder-&gt;Last;&#xD;&#xA;WeekDefinition.allInstances-&gt;collect(wd|wd.UpdateOrderedLinks)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="LoadCalendarIntoMemory" CodeComment="Loads the most used calendar objetcs into memory" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="979747c8-c3cf-4449-8e12-2022c669ef76">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.AllDaysInOrder;&#xD;&#xA;self.AllDaysInOrder.Month.Year;&#xD;&#xA;self.AllDaysInOrder.Weeks;&#xD;&#xA;self.AllDaysInOrder.Tomorrow;&#xD;&#xA;self.AllDaysInOrder.DayOfWeek;&#xD;&#xA;WeekDefinition.allInstances.Weeks;&#xD;&#xA;WeekDefinition.allInstances.AllWeeksInOrder" />
+          </TaggedValue>
+        </Method>
+        <Method Name="DateTimeSmartFormat" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="ec310cff-7e95-45ad-97dc-f95d8c980f27">
+          <Parameter>
+            <Parameter Name="aDateTime" Kind="In">
+              <Type>
+                <Datatype idref="DateTime?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if aDateTime.isNull then&#xD;&#xA;  String.nullValue&#xD;&#xA;else&#xD;&#xA;  if aDateTime.Date = Calendar.Date then&#xD;&#xA;    if Calendar.Now &gt; aDateTime then&#xD;&#xA;      if (Calendar.Now - aDateTime).TotalHours &lt; 1.5 then&#xD;&#xA;        if (Calendar.Now - aDateTime).TotalHours &lt; 1 then&#xD;&#xA;          if (Calendar.Now - aDateTime).TotalMinutes &lt; 30 then&#xD;&#xA;            if (Calendar.Now - aDateTime).TotalMinutes &lt; 10 then&#xD;&#xA;              if (Calendar.Now - aDateTime).TotalMinutes &lt; 2 then&#xD;&#xA;                'Moments ago'&#xD;&#xA;              else&#xD;&#xA;                'Less than 10 minutes ago'&#xD;&#xA;              endif&#xD;&#xA;            else&#xD;&#xA;              'Less than 30 minutes ago'&#xD;&#xA;            endif&#xD;&#xA;          else&#xD;&#xA;            'Less than one hour ago'&#xD;&#xA;          endif&#xD;&#xA;        else&#xD;&#xA;          'About an hour ago'&#xD;&#xA;        endif&#xD;&#xA;      else&#xD;&#xA;        (Calendar.Now - aDateTime).TotalHours.round.asString + ' hours ago'&#xD;&#xA;      endif&#xD;&#xA;    else&#xD;&#xA;      aDateTime.formatDateTime('HH:mm:ss') -- Future&#xD;&#xA;    endif&#xD;&#xA;  else&#xD;&#xA;    aDateTime.formatDateTime('yy-MM-dd HH:mm:ss')&#xD;&#xA;  endif&#xD;&#xA;endif" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="ServerMinute" CodeComment="Current time from server, once every minute for subscription" Multiplicity="" Visibility="Public" id="f4fa4304-f26b-4674-994b-cbc095f6b8c0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Class Name="MonthOfYear" AdditionalNamespaces="" CodeComment="Month of the Year, not the unique month" IsAbstract="False" IsSealed="False" id="a2a5fd45-d863-4631-b77b-34b94bf93a41">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="25440db4-0808-4d02-8c58-de2f772df9fb">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="MonthNumber" CodeComment="1-12" Multiplicity="" Visibility="Public" id="55e50918-b830-4b4b-86e4-05fea670040b">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureMonthsOfYear" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8f97421b-86e8-4baf-b8d6-0239c2892634">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Sequence{1,2,3,4,5,6,7,8,9,10,11,12}-&gt;difference(MonthOfYear.AllInstances.MonthNumber)-&gt;orderBy(x|x)-&gt;collect&#xD;&#xA;(mn|&#xD;&#xA;  let m = MonthOfYear.Create in&#xD;&#xA;  (&#xD;&#xA;    m.MonthNumber := mn;&#xD;&#xA;    m.Name := Sequence{'January','February','Mars','April','May','June','July','August','September','October','November','December'}.at(mn)&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922757376" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="DayDayNext30DaysDayNext30Days" id="a684efe2-67d2-4622-b9bc-fed148e9f751">
+      <AssociationEnd>
+        <AssociationEnd Name="DayNext30Days" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="c9396960-f397-488a-85c2-2531c91dd47a">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Next30Days" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="6223ef36-ad3e-427b-b3d5-edcc6ab5ceb5">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Day.allInstances-&gt;&#xD;&#xA;  select(d|&#xD;&#xA;    (d.Date &gt;= self.Date) and &#xD;&#xA;    (d.Date &lt;= self.Date.addDays(30))&#xD;&#xA;  )" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="CalendarCalendarLast30DaysDayLast30Days" id="bff88bdd-aa39-4968-87cb-c59252c45e11">
+      <AssociationEnd>
+        <AssociationEnd Name="CalendarLast30Days" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="82cbcfbc-a107-45f1-a564-900f619adfed">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Last30Days" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="0185884c-ff82-4309-8b12-19d05c89e4d7">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Day.allInstances-&gt;&#xD;&#xA;  select(d|&#xD;&#xA;    (d.Date &gt;= DateTime.Today.addDays(-30)) and &#xD;&#xA;    (d.Date &lt;= DateTime.Today)&#xD;&#xA;  )-&gt;orderBy(d|d.DayOrdinal)" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="WeekEffectiveUsersCurrentWeekCalendarCalendarEffectiveUsersCurrentWeek" id="c100f431-9e65-4a9c-88a2-1f3d532d45c3">
+      <AssociationEnd>
+        <AssociationEnd Name="EffectiveUsersCurrentWeek" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="75fd55fa-1664-40bd-906f-0dc580bbfc0d">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Today.WeekForEffectiveUser" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="CalendarEffectiveUsersCurrentWeek" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="6c6b268a-528a-41cf-97b6-8cfd49112092">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="WeekLastWeekWeekDefinitionWeekDefinitionsLastWeek" id="c1ae95fe-37c4-4b7f-9348-eefc77173a35">
+      <AssociationEnd>
+        <AssociationEnd Name="LastWeek" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c6b06c5a-98c4-4662-8995-99ccff4efdf3">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="WeekDefinitionsLastWeek" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="5413d735-dbe6-4eb3-a84e-4877d0ab973e">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekWeekForEffectiveUserDayDays2" id="d227eaef-5fb8-4a0f-aed0-b48cc85e7bc8">
+      <AssociationEnd>
+        <AssociationEnd Name="WeekForEffectiveUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="90d6d294-5e50-44ef-a650-d0e6aa5f866d">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Weeks-&gt;select(w|w.WeekDefinition = SysSingleton.oclSingleton.EffectiveCountry.WeekDefinition)-&gt;first" />
+            <TaggedValue Tag="Eco.DelayedFetch" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Days2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="05917dd5-d5bb-4277-a3c7-bf244649038b">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="CalendarCalendarThisMonthMonthThisMonth" id="d48b952d-0941-4fc3-a4f5-29a640245a67">
+      <AssociationEnd>
+        <AssociationEnd Name="ThisMonth" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="380d0dcb-e9e2-4683-9d53-0d4801b42ca4">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="Month.allInstances-&gt;select(m|(m.Year.YearNumber = DateTime.Today.Year) and (m.MonthNumber = DateTime.Today.Month))-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="CalendarThisMonth" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="9d7aabf8-b2c3-4858-bd6e-e70204337e94">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="CalendarCalendarAllYearsInOrderYearAllYearsInOrder" id="dc109a36-dd8f-4fa8-86d1-34eb6fbf55f2">
+      <AssociationEnd>
+        <AssociationEnd Name="CalendarAllYearsInOrder" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="a61c3b7a-6021-4f7f-94d8-bb4ebd9edc8a">
+          <Participant>
+            <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="AllYearsInOrder" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="9b333116-b48c-4889-998e-3de741c80035">
+          <Participant>
+            <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekWeeksYearYear" id="df149034-b167-494a-b4d8-1b093554e85c">
+      <AssociationEnd>
+        <AssociationEnd Name="Year" IsNavigable="True" Multiplicity="1" Visibility="Public" id="16f4736d-53b0-4b4f-bf5a-647c70adb2dd">
+          <Participant>
+            <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Weeks" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2cd2e731-fc3b-4fea-9873-b30dbcb38759">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="YearYearMonthMonths" id="e0183d74-3a2d-4f99-b0c4-ba8a26676bfc">
+      <AssociationEnd>
+        <AssociationEnd Name="Year" IsNavigable="True" Multiplicity="1" Visibility="Public" id="bc22bceb-b488-499c-8039-56c7a7a2e543">
+          <Participant>
+            <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Months" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="162623ab-0f9c-48fd-8391-25e98f0104f2">
+          <Participant>
+            <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="MustBeEmpty" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="DayTomorrowDayYesterday" id="e6b80828-165c-4008-be32-af6d51d49850">
+      <AssociationEnd>
+        <AssociationEnd Name="Yesterday" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="06747979-b24e-4a1f-85f2-c6fd2cf2f3bc">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Embed" Value="False" />
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Tomorrow" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="1f6a364f-d732-44fa-8c96-1e390da32e21">
+          <Participant>
+            <Class Name="Day" idref="2f5ad00a-77fd-47c1-8720-f28479a3ae46" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekNextWeekPrevious" id="eb4e922f-7771-44af-8f43-20b6c3ab1d67">
+      <AssociationEnd>
+        <AssociationEnd Name="Next" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="deebc1b6-f26d-46fe-8fc9-a35600eaa4db">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Previous" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3e21161c-abe9-4b10-88d6-4891cb32f602">
+          <Participant>
+            <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Embed" Value="False" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="WeekDefinitionWeekDefinitionsYearToGenerateWeeksForYearYearToGenerateWeeksFor" id="f9f775ad-9630-4a57-b550-6a81dcc73b31">
+      <AssociationEnd>
+        <AssociationEnd Name="YearToGenerateWeeksFor" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3b9ef2b5-22c5-4be2-b16f-6047781d82f0">
+          <Participant>
+            <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="WeekDefinitionsYearToGenerateWeeksFor" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="8d4ce6ff-3d5a-4863-b4dd-7c0d18908fe4">
+          <Participant>
+            <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

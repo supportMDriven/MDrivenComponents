@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ThemeDataWorkView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ae8d6913-39a7-490f-98eb-9626fe1f19b0">
+  <Class>
+    <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+  </Class>
+  <Nesting>
+    <Nesting Name="ThemeData" ExpressionActAsForActions="" id="76e6a21d-8735-4143-aafd-3bab88b9eaca">
+      <Class>
+        <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="ThemeColors" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.ThemeColors" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="15" StyleRef="" XPos="0" YPos="2" id="1790f0de-855e-41fd-92de-9f05aa1108fe">
+          <ReferedNesting>
+            <Nesting Name="ThemeColor" idref="b004d44f-5bbf-4285-a842-5be6b43c5a1f" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="EnsureValueHolders" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.EnsureThemeColors;&#xD;&#xA;self.EnsureThemeSizes" ExpressionForReadOnly="vCurrent_ThemeData.isnull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" VisibleFollowsEnable="True" XPos="0" YPos="1" id="43e29ed4-b681-44f2-8a85-299d66ae7579" />
+        <Column Name="AppliedCompleteCSS" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.AppliedCSSForHtml" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="" XPos="6" YPos="14" id="7a9d396c-7023-4c78-821e-8f96d05e6cc1">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="ThemeSizes" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.ThemeSizes" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="15" StyleRef="" XPos="11" YPos="2" id="4b2b9e9a-56df-47e5-ba8e-0028155c2375">
+          <ReferedNesting>
+            <Nesting Name="ThemeSize" idref="27055114-e205-4584-a04f-e9a57a288a9a" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="vCurrent_ThemeData.isnull" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" VisibleFollowsEnable="True" XPos="9" YPos="0" id="60358e9f-1659-4223-b4f8-3c89081d9210" />
+        <Column Name="CompleteCSS" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.DerivedCSS" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="6" YPos="6" id="2ba85e95-d767-468d-a235-0d728e5a3873" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisThemeData" idref="b3d58c9c-dd24-481c-b4db-baba9ba2cde5" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ThemeColor" ExpressionActAsForActions="" id="b004d44f-5bbf-4285-a842-5be6b43c5a1f">
+      <Class>
+        <Class Name="ThemeColor" idref="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="On" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.On" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="1b3919e8-424e-49c7-8656-bf7b07a279ce" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="3ab0a204-9a62-4248-b3bc-3f10de87506b" />
+        <Column Name="DerivedRGB" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DerivedRGB" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="efee86fb-6667-4b7f-baa0-0cd3d9ab9620" />
+        <Column Name="Color" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.On then&#xD;&#xA; '&lt;div style=&quot;background-color:'+self.AsRGBHex+';with:70px;height:30px;&quot;&lt;/div&gt;'&#xD;&#xA;else&#xD;&#xA; ''&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="3ac8b718-b728-4893-b84d-ac81bc5f734d">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThemeColors" idref="1790f0de-855e-41fd-92de-9f05aa1108fe" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="ThemeColor2" ExpressionActAsForActions="" id="360883c6-36a1-4956-8ad0-46c0a6aac4ce">
+      <Class>
+        <Class Name="ThemeColor" idref="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="On" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.On" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="cb0c8bb8-f56a-4c4a-9788-0177172f9431" />
+        <Column Name="R" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.R" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="fbe1c92b-0a47-43cb-8ec0-488b8bc46ad9" />
+        <Column Name="G" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.G" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="3" id="97efa895-dd2a-4ea0-8c0c-61d2b2a5bcac" />
+        <Column Name="B" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.B" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="3" id="bd7f6ce2-20b9-425e-b82f-95d1b19d9b21" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="2" id="0933fe4d-2e31-487e-8f6a-ec7375f11d5d" />
+        <Column Name="DerivedCSS" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.DerivedCSS" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="5" id="b37d74c6-c6c0-4b3f-8ad9-c77984e2a248" />
+        <Column Name="AsRGBHex" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.AsRGBHex" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="4" id="38624997-9bbd-47d3-b0f1-7ed94d136376" />
+        <Column Name="ColorPickComp" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" ContentOverride="True" Expression="self.AsRGBHex" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Color" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="4" id="b93e34f6-8020-4161-b08d-15023af5a362">
+          <TaggedValue>
+            <TaggedValue Tag="Angular_Ext_Component" Value="ColorPick" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisThemeColor" idref="fba48ba8-d706-4c16-a5f8-7692a3e14004" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="False" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="ThemeSize" ExpressionActAsForActions="" id="27055114-e205-4584-a04f-e9a57a288a9a">
+      <Class>
+        <Class Name="ThemeSize" idref="b23ff679-7019-4903-a0f0-d42fc224ce8d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="On" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.On" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="04dc7421-b332-48d5-8de9-e112e7769c72" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="322946c5-caf7-40c9-8a4a-d51f2376ca5d" />
+        <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Value" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="4f0c2c86-42e7-4f63-85b4-8a09f2e91d85" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThemeSizes" idref="4b2b9e9a-56df-47e5-ba8e-0028155c2375" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="Theme" ExpressionActAsForActions="" id="98a1d6a0-5c16-43e0-b5f2-d2e084eb8a85">
+      <Class>
+        <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="392a00f1-1bfa-4f5b-8ad5-1977f1844fcc">
+          <TaggedValue>
+            <TaggedValue Tag="UIFirst" Value="String" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Theme_picklist" idref="9fc22181-bc39-417a-8d4d-c3050ad153f4" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="PickTheme" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="SysSingleton.oclsingleton.PickedThemeData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;nothing&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="bc327d34-b156-4bdd-bd79-a2f2d976922a">
+      <ColumnForPickList>
+        <Column Name="Theme_picklist" idref="9fc22181-bc39-417a-8d4d-c3050ad153f4" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="Theme_picklist" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="ThemeData.allinstances-&gt;orderby(x|x.asstring)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9fc22181-bc39-417a-8d4d-c3050ad153f4">
+      <ReferedNesting>
+        <Nesting Name="Theme" idref="98a1d6a0-5c16-43e0-b5f2-d2e084eb8a85" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AddTheme" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="let x=ThemeData.Create in&#xD;&#xA;(&#xD;&#xA;  x.Name:='New theme';&#xD;&#xA;  SysSingleton.oclsingleton.PickedThemeData:=x;&#xD;&#xA;  x.EnsureThemeColors;&#xD;&#xA;  x.EnsureThemeSizes&#xD;&#xA;&#xD;&#xA; )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="39b8f896-fa84-49e2-ae78-d9ce6cb56667" />
+    <Column Name="ThisThemeData" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclsingleton.PickedThemeData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="5" YPos="1" id="b3d58c9c-dd24-481c-b4db-baba9ba2cde5">
+      <ReferedNesting>
+        <Nesting Name="ThemeData" idref="76e6a21d-8735-4143-aafd-3bab88b9eaca" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="ThisThemeColor" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrent_ThemeColor" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="4" id="fba48ba8-d706-4c16-a5f8-7692a3e14004">
+      <ReferedNesting>
+        <Nesting Name="ThemeColor2" idref="360883c6-36a1-4956-8ad0-46c0a6aac4ce" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

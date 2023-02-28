@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="YearView" ColCount="5" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5de76341-4be5-4215-97b1-7cd387bcdf78">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+  </Class>
+  <Nesting>
+    <Nesting Name="NextPickList" ExpressionActAsForActions="" id="0fc7428d-9073-46aa-a665-0fbb346cfb77">
+      <Class>
+        <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a1575212-a67b-4c39-93ab-cec636b796be" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="NextPickList" idref="1d6f2661-7c5b-4189-a092-a07b52c9fa07" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="YearNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.YearNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2c0daae2-e678-4691-81e3-1c25623c1d8c" />
+    <Column Name="Next" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Next" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="e9e388dc-1ab3-4e4e-9550-366fc1c10b36">
+      <ColumnForPickList>
+        <Column Name="NextPickList" idref="1d6f2661-7c5b-4189-a092-a07b52c9fa07" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="NextPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Year.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1d6f2661-7c5b-4189-a092-a07b52c9fa07">
+      <ReferedNesting>
+        <Nesting Name="NextPickList" idref="0fc7428d-9073-46aa-a665-0fbb346cfb77" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="YearOrdinal" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.YearOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="57a86641-f2aa-435b-b1b5-8307a3daa829" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

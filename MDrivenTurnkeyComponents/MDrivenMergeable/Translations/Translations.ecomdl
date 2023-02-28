@@ -1,0 +1,17 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="879374a9-c4f1-43b4-9acb-b05e338e9b88" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="DiagramTranslation" FileName="DiagramTranslation" GUID="05d967d4-0f1f-4fbe-9c80-c230a8ea7b48" />
+  </Diagrams>
+  <Spans>
+    <Span Name="LocalizationAdmin" FileName="LocalizationAdmin" GUID="dfd26aa2-58bd-496c-ac7b-68c92fb92cef" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

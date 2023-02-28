@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSomethingToPayWithPayPalSeeker" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="33ff1d0c-a49e-4367-810f-8565ea05dde9">
+  <Category>
+    <Category Name="AutoForms" idref="89d1199e-c325-4633-87fe-a7cef87d19dc" />
+  </Category>
+  <Class>
+    <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SomethingToPayWithPayPal" ExpressionActAsForActions="" id="8d3d11a0-521f-43fa-87a9-8d880c4e4fb7">
+      <Class>
+        <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1f380da4-1c10-4f42-96f1-0deed6303c9d" />
+        <Column Name="Amount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Amount" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="72f09479-b226-4bca-a5fd-d72ceffec95d" />
+        <Column Name="OnApproveDetailsJson" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.OnApproveDetailsJson" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c1e00fb1-8750-489e-837a-a195ef71ff4e" />
+        <Column Name="OnApproveJson" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.OnApproveJson" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d3955d06-3bf2-4ad7-8065-b517de55ef19" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="5063c796-fa0f-4649-a248-7cfe5bb6422f" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="true" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekOnApproveDetailsJson" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="e5d17cd5-64d0-484f-abf8-1e2b9d8829f6">
+      <Class>
+        <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SomethingToPayWithPayPal.allinstances-&gt;select(a|a.OnApproveDetailsJson.sqllike(vSeekParamWildcard) or (a.OnApproveDetailsJson=vSeekParam))-&gt;orderby(a|a.OnApproveDetailsJson)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="58b4f489-c9e2-42bd-812e-490ece2c617c" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SomethingToPayWithPayPal.OnApproveDetailsJson" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekOnApproveJson" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="2c187930-9950-44a8-a534-3fc15c322c3d">
+      <Class>
+        <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SomethingToPayWithPayPal.allinstances-&gt;select(a|a.OnApproveJson.sqllike(vSeekParamWildcard) or (a.OnApproveJson=vSeekParam))-&gt;orderby(a|a.OnApproveJson)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4307c3a0-e0d2-4c4a-afc0-d6228f5b4a29" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SomethingToPayWithPayPal.OnApproveJson" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="ccb5b05e-329a-4fc1-9ee1-68ab143bfa7d">
+      <Class>
+        <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SomethingToPayWithPayPal.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="67ff32cb-78c9-4b0e-b9c7-d47c9be62982" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="039fbf53-0f82-48aa-994d-2e5b33cf4622" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="cde5796d-d185-4f5e-af32-cc4c614436f8" />
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="5063c796-fa0f-4649-a248-7cfe5bb6422f">
+      <ReferedNesting>
+        <Nesting Name="SomethingToPayWithPayPal" idref="8d3d11a0-521f-43fa-87a9-8d880c4e4fb7" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(SomethingToPayWithPayPal)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

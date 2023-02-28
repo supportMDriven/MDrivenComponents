@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="PayPalCheckOut" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="28e36e98-9cd4-4d73-b371-a2a0421bad6c">
+  <Class>
+    <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+  </Class>
+  <Nesting>
+    <Nesting Name="PayPalTransactionDone" ExpressionActAsForActions="" id="9e4f43f2-fd9b-4f47-933a-7a9fa36baa13">
+      <Class>
+        <Class Name="PayPalTransactionDone" idref="4f9655b3-cf76-4e0b-9a26-0f28f85ee388" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="intent" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.intent" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="5c43ad58-8b82-4bc9-a09a-04582e102abd" />
+        <Column Name="Payer_email_address" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Payer.email_address" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="87d41484-ec4d-488e-8dd1-937985735fa6" />
+        <Column Name="status" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.status" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="e36f9457-3eb0-4afe-94ab-d46cf2c163c0" />
+        <Column Name="create_time" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.create_time" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="ca26ba67-270a-4a46-8af4-f643c01b801b" />
+        <Column Name="id" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.id" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ad42688d-db49-4d4f-aa4f-00c990b49df9" />
+        <Column Name="update_time" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.update_time" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="27bb1e86-061e-48c0-b565-5ba289bf0ee6" />
+        <Column Name="Payer_payer_id" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Payer.payer_id" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="0b07202a-4acc-4f63-8c1a-7ebfeab6a92f" />
+        <Column Name="Purchase_unitss" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.Purchase_units" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="8" YPos="6" id="eb226f9d-f8a0-49d1-8a15-ea69ddebe48d">
+          <ReferedNesting>
+            <Nesting Name="Purchase_units" idref="8db7d667-9999-49c1-b674-893fa9791c25" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="PayPalTransactionDone" idref="bc963ecf-cb03-4eec-ae0e-f82a36f20d2b" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Purchase_units" ExpressionActAsForActions="" id="8db7d667-9999-49c1-b674-893fa9791c25">
+      <Class>
+        <Class Name="Purchase_units" idref="b983edf3-1930-4446-8d2a-e39f71acf333" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="23bc3a4c-c200-4364-b812-aa53783309e2" />
+        <Column Name="reference_id" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.reference_id" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="6c5b7335-d238-4a7e-92cf-7be724c54ee8" />
+        <Column Name="soft_descriptor" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.soft_descriptor" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="a103fefb-dc9e-49b0-b224-55e4b3ef26c7" />
+        <Column Name="Amount_currency_code" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount.currency_code" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="3e199b8d-b936-4b9d-8e7f-d3da363208a7" />
+        <Column Name="Amount_value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount.value" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="0c979d35-da5c-4a3a-9011-821fc6bf26cc" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Purchase_unitss" idref="eb226f9d-f8a0-49d1-8a15-ea69ddebe48d" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="PayPalComp" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" ContentOverride="True" Expression="'Note! Replace the Presentation with YOUR paypal client id - so that YOU get the money'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="AUvSKqXpWBSzmN-sVSXbHIQzmCyp2BNcBjR64yVE4a1PrtCL2FkPG_6U_jziHSJ80DH7-akDeOtJ3dkN" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8463e8b3-c9e1-409c-815b-53d1bb9d6364">
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="PayPalCheckOut" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Amount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a5130058-63c9-473c-b95c-1de70e3f4dd9" />
+    <Column Name="OnApproveJson" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.OnApproveJson" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="12" YPos="0" id="0012ef53-0540-4bd8-8ddb-29aa01608c79" />
+    <Column Name="OnApproveDetailsJson" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.OnApproveDetailsJson" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="9" YPos="0" id="c86b0fe5-2f81-4690-86fb-a13fead39793" />
+    <Column Name="DoAfterPurchase" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="let ppd=selfVM.JSonToObjects( PayPalTransactionDone ,  self.OnApproveDetailsJson )&#xD;&#xA; in &#xD;&#xA;(&#xD;&#xA;self.PayPalTransactionDones.Add(ppd)&#xD;&#xA;);&#xD;&#xA;selfVM.Save" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="2" id="36c91c65-337c-420b-89fd-d2bb3c031d1c" />
+    <Column Name="PayPalTransactionDone" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.PayPalTransactionDones" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="6" YPos="6" id="bc963ecf-cb03-4eec-ae0e-f82a36f20d2b">
+      <ReferedNesting>
+        <Nesting Name="PayPalTransactionDone" idref="9e4f43f2-fd9b-4f47-933a-7a9fa36baa13" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vNewVar1" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

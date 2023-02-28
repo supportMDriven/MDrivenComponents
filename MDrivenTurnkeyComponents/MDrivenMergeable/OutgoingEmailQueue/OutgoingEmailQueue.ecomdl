@@ -1,0 +1,22 @@
+<Model>
+  <Packages>
+    <Package Name="EmailSending" FileName="EmailSending" GUID="e0ee4256-dc3d-411d-9357-8dc7d626a15f" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="OutgoingEmail.SendingStateMachine" FileName="OutgoingEmail.SendingStateMachine" GUID="7e2b8f87-a4d5-462c-846e-256b614489ca" />
+    <Diagram Name="OutgoingEmail" FileName="OutgoingEmail" GUID="968442ff-c2d2-442c-a9a0-0e7e63ec0332" />
+  </Diagrams>
+  <Spans>
+    <Span Name="OutgoingEmailView" FileName="OutgoingEmailView" GUID="3ca1fbf6-a0d0-4bdb-888e-cd7456dabc17" />
+    <Span Name="OutgoingEmailSeeker" FileName="OutgoingEmailSeeker" GUID="41a14b4f-683d-4544-bc20-b6ac65c4f18a" />
+    <Span Name="SS_OutgoingEmailCleaning" FileName="SS_OutgoingEmailCleaning" GUID="54aeb8da-bf5f-4ec3-aea1-0f400f49d778" />
+    <Span Name="SS_OutgoingEmail" FileName="SS_OutgoingEmail" GUID="dc1e8941-2f86-4fe2-b76e-d6d05026c379" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

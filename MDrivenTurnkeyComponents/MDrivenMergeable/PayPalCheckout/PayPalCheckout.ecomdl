@@ -1,0 +1,20 @@
+<Model>
+  <Packages>
+    <Package Name="PayPalCheckout" FileName="PayPalCheckout" GUID="8fd4aab8-4a7c-4311-8a74-593b48ed061c" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="PayPalCheckout" FileName="PayPalCheckout" GUID="799f6e2e-333c-404e-9ea0-fde221eac459" />
+  </Diagrams>
+  <Spans>
+    <Span Name="PayPalCheckOut" FileName="PayPalCheckOut" GUID="28e36e98-9cd4-4d73-b371-a2a0421bad6c" />
+    <Span Name="AutoFormSomethingToPayWithPayPalSeeker" FileName="AutoFormSomethingToPayWithPayPalSeeker" GUID="33ff1d0c-a49e-4367-810f-8565ea05dde9" />
+    <Span Name="AutoFormSomethingToPayWithPayPal" FileName="AutoFormSomethingToPayWithPayPal" GUID="a04cde17-aa34-4cde-866c-8716dd13ecab" />
+    <Span Name="Index" FileName="Index" GUID="e1a2adb0-eb17-4683-b11c-59650c016699" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

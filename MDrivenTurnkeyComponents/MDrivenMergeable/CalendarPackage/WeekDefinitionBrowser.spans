@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="WeekDefinitionBrowser" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="f7a42a48-9ea8-42a7-b163-ca271dbd90dc">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllWeekDefinition" ExpressionActAsForActions="" id="b8c4a372-1f1b-4be7-85f2-815f749934b3">
+      <Class>
+        <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="47a6c738-4a0e-4d30-8345-91a9c56fe31b" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllWeekDefinition" idref="cc4ee5f9-a5c7-47a4-8046-189a556bc3c6" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllWeekDefinition" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="WeekDefinition.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="0" YPos="0" id="cc4ee5f9-a5c7-47a4-8046-189a556bc3c6">
+      <ReferedNesting>
+        <Nesting Name="AllWeekDefinition" idref="b8c4a372-1f1b-4be7-85f2-815f749934b3" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="3aafd027-a05d-4da7-aec8-4c3cf4a8695e">
+  <OwnedElement>
+    <Association Name="" EffectiveName="SysSingletonSysSingletonThemeDataPickedThemeData" id="446fa2e3-f05c-465b-a5f4-ce21005e0e0b">
+      <AssociationEnd>
+        <AssociationEnd Name="PickedThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3f6b98b7-815a-49da-9ed8-f6756a8a14c7">
+          <Participant>
+            <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingleton" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="69562f4d-b2db-43a5-ba5e-cce1b1da0a35">
+          <Participant>
+            <Class Name="SysSingleton" idref="99c04ca9-8168-481c-b414-1780768e8e76" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="ThemeDataThemeDataThemeColorThemeColors" id="6543afbd-b1ee-48d9-8b05-7715f8bbcc69">
+      <AssociationEnd>
+        <AssociationEnd Name="ThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9399263a-c7d9-464d-a979-3c8bdfca974e">
+          <Participant>
+            <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="ThemeColors" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2037335b-0f89-4482-8941-ad00e090c3d2">
+          <Participant>
+            <Class Name="ThemeColor" idref="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="ThemeData" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="805d2f20-e352-4d83-a68b-88b3ce393e2d">
+      <Feature>
+        <Method Name="EnsureThemeColors" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="46438196-65d5-454e-9c5b-65223c357e41">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Set{'--base-bg-color',&#xD;&#xA;'--navbar-bg-color',&#xD;&#xA;'--navbar-brand-color',&#xD;&#xA;'--navbar-link-color',&#xD;&#xA;'--sidebar-bg-color',&#xD;&#xA;'--primary-color',&#xD;&#xA;'--primary-color-dark ',&#xD;&#xA;'--text-on-primary ',&#xD;&#xA;'--danger-color',&#xD;&#xA;'--danger-color-dark ',&#xD;&#xA;'--text-on-danger ',&#xD;&#xA;'--warning-color',&#xD;&#xA;'--warning-color-dark ',&#xD;&#xA;'--text-on-warning ',&#xD;&#xA;'--success-color',&#xD;&#xA;'--success-color-dark ',&#xD;&#xA;'--text-on-success ',&#xD;&#xA;'--save-action-bg-color',&#xD;&#xA;'--save-action-bg-color-dark ',&#xD;&#xA;'--save-action-text-color',&#xD;&#xA;'--cancel-action-bg-color',&#xD;&#xA;'--cancel-action-bg-color-dark ',&#xD;&#xA;'--cancel-action-text-color',&#xD;&#xA;'--redo-action-bg-color',&#xD;&#xA;'--redo-action-bg-color-dark ',&#xD;&#xA;'--redo-action-text-color',&#xD;&#xA;'--undo-action-bg-color',&#xD;&#xA;'--undo-action-bg-color-dark ',&#xD;&#xA;'--undo-action-text-color',&#xD;&#xA;'--data-table-header-bg-color',&#xD;&#xA;'--data-table-header-text-color',&#xD;&#xA;'--data-table-body-bg-color',&#xD;&#xA;'--data-table-body-text-color'}-&gt;difference(self.ThemeColors.Name)-&gt;foreach(color| &#xD;&#xA;let newc=ThemeColor.Create in(&#xD;&#xA;  newc.Name:=color;&#xD;&#xA;  self.ThemeColors.Add(newc)&#xD;&#xA;))" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="80549d2d-14a8-460b-bb21-6e95b45100fc">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedCSS" Multiplicity="" Visibility="Public" id="a717e10a-4061-49bc-9f68-93a2c822d2ea">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="':root {'+&#xD;&#xA;self.ThemeColors-&gt;select(tc|tc.On)-&gt;collect(tc|tc.DerivedCSS)-&gt;asSeparatedList('\r\n')&#xD;&#xA;+&#xD;&#xA;self.ThemeSizes-&gt;select(ts|ts.On)-&gt;collect(ts|ts.DerivedCSS)-&gt;asSeparatedList('\r\n')&#xD;&#xA;+&#xD;&#xA;' }'" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureThemeSizes" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b08bedac-e7a0-400b-9a75-5a4b5aab17ff">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Set{'--base-font-size',&#xD;&#xA;'--base-border-radius',&#xD;&#xA;'--navbar-height',&#xD;&#xA;'--data-table-header-height',&#xD;&#xA;'--data-table-row-height'}-&gt;difference(self.ThemeSizes.Name)-&gt;foreach(sname| &#xD;&#xA;let news=ThemeSize.Create in(&#xD;&#xA;  news.Name:=sname;&#xD;&#xA;  self.ThemeSizes.Add(news)&#xD;&#xA;))" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="AppliedCSSForHtml" Multiplicity="" Visibility="Public" id="cae5bee3-fd04-4ffa-882d-73ecb0aaad16">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="'&lt;style&gt;'+self.DerivedCSS+'&lt;/style&gt;'" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+      </TaggedValue>
+    </Class>
+    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="99c04ca9-8168-481c-b414-1780768e8e76">
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+    <Class Name="ThemeSize" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b23ff679-7019-4903-a0f0-d42fc224ce8d">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="74ccb1a3-68bd-4b65-aa09-da72e2f550a3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Value" InitialValue="12" Multiplicity="" Visibility="Public" id="90b2e775-5121-4fc5-a51a-f250cc9ae6ac">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="On" Multiplicity="" Visibility="Public" id="d2493c30-c3d9-4b68-8cbb-82f5a4511f86">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedCSS" Multiplicity="" Visibility="Public" id="e341db12-b429-4523-b70e-90ad9ba4527e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.name+':'+self.Value.asstring+'px;'" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="ThemeColor" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="fbe4d57e-f10a-432f-b505-0d0d7e4af6de">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="01b8af2a-09c1-4535-871f-3191e8d23b7c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedCSS" Multiplicity="" Visibility="Public" id="2f941e42-fd9f-410d-a23a-0aa053ce8dfc">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.name+':'+self.DerivedRGB+';'" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="B" Multiplicity="" Visibility="Public" id="3b661b29-ec73-4f7e-a637-98b6d9c8d4e3">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedRGB" Multiplicity="" Visibility="Public" id="592e2b50-e3cc-46f7-97b7-0fb1f1b6babf">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.R.asstring+','+self.G.asstring+','+self.B.asstring" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="On" Multiplicity="" Visibility="Public" id="5d6ccca4-d8c1-433a-8e6b-208e4bb6db3d">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="G" Multiplicity="" Visibility="Public" id="8c05f664-7c85-443b-a81a-08be1e55fe5e">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AsRGBHex" Multiplicity="" Visibility="Public" id="b651e0f6-dce3-4fd6-9f42-9d7dc81522a5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCLSet" Value="let val=Set{'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'} in&#xD;&#xA;(&#xD;&#xA;  let res=vInputParameter.Replace('#','').tolower.tochararray()-&gt;collect(d|val-&gt;indexof0(d.asstring)) in&#xD;&#xA;  (&#xD;&#xA;    self.R:=res.At(1)*16+res.At(2);&#xD;&#xA;    self.G:=res.At(3)*16+res.At(4);&#xD;&#xA;    self.B:=res.At(5)*16+res.At(6)&#xD;&#xA;  )&#xD;&#xA;&#xD;&#xA;)" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="'#'+self.R.ToString('X2')+self.G.ToString('X2')+self.B.ToString('X2')" />
+            <TaggedValue Tag="Eco.DerivedSettable" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="R" Multiplicity="" Visibility="Public" id="bba19d97-4399-4221-82a2-49c7fcae5e5a">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="ThemeDataThemeDataThemeSizeThemeSizes" id="fcc2320b-0fa2-49da-956d-d27eafb1ffb1">
+      <AssociationEnd>
+        <AssociationEnd Name="ThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="96ada9f4-5a27-4659-911a-b4bea7e7d8e3">
+          <Participant>
+            <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="ThemeSizes" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="6032f69a-43af-40c0-ab18-3fcb14d39215">
+          <Participant>
+            <Class Name="ThemeSize" idref="b23ff679-7019-4903-a0f0-d42fc224ce8d" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+</Package>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="EmailSending" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="e0ee4256-dc3d-411d-9357-8dc7d626a15f">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="EmailAttachment" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3348eb4a-6000-419f-b087-d25cf0542c64">
+      <Feature>
+        <Attribute Name="file" Multiplicity="" Visibility="Public" id="0a3833b5-c18a-4a06-afce-7f66491a8ae4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.BlobType" Value="Blob" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+        <Attribute Name="name" Multiplicity="" Visibility="Public" id="2babe723-f61c-448c-bdb2-8a19c9569c92">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="mediatype" Multiplicity="" Visibility="Public" id="729aeb1c-79a0-4e90-8a80-14098c71e109">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="OutgoingEmail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="7e5e598c-0bee-4728-823d-dfdc257da03c">
+      <Feature>
+        <Method Name="ReQueue" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="03a3e928-8e8b-4159-9d08-07bbbe7a7aee">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="exceptionInfo" Multiplicity="" Visibility="Public" id="043afc91-cb20-4bf3-b6a1-c1efe8f20e43">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="2048" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Method Name="SuccessfullySent" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="14dd59e0-5102-40a8-9ef2-d527eca906a2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="MaxSendTries" Multiplicity="" Visibility="Public" id="2095760f-d0c3-422c-aa85-a5c6ed2bcafb">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="from" Multiplicity="" Visibility="Public" id="351410ca-b66e-48c9-9b1d-9149cd688505">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SendTries" Multiplicity="" Visibility="Public" id="39c23fbc-b44b-40a5-9ae6-7ad122748a90">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="errorinfo" Multiplicity="" Visibility="Public" id="3d8e11d8-f784-4049-8c84-9a376cf16672">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="256" />
+            <TaggedValue Tag="Eco.FormerNames" Value="errormessage" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="to" Multiplicity="" Visibility="Public" id="3fa3093c-0bee-4ebd-8b5e-47907a90a396">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="4000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="subject" Multiplicity="" Visibility="Public" id="4cfd0b04-6345-4ecb-9aca-9954675e8d55">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="State" Multiplicity="" Visibility="Public" id="8e7d1179-7d41-425b-9a22-3a51867946a1">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram idref="7e2b8f87-a4d5-462c-846e-256b614489ca" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsStateAttribute" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="FailedToSend" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="c43984b5-c0dd-4608-bfe5-23ebd8074f48">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="frompresentation" Multiplicity="" Visibility="Public" id="f8f91c1f-f95b-42e8-9f4d-0b455fd00f8b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="body" Multiplicity="" Visibility="Public" id="fcd0ae31-cf1d-4b60-8b07-5cfde7bd723f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <StateMachine>
+        <StateMachine Name="SendingStateMachine" id="451e7be0-d36a-4d5a-975b-5322d3aa46fb">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram idref="7e2b8f87-a4d5-462c-846e-256b614489ca" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region Name="RootRegion">
+              <StateAttribute>
+                <Attribute Name="State" idref="8e7d1179-7d41-425b-9a22-3a51867946a1" />
+              </StateAttribute>
+              <Transition>
+                <Transition Guard="OCL: " id="066e8090-8dd0-449c-b0e8-19a82b713124">
+                  <Source>
+                    <PseudoState Name="Start5" idref="44df8302-9249-4648-9804-9192d478edc6" />
+                  </Source>
+                  <Target>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Target>
+                </Transition>
+                <Transition Guard="OCL: " id="46bb47de-49ab-48ee-b072-d34dc0abb0a1">
+                  <Source>
+                    <State Name="SendingFailed" idref="28b057b0-4aad-4cf8-9b3a-486aab3b36a2" />
+                  </Source>
+                  <Target>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="ReQueue" idref="03a3e928-8e8b-4159-9d08-07bbbe7a7aee" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: self.SendTries &gt;= self.MaxSendTries" id="90a78811-c913-4d3f-b275-769b44cab6dc">
+                  <Source>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Source>
+                  <Target>
+                    <State Name="SendingFailed" idref="28b057b0-4aad-4cf8-9b3a-486aab3b36a2" />
+                  </Target>
+                </Transition>
+                <Transition Guard="OCL: " id="b3a25714-a5e8-433b-9825-3bc564307a66">
+                  <Source>
+                    <State Name="Retrying" idref="d291b6eb-f093-46ef-843d-3a9547eb89e8" />
+                  </Source>
+                  <Target>
+                    <State Name="Sent" idref="756cf4f8-0cd1-44ca-b573-4d87c225256f" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="SuccessfullySent" idref="14dd59e0-5102-40a8-9ef2-d527eca906a2" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: " id="b9ff87f9-b5d5-4183-99c4-47909721edd8">
+                  <Source>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Source>
+                  <Target>
+                    <State Name="Retrying" idref="d291b6eb-f093-46ef-843d-3a9547eb89e8" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="FailedToSend" idref="c43984b5-c0dd-4608-bfe5-23ebd8074f48" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: " id="ca53db4c-e5bc-4071-a7b5-796ff94fc037">
+                  <Source>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Source>
+                  <Target>
+                    <State Name="Sent" idref="756cf4f8-0cd1-44ca-b573-4d87c225256f" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="SuccessfullySent" idref="14dd59e0-5102-40a8-9ef2-d527eca906a2" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: self.SendTries &gt;= self.MaxSendTries" id="eca16e70-cc5b-4809-b52e-e71d7cc30abc">
+                  <Source>
+                    <State Name="Retrying" idref="d291b6eb-f093-46ef-843d-3a9547eb89e8" />
+                  </Source>
+                  <Target>
+                    <State Name="SendingFailed" idref="28b057b0-4aad-4cf8-9b3a-486aab3b36a2" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="FailedToSend" idref="c43984b5-c0dd-4608-bfe5-23ebd8074f48" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <State Name="SendingFailed" CodeComment="" id="28b057b0-4aad-4cf8-9b3a-486aab3b36a2">
+                  <PlacedState>
+                    <PlacedState idref="b2e8e59b-50ba-43bd-8560-dfb0dc16ae4e" />
+                  </PlacedState>
+                </State>
+                <PseudoState Name="Start5" CodeComment="" id="44df8302-9249-4648-9804-9192d478edc6">
+                  <PlacedState>
+                    <PlacedState idref="33a587c3-bea3-4a01-8860-c874bf67b3a6" />
+                  </PlacedState>
+                </PseudoState>
+                <State Name="Queued" CodeComment="" id="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0">
+                  <Entry>
+                    <Activity Body="self.MaxSendTries := self.MaxSendTries +3" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState idref="a4f15538-d587-423d-bb20-745ad361d893" />
+                  </PlacedState>
+                </State>
+                <State Name="Sent" CodeComment="" id="756cf4f8-0cd1-44ca-b573-4d87c225256f">
+                  <PlacedState>
+                    <PlacedState idref="b08cbd51-29b9-4a5f-83be-4b408cfaad50" />
+                  </PlacedState>
+                </State>
+                <State Name="Retrying" CodeComment="" id="d291b6eb-f093-46ef-843d-3a9547eb89e8">
+                  <PlacedState>
+                    <PlacedState idref="3d8f2fd2-7098-4753-80e2-31fec9259528" />
+                  </PlacedState>
+                </State>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+      </StateMachine>
+    </Class>
+    <Association Name="" EffectiveName="OutgoingEmailOutgoingEmailEmailAttachmentEmailAttachments" id="e42ccfeb-c2a9-490c-acb1-0be2f9fb0915">
+      <AssociationEnd>
+        <AssociationEnd Name="OutgoingEmail" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="d7bfd975-fd68-4a9d-bf45-3df99f333100">
+          <Participant>
+            <Class Name="OutgoingEmail" idref="7e5e598c-0bee-4728-823d-dfdc257da03c" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="EmailAttachments" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="1deca91c-dafa-427a-8492-4adc4fdc7196">
+          <Participant>
+            <Class Name="EmailAttachment" idref="3348eb4a-6000-419f-b087-d25cf0542c64" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

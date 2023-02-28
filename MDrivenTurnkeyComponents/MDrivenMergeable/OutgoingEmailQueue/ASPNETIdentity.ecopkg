@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="eb18d545-8d55-4a15-b9ba-13e814742fec">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="305f131d-d82d-49fa-8735-f894e1d58636">
+      <Feature>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="CreateTime:=DateTime.Now;&#xD;&#xA;self.Guid.newGuid()" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnUpdate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="4ca4702c-1fa2-424c-8af7-bd252ed6e35f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ChangeTime:=DateTime.Now" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="ChangeTime" Multiplicity="" Visibility="Public" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Guid" Multiplicity="" Visibility="Public" id="6c4398ca-d6f8-4763-b162-77c675aa06dc">
+          <Type>
+            <Datatype idref="Guid" />
+          </Type>
+        </Attribute>
+        <Attribute Name="CreateTime" Multiplicity="" Visibility="Public" id="89803d28-5552-457f-bc84-33f0bf1ba9eb">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.TableMapping" Value="Children" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperclass" />
+  </TaggedValue>
+</Package>

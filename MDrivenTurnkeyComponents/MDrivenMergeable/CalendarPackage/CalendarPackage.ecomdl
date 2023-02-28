@@ -1,0 +1,27 @@
+<Model>
+  <Packages>
+    <Package Name="CalendarPackage" FileName="CalendarPackage" GUID="8c9141e9-297a-4f9a-be23-a747a29367f7" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions>
+    <TagExtension Name="Plan" FileName="Plan" GUID="1f60e0d6-b87c-4701-ae18-2b3de1ad666b" />
+  </TagExtensions>
+  <Diagrams>
+    <Diagram Name="Calendar" FileName="Calendar" GUID="c00d77df-e19d-45dd-bcf1-dba41eddbe7c" />
+  </Diagrams>
+  <Spans>
+    <Span Name="CountryView" FileName="CountryView" GUID="1746ee3e-df60-401a-9584-aafbde0f829f" />
+    <Span Name="YearView" FileName="YearView" GUID="5de76341-4be5-4215-97b1-7cd387bcdf78" />
+    <Span Name="WeekDefinitionView" FileName="WeekDefinitionView" GUID="829d1320-7cde-401a-a952-1e748c9afe2f" />
+    <Span Name="DateStructureBrowser" FileName="DateStructureBrowser" GUID="86919079-eafb-46d3-b35a-0b8b339f3f31" />
+    <Span Name="SS_UpdateTime" FileName="SS_UpdateTime" GUID="9de7b664-412e-4e69-9d5b-40015b93fbf0" />
+    <Span Name="CountryBrowser" FileName="CountryBrowser" GUID="b21ea6c6-9645-4335-afb0-470a9d900d45" />
+    <Span Name="HourOfDayValuestore" FileName="HourOfDayValuestore" GUID="d555b201-9038-4646-9b66-23d5dd582f76" />
+    <Span Name="WeekDefinitionBrowser" FileName="WeekDefinitionBrowser" GUID="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

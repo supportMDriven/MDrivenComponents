@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="HourOfDayValuestore" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="d555b201-9038-4646-9b66-23d5dd582f76">
+  <Class>
+    <Class Name="HourOfDay" idref="4c39bc95-4ee0-439d-bca7-5e704c8c33c9" />
+  </Class>
+  <Nesting>
+    <Nesting Name="HourOfDay" ExpressionActAsForActions="" id="f4ad7767-c3b2-4388-ba27-513cbaeb876a">
+      <Class>
+        <Class Name="HourOfDay" idref="4c39bc95-4ee0-439d-bca7-5e704c8c33c9" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="HourOfDay" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="95678997-fa3a-4ce3-a882-4b1e6d9e74cd" />
+        <Column Name="Hour" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.Hour" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="41e0b3d0-8a7e-40b9-b55d-80a5322874e9" />
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.Presentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="210d4788-f7d5-478a-8bdd-5eed663a07ff" />
+        <Column Name="AmPmPresentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.AmPmPresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="c5b6e726-8c13-4f75-9506-2a1dbb7b1b38" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllHourOfDay" idref="a8c64dea-b4ed-47d9-baf6-743ac60747ef" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllHourOfDay" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="HourOfDay.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="a8c64dea-b4ed-47d9-baf6-743ac60747ef">
+      <ReferedNesting>
+        <Nesting Name="HourOfDay" idref="f4ad7767-c3b2-4388-ba27-513cbaeb876a" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

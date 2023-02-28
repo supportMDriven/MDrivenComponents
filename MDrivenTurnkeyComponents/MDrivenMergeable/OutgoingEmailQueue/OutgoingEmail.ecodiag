@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="OutgoingEmail" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.40710042265625" Id="968442ff-c2d2-442c-a9a0-0e7e63ec0332">
+  <PlacedClass>
+    <PlacedClass ClassId="7e5e598c-0bee-4728-823d-dfdc257da03c" Color="1692800256" LastKnownName="OutgoingEmail" PickedFeatureVisibility="ShowAll" RenderedHeight="203" RenderedWidth="122" ShowAttributes="False" ShowMethods="False" Size="1" x="120" y="56" id="701139a6-7423-40c6-81f9-2b0e86c5e1a9">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.84521107331909" LabelDistance="8.06566153963859" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-8" y="203" id="5ce2f180-1096-401a-9dc0-4fbd194319e8">
+          <AssociationEnd>
+            <AssociationEnd Name="OutgoingEmail" idref="d7bfd975-fd68-4a9d-bf45-3df99f333100" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.928820249738066" LabelDistance="7.03175595043862" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-16" y="0" id="be0235cd-1246-49c7-bfdb-0e01a6adec7b">
+              <AssociationEnd>
+                <AssociationEnd Name="EmailAttachments" idref="1deca91c-dafa-427a-8492-4adc4fdc7196" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="OutgoingEmail" idref="7e5e598c-0bee-4728-823d-dfdc257da03c" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="3348eb4a-6000-419f-b087-d25cf0542c64" Color="1692800256" LastKnownName="EmailAttachment" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="135" ShowAttributes="False" ShowMethods="False" Size="1" x="128" y="328" id="e9bb89c9-d965-428d-b836-96553a08a5bf">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.928820249738066" LabelDistance="7.03175595043862" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-16" y="0" id="be0235cd-1246-49c7-bfdb-0e01a6adec7b">
+          <AssociationEnd>
+            <AssociationEnd Name="EmailAttachments" idref="1deca91c-dafa-427a-8492-4adc4fdc7196" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="EmailAttachment" idref="3348eb4a-6000-419f-b087-d25cf0542c64" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedDiagrams>
+    <PlacedDiagram Color="-1765226296" Height="301" LastKnownName="" RenderedHeight="301" RenderedWidth="486" Size="1" Width="486" x="520" y="56" id="dbb7550d-53ae-4787-a7d0-8b016a09c230">
+      <DrawnDiagram>
+        <AttributeStateDiagram idref="7e2b8f87-a4d5-462c-846e-256b614489ca" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+  </PlacedDiagrams>
+</Diagram>

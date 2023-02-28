@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="DiagramThemeBuilder" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.40710042265625" Id="f68719fe-2dcf-4e4b-bd7a-c276d25f82f5">
+  <PlacedClass>
+    <PlacedClass ClassId="805d2f20-e352-4d83-a68b-88b3ce393e2d" Color="1692800256" LastKnownName="ThemeData" PickedFeatureVisibility="ShowAll" RenderedHeight="108" RenderedWidth="134" ShowAttributes="False" ShowMethods="False" Size="1" x="104" y="216" id="2f826c2b-fc0d-4f60-b51b-26fce347d8e4">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-16" y="108" id="0bcfb751-294a-4400-a5f8-7f61b4664e1a">
+          <AssociationEnd>
+            <AssociationEnd Name="ThemeData" idref="96ada9f4-5a27-4659-911a-b4bea7e7d8e3" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.642742640889964" LabelDistance="14.1385651415585" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="31253783-808b-4fd6-b565-7f501f4572ba">
+              <AssociationEnd>
+                <AssociationEnd Name="ThemeSizes" idref="6032f69a-43af-40c0-ab18-3fcb14d39215" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.752993661659469" LabelDistance="15.5106703783855" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="47054856-2b5b-4218-8fd7-d74f8da4d1cf">
+          <AssociationEnd>
+            <AssociationEnd Name="PickedThemeData" idref="3f6b98b7-815a-49da-9ed8-f6756a8a14c7" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="8" y="31" id="476e95bc-f68c-4b0b-abfd-42e7351ff9dd">
+              <AssociationEnd>
+                <AssociationEnd Name="SysSingleton" idref="69562f4d-b2db-43a5-ba5e-cce1b1da0a35" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="40" y="108" id="d01722a3-776b-4eb1-8775-bc8df7a7ed42">
+          <AssociationEnd>
+            <AssociationEnd Name="ThemeData" idref="9399263a-c7d9-464d-a979-3c8bdfca974e" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.817802665135426" LabelDistance="15.5106703783855" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-51.5" y="64" id="63099df5-d32e-4418-b004-f1d35c36db26">
+              <AssociationEnd>
+                <AssociationEnd Name="ThemeColors" idref="2037335b-0f89-4482-8941-ad00e090c3d2" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="99c04ca9-8168-481c-b414-1780768e8e76" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="105" ShowAttributes="False" ShowMethods="False" Size="1" x="78.1749463143134" y="52.590418429629" id="9f3f840d-c149-434b-a34a-1e146ca213b4">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="8" y="31" id="476e95bc-f68c-4b0b-abfd-42e7351ff9dd">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingleton" idref="69562f4d-b2db-43a5-ba5e-cce1b1da0a35" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSingleton" idref="99c04ca9-8168-481c-b414-1780768e8e76" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="b23ff679-7019-4903-a0f0-d42fc224ce8d" Color="1692800256" LastKnownName="ThemeSize" PickedFeatureVisibility="ShowAll" RenderedHeight="85" RenderedWidth="102" ShowAttributes="False" ShowMethods="False" Size="1" x="80" y="408" id="e6794357-7307-4206-928d-5d63432de32a">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.642742640889964" LabelDistance="14.1385651415585" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="31253783-808b-4fd6-b565-7f501f4572ba">
+          <AssociationEnd>
+            <AssociationEnd Name="ThemeSizes" idref="6032f69a-43af-40c0-ab18-3fcb14d39215" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ThemeSize" idref="b23ff679-7019-4903-a0f0-d42fc224ce8d" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" Color="1692800256" LastKnownName="ThemeColor" PickedFeatureVisibility="ShowAll" RenderedHeight="133" RenderedWidth="103" ShowAttributes="False" ShowMethods="False" Size="1" x="352" y="360" id="ebaa2429-e61f-4a51-88f8-a1062145b908">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.817802665135426" LabelDistance="15.5106703783855" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-51.5" y="64" id="63099df5-d32e-4418-b004-f1d35c36db26">
+          <AssociationEnd>
+            <AssociationEnd Name="ThemeColors" idref="2037335b-0f89-4482-8941-ad00e090c3d2" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ThemeColor" idref="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="173" LastKnownName="" NoteContent="UEsDBBQAAAAIAOyV1lBUQPZXBQMAAN8JAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAK1WbU/bMBD+K1b2maZh74hW6oAONEATKaDt25EciYdjR/aZtvv1O7cF2jXgIa1KP9h57u655+y77OdYkDRazBql3SCpidq9NHVFjQ24XiMLa5y5pV5hmnQq9e0s3e33P6QzaFTaWnSoCYKDJHjYcy0UOEgWL+w9JmKCMxopWemGgYPkFG8pEadS4zHKquadkSeTiBN3PG9r1AtXRxpuFJaDZAzK4dKxAl0NEtQ73iVirMz0UNol86XTibkI/hJx7psbtLm/cSTJB0DvwCvyFnPjbSB3ydQ6cesLJuZWdhzPaBpDI9V8kORYGRSXJ8vdnOaKXZ4b24Babl2vElvfy8kiFfVfm/I3m2a7YWWxssZrzvnNeNxf/Fi7eWsqC2097+UEugRbnsoKAieu1MR63MAcsE9W24N6CXUoXcFkOEWw8zXgSus15LF0ZKwsNvxtw0Zam+URGClCyyUMuP4z1NYxW9yeIrIiTWe0b2wtw1HYTh9aSaByPoELwLbtATjMUTtJ8h6fjRBKyjxkkSNlMcBuDPA2BngXA7yPAT7EAB9jgE8xwOeoUP0oIqplFhUzi6qZReXMonpmUUGzqKJZVNIsqulup6ZjC6u299BL1s0VuBrLn2hNl+0ZUGjrFG7YV4t41wU6AkcjJ0EfzVq09Ow9uQLLIHKdRFaXsfslt160fFM3e+c2YG1udIAeeV7LkuruSI+YUx4fHqrucA/NNZ8G9V5oXs8AHou22QCH+9/BwgLzD1MpDEo2ufB6bd65+x1WfTgxwjsUIFyLhbyVhZhwHfEQCITUvH8vcSp+eUcCypLXV7w+MyUqURjlGy2oBhKuNlP3ZNrbTzlad8iNSfbFqDIZjtpWSSwP8pyPxDE1SogXHAzBMY/XRThxeRgkxct+dSkasHfLlFbpTSXVYgJVheUVKI+vDBzU4C8Qzmlllz5W7v8V8YfxogDNlNu5YPYoDtHyIAqKipBV60lIfjQZMWeHgu646rZwrsd/wbsN3IVTwNeyAc33InhpsINzuvqqG/4BUEsDBAoAAAAAAOyV1lB0VGXNDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUjQ4NDNlMDg0Y2YxODRmYmYiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAADsldZQNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAOyV1lBUQPZXBQMAAN8JAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAADsldZQdFRlzQwBAAAMAQAACwAAAAAAAAAAAAAAAABRAwAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAADsldZQNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAACiBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAAAZBgAAAAA=" RenderedHeight="183" RenderedWidth="371" Size="1" Width="361" x="592" y="328" id="3c7f1bc7-5914-40b9-b7fe-65625fb17450" />
+  </PlacedNote>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="245" LastKnownName="" RenderedHeight="255" RenderedWidth="428" Size="1" Width="418" x="416" y="16" id="e3c7a822-3fbb-4bde-8550-021e5faca934">
+      <Span>
+        <Span Name="ThemeDataWorkView" idref="ae8d6913-39a7-490f-98eb-9626fe1f19b0" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

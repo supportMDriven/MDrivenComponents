@@ -1,0 +1,18 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="3aafd027-a05d-4da7-aec8-4c3cf4a8695e" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="DiagramThemeBuilder" FileName="DiagramThemeBuilder" GUID="f68719fe-2dcf-4e4b-bd7a-c276d25f82f5" />
+  </Diagrams>
+  <Spans>
+    <Span Name="ThemeDataWorkView" FileName="ThemeDataWorkView" GUID="ae8d6913-39a7-490f-98eb-9626fe1f19b0" />
+    <Span Name="Index" FileName="Index" GUID="e1a2adb0-eb17-4683-b11c-59650c016699" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

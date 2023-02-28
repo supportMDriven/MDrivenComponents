@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSomethingToPayWithPayPal" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="4" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="a04cde17-aa34-4cde-866c-8716dd13ecab">
+  <Category>
+    <Category Name="AutoForms" idref="89d1199e-c325-4633-87fe-a7cef87d19dc" />
+  </Category>
+  <Class>
+    <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSomethingToPayWithPayPal" idref="140428dd-6b34-4c7f-a793-5e3fb431b6b6" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Amount" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Amount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="964154d8-1c82-4b5a-9b2f-ba6e0bb86fad" />
+    <Column Name="OnApproveDetailsJson" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.OnApproveDetailsJson" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="38d2275e-9f99-4565-9c7d-329cd9fe4b14" />
+    <Column Name="OnApproveJson" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.OnApproveJson" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="0f1c31cb-3b6a-4e60-832f-1967fb3d4444" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

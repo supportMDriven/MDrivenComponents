@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="PayPalCheckout" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="8fd4aab8-4a7c-4311-8a74-593b48ed061c">
+  <OwnedElement>
+    <Class Name="SomethingToPayWithPayPal" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="288fb208-dbcc-4eaa-af4f-21dbeaf73376">
+      <Feature>
+        <Attribute Name="Amount" Multiplicity="" Visibility="Public" id="211d04f7-e9bf-464c-af1e-0d5160bb1ed0">
+          <Type>
+            <Datatype idref="Double" />
+          </Type>
+        </Attribute>
+        <Attribute Name="OnApproveDetailsJson" Multiplicity="" Visibility="Public" id="a2ef3119-6c2e-40f3-9663-8ff41b9bddfe">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="OnApproveJson" Multiplicity="" Visibility="Public" id="cd844e8e-3885-45e9-9004-eee913611693">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Name" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3f2fbf58-4fe6-40af-8f81-6ed85e3c79e6">
+      <Feature>
+        <Attribute Name="surname" Multiplicity="" Visibility="Public" id="9c2ffd8f-3559-46d4-a3f8-6ee6a616e3e7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="full_name" Multiplicity="" Visibility="Public" id="e7cc7926-e292-458f-b26a-6eee0227a0d2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="given_name" Multiplicity="" Visibility="Public" id="fcf30b4e-4694-4cbc-b738-efdda129bb69">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="PayPalTransactionDone" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="4f9655b3-cf76-4e0b-9a26-0f28f85ee388">
+      <Feature>
+        <Attribute Name="id" Multiplicity="" Visibility="Public" id="6c51ab60-9902-4f20-8062-00f4a86309e3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="update_time" Multiplicity="" Visibility="Public" id="744f3d4d-b330-42f6-b32b-45a2f0120c79">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Date" />
+          </Type>
+        </Attribute>
+        <Attribute Name="intent" Multiplicity="" Visibility="Public" id="a67ac697-38b2-4d6c-b744-f1272ebc7f04">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="create_time" Multiplicity="" Visibility="Public" id="c56c7441-fcca-41fa-9c2a-c51c1e4d0483">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Date" />
+          </Type>
+        </Attribute>
+        <Attribute Name="status" Multiplicity="" Visibility="Public" id="ec06b87c-535c-4e72-b7ca-b86ecc01ebe2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Address" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="51ee22a2-c56c-4593-a0f2-e04d9f20fbee">
+      <Feature>
+        <Attribute Name="postal_code" Multiplicity="" Visibility="Public" id="53a5d848-7f38-418e-9041-a1df0e21339a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="country_code" Multiplicity="" Visibility="Public" id="68477ec1-d89d-49bf-b3af-f9c310f7adb8">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="admin_area_2" Multiplicity="" Visibility="Public" id="752a22ce-d99b-4ff3-9a18-cd37dfa60d47">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="address_line_1" Multiplicity="" Visibility="Public" id="c08970f6-337e-4167-875a-0bc1d81b06af">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Payer" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="731a6166-16f2-4222-894b-56645dd7fe1b">
+      <Feature>
+        <Attribute Name="email_address" Multiplicity="" Visibility="Public" id="3fb29958-397f-4138-be6c-2231dc5e9b35">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="payer_id" Multiplicity="" Visibility="Public" id="709704b5-8cd9-49ac-9818-727e8fc467de">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="PayerPayersNameName" id="8853d1b8-6dba-426c-929c-4133693cf0d9">
+      <AssociationEnd>
+        <AssociationEnd Name="Payers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b7acf105-90df-4c89-a922-ef37dd78f724">
+          <Participant>
+            <Class Name="Payer" idref="731a6166-16f2-4222-894b-56645dd7fe1b" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Name" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="149b7812-12ad-4614-bb57-d69960e33aa0">
+          <Participant>
+            <Class Name="Name" idref="3f2fbf58-4fe6-40af-8f81-6ed85e3c79e6" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="AddressAddressPayerPayers" id="8da681e8-6af9-465e-ab13-56f8f84cb52e">
+      <AssociationEnd>
+        <AssociationEnd Name="Payers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="28493ff1-90a6-4d8a-a041-722e6dd2de23">
+          <Participant>
+            <Class Name="Payer" idref="731a6166-16f2-4222-894b-56645dd7fe1b" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Address" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="b83b4031-8aca-4edf-9d14-9af612d86d44">
+          <Participant>
+            <Class Name="Address" idref="51ee22a2-c56c-4593-a0f2-e04d9f20fbee" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="PayPalTransactionDonePayPalTransactionDonePurchase_unitsPurchase_units" id="972b1949-d6e9-45b3-9b6e-3541374222ab">
+      <AssociationEnd>
+        <AssociationEnd Name="PayPalTransactionDone" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="f6eca757-34f7-45da-8dc8-f02920de0354">
+          <Participant>
+            <Class Name="PayPalTransactionDone" idref="4f9655b3-cf76-4e0b-9a26-0f28f85ee388" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Purchase_units" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="9cdba6d2-21f6-48c3-8e91-3869b4e44f6d">
+          <Participant>
+            <Class Name="Purchase_units" idref="b983edf3-1930-4446-8d2a-e39f71acf333" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="Purchase_unitsPurchase_unitssAmountAmount" id="a32d0827-3b03-41c6-b538-a1eb15633df1">
+      <AssociationEnd>
+        <AssociationEnd Name="Purchase_unitss" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c7fa696f-48ba-4459-bed8-77066204aa8b">
+          <Participant>
+            <Class Name="Purchase_units" idref="b983edf3-1930-4446-8d2a-e39f71acf333" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Amount" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9defb5dc-ac9b-4424-9f70-0254287b5cda">
+          <Participant>
+            <Class Name="Amount" idref="d5c7ed45-814a-4d43-8eff-7c08077171b2" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Purchase_units" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b983edf3-1930-4446-8d2a-e39f71acf333">
+      <Feature>
+        <Attribute Name="reference_id" Multiplicity="" Visibility="Public" id="268f8e91-4671-4f1f-a981-0a481e622415">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="soft_descriptor" Multiplicity="" Visibility="Public" id="5d6f571d-57ec-4eb8-afa4-7ae5128dfcaa">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Amount" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d5c7ed45-814a-4d43-8eff-7c08077171b2">
+      <Feature>
+        <Attribute Name="value" Multiplicity="" Visibility="Public" id="c6fab9b1-d270-498d-b0e2-42ac4848908f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="currency_code" Multiplicity="" Visibility="Public" id="db329a87-74be-450d-a78a-eceac3296d37">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="PayPalTransactionDonePayPalTransactionDonesPayerPayer" id="da6e46ad-71ca-4fa0-921a-37cb7005c3d9">
+      <AssociationEnd>
+        <AssociationEnd Name="PayPalTransactionDones" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b2f1c67b-14fe-45b0-8849-173d7ee89c09">
+          <Participant>
+            <Class Name="PayPalTransactionDone" idref="4f9655b3-cf76-4e0b-9a26-0f28f85ee388" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Payer" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a17a58ff-5f17-4d26-b4d1-fa406af33e3c">
+          <Participant>
+            <Class Name="Payer" idref="731a6166-16f2-4222-894b-56645dd7fe1b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="PayPalTransactionDonePayPalTransactionDonesSomethingToPayWithPayPalSomethingToPayWithPayPal" id="dfd0eaa7-9398-451b-93e6-c3b331107c00">
+      <AssociationEnd>
+        <AssociationEnd Name="SomethingToPayWithPayPal" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="91e1b828-8e06-4d7c-958d-7be730dae62c">
+          <Participant>
+            <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="PayPalTransactionDones" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b730942c-7a08-4d3c-a19e-ed9132e0fdf5">
+          <Participant>
+            <Class Name="PayPalTransactionDone" idref="4f9655b3-cf76-4e0b-9a26-0f28f85ee388" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="" />
+  </TaggedValue>
+</Package>

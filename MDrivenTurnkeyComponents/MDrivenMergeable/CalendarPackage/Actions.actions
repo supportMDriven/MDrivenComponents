@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allactions>
+  <ClassAction Name="EnsureMonthsAndDays" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isNull" ExecuteExpression="self.EnsureMonthsAndDays" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="112d9161-0641-4a80-adca-c541cf08dcce">
+    <ClassToPerformActionOn>
+      <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="ShowCountry" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="1aed9795-8d20-4343-a76d-5e95952fcf4e">
+    <BringUpViewModel>
+      <Span Name="CountryView" idref="1746ee3e-df60-401a-9584-aafbde0f829f" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="ClearCalendar" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="REALLY SURE?" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="Calendar.SO.ClearCalendar" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2e51000d-de3a-4204-87bc-9bf8a99f6433">
+    <ClassToPerformActionOn>
+      <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="CreateYear" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="Year.allInstances-&gt;isEmpty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Year.Create" Id="2fdf455a-bba9-438d-85a9-92452e932f04">
+    <BringUpViewModel>
+      <Span Name="YearView" idref="5de76341-4be5-4215-97b1-7cd387bcdf78" />
+    </BringUpViewModel>
+    <ViewModelContext>
+      <Span Name="DateStructureBrowser" idref="86919079-eafb-46d3-b35a-0b8b339f3f31" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="HoursOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="3e1f08a8-93ed-43e5-9484-84ef398ae519">
+    <BringUpViewModel>
+      <Span Name="HourOfDayValuestore" idref="d555b201-9038-4646-9b66-23d5dd582f76" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="Settings/Calendar" idref="913e10f4-cf1d-491c-adc7-1657510ef3f2" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoFormTemplate" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ClassAction Name="DeleteYear" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="Delete year?" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="X" EnableExpression="not self.isNull" ExecuteExpression="self.Months;&#xD;&#xA;self.Months.Days;&#xD;&#xA;self.Months.Days.DayWeekLinks;&#xD;&#xA;self.Months.Days.DayWeekLinks.Week;&#xD;&#xA;self.Months.Days.Tomorrow;&#xD;&#xA;self.Months.Next;&#xD;&#xA;self.Weeks;&#xD;&#xA;self.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="428e6100-4490-4ad9-9c0e-49d0222b61a2">
+    <ClassToPerformActionOn>
+      <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <GlobalAction Name="DateStructure" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Calendar.SO" Id="4c4260e7-4747-462e-916e-4a5d0d0892ec">
+    <BringUpViewModel>
+      <Span Name="DateStructureBrowser" idref="86919079-eafb-46d3-b35a-0b8b339f3f31" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="Settings/Calendar" idref="913e10f4-cf1d-491c-adc7-1657510ef3f2" />
+    </MenuGroup>
+  </GlobalAction>
+  <ClassAction Name="ViewWeekDefinitionBrowser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="56d8f837-4082-478c-b57c-682a47e8e389">
+    <BringUpViewModel>
+      <Span Name="WeekDefinitionBrowser" idref="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="CreateCountry" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Country.Create" Id="5d4ab10a-0592-47e2-8ff6-3b0d50c6b6d1">
+    <BringUpViewModel>
+      <Span Name="CountryView" idref="1746ee3e-df60-401a-9584-aafbde0f829f" />
+    </BringUpViewModel>
+    <ViewModelContext>
+      <Span Name="CountryBrowser" idref="b21ea6c6-9645-4335-afb0-470a9d900d45" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="SortMonthsAndDays" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="self.notNull" ExecuteExpression="self.SortMonthsAndDays" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5d99af70-905e-4844-a362-05ad71e41a9f">
+    <ClassToPerformActionOn>
+      <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="StartScreen" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="6f9dc49f-ad53-4925-84ed-f0c98beea9fe" />
+  <ClassAction Name="FixupCalendar" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="Calendar.SO.FixupCalendar" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="7333079e-8c72-4aed-9b8c-cb92f2fb9d85">
+    <ClassToPerformActionOn>
+      <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="ShowWeekDefinition" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="7c9acf78-54ee-4afe-97b4-95dea5765799">
+    <BringUpViewModel>
+      <Span Name="WeekDefinitionView" idref="829d1320-7cde-401a-a952-1e748c9afe2f" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="RecreateAllWeeks" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="Sure to clear ALL weeks and regenerate?" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.RecreateAllWeeks" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="95da69f6-e305-4f52-b87e-4ddaa4148f0a">
+    <ClassToPerformActionOn>
+      <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <GlobalAction Name="Countries" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="a2e1164f-ef6f-46db-afae-1303a4f61435">
+    <BringUpViewModel>
+      <Span Name="CountryBrowser" idref="b21ea6c6-9645-4335-afb0-470a9d900d45" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="Settings/Calendar" idref="913e10f4-cf1d-491c-adc7-1657510ef3f2" />
+    </MenuGroup>
+  </GlobalAction>
+  <ContextAction Name="NewHourOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="HourOfDay.Create" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="bcd6e0f2-8964-4c60-aec5-d9a5c5b6b520">
+    <OnlyInThis>
+      <Span Name="HourOfDayValuestore" idref="d555b201-9038-4646-9b66-23d5dd582f76" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoFormTemplate" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="HourOfDayValuestore" idref="d555b201-9038-4646-9b66-23d5dd582f76" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="WeekDefinitions" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="cf0a53ab-cee5-41ea-89e1-67cd13062cf1">
+    <BringUpViewModel>
+      <Span Name="WeekDefinitionBrowser" idref="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="Settings/Calendar" idref="913e10f4-cf1d-491c-adc7-1657510ef3f2" />
+    </MenuGroup>
+  </GlobalAction>
+  <ClassAction Name="LinkMonths" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isNull" ExecuteExpression="self.LinkMonths" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d4bfd8cb-2c4c-4f6d-b1fd-5f97b1b30d70">
+    <ClassToPerformActionOn>
+      <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="DeleteWeekDefinition" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="Delete Week definition?" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="X" EnableExpression="self.notNull" ExecuteExpression="self.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d6f05e8f-c469-4e16-bbde-a9733dea3183">
+    <ClassToPerformActionOn>
+      <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="EnsureHoursOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="HourOfDay.EnsureHoursOfDay" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d8c993ed-41e4-494c-bc84-cd7ff8fb5050">
+    <OnlyInThis>
+      <Span Name="HourOfDayValuestore" idref="d555b201-9038-4646-9b66-23d5dd582f76" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="HourOfDayValuestore" idref="d555b201-9038-4646-9b66-23d5dd582f76" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="EnsureNextYear" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="self.EnsureNextYear?" ExecuteExpression="self.EnsureNextYear" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="dad45675-abdc-4fb5-8b07-8d5b2ea427ea">
+    <ClassToPerformActionOn>
+      <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="DeleteHourOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_HourOfDay.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e6e31658-ffc7-4b98-9050-df87fc515f8f">
+    <OnlyInThis>
+      <Nesting Name="HourOfDay" idref="f4ad7767-c3b2-4388-ba27-513cbaeb876a" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoFormTemplate" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="HourOfDayValuestore" idref="d555b201-9038-4646-9b66-23d5dd582f76" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="EditYear" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="!" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="true" ViewModelRootObjectExpression="self" Id="ebd31442-dbb4-4e9a-ad8f-b746964886d5">
+    <BringUpViewModel>
+      <Span Name="YearView" idref="5de76341-4be5-4215-97b1-7cd387bcdf78" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="LinkDays" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="self.notNull" ExecuteExpression="self.LinkDays" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="f7ac10ce-3404-407f-824e-61a91056d5f4">
+    <ClassToPerformActionOn>
+      <Class Name="Month" idref="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ClassAction Name="GenerateWeeksForYear" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="self.YearToGenerateWeeksFor.notNull" ExecuteExpression="self.EnsureWeeksForYear(self.YearToGenerateWeeksFor)" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="f7adb175-3e6c-4384-9fa8-c094aaa51abb">
+    <ClassToPerformActionOn>
+      <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="NewWeekDefinition" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="WeekDefinition.Create" Id="ffed1e76-97b7-46ef-a354-8e4c529531e1">
+    <BringUpViewModel>
+      <Span Name="WeekDefinitionView" idref="829d1320-7cde-401a-a952-1e748c9afe2f" />
+    </BringUpViewModel>
+    <ViewModelContext>
+      <Span Name="WeekDefinitionBrowser" idref="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />
+    </ViewModelContext>
+  </ContextAction>
+  <MenuGroup Name="Settings/Calendar" SortKey="0052" Id="913e10f4-cf1d-491c-adc7-1657510ef3f2" />
+  <MenuGroup Name="Views" SortKey="004" Id="b0fe3544-98ff-4914-8408-18ed476cd7ef" />
+  <MenuGroup Name="Admin" SortKey="005" Id="8d137f5a-e83d-4145-8e27-64747051d5af" />
+  <MenuGroup Name="Edit" SortKey="002" Id="65a14863-ca07-4ebe-a148-89c0f90b4e4f" />
+  <MenuGroup Name="Seekers" SortKey="003" Id="96b1e9f9-2cf6-4ddb-b4fa-630e97cdb9ed" />
+  <MenuGroup Name="File" SortKey="001" Id="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+  <MenuGroup Name="Publisher settings/Settings" SortKey="0071" Id="6397a099-80dd-4518-a2e6-9061e9332487" />
+  <MenuGroup Name="Settings/Documents" SortKey="0051" Id="5e162e4b-6b25-413b-98cc-347b02deeef1" />
+  <MenuGroup Name="Publisher settings" SortKey="007" Id="fa922108-bfe0-4c3d-a114-a41aa245ad93" />
+  <MenuGroup Name="Settings" SortKey="0050" Id="2ef41920-0fc4-41be-9ebc-97b1832d326a" />
+  <MenuGroup Name="State" SortKey="010" Id="f0b719e4-9363-4f95-bcca-5580b3bc7bc9" />
+  <MenuGroup Name="Settings/System" SortKey="0052" Id="5a7a565e-9122-4dec-85f5-4b2cf4cc35e4" />
+  <MenuGroup Name="Debug" SortKey="010" Id="a7a5d38d-ea57-4286-a2f5-723143df09fb" />
+  <MenuGroup Name="Valuestores" SortKey="006" Id="580967b5-41b0-453d-837f-3476b62c5be9" />
+  <MenuGroup Name="Selected" SortKey="100" Id="9219d1d8-e96c-4afc-9d52-cfdcce41e71f" />
+  <MenuGroup Name="Management" SortKey="003" Id="6f8c2216-be14-4a19-b753-457035928ac3" />
+  <MenuGroup Name="AutoForms" SortKey="99999" Id="ce8a0f27-2cf0-4c6a-aa42-dcb907ae1296" />
+  <MenuGroup Name="SysAdmin" SortKey="005" Id="f3c93b0e-bcd4-4561-8cdf-06b30199280a" />
+  <Symbol Name="transientclass" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='76' Height='76'&gt; &lt;Path Width='34' Height='38' Canvas.Left='21' Canvas.Top='19' Stretch='Fill' Fill='#77000000' Data='F1 M 38,19C 47.3888,19 55,21.0147 55,23.5038L 55,25.5C 55,27.9853 47.3888,30 38,30C 28.6112,30 21,27.9853 21,25.5L 21,23.5C 21,21.0147 28.6112,19 38,19 Z M 55,52.5C 55,54.9853 47.3888,57 38,57C 28.6112,57 21,54.9853 21,52.5L 21,46.5C 21,48.9853 28.6112,51 38,51C 47.384,51 54.9921,48.9874 55,46.5039L 55,52.5 Z M 55,43.5C 55,45.9853 47.3888,48 38,48C 28.6112,48 21,45.9853 21,43.5L 21,37.5C 21,39.9853 28.6112,42 38,42C 47.384,42 54.9921,39.9874 55,37.5038L 55,43.5 Z M 55,34.5C 55,36.9853 47.3888,39 38,39C 28.6112,39 21,36.9853 21,34.5L 21,28.5C 21,30.9853 28.6112,33 38,33C 47.384,33 54.9921,30.9874 55,28.5038L 55,34.5 Z '/&gt; &lt;Path Width='38' Height='38' Canvas.Left='19' Canvas.Top='19' Stretch='Fill' Fill='#BBFF0000' Data='F1 M 38,19C 48.4934,19 57,27.5066 57,38C 57,48.4934 48.4934,57 38,57C 27.5066,57 19,48.4934 19,38C 19,27.5066 27.5066,19 38,19 Z M 38,23.75C 35.2116,23.75 32.6102,24.5509 30.4134,25.9352L 50.0648,45.5866C 51.4491,43.3898 52.25,40.7884 52.25,38C 52.25,30.13 45.87,23.75 38,23.75 Z M 23.75,38C 23.75,45.8701 30.1299,52.25 38,52.25C 40.7884,52.25 43.3897,51.4491 45.5865,50.0649L 25.9351,30.4136C 24.5509,32.6103 23.75,35.2117 23.75,38 Z '/&gt;&lt;/Grid&gt;" Id="TransientSymbolID" />
+  <Symbol Name="statediagramsymbol" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='130' Foreground='DimGray'&gt;&lt;Run Text='S'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="StateDiagramSymbolID" />
+  <Symbol Name="triggermethod" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='Tr'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="TriggerMethodSymbolID" />
+  <Symbol Name="constrainedclass" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="ConstraintsSymbolID" />
+</allactions>

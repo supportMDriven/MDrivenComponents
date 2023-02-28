@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="DiagramTranslation" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="05d967d4-0f1f-4fbe-9c80-c230a8ea7b48">
+  <PlacedClass>
+    <PlacedClass ClassId="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed" Color="1692800256" LastKnownName="SysTranslateLanguage" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="169" ShowAttributes="False" ShowMethods="False" Size="1" x="416" y="88" id="27312911-d74f-4eec-8a7b-ffe8aaff4cc5">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-40" y="49" id="09504e98-44dc-4536-94f3-99b40944f87f">
+          <AssociationEnd>
+            <AssociationEnd Name="Language" idref="fccbee4c-30ff-4858-88d4-c130945d395a" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="a0e6c282-20ba-4e12-850e-9b6cb74f5489">
+              <AssociationEnd>
+                <AssociationEnd Name="Translations" idref="ced7b3e5-8821-4479-856e-1ba9de6a9ccc" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysTranslateLanguage" idref="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="af802151-22d7-42bc-8ee5-9fcb494074f5" Color="1692800256" LastKnownName="SysTranslatable" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="121" ShowAttributes="False" ShowMethods="False" Size="1" x="136" y="88" id="61629dfe-ed2d-45d6-b3f7-c64b3ab41749">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="0" y="49" id="65b6dbb6-e2f5-475d-8420-88592a105200">
+          <AssociationEnd>
+            <AssociationEnd Name="Translatable" idref="a75f52bc-7f65-43ca-9c5f-122506f8d548" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.740410268025093" LabelDistance="15.7230150873042" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-48" y="0" id="d0fdc894-121b-4b3a-887e-d0b96a2f1604">
+              <AssociationEnd>
+                <AssociationEnd Name="Translations" idref="a3857a4f-0a48-437e-b014-26989d8ea8ed" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysTranslatable" idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="f7f417a5-c781-4096-b63f-dbfcb66be543" Color="1692800256" LastKnownName="SysTranslation" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="256" y="240" id="d8c58628-2762-4d9e-9f06-ca41e589dd93">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="a0e6c282-20ba-4e12-850e-9b6cb74f5489">
+          <AssociationEnd>
+            <AssociationEnd Name="Translations" idref="ced7b3e5-8821-4479-856e-1ba9de6a9ccc" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.740410268025093" LabelDistance="15.7230150873042" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-48" y="0" id="d0fdc894-121b-4b3a-887e-d0b96a2f1604">
+          <AssociationEnd>
+            <AssociationEnd Name="Translations" idref="a3857a4f-0a48-437e-b014-26989d8ea8ed" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysTranslation" idref="f7f417a5-c781-4096-b63f-dbfcb66be543" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="220" LastKnownName="" RenderedHeight="230" RenderedWidth="374" Size="1" Width="364" x="704" y="160" id="bca9afff-458c-46d0-910a-02f91657c0f4">
+      <Span>
+        <Span Name="LocalizationAdmin" idref="dfd26aa2-58bd-496c-ac7b-68c92fb92cef" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

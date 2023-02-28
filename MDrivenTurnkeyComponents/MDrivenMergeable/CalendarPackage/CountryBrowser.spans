@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="CountryBrowser" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b21ea6c6-9645-4335-afb0-470a9d900d45">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllCountry" ExpressionActAsForActions="" id="03923763-fb29-443e-afd6-4c4b49381d6c">
+      <Class>
+        <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ContextAction Name="CreateCountry" idref="5d4ab10a-0592-47e2-8ff6-3b0d50c6b6d1" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a8945577-cb5c-4b59-a296-578eef6a4773" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllCountry" idref="077150d5-807e-431e-a953-6100626f3412" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="CountryPickList" ExpressionActAsForActions="" id="98bec079-c217-44e9-91be-33b11a90d2fb">
+      <Class>
+        <Class Name="Country" idref="929da637-f9b6-4be3-b195-7ddde16aec88" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ContextAction Name="CreateCountry" idref="5d4ab10a-0592-47e2-8ff6-3b0d50c6b6d1" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowCountry" idref="1aed9795-8d20-4343-a76d-5e95952fcf4e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="818b49c0-5965-41bf-b74b-8fc85b6f67d5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="CountryPickList" idref="e8a256b1-7330-4a23-92c2-2ab953f16e0a" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllCountry" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="Country.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="1" id="077150d5-807e-431e-a953-6100626f3412">
+      <ReferedNesting>
+        <Nesting Name="AllCountry" idref="03923763-fb29-443e-afd6-4c4b49381d6c" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="DefaultCountryForUsers" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.DefaultCountryForUsers" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="83b85f74-a573-4669-bf8c-e3c91d0cab52">
+      <ColumnForPickList>
+        <Column Name="CountryPickList" idref="e8a256b1-7330-4a23-92c2-2ab953f16e0a" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="CountryPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Country.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e8a256b1-7330-4a23-92c2-2ab953f16e0a">
+      <ReferedNesting>
+        <Nesting Name="CountryPickList" idref="98bec079-c217-44e9-91be-33b11a90d2fb" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

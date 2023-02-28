@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allactions>
+  <ClassAction Name="ShowSomethingToPayWithPayPal" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="140428dd-6b34-4c7f-a793-5e3fb431b6b6">
+    <BringUpViewModel>
+      <Span Name="AutoFormSomethingToPayWithPayPal" idref="a04cde17-aa34-4cde-866c-8716dd13ecab" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="92042f46-3c59-4fd2-a682-1271cc8298d1" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSomethingToPayWithPayPal.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="1a5227fc-623c-4698-8875-6d4ac6df30f0">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="92042f46-3c59-4fd2-a682-1271cc8298d1" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSomethingToPayWithPayPal" idref="a04cde17-aa34-4cde-866c-8716dd13ecab" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSomethingToPayWithPayPal" idref="a04cde17-aa34-4cde-866c-8716dd13ecab" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="PayPalCheckout" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="438afaf9-1e9f-46ad-b97d-4d57af6de140">
+    <BringUpViewModel>
+      <Span Name="PayPalCheckOut" idref="28e36e98-9cd4-4d73-b371-a2a0421bad6c" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SomethingToPayWithPayPal" idref="288fb208-dbcc-4eaa-af4f-21dbeaf73376" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <ContextAction Name="NewSomethingToPayWithPayPal" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SomethingToPayWithPayPal.Create" Id="4aca2346-fbe1-4e83-88b2-4206fadcff29">
+    <BringUpViewModel>
+      <Span Name="AutoFormSomethingToPayWithPayPal" idref="a04cde17-aa34-4cde-866c-8716dd13ecab" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="92042f46-3c59-4fd2-a682-1271cc8298d1" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSomethingToPayWithPayPalSeeker" idref="33ff1d0c-a49e-4367-810f-8565ea05dde9" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSomethingToPayWithPayPalSeeker" idref="33ff1d0c-a49e-4367-810f-8565ea05dde9" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="7d9725b4-2d57-4ec2-bde0-bb5acf9a2164">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="cf0cade0-754f-40d5-8179-ddb76028f250" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="9408d518-5c2a-4fca-88f7-508c67ac8aaa">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="aed3511a-8175-415d-8846-f25a68546c3f" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="AutoFormSomethingToPayWithPayPalSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="bf5f1dc0-ce52-4030-9268-ae8b775ce800">
+    <BringUpViewModel>
+      <Span Name="AutoFormSomethingToPayWithPayPalSeeker" idref="33ff1d0c-a49e-4367-810f-8565ea05dde9" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="92042f46-3c59-4fd2-a682-1271cc8298d1" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <GlobalAction Name="SomethingToPayWithPayPalAndShow" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SomethingToPayWithPayPal.Create" Id="bfc6b5f5-0986-4412-8326-60fc7fa708e1">
+    <BringUpViewModel>
+      <Span Name="PayPalCheckOut" idref="28e36e98-9cd4-4d73-b371-a2a0421bad6c" />
+    </BringUpViewModel>
+  </GlobalAction>
+  <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="daadad2a-a90e-406c-a411-89b1ce460195">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="aed3511a-8175-415d-8846-f25a68546c3f" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e10e14e4-9a6e-464f-a93f-7ab2dfa54d65">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="cf0cade0-754f-40d5-8179-ddb76028f250" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="fbbb8624-bd33-466d-9120-9257d46f9761">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="aed3511a-8175-415d-8846-f25a68546c3f" />
+    </MenuGroup>
+  </GlobalAction>
+  <MenuGroup Name="AutoForms" SortKey="99999" Id="92042f46-3c59-4fd2-a682-1271cc8298d1" />
+  <MenuGroup Name="Edit" SortKey="002" Id="cf0cade0-754f-40d5-8179-ddb76028f250" />
+  <MenuGroup Name="File" SortKey="001" Id="aed3511a-8175-415d-8846-f25a68546c3f" />
+  <MenuGroup Name="Admin" SortKey="999" Id="df52c1fb-373f-4967-84ec-af03d500ad2d" />
+  <MenuGroup Name="Seekers" SortKey="003" Id="730c3c0d-1afd-47b6-8d22-3adf019808d3" />
+  <MenuGroup Name="Views" SortKey="004" Id="afd07c34-baee-48b9-9643-521523a6a3d8" />
+  <StylesInModel id="914ab6bc-11e3-4e4d-ac21-db7998ea4bb6">
+    <StyleDefinitions>
+      <StyleDefinition Name="NewStyle1" id="c71979d9-40f8-4a96-8b63-19db383b777b" />
+    </StyleDefinitions>
+    <StyleTargetTypes>
+      <StyleTargetType Name="gridcell" id="0a94f5db-4fa5-4693-8a83-d13f1fc549e8" />
+      <StyleTargetType Name="componentlabel" id="0fa8d6ac-cc83-4694-a0b9-774ab99e897a" />
+      <StyleTargetType Name="component" id="1a956061-26d5-4cf4-8ea7-aeb4766afa9f" />
+      <StyleTargetType Name="componentcontent" id="49429cb7-a32f-467a-8b68-9a8617b38a26" />
+      <StyleTargetType Name="gridheader" id="e50bc6df-91a7-4cbc-bbd6-327f5b096313" />
+    </StyleTargetTypes>
+  </StylesInModel>
+</allactions>

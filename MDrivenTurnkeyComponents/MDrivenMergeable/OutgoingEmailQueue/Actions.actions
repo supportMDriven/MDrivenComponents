@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allactions>
+  <ClassAction Name="ShowOutgoingEmail" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="db6824a3-6778-4758-ae79-a283c9e13d7a">
+    <BringUpViewModel>
+      <Span Name="OutgoingEmailView" idref="3ca1fbf6-a0d0-4bdb-888e-cd7456dabc17" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="OutgoingEmail" idref="7e5e598c-0bee-4728-823d-dfdc257da03c" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+</allactions>
