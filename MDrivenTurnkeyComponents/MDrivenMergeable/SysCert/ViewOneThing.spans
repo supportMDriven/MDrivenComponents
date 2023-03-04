@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Span Name="ViewOneThing" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b0db4fde-4a19-4424-911d-1eb5829ae6cf">
   <Class>
-    <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+    <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
   </Class>
   <Nesting>
     <Nesting Name="SomeValue_PickListPresentation" ExpressionActAsForActions="" id="9fdf185a-90d8-41a6-811a-f14c98d881c2">
       <Class>
-        <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+        <Class Name="ValueStore" idref="62bef8a7-6972-4f65-8313-0c8d635e419a" />
       </Class>
       <OwnedColumns>
         <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7ba498a2-ebc9-4234-a201-9a88d87fbfc3" />
@@ -17,7 +17,7 @@
     </Nesting>
     <Nesting Name="Details" ExpressionActAsForActions="" id="4e83910a-a54d-4bdb-b817-d1ec62bb638c">
       <Class>
-        <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
+        <Class Name="Detail" idref="ecb961ce-5aee-40d3-8e41-55fff3a9795c" />
       </Class>
       <OwnedColumns>
         <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="62a9694a-12a4-4081-9f36-553d939c8345" />

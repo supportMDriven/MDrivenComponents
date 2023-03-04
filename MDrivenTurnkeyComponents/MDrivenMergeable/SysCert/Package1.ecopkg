@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="dd9442a4-a948-443c-8307-167f1e6a5429">
   <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+    <Class Name="SysSuperClass" idref="4fd8dcfb-9ebf-4556-a323-b4d8e4c047fb" />
   </DefaultSuperClass>
   <OwnedElement>
     <Association Name="" EffectiveName="ThingUsedByValueStoreMultiValuePick" id="0affb25e-4967-43b9-9b4e-ec34e61ae419">
       <AssociationEnd>
         <AssociationEnd Name="UsedBy" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="6075290c-6a84-4e0a-964e-1a811f8e7286">
           <Participant>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+            <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="MultiValuePick" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3861199b-df60-4072-b00e-c68c37120505">
           <Participant>
-            <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+            <Class Name="ValueStore" idref="62bef8a7-6972-4f65-8313-0c8d635e419a" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
       <Class>
-        <Class Name="AssociationClass" idref="2e46a0fb-8c36-41fa-8a2d-c535e162d2ca" />
+        <Class Name="AssociationClass" idref="3b7bbb01-ce98-4047-8e5a-df6169722e48" />
       </Class>
     </Association>
-    <Class Name="SysSingletonx" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="17e83fb5-5a04-4377-992b-6227057334d0">
+    <Class Name="SysSingletonx" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="157374cb-eb27-4207-a273-75f16f52ff3e">
       <Feature>
         <Method Name="GenerateTokenJWT" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="6888cad3-7d75-483f-af53-8cf9ebef09e9">
           <Parameter>
@@ -64,7 +64,7 @@
         <TaggedValue Tag="Eco.IsSingleton" Value="True" />
       </TaggedValue>
     </Class>
-    <Class Name="Thing" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="19a1388a-7150-40ae-ae26-b75bf6278a1a">
+    <Class Name="Thing" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3148796c-3366-44f7-ba32-ad00cd0d4e79">
       <Feature>
         <Attribute Name="ADecimal" Multiplicity="" Visibility="Public" id="01cde163-342f-40f0-9d8a-65dbd3708e6a">
           <TaggedValue>
@@ -108,22 +108,7 @@
         <TaggedValue Tag="Eco.DefaultColor" Value="-931069953" />
       </TaggedValue>
     </Class>
-    <Class Name="OtherThing2" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2851adde-bb63-41a8-af18-e42ee65328c0">
-      <Feature>
-        <Attribute Name="Attribute4" Multiplicity="" Visibility="Public" id="8ea4517f-d227-49f5-8804-3352fb812786">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-      <Superclass>
-        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
-      </Superclass>
-    </Class>
-    <Class Name="AssociationClass" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2e46a0fb-8c36-41fa-8a2d-c535e162d2ca">
+    <Class Name="AssociationClass" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3b7bbb01-ce98-4047-8e5a-df6169722e48">
       <Association>
         <Association Name="ThingUsedByValueStoreMultiValuePick" idref="0affb25e-4967-43b9-9b4e-ec34e61ae419" />
       </Association>
@@ -141,7 +126,83 @@
         <TaggedValue Tag="Eco.DefaultColor" Value="-926875712" />
       </TaggedValue>
     </Class>
-    <Class Name="SysCert" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="319121f0-77d1-441a-aa36-b75d1e99d698">
+    <Association Name="" EffectiveName="ThingThingDetailDetails" id="4e1ab3c7-2e22-46b6-88ac-d5a293ced61a">
+      <AssociationEnd>
+        <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ae8f6cee-3666-4590-a95e-e8d5c36b1fae">
+          <Participant>
+            <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Details" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3d8178c6-1335-4fd4-adb3-3c3c8f624b0b">
+          <Participant>
+            <Class Name="Detail" idref="ecb961ce-5aee-40d3-8e41-55fff3a9795c" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="ValueStore" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="62bef8a7-6972-4f65-8313-0c8d635e419a">
+      <Feature>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="1d976555-f9a7-40ba-97bd-fca98a0427e3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-931102465" />
+      </TaggedValue>
+    </Class>
+    <Class Name="OtherThing2" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="bea244e0-224b-4247-991d-8ac6d1ef5280">
+      <Feature>
+        <Attribute Name="Attribute4" Multiplicity="" Visibility="Public" id="8ea4517f-d227-49f5-8804-3352fb812786">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <Superclass>
+        <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
+      </Superclass>
+    </Class>
+    <Association Name="" EffectiveName="ThingThingValueStoreSomeValue" id="ce25b1d0-54ac-423b-97f8-0ac2fb4eb4bf">
+      <AssociationEnd>
+        <AssociationEnd Name="SomeValue" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="90c849f0-0e0e-4464-a8b6-5485f7906d8e">
+          <Participant>
+            <Class Name="ValueStore" idref="62bef8a7-6972-4f65-8313-0c8d635e419a" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="9fc3084a-da68-42c9-8778-e58c2c9fac62">
+          <Participant>
+            <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="SubClassThing1" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d451c0b5-eac4-45a4-a3d0-843695968165">
+      <Feature>
+        <Attribute Name="OnlyAvailableInSubClass" Multiplicity="" Visibility="Public" id="b8b8d30c-128d-43bb-89ae-11579cf97ce3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <Superclass>
+        <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
+      </Superclass>
+    </Class>
+    <Class Name="SysCert" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="e9e13348-3336-4894-a0d7-e879d6d84550">
       <Feature>
         <Attribute Name="InverseQ" Multiplicity="" Visibility="Public" id="5db2de10-be7b-451e-860f-e0a33bd9879b">
           <TaggedValue>
@@ -225,22 +286,7 @@
         </Attribute>
       </Feature>
     </Class>
-    <Class Name="ValueStore" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3b172bb0-c2d9-43fa-87df-664bd608546c">
-      <Feature>
-        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="1d976555-f9a7-40ba-97bd-fca98a0427e3">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-      <TaggedValue>
-        <TaggedValue Tag="Eco.DefaultColor" Value="-931102465" />
-      </TaggedValue>
-    </Class>
-    <Class Name="Detail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="4c54ad1e-65f7-461a-9971-69b657033b35">
+    <Class Name="Detail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ecb961ce-5aee-40d3-8e41-55fff3a9795c">
       <Feature>
         <Attribute Name="Attribute3" Multiplicity="" Visibility="Public" id="38f2dd3c-37d0-48b6-b95d-95fb5bfae3a2">
           <TaggedValue>
@@ -270,52 +316,6 @@
       <TaggedValue>
         <TaggedValue Tag="Eco.DefaultColor" Value="-922779393" />
       </TaggedValue>
-    </Class>
-    <Association Name="" EffectiveName="ThingThingDetailDetails" id="4e1ab3c7-2e22-46b6-88ac-d5a293ced61a">
-      <AssociationEnd>
-        <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ae8f6cee-3666-4590-a95e-e8d5c36b1fae">
-          <Participant>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="Details" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3d8178c6-1335-4fd4-adb3-3c3c8f624b0b">
-          <Participant>
-            <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
-          </Participant>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
-          </TaggedValue>
-        </AssociationEnd>
-      </AssociationEnd>
-    </Association>
-    <Association Name="" EffectiveName="ThingThingValueStoreSomeValue" id="ce25b1d0-54ac-423b-97f8-0ac2fb4eb4bf">
-      <AssociationEnd>
-        <AssociationEnd Name="SomeValue" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="90c849f0-0e0e-4464-a8b6-5485f7906d8e">
-          <Participant>
-            <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="9fc3084a-da68-42c9-8778-e58c2c9fac62">
-          <Participant>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
-          </Participant>
-        </AssociationEnd>
-      </AssociationEnd>
-    </Association>
-    <Class Name="SubClassThing1" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ea3c29fb-8adf-4467-929f-f2cc67bdaeb8">
-      <Feature>
-        <Attribute Name="OnlyAvailableInSubClass" Multiplicity="" Visibility="Public" id="b8b8d30c-128d-43bb-89ae-11579cf97ce3">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-      <Superclass>
-        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
-      </Superclass>
     </Class>
   </OwnedElement>
   <TaggedValue>

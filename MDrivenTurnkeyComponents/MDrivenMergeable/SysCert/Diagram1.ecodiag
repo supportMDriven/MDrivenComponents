@@ -41,22 +41,22 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+        <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="ea3c29fb-8adf-4467-929f-f2cc67bdaeb8" Color="1692800256" LastKnownName="SubClassThing1" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="149" ShowAttributes="False" ShowMethods="False" Size="1" x="264" y="368" id="05afb891-0cb8-4adf-93d6-d173ac537001">
       <Class>
-        <Class Name="SubClassThing1" idref="ea3c29fb-8adf-4467-929f-f2cc67bdaeb8" />
+        <Class Name="SubClassThing1" idref="d451c0b5-eac4-45a4-a3d0-843695968165" />
       </Class>
       <SpecializationConnection>
         <SpecializationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="1beb354d-0342-4736-af47-80035c2ce3a2">
           <Class>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+            <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
           </Class>
           <next>
             <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="73" id="22404f92-fba3-4a44-865f-7eeb6ba7e2e3">
               <Class>
-                <Class Name="SubClassThing1" idref="ea3c29fb-8adf-4467-929f-f2cc67bdaeb8" />
+                <Class Name="SubClassThing1" idref="d451c0b5-eac4-45a4-a3d0-843695968165" />
               </Class>
             </GeneralizationConnection>
           </next>
@@ -65,7 +65,7 @@
     </PlacedClass>
     <PlacedClass ClassId="17e83fb5-5a04-4377-992b-6227057334d0" Color="1692800256" LastKnownName="SysSingletonx" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="112" ShowAttributes="False" ShowMethods="False" Size="1" x="400" y="864" id="0a984bfa-e940-4036-a655-0e5b1f1a8cce">
       <Class>
-        <Class Name="SysSingletonx" idref="17e83fb5-5a04-4377-992b-6227057334d0" />
+        <Class Name="SysSingletonx" idref="157374cb-eb27-4207-a273-75f16f52ff3e" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="2e46a0fb-8c36-41fa-8a2d-c535e162d2ca" Color="-926875712" LastKnownName="AssociationClass" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="147" ShowAttributes="False" ShowMethods="False" Size="1" x="736" y="24" id="1ea3d807-cb97-4f7c-83f6-f783bd2186f4">
@@ -84,27 +84,27 @@
         </AssociationConnection>
       </AssociationConnection>
       <Class>
-        <Class Name="AssociationClass" idref="2e46a0fb-8c36-41fa-8a2d-c535e162d2ca" />
+        <Class Name="AssociationClass" idref="3b7bbb01-ce98-4047-8e5a-df6169722e48" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="319121f0-77d1-441a-aa36-b75d1e99d698" Color="1692800256" LastKnownName="SysCert" PickedFeatureVisibility="ShowAll" RenderedHeight="145" RenderedWidth="90" ShowAttributes="False" ShowMethods="False" Size="1" x="608" y="920" id="28c788a1-8916-4ecc-b2b3-c680267bc82b">
       <Class>
-        <Class Name="SysCert" idref="319121f0-77d1-441a-aa36-b75d1e99d698" />
+        <Class Name="SysCert" idref="e9e13348-3336-4894-a0d7-e879d6d84550" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="2851adde-bb63-41a8-af18-e42ee65328c0" Color="1692800256" LastKnownName="OtherThing2" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="104" ShowAttributes="False" ShowMethods="False" Size="1" x="424" y="368" id="5a7f505a-ca59-408b-82b8-ed862b898adf">
       <Class>
-        <Class Name="OtherThing2" idref="2851adde-bb63-41a8-af18-e42ee65328c0" />
+        <Class Name="OtherThing2" idref="bea244e0-224b-4247-991d-8ac6d1ef5280" />
       </Class>
       <SpecializationConnection>
         <SpecializationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="-24" y="0" id="9bb61697-fc5d-4905-a9fb-38ffbb532aa3">
           <Class>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+            <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
           </Class>
           <next>
             <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-8" y="73" id="bc8b96a7-0a3b-4cca-8a2f-2b5e67a512b6">
               <Class>
-                <Class Name="OtherThing2" idref="2851adde-bb63-41a8-af18-e42ee65328c0" />
+                <Class Name="OtherThing2" idref="bea244e0-224b-4247-991d-8ac6d1ef5280" />
               </Class>
             </GeneralizationConnection>
           </next>
@@ -113,22 +113,22 @@
     </PlacedClass>
     <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="133" RenderedWidth="162" ShowAttributes="False" ShowMethods="False" Size="1" x="376" y="936" id="6d83fc51-8bfa-40bd-9fd3-4dac78aa0fc9">
       <Class>
-        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+        <Class Name="SysSingleton" idref="5d5a5447-4976-4a74-9527-40fd6c350b90" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="19a1388a-7150-40ae-ae26-b75bf6278a1a" Color="-931069953" LastKnownName="Thing" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="104" ShowAttributes="False" ShowMethods="False" Size="0" x="336" y="264" id="9c758587-ea0c-4f74-9a23-ac148f88ffdf">
       <Class>
-        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+        <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
       </Class>
       <GeneralizationConnection>
         <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="73" id="22404f92-fba3-4a44-865f-7eeb6ba7e2e3">
           <Class>
-            <Class Name="SubClassThing1" idref="ea3c29fb-8adf-4467-929f-f2cc67bdaeb8" />
+            <Class Name="SubClassThing1" idref="d451c0b5-eac4-45a4-a3d0-843695968165" />
           </Class>
         </GeneralizationConnection>
         <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-8" y="73" id="bc8b96a7-0a3b-4cca-8a2f-2b5e67a512b6">
           <Class>
-            <Class Name="OtherThing2" idref="2851adde-bb63-41a8-af18-e42ee65328c0" />
+            <Class Name="OtherThing2" idref="bea244e0-224b-4247-991d-8ac6d1ef5280" />
           </Class>
         </GeneralizationConnection>
       </GeneralizationConnection>
@@ -142,7 +142,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
+        <Class Name="Detail" idref="ecb961ce-5aee-40d3-8e41-55fff3a9795c" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="3b172bb0-c2d9-43fa-87df-664bd608546c" Color="-931102465" LastKnownName="ValueStore" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="93" ShowAttributes="False" ShowMethods="False" Size="1" x="624" y="152" id="fc200356-3ef0-4484-87a0-791321d6cc34">
@@ -166,7 +166,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+        <Class Name="ValueStore" idref="62bef8a7-6972-4f65-8313-0c8d635e419a" />
       </Class>
     </PlacedClass>
   </PlacedClass>
