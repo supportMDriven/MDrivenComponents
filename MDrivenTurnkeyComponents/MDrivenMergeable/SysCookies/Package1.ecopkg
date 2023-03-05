@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="dd9442a4-a948-443c-8307-167f1e6a5429">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="1c5cc32c-feb7-4193-8c2a-300ed68bb5bf" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="SysCookie" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="db9122b1-3654-4271-b565-93d77bb9ca7e">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="5a84ce6f-fca4-4155-98e4-b05730bb3ab3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Value" Multiplicity="" Visibility="Public" id="9318d24b-6438-4906-ab2e-f10530740b0c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>
