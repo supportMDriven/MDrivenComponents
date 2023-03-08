@@ -1,22 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="AccountManage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bcc8137f-a131-40e3-a694-0c491fee2859">
+<Span Name="AccountManage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bcc8137f-a131-40e3-a694-0c491fee2859">
   <Class>
     <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
   </Class>
+  <Nesting>
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="daa137df-7d11-4190-9e35-8799c933e8c7">
+      <Class>
+        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserName+(SysSingleton.oclSingleton.CurrentUser=self).casetruefalse(' &lt;- this is you - looking good!','')" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8c57b255-4c13-46aa-8696-242b7e16172d">
+          <PlacingContainer>
+            <PlacingContainer idref="4e27d8fb-ecf0-4b35-96bb-e198870270fa" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="0d7701ff-afe6-4bc2-837e-0b9c88a1d92f">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="4e27d8fb-ecf0-4b35-96bb-e198870270fa" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="TheseAreAllTheUsers" idref="3d03f682-5017-46d3-b00f-2fdf6c44c6b6" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
   <OwnedColumns>
-    <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b064e813-3208-4fdd-8b53-c721ef48b96e">
+    <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b064e813-3208-4fdd-8b53-c721ef48b96e">
       <PlacingContainer>
         <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
       </PlacingContainer>
     </Column>
-    <Column Name="SendMeNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SendMeNews" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a3cb3917-3999-4b29-933a-4cfc393611bf">
+    <Column Name="SendMeNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser.SendMeNews" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a3cb3917-3999-4b29-933a-4cfc393611bf">
+      <PlacingContainer>
+        <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="TheseAreAllTheUsers" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUser.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="h1" XPos="1" YPos="2" id="3d03f682-5017-46d3-b00f-2fdf6c44c6b6">
+      <PlacingContainer>
+        <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="SysUser" idref="daa137df-7d11-4190-9e35-8799c933e8c7" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'TheseAreAllTheUsers'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="6e159e5f-8941-4ab8-9664-10c9419413e5">
       <PlacingContainer>
         <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
       </PlacingContainer>
     </Column>
   </OwnedColumns>
   <PlacingContainer>
-    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="99674948-7656-49a9-b1bc-4593e58bcba7">
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="99674948-7656-49a9-b1bc-4593e58bcba7">
       <ChildContainers>
         <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="68f176b9-1551-43aa-a69a-6efc187621d0" />
       </ChildContainers>
