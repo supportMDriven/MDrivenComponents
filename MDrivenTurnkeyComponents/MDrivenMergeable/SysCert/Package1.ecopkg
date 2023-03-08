@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="dd9442a4-a948-443c-8307-167f1e6a5429">
-  <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
-  </DefaultSuperClass>
   <OwnedElement>
     <Class Name="SysCert" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="319121f0-77d1-441a-aa36-b75d1e99d698">
       <Feature>
