@@ -225,45 +225,6 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="GenerateTokenJWT" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="82ff4fe8-e65a-4949-bc5e-6c29bee6685d">
-          <Parameter>
-            <Parameter Name="theUserIdInClaim" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theIssuer" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theAudience" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theExpDateTime" Kind="In">
-              <Type>
-                <Datatype idref="DateTime" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theSecret" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </Parameter>
-          <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
-          </TaggedValue>
-        </Method>
         <Method Name="VerifySAML2" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a1888b81-9ea2-4ce8-9642-b603be06b7a6">
           <Parameter>
             <Parameter Name="theToken" Kind="In">
