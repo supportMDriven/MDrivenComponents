@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.88564914232323" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
+  <PlacedClass>
+    <PlacedClass ClassId="19a1388a-7150-40ae-ae26-b75bf6278a1a" Color="-931069953" LastKnownName="Thing" PickedFeatureVisibility="ShowAll" RenderedHeight="128" RenderedWidth="164" ShowAttributes="False" ShowMethods="False" Size="2" x="168" y="80" id="0182bd26-9e4d-4f1f-be76-d9a062ff0fe8">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.42575200793009" LabelDistance="28.3528326194348" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-8" y="128" id="32ef5fe9-f9f7-4b72-be1f-1340e0c6b545">
+          <AssociationEnd>
+            <AssociationEnd Name="Thing" idref="ae8f6cee-3666-4590-a95e-e8d5c36b1fae" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="26b68f8c-90ee-42da-afea-742e0ae1b329">
+              <AssociationEnd>
+                <AssociationEnd Name="Details" idref="3d8178c6-1335-4fd4-adb3-3c3c8f624b0b" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="82" y="88" id="610ef376-b3d1-45f9-a82e-ea7e71ffe32f">
+          <AssociationEnd>
+            <AssociationEnd Name="Thing" idref="9fc3084a-da68-42c9-8778-e58c2c9fac62" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="1" ViaPointsStartsHere="True" x="82" y="112" id="91aace26-5f49-4901-bf6d-1bbe46fa9864">
+          <AssociationEnd>
+            <AssociationEnd Name="UsedBy" idref="6075290c-6a84-4e0a-964e-1a811f8e7286" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="False" x="-46.5" y="40" id="47efdfc5-7704-4abd-a0a5-bde42b3fdf18">
+              <AssociationEnd>
+                <AssociationEnd Name="MultiValuePick" idref="3861199b-df60-4072-b00e-c68c37120505" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="221" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="416" id="b713f836-eae1-4e9f-bbf5-e740e13c3f57">
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="4c54ad1e-65f7-461a-9971-69b657033b35" Color="-922779393" LastKnownName="Detail" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="93" ShowAttributes="False" ShowMethods="False" Size="1" x="184" y="296" id="ea98a140-0235-4ed8-9bce-794982dd702f">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="26b68f8c-90ee-42da-afea-742e0ae1b329">
+          <AssociationEnd>
+            <AssociationEnd Name="Details" idref="3d8178c6-1335-4fd4-adb3-3c3c8f624b0b" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="3b172bb0-c2d9-43fa-87df-664bd608546c" Color="-931102465" LastKnownName="ValueStore" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="93" ShowAttributes="False" ShowMethods="False" Size="1" x="624" y="152" id="fc200356-3ef0-4484-87a0-791321d6cc34">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="False" x="-46.5" y="40" id="47efdfc5-7704-4abd-a0a5-bde42b3fdf18">
+          <AssociationEnd>
+            <AssociationEnd Name="MultiValuePick" idref="3861199b-df60-4072-b00e-c68c37120505" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.422277136140736" LabelDistance="25.879946767" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-46.5" y="16" id="ec083d17-6263-41fe-b8c0-29c6885cd7d4">
+          <AssociationEnd>
+            <AssociationEnd Name="SomeValue" idref="90c849f0-0e0e-4464-a8b6-5485f7906d8e" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="82" y="88" id="610ef376-b3d1-45f9-a82e-ea7e71ffe32f">
+              <AssociationEnd>
+                <AssociationEnd Name="Thing" idref="9fc3084a-da68-42c9-8778-e58c2c9fac62" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="281" LastKnownName="" NoteContent="UEsDBBQAAAAIAKCKaFaZoqk5TAMAAB8LAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAK1W227bOBD9FUL7mliWu71sERtw03gTrJMtIidF+8bIE4kIRQrDkW3t1+/Ql0SulbAtojdRhzNnzpBzdJJCRsoasSq1ccOoIKo+xrHLCiil65UqQ+vsPfUyW8ZLZe5X8aDffxevZKnjCsGBIekDRD7CR1fJDIbR+gMuIBIzWNFYq9yUDBxGU7inSEyVgXNQecEr45psJC7ceVMVYNahzoy80zAfRhOpHWwCa2nyYQTmuHaRmGi7/Kxww3wTdGavfbxIXNXlHWBa3zlSVHtA77TWVCOktkZP7oapdeLaL0zMbfdxPmtoIkulm2GUQm5B3FxsVlNqNIe8slhKvVn6ui2svZYSAmXFD4vqP96aDPwbQo62NlzzH5NJf/2wdk1lc5RV0fRSkmYucT5VufScuFMzrGEPc8oxWe1a6pdQn5XLmAyXKLFpAbdat5DnypFFle3FO4SNjbGbIzDWBMgt9Lj+M9TamANuTxlZkbIz2z+8W/mjcFi+rBRJnfIJXAMO955KBykYp0gt4NkMvqXMQ2UpUBICDEKANyHAnyHA2xDgXQjwPgT4EAL8FRSqH0QEtUyCYiZBNZOgnElQzyQoaBJUNAlKmgQ1HXRqOkG5HXu7WdLerqUrYP4d0HbtvZTkxzr5G/Y3Ajx0gc6ko7FT0pytKkB69p7cSmQQuU4i28vY/ZFHLyDf1P3ZeQho+UYH6JHnVzWnojvTI2bK9lHLvDvdbrimS6/eC8PrGcBj0/YH4Ojki0S5xvyEK3mj5C3XtWmbw4fe+7fR6N8FIKo5iHGWsUvQNeScD/Bo+z61uTKCi9gBLqXhYk9ijjY68W77CUE+iPgp/s6lPlk9j0azQjkhNduqE42tBVmRSTYsUbIzCXZ9K+Sdrcl/RFGzgQrpBB+mRuCOy89nSwu7fIqM5do8fM7D6NpX9quhgeVqqGAXWBfzYHjNi+PqPAdH+5lYuC7R4sfe/W4bR4n4xtnZbPlAiFsFy0s7B+2ODroo2m082qcjjn1fhEVRqexBOFu+IsNBz1NEkTYuZbU0EPfh8iadiUIuQLwRs+vxVXpxdjUTjtDrWaH1Q0GB8y1i7cifHOC/wUq/HrGOxr5e7Ke/Sbc45pnWFTre/hWP/gdQSwMECgAAAAAAoIpoVuE43BQMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSMGVjYzBhMTU2MGM5NDY3NyIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAKCKaFY1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAoIpoVpmiqTlMAwAAHwsAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAKCKaFbhONwUDAEAAAwBAAALAAAAAAAAAAAAAAAAAJgDAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAKCKaFY1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAOkEAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAGAGAAAAAA==" RenderedHeight="291" RenderedWidth="422" Size="1" Width="412" x="640" y="224" id="ff744fdc-976d-44d7-9fef-c8b672512b30" />
+  </PlacedNote>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="113" LastKnownName="" RenderedHeight="123" RenderedWidth="224" Size="1" Width="214" x="464" y="536" id="07585146-b723-417e-b129-b1890aab4178">
+      <Span>
+        <Span Name="AccountLogin" idref="a8b552e4-ee40-486a-be43-1903f8b5fa7a" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="140" LastKnownName="" RenderedHeight="150" RenderedWidth="250" Size="1" Width="240" x="176" y="528" id="b2754881-53dc-4acf-8847-c391b6e6a553">
+      <Span>
+        <Span Name="AccountRegister" idref="dd34a4b0-9e54-4832-bff2-2c64d9b4f526" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="129" LastKnownName="" RenderedHeight="139" RenderedWidth="216" Size="1" Width="206" x="744" y="536" id="fccbc9e8-a7a2-4538-aa39-e326c54fb881">
+      <Span>
+        <Span Name="AccountManage" idref="bcc8137f-a131-40e3-a694-0c491fee2859" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

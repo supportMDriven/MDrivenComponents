@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AccountRegister" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="dd34a4b0-9e54-4832-bff2-2c64d9b4f526">
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="Register" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryRegisterWithPWD'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="1b17af64-2188-4222-b784-edb66b555fd5">
+      <PlacingContainer>
+        <PlacingContainer idref="0d609822-f84f-411e-b3b3-eeb721eb4801" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.TransientLoginRequestUserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="cc2be02d-5ac3-43ca-a439-1e6a3663d8b8">
+      <PlacingContainer>
+        <PlacingContainer idref="0d609822-f84f-411e-b3b3-eeb721eb4801" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Password" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.TransientLoginRequestPassword" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="4" id="ac7e0851-684f-4293-943e-dbd02665a184">
+      <PlacingContainer>
+        <PlacingContainer idref="0d609822-f84f-411e-b3b3-eeb721eb4801" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="password" />
+      </TaggedValue>
+    </Column>
+    <Column Name="error" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="error" ExpressionForReadOnly="" ExpressionForVisible="not error-&gt;isnullorempty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="danger" XPos="6" YPos="5" id="9f8f0bd5-60ec-44a4-9ad4-51798de1e0b1">
+      <PlacingContainer>
+        <PlacingContainer idref="0d609822-f84f-411e-b3b3-eeb721eb4801" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ConfirmPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.TransientLoginRequestPasswordConfirmed " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="5" id="da87f7dd-3061-4984-889d-61a7103336f5">
+      <PlacingContainer>
+        <PlacingContainer idref="0d609822-f84f-411e-b3b3-eeb721eb4801" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="password" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="14825439-2e49-4f73-a95d-0c4e19dd7668">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="0d609822-f84f-411e-b3b3-eeb721eb4801" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="error" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

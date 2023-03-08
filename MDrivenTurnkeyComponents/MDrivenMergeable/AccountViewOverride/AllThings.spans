@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AllThings" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="600148fb-fd84-4483-96af-775f0385aa49">
+  <Class>
+    <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Thing" ExpressionActAsForActions="" id="5985b418-218f-4f99-9528-fbf4fc6a437e">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomeString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="01c3d7de-dc61-4eb6-9dd6-54be2bf0ed28" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllThings" idref="2449b541-e596-4f78-8c73-ed374565573d" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllThings" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="Thing.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="2449b541-e596-4f78-8c73-ed374565573d">
+      <ReferedNesting>
+        <Nesting Name="Thing" idref="5985b418-218f-4f99-9528-fbf4fc6a437e" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

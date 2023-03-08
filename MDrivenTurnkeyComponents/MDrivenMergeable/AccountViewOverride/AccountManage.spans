@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AccountManage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bcc8137f-a131-40e3-a694-0c491fee2859">
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b064e813-3208-4fdd-8b53-c721ef48b96e">
+      <PlacingContainer>
+        <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="SendMeNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SendMeNews" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a3cb3917-3999-4b29-933a-4cfc393611bf">
+      <PlacingContainer>
+        <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="99674948-7656-49a9-b1bc-4593e58bcba7">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="68f176b9-1551-43aa-a69a-6efc187621d0" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>
