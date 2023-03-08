@@ -1,61 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="eb18d545-8d55-4a15-b9ba-13e814742fec">
   <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+    <Class Name="SysSuperClass" idref="4fd8dcfb-9ebf-4556-a323-b4d8e4c047fb" />
   </DefaultSuperClass>
   <OwnedElement>
-    <Class Name="SysUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0017d588-d3cf-433b-b763-93ae056419c3">
+    <Class Name="SysUserClaim" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2518e2ad-530d-47c6-aa41-f9d003f06db4">
       <Feature>
-        <Attribute Name="SendMeNews" Multiplicity="" Visibility="Public" id="478748bb-b51a-466c-a099-ce7722d20731">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="Boolean" />
-          </Type>
-        </Attribute>
-        <Attribute Name="IsAdmin" Multiplicity="" Visibility="Public" id="6abf6cc3-a120-48a2-a612-4f1c13c95b60">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="Boolean" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Id" Multiplicity="" Visibility="Public" id="89122322-2cab-435d-8720-ab8c961dc818">
+        <Attribute Name="ClaimType" Multiplicity="" Visibility="Public" id="8dbb3aee-5e29-48c2-a7e8-deb982109222">
           <Type>
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="PasswordHash" Multiplicity="" Visibility="Public" id="977ffc63-785a-46d8-adc7-59b60a1ff106">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
+        <Attribute Name="ClaimValue" Multiplicity="" Visibility="Public" id="a98174fb-623a-4177-9191-f06c82330fd2">
           <Type>
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="UserName" Multiplicity="" Visibility="Public" id="9f49bb8e-ae50-4ec5-85e5-79c907bafdd3">
+        <Attribute Name="OriginalIssuer" Multiplicity="" Visibility="Public" id="b040b369-b8a5-4a40-bece-f3e8b3904071">
           <Type>
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="SecurityStamp" Multiplicity="" Visibility="Public" id="f735f6e1-6746-41d8-b1a2-f2084b7b12d2">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
+        <Attribute Name="ValueType" Multiplicity="" Visibility="Public" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Issuer" Multiplicity="" Visibility="Public" id="d2c02585-f187-40de-a32d-6682b908712d">
           <Type>
             <Datatype idref="String" />
           </Type>
         </Attribute>
       </Feature>
     </Class>
-    <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf">
-      <Association>
-        <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
-      </Association>
-    </Class>
-    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="305f131d-d82d-49fa-8735-f894e1d58636">
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="4fd8dcfb-9ebf-4556-a323-b4d8e4c047fb">
       <Feature>
         <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
           <TaggedValue>
@@ -87,61 +65,7 @@
         <TaggedValue Tag="Eco.TableMapping" Value="Children" />
       </TaggedValue>
     </Class>
-    <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="56e1db7e-00b4-4273-bb39-1e8ad181328b">
-      <Feature>
-        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-    </Class>
-    <Association Name="" EffectiveName="SysExternalLoginSysExternalLoginsSysUserSysUser" id="6f24b23b-4930-445d-ab8f-99fed6a51e16">
-      <AssociationEnd>
-        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8847b309-9ee6-4258-8365-0b100f9c6108">
-          <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="SysExternalLogins" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b08c5b53-7343-44df-8e77-52d2cfeb0e70">
-          <Participant>
-            <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
-          </Participant>
-        </AssociationEnd>
-      </AssociationEnd>
-    </Association>
-    <Class Name="SysExternalLogin" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8ea431b6-73df-4536-a07a-751b01f5dd17">
-      <Feature>
-        <Attribute Name="LoginProvider" Multiplicity="" Visibility="Public" id="172a11ee-84fb-412e-8f05-520d45d21416">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="ProviderKey" Multiplicity="" Visibility="Public" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-    </Class>
-    <Association Name="" EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser" id="acbe9a76-8505-4796-a7d1-128dc0d52467">
-      <AssociationEnd>
-        <AssociationEnd Name="CurrentUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c58f940a-682a-461e-9c0e-b8536f8381bf">
-          <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="SysSingletonsCurrentUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b">
-          <Participant>
-            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
-          </Participant>
-        </AssociationEnd>
-      </AssociationEnd>
-      <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
-      </TaggedValue>
-    </Association>
-    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ad4cf46f-0195-4197-bef2-9f8dd89a3870">
+    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="5d5a5447-4976-4a74-9527-40fd6c350b90">
       <Feature>
         <Method Name="GenerateTokenJWTWithSysCert" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4bad4fde-7e90-4d43-bef9-e8404d338341">
           <Parameter>
@@ -336,46 +260,117 @@
         <TaggedValue Tag="Eco.IsSingleton" Value="True" />
       </TaggedValue>
     </Class>
+    <Association Name="" EffectiveName="SysExternalLoginSysExternalLoginsSysUserSysUser" id="6f24b23b-4930-445d-ab8f-99fed6a51e16">
+      <AssociationEnd>
+        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8847b309-9ee6-4258-8365-0b100f9c6108">
+          <Participant>
+            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysExternalLogins" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b08c5b53-7343-44df-8e77-52d2cfeb0e70">
+          <Participant>
+            <Class Name="SysExternalLogin" idref="ec74c857-7f64-47e0-8dc8-0cfa5448943c" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="SysUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="97c7c966-508d-4232-b35b-33a21246e5c1">
+      <Feature>
+        <Attribute Name="SendMeNews" Multiplicity="" Visibility="Public" id="478748bb-b51a-466c-a099-ce7722d20731">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="IsAdmin" Multiplicity="" Visibility="Public" id="6abf6cc3-a120-48a2-a612-4f1c13c95b60">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Id" Multiplicity="" Visibility="Public" id="89122322-2cab-435d-8720-ab8c961dc818">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="PasswordHash" Multiplicity="" Visibility="Public" id="977ffc63-785a-46d8-adc7-59b60a1ff106">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="UserName" Multiplicity="" Visibility="Public" id="9f49bb8e-ae50-4ec5-85e5-79c907bafdd3">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SecurityStamp" Multiplicity="" Visibility="Public" id="f735f6e1-6746-41d8-b1a2-f2084b7b12d2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser" id="acbe9a76-8505-4796-a7d1-128dc0d52467">
+      <AssociationEnd>
+        <AssociationEnd Name="CurrentUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c58f940a-682a-461e-9c0e-b8536f8381bf">
+          <Participant>
+            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsCurrentUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b">
+          <Participant>
+            <Class Name="SysSingleton" idref="5d5a5447-4976-4a74-9527-40fd6c350b90" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
     <Association Name="" EffectiveName="SysUserSysUsersSysRoleSysRoles" id="b0f92c8e-057e-4fd4-90ab-39f1d755a876">
       <AssociationEnd>
         <AssociationEnd Name="SysUsers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2e115e1e-fcc5-432d-b68b-b8416b0b36db">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="SysRoles" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a">
           <Participant>
-            <Class Name="SysRole" idref="56e1db7e-00b4-4273-bb39-1e8ad181328b" />
+            <Class Name="SysRole" idref="ed8d092b-ed5b-404f-8109-49235f3a7f23" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
       <Class>
-        <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
+        <Class Name="SysUserRole" idref="f651c96d-652e-436c-82e5-bf5263f354e3" />
       </Class>
     </Association>
-    <Class Name="SysUserClaim" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d463013a-d624-45c4-80fd-73d63fd488fa">
+    <Class Name="SysExternalLogin" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ec74c857-7f64-47e0-8dc8-0cfa5448943c">
       <Feature>
-        <Attribute Name="ClaimType" Multiplicity="" Visibility="Public" id="8dbb3aee-5e29-48c2-a7e8-deb982109222">
+        <Attribute Name="LoginProvider" Multiplicity="" Visibility="Public" id="172a11ee-84fb-412e-8f05-520d45d21416">
           <Type>
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="ClaimValue" Multiplicity="" Visibility="Public" id="a98174fb-623a-4177-9191-f06c82330fd2">
+        <Attribute Name="ProviderKey" Multiplicity="" Visibility="Public" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
           <Type>
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="OriginalIssuer" Multiplicity="" Visibility="Public" id="b040b369-b8a5-4a40-bece-f3e8b3904071">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="ValueType" Multiplicity="" Visibility="Public" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Issuer" Multiplicity="" Visibility="Public" id="d2c02585-f187-40de-a32d-6682b908712d">
+      </Feature>
+    </Class>
+    <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ed8d092b-ed5b-404f-8109-49235f3a7f23">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
           <Type>
             <Datatype idref="String" />
           </Type>
@@ -386,16 +381,21 @@
       <AssociationEnd>
         <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="12532b0d-4a51-478d-aac8-906470b9eac5">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="SysUserClaims" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="1ff32c2d-8e59-4b68-8250-3f08182d12ba">
           <Participant>
-            <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+            <Class Name="SysUserClaim" idref="2518e2ad-530d-47c6-aa41-f9d003f06db4" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
+    <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="f651c96d-652e-436c-82e5-bf5263f354e3">
+      <Association>
+        <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
+      </Association>
+    </Class>
   </OwnedElement>
   <TaggedValue>
     <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperclass" />
