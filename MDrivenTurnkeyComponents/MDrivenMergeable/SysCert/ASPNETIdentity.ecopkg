@@ -36,6 +36,90 @@
         <TaggedValue Tag="Eco.TableMapping" Value="Children" />
       </TaggedValue>
     </Class>
+    <Class Name="SysCert" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="1d208866-7645-4ec5-a2b2-eaf2a25d8de7">
+      <Feature>
+        <Attribute Name="InverseQ" Multiplicity="" Visibility="Public" id="5db2de10-be7b-451e-860f-e0a33bd9879b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="D" Multiplicity="" Visibility="Public" id="66215fd8-9f22-46b5-bc56-f92be1429634">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="P" Multiplicity="" Visibility="Public" id="6e357db5-b78b-407a-8253-bb806ac8f13c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DP" Multiplicity="" Visibility="Public" id="886299c9-6d58-4f32-8b7d-bf10ec879b06">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DQ" Multiplicity="" Visibility="Public" id="935c8ecf-7007-4b09-bd45-d081a2550d0e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="KId" Multiplicity="" Visibility="Public" id="9864c2a1-4e1c-454d-b29a-038f447b3db4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Modulus" Multiplicity="" Visibility="Public" id="b2775278-6d54-410b-bfe1-47e4912eff1a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Q" Multiplicity="" Visibility="Public" id="e4055462-c83f-4429-89d6-92656bc54cba">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Exponent" Multiplicity="" Visibility="Public" id="e43e2e6f-b24a-4cf4-bd8e-2ab13c5ea9c0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
     <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="62c34d1c-42df-4208-ad63-521218952349">
       <Feature>
         <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
