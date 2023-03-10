@@ -53,7 +53,7 @@
     </Column>
   </OwnedColumns>
   <PlacingContainer>
-    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="14825439-2e49-4f73-a95d-0c4e19dd7668">
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleDesign="AccountPageStyle" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="14825439-2e49-4f73-a95d-0c4e19dd7668">
       <ChildContainers>
         <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="0d609822-f84f-411e-b3b3-eeb721eb4801" />
       </ChildContainers>

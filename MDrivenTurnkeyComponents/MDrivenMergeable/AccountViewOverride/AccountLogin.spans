@@ -43,9 +43,17 @@
         <PlacingContainer idref="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
       </PlacingContainer>
     </Column>
+    <Column Name="ExampleToLoginWithOpenIDConnect" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryExternalLogin?provider=OpenIdConnect&amp;returnUrl='+returnUrl" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="0af23026-b807-46b3-a2a2-f0a6e95b4a24">
+      <PlacingContainer>
+        <PlacingContainer idref="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
   </OwnedColumns>
   <PlacingContainer>
-    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="e09d6c0c-a5d0-4ea4-a8d0-d231f7660727">
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="NotSet" StyleDesign="AccountPageStyle" StyleExpression="'AccountPageStyle'" Type="Column" VisibleExpression="" Wrap="False" id="e09d6c0c-a5d0-4ea4-a8d0-d231f7660727">
       <ChildContainers>
         <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
       </ChildContainers>
