@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <allactions>
-  <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="0d157ec7-c42f-4350-b4a2-e42a4698f176">
-    <MenuGroup>
-      <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
-    </MenuGroup>
-  </GlobalAction>
-  <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="1c4f8e2f-06e1-4712-b08a-0f4f0444f99c">
+  <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="262aa19c-86dc-487c-a4a5-0ceca5bc2a45">
     <MenuGroup>
       <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2de8e1c0-b8b5-41e8-ad5a-a7946615a0c7">
-    <MenuGroup>
-      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
-    </MenuGroup>
-  </GlobalAction>
-  <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="99782845-7676-4dc5-9352-2ab0d1e0ac00">
-    <MenuGroup>
-      <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
-    </MenuGroup>
-  </GlobalAction>
-  <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="9b9cebd9-fb6e-4046-8781-3d129c25ac45">
-    <MenuGroup>
-      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
-    </MenuGroup>
-  </GlobalAction>
-  <GlobalAction Name="ShowSysCert" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="bcc3895a-e72a-4b4b-a303-8a6b56350cbd">
+  <GlobalAction Name="ShowSysCert" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="678736ff-2cfb-4128-a89c-d37d7975ded4">
     <BringUpViewModel>
-      <Span Name="ShowSysCert" idref="15a04ef5-e678-4fb7-835f-ae1aa1f5c416" />
+      <Span Name="ShowSysCert" idref="79f8dc84-ea92-4ec3-99f6-3848e77d5c37" />
     </BringUpViewModel>
     <MenuGroup>
       <MenuGroup Name="Views" idref="6182c19b-652d-467c-a3cf-74147295b971" />
     </MenuGroup>
   </GlobalAction>
-  <ClassAction Name="DeleteCert" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="f7951ea9-feec-4741-a7db-290b708cc48b">
+  <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="8c22e6be-31bc-418d-8a70-6ae7ff4991dd">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="ba7f8c57-4b66-4d24-904f-1bce81932072">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="c5a9823e-69d3-4747-9e08-0844c0c18914">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e47749fe-9ae6-432d-bd17-b970c51c1f87">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+    </MenuGroup>
+  </GlobalAction>
+  <ClassAction Name="DeleteCert" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="edb267b4-96a6-4da3-b57c-0f26703dce93">
     <ClassToPerformActionOn>
-      <Class Name="SysCert" idref="e649a2ae-4162-4614-b26e-dd4de3b055d2" />
+      <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
     </ClassToPerformActionOn>
   </ClassAction>
   <MenuGroup Name="Edit" SortKey="002" Id="22be19f2-9f61-4bc5-88a1-27e6257490c6" />

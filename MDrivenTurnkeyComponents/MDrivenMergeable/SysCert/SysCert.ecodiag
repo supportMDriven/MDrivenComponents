@@ -3,12 +3,12 @@
   <PlacedClass>
     <PlacedClass ClassId="319121f0-77d1-441a-aa36-b75d1e99d698" Color="1692800256" LastKnownName="SysCert" PickedFeatureVisibility="ShowAll" RenderedHeight="145" RenderedWidth="90" ShowAttributes="False" ShowMethods="False" Size="1" x="320" y="368" id="28c788a1-8916-4ecc-b2b3-c680267bc82b">
       <Class>
-        <Class Name="SysCert" idref="e649a2ae-4162-4614-b26e-dd4de3b055d2" />
+        <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="999164df-658b-4e9f-bf63-f746ac0d8456" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="121" RenderedWidth="162" ShowAttributes="False" ShowMethods="False" Size="1" x="133.219176018345" y="351.772294278855" id="c2ba61bd-d888-4378-b0df-966e8a62bc9f">
       <Class>
-        <Class Name="SysSingleton" idref="4be04b75-de5f-4582-abe0-7694cce4623e" />
+        <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
       </Class>
     </PlacedClass>
   </PlacedClass>
@@ -18,7 +18,7 @@
   <PlacedViewModels>
     <PlacedViewModel Color="-1765226296" Height="253" LastKnownName="" RenderedHeight="263" RenderedWidth="380" Size="1" Width="370" x="216" y="16" id="cbef57ab-5544-4382-ab97-9810444c4005">
       <Span>
-        <Span Name="ShowSysCert" idref="15a04ef5-e678-4fb7-835f-ae1aa1f5c416" />
+        <Span Name="ShowSysCert" idref="79f8dc84-ea92-4ec3-99f6-3848e77d5c37" />
       </Span>
     </PlacedViewModel>
   </PlacedViewModels>

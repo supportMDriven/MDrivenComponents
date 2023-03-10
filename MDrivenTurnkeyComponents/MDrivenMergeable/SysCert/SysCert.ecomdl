@@ -9,8 +9,8 @@
     <Diagram Name="SysCert" FileName="SysCert" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
   </Diagrams>
   <Spans>
-    <Span Name="ShowSysCert" FileName="ShowSysCert" GUID="15a04ef5-e678-4fb7-835f-ae1aa1f5c416" />
-    <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
+    <Span Name="Index" FileName="Index" GUID="6e37e383-bc14-4c42-ad3f-8ca80c340452" />
+    <Span Name="ShowSysCert" FileName="ShowSysCert" GUID="79f8dc84-ea92-4ec3-99f6-3848e77d5c37" />
   </Spans>
   <Report />
   <ModlrProject>
