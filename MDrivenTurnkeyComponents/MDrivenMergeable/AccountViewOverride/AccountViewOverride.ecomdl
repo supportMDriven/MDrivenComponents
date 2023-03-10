@@ -10,13 +10,13 @@
     <Diagram Name="Diagram1" FileName="Diagram1" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
   </Diagrams>
   <Spans>
-    <Span Name="AllThings" FileName="AllThings" GUID="600148fb-fd84-4483-96af-775f0385aa49" />
-    <Span Name="ViewValueStore" FileName="ViewValueStore" GUID="816c1ddb-97ad-4e31-9846-6865c6d0c12c" />
-    <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
-    <Span Name="AccountLogin" FileName="AccountLogin" GUID="a8b552e4-ee40-486a-be43-1903f8b5fa7a" />
-    <Span Name="ViewOneThing" FileName="ViewOneThing" GUID="b0db4fde-4a19-4424-911d-1eb5829ae6cf" />
-    <Span Name="AccountManage" FileName="AccountManage" GUID="bcc8137f-a131-40e3-a694-0c491fee2859" />
-    <Span Name="AccountRegister" FileName="AccountRegister" GUID="dd34a4b0-9e54-4832-bff2-2c64d9b4f526" />
+    <Span Name="AccountRegister" FileName="AccountRegister" GUID="37478d53-1964-4e2d-b901-efe0d5290bc0" />
+    <Span Name="ViewOneThing" FileName="ViewOneThing" GUID="5845c5aa-d532-410f-8dd3-4771b0c890a6" />
+    <Span Name="AccountManage" FileName="AccountManage" GUID="9ee733d5-dcac-40f0-ad28-7bcdeb768041" />
+    <Span Name="AllThings" FileName="AllThings" GUID="c69b74a7-8f16-402f-a80c-e1417ec241ce" />
+    <Span Name="AccountLogin" FileName="AccountLogin" GUID="d59b4e0a-0b34-404e-bfae-3a4967596257" />
+    <Span Name="ViewValueStore" FileName="ViewValueStore" GUID="ee44595c-317c-45cf-b3d4-1f7b2a82e571" />
+    <Span Name="Index" FileName="Index" GUID="f1111575-daa9-480a-b9bd-305828f7191d" />
   </Spans>
   <Report />
   <ModlrProject>

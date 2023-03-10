@@ -34,12 +34,12 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+        <Class Name="Thing" idref="8084b309-c52b-442e-b4cf-069b6daec072" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="221" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="416" id="b713f836-eae1-4e9f-bbf5-e740e13c3f57">
       <Class>
-        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+        <Class Name="SysSingleton" idref="33f04aff-42a9-49b3-a4cb-826a2d080d37" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="4c54ad1e-65f7-461a-9971-69b657033b35" Color="-922779393" LastKnownName="Detail" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="93" ShowAttributes="False" ShowMethods="False" Size="1" x="184" y="296" id="ea98a140-0235-4ed8-9bce-794982dd702f">
@@ -51,7 +51,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
+        <Class Name="Detail" idref="1bf8438b-989a-496d-995a-86ba72d2f402" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="3b172bb0-c2d9-43fa-87df-664bd608546c" Color="-931102465" LastKnownName="ValueStore" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="93" ShowAttributes="False" ShowMethods="False" Size="1" x="624" y="152" id="fc200356-3ef0-4484-87a0-791321d6cc34">
@@ -75,7 +75,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+        <Class Name="ValueStore" idref="3fc27429-bd60-451a-b37c-cbf0e1360d14" />
       </Class>
     </PlacedClass>
   </PlacedClass>
@@ -85,17 +85,17 @@
   <PlacedViewModels>
     <PlacedViewModel Color="-1765226296" Height="113" LastKnownName="" RenderedHeight="123" RenderedWidth="224" Size="1" Width="214" x="464" y="536" id="07585146-b723-417e-b129-b1890aab4178">
       <Span>
-        <Span Name="AccountLogin" idref="a8b552e4-ee40-486a-be43-1903f8b5fa7a" />
+        <Span Name="AccountLogin" idref="d59b4e0a-0b34-404e-bfae-3a4967596257" />
       </Span>
     </PlacedViewModel>
     <PlacedViewModel Color="-1765226296" Height="140" LastKnownName="" RenderedHeight="150" RenderedWidth="250" Size="1" Width="240" x="176" y="528" id="b2754881-53dc-4acf-8847-c391b6e6a553">
       <Span>
-        <Span Name="AccountRegister" idref="dd34a4b0-9e54-4832-bff2-2c64d9b4f526" />
+        <Span Name="AccountRegister" idref="37478d53-1964-4e2d-b901-efe0d5290bc0" />
       </Span>
     </PlacedViewModel>
     <PlacedViewModel Color="-1765226296" Height="129" LastKnownName="" RenderedHeight="139" RenderedWidth="216" Size="1" Width="206" x="744" y="536" id="fccbc9e8-a7a2-4538-aa39-e326c54fb881">
       <Span>
-        <Span Name="AccountManage" idref="bcc8137f-a131-40e3-a694-0c491fee2859" />
+        <Span Name="AccountManage" idref="9ee733d5-dcac-40f0-ad28-7bcdeb768041" />
       </Span>
     </PlacedViewModel>
   </PlacedViewModels>

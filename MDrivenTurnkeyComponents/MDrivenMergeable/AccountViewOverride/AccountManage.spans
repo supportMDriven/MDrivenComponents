@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="AccountManage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bcc8137f-a131-40e3-a694-0c491fee2859">
+<Span Name="AccountManage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9ee733d5-dcac-40f0-ad28-7bcdeb768041">
   <Class>
-    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+    <Class Name="SysUser" idref="bd6ba09b-170c-45ac-bf6e-8e38fd8083fc" />
   </Class>
   <Nesting>
-    <Nesting Name="SysUser" ExpressionActAsForActions="" id="daa137df-7d11-4190-9e35-8799c933e8c7">
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="2feecda0-4334-42fd-a61b-c6dda84760ac">
       <Class>
-        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+        <Class Name="SysUser" idref="bd6ba09b-170c-45ac-bf6e-8e38fd8083fc" />
       </Class>
       <OwnedColumns>
         <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserName+(SysSingleton.oclSingleton.CurrentUser=self).casetruefalse(' &lt;- this is you - looking good!','')" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8c57b255-4c13-46aa-8696-242b7e16172d">
@@ -43,7 +43,7 @@
         <PlacingContainer idref="68f176b9-1551-43aa-a69a-6efc187621d0" />
       </PlacingContainer>
       <ReferedNesting>
-        <Nesting Name="SysUser" idref="daa137df-7d11-4190-9e35-8799c933e8c7" />
+        <Nesting Name="SysUser" idref="2feecda0-4334-42fd-a61b-c6dda84760ac" />
       </ReferedNesting>
     </Column>
     <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'TheseAreAllTheUsers'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="6e159e5f-8941-4ab8-9664-10c9419413e5">

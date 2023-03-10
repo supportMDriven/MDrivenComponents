@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="AccountRegister" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="dd34a4b0-9e54-4832-bff2-2c64d9b4f526">
+<Span Name="AccountRegister" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="37478d53-1964-4e2d-b901-efe0d5290bc0">
   <Class>
-    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+    <Class Name="SysUser" idref="bd6ba09b-170c-45ac-bf6e-8e38fd8083fc" />
   </Class>
   <OwnedColumns>
     <Column Name="Register" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryRegisterWithPWD'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="1b17af64-2188-4222-b784-edb66b555fd5">
@@ -45,7 +45,7 @@
     </Column>
     <Column Name="HaveAnAccountAlready" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;?" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="b0d8e388-e116-4d0b-b64c-b9cdb18dbd72">
       <ActionToExecute>
-        <ContextAction Name="Login" idref="51b4abe5-942a-4382-b795-87c06d16fb2f" />
+        <ContextAction Name="Login" idref="e229ec37-0aaa-4658-8ed7-5ec50cf62f3a" />
       </ActionToExecute>
       <PlacingContainer>
         <PlacingContainer idref="0d609822-f84f-411e-b3b3-eeb721eb4801" />

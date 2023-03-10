@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="dd9442a4-a948-443c-8307-167f1e6a5429">
   <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+    <Class Name="SysSuperClass" idref="b13bdb97-cee0-45dd-8d35-80b49dbdb26d" />
   </DefaultSuperClass>
   <OwnedElement>
     <Association Name="" EffectiveName="ThingUsedByValueStoreMultiValuePick" id="0affb25e-4967-43b9-9b4e-ec34e61ae419">
       <AssociationEnd>
         <AssociationEnd Name="UsedBy" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="6075290c-6a84-4e0a-964e-1a811f8e7286">
           <Participant>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+            <Class Name="Thing" idref="8084b309-c52b-442e-b4cf-069b6daec072" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="MultiValuePick" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3861199b-df60-4072-b00e-c68c37120505">
           <Participant>
-            <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+            <Class Name="ValueStore" idref="3fc27429-bd60-451a-b37c-cbf0e1360d14" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="Thing" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="19a1388a-7150-40ae-ae26-b75bf6278a1a">
+    <Class Name="Detail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="1bf8438b-989a-496d-995a-86ba72d2f402">
+      <Feature>
+        <Attribute Name="Attribute3" Multiplicity="" Visibility="Public" id="38f2dd3c-37d0-48b6-b95d-95fb5bfae3a2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Attribute2" Multiplicity="" Visibility="Public" id="5586e93a-8d06-4d59-b341-f8d4d346f284">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="928b8361-7419-41da-9b29-b71c9920ecb9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922779393" />
+      </TaggedValue>
+    </Class>
+    <Class Name="ValueStore" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3fc27429-bd60-451a-b37c-cbf0e1360d14">
+      <Feature>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="1d976555-f9a7-40ba-97bd-fca98a0427e3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-931102465" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="ThingThingDetailDetails" id="4e1ab3c7-2e22-46b6-88ac-d5a293ced61a">
+      <AssociationEnd>
+        <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ae8f6cee-3666-4590-a95e-e8d5c36b1fae">
+          <Participant>
+            <Class Name="Thing" idref="8084b309-c52b-442e-b4cf-069b6daec072" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Details" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3d8178c6-1335-4fd4-adb3-3c3c8f624b0b">
+          <Participant>
+            <Class Name="Detail" idref="1bf8438b-989a-496d-995a-86ba72d2f402" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Thing" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8084b309-c52b-442e-b4cf-069b6daec072">
       <Feature>
         <Attribute Name="ADecimal" Multiplicity="" Visibility="Public" id="01cde163-342f-40f0-9d8a-65dbd3708e6a">
           <TaggedValue>
@@ -62,79 +125,16 @@
         <TaggedValue Tag="Eco.DefaultColor" Value="-931069953" />
       </TaggedValue>
     </Class>
-    <Class Name="ValueStore" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3b172bb0-c2d9-43fa-87df-664bd608546c">
-      <Feature>
-        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="1d976555-f9a7-40ba-97bd-fca98a0427e3">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-      <TaggedValue>
-        <TaggedValue Tag="Eco.DefaultColor" Value="-931102465" />
-      </TaggedValue>
-    </Class>
-    <Class Name="Detail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="4c54ad1e-65f7-461a-9971-69b657033b35">
-      <Feature>
-        <Attribute Name="Attribute3" Multiplicity="" Visibility="Public" id="38f2dd3c-37d0-48b6-b95d-95fb5bfae3a2">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Attribute2" Multiplicity="" Visibility="Public" id="5586e93a-8d06-4d59-b341-f8d4d346f284">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="928b8361-7419-41da-9b29-b71c9920ecb9">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-      <TaggedValue>
-        <TaggedValue Tag="Eco.DefaultColor" Value="-922779393" />
-      </TaggedValue>
-    </Class>
-    <Association Name="" EffectiveName="ThingThingDetailDetails" id="4e1ab3c7-2e22-46b6-88ac-d5a293ced61a">
-      <AssociationEnd>
-        <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ae8f6cee-3666-4590-a95e-e8d5c36b1fae">
-          <Participant>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="Details" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3d8178c6-1335-4fd4-adb3-3c3c8f624b0b">
-          <Participant>
-            <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
-          </Participant>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
-          </TaggedValue>
-        </AssociationEnd>
-      </AssociationEnd>
-    </Association>
     <Association Name="" EffectiveName="ThingThingValueStoreSomeValue" id="ce25b1d0-54ac-423b-97f8-0ac2fb4eb4bf">
       <AssociationEnd>
         <AssociationEnd Name="SomeValue" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="90c849f0-0e0e-4464-a8b6-5485f7906d8e">
           <Participant>
-            <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+            <Class Name="ValueStore" idref="3fc27429-bd60-451a-b37c-cbf0e1360d14" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="Thing" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="9fc3084a-da68-42c9-8778-e58c2c9fac62">
           <Participant>
-            <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+            <Class Name="Thing" idref="8084b309-c52b-442e-b4cf-069b6daec072" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
