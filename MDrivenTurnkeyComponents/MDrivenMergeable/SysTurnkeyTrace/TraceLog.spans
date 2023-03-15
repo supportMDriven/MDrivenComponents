@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TraceLog" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5fbf8424-f0eb-44ee-a918-a3267a6cfea3">
+  <Class>
+    <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysTurnkeyTrace" ExpressionActAsForActions="" id="a413c147-2985-4181-bf2c-ac32dab81bdb">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Time" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime.ToString('yyMMdd HH:mm:ss')" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4e947e2e-dfe2-4ca5-90cb-da702555e032" />
+        <Column Name="Trace" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="(self.TypeOfTrace='Action').casetruefalse(&#xD;&#xA; 'Action:     '+self.IdString+' / '+self.Level+' / '+self.Action+' on '+self.classname,&#xD;&#xA; 'Navigation: '+self.IdString+' pres:'+self.Defaultstringrep&#xD;&#xA;)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="745c2d8c-a13f-445c-8700-b87ff0fed0b7" />
+        <Column Name="UserAndSession" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Usersessioncombo" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cfdb1768-88ca-4422-a077-64810373cb8a" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="733b7ab7-a412-4308-b997-91985457f22f" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekUsersessioncombo" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="f7d755f0-6f21-4b79-9261-e8cee05d8d7e">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.Usersessioncombo.sqllike(vSeekParamWildcard) or (a.Usersessioncombo=vSeekParam))" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="87af3a66-d2f4-4b66-ba01-c740fb3b6024" />
+        <Column Name="Crit2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;reject(x|x.Idstring='TraceLog')" ExpressionForReadOnly="" ExpressionForVisible="vSkipThisViewFromLog" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c7549f5e-9bc9-4f06-b741-2c4bdc9027ed" />
+        <Column Name="Crit3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(x|x.CreateTime&gt;vSessionDate)" ExpressionForReadOnly="" ExpressionForVisible="vSessionDate&gt;#1968-03-05" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c4d9b476-1716-4416-8d1c-569a4cba669f" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.Usersessioncombo" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="d478316c-90c6-4ce7-ac75-87f108604c0b">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="54bc27d3-fa9d-4b2e-ab46-6931ba1d461a" />
+        <Column Name="Crit2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;reject(x|x.Idstring='TraceLog')" ExpressionForReadOnly="" ExpressionForVisible="vSkipThisViewFromLog" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d0e8a888-2d94-4d87-a9ce-c900ed9a4fd9" />
+        <Column Name="Crit3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(x|x.CreateTime&gt;vSessionDate)" ExpressionForReadOnly="" ExpressionForVisible="vSessionDate&gt;#1968-03-05" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="95b1472f-c27f-4fc6-947c-c526f62866ef" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="OrderExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="8e20f451-9630-4af0-bcae-f8acf03db3f6">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;orderDescending(createtime,Usersessioncombo)" ExpressionForReadOnly="" ExpressionForVisible="true" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="dadc4dbf-5907-4752-bfb8-1b90390c716e" />
+      </OwnedColumns>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6532d891-712c-4873-ad47-a3135ea7bb78" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="baeb3a4b-8d38-4ec7-b7bf-ba7334535181" />
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="vSeekerResult-&gt;orderdescending(createtime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="733b7ab7-a412-4308-b997-91985457f22f">
+      <ReferedNesting>
+        <Nesting Name="SysTurnkeyTrace" idref="a413c147-2985-4181-bf2c-ac32dab81bdb" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="SkipThisViewFromLog" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSkipThisViewFromLog" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="12" YPos="1" id="e2dad8cb-bb57-4c4d-8fb7-93000af88bfb" />
+    <Column Name="FetchMaxRows" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekerPageLength" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="14" YPos="1" id="4e304f3e-7992-4006-ae1c-086e13d9714f" />
+    <Column Name="SessionsFromDate" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="if (vSessionDate&lt;#1968-03-05) or vSessionDate.isnull then&#xD;&#xA;  vSessionDate:=DateTime.Today&#xD;&#xA;else&#xD;&#xA;  vSessionDate&#xD;&#xA;endif;&#xD;&#xA;&#xD;&#xA;v24HoursLater:=vSessionDate.AddHours(24);&#xD;&#xA;&#xD;&#xA;SysTurnkeyTraceUserTransient.allinstances-&gt;foreach(x|x.Delete);&#xD;&#xA;SysTurnkeyTrace.pseval(SysTurnkeyTrace.allinstances-&gt;select(x|(x.CreateTime&gt;vSessionDate) and (x.CreateTime&lt;v24HoursLater)),2000,0,'')-&gt;collect(x|x.UserSessionCombo)-&gt;asset&#xD;&#xA;-&gt;collect(x|&#xD;&#xA;  let newrow=SysTurnkeyTraceUserTransient.Create in &#xD;&#xA;  (&#xD;&#xA;   newrow.UserSessionCombo:=x;  &#xD;&#xA;   vUsersFromTodayList.Add(newrow)&#xD;&#xA;  )&#xD;&#xA;&#xD;&#xA;)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="b8450da6-a650-462e-ba32-668cb72e79a8" />
+    <Column Name="Sessions" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="SysTurnkeyTraceUserTransient.allinstances-&gt;notempty" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;nothing&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="0" id="b19f7ba7-47fb-44ea-9049-82247f2499a2">
+      <ColumnForPickList>
+        <Column Name="Users_picklist" idref="fa503edf-b719-486b-9dd3-4acf368143c9" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="Users_picklist" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTraceUserTransient.allinstances-&gt;collect(x|x.UserSessionCombo)-&gt;orderby(x|x)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fa503edf-b719-486b-9dd3-4acf368143c9" />
+    <Column Name="Date" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vSessionDate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="13" YPos="0" id="434d7abb-3248-4e54-9b06-3ee6dc674290" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="v24HoursLater" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(SysTurnkeyTrace)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSessionDate" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vSkipThisViewFromLog" InitialValue="true" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vUsersFromTodayList" InitialValue="" TypeName="Collection(SysTurnkeyTraceUserTransient)" UserData="" />
+  </SpanVariables>
+</Span>

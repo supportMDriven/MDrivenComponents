@@ -10,4 +10,55 @@
     <Folder Include="EXT_Components\Cards\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Index.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AllThings.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AccountManage.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AccountRegister.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AccountLogin.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Actions.actions">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MDrivenMergeable\AccountViewOverride\ASPNETIdentity.ecopkg">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\AccountViewOverride\ForASPNETIdentity.ecodiag">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\AccountViewOverride\ModlrProject.mproj">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\AccountViewOverride\Snippets.snippets">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\ViewOneThing.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\ViewValueStore.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MDrivenMergeable\AccountViewOverride\Diagram1.ecodiag">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\AccountViewOverride\documentation.modlrdoc">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>
