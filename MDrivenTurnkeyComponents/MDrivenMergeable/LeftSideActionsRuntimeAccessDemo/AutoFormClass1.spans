@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormClass1" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="3" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="05fb186b-0f67-4717-b2c1-10e4573ea72a">
+  <Category>
+    <Category Name="AutoForms" idref="0439be3f-aa6a-4b5f-97b8-d012d3b0208c" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="ab8124dc-da6c-4b86-8ba5-8139f365a031" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowClass1" idref="2e45d5bd-fc72-4c4f-a258-c857f201ed90" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkClass2s" idref="539358e8-51f5-4ebb-8906-b006f9ca7e43" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="c530a200-9f6a-4725-8536-f7b7ae43f977" />
+    <Column Name="ShowMultiLink_Class2s" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="2a822cd1-cec2-4b7c-9999-12c6ec66d4b1">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkClass2s" idref="539358e8-51f5-4ebb-8906-b006f9ca7e43" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

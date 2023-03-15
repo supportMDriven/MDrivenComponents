@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="8ef4c75d-b414-439c-8b2b-9493547fe307">
+  <OwnedElement>
+    <Class Name="Class2" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="282b5ca0-084a-4f19-89ee-bc4407397d95">
+      <Feature>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="947e6b09-d25a-4a42-ae85-517de2b4be42">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Attribute1" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Class1" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ab8124dc-da6c-4b86-8ba5-8139f365a031">
+      <Feature>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="7a552f15-d9c4-4d69-bd43-dfd66e373768">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="Class1Class1Class2Class2s" id="dc25131b-57cb-40f1-8a26-5b9d151bd2e2">
+      <AssociationEnd>
+        <AssociationEnd Name="Class1" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="91e138d4-a846-406b-b928-f8379b51ed87">
+          <Participant>
+            <Class Name="Class1" idref="ab8124dc-da6c-4b86-8ba5-8139f365a031" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Class2s" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="7e6335c4-5cf1-4180-b623-4645346d95d2">
+          <Participant>
+            <Class Name="Class2" idref="282b5ca0-084a-4f19-89ee-bc4407397d95" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+</Package>

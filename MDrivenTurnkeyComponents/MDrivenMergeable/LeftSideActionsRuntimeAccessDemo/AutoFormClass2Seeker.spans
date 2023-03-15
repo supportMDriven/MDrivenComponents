@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormClass2Seeker" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="70b25761-5a31-454b-b160-9efbabe5acb1">
+  <Category>
+    <Category Name="AutoForms" idref="0439be3f-aa6a-4b5f-97b8-d012d3b0208c" />
+  </Category>
+  <Class>
+    <Class Name="Class2" idref="282b5ca0-084a-4f19-89ee-bc4407397d95" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class2" ExpressionActAsForActions="" id="cb7e534b-7539-4364-b20c-741abd0f6309">
+      <Class>
+        <Class Name="Class2" idref="282b5ca0-084a-4f19-89ee-bc4407397d95" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7fa497a1-83d5-4ece-827e-02e7f8bdc0f1" />
+        <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Attribute1" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b2aae12c-230d-4b8c-8d7b-0ff825cb9412" />
+        <Column Name="Class1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Class1.asstring" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3b465af2-4166-4080-b7c5-ceb90e37ae27" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="eb260e9e-aa47-4277-8ac9-d62b9afded7b" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="true" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekAttribute1" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="8c0854e1-cfef-43d7-ac84-cfa153937fc5">
+      <Class>
+        <Class Name="Class2" idref="282b5ca0-084a-4f19-89ee-bc4407397d95" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class2.allinstances-&gt;select(a|a.Attribute1.sqllike(vSeekParamWildcard) or (a.Attribute1=vSeekParam))-&gt;orderby(a|a.Attribute1)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f7905833-f1d5-420d-b58d-4102e45a5f90" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Class2.Attribute1" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="10c27821-f8d1-4772-9a04-5735c9403632">
+      <Class>
+        <Class Name="Class2" idref="282b5ca0-084a-4f19-89ee-bc4407397d95" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class2.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e15e6c7b-f556-4194-a448-8af3ca58d8f1" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6813a263-4cc4-421d-bcda-de8e177a3b55" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="57dfc66d-2bd2-4587-9766-940e736dd450" />
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="eb260e9e-aa47-4277-8ac9-d62b9afded7b">
+      <ReferedNesting>
+        <Nesting Name="Class2" idref="cb7e534b-7539-4364-b20c-741abd0f6309" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(Class2)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>
