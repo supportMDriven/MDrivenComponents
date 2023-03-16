@@ -51,12 +51,12 @@
     </Nesting>
   </Nesting>
   <OwnedColumns>
-    <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c45dd75c-22b5-4cd8-a781-46c95dc44917">
+    <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c45dd75c-22b5-4cd8-a781-46c95dc44917">
       <PlacingContainer>
         <PlacingContainer idref="938aabc2-98a0-4619-9719-a5daa02f6ac8" />
       </PlacingContainer>
     </Column>
-    <Column Name="Class2s" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Class2s" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="9" StyleRef="" XPos="0" YPos="1" id="e0385b7a-4bf4-4798-82e7-5bebc0308f83">
+    <Column Name="Class2s" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Class2s" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="9" StyleRef="" XPos="0" YPos="1" id="e0385b7a-4bf4-4798-82e7-5bebc0308f83">
       <PlacingContainer>
         <PlacingContainer idref="938aabc2-98a0-4619-9719-a5daa02f6ac8" />
       </PlacingContainer>
@@ -72,7 +72,15 @@
         <Nesting Name="NewNestedViewModelClass" idref="8846e3b9-14d5-4fa1-a4ce-35cdb069970d" />
       </ReferedNesting>
     </Column>
-    <Column Name="ShowActions" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vShowActions:=not vShowActions" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="63daedf1-25a5-4751-b3f8-6d36a4bfc9e2">
+    <Column Name="ShowActions" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vShowActions:=not vShowActions" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="63daedf1-25a5-4751-b3f8-6d36a4bfc9e2">
+      <PlacingContainer>
+        <PlacingContainer idref="938aabc2-98a0-4619-9719-a5daa02f6ac8" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="AddClass2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="06033758-fc3c-416d-b0d0-38f34a9386b1">
+      <ActionToExecute>
+        <ContextAction Name="AddClass2" idref="3a578d5f-2f7f-45a5-9f66-00699257a172" />
+      </ActionToExecute>
       <PlacingContainer>
         <PlacingContainer idref="938aabc2-98a0-4619-9719-a5daa02f6ac8" />
       </PlacingContainer>
