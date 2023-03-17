@@ -135,25 +135,6 @@
             <TaggedValue Tag="Eco.Body" Value="let su=SysUser.Create in&#xD;&#xA;(&#xD;&#xA;  su.UserName:=tokenname;&#xD;&#xA;  su&#xD;&#xA;)" />
           </TaggedValue>
         </Method>
-        <Method Name="GenerateSysCert" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7331a525-0a84-4c9c-8e4d-ecb901d6bd51">
-          <Parameter>
-            <Parameter Name="theKId" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </Parameter>
-          <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
-              <Type>
-                <Datatype idref="SysCert" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
-          </TaggedValue>
-        </Method>
         <Method Name="VerifySAML2" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a1888b81-9ea2-4ce8-9642-b603be06b7a6">
           <Parameter>
             <Parameter Name="theToken" Kind="In">
@@ -236,30 +217,6 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="AddSysCertFromCertString" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="fd303f88-ad67-46d5-8554-844101ef72f5">
-          <Parameter>
-            <Parameter Name="theKId" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theCert" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </Parameter>
-          <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
-              <Type>
-                <Datatype idref="SysCert" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
-          </TaggedValue>
-        </Method>
       </Feature>
       <TaggedValue>
         <TaggedValue Tag="Eco.IsSingleton" Value="True" />
@@ -281,6 +238,35 @@
     </Association>
     <Class Name="SysCert" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="968a6621-9522-4f05-8ad0-336c9d04ccf1">
       <Feature>
+        <Attribute Name="Thumbprint" Multiplicity="" Visibility="Public" id="2cfc337d-f2bc-4f73-89ea-1722e67997c6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SubjectName" Multiplicity="" Visibility="Public" id="325ce6f1-317d-4d89-8650-6c6b18b37a48">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="GenerateRSAParams" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3ad8b4b2-53e0-4efe-ba65-5e72177ded47">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="LastSeenError" Multiplicity="" Visibility="Public" id="4ee570b2-a476-4267-8da8-8589ccf56608">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
         <Attribute Name="InverseQ" Multiplicity="" Visibility="Public" id="5db2de10-be7b-451e-860f-e0a33bd9879b">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -299,6 +285,14 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Attribute Name="SerialNumber" Multiplicity="" Visibility="Public" id="6e2eec31-0575-415f-98c7-4a41b4a7a095">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
         <Attribute Name="P" Multiplicity="" Visibility="Public" id="6e357db5-b78b-407a-8253-bb806ac8f13c">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -306,6 +300,14 @@
           </TaggedValue>
           <Type>
             <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NotAfter" Multiplicity="" Visibility="Public" id="7c1d9751-7242-412d-a58f-d4c2dcf91969">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
           </Type>
         </Attribute>
         <Attribute Name="DP" Multiplicity="" Visibility="Public" id="886299c9-6d58-4f32-8b7d-bf10ec879b06">
@@ -317,6 +319,30 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="GetAsCertString" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8f17e210-53c3-4759-acc3-02e451f39c10">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="InitFromCertString" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="905dffbb-c468-41d3-9072-77a60c09a22d">
+          <Parameter>
+            <Parameter Name="theCert" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="DQ" Multiplicity="" Visibility="Public" id="935c8ecf-7007-4b09-bd45-d081a2550d0e">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -326,12 +352,20 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="KId" Multiplicity="" Visibility="Public" id="9864c2a1-4e1c-454d-b29a-038f447b3db4">
+        <Attribute Name="KId" CodeComment="This is Key id - important for JWT's since they conatin a key id to allow for multiple valid keys" Multiplicity="" Visibility="Public" id="9864c2a1-4e1c-454d-b29a-038f447b3db4">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
           </TaggedValue>
           <Type>
             <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NotBefore" Multiplicity="" Visibility="Public" id="9a4e700c-cb01-448f-a27e-d54ab71be27a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
           </Type>
         </Attribute>
         <Attribute Name="Modulus" Multiplicity="" Visibility="Public" id="b2775278-6d54-410b-bfe1-47e4912eff1a">
@@ -356,6 +390,14 @@
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
             <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="IssuerName" Multiplicity="" Visibility="Public" id="ec436ebe-04d3-4c03-b326-9fd6b4d40936">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
           </TaggedValue>
           <Type>
             <Datatype idref="String" />
