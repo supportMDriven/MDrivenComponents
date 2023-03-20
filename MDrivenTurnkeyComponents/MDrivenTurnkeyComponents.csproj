@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysCert\Index.spans" />
+    <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="EXT_Components\Cards\" />
   </ItemGroup>
 
@@ -29,6 +35,15 @@
     <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Actions.actions">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysCert\Actions.actions">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysCert\Index.spans">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <None Include="MDrivenMergeable\AccountViewOverride\ASPNETIdentity.ecopkg">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </None>
@@ -40,6 +55,9 @@
     </None>
     <None Include="MDrivenMergeable\AccountViewOverride\Snippets.snippets">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
     </None>
     <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\ViewOneThing.spans">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
@@ -58,6 +76,21 @@
     </None>
     <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\ASPNETIdentity.ecopkg">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\documentation.modlrdoc">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\ForASPNETIdentity.ecodiag">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\Snippets.snippets">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
     </None>
   </ItemGroup>
 

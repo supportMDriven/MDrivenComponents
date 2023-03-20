@@ -146,7 +146,7 @@
         <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
       </PlacingContainer>
     </Column>
-    <Column Name="GetAsCertString_Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'GetAsCert with CN='+vCurrent_OneCert.SubjectName" ExpressionForReadOnly="vCurrent_OneCert.isnull" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="16" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="04b86b94-592e-466e-b3c9-bdbe2ce359c7">
+    <Column Name="GetAsCertString_Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'GetAsCert with (must start with CN=) '+vCurrent_OneCert.SubjectName" ExpressionForReadOnly="vCurrent_OneCert.isnull" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="16" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="04b86b94-592e-466e-b3c9-bdbe2ce359c7">
       <PlacingContainer>
         <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
       </PlacingContainer>
