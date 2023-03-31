@@ -72,6 +72,30 @@
     </Class>
     <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f">
       <Feature>
+        <Method Name="Deflate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="42557522-e770-470b-845f-b2bfabb037df">
+          <Parameter>
+            <Parameter Name="bytes" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+            <Parameter Name="inflate" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="GenerateTokenJWTWithSysCert" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4bad4fde-7e90-4d43-bef9-e8404d338341">
           <Parameter>
             <Parameter Name="theUserIdInClaim" Kind="In">
@@ -145,6 +169,30 @@
             <Parameter Name="theKId" Kind="In">
               <Type>
                 <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="UrlEncode" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b0229890-4f83-4128-a806-16a681f50082">
+          <Parameter>
+            <Parameter Name="url" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="decode" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
               </Type>
             </Parameter>
           </Parameter>
