@@ -156,7 +156,7 @@
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.Body" Value="let su=SysUser.Create in&#xD;&#xA;(&#xD;&#xA;  su.UserName:=tokenname;&#xD;&#xA;  su&#xD;&#xA;)" />
+            <TaggedValue Tag="Eco.Body" Value="let users=SysUser.pseval(SysUser.allinstances-&gt;select(su|su.UserName.sqllikecaseinsensitive( tokenname)),0,2,'') in&#xD;&#xA;(&#xD;&#xA;  (users-&gt;size=0).casetruefalse(&#xD;&#xA;        let su=SysUser.Create in&#xD;&#xA;        (&#xD;&#xA;          su.id:=tokenname;&#xD;&#xA;          su.UserName:=tokenname;&#xD;&#xA;          su&#xD;&#xA;        ),&#xD;&#xA;        users-&gt;first&#xD;&#xA;   )&#xD;&#xA;)" />
           </TaggedValue>
         </Method>
         <Method Name="VerifySAML2" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a1888b81-9ea2-4ce8-9642-b603be06b7a6">
