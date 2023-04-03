@@ -358,6 +358,25 @@
             <Datatype idref="DateTime" />
           </Type>
         </Attribute>
+        <Method Name="RSADecrypt" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8450bfd9-ecf9-4991-8b7d-4852c535618d">
+          <Parameter>
+            <Parameter Name="theData" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="DP" Multiplicity="" Visibility="Public" id="886299c9-6d58-4f32-8b7d-bf10ec879b06">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -425,6 +444,25 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="RSAEncrypt" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="db654de0-753a-4c60-a975-16ab45f8bb4d">
+          <Parameter>
+            <Parameter Name="theData" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="Q" Multiplicity="" Visibility="Public" id="e4055462-c83f-4429-89d6-92656bc54cba">
           <TaggedValue>
             <TaggedValue Tag="Eco.Length" Value="1000" />
