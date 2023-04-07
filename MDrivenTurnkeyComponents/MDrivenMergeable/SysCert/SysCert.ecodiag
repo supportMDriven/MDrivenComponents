@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagram Name="SysCert" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.62889462677744" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
   <PlacedClass>
-    <PlacedClass ClassId="319121f0-77d1-441a-aa36-b75d1e99d698" Color="1692800256" LastKnownName="SysCert" PickedFeatureVisibility="ShowAll" RenderedHeight="299" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="336" y="320" id="28c788a1-8916-4ecc-b2b3-c680267bc82b">
+    <PlacedClass ClassId="319121f0-77d1-441a-aa36-b75d1e99d698" Color="1692800256" LastKnownName="SysCert" PickedFeatureVisibility="ShowAll" RenderedHeight="299" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="472" y="320" id="28c788a1-8916-4ecc-b2b3-c680267bc82b">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-57" y="96" id="381c440f-cb09-4cd5-b301-374c13291998">
+          <AssociationEnd>
+            <AssociationEnd Name="SysCertWeGaveToSAMLIdp" idref="ba2f8709-50cd-47a4-b1a0-d9e88ae88d67" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="81" y="64" id="0eea6e26-01bf-459d-b4f4-6e754b44b7df">
+              <AssociationEnd>
+                <AssociationEnd Name="SysSingletons2" idref="10658ab1-22d2-4d5d-a7f5-b1f79bddfe59" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-57" y="80" id="c27daeff-058b-4a98-aca0-eead8a21f619">
+          <AssociationEnd>
+            <AssociationEnd Name="SysCertOfSAMLIdp" idref="4964d5bb-e7a7-4994-918e-152705756b5e" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="81" y="48" id="e3f29b32-4979-4f51-817b-6a0baa6fd89e">
+              <AssociationEnd>
+                <AssociationEnd Name="SysSingletonsSysCertOfSAMLIdp" idref="e536271b-fd64-447c-b15f-26c795b1e628" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
       <Class>
         <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="999164df-658b-4e9f-bf63-f746ac0d8456" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="121" RenderedWidth="162" ShowAttributes="False" ShowMethods="False" Size="1" x="136" y="352" id="c2ba61bd-d888-4378-b0df-966e8a62bc9f">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="81" y="64" id="0eea6e26-01bf-459d-b4f4-6e754b44b7df">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletons2" idref="10658ab1-22d2-4d5d-a7f5-b1f79bddfe59" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="81" y="48" id="e3f29b32-4979-4f51-817b-6a0baa6fd89e">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsSysCertOfSAMLIdp" idref="e536271b-fd64-447c-b15f-26c795b1e628" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
       <Class>
         <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
       </Class>

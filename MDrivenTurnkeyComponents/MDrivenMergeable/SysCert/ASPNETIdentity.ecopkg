@@ -4,11 +4,39 @@
     <Class Name="SysSuperClass" idref="6002a3e3-a789-47f5-a2cb-24b5d30cb2ed" />
   </DefaultSuperClass>
   <OwnedElement>
+    <Association Name="" EffectiveName="SysCertSysCertWeGaveToSAMLIdpSysSingletonSysSingletons2" id="07d05e9f-ae48-4953-953b-ac4ed5c765c4">
+      <AssociationEnd>
+        <AssociationEnd Name="SysCertWeGaveToSAMLIdp" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ba2f8709-50cd-47a4-b1a0-d9e88ae88d67">
+          <Participant>
+            <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletons2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="10658ab1-22d2-4d5d-a7f5-b1f79bddfe59">
+          <Participant>
+            <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0c9bbb81-861f-466d-8b21-5e392939ae5b">
       <Association>
         <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
       </Association>
     </Class>
+    <Association Name="" EffectiveName="SysSingletonSysSingletonsSysCertOfSAMLIdpSysCertSysCertOfSAMLIdp" id="42b32b16-18de-4474-9773-f1c8148468e8">
+      <AssociationEnd>
+        <AssociationEnd Name="SysCertOfSAMLIdp" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4964d5bb-e7a7-4994-918e-152705756b5e">
+          <Participant>
+            <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysSingletonsSysCertOfSAMLIdp" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="e536271b-fd64-447c-b15f-26c795b1e628">
+          <Participant>
+            <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="6002a3e3-a789-47f5-a2cb-24b5d30cb2ed">
       <Feature>
         <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
@@ -156,7 +184,7 @@
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.Body" Value="let users=SysUser.pseval(SysUser.allinstances-&gt;select(su|su.UserName.sqllikecaseinsensitive( tokenname)),0,2,'') in&#xD;&#xA;(&#xD;&#xA;  (users-&gt;size=0).casetruefalse(&#xD;&#xA;        let su=SysUser.Create in&#xD;&#xA;        (&#xD;&#xA;          su.id:=tokenname;&#xD;&#xA;          su.UserName:=tokenname;&#xD;&#xA;          su&#xD;&#xA;        ),&#xD;&#xA;        users-&gt;first&#xD;&#xA;   )&#xD;&#xA;)" />
+            <TaggedValue Tag="Eco.Body" Value="let users=SysUser.pseval(SysUser.allinstances-&gt;select(su|su.UserName.sqllikecaseinsensitive( tokenname)),2,0,'') in&#xD;&#xA;(&#xD;&#xA;  (users-&gt;size=0).casetruefalse(&#xD;&#xA;        let su=SysUser.Create in&#xD;&#xA;        (&#xD;&#xA;          su.id:=tokenname;&#xD;&#xA;          su.UserName:=tokenname;&#xD;&#xA;          su&#xD;&#xA;        ),&#xD;&#xA;        users-&gt;first&#xD;&#xA;   )&#xD;&#xA;)" />
           </TaggedValue>
         </Method>
         <Method Name="VerifySAML2" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a1888b81-9ea2-4ce8-9642-b603be06b7a6">
