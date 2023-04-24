@@ -81,6 +81,11 @@
       <Span Name="AccountRegister" idref="37478d53-1964-4e2d-b901-efe0d5290bc0" />
     </ViewModelContext>
   </ContextAction>
+  <GlobalAction Name="ShowFreeStandingLogin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclsingleton" Id="eda60245-04ff-402e-8ea5-42480e8e06a5">
+    <BringUpViewModel>
+      <Span Name="FreeStandingLogin" idref="e64d43fd-2560-4116-9130-cee7f1edafbd" />
+    </BringUpViewModel>
+  </GlobalAction>
   <ClassAction Name="AddDetail" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.Details.Add(Detail.Create)" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="fd38ee26-1b7d-4863-a672-9d129336f6cd">
     <ClassToPerformActionOn>
       <Class Name="Thing" idref="8084b309-c52b-442e-b4cf-069b6daec072" />

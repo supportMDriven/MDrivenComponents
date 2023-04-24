@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="6e37e383-bc14-4c42-ad3f-8ca80c340452">
+  <Class>
+    <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="Col1" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="'All turnkey apps must have an Index viewmodel'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h1" XPos="2" YPos="4" id="13eb728d-d3af-4887-ad16-27a98192cfd4" />
+  </OwnedColumns>
+</Span>

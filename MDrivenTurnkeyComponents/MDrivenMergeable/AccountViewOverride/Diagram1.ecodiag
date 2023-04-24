@@ -37,7 +37,7 @@
         <Class Name="Thing" idref="8084b309-c52b-442e-b4cf-069b6daec072" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="221" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="416" id="b713f836-eae1-4e9f-bbf5-e740e13c3f57">
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="96" RenderedWidth="221" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="416" id="b713f836-eae1-4e9f-bbf5-e740e13c3f57">
       <Class>
         <Class Name="SysSingleton" idref="33f04aff-42a9-49b3-a4cb-826a2d080d37" />
       </Class>
@@ -86,6 +86,11 @@
     <PlacedViewModel Color="-1765226296" Height="113" LastKnownName="" RenderedHeight="123" RenderedWidth="224" Size="1" Width="214" x="464" y="536" id="07585146-b723-417e-b129-b1890aab4178">
       <Span>
         <Span Name="AccountLogin" idref="d59b4e0a-0b34-404e-bfae-3a4967596257" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="78" LastKnownName="" RenderedHeight="78" RenderedWidth="112" Size="1" Width="112" x="432" y="688" id="742eb5b5-7121-46ca-93f8-c60446b2258c">
+      <Span>
+        <Span Name="FreeStandingLogin" idref="e64d43fd-2560-4116-9130-cee7f1edafbd" />
       </Span>
     </PlacedViewModel>
     <PlacedViewModel Color="-1765226296" Height="140" LastKnownName="" RenderedHeight="150" RenderedWidth="250" Size="1" Width="240" x="176" y="528" id="b2754881-53dc-4acf-8847-c391b6e6a553">

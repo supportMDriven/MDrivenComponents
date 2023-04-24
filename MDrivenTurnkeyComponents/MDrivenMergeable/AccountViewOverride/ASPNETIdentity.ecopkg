@@ -6,6 +6,18 @@
   <OwnedElement>
     <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="33f04aff-42a9-49b3-a4cb-826a2d080d37">
       <Feature>
+        <Method Name="GetSystemUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4872092e-f119-45bc-a26e-97cc93a61fe9">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="TransientLoginRequestUserName" Multiplicity="" Visibility="Public" id="8fcd7d2e-70b9-4e8e-bbeb-56be1abe68df">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />

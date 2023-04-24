@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="GoHereWhenLoggedIn" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bef2c107-6b1a-4450-a5db-b6f44eea4c94">
+  <Class>
+    <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="82aa4a37-662d-4b8c-b879-5b9491eb1d3b">
+      <Class>
+        <Class Name="SysUser" idref="d8f8ba5c-b396-4172-8899-39a88d61f85f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="CurrentUser" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h1" XPos="0" YPos="0" id="7a3f6f32-266b-4da3-9ccf-eb3c808c5ea0" />
+        <Column Name="SysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.SysUserClaims" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="2" id="2108b86d-88a5-4f8e-8bb4-d5966fa38f74">
+          <ReferedNesting>
+            <Nesting Name="SysUserClaim" idref="105f8e10-5351-4d2e-bd09-d84cf8a6bf0d" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="CurrentUser2" idref="08feaa0b-dc12-4524-ad0f-1ece2cad6461" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="SysUserClaim" ExpressionActAsForActions="" id="105f8e10-5351-4d2e-bd09-d84cf8a6bf0d">
+      <Class>
+        <Class Name="SysUserClaim" idref="62ce20fb-ddec-445c-95d3-c4bb6a09d9da" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4c993f01-828c-4b70-8e64-7c68ff4a9c2c" />
+        <Column Name="ClaimType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ClaimType" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="861f2eaa-3a83-4cf6-867d-eba69a403e81" />
+        <Column Name="ClaimValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ClaimValue" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="11461077-e086-445d-9442-9b9347aa6cf7" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysUserClaims" idref="2108b86d-88a5-4f8e-8bb4-d5966fa38f74" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="CurrentUser2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="08feaa0b-dc12-4524-ad0f-1ece2cad6461">
+      <ReferedNesting>
+        <Nesting Name="SysUser" idref="82aa4a37-662d-4b8c-b879-5b9491eb1d3b" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>
