@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="AzureAuthorize" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.62889462677744" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
+<Diagram Name="Ofiice365Authorize" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.62889462677744" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
   <PlacedClass>
-    <PlacedClass ClassId="d8f8ba5c-b396-4172-8899-39a88d61f85f" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="133" RenderedWidth="143" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="408" id="7ca0e110-6892-46ff-a398-564a6122cecb">
+    <PlacedClass ClassId="d8f8ba5c-b396-4172-8899-39a88d61f85f" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="156" RenderedWidth="144" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="408" id="7ca0e110-6892-46ff-a398-564a6122cecb">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="99034d19-9a02-4c1e-9275-77de960391fe">
           <AssociationEnd>
@@ -39,7 +39,7 @@
   <PlacedViewModels>
     <PlacedViewModel Color="-1765226296" Height="256" LastKnownName="" RenderedHeight="266" RenderedWidth="282" Size="1" Width="272" x="464" y="176" id="a080304b-cee1-4a5b-ad46-e462b194f26d">
       <Span>
-        <Span Name="AzureAuthorize" idref="3f134e06-7a40-43d6-9510-43aa28a45ca7" />
+        <Span Name="Office365Authorize" idref="3f134e06-7a40-43d6-9510-43aa28a45ca7" />
       </Span>
     </PlacedViewModel>
   </PlacedViewModels>

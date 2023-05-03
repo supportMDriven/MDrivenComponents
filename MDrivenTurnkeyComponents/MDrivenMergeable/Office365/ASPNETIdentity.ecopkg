@@ -282,6 +282,11 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="Office365RefreshAccessToken" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="41ccd5c6-8385-4a33-ae23-d89ac602e2f3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="SendMeNews" Multiplicity="" Visibility="Public" id="478748bb-b51a-466c-a099-ce7722d20731">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
