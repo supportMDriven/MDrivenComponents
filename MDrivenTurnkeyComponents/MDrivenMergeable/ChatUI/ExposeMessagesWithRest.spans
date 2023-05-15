@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ExposeMessagesWithRest" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="cc4e7ecd-a353-4edc-a1fd-ea0d02ab4f2d">
+  <Class>
+    <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Message" ExpressionActAsForActions="" id="2a00c7d2-647e-44a8-8b67-08e17778e2eb">
+      <Class>
+        <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Text" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8a941930-0c50-4c4f-ace5-6f53103851da" />
+        <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="4aeda478-871d-41e5-b696-4d4a055cbb07" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllMessage" idref="2fe46b18-3a0e-4ec3-88e2-bd67ad87561b" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllMessage" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Message.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="1" YPos="0" id="2fe46b18-3a0e-4ec3-88e2-bd67ad87561b">
+      <ReferedNesting>
+        <Nesting Name="Message" idref="2a00c7d2-647e-44a8-8b67-08e17778e2eb" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.RestAllowed" Value="True" />
+  </TaggedValue>
+</Span>

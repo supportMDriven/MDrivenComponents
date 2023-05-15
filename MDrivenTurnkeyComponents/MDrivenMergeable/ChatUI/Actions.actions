@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allactions>
+  <ContextAction Name="FindAndAddMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_Message-&gt;collect(x|vCurrent_AutoFormSysUserMessagesMultiLink.Messages.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_Message-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="026264b8-c6a0-4d56-939a-4c73863c9251">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessageSeeker" idref="776885fb-a5a8-4226-b53f-52a40879bce0" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSubscription.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="055bdb89-1ca0-4446-b367-1f198c1458b8">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSubscription" idref="26f6c1f3-22da-475c-a071-2f6578129a2d" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSubscription" idref="26f6c1f3-22da-475c-a071-2f6578129a2d" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="ShowIntroTestView" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="07226403-08da-47d2-833e-d9353f78fb42">
+    <BringUpViewModel>
+      <Span Name="IntroTestView" idref="7fbaafe6-54e7-482e-bd73-c118f9095842" />
+    </BringUpViewModel>
+  </GlobalAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysSuperClass.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="08393b8a-d784-46a8-9643-8f65a8574c28">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysSuperClass" idref="90f9cea0-8e8a-4c9c-8c81-79ac7c9e45e8" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysSuperClass" idref="90f9cea0-8e8a-4c9c-8c81-79ac7c9e45e8" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormChannel.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="08a9c2b2-3527-4915-a28a-cc9935d23b0e">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSubscription" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormChannel" Id="0ad04b06-9af6-4b73-8cd2-8cfdfb69874e">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannelSubscriptionMultiLink" idref="d0055523-1a9e-4712-9709-fdc0e58abf8f" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="0d13e9be-41af-43f9-a953-40890aea0b57">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="0d157ec7-c42f-4350-b4a2-e42a4698f176">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
+    </MenuGroup>
+  </GlobalAction>
+  <ContextAction Name="Show_Channels" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSubscription.Channels-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSubscription.Channels" Id="10a53ec1-0ba8-4d82-8d58-00af1e78ecc3">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSubscription" idref="26f6c1f3-22da-475c-a071-2f6578129a2d" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="SingleLinkSwitchCurrentUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="true" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vCurrent_AutoFormSysSingleton.CurrentUser:= vModalResult_vCurrent_SysUser" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="true" ViewModelRootObjectExpression="" Id="111fdf43-597b-4625-bcff-4dce14db3bde">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSysExternalLogins" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="12516290-ed83-41a5-b5d2-1cb60531f441">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_Channel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormMessage.Channel-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormMessage.Channel" Id="15241295-e700-4fdd-a833-6df357bdecf8">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowSysSuperClass" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="16b8abc1-b3ef-4969-82e6-32d278bf943e">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysSuperClass" idref="90f9cea0-8e8a-4c9c-8c81-79ac7c9e45e8" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="SingleLinkSwitchChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="true" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vCurrent_AutoFormMessage.Channel:= vModalResult_vCurrent_Channel" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="true" ViewModelRootObjectExpression="" Id="18b9f6a3-b353-4dc7-b03e-3e2c36c7f219">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannelSeeker" idref="14643d47-afc9-4468-b39d-518de304072c" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="1c4f8e2f-06e1-4712-b08a-0f4f0444f99c">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+    </MenuGroup>
+  </GlobalAction>
+  <ContextAction Name="SingleLinkSwitchSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="true" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vCurrent_AutoFormSysUserClaim.SysUser:= vModalResult_vCurrent_SysUser" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="true" ViewModelRootObjectExpression="" Id="23d3b91a-f2e2-4607-8651-3e50998832cd">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="unlinkMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_Messages-&gt;notnull" ExecuteExpression="vSelected_Messages-&gt;collect(x|vCurrent_AutoFormChannelMessagesMultiLink.Messages.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="24700a14-904d-41f8-a025-a4386cba6cbf">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_SysUsers" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSubscription.SysUsers-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSubscription.SysUsers" Id="26692798-f962-42a1-9f06-0bc83cc2ff11">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSubscription" idref="26f6c1f3-22da-475c-a071-2f6578129a2d" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="CreateAndAddMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=Message.Create in( vCurrent_AutoFormSysUserMessagesMultiLink.Messages.add(x);x)" Id="27b340fa-9593-4ca2-9a9c-7b4ceee54f7f">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="NewSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysUser.Create" Id="2d4645ab-e461-44d3-8bc7-82d088b951bc">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2de8e1c0-b8b5-41e8-ad5a-a7946615a0c7">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+    </MenuGroup>
+  </GlobalAction>
+  <ContextAction Name="unlinkChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_Channels-&gt;notnull" ExecuteExpression="vSelected_Channels-&gt;collect(x|vCurrent_AutoFormSysUserChannelsMultiLink.Channels.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="31ada162-e0ff-41f7-9bd4-b49720521cdc">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSysRoleSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="34bc0366-427a-4c9c-91f4-a6dbf639546a">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRoleSeeker" idref="dd9954eb-5642-4726-9433-7de7c73dc9af" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="NewSysUserClaim" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysUserClaim.Create" Id="3e6b948d-6e2b-41df-81b6-146e3c1744a3">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserClaimSeeker" idref="104d38f1-74af-4d6b-b79a-1fbd1b9c832a" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserClaimSeeker" idref="104d38f1-74af-4d6b-b79a-1fbd1b9c832a" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSysUserClaimSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="461aca09-13db-4fd3-a203-5c02bc3e1f38">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserClaimSeeker" idref="104d38f1-74af-4d6b-b79a-1fbd1b9c832a" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="MultiLinkSysUserRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysRole" Id="4a355a12-30d7-4ad6-be10-8798ca6e5164">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRoleSysUserRoleMultiLink" idref="8906102b-b60b-474b-ab90-7be0d80ff1b6" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysExternalLogin.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="4ea3a6c3-0e64-4c90-aff7-7f841dd8ff9e">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkMessages" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="52047c3d-be82-4dc2-8cf3-d37a573b9732">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_SysRoles" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSysUserRole.SysRoles-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUserRole.SysRoles" Id="5343fad3-e624-43ff-9d5d-593a8a566dd1">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserRole" idref="3bec7769-62d2-4b74-be2b-2c2e47b82595" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="unlinkMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_Messages-&gt;notnull" ExecuteExpression="vSelected_Messages-&gt;collect(x|vCurrent_AutoFormSysUserMessagesMultiLink.Messages.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="56f9ed2e-6a95-4455-88f8-3aecaff3a5c0">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserMessagesMultiLink" idref="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowSysRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="57733e99-ade8-42a7-a298-523f03774058">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysRole" idref="56e1db7e-00b4-4273-bb39-1e8ad181328b" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="NewSysExternalLogin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysExternalLogin.Create" Id="5896b663-fe69-4ce3-b9b1-48208c3e5248">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysExternalLoginSeeker" idref="169cf38f-f515-40cb-8980-636afbcd8b19" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysExternalLoginSeeker" idref="169cf38f-f515-40cb-8980-636afbcd8b19" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="CreateAndAddSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysUser.Create in( vCurrent_AutoFormChannelSysUsersMultiLink.SysUsers.add(x);x)" Id="5a677012-cf64-4d38-aa0d-3e9c3d62c509">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_SysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSysUserClaim.SysUser-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUserClaim.SysUser" Id="5c6f714f-7fee-429e-a758-49bfa0983d07">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormMessageSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5cc765bf-1cb5-488e-8c0b-9852dbbb2d3b">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessageSeeker" idref="776885fb-a5a8-4226-b53f-52a40879bce0" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="MultiLinkSysUsers" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysRole" Id="5d25dcab-0841-48d5-b0b0-f9b77760b122">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="unlinkSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_SysUsers-&gt;notnull" ExecuteExpression="vSelected_SysUsers-&gt;collect(x|vCurrent_AutoFormSysRoleSysUsersMultiLink.SysUsers.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5de72c8c-d4b1-4503-b681-eb21d8e5ede5">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSysUserRoleSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5e5dbc5f-0880-480c-9c8f-faff6e5fa7e9">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserRoleSeeker" idref="887966d5-e34b-4ab2-932c-68105b06d12c" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="Show_CurrentUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSysSingleton.CurrentUser-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysSingleton.CurrentUser" Id="5f662208-bb50-49c3-997a-3614c94d7711">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysUserClaim.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="64c9dab4-cbb0-4ff1-81d3-9570d997ff58">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSysUsers" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormChannel" Id="668a070a-ff78-41a8-aad4-2c9401fbe485">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSysUserClaims" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="676ace78-fa99-49d9-9c38-8328d91a7db7">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowSysExternalLogin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="7438fa3f-5aab-4618-832f-93e6e9f45b29">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="CreateAndAddSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysUser.Create in( vCurrent_AutoFormSysRoleSysUsersMultiLink.SysUsers.add(x);x)" Id="7b5c270e-9461-4dc7-8a22-1e723a8b0a90">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSubscriptionSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="7b5f7ef9-b5d7-48f2-a13e-1bb1e039797d">
+    <BringUpViewModel>
+      <Span Name="AutoFormSubscriptionSeeker" idref="ee116d43-4340-4812-8b89-af7f38f520f2" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="CreateAndAddChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=Channel.Create in( vCurrent_AutoFormSysUserChannelsMultiLink.Channels.add(x);x)" Id="7cd8cd34-f95a-46ad-afed-647a2c4cbef2">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSysUserRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="7d023cd6-36f6-41ed-ab2e-cfab155dbcf0">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSysUserRoleMultiLink" idref="34d048aa-e9dd-449a-b1b4-cd689db06dc0" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormChannelSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="7ff43e1a-d42a-406b-91cb-01c77d45c319">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannelSeeker" idref="14643d47-afc9-4468-b39d-518de304072c" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="FindAndAddMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_Message-&gt;collect(x|vCurrent_AutoFormChannelMessagesMultiLink.Messages.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_Message-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="7ffd2a2c-781b-456d-95ec-8d7557730a6a">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessageSeeker" idref="776885fb-a5a8-4226-b53f-52a40879bce0" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="unlinkSysUserClaim" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_SysUserClaims-&gt;notnull" ExecuteExpression="vSelected_SysUserClaims-&gt;collect(x|vCurrent_AutoFormSysUserSysUserClaimsMultiLink.SysUserClaims.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="891e2f15-7c9b-4ba4-8f65-a63b2d54638a">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSysSuperClassSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="8a9cd6bd-8a65-4cac-89df-d024e736cf06">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysSuperClassSeeker" idref="381c1f6e-837d-4b0e-a256-5ba3d27bea84" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysUserRole.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="8eb61056-9b19-4273-857b-da75f0a19543">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserRole" idref="3bec7769-62d2-4b74-be2b-2c2e47b82595" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserRole" idref="3bec7769-62d2-4b74-be2b-2c2e47b82595" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="FindAndAddSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_SysUser-&gt;collect(x|vCurrent_AutoFormChannelSysUsersMultiLink.SysUsers.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_SysUser-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="96172c28-1205-4dc3-a0e7-34713064ce6b">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="99782845-7676-4dc5-9352-2ab0d1e0ac00">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="9b9cebd9-fb6e-4046-8781-3d129c25ac45">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+    </MenuGroup>
+  </GlobalAction>
+  <ClassAction Name="ShowSysUserClaim" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="9d8085e4-cfcd-4b2a-a933-c3f71e713bb5">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <GlobalAction Name="AutoFormSysUserSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="9da0a4b6-8c13-4116-835d-169a53d3b597">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="NewSysSingleton" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.Create" Id="9e249e9a-7ec0-4de2-9108-892d65a2023e">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysSingletonSeeker" idref="d8e3cf4f-0f3f-436e-9d47-15cb2b9d195b" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysSingletonSeeker" idref="d8e3cf4f-0f3f-436e-9d47-15cb2b9d195b" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_SysUsers" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSysUserRole.SysUsers-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUserRole.SysUsers" Id="9e95ce5f-fab7-4229-8de4-1dd7768b3e75">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserRole" idref="3bec7769-62d2-4b74-be2b-2c2e47b82595" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="SingleLinkSwitchSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="true" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vCurrent_AutoFormSysExternalLogin.SysUser:= vModalResult_vCurrent_SysUser" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="true" ViewModelRootObjectExpression="" Id="a0e8de06-f010-4148-ad4a-13eed8fbcc0a">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowSysUserRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="a60e03d8-2383-4aed-9421-b5efb1ce32b9">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserRole" idref="3bec7769-62d2-4b74-be2b-2c2e47b82595" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="FindAndAddSysUserClaim" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_SysUserClaim-&gt;collect(x|vCurrent_AutoFormSysUserSysUserClaimsMultiLink.SysUserClaims.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_SysUserClaim-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="aec2050c-dc56-4086-b277-9e1f016f166a">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserClaimSeeker" idref="104d38f1-74af-4d6b-b79a-1fbd1b9c832a" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="NewMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Message.Create" Id="b4ad87df-6cd6-4a5e-935f-bfbfaab12329">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormMessageSeeker" idref="776885fb-a5a8-4226-b53f-52a40879bce0" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormMessageSeeker" idref="776885fb-a5a8-4226-b53f-52a40879bce0" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="NewSysRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysRole.Create" Id="b7d57b0e-3395-4b47-ba48-c9ec98c4624c">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysRoleSeeker" idref="dd9954eb-5642-4726-9433-7de7c73dc9af" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRoleSeeker" idref="dd9954eb-5642-4726-9433-7de7c73dc9af" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormMessage.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="b943d709-d925-44f8-9795-797d6612cdd2">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="SingleLinkSwitchSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="true" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vCurrent_AutoFormMessage.SysUser:= vModalResult_vCurrent_SysUser" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="true" ViewModelRootObjectExpression="" Id="b992b20a-a8ca-4366-9280-11230e41dc4c">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="CreateAndAddMessage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=Message.Create in( vCurrent_AutoFormChannelMessagesMultiLink.Messages.add(x);x)" Id="bd01f514-5308-4c49-89a6-ed2bebb962de">
+    <BringUpViewModel>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="FindAndAddSysRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_SysRole-&gt;collect(x|vCurrent_AutoFormSysUserSysRolesMultiLink.SysRoles.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_SysRole-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="c54b27a0-8da7-423f-88f4-c4074f5c1492">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRoleSeeker" idref="dd9954eb-5642-4726-9433-7de7c73dc9af" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="unlinkSysExternalLogin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_SysExternalLogins-&gt;notnull" ExecuteExpression="vSelected_SysExternalLogins-&gt;collect(x|vCurrent_AutoFormSysUserSysExternalLoginsMultiLink.SysExternalLogins.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="ca35000f-daf6-4aff-86f1-4c9a7eeb100b">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="CreateAndAddSysUserClaim" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysUserClaim.Create in( vCurrent_AutoFormSysUserSysUserClaimsMultiLink.SysUserClaims.add(x);x)" Id="ca445d0b-dd96-4327-b148-c284746a6767">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserClaim" idref="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysUserClaimsMultiLink" idref="ac442205-2992-4942-8af3-587a7087f303" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysRole.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="ca448c7a-ad87-4211-8f67-7a07de741635">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkMessages" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormChannel" Id="cc2b22e5-55f1-41ed-afe5-58ecdb9ea622">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannelMessagesMultiLink" idref="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSubscription" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="d0799543-d499-4650-8e4f-355bb8624833">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSubscriptionMultiLink" idref="1f6af679-1861-437e-a13f-999c39ff4fa4" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_SysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormMessage.SysUser-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormMessage.SysUser" Id="d096bf54-45f0-46be-a7b7-33718cd82b0d">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormMessage" idref="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysSingleton.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d3351ddd-8cb7-4b58-85a6-b3bbbcff74b7">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSysSingletonSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d66bb34a-bad1-479d-8555-139c7a0dbd0f">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysSingletonSeeker" idref="d8e3cf4f-0f3f-436e-9d47-15cb2b9d195b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="OpenChatChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="vCurrentChannel:=vSender_vPickedChannel" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d7ba7cf4-9c46-49e5-b60f-b6bdf8d301d4">
+    <BringUpViewModel>
+      <Span Name="ChatView" idref="bbd52e00-65ad-4e81-84f7-4568c2ff7c73" />
+    </BringUpViewModel>
+    <ViewModelContext>
+      <Span Name="IntroTestView" idref="7fbaafe6-54e7-482e-bd73-c118f9095842" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="CreateAndAddSysRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysRole.Create in( vCurrent_AutoFormSysUserSysRolesMultiLink.SysRoles.add(x);x)" Id="da18da99-c1e2-4d88-aa97-192a68a9ce3b">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysRole" idref="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="dd2556d2-4b8f-4a95-8623-97ad68d9a173">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ClassAction Name="ShowSubscription" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="ddb9c377-cfb1-4d2d-bc69-f43715833d98">
+    <BringUpViewModel>
+      <Span Name="AutoFormSubscription" idref="26f6c1f3-22da-475c-a071-2f6578129a2d" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="Subscription" idref="ab33924d-f9b3-492d-8ca3-b47f1763cf88" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="unlinkSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_SysUsers-&gt;notnull" ExecuteExpression="vSelected_SysUsers-&gt;collect(x|vCurrent_AutoFormChannelSysUsersMultiLink.SysUsers.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e364b65f-8df4-4a08-b255-4a98ea323dfa">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelSysUsersMultiLink" idref="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="AutoFormSysExternalLoginSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e84876da-a85f-4b7d-bc63-12c408d643c8">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysExternalLoginSeeker" idref="169cf38f-f515-40cb-8980-636afbcd8b19" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <ContextAction Name="MultiLinkChannels" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="e9c9a03b-f493-4913-ac4c-5994f02cc620">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="Show_SysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_AutoFormSysExternalLogin.SysUser-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysExternalLogin.SysUser" Id="ea4583ee-c36e-4221-8a4f-9633e4ce3e11">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="FindAndAddChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_Channel-&gt;collect(x|vCurrent_AutoFormSysUserChannelsMultiLink.Channels.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_Channel-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="ed03e45b-9d0e-4fa4-b818-983333058b94">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannelSeeker" idref="14643d47-afc9-4468-b39d-518de304072c" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserChannelsMultiLink" idref="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="MultiLinkSysRoles" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="vCurrent_AutoFormSysUser" Id="ef0e5752-e9d2-4996-8fac-304ba3b7dcb7">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="ActAsUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="SysSingleton.oclSingleton.CurrentUser:=vCurrent_SysUser" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="ef81b2ec-ede3-455f-9bc1-821aaa5fd125">
+    <ViewModelContext>
+      <Span Name="IntroTestView" idref="7fbaafe6-54e7-482e-bd73-c118f9095842" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowSysSingleton" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="f1e16c7e-c3c9-4f9c-b8fd-9e2477482253">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysSingleton" idref="80845935-77f3-40e9-b002-274157720d54" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="NewChannel" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Channel.Create" Id="f2c46291-46ee-47a2-bbdf-49e428580b14">
+    <BringUpViewModel>
+      <Span Name="AutoFormChannel" idref="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormChannelSeeker" idref="14643d47-afc9-4468-b39d-518de304072c" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormChannelSeeker" idref="14643d47-afc9-4468-b39d-518de304072c" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="FindAndAddSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_SysUser-&gt;collect(x|vCurrent_AutoFormSysRoleSysUsersMultiLink.SysUsers.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_SysUser-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="f2cf4aae-f451-4993-9a14-4373d3756b31">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUserSeeker" idref="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysRoleSysUsersMultiLink" idref="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="CreateAndAddSysExternalLogin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysExternalLogin.Create in( vCurrent_AutoFormSysUserSysExternalLoginsMultiLink.SysExternalLogins.add(x);x)" Id="f3d99f92-5abd-4a0d-b03f-1fbcc8162c48">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysExternalLogin" idref="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </ViewModelContext>
+  </ContextAction>
+  <ClassAction Name="ShowSysUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="f5a26a59-413d-4def-921f-9d6aadaa41f9">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <ContextAction Name="FindAndAddSysExternalLogin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vModalResult_vSelected_SysExternalLogin-&gt;collect(x|vCurrent_AutoFormSysUserSysExternalLoginsMultiLink.SysExternalLogins.add(x))" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vSelected_SysExternalLogin-&gt;size&gt;0" ViewModelRootObjectExpression="" Id="f8eb3a7f-08a5-4aac-ab5a-d848f4165b42">
+    <BringUpViewModel>
+      <Span Name="AutoFormSysExternalLoginSeeker" idref="169cf38f-f515-40cb-8980-636afbcd8b19" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" idref="519074ed-589b-4c7c-909f-501988ffc9df" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="unlinkSysRole" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_SysRoles-&gt;notnull" ExecuteExpression="vSelected_SysRoles-&gt;collect(x|vCurrent_AutoFormSysUserSysRolesMultiLink.SysRoles.remove(x))" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="fb898892-15de-45b5-b823-1470fa21b5a5">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUserSysRolesMultiLink" idref="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormSysUser.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="ff59d8c5-e94e-4b32-8f99-1230cb6476b5">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="7349b620-f722-448d-b357-b19f59d22a75" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormSysUser" idref="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    </ViewModelContext>
+  </ContextAction>
+  <MenuGroup Name="AutoForms" SortKey="99999" Id="7349b620-f722-448d-b357-b19f59d22a75" />
+  <MenuGroup Name="Edit" SortKey="002" Id="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
+  <MenuGroup Name="File" SortKey="001" Id="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
+  <MenuGroup Name="Views" SortKey="004" Id="6182c19b-652d-467c-a3cf-74147295b971" />
+  <MenuGroup Name="Seekers" SortKey="003" Id="96b1e9f9-2cf6-4ddb-b4fa-630e97cdb9ed" />
+  <Symbol Name="statediagramsymbol" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='130' Foreground='DimGray'&gt;&lt;Run Text='S'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="StateDiagramSymbolID" />
+  <Symbol Name="triggermethod" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='Tr'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="TriggerMethodSymbolID" />
+  <Symbol Name="constrainedclass" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="ConstraintsSymbolID" />
+  <AccessGroup Name="IsLoggedIn" CodeComment="" EnableExpression="SysSingleton.oclSingleton.CurrentUser-&gt;notempty" ViewEnableExpression="" VisibleExpression="SysSingleton.oclSingleton.CurrentUser-&gt;notempty" Id="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+</allactions>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ChatView" ColCount="4" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bbd52e00-65ad-4e81-84f7-4568c2ff7c73">
+  <Class>
+    <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Channel" ExpressionActAsForActions="" id="c4537916-90d6-4cc9-bb8b-e785f6fedf7b">
+      <Class>
+        <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ac901540-68c8-459d-bf2e-6e68437cd234" />
+        <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Description" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e9b719dc-5a8d-4741-82f4-4b88f1e8ac17" />
+        <Column Name="SwitchChannel" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrentChannel:=self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="de6c8e6d-407a-44b8-b041-530e3a48acda" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Channels" idref="8ef5de22-b91f-4a6d-ae3f-a469c4301517" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Message" ExpressionActAsForActions="" id="cf3b216c-501f-4470-a5a1-d7231d3ba1c5">
+      <Class>
+        <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Text" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="34ec98b1-f1ac-44bc-8985-25d31d645f2f" />
+        <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="b3cdce55-b032-4d6c-98e7-f14cf01c4fc4" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="3777329e-99a3-4a47-914c-cf10bf2e6a2b" />
+        <Column Name="MessageClass" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.SysUser=SysSingleton.oclSingleton.CurrentUser then&#xD;&#xA;  'my-message'&#xD;&#xA;else&#xD;&#xA;  'other-message float-right'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="1f139d63-0b5c-422a-8a16-4e70d76e1b88" />
+        <Column Name="IsMeClass" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.SysUser=SysSingleton.oclSingleton.CurrentUser then&#xD;&#xA;  'me'&#xD;&#xA;else&#xD;&#xA;  ' '&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="44744ebd-a74a-487d-8588-617bd38820b1" />
+        <Column Name="RightAlignClass" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.SysUser=SysSingleton.oclSingleton.CurrentUser then&#xD;&#xA;  ' '&#xD;&#xA;else&#xD;&#xA;  'align-right'&#xD;&#xA;endif&#xD;&#xA;" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="f9b777e7-ea96-435e-a146-3a94577ae8ae" />
+        <Column Name="ThisIsMe" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysUser=SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="650d04f4-527a-48b9-9d33-c2ffbb1897df" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Messages" idref="f634ec0d-a9e1-4214-b65c-03b19f50c1c5" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="46e85cd5-b392-42df-86e0-0223b86f99ff">
+      <Class>
+        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="991e6aae-467b-4f3c-b8a6-81e70465ad72" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Users" idref="17465244-2554-4843-a519-dd632702fbdc" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Users" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysUser.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="1" id="17465244-2554-4843-a519-dd632702fbdc">
+      <ReferedNesting>
+        <Nesting Name="SysUser" idref="46e85cd5-b392-42df-86e0-0223b86f99ff" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="EnteredText" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vEnteredText" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="d208b889-1204-4824-a0cd-61a7e40990b2" />
+    <Column Name="NumberOfMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vCurrentChannel.Messages-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="dd5ebe6e-a6a4-423b-ad15-e096c3ebed12" />
+    <Column Name="Messages" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" ContentOverride="True" Expression="vCurrentChannel.Messages" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="18" StyleRef="" XPos="0" YPos="0" id="f634ec0d-a9e1-4214-b65c-03b19f50c1c5">
+      <ReferedNesting>
+        <Nesting Name="Message" idref="cf3b216c-501f-4470-a5a1-d7231d3ba1c5" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="chat" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SendAction" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="let newmess=Message.Create in&#xD;&#xA;(&#xD;&#xA;   newmess.SysUser:=SysSingleton.oclSingleton.CurrentUser;&#xD;&#xA;   newmess.Channel:=vCurrentChannel;&#xD;&#xA;   newmess.Text:=vEnteredText;&#xD;&#xA;   vEnteredText:='';&#xD;&#xA;   vCurrentChannel.LatestMessage:=DateTime.Now;&#xD;&#xA;   selfVM.Save&#xD;&#xA;)" ExpressionForReadOnly="vCurrentChannel.isnull" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="656c29ea-98b2-4bdd-97a7-c1e60902f29a" />
+    <Column Name="ChatInfo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vCurrentChannel.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="a74ad447-3cae-4fbb-af15-ff90002738e9" />
+    <Column Name="Channels" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Channel.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="8ef5de22-b91f-4a6d-ae3f-a469c4301517">
+      <ReferedNesting>
+        <Nesting Name="Channel" idref="c4537916-90d6-4cc9-bb8b-e785f6fedf7b" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="LatestMessage" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.LatestMessage" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="ecfb74f5-eb1c-4d44-a551-3cc4c568a63f" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vCurrentChannel" InitialValue="" TypeName="Channel" UserData="" />
+    <SpanVariable Name="vEnteredText" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>
