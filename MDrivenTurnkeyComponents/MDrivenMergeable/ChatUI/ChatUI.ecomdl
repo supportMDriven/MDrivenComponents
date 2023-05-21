@@ -1,13 +1,13 @@
 <Model>
   <Packages>
-    <Package Name="Package1" FileName="Package1" GUID="dd9442a4-a948-443c-8307-167f1e6a5429" />
+    <Package Name="Package1" FileName="Package1" GUID="9cf25450-3caf-4804-8961-a4f51a3a610c" />
     <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
   </Packages>
   <ReferencedPackages />
   <TagExtensions />
   <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="761aafbc-22bc-4cd3-a41f-eb5724a3551b" />
     <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
-    <Diagram Name="Diagram1" FileName="Diagram1" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
   </Diagrams>
   <Spans>
     <Span Name="AutoFormSysUserClaimSeeker" FileName="AutoFormSysUserClaimSeeker" GUID="104d38f1-74af-4d6b-b79a-1fbd1b9c832a" />

@@ -1,101 +1,11 @@
 ﻿
 
-<!-- put this style inside html so that it only effects layout when this is loaoded -->
- <style>
-
- #globalNavWrapper{
-         overflow: hidden;
- }
- #sidebar{
-	 visibility: collapse;
-	  display: none;
- }
-
-#LeftMenuButton {
-	 visibility: collapse;
-     }
-
-
-#viewmodelWrapper {
-         overflow: none;
-     }
-body {
-         overflow: none;
-     }
-
-
-</style>
-
-<div id="chatdiv" class="findthis ">
+<div id="chatdiv"> 
   
-  <nav id="menu" >
-  <header>
-    <h2>Menu</h2>
-  </header>
-        <div class="people-list " id="people-list" id="panelslide">
-        <ul class="list">
+    <div class="chat ">
       
-          <li><div>Channels</div></li>
-            <li ng-repeat="channel in data.Channels" channel class="clearfix">
-                <div class="about">
-                  <a href ng-click="channel.Execute('SwitchChannel')"><div class="name">{{channel.Name}}</div></a>
-                  <div class="status">{{channel.Description}}</div>
-              </div>
-          </li>
-
-          <li><div>Subscribers</div></li>
-          <li ng-repeat="user in data.Users" user class="clearfix">
-                <div class="about">
-                  <div class="name">{{user.Name}}</div>
-                  <div class="status">
-                    <i class="fa fa-circle online"></i> online
-                  </div>
-                </div>	
-          </li>
-          
-        </ul>
-      </div>
-
-  </nav>
-  
-    <div id="gridforchat" class="container  gridforchat ">
-    
-    <div class="chat mainCSSGridForChat">
-      <div class="chat-header  topRowCSSGridForChat" > 
-        <div class="chat-about">
-         <button class="toggle-button">☰</button>       
-          <div class="chat-with">{{data.ChatInfo}}</div>
-          <div class="chat-num-messages">already {{data.NumberOfMessages}} messages</div>
-        </div>
-        <i class="fa fa-star"></i>
-      </div> <!-- end chat-header -->
-      
-      <div class="chat-history middleRowCSSGridForChat" >
-        <ul>
-
-		  <li ng-repeat="mess in data.Messages" message class="clearfix">
-            <div class="message-data" ng-class="mess.RightAlignClass" ng-if="mess.ThisIsMe">
-              <span class="message-data-name" >{{mess.UserName}}</span> <i class="fa fa-circle" ng-class="mess.IsMeClass" ></i>              
-              <span class="message-data-time" >{{mess.ChangeTime}}</span> &nbsp; &nbsp;
-            </div>
-            <div class="message-data" ng-class="mess.RightAlignClass" ng-if="!mess.ThisIsMe">
-              <span class="message-data-time" >{{mess.ChangeTime}}</span> &nbsp; &nbsp;
-              <span class="message-data-name" >{{mess.UserName}}</span> <i class="fa fa-circle" ng-class="mess.IsMeClass" ></i>              
-            </div>
-			
-            <div class="message" ng-class="mess.MessageClass">
-              {{mess.Text}}
-            </div>
-          </li>
-		</ul>
-
-
-	
-        
-      </div> <!-- end chat-history -->
-      
-      <div class="chat-message  bottomRowCSSGridForChat">
-        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3" ng-model="ViewModelRoot.Curr_ChatView().EnteredText"></textarea>
+      <div class="chat-message" message>
+        <textarea name="message-to-send" id="message-to-send" placeholder ="Chat" rows="3" ng-model="ViewModelRoot.Curr_ChatView().EnteredText" message></textarea>
                 
         <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
         <i class="fa fa-file-image-o"></i>
@@ -107,9 +17,6 @@ body {
       
     </div> <!-- end chat -->
     
-  </div> <!-- end container -->
-
-
 
   
 </div>

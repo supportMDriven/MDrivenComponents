@@ -1,57 +1,38 @@
 
-var spin = $('.spin');
-var board;
-var invalidated=false;
-
-function initScreen()
-{
-	  $('#sidebar').removeClass("onscreen");
-	  $('#sidebar').addClass("offscreen");
-
-	board = $('#chatdiv');
-	//board.height($(window).height()*0.98);  move to css 
-	
-	
-}
 
 
-
-function myClose(element)
-{
-  var parent= $(element).parents();
-  parent[2].style.display = "none";
-}
-
-var chat;
-function InitThingsForChat()
+let chat;
+function InitThingsForChat(scope)
 {
   
+    if ($('.chat-history').length==0)
+      return;
     chat = {
-    messageToSend: '',
+      StreamingViewModelClient:scope.StreamingViewModelClient,
+    messageToSend: '',    
     
     init: function() {
       this.cacheDOM();
       this.bindEvents();
-      this.render();
+      this.scrollToBottom();
     },
     cacheDOM: function() {
-      this.$chatHistory = $('.chat-history');
-      this.$button = $('button');
+      this.$chatHistory = $('.chat-history').parent();
+      this.$button = $('.sendButton');
       this.$textarea = $('#message-to-send');
-      this.$chatHistoryList =  this.$chatHistory.find('ul');
     },
     bindEvents: function() {
-      this.$button.on('click', this.addMessage.bind(this));
+      //this.$button.on('click', this.addMessage.bind(this));
       this.$textarea.on('keyup', this.addMessageEnter.bind(this));
-    },
-    render: function() {
-      this.scrollToBottom();
-      
     },
     
     addMessage: function() {
-      this.messageToSend = this.$textarea.val()
-      this.render();         
+      this.$button.focus();
+      chat.StreamingViewModelClient.ExecuteAfterFullRoundtrip('waitforapply',null,()=>{
+        chat.StreamingViewModelClient.CallServerAction('ChatView','SendAction');
+          this.scrollToBottom();      
+        });
+      this.$textarea.focus();
     },
     addMessageEnter: function(event) {
         // enter was pressed
@@ -60,14 +41,10 @@ function InitThingsForChat()
         }
     },
     scrollToBottom: function() {
-       this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight);
-    },
-    getCurrentTime: function() {
-      return new Date().toLocaleTimeString().
-              replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
-    },
-    getRandomItem: function(arr) {
-      return arr[Math.floor(Math.random()*arr.length)];
+      chat.StreamingViewModelClient.ExecuteAfterFullRoundtrip('waitformessage',null,()=>{
+        if (this.$chatHistory)
+          this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight);
+      });
     }
     
   };
@@ -78,48 +55,31 @@ function InitThingsForChat()
 }
 
 
-  /********THIS is for SlideoutMenu ******* */
-
-  var slideout;
-  function InitThingsForSlideOut()
-  {
-  
-   slideout = new Slideout({
-    'panel': document.getElementById('gridforchat'),
-    'menu': document.getElementById('menu'),
-    'padding': 256,
-    'tolerance': 70
-  });
-  
-  // Toggle button
-  document.querySelector('.toggle-button').addEventListener('click', function() {
-    slideout.toggle();
-  });
-  
-  }
   
   
 //****** Javascript - save as EXT_Components/test1/test1.js ******
 
 function InstallTheDirectiveFor_chat(streamingAppController) {
-        streamingAppController.directive('channel', ['$document', function ($document) {
-    
-    return {
-                    link: function (scope, element, attr) {
-                      if (slideout==undefined)
-                          InitThingsForSlideOut();
-                      if (chat==undefined)
-                        InitThingsForChat();
-                    }
-                };
-            }]);
 
         streamingAppController.directive('message', ['$document', function ($document) {
  
           return {
-                         link: function (scope, element, attr) {
+                         link: function (scope, element, attr) { 
+                          if (chat==undefined)
+                            InitThingsForChat(scope);
                           if (chat!=undefined)
-                            chat.scrollToBottom();
+                          {
+                            scope.$watch(
+                              function () {
+                                  return chat.StreamingViewModelClient.ViewData.RootVMClassObject.NumberOfMessages;
+                              },
+                              function (newValue, oldValue) {
+                                  if (!angular.equals(oldValue, newValue)) {
+                                    chat.scrollToBottom();
+                                  }
+                              },
+                              true);
+                          }
                          }
                      };
                  }]);
