@@ -4,7 +4,7 @@ Image compression component allows to upload the image and compress it on client
 
 Keep in mind that this component implements lossy compression.
 
-You can configure component with help of the following HTML atttibutes on parent element:
+You can configure component with help of the following HTML atttibutes on parent element (`ImageCompression.cshtml`):
 
 | Attribute   | Value  | Description                                                              |
 |-------------|--------|--------------------------------------------------------------------------|
