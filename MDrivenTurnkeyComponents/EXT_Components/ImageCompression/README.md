@@ -8,8 +8,8 @@ You can configure component with help of the following HTML atttibutes on parent
 
 | Attribute   | Value  | Description                                                              |
 |-------------|--------|--------------------------------------------------------------------------|
-| compression |        | Data-binding to your Blob attribute in Angular scope.                    |
-| max-width   | number | Value in pixels for maximum image width after compression and resizing.  |
-| max-height  | number | Value in pixels for maximum image height after compression and resizing. |
-| format      | string | Format to save compressed image.                                         |
-| preview     |        | Data-binding for image preview.                                          |
+| compression |        | Data binding to Blob attribute in Angular scope.                         |
+| preview     |        | Data binding for image preview.                                          |
+| max-width   | number | Value in pixels for maximum image width after compression.               |
+| max-height  | number | Value in pixels for maximum image height after compression.              |
+| format      | string | Format to save compressed image. (png, jpeg)                             |
