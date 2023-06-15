@@ -143,7 +143,7 @@
     </Association>
     <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ad4cf46f-0195-4197-bef2-9f8dd89a3870">
       <Feature>
-        <Method Name="SysSingleton.GetSystemUrl" CodeComment="Returns the running system url" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5c2f3434-a074-4408-b479-506709e9890e">
+        <Method Name="GetSystemUrl" CodeComment="Returns the running system url" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5c2f3434-a074-4408-b479-506709e9890e">
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
               <Type>
