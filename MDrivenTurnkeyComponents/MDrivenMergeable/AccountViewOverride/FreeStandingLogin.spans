@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="FreeStandingLogin" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="e64d43fd-2560-4116-9130-cee7f1edafbd">
+  <Class>
+    <Class Name="SysSingleton" idref="33f04aff-42a9-49b3-a4cb-826a2d080d37" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="TransientLoginRequestUserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TransientLoginRequestUserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ef85e921-9b89-405d-ab73-131f5ee4bb2e" />
+    <Column Name="TransientLoginRequestPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TransientLoginRequestPassword" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a932787e-2a3b-4594-bbff-7c5d629cf462">
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="password" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Login" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="selfVM.NavigateUrl(self.GetSystemUrl+'account/TryLoginWithPWD')" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="2" id="9f5f08fc-391f-4eee-8f19-729b4ba9124f" />
+    <Column Name="TransientLoginRequestPassword_Copy" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TransientLoginRequestPassword" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="1" id="060b53fd-4233-4348-bb13-63b858ae8c85">
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="password" />
+      </TaggedValue>
+    </Column>
+    <Column Name="TransientLoginRequestUserName_Copy" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TransientLoginRequestUserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="7301233d-10f8-4166-b736-e76525616b6d" />
+  </OwnedColumns>
+</Span>

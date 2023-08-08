@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="IntroTestView" ColCount="8" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="7fbaafe6-54e7-482e-bd73-c118f9095842">
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="62ab91d3-d540-4620-96fb-50a47146d783">
+      <Class>
+        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c4f2c03b-a071-499b-a27e-71655a6ca82d" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysUser_picklist" idref="9c74d41c-d8a9-4084-a18e-7fa1f41dd010" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Channel" ExpressionActAsForActions="" id="115cc112-22bf-4f3e-92fb-dd53896ad35c">
+      <Class>
+        <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6e95858f-6615-4437-b948-17e199b96cb7">
+          <TaggedValue>
+            <TaggedValue Tag="UIFirst" Value="String" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="vPickedChannel_PickList" idref="9f40c02f-1be3-4fa8-a92c-c5785fdddf21" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="a5f9d0f7-0334-4a12-be6e-60b128e95314">
+      <TaggedValue>
+        <TaggedValue Tag="UIFirst" Value="String" />
+      </TaggedValue>
+    </Column>
+    <Column Name="OpenChat" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="fe3cb9fe-44e7-4115-a4aa-c4e4de77c6e4">
+      <ActionToExecute>
+        <ContextAction Name="OpenChatChannel" idref="d7ba7cf4-9c46-49e5-b60f-b6bdf8d301d4" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ActAsUser" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;nothing&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f2a0338d-762a-4b72-8cbb-5e128b88b6a5">
+      <ColumnForPickList>
+        <Column Name="SysUser_picklist" idref="9c74d41c-d8a9-4084-a18e-7fa1f41dd010" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="SysUser_picklist" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="  SysUser.allinstances-&gt;orderby(username)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9c74d41c-d8a9-4084-a18e-7fa1f41dd010">
+      <ReferedNesting>
+        <Nesting Name="SysUser" idref="62ab91d3-d540-4620-96fb-50a47146d783" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="PickedChannel" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="vPickedChannel" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;nothing&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="" XPos="1" YPos="2" id="109b8c83-285c-4cf6-8460-76c9ebe0687f">
+      <ColumnForPickList>
+        <Column Name="vPickedChannel_PickList" idref="9f40c02f-1be3-4fa8-a92c-c5785fdddf21" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="vPickedChannel_PickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Channel.allinstances-&gt;orderby(x|x.asstring)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9f40c02f-1be3-4fa8-a92c-c5785fdddf21">
+      <ReferedNesting>
+        <Nesting Name="Channel" idref="115cc112-22bf-4f3e-92fb-dd53896ad35c" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vPickedChannel" InitialValue="" TypeName="Channel" UserData="" />
+  </SpanVariables>
+</Span>

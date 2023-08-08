@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="761aafbc-22bc-4cd3-a41f-eb5724a3551b">
+  <PlacedClass>
+    <PlacedClass ClassId="8cecb31d-8d8f-49d7-833f-e1605374f33c" Color="1692800256" LastKnownName="Channel" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="126" ShowAttributes="False" ShowMethods="False" Size="1" x="592" y="160" id="31334c56-78e1-4b13-87bb-888a38045c37">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="0" y="73" id="33d45d1a-c886-4efa-a04a-53e230d91dbd">
+          <AssociationEnd>
+            <AssociationEnd Name="Channel" idref="129536ea-c319-4233-af6f-af74915052c6" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="0223ce3e-ffff-4466-ba62-48d38919e423">
+              <AssociationEnd>
+                <AssociationEnd Name="Messages" idref="0d2e8bf2-1f1d-4a6c-97ff-a368234b3cd9" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-63" y="24" id="d516eef3-d20f-4302-9400-c74ba4ba809c">
+          <AssociationEnd>
+            <AssociationEnd Name="Channels" idref="584f28bd-d562-415d-95e0-8db7e422c1ad" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="0017d588-d3cf-433b-b763-93ae056419c3" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="109" RenderedWidth="116" ShowAttributes="False" ShowMethods="False" Size="1" x="148" y="184" id="8990e153-6084-49fa-80af-0577e462bfa1">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="58" y="32" id="619656e6-a9da-4474-9693-b73d46be7488">
+          <AssociationConnection>
+            <LinkClassConnectViaPoint idref="8957b076-aae8-4223-a9a8-73e876229b76" />
+          </AssociationConnection>
+          <AssociationEnd>
+            <AssociationEnd Name="SysUsers" idref="6ab5af22-e90a-4256-ad6d-8c3b1b493a53" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-63" y="24" id="d516eef3-d20f-4302-9400-c74ba4ba809c">
+              <AssociationEnd>
+                <AssociationEnd Name="Channels" idref="584f28bd-d562-415d-95e0-8db7e422c1ad" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="58" y="88" id="ef61df84-0b51-4d51-83bd-dbaba5a88510">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUser" idref="bb78d487-1057-44fc-812a-f38cd076f82a" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-38.5" y="16" id="0aab92b1-b88e-41c2-8df7-56459086272b">
+              <AssociationEnd>
+                <AssociationEnd Name="Messages" idref="971df438-2df5-4488-ba4d-a3a438b406cc" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="e57f2e77-7ff9-4c4e-8cf3-7b17f50b4ee8" Color="1692800256" LastKnownName="Dummy" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="118" ShowAttributes="False" ShowMethods="False" Size="1" x="936" y="208" id="8b23959e-fdee-4141-bf74-70f00dc8af83">
+      <Class>
+        <Class Name="Dummy" idref="e57f2e77-7ff9-4c4e-8cf3-7b17f50b4ee8" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ab33924d-f9b3-492d-8ca3-b47f1763cf88" Color="1692800256" LastKnownName="Subscription" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="103" ShowAttributes="False" ShowMethods="False" Size="1" x="372" y="119" id="cf7c8f60-a6f6-4f9d-921a-687ae5a6eb7e">
+      <AssociationConnection>
+        <AssociationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="16" y="31" id="87a99b02-7cb8-4aa7-8dc8-e7f5ff3b3768">
+          <Association>
+            <Association Name="SysUserSysUsersChannelChannels" idref="9c464169-a5d8-4406-abb4-a0ae72d0f387" />
+          </Association>
+          <next>
+            <LinkClassConnectViaPoint AssociationId="" NextLegDrawKind="0" PercentFromStart="50" x="365.5" y="200" id="8957b076-aae8-4223-a9a8-73e876229b76">
+              <AssociationEndConnection>
+                <AssociationEndConnection idref="619656e6-a9da-4474-9693-b73d46be7488" />
+              </AssociationEndConnection>
+            </LinkClassConnectViaPoint>
+          </next>
+        </AssociationConnection>
+      </AssociationConnection>
+      <Class>
+        <Class Name="Subscription" idref="ab33924d-f9b3-492d-8ca3-b47f1763cf88" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="46cfd21a-b52a-42ae-929a-3ed9099f49f4" Color="1692800256" LastKnownName="Message" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="77" ShowAttributes="False" ShowMethods="False" Size="1" x="584" y="312" id="dd943b61-e92e-49fc-9372-cac8acbd9b54">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="0223ce3e-ffff-4466-ba62-48d38919e423">
+          <AssociationEnd>
+            <AssociationEnd Name="Messages" idref="0d2e8bf2-1f1d-4a6c-97ff-a368234b3cd9" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-38.5" y="16" id="0aab92b1-b88e-41c2-8df7-56459086272b">
+          <AssociationEnd>
+            <AssociationEnd Name="Messages" idref="971df438-2df5-4488-ba4d-a3a438b406cc" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>

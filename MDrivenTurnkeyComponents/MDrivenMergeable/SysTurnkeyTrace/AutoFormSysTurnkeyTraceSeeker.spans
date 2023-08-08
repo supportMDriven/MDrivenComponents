@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysTurnkeyTraceSeeker" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b7098f74-1242-4b28-b43b-08e50afcac25">
+  <Category>
+    <Category Name="AutoForms" idref="4a0377b8-639f-4f35-a51c-aba1d12f2592" />
+  </Category>
+  <Class>
+    <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysTurnkeyTrace" ExpressionActAsForActions="" id="15a5b0d5-618d-4dfd-a484-6dadb5f574fa">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8eac2329-4e98-45e9-8bd1-9cb0375f157f" />
+        <Column Name="Action" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Action" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ddb2576f-b431-479b-ab23-5e4b2bfa4388" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="52bd6587-975e-4fee-a0c3-d1556f02e892" />
+        <Column Name="ClassName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ClassName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="48913820-b758-4503-b9e5-e5f4d4e937e9" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6de85b53-a2cc-4b61-9cc4-6a7c9888060e" />
+        <Column Name="Defaultstringrep" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Defaultstringrep" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3655c6c1-eef7-48a9-92b2-40d330064e0b" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8328d02b-28ce-47dc-812d-b5c7e860807a" />
+        <Column Name="Idstring" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Idstring" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="56cc07b7-5319-4185-ab3d-1cc6e728283d" />
+        <Column Name="Level" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Level" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b7719fac-358e-4927-9af6-608444e4c9ac" />
+        <Column Name="TypeOfTrace" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.TypeOfTrace" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ff7f7bec-b91e-44ce-81ae-24d5f874d344" />
+        <Column Name="Usersessioncombo" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Usersessioncombo" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="232d8715-cc29-43f0-a63d-4e88f47701cd" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="75ee9204-60f2-48f9-adc6-4e7009c0fc4c" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekAction" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="015cab10-931c-46b3-a914-99e53d38ef12">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.Action.sqllike(vSeekParamWildcard) or (a.Action=vSeekParam))-&gt;orderby(a|a.Action)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7a9a5e34-d9c6-446b-8640-dbe16c8a226f" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.Action" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekClassName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="480e0bd2-6503-4448-82b5-4c19a780e52c">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.ClassName.sqllike(vSeekParamWildcard) or (a.ClassName=vSeekParam))-&gt;orderby(a|a.ClassName)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e7acb5b4-e168-4bdd-b20f-6aba7d840631" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.ClassName" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekDefaultstringrep" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="2588366c-0633-44e6-a40c-1277002acccb">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.Defaultstringrep.sqllike(vSeekParamWildcard) or (a.Defaultstringrep=vSeekParam))-&gt;orderby(a|a.Defaultstringrep)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ca888972-1123-4e46-a86e-5ddb2b1ccabe" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.Defaultstringrep" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekIdstring" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="735bb9da-11cc-44ff-b91a-9e0218fd7620">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.Idstring.sqllike(vSeekParamWildcard) or (a.Idstring=vSeekParam))-&gt;orderby(a|a.Idstring)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1cd9dc95-34f5-4b2a-94db-4b900a14d043" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.Idstring" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekLevel" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="25eff6a0-71f3-4c5c-beb2-ab1be699c27c">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.Level.sqllike(vSeekParamWildcard) or (a.Level=vSeekParam))-&gt;orderby(a|a.Level)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2326777d-5bac-4696-b845-c8592ddccb53" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.Level" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekTypeOfTrace" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="d820fe1a-c90a-499b-afa9-32e79da2fc13">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.TypeOfTrace.sqllike(vSeekParamWildcard) or (a.TypeOfTrace=vSeekParam))-&gt;orderby(a|a.TypeOfTrace)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6aaed187-9957-4bc1-8c7d-1c68297691ae" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.TypeOfTrace" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekUsersessioncombo" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="0ef191ba-0b92-45a3-96f1-62c5b3acd9b5">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances-&gt;select(a|a.Usersessioncombo.sqllike(vSeekParamWildcard) or (a.Usersessioncombo=vSeekParam))-&gt;orderby(a|a.Usersessioncombo)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ac3170ca-634b-4290-83cf-44dd6848d593" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysTurnkeyTrace.Usersessioncombo" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="c65557e4-604c-4a1f-a80e-2f26c7216737">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysTurnkeyTrace.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1f68217e-94e7-4446-9054-e35762ef41ab" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7669d38f-2452-4545-a8c9-49faeae6f61c" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="44b15bae-83d5-428c-9422-969b4e98f1d9" />
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="17" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="75ee9204-60f2-48f9-adc6-4e7009c0fc4c">
+      <ReferedNesting>
+        <Nesting Name="SysTurnkeyTrace" idref="15a5b0d5-618d-4dfd-a484-6dadb5f574fa" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(SysTurnkeyTrace)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

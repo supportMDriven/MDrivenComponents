@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUserSubscriptionMultiLink" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="1f6af679-1861-437e-a13f-999c39ff4fa4">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Subscription" ExpressionActAsForActions="" id="3c305996-ea2b-452e-ac34-44ebb830cde5">
+      <Class>
+        <Class Name="Subscription" idref="ab33924d-f9b3-492d-8ca3-b47f1763cf88" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7ca51b14-bc96-4c7d-8083-9d5f10bc61e1" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2ec91c5f-c9ff-4a39-a244-a1e685f66c8c" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fdb68c3c-53f4-4556-a505-14b60d6d31e1" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="be73c4eb-1893-43ae-8ce2-5250b90046c6" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Subscription" idref="f3546516-707b-4f85-a00c-3b2c6a6d8835" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Subscription" ActionPeriodicityMillisec="-1" ColSpan="13" ColSpanWhenInGrid="1" Expression="self.Subscription" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="f3546516-707b-4f85-a00c-3b2c6a6d8835">
+      <ReferedNesting>
+        <Nesting Name="Subscription" idref="3c305996-ea2b-452e-ac34-44ebb830cde5" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

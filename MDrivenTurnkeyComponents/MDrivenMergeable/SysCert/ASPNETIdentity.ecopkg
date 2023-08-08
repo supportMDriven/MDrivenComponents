@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="eb18d545-8d55-4a15-b9ba-13e814742fec">
   <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="4fd8dcfb-9ebf-4556-a323-b4d8e4c047fb" />
+    <Class Name="SysSuperClass" idref="6002a3e3-a789-47f5-a2cb-24b5d30cb2ed" />
   </DefaultSuperClass>
   <OwnedElement>
-    <Class Name="SysUserClaim" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2518e2ad-530d-47c6-aa41-f9d003f06db4">
-      <Feature>
-        <Attribute Name="ClaimType" Multiplicity="" Visibility="Public" id="8dbb3aee-5e29-48c2-a7e8-deb982109222">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="ClaimValue" Multiplicity="" Visibility="Public" id="a98174fb-623a-4177-9191-f06c82330fd2">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="OriginalIssuer" Multiplicity="" Visibility="Public" id="b040b369-b8a5-4a40-bece-f3e8b3904071">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="ValueType" Multiplicity="" Visibility="Public" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Issuer" Multiplicity="" Visibility="Public" id="d2c02585-f187-40de-a32d-6682b908712d">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
+    <Association Name="" EffectiveName="SysCertSysCertWeGaveToSAMLIdpSysSingletonSysSingletons2" id="07d05e9f-ae48-4953-953b-ac4ed5c765c4">
+      <AssociationEnd>
+        <AssociationEnd Name="SysCertWeGaveToSAMLIdp" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ba2f8709-50cd-47a4-b1a0-d9e88ae88d67">
+          <Participant>
+            <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletons2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="10658ab1-22d2-4d5d-a7f5-b1f79bddfe59">
+          <Participant>
+            <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0c9bbb81-861f-466d-8b21-5e392939ae5b">
+      <Association>
+        <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
+      </Association>
     </Class>
-    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="4fd8dcfb-9ebf-4556-a323-b4d8e4c047fb">
+    <Association Name="" EffectiveName="SysSingletonSysSingletonsSysCertOfSAMLIdpSysCertSysCertOfSAMLIdp" id="42b32b16-18de-4474-9773-f1c8148468e8">
+      <AssociationEnd>
+        <AssociationEnd Name="SysCertOfSAMLIdp" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4964d5bb-e7a7-4994-918e-152705756b5e">
+          <Participant>
+            <Class Name="SysCert" idref="968a6621-9522-4f05-8ad0-336c9d04ccf1" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysSingletonsSysCertOfSAMLIdp" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="e536271b-fd64-447c-b15f-26c795b1e628">
+          <Participant>
+            <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="6002a3e3-a789-47f5-a2cb-24b5d30cb2ed">
       <Feature>
         <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
           <TaggedValue>
@@ -65,8 +69,61 @@
         <TaggedValue Tag="Eco.TableMapping" Value="Children" />
       </TaggedValue>
     </Class>
-    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="5d5a5447-4976-4a74-9527-40fd6c350b90">
+    <Class Name="SysUserClaim" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="62ce20fb-ddec-445c-95d3-c4bb6a09d9da">
       <Feature>
+        <Attribute Name="ClaimType" Multiplicity="" Visibility="Public" id="8dbb3aee-5e29-48c2-a7e8-deb982109222">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ClaimValue" Multiplicity="" Visibility="Public" id="a98174fb-623a-4177-9191-f06c82330fd2">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="OriginalIssuer" Multiplicity="" Visibility="Public" id="b040b369-b8a5-4a40-bece-f3e8b3904071">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ValueType" Multiplicity="" Visibility="Public" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Issuer" Multiplicity="" Visibility="Public" id="d2c02585-f187-40de-a32d-6682b908712d">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f">
+      <Feature>
+        <Method Name="Deflate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="42557522-e770-470b-845f-b2bfabb037df">
+          <Parameter>
+            <Parameter Name="bytes" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+            <Parameter Name="inflate" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="GenerateTokenJWTWithSysCert" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4bad4fde-7e90-4d43-bef9-e8404d338341">
           <Parameter>
             <Parameter Name="theUserIdInClaim" Kind="In">
@@ -127,65 +184,7 @@
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.Body" Value="let su=SysUser.Create in&#xD;&#xA;(&#xD;&#xA;  su.UserName:=tokenname;&#xD;&#xA;  su&#xD;&#xA;)" />
-          </TaggedValue>
-        </Method>
-        <Method Name="GenerateSysCert" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7331a525-0a84-4c9c-8e4d-ecb901d6bd51">
-          <Parameter>
-            <Parameter Name="theKId" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </Parameter>
-          <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
-              <Type>
-                <Datatype idref="SysCert" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
-          </TaggedValue>
-        </Method>
-        <Method Name="GenerateTokenJWT" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="82ff4fe8-e65a-4949-bc5e-6c29bee6685d">
-          <Parameter>
-            <Parameter Name="theUserIdInClaim" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theIssuer" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theAudience" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theExpDateTime" Kind="In">
-              <Type>
-                <Datatype idref="DateTime" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theSecret" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </Parameter>
-          <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue Tag="Eco.Body" Value="let users=SysUser.pseval(SysUser.allinstances-&gt;select(su|su.UserName.sqllikecaseinsensitive( tokenname)),2,0,'') in&#xD;&#xA;(&#xD;&#xA;  (users-&gt;size=0).casetruefalse(&#xD;&#xA;        let su=SysUser.Create in&#xD;&#xA;        (&#xD;&#xA;          su.id:=tokenname;&#xD;&#xA;          su.UserName:=tokenname;&#xD;&#xA;          su&#xD;&#xA;        ),&#xD;&#xA;        users-&gt;first&#xD;&#xA;   )&#xD;&#xA;)" />
           </TaggedValue>
         </Method>
         <Method Name="VerifySAML2" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a1888b81-9ea2-4ce8-9642-b603be06b7a6">
@@ -198,6 +197,30 @@
             <Parameter Name="theKId" Kind="In">
               <Type>
                 <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="UrlEncode" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b0229890-4f83-4128-a806-16a681f50082">
+          <Parameter>
+            <Parameter Name="url" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="decode" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
               </Type>
             </Parameter>
           </Parameter>
@@ -270,30 +293,6 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="AddSysCertFromCertString" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="fd303f88-ad67-46d5-8554-844101ef72f5">
-          <Parameter>
-            <Parameter Name="theKId" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-            <Parameter Name="theCert" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </Parameter>
-          <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
-              <Type>
-                <Datatype idref="SysCert" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
-          </TaggedValue>
-        </Method>
       </Feature>
       <TaggedValue>
         <TaggedValue Tag="Eco.IsSingleton" Value="True" />
@@ -303,17 +302,281 @@
       <AssociationEnd>
         <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8847b309-9ee6-4258-8365-0b100f9c6108">
           <Participant>
-            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
+            <Class Name="SysUser" idref="d8f8ba5c-b396-4172-8899-39a88d61f85f" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="SysExternalLogins" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b08c5b53-7343-44df-8e77-52d2cfeb0e70">
           <Participant>
-            <Class Name="SysExternalLogin" idref="ec74c857-7f64-47e0-8dc8-0cfa5448943c" />
+            <Class Name="SysExternalLogin" idref="bf3187f3-9dae-477a-bc2e-18be4e75984c" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="97c7c966-508d-4232-b35b-33a21246e5c1">
+    <Class Name="SysCert" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="968a6621-9522-4f05-8ad0-336c9d04ccf1">
+      <Feature>
+        <Attribute Name="Thumbprint" Multiplicity="" Visibility="Public" id="2cfc337d-f2bc-4f73-89ea-1722e67997c6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SubjectName" Multiplicity="" Visibility="Public" id="325ce6f1-317d-4d89-8650-6c6b18b37a48">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="GenerateRSAParams" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3ad8b4b2-53e0-4efe-ba65-5e72177ded47">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="LastSeenError" Multiplicity="" Visibility="Public" id="4ee570b2-a476-4267-8da8-8589ccf56608">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="InverseQ" Multiplicity="" Visibility="Public" id="5db2de10-be7b-451e-860f-e0a33bd9879b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="D" Multiplicity="" Visibility="Public" id="66215fd8-9f22-46b5-bc56-f92be1429634">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SerialNumber" Multiplicity="" Visibility="Public" id="6e2eec31-0575-415f-98c7-4a41b4a7a095">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="P" Multiplicity="" Visibility="Public" id="6e357db5-b78b-407a-8253-bb806ac8f13c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NotAfter" Multiplicity="" Visibility="Public" id="7c1d9751-7242-412d-a58f-d4c2dcf91969">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="RSADecrypt" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8450bfd9-ecf9-4991-8b7d-4852c535618d">
+          <Parameter>
+            <Parameter Name="theData" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="DP" Multiplicity="" Visibility="Public" id="886299c9-6d58-4f32-8b7d-bf10ec879b06">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="GetAsCertString" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8f17e210-53c3-4759-acc3-02e451f39c10">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="InitFromCertString" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="905dffbb-c468-41d3-9072-77a60c09a22d">
+          <Parameter>
+            <Parameter Name="theCert" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="DQ" Multiplicity="" Visibility="Public" id="935c8ecf-7007-4b09-bd45-d081a2550d0e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="KId" CodeComment="This is Key id - important for JWT's since they conatin a key id to allow for multiple valid keys" Multiplicity="" Visibility="Public" id="9864c2a1-4e1c-454d-b29a-038f447b3db4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NotBefore" Multiplicity="" Visibility="Public" id="9a4e700c-cb01-448f-a27e-d54ab71be27a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Modulus" Multiplicity="" Visibility="Public" id="b2775278-6d54-410b-bfe1-47e4912eff1a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="RSAEncrypt" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="db654de0-753a-4c60-a975-16ab45f8bb4d">
+          <Parameter>
+            <Parameter Name="theData" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Q" Multiplicity="" Visibility="Public" id="e4055462-c83f-4429-89d6-92656bc54cba">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Exponent" Multiplicity="" Visibility="Public" id="e43e2e6f-b24a-4cf4-bd8e-2ab13c5ea9c0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="IssuerName" Multiplicity="" Visibility="Public" id="ec436ebe-04d3-4c03-b326-9fd6b4d40936">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser" id="acbe9a76-8505-4796-a7d1-128dc0d52467">
+      <AssociationEnd>
+        <AssociationEnd Name="CurrentUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c58f940a-682a-461e-9c0e-b8536f8381bf">
+          <Participant>
+            <Class Name="SysUser" idref="d8f8ba5c-b396-4172-8899-39a88d61f85f" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsCurrentUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b">
+          <Participant>
+            <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="SysUserSysUsersSysRoleSysRoles" id="b0f92c8e-057e-4fd4-90ab-39f1d755a876">
+      <AssociationEnd>
+        <AssociationEnd Name="SysUsers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2e115e1e-fcc5-432d-b68b-b8416b0b36db">
+          <Participant>
+            <Class Name="SysUser" idref="d8f8ba5c-b396-4172-8899-39a88d61f85f" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysRoles" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a">
+          <Participant>
+            <Class Name="SysRole" idref="bb1489ca-583d-4002-968d-653cf9392c94" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <Class>
+        <Class Name="SysUserRole" idref="0c9bbb81-861f-466d-8b21-5e392939ae5b" />
+      </Class>
+    </Association>
+    <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="bb1489ca-583d-4002-968d-653cf9392c94">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="SysExternalLogin" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="bf3187f3-9dae-477a-bc2e-18be4e75984c">
+      <Feature>
+        <Attribute Name="LoginProvider" Multiplicity="" Visibility="Public" id="172a11ee-84fb-412e-8f05-520d45d21416">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ProviderKey" Multiplicity="" Visibility="Public" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="SysUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d8f8ba5c-b396-4172-8899-39a88d61f85f">
       <Feature>
         <Attribute Name="SendMeNews" Multiplicity="" Visibility="Public" id="478748bb-b51a-466c-a099-ce7722d20731">
           <TaggedValue>
@@ -359,82 +622,20 @@
         </Attribute>
       </Feature>
     </Class>
-    <Association Name="" EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser" id="acbe9a76-8505-4796-a7d1-128dc0d52467">
-      <AssociationEnd>
-        <AssociationEnd Name="CurrentUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c58f940a-682a-461e-9c0e-b8536f8381bf">
-          <Participant>
-            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="SysSingletonsCurrentUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b">
-          <Participant>
-            <Class Name="SysSingleton" idref="5d5a5447-4976-4a74-9527-40fd6c350b90" />
-          </Participant>
-        </AssociationEnd>
-      </AssociationEnd>
-      <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
-      </TaggedValue>
-    </Association>
-    <Association Name="" EffectiveName="SysUserSysUsersSysRoleSysRoles" id="b0f92c8e-057e-4fd4-90ab-39f1d755a876">
-      <AssociationEnd>
-        <AssociationEnd Name="SysUsers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2e115e1e-fcc5-432d-b68b-b8416b0b36db">
-          <Participant>
-            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
-          </Participant>
-        </AssociationEnd>
-        <AssociationEnd Name="SysRoles" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a">
-          <Participant>
-            <Class Name="SysRole" idref="ed8d092b-ed5b-404f-8109-49235f3a7f23" />
-          </Participant>
-        </AssociationEnd>
-      </AssociationEnd>
-      <Class>
-        <Class Name="SysUserRole" idref="f651c96d-652e-436c-82e5-bf5263f354e3" />
-      </Class>
-    </Association>
-    <Class Name="SysExternalLogin" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ec74c857-7f64-47e0-8dc8-0cfa5448943c">
-      <Feature>
-        <Attribute Name="LoginProvider" Multiplicity="" Visibility="Public" id="172a11ee-84fb-412e-8f05-520d45d21416">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="ProviderKey" Multiplicity="" Visibility="Public" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-    </Class>
-    <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ed8d092b-ed5b-404f-8109-49235f3a7f23">
-      <Feature>
-        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-    </Class>
     <Association Name="" EffectiveName="SysUserClaimSysUserClaimsSysUserSysUser" id="f285e989-16c8-4fc7-b9bc-9c6ff5ca5e0d">
       <AssociationEnd>
         <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="12532b0d-4a51-478d-aac8-906470b9eac5">
           <Participant>
-            <Class Name="SysUser" idref="97c7c966-508d-4232-b35b-33a21246e5c1" />
+            <Class Name="SysUser" idref="d8f8ba5c-b396-4172-8899-39a88d61f85f" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="SysUserClaims" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="1ff32c2d-8e59-4b68-8250-3f08182d12ba">
           <Participant>
-            <Class Name="SysUserClaim" idref="2518e2ad-530d-47c6-aa41-f9d003f06db4" />
+            <Class Name="SysUserClaim" idref="62ce20fb-ddec-445c-95d3-c4bb6a09d9da" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="f651c96d-652e-436c-82e5-bf5263f354e3">
-      <Association>
-        <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
-      </Association>
-    </Class>
   </OwnedElement>
   <TaggedValue>
     <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperclass" />

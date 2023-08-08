@@ -1,0 +1,23 @@
+﻿
+
+<div id="chatdiv"> 
+  
+    <div class="chat ">
+      
+      <div class="chat-message" message>
+        <textarea name="message-to-send" id="message-to-send" placeholder ="Chat" rows="3" ng-model="ViewModelRoot.Curr_ChatView().EnteredText" message></textarea>
+                
+        <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+        <i class="fa fa-file-image-o"></i>
+        
+        <button class="sendButton" ng-click="StreamingViewModelClient.CallServerAction('ChatView','SendAction')" ng-disabled="!ViewModelRoot.VM_Status.ChatView_SendAction_Enabled">Send</button>
+		
+
+      </div> <!-- end chat-message -->
+      
+    </div> <!-- end chat -->
+    
+
+  
+</div>
+

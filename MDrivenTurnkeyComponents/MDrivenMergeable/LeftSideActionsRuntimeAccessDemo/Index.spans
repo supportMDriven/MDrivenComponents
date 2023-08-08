@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2f26eb05-aa75-42c8-8c13-6f7b9bca8045">
+  <Class>
+    <Class Name="Class1" idref="ab8124dc-da6c-4b86-8ba5-8139f365a031" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="Col" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'This is index page'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fee11a53-e557-4565-bfbc-4d81088d01f6" />
+  </OwnedColumns>
+</Span>

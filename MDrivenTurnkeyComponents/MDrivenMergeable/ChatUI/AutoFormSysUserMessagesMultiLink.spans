@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUserMessagesMultiLink" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="36dfd530-22d9-4918-a4f3-fcf6a851aef2">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Messages" ExpressionActAsForActions="" id="33ff14ae-e798-4e2b-8382-fac69a6290ba">
+      <Class>
+        <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a68b0151-946b-4ee7-a3e1-407e0f5a5095" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fec041a4-ff2f-40a3-9360-c4fdcdd8d5f1" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="41012a50-4da6-45fb-aa5c-1ff739fa66c7" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="65c2ecc5-7da6-41fc-bcd7-e905d4811aaf" />
+        <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Text" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="96b4e865-5661-49da-90b4-9fb5f002d5b9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Messages" idref="af5e3357-3ba2-4799-8bef-b5e0c0c94efc" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="unlinkMessage" idref="56f9ed2e-6a95-4455-88f8-3aecaff3a5c0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="CreateAndAddMessage" idref="27b340fa-9593-4ca2-9a9c-7b4ceee54f7f" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Messages" ActionPeriodicityMillisec="-1" ColSpan="14" ColSpanWhenInGrid="1" Expression="self.Messages" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="af5e3357-3ba2-4799-8bef-b5e0c0c94efc">
+      <ReferedNesting>
+        <Nesting Name="Messages" idref="33ff14ae-e798-4e2b-8382-fac69a6290ba" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="FindAndAddMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="40ecaaec-ec3a-4d9e-bb23-51605ff2eb1c">
+      <ActionToExecute>
+        <ContextAction Name="FindAndAddMessage" idref="026264b8-c6a0-4d56-939a-4c73863c9251" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="PresMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Messages'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="9778f4b1-ae74-46aa-ae25-98eb76d3cafd" />
+    <Column Name="UnlinkMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="0" id="90b97ae5-1909-4c34-8233-d6ac883f13e1">
+      <ActionToExecute>
+        <ContextAction Name="unlinkMessage" idref="56f9ed2e-6a95-4455-88f8-3aecaff3a5c0" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="AddNewMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="b9de6985-b798-4984-9e92-62e3befce1b9">
+      <ActionToExecute>
+        <ContextAction Name="CreateAndAddMessage" idref="27b340fa-9593-4ca2-9a9c-7b4ceee54f7f" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

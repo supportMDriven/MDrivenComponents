@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.62889462677744" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
+  <PlacedClass>
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="105" ShowAttributes="False" ShowMethods="False" Size="1" x="160" y="416" id="6d83fc51-8bfa-40bd-9fd3-4dac78aa0fc9">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="52.5" y="24" id="f8354263-1c49-4617-ae8d-45a0f1f484f9">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingleton" idref="fb1f848d-7aaf-45f6-930b-65144c63b7b2" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-43" y="32" id="c1db7d99-572a-47e0-bb7d-d5967cb4c787">
+              <AssociationEnd>
+                <AssociationEnd Name="SysCookies" idref="b335f7ef-9cd9-4595-9c6d-74cc4f9bfe28" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSingleton" idref="8c654924-9814-4cb3-8692-0e254d014545" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="7262a742-8505-4cbf-a223-56520846322d" Color="1692800256" LastKnownName="SysCookie" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="86" ShowAttributes="False" ShowMethods="False" Size="1" x="376" y="552" id="f98536f8-0f97-4716-bc3a-2c243199bb52">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-43" y="32" id="c1db7d99-572a-47e0-bb7d-d5967cb4c787">
+          <AssociationEnd>
+            <AssociationEnd Name="SysCookies" idref="b335f7ef-9cd9-4595-9c6d-74cc4f9bfe28" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysCookie" idref="db9122b1-3654-4271-b565-93d77bb9ca7e" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="341" LastKnownName="" NoteContent="UEsDBBQAAAAIAI+dZVaWw4/HMgMAAMsKAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAALWWW3PaPBCG/8qOe1swTs+ZkBmaQGGa0EzstDO9U+zFViNLHh0Af7/+WwFJSHGqXjTcIT/aw6vVrk5SzC1XEta1kGYYVdY2x3Fs8gprZvo1z7UyamH7uarjFZeLdXw0GLyP16wWcaPRoLTMG4i8hWPTsByH0eaDXmIEGa7tSPBS1gQOowtc2AguuMQp8rKilZGzKoKZmbZNhXJjaizZrcBiGE2YMLg1LJgshxHKnjMRTIRanXO9jXxrNFPX3l4Ec1ffok7drbHcOg/0z5ywTmOqnPbB3VBondz+HwrM7PaRPyXthNVctMMoxVIh3My2q6ltBZmcK10zsV36sUtsfy21Gm1e/bbI/6OtyZH/p7HUyknK+dVkMtj8SLu2UaVmTdX2U8tkwXRxwUvmY6KTyrTDJ8wZ2SS1HRN/os65ySkYSpHpdg/cab1HTrmxSvP8ib1DbCSl2pbASFjUdISeGzwT2j5zENujR1Kk7vT2lXZzXwqH6bOGWyZSqsANcLj3jBlMURpu+RKf9eCPlOLgeYo2CQFHIeBNCHgbAt6FgPch4EMI+BgCPgWFGgSJoJZJUMwkqGYSlDMJ6pkEBU2CiiZBSZOgpkedmk4027W9+16yv10wU2HxE7Xq2nvJrG/r1t+wLxrxrgsaM2NHhjM5Xjeo7bP35DvTBFnTGcjuMnZ/pNaLmm7q0955COzNjQ7oIc4fvLBVt6cH5oLGh2Nlt7v75pquvHp/aF7PAA+H9rQBnp5cMc02zF9MJT8oacu1k/vD4WP/w7vodAS5UnccgRtgMM2yq94UWYH6JCb+9CR+cPQPfRYFtVFyl7bmbOs9p+oysOKWbLMagVSD70w4hB5c3qQZfB5Ddj2ap7PxPHsNl85YKNkSvYmUjAm0fsre2zO76P1r4LNGdgfxy6Qys7BSThRwi1BQIdDtcAasgvm3DCofILdgNaPJQMVGyRgFK6REhQAlRQvObBC+eKReUPkXNE1PH8hpCh4DzcECZudXQFO9UZLWSQ8GDd0REoBOo4BfK3tfd72NBP7kqCNArQoUnl+i5ot2UwdClVySAeL+YVU+vvzMskf9p0ubePeCPf0fUEsDBAoAAAAAAI+dZVY3j5itDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUmE2YTFkZWM4YThmNzRjMTIiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAACPnWVWNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAI+dZVaWw4/HMgMAAMsKAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAACPnWVWN4+YrQwBAAAMAQAACwAAAAAAAAAAAAAAAAB+AwAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAACPnWVWNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAADPBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAABGBgAAAAA=" RenderedHeight="351" RenderedWidth="632" Size="1" Width="622" x="320" y="32" id="ff744fdc-976d-44d7-9fef-c8b672512b30" />
+  </PlacedNote>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="253" LastKnownName="" RenderedHeight="263" RenderedWidth="380" Size="1" Width="370" x="864" y="72" id="cbef57ab-5544-4382-ab97-9810444c4005">
+      <Span>
+        <Span Name="ListCookies" idref="15a04ef5-e678-4fb7-835f-ae1aa1f5c416" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

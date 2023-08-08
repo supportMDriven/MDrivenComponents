@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUserRole" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="6" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="3bec7769-62d2-4b74-be2b-2c2e47b82595">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSysUserRole" idref="a60e03d8-2383-4aed-9421-b5efb1ce32b9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="Show_SysUsers" idref="9e95ce5f-fab7-4229-8de4-1dd7768b3e75" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="Show_SysRoles" idref="5343fad3-e624-43ff-9d5d-593a8a566dd1" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="d5ff203d-bbbf-4dbf-ab76-13e23a69fb3f" />
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="60fab259-2df1-4c20-a5f6-1e3e6b1e3bd6" />
+    <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="e88cfc67-4a08-4d0e-840b-3ec46e3a3d3b" />
+    <Column Name="SysUsers" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysUsers.asstring" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="c476ff31-be03-4c7e-9580-d558605016a9" />
+    <Column Name="SysRoles" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysRoles.asstring" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="d0fc3ff2-6819-4f69-9e1e-3390e95e7ab6" />
+    <Column Name="SysUsers_Show" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="5137a3e4-6194-46e3-97ae-942b69f203fb">
+      <ActionToExecute>
+        <ContextAction Name="Show_SysUsers" idref="9e95ce5f-fab7-4229-8de4-1dd7768b3e75" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="SysRoles_Show" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="4" id="5c6499bd-ffa5-4b8b-9ff7-0d3006c8ef44">
+      <ActionToExecute>
+        <ContextAction Name="Show_SysRoles" idref="5343fad3-e624-43ff-9d5d-593a8a566dd1" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

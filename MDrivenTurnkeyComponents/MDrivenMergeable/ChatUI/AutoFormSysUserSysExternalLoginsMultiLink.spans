@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUserSysExternalLoginsMultiLink" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="519074ed-589b-4c7c-909f-501988ffc9df">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysExternalLogins" ExpressionActAsForActions="" id="4bc79ee4-77b3-4ecd-b4f2-1576e3048398">
+      <Class>
+        <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5025e6f3-e9fc-4bc2-969c-9210d476e151" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8ec9a71a-f6cb-426b-b135-1e5f07fdab41" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c6d6fd79-2e52-4948-b44c-70ea95fff1a4" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f4368944-5a06-4eee-81e8-fdd260e44cdd" />
+        <Column Name="LoginProvider" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.LoginProvider" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0b8d4ded-7671-44cc-814b-ac0197d4293d" />
+        <Column Name="ProviderKey" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ProviderKey" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="54098de9-27c5-469c-b911-2ac091eb1cd9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysExternalLogins" idref="74ee105c-93e2-414a-bf9d-5d269b0570de" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="unlinkSysExternalLogin" idref="ca35000f-daf6-4aff-86f1-4c9a7eeb100b" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="CreateAndAddSysExternalLogin" idref="f3d99f92-5abd-4a0d-b03f-1fbcc8162c48" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="SysExternalLogins" ActionPeriodicityMillisec="-1" ColSpan="15" ColSpanWhenInGrid="1" Expression="self.SysExternalLogins" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="74ee105c-93e2-414a-bf9d-5d269b0570de">
+      <ReferedNesting>
+        <Nesting Name="SysExternalLogins" idref="4bc79ee4-77b3-4ecd-b4f2-1576e3048398" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="FindAndAddSysExternalLogins" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="87ec75d3-5377-40f0-85cd-ae875763b6bd">
+      <ActionToExecute>
+        <ContextAction Name="FindAndAddSysExternalLogin" idref="f8eb3a7f-08a5-4aac-ab5a-d848f4165b42" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="PresSysExternalLogins" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'SysExternalLogins'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="f18a4238-7bd6-4282-9e2a-f2f3580c0adc" />
+    <Column Name="UnlinkSysExternalLogins" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="0" id="2bafb4d0-fc64-4475-84e5-60ba221b9efc">
+      <ActionToExecute>
+        <ContextAction Name="unlinkSysExternalLogin" idref="ca35000f-daf6-4aff-86f1-4c9a7eeb100b" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="AddNewSysExternalLogins" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="7d78d811-d502-4ce7-8979-58555f0b8897">
+      <ActionToExecute>
+        <ContextAction Name="CreateAndAddSysExternalLogin" idref="f3d99f92-5abd-4a0d-b03f-1fbcc8162c48" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

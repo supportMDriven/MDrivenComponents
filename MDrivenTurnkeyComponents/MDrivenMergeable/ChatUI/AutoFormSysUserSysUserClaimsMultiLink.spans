@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUserSysUserClaimsMultiLink" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ac442205-2992-4942-8af3-587a7087f303">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysUserClaims" ExpressionActAsForActions="" id="39dfd9c2-e4ad-4d0c-9597-8b64e02b892d">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="796998f1-fe10-4a55-ba51-3e0b0d9b1af2" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="07550689-d12d-469d-92a9-36c480db43a3" />
+        <Column Name="ClaimType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ClaimType" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e0cf0ff7-6137-4eb9-a77d-8e4e02ab6de2" />
+        <Column Name="ClaimValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ClaimValue" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="026ee682-7dbd-4cbe-873f-8ce5a043de69" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c60e1902-f1c5-40ed-8277-6db7d016a582" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b4231dcb-33dd-478c-be24-f4bcddf6fcc9" />
+        <Column Name="Issuer" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Issuer" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ade5fd1e-a7a6-4147-a6b8-0b8e7e0137f2" />
+        <Column Name="OriginalIssuer" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.OriginalIssuer" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b23efae8-1143-4a8d-b9de-e57f125df9bf" />
+        <Column Name="ValueType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ValueType" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="067096bd-d08f-408b-92ca-fbb1852bd91e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysUserClaims" idref="e42c60ee-fef6-4105-b73c-3885f83ece65" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="unlinkSysUserClaim" idref="891e2f15-7c9b-4ba4-8f65-a63b2d54638a" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="CreateAndAddSysUserClaim" idref="ca445d0b-dd96-4327-b148-c284746a6767" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="SysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="18" ColSpanWhenInGrid="1" Expression="self.SysUserClaims" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="e42c60ee-fef6-4105-b73c-3885f83ece65">
+      <ReferedNesting>
+        <Nesting Name="SysUserClaims" idref="39dfd9c2-e4ad-4d0c-9597-8b64e02b892d" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="FindAndAddSysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="4c542ee0-014f-49f9-8d28-134670eb1f0f">
+      <ActionToExecute>
+        <ContextAction Name="FindAndAddSysUserClaim" idref="aec2050c-dc56-4086-b277-9e1f016f166a" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="PresSysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'SysUserClaims'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="3e5f8cc8-106c-4e5a-b188-2a13f4915896" />
+    <Column Name="UnlinkSysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="0" id="3fdab724-9893-4466-abb1-56993104d9f0">
+      <ActionToExecute>
+        <ContextAction Name="unlinkSysUserClaim" idref="891e2f15-7c9b-4ba4-8f65-a63b2d54638a" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="AddNewSysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="4da34a9c-9943-47b5-b044-df46a87ad62c">
+      <ActionToExecute>
+        <ContextAction Name="CreateAndAddSysUserClaim" idref="ca445d0b-dd96-4327-b148-c284746a6767" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

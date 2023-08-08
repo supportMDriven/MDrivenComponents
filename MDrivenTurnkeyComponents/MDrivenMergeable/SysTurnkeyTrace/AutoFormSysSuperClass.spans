@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysSuperClass" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="4" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="d5201cb3-04f6-4a62-ac73-27765b111b3d">
+  <Category>
+    <Category Name="AutoForms" idref="4a0377b8-639f-4f35-a51c-aba1d12f2592" />
+  </Category>
+  <Class>
+    <Class Name="SysSuperClass" idref="dc7d180a-7a07-4524-9f62-4a89e100e6b8" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSysSuperClass" idref="969ee0a1-2486-46cd-ba61-ca9b9caf13bf" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="dbe84c5f-524b-479c-be24-b5517c415636" />
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="8e0c9650-42f5-40c0-85c8-c33b54eb2b9d" />
+    <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="dfa7d67d-992e-4d63-9726-2c7a5e17f65f" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

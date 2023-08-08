@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ListCookies" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="15a04ef5-e678-4fb7-835f-ae1aa1f5c416">
+  <Class>
+    <Class Name="SysSingleton" idref="8c654924-9814-4cb3-8692-0e254d014545" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysCookie" ExpressionActAsForActions="" id="d663ef41-c051-4cf8-9697-4abfa90ff67e">
+      <Class>
+        <Class Name="SysCookie" idref="db9122b1-3654-4271-b565-93d77bb9ca7e" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="2573188b-13bc-49cf-bb29-eab27dc3b1c8" />
+        <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Value" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="f4cf7613-0630-4522-92db-98d61f9ea556" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ChangeTime.ToString('hh:mm:ss')" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="0da48044-9e6e-464c-a496-ef0e9bab754c" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysCookies" idref="4aada76e-0003-436e-94e2-133303f7529a" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="SysCookies" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.SysCookies" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="7" id="4aada76e-0003-436e-94e2-133303f7529a">
+      <PlacingContainer>
+        <PlacingContainer idref="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="SysCookie" idref="d663ef41-c051-4cf8-9697-4abfa90ff67e" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d9a86b69-7ddc-4cf1-a541-597c9d0cf4c0">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="2d98406b-02b5-4484-8882-dcec33a8a2ce" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vCertData" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vTokenJWT" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vUserOut" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

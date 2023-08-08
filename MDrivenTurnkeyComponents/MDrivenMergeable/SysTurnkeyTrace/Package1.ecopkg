@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="8b3bab15-1af1-432b-a70c-3846cdef8401">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="dc7d180a-7a07-4524-9f62-4a89e100e6b8" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="SysTurnkeyTrace" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8ef22a03-afda-485f-a2ab-003009ce2bc3">
+      <Feature>
+        <Attribute Name="Idstring" Multiplicity="" Visibility="Public" id="04df1cfd-ec17-496f-b8b9-32c65477773b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Defaultstringrep" Multiplicity="" Visibility="Public" id="422d2933-3c7d-4088-8f76-29733e29dcee">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Action" Multiplicity="" Visibility="Public" id="5a9afa17-e0a9-4e10-9d2f-e955c6a0c184">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Usersessioncombo" Multiplicity="" Visibility="Public" id="720048eb-435e-4aa0-bc85-b599fe4c02ae">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ClassName" Multiplicity="" Visibility="Public" id="b5167cab-4f68-4322-9e51-2f6c7ca97ae6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Level" Multiplicity="" Visibility="Public" id="bb35bdac-ef67-4a1c-b240-25f0d4c42542">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TypeOfTrace" Multiplicity="" Visibility="Public" id="edab5c71-f36e-43c9-bbcd-95ba980e010d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="AutoFormClass" Value="Skip" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922751019" />
+      </TaggedValue>
+    </Class>
+    <Class Name="SysTurnkeyTraceUserTransient" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="c14945e7-9990-43f2-989f-37bf5c9498d6">
+      <Feature>
+        <Attribute Name="UserSessionCombo" Multiplicity="" Visibility="Public" id="ac904204-43b9-4413-88e8-72403ceebf6a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="AutoFormClass" Value="Skip" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922751019" />
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Class1SomethingToTrace" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d9326a66-4c6d-436a-aaf8-730af2f1e614">
+      <Feature>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="81772761-6c05-4e2e-beae-1ba207920492">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="dc7d180a-7a07-4524-9f62-4a89e100e6b8">
+      <Feature>
+        <Attribute Name="CreateTime" Multiplicity="" Visibility="Public" id="34956a94-a54b-4103-b0d5-08664d463d42">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.FormerNames" Value="Created" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Guid" Multiplicity="" Visibility="Public" id="4f25cf9b-956d-4dba-9c5a-7cc425ae1c0e">
+          <Type>
+            <Datatype idref="Guid" />
+          </Type>
+        </Attribute>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="64966ce6-a0c3-4509-981b-72a35357698e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="CreateTime:=DateTime.UtcNow;&#xD;&#xA;self.Guid.newGuid()" />
+          </TaggedValue>
+        </Method>
+        <Method Name="PresentationTime" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="84b83fe4-39fb-444d-966c-735b922506d5">
+          <Parameter>
+            <Parameter Name="aDateTime" Kind="In">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="(aDateTime.isnull).casetruefalse('',&#xD;&#xA;  let diff=(DateTime.UtcNow-aDateTime) in&#xD;&#xA;  (&#xD;&#xA;    (diff.TotalHours&gt;=24).casetruefalse(aDateTime.ToString('yyyy-MM-dd'),&#xD;&#xA;      (diff.TotalHours&lt;1).casetruefalse(diff.TotalMinutes.Round(1).asstring+' minutes ago',diff.totalhours.Round(1).asstring+' hours ago'))&#xD;&#xA;  &#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnDelete" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="9ca9bc08-05a7-4f60-87dd-4d15a5e7821a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="false -- Something needed here to avoid crash is &quot;self.base&quot; is used in subclass" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="ChangeTime" Multiplicity="" Visibility="Public" id="cf7b0f15-58b6-4a7d-a162-c8d510c641c3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.FormerNames" Value="Changed" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="OnUpdate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="f58e56e2-400e-4f95-9aae-aa708705538a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ChangeTime:=DateTime.UtcNow" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="AutoFormClass" Value="Skip" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-931102592" />
+        <TaggedValue Tag="Eco.TableMapping" Value="Children" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

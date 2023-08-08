@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="64eff0dd-eb3d-411d-8449-dd86f2b42a14">
+  <PlacedClass>
+    <PlacedClass ClassId="8ef22a03-afda-485f-a2ab-003009ce2bc3" Color="1692800256" LastKnownName="SysTurnkeyTrace" PickedFeatureVisibility="ShowAll" RenderedHeight="121" RenderedWidth="130" ShowAttributes="False" ShowMethods="False" Size="1" x="280" y="240" id="03b58c1c-0c8e-4d9c-a348-b19f53f7af7a">
+      <Class>
+        <Class Name="SysTurnkeyTrace" idref="8ef22a03-afda-485f-a2ab-003009ce2bc3" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="c14945e7-9990-43f2-989f-37bf5c9498d6" Color="1692800256" LastKnownName="SysTurnkeyTraceUserTransient" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="225" ShowAttributes="False" ShowMethods="False" Size="1" x="528" y="248" id="1d29166f-9e61-410f-8a1a-f122ba15194f">
+      <Class>
+        <Class Name="SysTurnkeyTraceUserTransient" idref="c14945e7-9990-43f2-989f-37bf5c9498d6" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="dc7d180a-7a07-4524-9f62-4a89e100e6b8" Color="-931102592" LastKnownName="SysSuperClass" PickedFeatureVisibility="ShowAll" RenderedHeight="132" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="464" y="72" id="60dc7df5-1443-4a59-816b-8ffdcc114811">
+      <Class>
+        <Class Name="SysSuperClass" idref="dc7d180a-7a07-4524-9f62-4a89e100e6b8" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="26da19c8-53e2-4201-9537-cb93df400574" Color="1692800256" LastKnownName="Class1SomethingToTrace" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="189" ShowAttributes="False" ShowMethods="False" Size="1" x="136" y="96" id="793132f8-8839-4733-bc63-2cd9a91e1e16">
+      <Class>
+        <Class Name="Class1SomethingToTrace" idref="d9326a66-4c6d-436a-aaf8-730af2f1e614" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="132" LastKnownName="" NoteContent="UEsDBBQAAAAIAFuCb1ZtiEs8gAIAABAIAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWWbU/bMBDHv4qVvV7TdBvbUFupAjrQGJpIN6S9O9JrYuHY0fkMzT797LawlKY473L53YP/tu8yzrFgabRY10rbSVIxN6dpaosKa7CDWhZkrFnxoDB1+iT1ap2OhsOTdA21ShtCi5ohBEhChFPbQIGTZPOBHjERC1zzTMlS1x6cJNe44kRcS42XKMvKW2aOTSKu7GXbVKg3oS403CtcTpI5KIvbwAp0OUlQv3c2EXNlns4lbSvfBl2Y2xAvETeuvkfK3b1lyS4AgzOn2BHmxlEoLpTUy3VffGF25+fzGc1zqKVqJ0mOpUHx62przblVPuSNoRrU1nS3W1jXljMhF9Uro/zrXbNReCMsyTjt1/xuPh9uHq9d25iSoKnaQc6gl0DLa1lCqMnv1IIc7jFnPqZfmgP1FnUubeGL8UsEajvgTusOeSktG5LFXrxDbKa12R6BmWIkv4WBGx4prcsc1PY/o1ek7s323XvLcBQOlw+NZFC5P4Eb4ND3DCzmqK1k+YhHM4Qt9XXIIkfOYsAoBnyIAR9jwKcYcBIDPseALzHga1SoYZSIaplFxcyiamZRObOonllU0CyqaBaVNItqOurVdE6wa3vPvaTrrsBWuPyDZPp8fwCHts7hhn0jxIc+6AIsz6wEfbFukPjoPfkN5CG2vYXsLmP/R996kfxN3e+dh0BnbvRAL3XeySVX/ZlemGs/PhyU/emem2v+FNR7o3kdAV42bb8BTsc/gWDDTMe3Tk/z1i4c6QdsF34TcZwG4zjtUK8cFpW0ogEOUUUFVuzc8zBbSVjXNIZYsBGFUcqPQ+H82BXbA2KF1AK0wNUKC+lVFDVojTQQPYnT3W/A9B9QSwMECgAAAAAAW4JvVkrSTucMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSOWZlOWQzOTE0MzYwNGFjMyIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAFuCb1Y1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAW4JvVm2ISzyAAgAAEAgAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAFuCb1ZK0k7nDAEAAAwBAAALAAAAAAAAAAAAAAAAAMwCAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAFuCb1Y1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAB0EAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAJQFAAAAAA==" RenderedHeight="142" RenderedWidth="322" Size="1" Width="312" x="512" y="304" id="cea74426-ee52-4f0d-9cdc-a5de6dd8d0ab" />
+  </PlacedNote>
+</Diagram>

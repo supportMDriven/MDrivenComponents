@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUserClaimSeeker" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="104d38f1-74af-4d6b-b79a-1fbd1b9c832a">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysUserClaim" ExpressionActAsForActions="" id="afeac246-a61b-4bd7-b841-5b353f286c31">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="655175cc-9f69-4658-9178-f58beda4a3c6" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="142d6143-6922-42e8-bd93-a70748ed5f64" />
+        <Column Name="ClaimType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ClaimType" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="91b348da-125b-4a64-b1bd-4142bbb4a362" />
+        <Column Name="ClaimValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ClaimValue" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c25aa44b-c99c-4d67-bf4c-d973eeba493d" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="56d82dcd-f454-4ced-8a2f-454d6d71d1cc" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="48c4319d-e070-4f63-ba29-c1e6ae2fc743" />
+        <Column Name="Issuer" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Issuer" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="356d4911-9f8f-47c6-8944-0c96ee8dcf31" />
+        <Column Name="OriginalIssuer" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.OriginalIssuer" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4291190f-76fe-461c-836f-fdef5363a4ba" />
+        <Column Name="ValueType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ValueType" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="79503c16-108d-431e-90cc-7cd7562c7b74" />
+        <Column Name="SysUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.SysUser.asstring" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f2355acc-71c2-4e87-a045-66912ba4694d" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="0800f1b7-392c-4e2b-9cce-350912c1388d" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="true" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekClaimType" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="c2df728c-cf70-4fcb-bfa2-ace5e092316a">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUserClaim.allinstances-&gt;select(a|a.ClaimType.sqllike('%'+vSeekParam+'%'))-&gt;orderby(a|a.ClaimType)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d14ddba5-4908-44b6-97ea-fd0afa610126" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysUserClaim.ClaimType" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekClaimValue" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="2aa3409d-1fe1-4568-9a86-a01b2bedc607">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUserClaim.allinstances-&gt;select(a|a.ClaimValue.sqllike('%'+vSeekParam+'%'))-&gt;orderby(a|a.ClaimValue)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f9d16a0c-1999-4fd6-a69f-ca9abab688d0" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysUserClaim.ClaimValue" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekIssuer" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="2088cc7e-df51-49cf-85c1-c7ec7122e81d">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUserClaim.allinstances-&gt;select(a|a.Issuer.sqllike('%'+vSeekParam+'%'))-&gt;orderby(a|a.Issuer)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f08dcf67-1426-4d36-9dd0-abf0d0e50cbd" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysUserClaim.Issuer" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekOriginalIssuer" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="b13c95b7-969a-4c8a-8d69-b4ec82903e40">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUserClaim.allinstances-&gt;select(a|a.OriginalIssuer.sqllike('%'+vSeekParam+'%'))-&gt;orderby(a|a.OriginalIssuer)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3c935284-8c4a-43a4-b115-cf40631ee642" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysUserClaim.OriginalIssuer" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekValueType" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="825b736e-2848-45ec-af2f-8b538ef4b9c2">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUserClaim.allinstances-&gt;select(a|a.ValueType.sqllike('%'+vSeekParam+'%'))-&gt;orderby(a|a.ValueType)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="92c3bf68-8d2c-453b-98d0-f9e93b407c08" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="SysUserClaim.ValueType" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="6f32b6e4-3e6b-4d0a-aca7-282ad3efef0b">
+      <Class>
+        <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUserClaim.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5fa9f27c-a155-4600-a6c2-5e41f28478dd" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7d9a300e-3aef-4980-bc3e-62cbb4e0670b" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="14a20730-5a58-4bac-87e8-64c553d411cc" />
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="15" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="0800f1b7-392c-4e2b-9cce-350912c1388d">
+      <ReferedNesting>
+        <Nesting Name="SysUserClaim" idref="afeac246-a61b-4bd7-b841-5b353f286c31" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(SysUserClaim)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

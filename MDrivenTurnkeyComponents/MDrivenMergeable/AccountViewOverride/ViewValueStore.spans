@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ViewValueStore" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ee44595c-317c-45cf-b3d4-1f7b2a82e571">
+  <AccessGroups>
+    <AccessGroup Name="IsLoggedIn" idref="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+  </AccessGroups>
+  <Class>
+    <Class Name="ValueStore" idref="3fc27429-bd60-451a-b37c-cbf0e1360d14" />
+  </Class>
+  <Nesting>
+    <Nesting Name="ValueStore" ExpressionActAsForActions="" id="bc44829a-a031-4bc0-b819-3719e2e350fe">
+      <Class>
+        <Class Name="ValueStore" idref="3fc27429-bd60-451a-b37c-cbf0e1360d14" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="6bc853b2-662d-44e6-83f3-da7a2b47adc9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllValueStore" idref="1a5ebeee-91a6-4b32-ae59-54ca64285deb" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllValueStore" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="ValueStore.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="1" id="1a5ebeee-91a6-4b32-ae59-54ca64285deb">
+      <PlacingContainer>
+        <PlacingContainer idref="460f30ae-f8b7-4d22-9b9a-069151678305" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="ValueStore" idref="bc44829a-a031-4bc0-b819-3719e2e350fe" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Add" ActionPeriodicityMillisec="-1" ColSpan="14" ColSpanWhenInGrid="1" Expression="ValueStore.Create" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCSelfAlign="Stretch" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="4daf4e77-c0bd-4b0a-949f-bf4d49eb888a">
+      <PlacingContainer>
+        <PlacingContainer idref="460f30ae-f8b7-4d22-9b9a-069151678305" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Delete" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrent_ValueStore.Delete" ExpressionForReadOnly="vCurrent_ValueStore.isnull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e071c04f-5cfd-4338-90e6-0035eae0ed6a">
+      <PlacingContainer>
+        <PlacingContainer idref="460f30ae-f8b7-4d22-9b9a-069151678305" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="460f30ae-f8b7-4d22-9b9a-069151678305" />
+  </PlacingContainer>
+</Span>

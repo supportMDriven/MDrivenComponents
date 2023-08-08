@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Ofiice365Authorize" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.62889462677744" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
+  <PlacedClass>
+    <PlacedClass ClassId="d8f8ba5c-b396-4172-8899-39a88d61f85f" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="156" RenderedWidth="144" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="408" id="7ca0e110-6892-46ff-a398-564a6122cecb">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="99034d19-9a02-4c1e-9275-77de960391fe">
+          <AssociationEnd>
+            <AssociationEnd Name="CurrentUser" idref="c58f940a-682a-461e-9c0e-b8536f8381bf" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="156" id="f37cdc22-ffbd-43e9-9aa0-6bbd81381cc8">
+              <AssociationEnd>
+                <AssociationEnd Name="SysSingletonsCurrentUser" idref="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysUser" idref="d8f8ba5c-b396-4172-8899-39a88d61f85f" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="999164df-658b-4e9f-bf63-f746ac0d8456" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="156" RenderedWidth="147" ShowAttributes="False" ShowMethods="False" Size="1" x="200" y="200" id="c2ba61bd-d888-4378-b0df-966e8a62bc9f">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="156" id="f37cdc22-ffbd-43e9-9aa0-6bbd81381cc8">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsCurrentUser" idref="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSingleton" idref="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="152" LastKnownName="" NoteContent="UEsDBBQAAAAIAGKEmFbnlHWomQIAAFkIAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAI2WbW/aMBDHv4qVvR4hbG23qlSK2lKqsapq6CrtnQlHYtWxI/tcoJ9+Z5IyGKEer8j5dw/+O77LRQY5Cq3YqpLKDqMSsT6PY5uXUHHbq0RutNUL7OW6ipdCLVbxoN8/jVe8knFtwIJC7gNEPsK5rXkOw2izYF4hYlNYYSpFoSoCh9EEFhixiVAwBlGUZEkd6ojd2fG6LkFtQt0oPpMwH0YjLi00gSVXxTAC9dnZiI2kXl4L01TeBJ3qRx8vYveumoHJ3MyiQOeB3pWT6Axk2hlf3BOV1sntPlBhtvWjfFrhiFdCrodRBoUG9nTXWDNcSwp5r03FZWN6bje2a8vQAOblP0bxRq7JwD8ZKIx2ivb8aTTqb36k3brWheF1ue5lyNWcm/lEFNzXRCc1NQ72mCuKSWo7Lj+iroXNqRjaIjfrHbDVeoccC4vaiHwv3iGWKqWbVyCVCIaO0HP9I6XtMge1/c1IilSd2X6Qt/CvwuH2eS2Qy4zewA1w6HvFLWSgrEDxCkcz+COlOkSeASYhYBACvoSAryHgJASchoCzEPAtBHwPCtUPEkEtk6CYSVDNJChnEtQzCQqaBBVNgpImQU0HnZqODG/b3nsv2XWX3JYw/w1Gd/n+5OjbOvobdmsAXrqgG24xtYKrm1UNBo/ek1/cEIS2s5D2MnYvUusFQzd1v3ceAjtzowPa1vks5lh2Z9oyExofjhfd6d6ba7b06n3QvI4A20Pbb4CXFw/c8A3zH1PJD0pyeXRqf94Vs71p8a13dhJdTkthGdAMriWwrNRLyy5icm38D/CxXjLUjDs6fkWHj8CWAkuWvlEB6bVfKwAZz3Ow1IFfQDFShBlYUM8vGwMxzrZ+t35P6cNdmzPe7pP+t98Tl38AUEsDBAoAAAAAAGKEmFYMjiiuDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUmY2ZTk4MzY5Y2RhNzRjZDQiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAABihJhWNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAGKEmFbnlHWomQIAAFkIAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAABihJhWDI4orgwBAAAMAQAACwAAAAAAAAAAAAAAAADlAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAABihJhWNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAAA2BAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAACtBQAAAAA=" RenderedHeight="162" RenderedWidth="522" Size="1" Width="512" x="336" y="16" id="ff744fdc-976d-44d7-9fef-c8b672512b30" />
+  </PlacedNote>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="256" LastKnownName="" RenderedHeight="266" RenderedWidth="282" Size="1" Width="272" x="464" y="176" id="a080304b-cee1-4a5b-ad46-e462b194f26d">
+      <Span>
+        <Span Name="Office365Authorize" idref="3f134e06-7a40-43d6-9510-43aa28a45ca7" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

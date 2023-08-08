@@ -1,0 +1,24 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="8ef4c75d-b414-439c-8b2b-9493547fe307" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="d8dd8e72-3aba-4c84-bf8a-1f1cae00637e" />
+  </Diagrams>
+  <Spans>
+    <Span Name="AutoFormClass1" FileName="AutoFormClass1" GUID="05fb186b-0f67-4717-b2c1-10e4573ea72a" />
+    <Span Name="SeekerForClass1" FileName="SeekerForClass1" GUID="0de52194-674a-40aa-892e-be01a0670225" />
+    <Span Name="Index" FileName="Index" GUID="2f26eb05-aa75-42c8-8c13-6f7b9bca8045" />
+    <Span Name="DocumentClass1" FileName="DocumentClass1" GUID="37dd04ad-c7f7-4b7b-9270-28727cc124cc" />
+    <Span Name="AutoFormClass2" FileName="AutoFormClass2" GUID="3f09c06a-c18c-44d1-9df1-0645de12285b" />
+    <Span Name="AutoFormClass1Class2sMultiLink" FileName="AutoFormClass1Class2sMultiLink" GUID="43b9874c-a893-4977-b41a-9b34a02665a6" />
+    <Span Name="AutoFormClass1Seeker" FileName="AutoFormClass1Seeker" GUID="6beb3898-4260-431d-b26b-259607ee0cef" />
+    <Span Name="AutoFormClass2Seeker" FileName="AutoFormClass2Seeker" GUID="70b25761-5a31-454b-b160-9efbabe5acb1" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

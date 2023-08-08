@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="9cf25450-3caf-4804-8961-a4f51a3a610c">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="Message" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="46cfd21a-b52a-42ae-929a-3ed9099f49f4">
+      <Feature>
+        <Attribute Name="Text" Multiplicity="" Visibility="Public" id="4fc38588-0ac2-4846-a413-e6f5648815eb">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Channel" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8cecb31d-8d8f-49d7-833f-e1605374f33c">
+      <Feature>
+        <Attribute Name="LatestMessage" Multiplicity="" Visibility="Public" id="161d7e0d-7e51-4511-b5fc-8b80f1c493f2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Realtime" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Description" Multiplicity="" Visibility="Public" id="4c57c70c-f3a9-4ca8-957d-d972bdf11568">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="d797600a-6d05-4f8c-bf13-f222d7849773">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Subscription" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ab33924d-f9b3-492d-8ca3-b47f1763cf88">
+      <Association>
+        <Association Name="SysUserSysUsersChannelChannels" idref="9c464169-a5d8-4406-abb4-a0ae72d0f387" />
+      </Association>
+    </Class>
+    <Association Name="" EffectiveName="ChannelChannelMessageMessages" id="dcca14aa-2c18-4792-a054-6e3fd0261b38">
+      <AssociationEnd>
+        <AssociationEnd Name="Channel" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="129536ea-c319-4233-af6f-af74915052c6">
+          <Participant>
+            <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Messages" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="0d2e8bf2-1f1d-4a6c-97ff-a368234b3cd9">
+          <Participant>
+            <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Ordered" Value="True" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Dummy" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="e57f2e77-7ff9-4c4e-8cf3-7b17f50b4ee8">
+      <Feature>
+        <Attribute Name="Attribute1xxxxxx" Multiplicity="" Visibility="Public" id="7c54ad3a-586b-4325-8581-45f9b40345c3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormChannel" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="8" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="54df6c7e-0750-40c5-827e-344aa291dda1">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowChannel" idref="dd2556d2-4b8f-4a95-8623-97ad68d9a173" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkMessages" idref="cc2b22e5-55f1-41ed-afe5-58ecdb9ea622" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSysUsers" idref="668a070a-ff78-41a8-aad4-2c9401fbe485" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSubscription" idref="0ad04b06-9af6-4b73-8cd2-8cfdfb69874e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="1177a2a8-2028-4cde-975d-40ad5be86c44" />
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="5876f097-3769-4a8a-b8ea-c41ece530f03" />
+    <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="deefa4f2-dadf-4301-b61f-26e46dabede1" />
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="3cbe81b4-9e4a-4f71-93c8-aa4a0be70f8a" />
+    <Column Name="ShowMultiLink_Messages" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="ff41049f-6171-4b96-a969-6862025e3722">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkMessages" idref="cc2b22e5-55f1-41ed-afe5-58ecdb9ea622" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_SysUsers" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="00fceb8b-783a-4ab6-a8b0-c0db260d7b1f">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSysUsers" idref="668a070a-ff78-41a8-aad4-2c9401fbe485" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_Subscription" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="939f5043-0995-4768-aa33-ecbf529470e8">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSubscription" idref="0ad04b06-9af6-4b73-8cd2-8cfdfb69874e" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+    <TaggedValue Tag="Savebar" Value="True" />
+  </TaggedValue>
+</Span>

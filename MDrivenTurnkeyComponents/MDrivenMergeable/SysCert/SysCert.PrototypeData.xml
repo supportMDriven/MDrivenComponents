@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EcoData>
+  <Objects>
+    <SysSingleton>
+      <id Type="Int32">0</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/08/2023 22:08:50">-8585232971546034162</ChangeTime>
+        <Guid>ffbce3cb-392a-4776-8e8d-9d0848edb9b4</Guid>
+        <CreateTime Value="03/08/2023 22:08:50">-8585232971546051259</CreateTime>
+      </attributes>
+      <links />
+    </SysSingleton>
+    <SysCert>
+      <id Type="Int32">10</id>
+      <timestamp>2</timestamp>
+      <attributes>
+        <ChangeTime Value="03/17/2023 15:25:32">-8585225437525565466</ChangeTime>
+        <Guid>cc6d90eb-0423-449f-b08c-cf56b8b4f924</Guid>
+        <CreateTime Value="03/17/2023 13:51:59">-8585225493663815606</CreateTime>
+        <Thumbprint>A3AA67EF3D3E2336E1DCF0E0C85EC11934B1E6B8</Thumbprint>
+        <SubjectName>CN=VAFAN</SubjectName>
+        <LastSeenError>The string contains an invalid X500 name attribute key, oid, value or delimiter.</LastSeenError>
+        <InverseQ>lZckdmfCwcxpXRoe8PyjS+UvFGZwr0ybMQDoTYOAS9MyUAe+tXBkp6WVmo71IdI5XUUFpUNSY7/SWZD4RBCkfipmihJm4JbZsxrzPxFmjmU48k2BZAGh5XjOKqxmarkg61zm3uALQEr+wqrZ3eDkjt1U3YyOc9+54yceCYPcEvU=</InverseQ>
+        <D>cRMv5EEttaNeGKU7ekFVN7tipAkLbOmI4onLljwAO/kbWRxv5ipA4/CqDISxZGqMNMcFvBSJrdq2mzBhKFW32RLN/zny9IEOHFZOibFWVj6o5XIzb4SQ3k+/R/JVyfAj1yPE20UqITELEdDDRoJNCR2ONaaqudXCSk6Wl/ihMeGAuB+rTIH26HedAt4PWA6j65CegowLpM9SUoJRe7zFSzCBOaEw0Iw761Pn4/zvIhmsJTxp70EIc/OJ5fO6bv+QhvXTw1QzJDBB02rSVORuNbQjSMLXtUcsarq6wUdEuVqEQ1PN2Jd2rBCBW0Zl8olIVNMdQU8sLyMRHRAuT2ME5Q==</D>
+        <SerialNumber>00E5BCB22A978A8624</SerialNumber>
+        <P>0ztTqDemdhw3CMfUiGs6+0Itzjy00b3LVPWpT0TsgPxf8LU0+HysEXosHeUwyuItUuSt89OQZat/FLOifYq4GWrCIWHp5cPWZCh02+qYT3OMSGzbLwEyhfF8hllwrEpYtsXEUYTehn9FSjQYUXQA6XirdWfuJukqOxnNSFjMl38=</P>
+        <NotAfter Value="03/18/2023 01:00:00">-8585225092854775808</NotAfter>
+        <DP>DLB2sRdOv6+oOrXOdbeDXo62M7p/3k25hkwPtLxePM1scghgu0C6EX62YcFf8gAuWtlz/b7K4OCxjKvR6hrIPnakXN8F7xCZs4CerItmRPebCMrJTASVZWiBY4zB8QeyVqCAz6jcuVWx8ug4QcRnPZ9LJY1tyBafu9cr9tmmyL8=</DP>
+        <DQ>7pu8hA4rL4UrtPqJm/UxbuHWnBs/abC2Zwz4NMU2FMbg2N6fnyOaZKWoxtjM4tMYrwpz6Sk8tM0a/C249G2Km/ikZXrbrK4Ez5kavsqGhs2MAyTRTU70ql3bADjjseRtBkcxvxj0llIzUdrqSA3yhux/8iRuyr3t91fgFJ/sjmE=</DQ>
+        <KId>ABC</KId>
+        <NotBefore Value="03/17/2023 01:00:00">-8585225956854775808</NotBefore>
+        <Modulus>0tVr9Lu4D8xJamHJRQtK4xyTNJccDC9EWqcUUDNSR2362FOPpwsKtxG8FbHsLth6aZZd9lviVK2jAaGgM3DezSGMG9JdQidzYnN9dFl30G7Q7c6ceNCnemZmYtiLZ2ouaxrlqfhVaAVkO0FrSOF1OFrj8kFr0Wtvwy0rkLwmceTAtLZrsQ+ZZQl9eP0IzhovtPhcPIQJSZCphDWJiQfiBWxca24FrCLuMwS63rX1GTPLJLbFQ38DDxuk+vKpB8Bt5N0epLYvDKJ11QtMNvnz4hdb07oBb/vkSGh2qbKOtrl3Q3+o16VQlFCV/61mUMw3V79dyVWMnFUJ4ZRnp7mROQ==</Modulus>
+        <Q>/4R/S9/N7ZiknmDFqnX7u9Bewvgmkj0J8BXQwYuXKlpPPegCIeENWmuK7ZnzQ+6UdJoUsiaTO87OlDcachKaG7jKP7ZiSDBlL3F8hPD2orghiKuwbm61FFtP+JZWP52cdKxfmYLK/WsO8SJzqggkfwaFUKqrqslsT82AFfPS80c=</Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName>CN=VAFAN</IssuerName>
+      </attributes>
+      <links />
+    </SysCert>
+    <SysCert>
+      <id Type="Int32">3</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/08/2023 22:11:55">-8585232969702628373</ChangeTime>
+        <Guid>8319fc4c-ca04-4ceb-99b0-079fbb602667</Guid>
+        <CreateTime Value="03/08/2023 22:11:47">-8585232969780387981</CreateTime>
+        <Thumbprint isNull="true" />
+        <SubjectName isNull="true" />
+        <LastSeenError isNull="true" />
+        <InverseQ>Jum0OPB3PrTLnGnzzvZqfhjeurVkgt0eJDYEqfG337M=</InverseQ>
+        <D>s4+jUoVtMQnLkW59eM2TBbZZo7y36Q7FgkCK+HlKQjel8b74E8BxmpKShWVy+3aZ4SPnR/wCKNQNqydFBVrTFQ==</D>
+        <SerialNumber isNull="true" />
+        <P>1XF3QBLxhwabNKWNumd7wPAcof0MHEKpx2cgh44VXfs=</P>
+        <NotAfter isNull="true" />
+        <DP>vM4l4nPfWsWpPSTE/gLUIZNEgLZKpCUD8fNzfvVcSUk=</DP>
+        <DQ>VKxMIdjEQmw9+rQQ5UrkuLNZ0T3DuHQlp31XB8CLv1c=</DQ>
+        <KId>MyKeyId2</KId>
+        <NotBefore isNull="true" />
+        <Modulus>tbfh/xf/jRpBS2ftVqcM2UjdgmcmulIyCukq7Etzvc6qtMC5cwIUTsO0Bgpd4y3Ctzxfl79QMGelyG/yZZCnxQ==</Modulus>
+        <Q>2fMePFEFXv2kJpcJO9UwC/xdjcu0py+68P+c9AAn5T8=</Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName isNull="true" />
+      </attributes>
+      <links />
+    </SysCert>
+    <SysUser>
+      <id Type="Int32">4</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/08/2023 22:36:20">-8585232955045682186</ChangeTime>
+        <Guid>921230fc-d104-483e-9b12-533fa5c4b7e3</Guid>
+        <CreateTime Value="03/08/2023 22:36:20">-8585232955045685211</CreateTime>
+        <SendMeNews isNull="true" />
+        <IsAdmin isNull="true" />
+        <Id></Id>
+        <PasswordHash isNull="true" />
+        <UserName>arn</UserName>
+        <SecurityStamp isNull="true" />
+      </attributes>
+      <links />
+    </SysUser>
+    <SysCert>
+      <id Type="Int32">5</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/17/2023 10:08:56">-8585225627490408453</ChangeTime>
+        <Guid>d76a79ce-63e3-43c0-8ff0-a61abd7f36fb</Guid>
+        <CreateTime Value="03/17/2023 10:05:22">-8585225629625648697</CreateTime>
+        <Thumbprint isNull="true" />
+        <SubjectName isNull="true" />
+        <LastSeenError isNull="true" />
+        <InverseQ>pwEvWg/psIS19tij60zqCV23cMwSiREVdaxM6IMWtUyceknw5hv+0UN0TMD4EIibYULp8tUeT0BJx7oQUyX2NNmpBNG+EeR5SHzGNMwi61xSVrftYe2I2AxCbcDpU8IKI6PKaeRrgU/mTXvjbkXayn9GK4yaZhnkNusITR044bg=</InverseQ>
+        <D>DAQdCHluOgCNmePkuNyGPO8Oax1W11uMMSyIoarIKAUzcPmuKjahRGfsmqW6lphbRb2pEzIqFsZXLfgA/h3Kw7M7FqV+b7f0ljY6WBQocVuXx6Zr7b19Djf2w3l8Zz93wPnyvkEp69vCriv5y02WNpO/B7LnlW6fN3c0nI1Cp8T9u1RyXty3tI0L6e0BmAZA+iWCT8bf+PeqU8QrkRe4kqqIcraQ3qHOIJVHE2G0eNHYxfL/Ms0bzID+wv72BadI4tDCHzU6m1kUCqnKTzXYjDZQynaoHjFAn6SCa54V65nxQ/NYqg2hdOZwfWJ+ev3cY2nrb2VIcZzQVGfF+Lc6VQ==</D>
+        <SerialNumber isNull="true" />
+        <P>wfdGLn64Vxs3Gw0MESz7n1Q6DPokAugsfN/d43aBJDJ+HJjdHTlJYnMHORbMMbGcHMBq1uXYo9C430JiSEUAUybnv/JLeNNUh6rFX1KEok0UCmPV6YFkQzGdqNBQaJr3N7ykd01sdUFVZHe8ZCg/lPXI+y4A/idzpRZIMy7hV1c=</P>
+        <NotAfter isNull="true" />
+        <DP>r3ujhxUmecgphtO7Ax8LVw7AplT4l5iuBxwSh2QDWlhEOGMkSPg3KFahRkkV3C+v6WM8RcgUw8BmQbaxbGjg7lnYeZQgK+QmKceaYa8qSBwr8Wp5cZSavR/6X2x4EuuAlnCY60akxUCinQ6m5oZzX7Uua/Em/Ml8mvMZxxS20mk=</DP>
+        <DQ>KBwny4QKbU3nXteolWBmcNSF2n3yAfGg+RHwaSYyWFvSSrB/+iqPBjpxOKbIPXCy2duvVFemGBWFE5ZfdTaMpAP6RkgkNcBnrT1xaMwIIWiMQyGy1KxwUiV6SFRl0VTQdv6Ha2NCo0NT1zjeevLiYw7FWe4V3yJzyiafHL3TB58=</DQ>
+        <KId>MyKey3</KId>
+        <NotBefore isNull="true" />
+        <Modulus>vonxykOusu6xrDmkf6yyOyvgLFWZWIl632b+tjFLLvkXXMtb+ZuAGFq+UQns0YqNemPmCb1OyNZvY10n9YTLAmpWtYWMfoG45xakiGyNUXQ1eD0rzUvtJuZbBImAE5CxbM+ba9Ul6LDPvoHy8qT6vsYvaXsIAtysE3m3wyqgvMeMCMA9LXZHzjT+5zDtDcLZnFBTuNqkLhdsSbrpkrZpnnwpabHuIHh8NQswwznTegAuj3cVgbRJIqhUZ+3sgS/jYF/jvh4FM4FafmT7iy69pRqGZEFDs1ciRF//zVRZbNQaZNFjPcTX/3UcpfLK5l8f0ur7nIvCMjBMlg1ywIx2QQ==</Modulus>
+        <Q>+3oVTHrkbpuIHMbyh/Jg9r3eIUDWuwzUvgUt5cLPZlmmxNNeuKwNDFrMLiPszgmoCyHAqwRk/hrSNIsVRa0FuFsQJUjrpU1NgQTwQijsBsao1Ic8bWfwGG/JFmBmBWdFkrLKlYHTPnmAEx66d3+aqBUrfOmin3EL8RIhJQc4GCc=</Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName isNull="true" />
+      </attributes>
+      <links />
+    </SysCert>
+    <SysCert>
+      <id Type="Int32">6</id>
+      <timestamp>1</timestamp>
+      <attributes>
+        <ChangeTime Value="03/17/2023 15:21:12">-8585225440132841951</ChangeTime>
+        <Guid>0796589b-f92d-46b1-a65c-ccf4af9076b9</Guid>
+        <CreateTime Value="03/17/2023 10:08:43">-8585225627621881504</CreateTime>
+        <Thumbprint isNull="true" />
+        <SubjectName isNull="true" />
+        <LastSeenError>The specified RSA parameters are not valid. Exponent and Modulus are required. If D is present, it must have the same length as Modulus. If D is present, P, Q, DP, DQ, and InverseQ are required and must have half the length of Modulus, rounded up, otherwise they must be omitted.</LastSeenError>
+        <InverseQ></InverseQ>
+        <D></D>
+        <SerialNumber isNull="true" />
+        <P></P>
+        <NotAfter isNull="true" />
+        <DP></DP>
+        <DQ></DQ>
+        <KId>MyKey4</KId>
+        <NotBefore isNull="true" />
+        <Modulus>vonxykOusu6xrDmkf6yyOyvgLFWZWIl632b+tjFLLvkXXMtb+ZuAGFq+UQns0YqNemPmCb1OyNZvY10n9YTLAmpWtYWMfoG45xakiGyNUXQ1eD0rzUvtJuZbBImAE5CxbM+ba9Ul6LDPvoHy8qT6vsYvaXsIAtysE3m3wyqgvMeMCMA9LXZHzjT+5zDtDcLZnFBTuNqkLhdsSbrpkrZpnnwpabHuIHh8NQswwznTegAuj3cVgbRJIqhUZ+3sgS/jYF/jvh4FM4FafmT7iy69pRqGZEFDs1ciRF//zVRZbNQaZNFjPcTX/3UcpfLK5l8f0ur7nIvCMjBMlg1ywIx2QQ==</Modulus>
+        <Q></Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName isNull="true" />
+      </attributes>
+      <links />
+    </SysCert>
+    <SysCert>
+      <id Type="Int32">7</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/17/2023 13:54:29">-8585225492162430530</ChangeTime>
+        <Guid>bb05a9f7-e1b0-4bf5-959f-700bac02c218</Guid>
+        <CreateTime Value="03/17/2023 13:41:08">-8585225500170395592</CreateTime>
+        <Thumbprint>A6D53903AB6C0702F0B4A5BC42EA415577465A0F</Thumbprint>
+        <SubjectName>CN=Hjkkjk</SubjectName>
+        <LastSeenError isNull="true" />
+        <InverseQ>DaxI4/twIWstzsk+CdfQ7AcT7D2qtPy19SKcmBlSWwAI8wD9VTPzpSM6+l48uJE7e0GVjcVLA4kHiOWE240q0ATH5TNEhajhB5DUeOJTlTv2P/3p+SeRDUKpDuwTgLuaChq9TJeR3WlOxKNR4C8uJ4AorfSqozKSshkjZb1LbbQ=</InverseQ>
+        <D>w8h6MeaioH2m/jvRwo0ANmrN0Hi1qP6rk04s9p+H+qII1RbFo0ltUO04wJgDuGD1GZsWlV5YK3R1mg5isNCTToCVo0K+O8XM17CUd981e+NsmgNTsZj5ugRUdiAA09y4Wd5rmc86SzIImPE3Fz398TXELPHad+7y8apMy4RCtPCyRupwvWgY6nAAtdQ3EkQwVe8zo7WHNaWOoa8aXbL6tS3qjUVksaJxZ/m5ba1uDWcN89OpDot5A8l390teZy16XV96CaNDJODzxZEJgUuoC0xf8QZX9gmSt7fU4vTgUUHXpoYiughDLNRchuFtBLiRjxMirav/fWH0WkhZg2/utQ==</D>
+        <SerialNumber>24C6F9C939C6316B</SerialNumber>
+        <P>+HdKYOPbeNvjrOOWoBXPuUBDLnZqRpNUpJkcsdtHyc1GG+NZR7r83m2iZKjO5m9lL+0okzaYYYGe2XGarGUBI7Hhh18cJEpjHiXN2rp/8aCa+k9p+MjL5zzGzhtu8K8avSK5NFDp8OXEGT2hlC9OmP/XIMl2BJ8M0Kv3ORCtVy8=</P>
+        <NotAfter Value="03/29/2023 02:00:00">-8585215588854775808</NotAfter>
+        <DP>Eeb2cvi37YNaajCTv8ESkHRy4rwheChRZvKpQJ9eEso5jPTaj/KHGbeohbwr/Cp2jfd2fvTmEdB3E4+950H3zQyaBVjy/CJn9dofdO0PHufFgteJ+STunCCi6mLLoYfcU1hXI8/Yq0TC1la8d6LY9OkqJPCfEkIreDWLwI7VDn0=</DP>
+        <DQ>wgWJPXrpie75iZ87CUZU0fcHZHOCB1Iww4JpUVDBP6B04tXR41CRMMrCDeWaOsaXEzz8/OrDg6KbCHSehJdJBHMFnMYfYmA9E+9j9ThFkRnuOgrK+OpjMnm3N4S7P7ldPj2jBUhDhiguNOlNGKHdXg5HtJwZak/HwZ/oIrtB3wM=</DQ>
+        <KId></KId>
+        <NotBefore Value="03/08/2023 01:00:00">-8585233732854775808</NotBefore>
+        <Modulus>z6iwApa4lukdhxLY2mM9TbNLhawLSv8HWp0Iu56hbwYIycCYtTM9mPALILA3jYDR/AxY6dvaeH5A/+V4cRJCYKAskBmHI4CtAb3q7g4Eh2J/KJ+EhZxJ4EwHSRdGor2IWUmmd8Xp6Rs9gCRktpFFey2iUYU4URQktfA5kF0QX+BtD31bwEkD4zvw8MBTHTIkZpc8QKJcxFxzxOxCRZEv2jcceukoWKF45kXTHeC+txNh0aK5gsUBaRoge/0bngRodrQc3CQyXoY9tN23reG7jHSghsrtJqV0ojR51PRJM3p9UANFuV7r6BUFEfAIpTEG+ZYw+dPqTpVUNkzo0LrpoQ==</Modulus>
+        <Q>1fSiMxiuoV7RrxCo9c9cJLMLH8NgygYBSnx/2I1VAHoTxLkWpkWnm2S3uh0GS38/aQNh401gtbM+MTLulNCyjdRW2xrgEg40LpeUvtdYQQYrdnTvq0BMfOwB6vhxkLjmZhMfR+THrCPXEOna50QdYH28QVXnp9sryIjzv3QcmC8=</Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName>CN=Hjkkjk</IssuerName>
+      </attributes>
+      <links />
+    </SysCert>
+    <SysCert>
+      <id Type="Int32">8</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/17/2023 13:54:29">-8585225492162429988</ChangeTime>
+        <Guid>55c52361-fcac-4235-8e9e-64e89d58c533</Guid>
+        <CreateTime Value="03/17/2023 13:49:45">-8585225494998784600</CreateTime>
+        <Thumbprint>0AAB3EE1090ABACFC494823B1E4A65EEF3253B7A</Thumbprint>
+        <SubjectName isNull="true" />
+        <LastSeenError isNull="true" />
+        <InverseQ></InverseQ>
+        <D></D>
+        <SerialNumber>00B210A8383EDC6806</SerialNumber>
+        <P></P>
+        <NotAfter Value="03/29/2023 02:00:00">-8585215588854775808</NotAfter>
+        <DP></DP>
+        <DQ></DQ>
+        <KId></KId>
+        <NotBefore Value="03/08/2023 01:00:00">-8585233732854775808</NotBefore>
+        <Modulus>z6iwApa4lukdhxLY2mM9TbNLhawLSv8HWp0Iu56hbwYIycCYtTM9mPALILA3jYDR/AxY6dvaeH5A/+V4cRJCYKAskBmHI4CtAb3q7g4Eh2J/KJ+EhZxJ4EwHSRdGor2IWUmmd8Xp6Rs9gCRktpFFey2iUYU4URQktfA5kF0QX+BtD31bwEkD4zvw8MBTHTIkZpc8QKJcxFxzxOxCRZEv2jcceukoWKF45kXTHeC+txNh0aK5gsUBaRoge/0bngRodrQc3CQyXoY9tN23reG7jHSghsrtJqV0ojR51PRJM3p9UANFuV7r6BUFEfAIpTEG+ZYw+dPqTpVUNkzo0LrpoQ==</Modulus>
+        <Q></Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName>CN=Hjkkjk</IssuerName>
+      </attributes>
+      <links />
+    </SysCert>
+    <SysCert>
+      <id Type="Int32">9</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="03/17/2023 13:54:29">-8585225492162429809</ChangeTime>
+        <Guid>4d3d80c6-b972-4e02-a761-af8e97c3a83c</Guid>
+        <CreateTime Value="03/17/2023 13:50:31">-8585225494536297885</CreateTime>
+        <Thumbprint>0AAB3EE1090ABACFC494823B1E4A65EEF3253B7A</Thumbprint>
+        <SubjectName>CN=Hjkkjk</SubjectName>
+        <LastSeenError isNull="true" />
+        <InverseQ></InverseQ>
+        <D></D>
+        <SerialNumber>00B210A8383EDC6806</SerialNumber>
+        <P></P>
+        <NotAfter Value="03/29/2023 02:00:00">-8585215588854775808</NotAfter>
+        <DP></DP>
+        <DQ></DQ>
+        <KId></KId>
+        <NotBefore Value="03/08/2023 01:00:00">-8585233732854775808</NotBefore>
+        <Modulus>z6iwApa4lukdhxLY2mM9TbNLhawLSv8HWp0Iu56hbwYIycCYtTM9mPALILA3jYDR/AxY6dvaeH5A/+V4cRJCYKAskBmHI4CtAb3q7g4Eh2J/KJ+EhZxJ4EwHSRdGor2IWUmmd8Xp6Rs9gCRktpFFey2iUYU4URQktfA5kF0QX+BtD31bwEkD4zvw8MBTHTIkZpc8QKJcxFxzxOxCRZEv2jcceukoWKF45kXTHeC+txNh0aK5gsUBaRoge/0bngRodrQc3CQyXoY9tN23reG7jHSghsrtJqV0ojR51PRJM3p9UANFuV7r6BUFEfAIpTEG+ZYw+dPqTpVUNkzo0LrpoQ==</Modulus>
+        <Q></Q>
+        <Exponent>AQAB</Exponent>
+        <IssuerName>CN=Hjkkjk</IssuerName>
+      </attributes>
+      <links />
+    </SysCert>
+  </Objects>
+  <ModelInfo>
+    <package name="ASPNETIdentityPackage">
+      <class name="SysUserRole" id="0c9bbb81-861f-466d-8b21-5e392939ae5b">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <associationend name="SysRoles" id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a.innerlink" />
+        <associationend name="SysUsers" id="2e115e1e-fcc5-432d-b68b-b8416b0b36db.innerlink" />
+      </class>
+      <class name="SysSuperClass" id="6002a3e3-a789-47f5-a2cb-24b5d30cb2ed">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+      </class>
+      <class name="SysUserClaim" id="62ce20fb-ddec-445c-95d3-c4bb6a09d9da">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="ClaimType" id="8dbb3aee-5e29-48c2-a7e8-deb982109222" />
+        <attribute name="ClaimValue" id="a98174fb-623a-4177-9191-f06c82330fd2" />
+        <attribute name="OriginalIssuer" id="b040b369-b8a5-4a40-bece-f3e8b3904071" />
+        <attribute name="ValueType" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a" />
+        <attribute name="Issuer" id="d2c02585-f187-40de-a32d-6682b908712d" />
+        <associationend name="SysUser" id="12532b0d-4a51-478d-aac8-906470b9eac5" />
+      </class>
+      <class name="SysSingleton" id="6d0ffbf2-dcb6-4c76-91aa-6217ca074a4f">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <associationend name="CurrentUser" id="c58f940a-682a-461e-9c0e-b8536f8381bf" />
+      </class>
+      <class name="SysCert" id="968a6621-9522-4f05-8ad0-336c9d04ccf1">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="Thumbprint" id="2cfc337d-f2bc-4f73-89ea-1722e67997c6" />
+        <attribute name="SubjectName" id="325ce6f1-317d-4d89-8650-6c6b18b37a48" />
+        <attribute name="LastSeenError" id="4ee570b2-a476-4267-8da8-8589ccf56608" />
+        <attribute name="InverseQ" id="5db2de10-be7b-451e-860f-e0a33bd9879b" />
+        <attribute name="D" id="66215fd8-9f22-46b5-bc56-f92be1429634" />
+        <attribute name="SerialNumber" id="6e2eec31-0575-415f-98c7-4a41b4a7a095" />
+        <attribute name="P" id="6e357db5-b78b-407a-8253-bb806ac8f13c" />
+        <attribute name="NotAfter" id="7c1d9751-7242-412d-a58f-d4c2dcf91969" />
+        <attribute name="DP" id="886299c9-6d58-4f32-8b7d-bf10ec879b06" />
+        <attribute name="DQ" id="935c8ecf-7007-4b09-bd45-d081a2550d0e" />
+        <attribute name="KId" id="9864c2a1-4e1c-454d-b29a-038f447b3db4" />
+        <attribute name="NotBefore" id="9a4e700c-cb01-448f-a27e-d54ab71be27a" />
+        <attribute name="Modulus" id="b2775278-6d54-410b-bfe1-47e4912eff1a" />
+        <attribute name="Q" id="e4055462-c83f-4429-89d6-92656bc54cba" />
+        <attribute name="Exponent" id="e43e2e6f-b24a-4cf4-bd8e-2ab13c5ea9c0" />
+        <attribute name="IssuerName" id="ec436ebe-04d3-4c03-b326-9fd6b4d40936" />
+      </class>
+      <class name="SysRole" id="bb1489ca-583d-4002-968d-653cf9392c94">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="Name" id="59e869ad-6136-49a7-86d2-074a6595cdf9" />
+      </class>
+      <class name="SysExternalLogin" id="bf3187f3-9dae-477a-bc2e-18be4e75984c">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="LoginProvider" id="172a11ee-84fb-412e-8f05-520d45d21416" />
+        <attribute name="ProviderKey" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98" />
+        <associationend name="SysUser" id="8847b309-9ee6-4258-8365-0b100f9c6108" />
+      </class>
+      <class name="SysUser" id="d8f8ba5c-b396-4172-8899-39a88d61f85f">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="SendMeNews" id="478748bb-b51a-466c-a099-ce7722d20731" />
+        <attribute name="IsAdmin" id="6abf6cc3-a120-48a2-a612-4f1c13c95b60" />
+        <attribute name="Id" id="89122322-2cab-435d-8720-ab8c961dc818" />
+        <attribute name="PasswordHash" id="977ffc63-785a-46d8-adc7-59b60a1ff106" />
+        <attribute name="UserName" id="9f49bb8e-ae50-4ec5-85e5-79c907bafdd3" />
+        <attribute name="SecurityStamp" id="f735f6e1-6746-41d8-b1a2-f2084b7b12d2" />
+      </class>
+    </package>
+  </ModelInfo>
+  <AutoIncValues>
+    <id value="10" />
+    <version value="2" />
+  </AutoIncValues>
+</EcoData>

@@ -119,7 +119,7 @@
         <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="132" ShowAttributes="False" ShowMethods="False" Size="1" x="232" y="144" id="f93a48db-c627-4124-85e1-a65183800504">
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="105" ShowAttributes="False" ShowMethods="False" Size="1" x="232" y="144" id="f93a48db-c627-4124-85e1-a65183800504">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-8" y="49" id="02bc5d0c-5714-4589-84e7-2b2da2227fe4">
           <AssociationEnd>

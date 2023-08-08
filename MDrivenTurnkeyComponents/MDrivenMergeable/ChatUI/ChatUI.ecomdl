@@ -1,0 +1,54 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="9cf25450-3caf-4804-8961-a4f51a3a610c" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="761aafbc-22bc-4cd3-a41f-eb5724a3551b" />
+    <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
+  </Diagrams>
+  <Spans>
+    <Span Name="AutoFormSysUserClaimSeeker" FileName="AutoFormSysUserClaimSeeker" GUID="104d38f1-74af-4d6b-b79a-1fbd1b9c832a" />
+    <Span Name="AutoFormChannelSeeker" FileName="AutoFormChannelSeeker" GUID="14643d47-afc9-4468-b39d-518de304072c" />
+    <Span Name="AutoFormSysExternalLoginSeeker" FileName="AutoFormSysExternalLoginSeeker" GUID="169cf38f-f515-40cb-8980-636afbcd8b19" />
+    <Span Name="AutoFormChannelSysUsersMultiLink" FileName="AutoFormChannelSysUsersMultiLink" GUID="176c4abc-2673-42ad-bf86-d9b2eac6843c" />
+    <Span Name="AutoFormSysUserSubscriptionMultiLink" FileName="AutoFormSysUserSubscriptionMultiLink" GUID="1f6af679-1861-437e-a13f-999c39ff4fa4" />
+    <Span Name="AutoFormSubscription" FileName="AutoFormSubscription" GUID="26f6c1f3-22da-475c-a071-2f6578129a2d" />
+    <Span Name="AutoFormSysUserSysUserRoleMultiLink" FileName="AutoFormSysUserSysUserRoleMultiLink" GUID="34d048aa-e9dd-449a-b1b4-cd689db06dc0" />
+    <Span Name="AutoFormSysExternalLogin" FileName="AutoFormSysExternalLogin" GUID="364eb1e4-d747-4b0e-833e-719f9beed0c1" />
+    <Span Name="AutoFormSysUserMessagesMultiLink" FileName="AutoFormSysUserMessagesMultiLink" GUID="36dfd530-22d9-4918-a4f3-fcf6a851aef2" />
+    <Span Name="AutoFormSysSuperClassSeeker" FileName="AutoFormSysSuperClassSeeker" GUID="381c1f6e-837d-4b0e-a256-5ba3d27bea84" />
+    <Span Name="AutoFormSysUserRole" FileName="AutoFormSysUserRole" GUID="3bec7769-62d2-4b74-be2b-2c2e47b82595" />
+    <Span Name="AutoFormSysUserSeeker" FileName="AutoFormSysUserSeeker" GUID="40b9280c-0f34-4a43-bc66-18e5b587931b" />
+    <Span Name="AutoFormSysUserClaim" FileName="AutoFormSysUserClaim" GUID="4b7d2a1d-240d-4bd7-a0fc-f17e20305265" />
+    <Span Name="AutoFormSysUserSysRolesMultiLink" FileName="AutoFormSysUserSysRolesMultiLink" GUID="50c35b0c-2ffa-4417-b580-07b62744130e" />
+    <Span Name="AutoFormSysUser" FileName="AutoFormSysUser" GUID="51572cd9-f720-4313-8472-8d18d1e8aecb" />
+    <Span Name="AutoFormSysUserSysExternalLoginsMultiLink" FileName="AutoFormSysUserSysExternalLoginsMultiLink" GUID="519074ed-589b-4c7c-909f-501988ffc9df" />
+    <Span Name="AutoFormChannel" FileName="AutoFormChannel" GUID="54df6c7e-0750-40c5-827e-344aa291dda1" />
+    <Span Name="AutoFormMessageSeeker" FileName="AutoFormMessageSeeker" GUID="776885fb-a5a8-4226-b53f-52a40879bce0" />
+    <Span Name="AutoFormChannelMessagesMultiLink" FileName="AutoFormChannelMessagesMultiLink" GUID="79fd0e97-36c9-4cf9-bba8-7ee35ff58a2d" />
+    <Span Name="IntroTestView" FileName="IntroTestView" GUID="7fbaafe6-54e7-482e-bd73-c118f9095842" />
+    <Span Name="AutoFormSysSingleton" FileName="AutoFormSysSingleton" GUID="80845935-77f3-40e9-b002-274157720d54" />
+    <Span Name="AutoFormSysUserRoleSeeker" FileName="AutoFormSysUserRoleSeeker" GUID="887966d5-e34b-4ab2-932c-68105b06d12c" />
+    <Span Name="AutoFormSysRoleSysUserRoleMultiLink" FileName="AutoFormSysRoleSysUserRoleMultiLink" GUID="8906102b-b60b-474b-ab90-7be0d80ff1b6" />
+    <Span Name="AutoFormSysSuperClass" FileName="AutoFormSysSuperClass" GUID="90f9cea0-8e8a-4c9c-8c81-79ac7c9e45e8" />
+    <Span Name="AutoFormSysRoleSysUsersMultiLink" FileName="AutoFormSysRoleSysUsersMultiLink" GUID="9d7db196-9a4b-434c-90e3-4c29f0bb1528" />
+    <Span Name="AutoFormMessage" FileName="AutoFormMessage" GUID="9f3d15bc-9fe0-4b25-a547-5f063aa917be" />
+    <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
+    <Span Name="AutoFormSysUserSysUserClaimsMultiLink" FileName="AutoFormSysUserSysUserClaimsMultiLink" GUID="ac442205-2992-4942-8af3-587a7087f303" />
+    <Span Name="ChatView" FileName="ChatView" GUID="bbd52e00-65ad-4e81-84f7-4568c2ff7c73" />
+    <Span Name="ExposeMessagesWithRest" FileName="ExposeMessagesWithRest" GUID="cc4e7ecd-a353-4edc-a1fd-ea0d02ab4f2d" />
+    <Span Name="AutoFormChannelSubscriptionMultiLink" FileName="AutoFormChannelSubscriptionMultiLink" GUID="d0055523-1a9e-4712-9709-fdc0e58abf8f" />
+    <Span Name="AutoFormSysSingletonSeeker" FileName="AutoFormSysSingletonSeeker" GUID="d8e3cf4f-0f3f-436e-9d47-15cb2b9d195b" />
+    <Span Name="AutoFormSysRoleSeeker" FileName="AutoFormSysRoleSeeker" GUID="dd9954eb-5642-4726-9433-7de7c73dc9af" />
+    <Span Name="AutoFormSysRole" FileName="AutoFormSysRole" GUID="e158b8bb-11c7-4c0f-9e9c-6dc7bb30c138" />
+    <Span Name="AutoFormSubscriptionSeeker" FileName="AutoFormSubscriptionSeeker" GUID="ee116d43-4340-4812-8b89-af7f38f520f2" />
+    <Span Name="AutoFormSysUserChannelsMultiLink" FileName="AutoFormSysUserChannelsMultiLink" GUID="f6b8bf61-2fdf-4fb5-a24e-43bad4662168" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

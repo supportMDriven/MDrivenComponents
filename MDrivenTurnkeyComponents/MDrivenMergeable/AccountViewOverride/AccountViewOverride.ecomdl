@@ -1,0 +1,26 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="dd9442a4-a948-443c-8307-167f1e6a5429" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
+  </Diagrams>
+  <Spans>
+    <Span Name="AccountRegister" FileName="AccountRegister" GUID="37478d53-1964-4e2d-b901-efe0d5290bc0" />
+    <Span Name="ViewOneThing" FileName="ViewOneThing" GUID="5845c5aa-d532-410f-8dd3-4771b0c890a6" />
+    <Span Name="AccountManage" FileName="AccountManage" GUID="9ee733d5-dcac-40f0-ad28-7bcdeb768041" />
+    <Span Name="AllThings" FileName="AllThings" GUID="c69b74a7-8f16-402f-a80c-e1417ec241ce" />
+    <Span Name="AccountLogin" FileName="AccountLogin" GUID="d59b4e0a-0b34-404e-bfae-3a4967596257" />
+    <Span Name="FreeStandingLogin" FileName="FreeStandingLogin" GUID="e64d43fd-2560-4116-9130-cee7f1edafbd" />
+    <Span Name="ViewValueStore" FileName="ViewValueStore" GUID="ee44595c-317c-45cf-b3d4-1f7b2a82e571" />
+    <Span Name="Index" FileName="Index" GUID="f1111575-daa9-480a-b9bd-305828f7191d" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

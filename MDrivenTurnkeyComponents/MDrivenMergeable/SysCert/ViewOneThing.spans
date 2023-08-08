@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Span Name="ViewOneThing" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b0db4fde-4a19-4424-911d-1eb5829ae6cf">
-  <Class>
-    <Class Name="Thing" idref="3148796c-3366-44f7-ba32-ad00cd0d4e79" />
-  </Class>
   <Nesting>
     <Nesting Name="SomeValue_PickListPresentation" ExpressionActAsForActions="" id="9fdf185a-90d8-41a6-811a-f14c98d881c2">
-      <Class>
-        <Class Name="ValueStore" idref="62bef8a7-6972-4f65-8313-0c8d635e419a" />
-      </Class>
       <OwnedColumns>
         <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7ba498a2-ebc9-4234-a201-9a88d87fbfc3" />
       </OwnedColumns>
@@ -16,9 +10,6 @@
       </ReferedByColumn>
     </Nesting>
     <Nesting Name="Details" ExpressionActAsForActions="" id="4e83910a-a54d-4bdb-b817-d1ec62bb638c">
-      <Class>
-        <Class Name="Detail" idref="ecb961ce-5aee-40d3-8e41-55fff3a9795c" />
-      </Class>
       <OwnedColumns>
         <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="62a9694a-12a4-4081-9f36-553d939c8345" />
         <Column Name="Attribute2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Attribute2" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="7ea2cedf-fff9-42b4-9a9f-71f7ae4ca6e8" />
@@ -33,11 +24,7 @@
     </Nesting>
   </Nesting>
   <OptOutActionInSpan>
-    <OptOutActionInSpan>
-      <AbstractAction>
-        <ClassAction Name="ViewOneThing" idref="be8bb9b9-32da-4502-b6c4-5a95adea95d9" />
-      </AbstractAction>
-    </OptOutActionInSpan>
+    <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
     <Column Name="SomeDateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeDateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="174f6078-42f0-4138-9237-691b715664be">

@@ -7,7 +7,115 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysCert\Index.spans" />
+    <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
+    <None Remove="MDrivenMergeable\SysUserAuthentication\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysUserAuthentication\Index.spans" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="EXT_Components\Cards\" />
+    <Folder Include="MDrivenMergeable\Office365\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Index.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AllThings.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AccountManage.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AccountRegister.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\AccountLogin.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Actions.actions">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysCert\Actions.actions">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysCert\Index.spans">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysUserAuthentication\Actions.actions">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysUserAuthentication\Index.spans">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MDrivenMergeable\AccountViewOverride\ASPNETIdentity.ecopkg">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\AccountViewOverride\ForASPNETIdentity.ecodiag">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\AccountViewOverride\ModlrProject.mproj">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\AccountViewOverride\Snippets.snippets">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysUserAuthentication\ModlrProject.mproj">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\ViewOneThing.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\ViewValueStore.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MDrivenMergeable\AccountViewOverride\Diagram1.ecodiag">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\AccountViewOverride\documentation.modlrdoc">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\ASPNETIdentity.ecopkg">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\documentation.modlrdoc">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\ForASPNETIdentity.ecodiag">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\Snippets.snippets">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
+      <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysUserAuthentication\AuthenticationPackage.ecopkg">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysUserAuthentication\documentation.modlrdoc">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysUserAuthentication\ForASPNETIdentity.ecodiag">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysUserAuthentication\Snippets.snippets">
+      <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
+    </None>
   </ItemGroup>
 
 </Project>

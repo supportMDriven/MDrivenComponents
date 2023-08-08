@@ -1,19 +1,16 @@
 <Model>
   <Packages>
-    <Package Name="Package1" FileName="Package1" GUID="dd9442a4-a948-443c-8307-167f1e6a5429" />
     <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
   </Packages>
   <ReferencedPackages />
   <TagExtensions />
   <Diagrams>
     <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
-    <Diagram Name="Diagram1" FileName="Diagram1" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
+    <Diagram Name="SysCert" FileName="SysCert" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
   </Diagrams>
   <Spans>
-    <Span Name="ViewAllThings" FileName="ViewAllThings" GUID="15a04ef5-e678-4fb7-835f-ae1aa1f5c416" />
-    <Span Name="ViewValueStore" FileName="ViewValueStore" GUID="816c1ddb-97ad-4e31-9846-6865c6d0c12c" />
-    <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
-    <Span Name="ViewOneThing" FileName="ViewOneThing" GUID="b0db4fde-4a19-4424-911d-1eb5829ae6cf" />
+    <Span Name="Index" FileName="Index" GUID="6e37e383-bc14-4c42-ad3f-8ca80c340452" />
+    <Span Name="ShowSysCert" FileName="ShowSysCert" GUID="79f8dc84-ea92-4ec3-99f6-3848e77d5c37" />
   </Spans>
   <Report />
   <ModlrProject>

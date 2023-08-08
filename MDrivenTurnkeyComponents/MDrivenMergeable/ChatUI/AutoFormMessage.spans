@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormMessage" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="9" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9f3d15bc-9fe0-4b25-a547-5f063aa917be">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowMessage" idref="0d13e9be-41af-43f9-a953-40890aea0b57" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="Show_Channel" idref="15241295-e700-4fdd-a833-6df357bdecf8" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="Show_SysUser" idref="d096bf54-45f0-46be-a7b7-33718cd82b0d" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="3c392424-48a8-4f15-b4a6-499cef5ee35a" />
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="c54db753-95e5-4b54-b92d-6eb95a271105" />
+    <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="ee47af5f-49b6-4cf9-b32e-ecf559983488" />
+    <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Text" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="3" id="caba6706-fc63-4e1d-bce6-47441cb8a4f8" />
+    <Column Name="Channel" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Channel.asstring" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="098a2145-f483-45f7-a006-bfa8435430d2" />
+    <Column Name="Channel_pick" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Set" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="6" id="5ead8944-cf64-427f-8a36-d2b18c0bf37b">
+      <ActionToExecute>
+        <ContextAction Name="SingleLinkSwitchChannel" idref="18b9f6a3-b353-4dc7-b03e-3e2c36c7f219" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="SysUser" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysUser.asstring" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="791b27fa-cbf5-43b6-a450-466cc4b0e3d6" />
+    <Column Name="SysUser_pick" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Set" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="7" id="b98ccf6d-c247-4da1-9070-b79466a9eeee">
+      <ActionToExecute>
+        <ContextAction Name="SingleLinkSwitchSysUser" idref="b992b20a-a8ca-4366-9280-11230e41dc4c" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="Channel_Show" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="6" id="5b4ed196-3b65-49c4-96d1-1c9adfd0455c">
+      <ActionToExecute>
+        <ContextAction Name="Show_Channel" idref="15241295-e700-4fdd-a833-6df357bdecf8" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="SysUser_Show" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="7" id="572bafc8-3624-4db8-a826-e75d999510a5">
+      <ActionToExecute>
+        <ContextAction Name="Show_SysUser" idref="d096bf54-45f0-46be-a7b7-33718cd82b0d" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="Save" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="selfVM.Save" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="1" id="539c0d82-ccd8-47da-8d8a-f1d47f19a15a" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

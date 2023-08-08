@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EcoData>
+  <Objects>
+    <SysSingleton>
+      <id Type="Int32">0</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:24:08">-8585174318365554714</ChangeTime>
+        <Guid>27a32454-14e1-43b9-be54-acba013f631b</Guid>
+        <CreateTime Value="05/15/2023 20:24:08">-8585174318365571713</CreateTime>
+      </attributes>
+      <links />
+    </SysSingleton>
+    <Channel>
+      <id Type="Int32">1</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:32:50">-8585174313145628583</ChangeTime>
+        <Guid>8c2c6d14-6a5d-45a6-9228-20d8fd5a5ae2</Guid>
+        <CreateTime Value="05/15/2023 20:25:49">-8585174317357605354</CreateTime>
+        <LatestMessage Value="05/15/2023 20:32:50">-8585174313145658383</LatestMessage>
+        <Description isNull="true" />
+        <Name>Channnel1</Name>
+      </attributes>
+      <links />
+    </Channel>
+    <SysUser>
+      <id Type="Int32">2</id>
+      <timestamp>1</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:26:40">-8585174316854021822</ChangeTime>
+        <Guid>cc2eb88c-fd5e-4fc0-9f7b-1336ec784cc9</Guid>
+        <CreateTime Value="05/15/2023 20:26:40">-8585174316854061259</CreateTime>
+        <SendMeNews isNull="true" />
+        <IsAdmin isNull="true" />
+        <Id>c07704b7-4f72-4b5d-ad80-de10e936b313</Id>
+        <PasswordHash>AQAAAAEAACcQAAAAEB0sXU4/KkUF2gEvWMBPpjPC7LEK78qCOwfMPHOebdOWw7dEzHrcbX/dPqGfEaGAFg==</PasswordHash>
+        <UserName>a@a.se</UserName>
+        <SecurityStamp isNull="true" />
+      </attributes>
+      <links />
+    </SysUser>
+    <SysUser>
+      <id Type="Int32">3</id>
+      <timestamp>2</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:27:00">-8585174316649950895</ChangeTime>
+        <Guid>f2b72784-e4f4-4f80-a4e5-63f729e4eea3</Guid>
+        <CreateTime Value="05/15/2023 20:27:00">-8585174316649963643</CreateTime>
+        <SendMeNews isNull="true" />
+        <IsAdmin isNull="true" />
+        <Id>1eccabf0-32b8-41ae-83d7-47e935c9eb10</Id>
+        <PasswordHash>AQAAAAEAACcQAAAAENA7f6Pa3EyGuyC1cykbcChUoHE+gWZJ33P81m10CaNouKx9BrQDhxWwXrgTaY7tOQ==</PasswordHash>
+        <UserName>b@b.se</UserName>
+        <SecurityStamp isNull="true" />
+      </attributes>
+      <links />
+    </SysUser>
+    <Subscription>
+      <id Type="Int32">4</id>
+      <timestamp>3</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:29:38">-8585174315067835746</ChangeTime>
+        <Guid>a2ba5e7a-c80d-486e-9b9c-aac571c9d9a4</Guid>
+        <CreateTime Value="05/15/2023 20:29:37">-8585174315081709165</CreateTime>
+      </attributes>
+      <links>
+        <Channels>
+          <type>Channel</type>
+          <id Type="Int32">1</id>
+        </Channels>
+        <SysUsers>
+          <type>SysUser</type>
+          <id Type="Int32">2</id>
+        </SysUsers>
+      </links>
+    </Subscription>
+    <Subscription>
+      <id Type="Int32">5</id>
+      <timestamp>3</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:29:38">-8585174315067835423</ChangeTime>
+        <Guid>4e50f04e-b853-415e-9562-d51949086385</Guid>
+        <CreateTime Value="05/15/2023 20:29:37">-8585174315081691736</CreateTime>
+      </attributes>
+      <links>
+        <Channels>
+          <type>Channel</type>
+          <id Type="Int32">1</id>
+        </Channels>
+        <SysUsers>
+          <type>SysUser</type>
+          <id Type="Int32">3</id>
+        </SysUsers>
+      </links>
+    </Subscription>
+    <Message>
+      <id Type="Int32">6</id>
+      <timestamp>4</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:30:15">-8585174314702002040</ChangeTime>
+        <Guid>f88a6c32-e6d8-4454-9867-62738f484645</Guid>
+        <CreateTime Value="05/15/2023 20:30:07">-8585174314777648700</CreateTime>
+        <Text>hello</Text>
+      </attributes>
+      <links>
+        <Channel>
+          <type>Channel</type>
+          <id Type="Int32">1</id>
+          <ordernum>0</ordernum>
+        </Channel>
+        <SysUser />
+      </links>
+    </Message>
+    <Message>
+      <id Type="Int32">7</id>
+      <timestamp>0</timestamp>
+      <attributes>
+        <ChangeTime Value="05/15/2023 20:32:50">-8585174313145628947</ChangeTime>
+        <Guid>35f110ef-0514-4398-b38f-b80bd7cca4f8</Guid>
+        <CreateTime Value="05/15/2023 20:32:50">-8585174313145664506</CreateTime>
+        <Text>sdlfjsdfkjgvfds</Text>
+      </attributes>
+      <links>
+        <Channel>
+          <type>Channel</type>
+          <id Type="Int32">1</id>
+          <ordernum>1</ordernum>
+        </Channel>
+        <SysUser>
+          <type>SysUser</type>
+          <id Type="Int32">3</id>
+        </SysUser>
+      </links>
+    </Message>
+  </Objects>
+  <ModelInfo>
+    <package name="Package1Package">
+      <class name="Message" id="46cfd21a-b52a-42ae-929a-3ed9099f49f4">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="Text" id="4fc38588-0ac2-4846-a413-e6f5648815eb" />
+        <associationend name="Channel" id="129536ea-c319-4233-af6f-af74915052c6" />
+        <associationend name="SysUser" id="bb78d487-1057-44fc-812a-f38cd076f82a" />
+      </class>
+      <class name="Channel" id="8cecb31d-8d8f-49d7-833f-e1605374f33c">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="LatestMessage" id="161d7e0d-7e51-4511-b5fc-8b80f1c493f2" />
+        <attribute name="Description" id="4c57c70c-f3a9-4ca8-957d-d972bdf11568" />
+        <attribute name="Name" id="d797600a-6d05-4f8c-bf13-f222d7849773" />
+      </class>
+      <class name="Subscription" id="ab33924d-f9b3-492d-8ca3-b47f1763cf88">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <associationend name="Channels" id="584f28bd-d562-415d-95e0-8db7e422c1ad.innerlink" />
+        <associationend name="SysUsers" id="6ab5af22-e90a-4256-ad6d-8c3b1b493a53.innerlink" />
+      </class>
+      <class name="Dummy" id="e57f2e77-7ff9-4c4e-8cf3-7b17f50b4ee8">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="Attribute1xxxxxx" id="7c54ad3a-586b-4325-8581-45f9b40345c3" />
+      </class>
+    </package>
+    <package name="ASPNETIdentityPackage">
+      <class name="SysUser" id="0017d588-d3cf-433b-b763-93ae056419c3">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="SendMeNews" id="478748bb-b51a-466c-a099-ce7722d20731" />
+        <attribute name="IsAdmin" id="6abf6cc3-a120-48a2-a612-4f1c13c95b60" />
+        <attribute name="Id" id="89122322-2cab-435d-8720-ab8c961dc818" />
+        <attribute name="PasswordHash" id="977ffc63-785a-46d8-adc7-59b60a1ff106" />
+        <attribute name="UserName" id="9f49bb8e-ae50-4ec5-85e5-79c907bafdd3" />
+        <attribute name="SecurityStamp" id="f735f6e1-6746-41d8-b1a2-f2084b7b12d2" />
+      </class>
+      <class name="SysUserRole" id="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <associationend name="SysRoles" id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a.innerlink" />
+        <associationend name="SysUsers" id="2e115e1e-fcc5-432d-b68b-b8416b0b36db.innerlink" />
+      </class>
+      <class name="SysSuperClass" id="305f131d-d82d-49fa-8735-f894e1d58636">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+      </class>
+      <class name="SysRole" id="56e1db7e-00b4-4273-bb39-1e8ad181328b">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="Name" id="59e869ad-6136-49a7-86d2-074a6595cdf9" />
+      </class>
+      <class name="SysExternalLogin" id="8ea431b6-73df-4536-a07a-751b01f5dd17">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="LoginProvider" id="172a11ee-84fb-412e-8f05-520d45d21416" />
+        <attribute name="ProviderKey" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98" />
+        <associationend name="SysUser" id="8847b309-9ee6-4258-8365-0b100f9c6108" />
+      </class>
+      <class name="SysSingleton" id="ad4cf46f-0195-4197-bef2-9f8dd89a3870">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <associationend name="CurrentUser" id="c58f940a-682a-461e-9c0e-b8536f8381bf" />
+      </class>
+      <class name="SysUserClaim" id="d463013a-d624-45c4-80fd-73d63fd488fa">
+        <attribute name="ChangeTime" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd" />
+        <attribute name="Guid" id="6c4398ca-d6f8-4763-b162-77c675aa06dc" />
+        <attribute name="CreateTime" id="89803d28-5552-457f-bc84-33f0bf1ba9eb" />
+        <attribute name="ClaimType" id="8dbb3aee-5e29-48c2-a7e8-deb982109222" />
+        <attribute name="ClaimValue" id="a98174fb-623a-4177-9191-f06c82330fd2" />
+        <attribute name="OriginalIssuer" id="b040b369-b8a5-4a40-bece-f3e8b3904071" />
+        <attribute name="ValueType" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a" />
+        <attribute name="Issuer" id="d2c02585-f187-40de-a32d-6682b908712d" />
+        <associationend name="SysUser" id="12532b0d-4a51-478d-aac8-906470b9eac5" />
+      </class>
+    </package>
+  </ModelInfo>
+  <AutoIncValues>
+    <id value="7" />
+    <version value="0" />
+  </AutoIncValues>
+</EcoData>

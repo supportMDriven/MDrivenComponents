@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ChatView" ColCount="4" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bbd52e00-65ad-4e81-84f7-4568c2ff7c73">
+  <Class>
+    <Class Name="Channel" idref="8cecb31d-8d8f-49d7-833f-e1605374f33c" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Message" ExpressionActAsForActions="" id="7ba76605-865e-4185-b2e3-e817ea0243d5">
+      <Class>
+        <Class Name="Message" idref="46cfd21a-b52a-42ae-929a-3ed9099f49f4" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Text" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="884a51b3-4d56-481e-9a3c-91b116fb7d5c">
+          <PlacingContainer>
+            <PlacingContainer idref="99e66ae1-2cdd-4848-bdf9-a753af9cea9b" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'User:'+self.SysUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="userinfo" XPos="1" YPos="2" id="3905c7cc-93b5-470e-ad92-4b7f3899ed8b">
+          <PlacingContainer>
+            <PlacingContainer idref="9c25eb94-565a-4991-88e8-fdf1dd940349" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'chat-history'" Type="Column" VisibleExpression="" Wrap="False" id="f52d624d-4c6f-490e-9f73-c0c533a4d8a0">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="5fdc6c06-4d84-40c3-a2b0-35c5c1b0dbc3">
+              <ChildContainers>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="02890670-a7b1-492f-a08c-ed9cd28ae2a5">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="9c25eb94-565a-4991-88e8-fdf1dd940349" />
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="if self.SysUser=SysSingleton.oclSingleton.CurrentUser then&#xD;&#xA;  'chatmymessage'&#xD;&#xA;else&#xD;&#xA;  'chatothermessage'&#xD;&#xA;endif" Type="Column" VisibleExpression="" Wrap="False" id="99e66ae1-2cdd-4848-bdf9-a753af9cea9b" />
+                  </ChildContainers>
+                </PlacingContainer>
+              </ChildContainers>
+            </PlacingContainer>
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="Messages" idref="323c9e6a-2a06-48cc-bc66-6e74c30f7f4e" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="EnteredText" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vEnteredText " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="d208b889-1204-4824-a0cd-61a7e40990b2">
+      <PlacingContainer>
+        <PlacingContainer Name="The input box" idref="1b480d37-20c6-490a-ab0e-e69d5827abcd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="NumberOfMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vCurrent_ChatView.Messages-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="dd5ebe6e-a6a4-423b-ad15-e096c3ebed12">
+      <PlacingContainer>
+        <PlacingContainer Name="The input box" idref="1b480d37-20c6-490a-ab0e-e69d5827abcd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="TheChatInputBox" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" ContentOverride="True" Expression="vCurrent_ChatView" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="18" StyleRef="" XPos="0" YPos="0" id="f634ec0d-a9e1-4214-b65c-03b19f50c1c5">
+      <PlacingContainer>
+        <PlacingContainer Name="The input box" idref="1b480d37-20c6-490a-ab0e-e69d5827abcd" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="chat" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SendAction" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vEnteredText.isnullorempty-&gt;casetruefalse(false,&#xD;&#xA;  let newmess=Message.Create in&#xD;&#xA;  (&#xD;&#xA;     newmess.SysUser:=SysSingleton.oclSingleton.CurrentUser;&#xD;&#xA;     newmess.Channel:=vCurrent_ChatView;&#xD;&#xA;     newmess.Text:=vEnteredText;&#xD;&#xA;     vEnteredText:='';&#xD;&#xA;     vCurrent_ChatView.LatestMessage:=DateTime.Now;&#xD;&#xA;     selfVM.Save;&#xD;&#xA;     true&#xD;&#xA;  )&#xD;&#xA;)" ExpressionForReadOnly="vCurrent_ChatView.isnull " ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="656c29ea-98b2-4bdd-97a7-c1e60902f29a">
+      <PlacingContainer>
+        <PlacingContainer Name="The input box" idref="1b480d37-20c6-490a-ab0e-e69d5827abcd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="LatestMessage" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.LatestMessage" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="ecfb74f5-eb1c-4d44-a551-3cc4c568a63f">
+      <PlacingContainer>
+        <PlacingContainer Name="The input box" idref="1b480d37-20c6-490a-ab0e-e69d5827abcd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Messages.Add(let m=Message.Create in (m.Text:='Some answer';m));&#xD;&#xA;selfVM.Save&#xD;&#xA;" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="7844836b-12be-4a66-9007-793cf2344bbc">
+      <PlacingContainer>
+        <PlacingContainer idref="37b93565-e048-4f20-881e-65c504a10240" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Messages" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrent_ChatView.Messages" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="2" id="323c9e6a-2a06-48cc-bc66-6e74c30f7f4e">
+      <PlacingContainer>
+        <PlacingContainer Name="the chat history" idref="6c5a5f1f-e0bf-4b1f-9484-ac5c50d9c658" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Message" idref="7ba76605-865e-4185-b2e3-e817ea0243d5" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="562231ce-8232-4c41-a95d-af7d414e0b53">
+      <ChildContainers>
+        <PlacingContainer Name="the chat history" AlignContent="Start" AlignItem="NotSet" CanScroll="True" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="6c5a5f1f-e0bf-4b1f-9484-ac5c50d9c658" />
+        <PlacingContainer Name="The input box" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MaxSize="200" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="1b480d37-20c6-490a-ab0e-e69d5827abcd" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="37b93565-e048-4f20-881e-65c504a10240" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vEnteredText" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

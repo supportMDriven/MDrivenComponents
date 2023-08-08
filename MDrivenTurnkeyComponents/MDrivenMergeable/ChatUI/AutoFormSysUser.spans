@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormSysUser" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="17" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="51572cd9-f720-4313-8472-8d18d1e8aecb">
+  <Category>
+    <Category Name="AutoForms" idref="84276edf-46a7-4051-8483-6451773db5e1" />
+  </Category>
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSysUser" idref="f5a26a59-413d-4def-921f-9d6aadaa41f9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkChannels" idref="e9c9a03b-f493-4913-ac4c-5994f02cc620" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSubscription" idref="d0799543-d499-4650-8e4f-355bb8624833" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkMessages" idref="52047c3d-be82-4dc2-8cf3-d37a573b9732" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSysExternalLogins" idref="12516290-ed83-41a5-b5d2-1cb60531f441" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSysRoles" idref="ef0e5752-e9d2-4996-8fac-304ba3b7dcb7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSysUserRole" idref="7d023cd6-36f6-41ed-ab2e-cfab155dbcf0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction Name="MultiLinkSysUserClaims" idref="676ace78-fa99-49d9-9c38-8328d91a7db7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="04ebd669-8b2f-4ae4-94a0-828ea3fab23a" />
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="1c23a66c-24af-45bf-a5ff-94ad6c3aac17" />
+    <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="56835ba3-1787-4c0d-9b3b-c5a7db1e4f86" />
+    <Column Name="Id" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Id" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="b5a5ec67-36f5-4e71-a75b-bf10a3e1b297" />
+    <Column Name="IsAdmin" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.IsAdmin" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="b7279944-e6d8-41d2-b581-2b739bde33b2" />
+    <Column Name="PasswordHash" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.PasswordHash" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="4c227ac4-7677-46ea-a088-6e5b95892311" />
+    <Column Name="SecurityStamp" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SecurityStamp" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="fca58832-8bf4-41d7-9cc8-34f7c5313000" />
+    <Column Name="SendMeNews" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SendMeNews" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="a3743427-17af-44b3-85d1-5ed63c47df84" />
+    <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="b09747f2-879c-473a-949e-12b1782a89f3" />
+    <Column Name="ShowMultiLink_Channels" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="92705486-75fb-4617-9b33-b03c902d1b23">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkChannels" idref="e9c9a03b-f493-4913-ac4c-5994f02cc620" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_Subscription" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="869e76f5-0b76-49f5-9eb5-7b172359dc7e">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSubscription" idref="d0799543-d499-4650-8e4f-355bb8624833" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_Messages" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="330ca836-0468-458b-af2b-939238529ef2">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkMessages" idref="52047c3d-be82-4dc2-8cf3-d37a573b9732" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_SysExternalLogins" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="12" id="5293d46d-ed08-415a-82b9-432667ca0c69">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSysExternalLogins" idref="12516290-ed83-41a5-b5d2-1cb60531f441" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_SysRoles" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="13" id="5452d12d-fe3d-446a-ae0b-b126e199f068">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSysRoles" idref="ef0e5752-e9d2-4996-8fac-304ba3b7dcb7" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_SysUserRole" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="14" id="4923ab66-0a94-4079-b27e-e72eb3bdc301">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSysUserRole" idref="7d023cd6-36f6-41ed-ab2e-cfab155dbcf0" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ShowMultiLink_SysUserClaims" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;..." PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="15" id="2465bfe5-03fa-4d73-bed0-f7e8fbfdf861">
+      <ActionToExecute>
+        <ContextAction Name="MultiLinkSysUserClaims" idref="676ace78-fa99-49d9-9c38-8328d91a7db7" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

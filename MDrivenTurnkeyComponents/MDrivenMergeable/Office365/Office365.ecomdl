@@ -1,0 +1,20 @@
+<Model>
+  <Packages>
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
+    <Diagram Name="Ofiice365Authorize" FileName="Ofiice365Authorize" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
+  </Diagrams>
+  <Spans>
+    <Span Name="Office365Authorize" FileName="Office365Authorize" GUID="3f134e06-7a40-43d6-9510-43aa28a45ca7" />
+    <Span Name="Index" FileName="Index" GUID="6e37e383-bc14-4c42-ad3f-8ca80c340452" />
+    <Span Name="GoHereWhenLoggedIn" FileName="GoHereWhenLoggedIn" GUID="bef2c107-6b1a-4450-a5db-b6f44eea4c94" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>
