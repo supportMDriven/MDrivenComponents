@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="EXT_Components\Cards\" />
-    <Folder Include="MDrivenDesignerSnippets\" />
   </ItemGroup>
 
 </Project>
