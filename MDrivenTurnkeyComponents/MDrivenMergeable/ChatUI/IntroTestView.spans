@@ -37,6 +37,11 @@
         <TaggedValue Tag="UIFirst" Value="String" />
       </TaggedValue>
     </Column>
+    <Column Name="OpenChat" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="fe3cb9fe-44e7-4115-a4aa-c4e4de77c6e4">
+      <ActionToExecute>
+        <ContextAction Name="OpenChatChannel" idref="d7ba7cf4-9c46-49e5-b60f-b6bdf8d301d4" />
+      </ActionToExecute>
+    </Column>
     <Column Name="ActAsUser" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;nothing&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f2a0338d-762a-4b72-8cbb-5e128b88b6a5">
       <ColumnForPickList>
         <Column Name="SysUser_picklist" idref="9c74d41c-d8a9-4084-a18e-7fa1f41dd010" />
@@ -56,11 +61,6 @@
       <ReferedNesting>
         <Nesting Name="Channel" idref="115cc112-22bf-4f3e-92fb-dd53896ad35c" />
       </ReferedNesting>
-    </Column>
-    <Column Name="OpenChat" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="fe3cb9fe-44e7-4115-a4aa-c4e4de77c6e4">
-      <ActionToExecute>
-        <ContextAction Name="OpenChatChannel" idref="d7ba7cf4-9c46-49e5-b60f-b6bdf8d301d4" />
-      </ActionToExecute>
     </Column>
   </OwnedColumns>
   <SpanVariables>

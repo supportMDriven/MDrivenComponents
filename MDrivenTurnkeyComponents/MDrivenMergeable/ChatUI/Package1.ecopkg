@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="dd9442a4-a948-443c-8307-167f1e6a5429">
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="9cf25450-3caf-4804-8961-a4f51a3a610c">
   <DefaultSuperClass>
     <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
   </DefaultSuperClass>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SearchViaGraphAPI" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="170ea1a1-b5f8-4260-addd-1570a7789e03">
+  <Class>
+    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="NewNestedViewModelClass" ExpressionActAsForActions="" id="48b3cec8-ded8-4ebd-9e77-623eb67b861f">
+      <Class>
+        <Class Name="SysGraphAPISearchRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Rank" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Rank" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9fc70a9a-c089-4fe3-a586-75a2875c762b" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e5ddb740-e183-4db6-abb4-a022788c3574" />
+        <Column Name="WebUrl" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.WebUrl" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="be9f7bef-0f80-4ed2-849d-0e75d71a860e">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsLink" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="DriveId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DriveId" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="31061649-c2d1-4995-abf4-2f3ad183ec3c" />
+        <Column Name="ItemId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ItemId" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="b656c042-5f5c-4eff-a38f-980f4350359b" />
+        <Column Name="SharepointDocId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SharepointDocId" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="b0bab456-bdeb-43e7-9cc3-ee840e50bb48" />
+        <Column Name="VersionNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.VersionNumber" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="05bc73e3-d070-4dd7-8e50-093e4a15d3a5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="vGraphAPISearch" idref="f26b08f6-c144-4541-b019-4d66ea040973" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  s.Search( vSearch );&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vSearch.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="f95192dd-7c25-4771-bc32-bac0f0232e1d" />
+    <Column Name="vSearch" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSearch" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="6f966ab5-46cb-427a-9721-97dc689b3f59" />
+    <Column Name="LookupFromUrl" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  s.LookUpFromUrl( vUrl);&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vUrl.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="8a308893-071f-49bd-b3ba-2f3cac96bcc8" />
+    <Column Name="vUrl" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vUrl" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f737f360-4aa3-48a5-aec0-ad9a37260331" />
+    <Column Name="LookUpFromDriveIdAndId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  s.LookUpFromDriveIdAndIdAndVersion( vDriveId,vDriveItemId,vVersion);&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="cc1d1d45-cc29-4e56-a921-bb20f5230f53" />
+    <Column Name="vDriveId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vDriveId" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="4a6f37b2-37d7-47c9-9064-ecef76f2b351" />
+    <Column Name="vDriveItemId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vDriveItemId" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="4c3afa21-a8a2-449d-a7a1-610e211e9c33" />
+    <Column Name="vGraphAPISearch" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="vGraphAPISearch.SysGraphAPISearchRows" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="10" StyleRef="" XPos="0" YPos="4" id="f26b08f6-c144-4541-b019-4d66ea040973">
+      <ReferedNesting>
+        <Nesting Name="NewNestedViewModelClass" idref="48b3cec8-ded8-4ebd-9e77-623eb67b861f" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="vVersion" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vVersion" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="2" id="05cfe881-6292-499e-a029-b45cce7e839b" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vDriveId" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vDriveItemId" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vGraphAPISearch" InitialValue="" TypeName="SysGraphAPI" UserData="" />
+    <SpanVariable Name="vSearch" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vUrl" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vVersion" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

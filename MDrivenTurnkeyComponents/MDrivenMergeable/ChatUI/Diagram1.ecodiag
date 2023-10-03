@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="2.29201831780104" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="761aafbc-22bc-4cd3-a41f-eb5724a3551b">
   <PlacedClass>
     <PlacedClass ClassId="8cecb31d-8d8f-49d7-833f-e1605374f33c" Color="1692800256" LastKnownName="Channel" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="126" ShowAttributes="False" ShowMethods="False" Size="1" x="592" y="160" id="31334c56-78e1-4b13-87bb-888a38045c37">
       <AssociationEndConnection>

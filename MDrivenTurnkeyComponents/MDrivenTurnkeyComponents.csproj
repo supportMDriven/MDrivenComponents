@@ -17,6 +17,7 @@
   <ItemGroup>
     <Folder Include="EXT_Components\Cards\" />
     <Folder Include="MDrivenMergeable\Office365\" />
+    <Folder Include="MDrivenSnippets\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /MDrivenTurnkeyComponents/MDrivenMergeable/Office365/Office365.PrototypeData.xml
+/MDrivenTurnkeyComponents/MDrivenMergeable/ChatUI/modlr.config
