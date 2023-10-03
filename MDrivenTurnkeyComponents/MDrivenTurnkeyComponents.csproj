@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MDrivenMergeable\GraphAPI2023\Actions.actions" />
+    <None Remove="MDrivenMergeable\GraphAPI2023\Index.spans" />
+    <None Remove="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans" />
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
@@ -39,6 +42,15 @@
     <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Actions.actions">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\Actions.actions">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\Index.spans">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysCert\Actions.actions">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +78,9 @@
     <None Include="MDrivenMergeable\AccountViewOverride\Snippets.snippets">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </None>
+    <None Include="MDrivenMergeable\GraphAPI2023\ModlrProject.mproj">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </None>
@@ -89,6 +104,18 @@
     </None>
     <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\GraphAPI2023\ASPNETIdentity.ecopkg">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\GraphAPI2023\documentation.modlrdoc">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\GraphAPI2023\ForASPNETIdentity.ecodiag">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\GraphAPI2023\Snippets.snippets">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysCert\ASPNETIdentity.ecopkg">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
