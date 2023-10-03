@@ -170,6 +170,50 @@
         </Method>
       </Feature>
     </Class>
+    <Class Name="SysToken" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="44635011-812f-43c1-b59f-a2748f3f1680">
+      <Feature>
+        <Attribute Name="Refresh_Token" Multiplicity="" Visibility="Public" id="a00bf950-42f1-4500-b743-9f686fb278fd">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="5000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Access_Token" Multiplicity="" Visibility="Public" id="e7d1ca53-7b09-49a7-8048-30ff16a06b34">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="5000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Provider" Multiplicity="" Visibility="Public" id="f605dfd0-d780-40fe-ac76-1f5b3cd98e53">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="SysUserSysUserSysTokenSysTokens" id="54c8cf82-f8b5-4dce-9203-874075a328ec">
+      <AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c1b15df4-18a1-43f4-9085-5a4c278ee5e5">
+          <Participant>
+            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysTokens" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="87ba9e48-0291-43a9-b360-4aa18b4b7e1b">
+          <Participant>
+            <Class Name="SysToken" idref="44635011-812f-43c1-b59f-a2748f3f1680" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="56e1db7e-00b4-4273-bb39-1e8ad181328b">
       <Feature>
         <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
@@ -316,12 +360,12 @@
     </Class>
     <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPISearchRowSysGraphAPISearchRows" id="d17153ec-56ee-4854-995f-fddafe60c9c4">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ef37d529-6bce-4728-a32f-4ffeeb6c3280">
+        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ef37d529-6bce-4728-a32f-4ffeeb6c3280">
           <Participant>
             <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPISearchRows" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
+        <AssociationEnd Name="SysGraphAPISearchRows" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
           <Participant>
             <Class Name="SysGraphAPISearchRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
           </Participant>

@@ -22,6 +22,18 @@
     </PlacedClass>
     <PlacedClass ClassId="0017d588-d3cf-433b-b763-93ae056419c3" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="132" RenderedWidth="168" ShowAttributes="False" ShowMethods="False" Size="1" x="224" y="376" id="2d70768a-97ce-4471-be8c-83b6ab81e6f8">
       <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-64" y="132" id="044ea0e6-c982-4eb8-a8d0-686b1e66e764">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUser" idref="c1b15df4-18a1-43f4-9085-5a4c278ee5e5" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="5ec1e9a0-15fc-4276-b2c9-cf94a06b1b0d">
+              <AssociationEnd>
+                <AssociationEnd Name="SysTokens" idref="87ba9e48-0291-43a9-b360-4aa18b4b7e1b" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="84" y="64" id="4a3f5003-057f-4457-b7f4-4a6ef3a1e174">
           <AssociationEnd>
             <AssociationEnd Name="SysUsers" idref="2e115e1e-fcc5-432d-b68b-b8416b0b36db" />
@@ -107,6 +119,18 @@
       </AssociationConnection>
       <Class>
         <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="44635011-812f-43c1-b59f-a2748f3f1680" Color="1692800256" LastKnownName="SysToken" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="109" ShowAttributes="False" ShowMethods="False" Size="1" x="90.625289808398" y="734.495614362663" id="b154b928-e6bb-4638-93f5-b2415a57b159">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="5ec1e9a0-15fc-4276-b2c9-cf94a06b1b0d">
+          <AssociationEnd>
+            <AssociationEnd Name="SysTokens" idref="87ba9e48-0291-43a9-b360-4aa18b4b7e1b" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysToken" idref="44635011-812f-43c1-b59f-a2748f3f1680" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="56e1db7e-00b4-4273-bb39-1e8ad181328b" Color="1692800256" LastKnownName="SysRole" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="72" ShowAttributes="False" ShowMethods="False" Size="1" x="840" y="360" id="b18fd940-6094-4abd-9b08-58a918f8bea5">
