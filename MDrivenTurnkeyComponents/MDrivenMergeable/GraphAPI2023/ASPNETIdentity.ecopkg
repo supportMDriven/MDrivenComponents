@@ -131,7 +131,7 @@
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
@@ -247,19 +247,19 @@
         <Attribute Name="Refresh_Token" Multiplicity="" Visibility="Public" id="a00bf950-42f1-4500-b743-9f686fb278fd">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-            <TaggedValue Tag="Eco.Length" Value="5000" />
+            <TaggedValue Tag="Eco.Length" Value="-1" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype idref="Text" />
           </Type>
         </Attribute>
         <Attribute Name="Access_Token" Multiplicity="" Visibility="Public" id="e7d1ca53-7b09-49a7-8048-30ff16a06b34">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-            <TaggedValue Tag="Eco.Length" Value="5000" />
+            <TaggedValue Tag="Eco.Length" Value="-1" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype idref="Text" />
           </Type>
         </Attribute>
         <Attribute Name="Provider" Multiplicity="" Visibility="Public" id="f605dfd0-d780-40fe-ac76-1f5b3cd98e53">
