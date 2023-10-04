@@ -168,6 +168,58 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
+        <Method Name="DriveDriveItemToThumbnailUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a57afe40-a3ce-4af0-aeac-a731a6814806">
+          <Parameter>
+            <Parameter Name="driveid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="driveitem" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="AdHocGetQuery" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d729d2f3-d208-4fe8-af58-d29619d420ac">
+          <Parameter>
+            <Parameter Name="url" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="StatusFromLastOp" Multiplicity="" Visibility="Public" id="da24edf4-165e-4bfe-9f02-709c0bb395f0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
       </Feature>
     </Class>
     <Class Name="SysToken" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="44635011-812f-43c1-b59f-a2748f3f1680">
@@ -290,8 +342,20 @@
         <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
       </Class>
     </Association>
-    <Class Name="SysGraphAPISearchRow" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cefde719-fab1-4589-a948-5e415eec2a0d">
+    <Class Name="SysGraphAPIResultRow" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cefde719-fab1-4589-a948-5e415eec2a0d">
       <Feature>
+        <Method Name="NavigateUpToParentFolder" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3f58a64e-412a-4685-8c21-230a2fb6e518">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="WebUrl" Multiplicity="" Visibility="Public" id="40b319dd-53ae-4d40-bb3a-dd43b254e970">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -356,18 +420,30 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="NavigateDownInFolder" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b8332978-0c7b-4fe3-a71b-f0c9198dbb07">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
       </Feature>
     </Class>
-    <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPISearchRowSysGraphAPISearchRows" id="d17153ec-56ee-4854-995f-fddafe60c9c4">
+    <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPIResultRowSysGraphAPIResultRows" id="d17153ec-56ee-4854-995f-fddafe60c9c4">
       <AssociationEnd>
         <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ef37d529-6bce-4728-a32f-4ffeeb6c3280">
           <Participant>
             <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPISearchRows" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
+        <AssociationEnd Name="SysGraphAPIResultRows" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
           <Participant>
-            <Class Name="SysGraphAPISearchRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+            <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>

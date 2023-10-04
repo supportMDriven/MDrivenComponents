@@ -17,7 +17,7 @@
   </GlobalAction>
   <GlobalAction Name="SearchViaGraphAPI" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.CurrentUser" Id="86e4c767-6e7d-408a-b6a8-6f2f8f7c1c21">
     <BringUpViewModel>
-      <Span Name="SearchViaGraphAPI" idref="170ea1a1-b5f8-4260-addd-1570a7789e03" />
+      <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
     </BringUpViewModel>
   </GlobalAction>
   <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="99782845-7676-4dc5-9352-2ab0d1e0ac00">

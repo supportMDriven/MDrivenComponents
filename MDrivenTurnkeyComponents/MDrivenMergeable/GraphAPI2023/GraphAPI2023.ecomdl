@@ -8,8 +8,8 @@
     <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
   </Diagrams>
   <Spans>
-    <Span Name="SearchViaGraphAPI" FileName="SearchViaGraphAPI" GUID="170ea1a1-b5f8-4260-addd-1570a7789e03" />
     <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
+    <Span Name="SearchViaGraphAPI" FileName="SearchViaGraphAPI" GUID="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
   </Spans>
   <Report />
   <ModlrProject>
