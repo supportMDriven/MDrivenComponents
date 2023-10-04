@@ -73,8 +73,6 @@ angular.module('ui.tinymce', [])
           };
         })(400);
 
-        var userOptions = getUserOptions || {};
-
         var setupOptions = {
           // Update model when calling setContent
           // (such as from the source editor popup)
@@ -127,9 +125,7 @@ angular.module('ui.tinymce', [])
             }
           },
           format: expression.format || 'html',
-          selector: '#' + attrs.id,
-          plugins: userOptions.plugins || '',
-          toolbar: userOptions.toolbar || ''
+          selector: '#' + attrs.id
         };
 
 
@@ -269,9 +265,6 @@ angular.module('ui.tinymce', [])
     return new ConfigService();
   }]);
 
-
-
-
 if (typeof loadedtinymce === 'undefined') {  
   loadedtinymce=true;  
   var script = document.createElement('script');  
@@ -283,15 +276,6 @@ if (typeof loadedtinymce === 'undefined') {
   script.referrerpolicy="origin";
   document.head.appendChild(script);   } 
 
-
-
-
-
-
 // Push the module into the MDrivenAngularAppModule (hack way)
 angular.module(MDrivenAngularAppModule).requires.push('ui.tinymce');
 console.log('loadedtinymce Module pushed');   
-
-
-
-
