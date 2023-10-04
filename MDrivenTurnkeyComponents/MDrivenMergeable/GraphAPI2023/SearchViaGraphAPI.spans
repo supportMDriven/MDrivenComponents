@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Span Name="SearchViaGraphAPI" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b">
   <Class>
-    <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+    <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
   </Class>
   <Nesting>
     <Nesting Name="NewNestedViewModelClass" ExpressionActAsForActions="" id="3b61f8cf-f24f-41e4-83c9-4be56b990e10">
@@ -24,12 +24,12 @@
         <Column Name="UpInFolder" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.NavigateUpToParentFolder" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="07388108-d0b6-4137-9f96-e384af27c002" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="vGraphAPISearch" idref="9ff04481-077b-4a89-b42b-2c47d52b6e53" />
+        <Column Name="SysGraphAPIResultRows" idref="9ff04481-077b-4a89-b42b-2c47d52b6e53" />
       </ReferedByColumn>
     </Nesting>
   </Nesting>
   <OwnedColumns>
-    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  s.Search( vSearch );&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vSearch.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ead81908-c4dc-4853-8b8a-fcdf5778b7ba">
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.Search( vSearch )" ExpressionForReadOnly="self.isnull or vSearch.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ead81908-c4dc-4853-8b8a-fcdf5778b7ba">
       <PlacingContainer>
         <PlacingContainer idref="f9e5957a-ca6d-4cf7-9cc2-3ddadd7a457b" />
       </PlacingContainer>
@@ -39,7 +39,7 @@
         <PlacingContainer idref="f9e5957a-ca6d-4cf7-9cc2-3ddadd7a457b" />
       </PlacingContainer>
     </Column>
-    <Column Name="LookupFromUrl" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  s.LookUpFromUrl( vUrl);&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vUrl.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="c11a5259-201c-4fcd-88b0-9fb6c5b930ef">
+    <Column Name="LookupFromUrl" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.LookUpFromUrl( vUrl)" ExpressionForReadOnly="self.isnull or vUrl.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="c11a5259-201c-4fcd-88b0-9fb6c5b930ef">
       <PlacingContainer>
         <PlacingContainer idref="818c0665-b264-44ec-a9f2-90a62b47752b" />
       </PlacingContainer>
@@ -49,7 +49,7 @@
         <PlacingContainer idref="818c0665-b264-44ec-a9f2-90a62b47752b" />
       </PlacingContainer>
     </Column>
-    <Column Name="LookUpFromDriveIdAndId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  s.LookUpFromDriveIdAndIdAndVersion( vDriveId,vDriveItemId,vVersion);&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="68ac5bb0-9652-42b7-9fe9-a1ead5528d07">
+    <Column Name="LookUpFromDriveIdAndId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.LookUpFromDriveIdAndIdAndVersion( vDriveId,vDriveItemId,vVersion)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="68ac5bb0-9652-42b7-9fe9-a1ead5528d07">
       <PlacingContainer>
         <PlacingContainer idref="21a90d5d-8546-4881-92af-a8f855da843c" />
       </PlacingContainer>
@@ -64,7 +64,7 @@
         <PlacingContainer idref="21a90d5d-8546-4881-92af-a8f855da843c" />
       </PlacingContainer>
     </Column>
-    <Column Name="vGraphAPISearch" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="vGraphAPISearch.SysGraphAPIResultRows" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="10" StyleRef="" XPos="0" YPos="4" id="9ff04481-077b-4a89-b42b-2c47d52b6e53">
+    <Column Name="SysGraphAPIResultRows" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="10" StyleRef="" XPos="0" YPos="4" id="9ff04481-077b-4a89-b42b-2c47d52b6e53">
       <PlacingContainer>
         <PlacingContainer idref="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
       </PlacingContainer>
@@ -77,7 +77,7 @@
         <PlacingContainer idref="21a90d5d-8546-4881-92af-a8f855da843c" />
       </PlacingContainer>
     </Column>
-    <Column Name="Thumbnail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  vThumbnailUrl:=s.DriveDriveItemToThumbnailUrl( vDriveId,vDriveItemId);&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="00d4ffc2-7acc-4c8c-a182-bb87b6395a10">
+    <Column Name="Thumbnail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;  vThumbnailUrl:=self.DriveDriveItemToThumbnailUrl( vDriveId,vDriveItemId)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="00d4ffc2-7acc-4c8c-a182-bb87b6395a10">
       <PlacingContainer>
         <PlacingContainer idref="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
       </PlacingContainer>
@@ -91,7 +91,7 @@
         <TaggedValue Tag="DataIsImageUrl" Value="True" />
       </TaggedValue>
     </Column>
-    <Column Name="Status" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vGraphAPISearch.StatusFromLastOp" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="h2" XPos="1" YPos="3" id="0abe3415-e389-4b6c-9fbe-0b1e737fee0e">
+    <Column Name="Status" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.StatusFromLastOp" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="h2" XPos="1" YPos="3" id="0abe3415-e389-4b6c-9fbe-0b1e737fee0e">
       <PlacingContainer>
         <PlacingContainer idref="f70b4745-a479-4afa-ae77-a9e74d635677" />
       </PlacingContainer>
@@ -101,7 +101,7 @@
         <PlacingContainer idref="60d89821-a1c0-4322-94f8-ee2eff13f7e4" />
       </PlacingContainer>
     </Column>
-    <Column Name="AdHoc" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;let s=SysGraphAPI.Create in&#xD;&#xA;( &#xD;&#xA;  s.SysUser:=self;&#xD;&#xA;  vAdHocResult:=s.AdHocGetQuery(vAdHoc );&#xD;&#xA;  vGraphAPISearch:=s&#xD;&#xA;)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="9195ba26-555b-47c1-bbd3-55d3fd1b8a3f">
+    <Column Name="AdHoc" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;vAdHocResult:=self.AdHocGetQuery(vAdHoc )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="9195ba26-555b-47c1-bbd3-55d3fd1b8a3f">
       <PlacingContainer>
         <PlacingContainer idref="60d89821-a1c0-4322-94f8-ee2eff13f7e4" />
       </PlacingContainer>
@@ -134,7 +134,6 @@
     <SpanVariable Name="vAdHocResult" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vDriveId" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vDriveItemId" InitialValue="" TypeName="String" UserData="" />
-    <SpanVariable Name="vGraphAPISearch" InitialValue="" TypeName="SysGraphAPI" UserData="" />
     <SpanVariable Name="vSearch" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vThumbnailUrl" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vUrl" InitialValue="" TypeName="String" UserData="" />

@@ -101,7 +101,7 @@
     </Class>
     <Class Name="SysGraphAPI" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="38553568-7d6a-4c34-9438-9f599d552420">
       <Feature>
-        <Method Name="LookUpFromUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0e8239f5-08f4-4a5c-929b-a901c2843497">
+        <Method Name="LookUpFromUrl" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0e8239f5-08f4-4a5c-929b-a901c2843497">
           <Parameter>
             <Parameter Name="url" Kind="In">
               <Type>
@@ -112,7 +112,7 @@
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
@@ -139,7 +139,7 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="LookUpFromDriveIdAndIdAndVersion" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7f38bd75-764b-4863-8fdf-2e76b09cd907">
+        <Method Name="LookUpFromDriveIdAndIdAndVersion" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7f38bd75-764b-4863-8fdf-2e76b09cd907">
           <Parameter>
             <Parameter Name="driveid" Kind="In">
               <Type>
@@ -160,7 +160,7 @@
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
@@ -168,7 +168,7 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="DriveDriveItemToThumbnailUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a57afe40-a3ce-4af0-aeac-a731a6814806">
+        <Method Name="DriveDriveItemToThumbnailUrl" CodeComment="Returns the url to the image" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a57afe40-a3ce-4af0-aeac-a731a6814806">
           <Parameter>
             <Parameter Name="driveid" Kind="In">
               <Type>
@@ -192,7 +192,7 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="AdHocGetQuery" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d729d2f3-d208-4fe8-af58-d29619d420ac">
+        <Method Name="AdHocGetQuery" CodeComment="resturns json" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d729d2f3-d208-4fe8-af58-d29619d420ac">
           <Parameter>
             <Parameter Name="url" Kind="In">
               <Type>
@@ -224,6 +224,26 @@
     </Class>
     <Class Name="SysToken" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="44635011-812f-43c1-b59f-a2748f3f1680">
       <Feature>
+        <Attribute Name="ValidUntil" Multiplicity="" Visibility="Public" id="1400f8f0-36e0-4e53-8948-9cfe7321ab07">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="GetValidMinutes" CodeComment="Default is 1 hour , but i azure you can turn it down to 10 minutes" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7e168d21-defe-484c-9ae3-87caa3271f73">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="50" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="Refresh_Token" Multiplicity="" Visibility="Public" id="a00bf950-42f1-4500-b743-9f686fb278fd">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -254,12 +274,12 @@
     </Class>
     <Association Name="" EffectiveName="SysUserSysUserSysTokenSysTokens" id="54c8cf82-f8b5-4dce-9203-874075a328ec">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c1b15df4-18a1-43f4-9085-5a4c278ee5e5">
+        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c1b15df4-18a1-43f4-9085-5a4c278ee5e5">
           <Participant>
             <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysTokens" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="87ba9e48-0291-43a9-b360-4aa18b4b7e1b">
+        <AssociationEnd Name="SysTokens" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="87ba9e48-0291-43a9-b360-4aa18b4b7e1b">
           <Participant>
             <Class Name="SysToken" idref="44635011-812f-43c1-b59f-a2748f3f1680" />
           </Participant>
@@ -344,7 +364,7 @@
     </Association>
     <Class Name="SysGraphAPIResultRow" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cefde719-fab1-4589-a948-5e415eec2a0d">
       <Feature>
-        <Method Name="NavigateUpToParentFolder" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3f58a64e-412a-4685-8c21-230a2fb6e518">
+        <Method Name="NavigateUpToParentFolder" CodeComment="Clears adds to SysGraphAPIResultRows and adds new" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3f58a64e-412a-4685-8c21-230a2fb6e518">
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
               <Type>
@@ -420,7 +440,7 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
-        <Method Name="NavigateDownInFolder" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b8332978-0c7b-4fe3-a71b-f0c9198dbb07">
+        <Method Name="NavigateDownInFolder" CodeComment="Clears adds to SysGraphAPIResultRows and adds new" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b8332978-0c7b-4fe3-a71b-f0c9198dbb07">
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
               <Type>
