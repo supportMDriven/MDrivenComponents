@@ -1,13 +1,9 @@
-
-
-				console.log('Bind tinymce ');   
-
 /**
  * Binds a TinyMCE widget to <textarea> elements.
  */
 angular.module('ui.tinymce', [])
   .value('uiTinymceConfig', {})
-  .directive('uiTinymce', ['$rootScope', '$compile', '$timeout', '$window', '$sce', '$http', 'uiTinymceConfig', 'uiTinymceService', 'getUserOptions', function ($rootScope, $compile, $timeout, $window, $sce, $http, uiTinymceConfig, uiTinymceService, getUserOptions) {
+  .directive('uiTinymce', ['$rootScope', '$compile', '$timeout', '$window', '$sce', '$http', 'uiTinymceConfig', 'uiTinymceService', 'configTinymceService', function ($rootScope, $compile, $timeout, $window, $sce, $http, uiTinymceConfig, uiTinymceService, configTinymceService) {
     uiTinymceConfig = uiTinymceConfig || {};
     if (uiTinymceConfig.baseUrl) {
       tinymce.baseURL = uiTinymceConfig.baseUrl;
@@ -147,7 +143,18 @@ angular.module('ui.tinymce', [])
           if (options.baseURL) {
             tinymce.baseURL = options.baseURL;
           }
-          var maybeInitPromise = tinymce.init(options);
+          let maybeInitPromise;
+          configTinymceService
+            .getUserConfig()
+            .then((res) => {
+              angular.extend(options, res);
+              maybeInitPromise = tinymce.init(options);
+            })
+            .catch((error) => {
+              // Default configuration applied
+              maybeInitPromise = tinymce.init(options);
+            });
+
           if (maybeInitPromise && typeof maybeInitPromise.then === 'function') {
             maybeInitPromise.then(function () {
               toggleDisable(scope.$eval(attrs.ngDisabled));
@@ -243,23 +250,23 @@ angular.module('ui.tinymce', [])
     }
 
   ])
-  .factory('getUserOptions', ['$http', 'uiTinymceConfig', function ($http) {
-    var userOptions = {
-      plugins: '',
-      toolbar: ''
-    };
+  .service('configTinymceService', ['$http', function ($http) {
+    const ConfigService = function () {
+      const getUserConfig = () => {
+        return $http
+          .get(tinymce.baseURL + '/userOptions.json')
+          .then((res) => {
+            return res.data;
+          })
+          .catch((error) => {
+            console.log('TinyMCE is loaded with default configuration');
+          });
+      }
 
-    $http.get(tinymce.baseURL + '/userOptions.json')
-      .then(function (response) {
-        var data = response.data;
-        userOptions.plugins = data.plugins || '';
-        userOptions.toolbar = data.toolbar || '';
-      })
-      .catch(function (error) {
-        throw new Error(error);
-      });
+      return { getUserConfig };
+    }
 
-    return userOptions;
+    return new ConfigService();
   }]);
 
 
@@ -269,10 +276,9 @@ if (typeof loadedtinymce === 'undefined') {
   loadedtinymce=true;  
   var script = document.createElement('script');  
   script.onload = function () {    
-                scriptloaded=true;    
-                console.log('loadedtinymce Script was loaded');   
-
-                   };  
+    scriptloaded=true;    
+    console.log('loadedtinymce Script was loaded');   
+  };  
   script.src = "EXT_Components/TinyMCE/tinymce/tinymce.min.js"; 
   script.referrerpolicy="origin";
   document.head.appendChild(script);   } 
