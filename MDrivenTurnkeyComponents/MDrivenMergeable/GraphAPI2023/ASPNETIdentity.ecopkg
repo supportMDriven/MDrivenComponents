@@ -221,6 +221,9 @@
           </Type>
         </Attribute>
       </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
     </Class>
     <Class Name="SysToken" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="44635011-812f-43c1-b59f-a2748f3f1680">
       <Feature>
@@ -452,7 +455,15 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
+        <Attribute Name="IsFolder" Multiplicity="" Visibility="Public" id="d5589be4-f17c-4e7d-9dac-8a1d0fb6e22e">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
       </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
     </Class>
     <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPIResultRowSysGraphAPIResultRows" id="d17153ec-56ee-4854-995f-fddafe60c9c4">
       <AssociationEnd>
