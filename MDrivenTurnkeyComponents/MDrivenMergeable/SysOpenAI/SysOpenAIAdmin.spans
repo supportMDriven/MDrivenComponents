@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysOpenAIAdmin" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="7" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="db5cc808-5fe4-4b24-9cc9-b6ba450f229f">
+  <Class>
+    <Class Name="SysOpenAISingleton" idref="b588fa1f-a9c1-4f7d-9d91-302f6e5f9a08" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSysOpenAISingleton" idref="863483d5-383b-4c7b-986b-0524e873bf69" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="DeploymentName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.DeploymentName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="74051423-2dae-4476-af21-5e210a855263">
+      <PlacingContainer>
+        <PlacingContainer idref="650dc277-686b-4df7-91f4-9102533d494e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="EndPoint" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.EndPoint" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="448e1745-0da0-4369-9380-1f7b46b213ba">
+      <PlacingContainer>
+        <PlacingContainer idref="650dc277-686b-4df7-91f4-9102533d494e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Key" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Key" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="bd502996-44b2-4377-a7d7-85085ad65eed">
+      <PlacingContainer>
+        <PlacingContainer idref="650dc277-686b-4df7-91f4-9102533d494e" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="password" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="650dc277-686b-4df7-91f4-9102533d494e" />
+  </PlacingContainer>
+</Span>

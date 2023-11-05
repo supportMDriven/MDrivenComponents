@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysOpenAIChatSessionView" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="14" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b80b8f10-ee63-44e6-a9ac-99265ab5c9f7">
+  <Class>
+    <Class Name="SysOpenAIChatSession" idref="005c3fe1-dd63-44bf-ae84-830ab35d8ae0" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysOpenAIMessages" ExpressionActAsForActions="" id="8b545d29-8301-4980-b6af-b0175f5bccf2">
+      <Class>
+        <Class Name="SysOpenAIMessage" idref="0f362613-71dd-4536-9cd4-22cfe70b9a5f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="ChatRole" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ChatRole" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="&lt;nothing&gt;" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="397978de-e965-4d19-bf83-b0e54ba465ce">
+          <ColumnForPickList>
+            <Column Name="ChatRolePickList" idref="0b050e6f-3940-4a85-b9d1-fe06c48600a9" />
+          </ColumnForPickList>
+          <PlacingContainer>
+            <PlacingContainer idref="2e34638c-eda9-4c4c-a1d5-12c83e45df07" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Text" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMinSizeSecondary="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="54cb94d6-bddf-4083-a391-3c5e92e41db2">
+          <PlacingContainer>
+            <PlacingContainer idref="2e34638c-eda9-4c4c-a1d5-12c83e45df07" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="ChatRolePickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysOpenAIChatRoleEnum.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0b050e6f-3940-4a85-b9d1-fe06c48600a9">
+          <PlacingContainer>
+            <PlacingContainer idref="2e34638c-eda9-4c4c-a1d5-12c83e45df07" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="True" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="8dea6882-a369-4d0f-8f9e-eb8e246ab3fe">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="2e34638c-eda9-4c4c-a1d5-12c83e45df07" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="SysOpenAIMessages" idref="aa529dcc-cbc1-4ff9-a639-f67401fc33cc" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSysOpenAIChatSession" idref="227e88e7-1260-44b5-8f3d-b82f845ee063" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="LastStatus" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.LastStatus" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="3" id="f23c37e3-9400-49d3-abeb-76c39c69a834">
+      <PlacingContainer>
+        <PlacingContainer idref="b92b1d9f-61dc-45fe-9dd3-41fb48887a47" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="MaxTokens" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.MaxTokens" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="a8e56d64-306d-4876-9cea-aeced0114e4d">
+      <PlacingContainer>
+        <PlacingContainer idref="9ac2f8a2-3cbc-43cc-b156-f966fabfed1c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="SysOpenAIMessages" ActionPeriodicityMillisec="-1" ColSpan="15" ColSpanWhenInGrid="1" Expression="self.SysOpenAIMessages" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="8" id="aa529dcc-cbc1-4ff9-a639-f67401fc33cc">
+      <PlacingContainer>
+        <PlacingContainer idref="3550e840-7b56-4acd-ad83-433326d9787a" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="SysOpenAIMessages" idref="8b545d29-8301-4980-b6af-b0175f5bccf2" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="PresSysOpenAIMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'SysOpenAIMessages'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h3" XPos="0" YPos="7" id="bf3f6ec7-5166-436a-bea5-b241be90042e">
+      <PlacingContainer>
+        <PlacingContainer idref="5f4085e0-8106-423e-92f4-130bd0195ede" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CreateAndAddSysOpenAIMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SysOpenAIMessages.add(SysOpenAIMessage.Create)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="7" id="4d8a917a-f814-4e35-bd5b-42845680abad">
+      <PlacingContainer>
+        <PlacingContainer idref="5f4085e0-8106-423e-92f4-130bd0195ede" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="DeleteSysOpenAIMessages" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vCurrent_SysOpenAIMessages.Delete" ExpressionForReadOnly="vCurrent_SysOpenAIMessages-&gt;isnull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="7" id="a8676fb0-183c-430c-80e8-7087ee5af8bf">
+      <PlacingContainer>
+        <PlacingContainer idref="5f4085e0-8106-423e-92f4-130bd0195ede" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Answer" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Generate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="df54e888-b157-4f3f-8c35-6a9bd914810d">
+      <PlacingContainer>
+        <PlacingContainer idref="9f7bcccf-6429-45df-b16d-fae415bc51d0" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="PromptTokens" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.PromptTokens" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="4889ffe2-e872-4b80-aefc-f9a881d9a3b1">
+      <PlacingContainer>
+        <PlacingContainer idref="9ac2f8a2-3cbc-43cc-b156-f966fabfed1c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CompletionTokens" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CompletionTokens" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="2634fab0-232b-49a0-b671-a403351ee93f">
+      <PlacingContainer>
+        <PlacingContainer idref="9ac2f8a2-3cbc-43cc-b156-f966fabfed1c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="TotalTokens" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.TotalTokens" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="ae7fc9c9-2554-4da9-8e10-41f99af61427">
+      <PlacingContainer>
+        <PlacingContainer idref="9ac2f8a2-3cbc-43cc-b156-f966fabfed1c" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="693cbe54-c1e3-47c7-a373-4f9b2bf19574">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="9ac2f8a2-3cbc-43cc-b156-f966fabfed1c" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="b92b1d9f-61dc-45fe-9dd3-41fb48887a47" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="90334e82-903f-4139-b303-d261d3243907">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="5f4085e0-8106-423e-92f4-130bd0195ede" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="3550e840-7b56-4acd-ad83-433326d9787a" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="9f7bcccf-6429-45df-b16d-fae415bc51d0" />
+          </ChildContainers>
+        </PlacingContainer>
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

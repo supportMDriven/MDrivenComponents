@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="SysOpenAI" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.21550625" Id="36f3d3d7-c1ae-4fb1-805c-be0a780316a0">
+  <PlacedClass>
+    <PlacedClass ClassId="35d973d2-4bf7-489e-b59f-d86431c7abaf" Color="1692800256" LastKnownName="SysOpenAIMessage" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="162" ShowAttributes="False" ShowMethods="False" Size="1" x="432" y="240" id="33e71631-5a6f-476a-96e0-29d8509f0fab">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-81" y="32" id="a407d1d3-3ad6-48e6-82a3-a89c84dea440">
+          <AssociationEnd>
+            <AssociationEnd Name="SysOpenAIMessages" idref="ba9ef329-c006-4eed-9ec5-48a771e906f2" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysOpenAIMessage" idref="0f362613-71dd-4536-9cd4-22cfe70b9a5f" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="d52c6f42-19f1-4c27-964a-a380c6e96779" Color="1692800256" LastKnownName="SysOpenAISingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="158" ShowAttributes="False" ShowMethods="False" Size="1" x="696" y="240" id="75ab51c1-aca1-47ad-abba-eb855fbb699f">
+      <Class>
+        <Class Name="SysOpenAISingleton" idref="b588fa1f-a9c1-4f7d-9d91-302f6e5f9a08" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="0017d588-d3cf-433b-b763-93ae056419c3" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="109" RenderedWidth="116" ShowAttributes="False" ShowMethods="False" Size="1" x="675" y="100" id="e29ed1d1-9521-4243-a672-14d3c60de1b3">
+      <Class>
+        <Class Name="SysUser" idref="c6b4247d-ce30-4fb8-abec-28bfc28d959a" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="1ccc78bb-4738-46db-8fa1-0c797126de8b" Color="1692800256" LastKnownName="SysOpenAIChatSession" PickedFeatureVisibility="ShowAll" RenderedHeight="120" RenderedWidth="176" ShowAttributes="False" ShowMethods="False" Size="1" x="192" y="96" id="f5c7cb43-8cb5-4901-845c-0643aa354346">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="88" y="40" id="48bccde5-4854-4cd6-98ac-e2c779d4f594">
+          <AssociationEnd>
+            <AssociationEnd Name="SysOpenAIChatSession" idref="2a33073a-81a3-4dfb-899a-64e424383063" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-81" y="32" id="a407d1d3-3ad6-48e6-82a3-a89c84dea440">
+              <AssociationEnd>
+                <AssociationEnd Name="SysOpenAIMessages" idref="ba9ef329-c006-4eed-9ec5-48a771e906f2" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysOpenAIChatSession" idref="005c3fe1-dd63-44bf-ae84-830ab35d8ae0" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="198" LastKnownName="" RenderedHeight="208" RenderedWidth="379" Size="1" Width="369" x="806.5" y="834" id="3c4cf2a4-ebcc-4ad6-af64-46620cbdebd0">
+      <Span>
+        <Span Name="SysOpenAIChatSessionSeeker" idref="80545533-f8be-4bd8-a037-93744479bf17" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="185" LastKnownName="" RenderedHeight="195" RenderedWidth="214" Size="1" Width="204" x="724" y="342" id="85d35f21-e835-47aa-a63a-db7ada4c5d3d">
+      <Span>
+        <Span Name="SysOpenAIAdmin" idref="db5cc808-5fe4-4b24-9cc9-b6ba450f229f" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="227" LastKnownName="" RenderedHeight="237" RenderedWidth="327" Size="1" Width="317" x="784" y="568" id="9ef3f7f8-b67e-49d6-b84e-ea52a7da2753">
+      <Span>
+        <Span Name="SysOpenAIChatSessionView" idref="b80b8f10-ee63-44e6-a9ac-99265ab5c9f7" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

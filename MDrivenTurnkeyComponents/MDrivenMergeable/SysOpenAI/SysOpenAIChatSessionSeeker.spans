@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysOpenAIChatSessionSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="80545533-f8be-4bd8-a037-93744479bf17">
+  <Class>
+    <Class Name="SysOpenAIChatSession" idref="005c3fe1-dd63-44bf-ae84-830ab35d8ae0" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysOpenAIChatSession" ExpressionActAsForActions="" id="f6460129-2307-429e-b449-41fca8d3c197">
+      <Class>
+        <Class Name="SysOpenAIChatSession" idref="005c3fe1-dd63-44bf-ae84-830ab35d8ae0" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ChangeTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="787b9132-bd7c-4ee7-890c-9378ceceb733" />
+        <Column Name="LastStatus" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.LastStatus" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6451dfde-5bae-425f-93df-b6d77fc67ec5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="4b2e6ed4-614b-448c-a8de-b3d0bb1222f3" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="true" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="069ef92f-51bc-4378-9494-2281d89f3a1a">
+      <Class>
+        <Class Name="SysOpenAIChatSession" idref="005c3fe1-dd63-44bf-ae84-830ab35d8ae0" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysOpenAIChatSession.allinstances-&gt;orderdescending(changetime)" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8b676c91-e7ad-49e1-a01a-bce1b35d2bb0" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="5702839b-961d-4a5c-b095-6d3888e74fea" />
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="13" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="4b2e6ed4-614b-448c-a8de-b3d0bb1222f3">
+      <ReferedNesting>
+        <Nesting Name="SysOpenAIChatSession" idref="f6460129-2307-429e-b449-41fca8d3c197" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AddNew" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="SysOpenAIChatSession.Create" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="0" id="8cf094c5-8ea2-4696-9ea9-c5ad4079c4a5" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(SysOpenAIChatSession)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

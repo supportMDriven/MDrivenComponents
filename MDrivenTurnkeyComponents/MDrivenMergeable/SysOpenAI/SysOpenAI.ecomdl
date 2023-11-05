@@ -1,0 +1,22 @@
+<Model>
+  <Packages>
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="SysOpenAI" FileName="SysOpenAI" GUID="36f3d3d7-c1ae-4fb1-805c-be0a780316a0" />
+    <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="ce75f88c-f136-4892-ab70-ff2b9036717f" />
+  </Diagrams>
+  <Spans>
+    <Span Name="Index" FileName="Index" GUID="06c5c8ec-4af1-45c1-937d-f598cdce035e" />
+    <Span Name="SysOpenAIChatSessionSeeker" FileName="SysOpenAIChatSessionSeeker" GUID="80545533-f8be-4bd8-a037-93744479bf17" />
+    <Span Name="SysOpenAIChatSessionView" FileName="SysOpenAIChatSessionView" GUID="b80b8f10-ee63-44e6-a9ac-99265ab5c9f7" />
+    <Span Name="SysOpenAIAdmin" FileName="SysOpenAIAdmin" GUID="db5cc808-5fe4-4b24-9cc9-b6ba450f229f" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>
