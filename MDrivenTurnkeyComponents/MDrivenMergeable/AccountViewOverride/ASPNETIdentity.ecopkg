@@ -18,6 +18,30 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
+        <Method Name="UrlEncode" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8e58c6eb-7698-49a2-8d08-3bec480ca649">
+          <Parameter>
+            <Parameter Name="url" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="decode" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="TransientLoginRequestUserName" Multiplicity="" Visibility="Public" id="8fcd7d2e-70b9-4e8e-bbeb-56be1abe68df">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.88564914232323" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.55132821597851" Id="ce75f88c-f136-4892-ab70-ff2b9036717f">
   <PlacedClass>
     <PlacedClass ClassId="19a1388a-7150-40ae-ae26-b75bf6278a1a" Color="-931069953" LastKnownName="Thing" PickedFeatureVisibility="ShowAll" RenderedHeight="128" RenderedWidth="164" ShowAttributes="False" ShowMethods="False" Size="2" x="168" y="80" id="0182bd26-9e4d-4f1f-be76-d9a062ff0fe8">
       <AssociationEndConnection>
@@ -88,7 +88,7 @@
         <Span Name="AccountLogin" idref="d59b4e0a-0b34-404e-bfae-3a4967596257" />
       </Span>
     </PlacedViewModel>
-    <PlacedViewModel Color="-1765226296" Height="78" LastKnownName="" RenderedHeight="78" RenderedWidth="112" Size="1" Width="112" x="432" y="688" id="742eb5b5-7121-46ca-93f8-c60446b2258c">
+    <PlacedViewModel Color="-1765226296" Height="78" LastKnownName="" RenderedHeight="88" RenderedWidth="122" Size="1" Width="112" x="432" y="688" id="742eb5b5-7121-46ca-93f8-c60446b2258c">
       <Span>
         <Span Name="FreeStandingLogin" idref="e64d43fd-2560-4116-9130-cee7f1edafbd" />
       </Span>

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MDrivenMergeable\AccountViewOverride\FreeStandingLogin.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\Actions.actions" />
     <None Remove="MDrivenMergeable\GraphAPI2023\Index.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans" />
@@ -24,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\FreeStandingLogin.spans">
+      <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Index.spans">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </EmbeddedResource>

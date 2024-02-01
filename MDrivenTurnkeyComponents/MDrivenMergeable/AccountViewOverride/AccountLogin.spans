@@ -43,12 +43,28 @@
         <PlacingContainer idref="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
       </PlacingContainer>
     </Column>
-    <Column Name="ExampleToLoginWithOpenIDConnect" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryExternalLogin?provider=OpenIdConnect&amp;returnUrl='+returnUrl" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="0af23026-b807-46b3-a2a2-f0a6e95b4a24">
+    <Column Name="ExampleToLoginWithOpenIDConnectViaUrl" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Account/TryExternalLogin?provider=OpenIdConnect&amp;returnUrl='+returnUrl" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="0af23026-b807-46b3-a2a2-f0a6e95b4a24">
       <PlacingContainer>
         <PlacingContainer idref="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
       </PlacingContainer>
       <TaggedValue>
         <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="ExampleToLoginWithOpenIDConnectWithAction" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="selfVM.NavigateUrl( 'Account/TryExternalLogin?provider=OpenIdConnect&amp;returnUrl='+SysSingleton.oclSingleton.UrlEncode(returnUrl,false),false ) " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="7" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="d89817bc-19c0-4bc5-ace6-14d75dd4b3b5">
+      <PlacingContainer>
+        <PlacingContainer idref="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="returnUrl" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="returnUrl " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="8" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="ef9723d2-3f68-46e0-ba93-410d488a871d">
+      <PlacingContainer>
+        <PlacingContainer idref="d5b05919-4af0-41c8-ac9d-0863b73e5b06" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="UIFirst" Value="String" />
       </TaggedValue>
     </Column>
   </OwnedColumns>
