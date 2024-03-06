@@ -365,3 +365,5 @@ FodyWeavers.xsd
 /MDrivenTurnkeyComponents/MDrivenMergeable/ChatUI/modlr.config
 /MDrivenTurnkeyComponents/MDrivenMergeable/GraphAPI2023/modlr.config
 /MDrivenTurnkeyComponents/MDrivenMergeable/SysOpenAI/SysOpenAI.PrototypeData.xml
+/MDrivenTurnkeyComponents/MDrivenMergeable/AccountViewOverride/modlr.config
+/MDrivenTurnkeyComponents/MDrivenMergeable/SysTurnkeyTrace/modlr.config
