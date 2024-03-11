@@ -1,0 +1,22 @@
+﻿
+<div class="PivotDataGrid" style="display: grid;grid-template-columns: auto;grid-template-rows: auto;"  pivotdatagrid>
+
+				<div ng-repeat="row in data.XAxis" style="grid-column:{{$index+1}};grid-row:1;">
+				  <div class="grid__item pivotheader" >{{row.Header}}</div>
+				</div>
+
+				<div ng-repeat="row in data.YAxis" style="grid-column:1;grid-row:{{$index+1}};">
+				  <div class="grid__item pivotheader">{{row.Header}}</div>
+				</div>
+
+				<div ng-repeat="row in data.Values" style="grid-column:{{row.LocalXGrid}};grid-row:{{row.LocalYGrid}};"  pivotdatagridonevalue>
+				  <div class="grid__item">{{row.X}} {{row.Y}} {{row.Value}}</div>
+				</div>
+				
+				<div ng-repeat="row in data.LocalEmpties" style="grid-column:{{row.LocalXGrid}};grid-row:{{row.LocalYGrid}};"  >
+				  <div class="grid__item"><div class="pivotemptycell">N/A</div></div>
+				</div>
+				
+								
+</div>
+

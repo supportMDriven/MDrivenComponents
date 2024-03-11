@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <Folder Include="EXT_Components\Cards\" />
+    <Folder Include="EXT_Components\SharepointDocumentsInteractionWeb\" />
+    <Folder Include="EXT_Components\PivotDataGrid\" />
     <Folder Include="MDrivenMergeable\Office365\" />
     <Folder Include="MDrivenSnippets\" />
   </ItemGroup>

@@ -1,5 +1,5 @@
-function InstallTheDirectiveFor_test1(streamingAppController) {
-    streamingAppController.directive('Blomma', ['$document', function ($document) {
+function InstallTheDirectiveFor_flower(streamingAppController) {
+    streamingAppController.directive('flower', ['$document', function ($document) {
             return {
                 link: function (scope, element, attr) {
                     // THIS IS WHERE YOU SEE THE HTML(element) AND THE DATA (scope) FOR EVERYTHING THAT USE OUR DIRECTIVE (test1)
@@ -8,6 +8,6 @@ function InstallTheDirectiveFor_test1(streamingAppController) {
                 }
             };
         }]);
-    console.trace("Blomma component Loaded");
+  console.trace("flower component Loaded");
 }
-InstallTheDirectiveFor_blomma(angular.module(MDrivenAngularAppModule));
+InstallTheDirectiveFor_flower(angular.module(MDrivenAngularAppModule));

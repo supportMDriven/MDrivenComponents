@@ -1,0 +1,49 @@
+﻿<div class="SharepointDocumentsInteractionWeb" style="display:flex;flex-direction:column">
+	<div style="display: flex;align-items: center;justify-content:space-between">    
+      <button sharepointdocumentsinteractionwebpastebutton type="button" title="AddDocRef" ng-show="ViewModelRoot.VM_Status.[ViewModelClassName]_AddDocRef_Visible" ng-disabled="!ViewModelRoot.VM_Status.[ViewModelClassName]_AddDocRef_Enabled">
+			<span>Paste Sharepoint-url from clip</span>
+		</button>
+	</div>
+	<div style="display:none;">
+		<input id="sharepointcopyfromclipresult" type="text" tk-input-field="" maxlength="255" ng-disabled="!ViewModelRoot.VM_Status.[ViewModelClassName]_WebDocRefUrlAdd_Enabled" ng-readonly="ViewModelRoot.VM_Status.[ViewModelClassName]_WebDocRefUrlAdd_ReadOnly" ng-model="ViewModelRoot.Curr_[ViewModelClassName]().WebDocRefUrlAdd" autocomplete="off" class="tk-input-field__native">
+	</div>
+	<div class="tk-data-table__content tk-data-table__content--advanced" style="flex-grow:2;">
+		<table tk-advanced-table="" data-col-name="[ViewModelClassName]" data-class-name="[ViewModelClassName]" data-cols="5" class="tk-data-table__native ng-isolate-scope">
+			<thead>
+				<tr class="tk-data-table__header-row">
+					<th title="Type" role="columnheader" ng-click="orderBy('[ViewModelClassName]','Type', $event)" 
+							ng-class="[{'ascending': [ViewModelClassName]_OrderColumnName === 'Type' &amp;&amp; ![ViewModelClassName]_OrderColumnReverseState }, {'descending': [ViewModelClassName]_OrderColumnName === 'Type' &amp;&amp; [ViewModelClassName]_OrderColumnReverseState }]" 
+							colname="Type" modeltype="String" 
+							class="tk-data-table__header-cell order-enabled" tabindex="0" aria-hidden="false">
+						<span>Type</span>
+						<div class="resizer ng-scope" style="height:30.546875px"/>
+					</th>
+					<th title="Name" role="columnheader" ng-click="orderBy('[ViewModelClassName]','Name', $event)" 
+							ng-class="[{'ascending': [ViewModelClassName]_OrderColumnName === 'Name' &amp;&amp; ![ViewModelClassName]_OrderColumnReverseState }, {'descending': [ViewModelClassName]_OrderColumnName === 'Name' &amp;&amp; [ViewModelClassName]_OrderColumnReverseState }]" 
+							colname="Name" modeltype="String" 
+							class="tk-data-table__header-cell order-enabled" tabindex="0" aria-hidden="false">
+
+						<span>Name</span>
+						<div class="resizer ng-scope" style="height:30.546875px"/>
+					</th>
+				</tr>
+			</thead>
+			<tbody>				 
+				<tr ng-repeat="row in data.[ViewModelColumnName] | orderBy:[ViewModelClassName]_OrderColumnName :[ViewModelClassName]_OrderColumnReverseState" ng-class="{'vmCurrentRow':row.vCurrent, 'vmSelectedRow':row.vSelected}" tk-data-table-row="" class="tk-data-table__row ng-scope vmCurrentRow">
+					<td class="tk-data-table__cell" aria-hidden="false">
+						<div>{{row.Type}}</div>
+					</td>
+					<td class="tk-data-table__cell" aria-hidden="false">
+						<div>{{row.Name}}</div>
+					</td>
+					<td class="tk-data-table__cell tk-data-table__cell--context"><div class="show-actions"><button role="button" class="tk-button__native fab flat icon-button ripple-effect context-actions"><span class="mi">more_vert</span></button></div></td>
+				</tr>
+			</tbody>
+			<colgroup>
+				<col colspan="2" colname="Type" style="width:66.7678125px;"  class="tk-data-table__column" aria-hidden="false"/>
+				<col colspan="2" colname="Name" style="width:66.7678125px;" class="tk-data-table__column" aria-hidden="false"/>
+			</colgroup>
+		</table>
+	</div>
+</div>
+

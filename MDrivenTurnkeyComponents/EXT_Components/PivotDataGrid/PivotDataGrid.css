@@ -1,0 +1,61 @@
+﻿.PivotDataGrid {
+  height: 100%;
+}
+
+
+.grid__item{ 
+	position:relative;
+	overflow:hide;
+	
+}
+.grid__item::before,
+.grid__item::after{
+	content:"";
+	position:absolute;
+	background-color:lightgray;
+}
+
+.grid__item::before{
+	top:0;
+	left:0;
+	width:100%;
+	height:1px;	
+}
+
+.grid__item::after{
+	top:0;
+	right:0;
+	height:100%;
+	width:1px;	
+}
+
+.pivotheader{
+	font-weight:bold;	
+}
+
+.pivotempty::before,
+.pivotempty::after{
+	position:absolute;
+	background-color:lightgray;
+}
+
+.pivotempty::before{
+	content:"";
+	top:0;
+	left:0;
+	width:100%;
+	height:1px;	
+}
+
+.pivotempty::after{
+	content:"";
+	top:0;
+	right:0;
+	height:100%;
+	width:1px;	
+}
+
+.pivotemptycell{
+	background-color:lightgray;
+}
+
