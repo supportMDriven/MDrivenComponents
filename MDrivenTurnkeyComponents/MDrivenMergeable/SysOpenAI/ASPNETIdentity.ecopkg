@@ -6,6 +6,14 @@
   <OwnedElement>
     <Class Name="SysOpenAIChatSession" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="005c3fe1-dd63-44bf-ae84-830ab35d8ae0">
       <Feature>
+        <Attribute Name="Temperature" CodeComment="Leave as null for model default, set to zero for determenism and to 2 for crazy" Multiplicity="" Visibility="Public" id="32822d91-1323-403f-a64c-5b5bc4c1d5d7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Double" />
+          </Type>
+        </Attribute>
         <Attribute Name="MaxTokens" InitialValue="1000" Multiplicity="" Visibility="Public" id="40bf8c93-f2e4-4b3d-a27e-71f455dc7f34">
           <Type>
             <Datatype idref="Integer" />
@@ -62,12 +70,12 @@
     </Class>
     <Association Name="" EffectiveName="SysOpenAIMessageSysOpenAIMessagesSysOpenAIChatSessionSysOpenAIChatSession" id="26e85091-1537-4352-a830-d9883f61866b">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysOpenAIChatSession" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="2a33073a-81a3-4dfb-899a-64e424383063">
+        <AssociationEnd Name="SysOpenAIChatSession" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="2a33073a-81a3-4dfb-899a-64e424383063">
           <Participant>
             <Class Name="SysOpenAIChatSession" idref="005c3fe1-dd63-44bf-ae84-830ab35d8ae0" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysOpenAIMessages" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ba9ef329-c006-4eed-9ec5-48a771e906f2">
+        <AssociationEnd Name="SysOpenAIMessages" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ba9ef329-c006-4eed-9ec5-48a771e906f2">
           <Participant>
             <Class Name="SysOpenAIMessage" idref="0f362613-71dd-4536-9cd4-22cfe70b9a5f" />
           </Participant>

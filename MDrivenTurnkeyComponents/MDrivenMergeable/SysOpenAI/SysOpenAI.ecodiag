@@ -23,7 +23,7 @@
         <Class Name="SysUser" idref="c6b4247d-ce30-4fb8-abec-28bfc28d959a" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="1ccc78bb-4738-46db-8fa1-0c797126de8b" Color="1692800256" LastKnownName="SysOpenAIChatSession" PickedFeatureVisibility="ShowAll" RenderedHeight="120" RenderedWidth="176" ShowAttributes="False" ShowMethods="False" Size="1" x="192" y="96" id="f5c7cb43-8cb5-4901-845c-0643aa354346">
+    <PlacedClass ClassId="1ccc78bb-4738-46db-8fa1-0c797126de8b" Color="1692800256" LastKnownName="SysOpenAIChatSession" PickedFeatureVisibility="ShowAll" RenderedHeight="132" RenderedWidth="176" ShowAttributes="False" ShowMethods="False" Size="1" x="192" y="96" id="f5c7cb43-8cb5-4901-845c-0643aa354346">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="88" y="40" id="48bccde5-4854-4cd6-98ac-e2c779d4f594">
           <AssociationEnd>
