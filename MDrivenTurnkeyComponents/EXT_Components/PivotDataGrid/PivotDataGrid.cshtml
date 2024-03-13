@@ -1,20 +1,20 @@
 ﻿
 <div class="PivotDataGrid" style="display: grid;grid-template-columns: auto;grid-template-rows: auto;"  pivotdatagrid>
 
-				<div ng-repeat="row in data.XAxis" style="grid-column:{{$index+1}};grid-row:1;">
+				<div ng-repeat="row in data.XAxis" style="grid-column:{{$index+2}};grid-row:1;">
 				  <div class="grid__item pivotheader" >{{row.Header}}</div>
 				</div>
 
-				<div ng-repeat="row in data.YAxis" style="grid-column:1;grid-row:{{$index+1}};">
+				<div ng-repeat="row in data.YAxis" style="grid-column:1;grid-row:{{$index+2}};">
 				  <div class="grid__item pivotheader">{{row.Header}}</div>
 				</div>
 
-				<div ng-repeat="row in data.Values" style="grid-column:{{row.LocalXGrid}};grid-row:{{row.LocalYGrid}};"  pivotdatagridonevalue>
-				  <div class="grid__item">{{row.X}} {{row.Y}} {{row.Value}}</div>
+				<div ng-repeat="row in data.Values" style="grid-column:{{row.LocalXGrid+1}};grid-row:{{row.LocalYGrid+1}};"  pivotdatagridonevalue>
+				  <div class="grid__item {{row.Style}}">{{row.Value}}</div>
 				</div>
 				
-				<div ng-repeat="row in data.LocalEmpties" style="grid-column:{{row.LocalXGrid}};grid-row:{{row.LocalYGrid}};"  >
-				  <div class="grid__item"><div class="pivotemptycell">N/A</div></div>
+				<div ng-repeat="row in data.LocalEmpties" style="grid-column:{{row.LocalXGrid+1}};grid-row:{{row.LocalYGrid+1}};"  >
+				  <div class="grid__item"><div class="pivotemptycell"></div></div>
 				</div>
 				
 								
