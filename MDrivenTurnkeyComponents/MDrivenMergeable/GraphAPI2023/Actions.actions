@@ -5,6 +5,14 @@
       <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
     </MenuGroup>
   </GlobalAction>
+  <ContextAction Name="GrabDriveAndItem" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vDriveId:=vCurrent_NewNestedViewModelClass.DriveId;&#xD;&#xA;vDriveItemId:=vCurrent_NewNestedViewModelClass.ItemId;&#xD;&#xA;vUrl:=vCurrent_NewNestedViewModelClass.WebUrl&#xD;&#xA;&#xD;&#xA;" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="150c605b-1834-4eb8-ae01-4367e0b5a402">
+    <OnlyInThis>
+      <Nesting Name="NewNestedViewModelClass" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
+    </ViewModelContext>
+  </ContextAction>
   <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="1c4f8e2f-06e1-4712-b08a-0f4f0444f99c">
     <MenuGroup>
       <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
