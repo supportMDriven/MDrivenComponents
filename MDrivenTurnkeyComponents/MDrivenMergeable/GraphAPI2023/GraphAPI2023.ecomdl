@@ -9,6 +9,7 @@
   </Diagrams>
   <Spans>
     <Span Name="Index" FileName="Index" GUID="a288839f-fdce-4715-9d3e-84b69ba73032" />
+    <Span Name="SearshADUsersViaGraphAPI" FileName="SearshADUsersViaGraphAPI" GUID="a8d3a538-d1e6-46a6-96fa-a25327395517" />
     <Span Name="SearchViaGraphAPI" FileName="SearchViaGraphAPI" GUID="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
   </Spans>
   <Report />

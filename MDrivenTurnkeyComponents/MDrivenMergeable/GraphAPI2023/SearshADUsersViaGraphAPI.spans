@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SearshADUsersViaGraphAPI" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="a8d3a538-d1e6-46a6-96fa-a25327395517">
+  <Class>
+    <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysGraphAPIResultUser" ExpressionActAsForActions="" id="99ea6fd1-f121-4e09-9ad4-f333790cf40c">
+      <Class>
+        <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="userPrincipalName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.userPrincipalName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ae24ffe4-3047-4569-a0d5-d8f7bbcc0b4d" />
+        <Column Name="mail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.mail" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="499eaf25-1ed6-4cb6-8b94-88690dbf3046" />
+        <Column Name="mobilePhone" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.mobilePhone" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="dbabc3cf-f184-4b39-9360-d737acaafc87" />
+        <Column Name="officeLocation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.officeLocation" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="9374547e-e00b-4582-9acd-49552e3a342e" />
+        <Column Name="id" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.id" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="171a23a0-f0a6-4344-a824-8d83961e194a" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysGraphAPIResultUsers" idref="25262c93-9b4a-4684-92de-b5fb8be57339" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="SysGraphAPIGroup" ExpressionActAsForActions="" id="b57347ed-aa09-47d4-b3ed-ccaf7dc7ce4d">
+      <Class>
+        <Class Name="SysGraphAPIGroup" idref="8475441b-f829-4b78-81f9-72c9a135320f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="displayName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.displayName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="ba5579e4-d694-444f-ad2f-1983e8beb31c" />
+        <Column Name="description" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.description" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="2600bf1f-2bfe-46d7-b117-e8c597e942c7" />
+        <Column Name="expirationDateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.expirationDateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="3c8040f1-0c4a-4fc8-881d-11eb7dfbf53e" />
+        <Column Name="deletedDateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.deletedDateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="8f0f7803-9579-4d16-a3e6-bdf298296ca7" />
+        <Column Name="renewedDateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.renewedDateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="83cb4d3f-f197-43f4-85bc-8f444e872895" />
+        <Column Name="onPremisesLastSyncDateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.onPremisesLastSyncDateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="cdd8efa1-9b44-4522-8ba6-741caa360e88" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysGraphAPIGroups" idref="fffc2dfe-1336-4ddc-b563-36cbd97fe18a" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="GetUsers" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultUsers-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.GetUsers(vUserStartsWith)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="863aef42-cc0b-48a3-8cdd-564cc0df85a9" />
+    <Column Name="vUserStartsWith" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vUserStartsWith" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9b0281e4-81ba-4a06-91a7-8a2afe94fd00" />
+    <Column Name="SysGraphAPIResultUsers" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultUsers" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="9" StyleRef="" XPos="0" YPos="2" id="25262c93-9b4a-4684-92de-b5fb8be57339">
+      <ReferedNesting>
+        <Nesting Name="SysGraphAPIResultUser" idref="99ea6fd1-f121-4e09-9ad4-f333790cf40c" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="StatusFromLastOp" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.StatusFromLastOp" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="5e06cd34-2f24-4131-973e-b370c809432d" />
+    <Column Name="vCurrent_SysGraphAPIResultUser" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vCurrent_SysGraphAPIResultUser.userPrincipalName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="e885d4c7-6df5-4359-aabf-4ec992b7b4d2" />
+    <Column Name="LookUpGroups" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIGroups-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.GetGroupsFromPrincipalUser(vCurrent_SysGraphAPIResultUser.userPrincipalName)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="3" id="20f46df1-c4ac-43c0-8eda-1c9222b9f700" />
+    <Column Name="SysGraphAPIGroups" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIGroups" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="5" YPos="5" id="fffc2dfe-1336-4ddc-b563-36cbd97fe18a">
+      <ReferedNesting>
+        <Nesting Name="SysGraphAPIGroup" idref="b57347ed-aa09-47d4-b3ed-ccaf7dc7ce4d" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="vCurrent_SysGraphAPIGroup" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vCurrent_SysGraphAPIGroup.displayName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="4" id="c03bac40-4347-4f90-bcad-ca55006f7d00" />
+    <Column Name="LookUpUsersFromGroup" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultUsers-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.GetUsersFromGroupId(vCurrent_SysGraphAPIGroup.id)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="4" id="113baa16-f6bc-4577-ab91-6873b226b339" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vUserStartsWith" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

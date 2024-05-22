@@ -11,6 +11,7 @@
     <None Remove="MDrivenMergeable\GraphAPI2023\Actions.actions" />
     <None Remove="MDrivenMergeable\GraphAPI2023\Index.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans" />
+    <None Remove="MDrivenMergeable\GraphAPI2023\SearshADUsersViaGraphAPI.spans" />
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
@@ -55,6 +56,9 @@
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\SearshADUsersViaGraphAPI.spans">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysCert\Actions.actions">

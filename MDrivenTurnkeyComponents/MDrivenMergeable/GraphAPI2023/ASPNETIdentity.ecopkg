@@ -120,6 +120,25 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
+        <Method Name="GetUsers" CodeComment="All users principalname starting with in the SysGraphAPIResultUser" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="1ac95f45-22ce-4546-ab30-b40017a87822">
+          <Parameter>
+            <Parameter Name="startingwith" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="Search" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="6f80d835-feea-4fa1-8be8-45c7c589ee07">
           <Parameter>
             <Parameter Name="search" Kind="In">
@@ -192,6 +211,25 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
+        <Method Name="GetUsersFromGroupId" CodeComment="All users from a groupId in SysGraphAPIResultUser" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="afe140dc-08e8-42e9-b12a-abdf2d219b7d">
+          <Parameter>
+            <Parameter Name="groupId" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="LookUpLocationFromDriveIdAndId" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b5581ad7-a77a-4a48-95e8-5151f333bb38">
           <Parameter>
             <Parameter Name="driveid" Kind="In">
@@ -209,6 +247,25 @@
             <Parameter Name="returnparam" Kind="Out">
               <Type>
                 <Datatype idref="SysGraphAPIResultRow" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="GetGroupsFromPrincipalUser" CodeComment="id of a group gives you all users in group as SysGraphAPIResultUsers" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d6594441-7035-4c05-b5fb-4824df0daae5">
+          <Parameter>
+            <Parameter Name="principalUser" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
@@ -322,6 +379,85 @@
         </Attribute>
       </Feature>
     </Class>
+    <Class Name="SysGraphAPIResultUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="647b4764-a507-43dd-9c7e-a09f9854bdb1">
+      <Feature>
+        <Attribute Name="mobilePhone" Multiplicity="" Visibility="Public" id="1adc1130-d1dd-4378-b75e-a0daccbe9e1c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="givenName" Multiplicity="" Visibility="Public" id="3f8bd3da-de78-41f1-a90e-e1f44c8bf2e9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="officeLocation" Multiplicity="" Visibility="Public" id="623c3ab6-6817-4bd7-b19b-c542f2f467a7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="displayName" Multiplicity="" Visibility="Public" id="637c3a8d-b7d6-49be-a3c6-6cb2f367de01">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="jobTitle" Multiplicity="" Visibility="Public" id="7db89523-c075-4208-8152-d6d6bad96ec7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="userPrincipalName" Multiplicity="" Visibility="Public" id="7f8bbbdb-49fe-4d21-8117-7884cc6078d9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="surname" Multiplicity="" Visibility="Public" id="8725a412-766b-4a41-9318-3bb0c7d6165c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="id" Multiplicity="" Visibility="Public" id="d94bc885-3470-4c71-9c56-165401838ecd">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="mail" Multiplicity="" Visibility="Public" id="f74aed1c-1bcf-4190-be36-89761606f250">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
     <Association Name="" EffectiveName="SysExternalLoginSysExternalLoginsSysUserSysUser" id="6f24b23b-4930-445d-ab8f-99fed6a51e16">
       <AssociationEnd>
         <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8847b309-9ee6-4258-8365-0b100f9c6108">
@@ -336,6 +472,118 @@
         </AssociationEnd>
       </AssociationEnd>
     </Association>
+    <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPIGroupSysGraphAPIGroups" id="822d77c5-1e2f-45e3-bff6-df7e00bfb2a3">
+      <AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="b63a195a-fdff-4942-8aa4-382aa3208b58">
+          <Participant>
+            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPIGroups" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="68f577a2-f301-447d-a5be-ac4e001fe3a3">
+          <Participant>
+            <Class Name="SysGraphAPIGroup" idref="8475441b-f829-4b78-81f9-72c9a135320f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="SysGraphAPIGroup" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8475441b-f829-4b78-81f9-72c9a135320f">
+      <Feature>
+        <Attribute Name="onPremisesLastSyncDateTime" Multiplicity="" Visibility="Public" id="049ccc4a-0ee6-45ee-8ed0-18d12e60b2dc">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="mailEnabled" Multiplicity="" Visibility="Public" id="287efc49-59a9-456f-b3cc-bbd3696ac3ed">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="expirationDateTime" Multiplicity="" Visibility="Public" id="3ad6a48c-5ffa-4fbd-8811-f0e7839f2504">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="onPremisesDomainName" Multiplicity="" Visibility="Public" id="434a22b9-0e26-4675-b578-941acd281f29">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="displayName" Multiplicity="" Visibility="Public" id="4c540cb9-73db-42ce-9828-12cc901b9db9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="id" Multiplicity="" Visibility="Public" id="721edee2-0096-468e-b423-4e46aae182fc">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="description" Multiplicity="" Visibility="Public" id="9f9cb243-59d5-4ac9-aaf4-494e346b5b4f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="500" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="securityEnabled" Multiplicity="" Visibility="Public" id="bc52a952-5423-4047-b2a5-1f0860e09cb8">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="mailNickname" Multiplicity="" Visibility="Public" id="c1d5da12-1b64-4d73-81f7-5c6d6527b163">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="createdDateTime" Multiplicity="" Visibility="Public" id="df21cd89-0586-45c2-bc62-a87f4499bace">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="deletedDateTime" Multiplicity="" Visibility="Public" id="e5b147ee-6ab9-47a5-b38f-672b20bc6ec2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="renewedDateTime" Multiplicity="" Visibility="Public" id="ee9fdc10-6cd1-4dde-8184-2955010ef145">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
     <Class Name="SysExternalLogin" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8ea431b6-73df-4536-a07a-751b01f5dd17">
       <Feature>
         <Attribute Name="LoginProvider" Multiplicity="" Visibility="Public" id="172a11ee-84fb-412e-8f05-520d45d21416">
@@ -504,7 +752,7 @@
             <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIResultRows" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
+        <AssociationEnd Name="SysGraphAPIResultRows" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
           <Participant>
             <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
           </Participant>
@@ -554,6 +802,20 @@
         </Attribute>
       </Feature>
     </Class>
+    <Association Name="" EffectiveName="SysGraphAPIResultUserSysGraphAPIResultUsersSysGraphAPISysGraphAPI" id="da806511-13d2-4015-bc3d-84c4cdda7466">
+      <AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="34394b07-c2d7-40b1-b13d-40d64478fe27">
+          <Participant>
+            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPIResultUsers" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="67bb9d4b-2850-4358-8ce5-ca4872d65289">
+          <Participant>
+            <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Association Name="" EffectiveName="SysUserClaimSysUserClaimsSysUserSysUser" id="f285e989-16c8-4fc7-b9bc-9c6ff5ca5e0d">
       <AssociationEnd>
         <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="12532b0d-4a51-478d-aac8-906470b9eac5">
