@@ -474,12 +474,12 @@
     </Association>
     <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPIGroupSysGraphAPIGroups" id="822d77c5-1e2f-45e3-bff6-df7e00bfb2a3">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="b63a195a-fdff-4942-8aa4-382aa3208b58">
+        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="b63a195a-fdff-4942-8aa4-382aa3208b58">
           <Participant>
             <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPIGroups" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="68f577a2-f301-447d-a5be-ac4e001fe3a3">
+        <AssociationEnd Name="SysGraphAPIGroups" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="68f577a2-f301-447d-a5be-ac4e001fe3a3">
           <Participant>
             <Class Name="SysGraphAPIGroup" idref="8475441b-f829-4b78-81f9-72c9a135320f" />
           </Participant>
@@ -804,12 +804,12 @@
     </Class>
     <Association Name="" EffectiveName="SysGraphAPIResultUserSysGraphAPIResultUsersSysGraphAPISysGraphAPI" id="da806511-13d2-4015-bc3d-84c4cdda7466">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="34394b07-c2d7-40b1-b13d-40d64478fe27">
+        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="34394b07-c2d7-40b1-b13d-40d64478fe27">
           <Participant>
             <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPIResultUsers" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="67bb9d4b-2850-4358-8ce5-ca4872d65289">
+        <AssociationEnd Name="SysGraphAPIResultUsers" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="67bb9d4b-2850-4358-8ce5-ca4872d65289">
           <Participant>
             <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
           </Participant>
