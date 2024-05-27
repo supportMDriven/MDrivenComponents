@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="GraphAPIOneUser" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="14" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="f10f89bf-aa35-4d07-ac8e-235d9d76c43b">
+<Span Name="GraphAPIOneUser" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="14" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="62af5cbf-a249-4e64-976c-bab5df07858e">
   <Class>
     <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
   </Class>
+  <Nesting>
+    <Nesting Name="imagenesting" ExpressionActAsForActions="" id="19b8ca2b-06d1-46ff-ae9b-28a85b51302d">
+      <Class>
+        <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="base64ReturnStream" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="true" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3ceb1940-0043-4ab1-b71d-6a63fb1d0af0" />
+      </OwnedColumns>
+    </Nesting>
+  </Nesting>
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
@@ -11,19 +21,111 @@
     </OptOutActionInSpan>
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="displayName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.displayName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="948486f6-7211-4ec5-9992-278063c44b24" />
-    <Column Name="givenName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.givenName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="212ea04f-0e03-48bb-b03a-3f4e6cfba441" />
-    <Column Name="id" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.id" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="9f65646c-a1b2-4111-8adb-63c55bf538d4" />
-    <Column Name="jobTitle" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.jobTitle" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="6a1ece0d-6a36-417f-a049-ebb794a1949b" />
-    <Column Name="mail" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.mail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="a299846e-3f15-40dc-8115-88cd096d75b7" />
-    <Column Name="mobilePhone" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.mobilePhone" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="1423629a-f251-42b1-a3ee-fde8e87da8e2" />
-    <Column Name="officeLocation" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.officeLocation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="750f958c-5faa-4d89-b4ab-10f9a8aa61b6" />
-    <Column Name="surname" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.surname" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="3f361a8a-96e7-48a5-84c1-d2a932dfe41e" />
-    <Column Name="userPrincipalName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.userPrincipalName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="d75c7052-0ee3-498d-84d0-885343efa3c7" />
-    <Column Name="LookUpManagare" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SysGraphAPI.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;vResult:=selfVM.RestGet( 'https://graph.microsoft.com/v1.0/users/'+self.id+'/?$expand=manager$levels=max' ,  'Bearer' ,  self.SysGraphAPI.SysUser.SysTokens-&gt;first.Access_Token ,  '' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="12" id="c0849db3-ce89-4b10-a8f9-cf5a18983c59" />
-    <Column Name="vResult" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="12" id="c361f45c-674c-40ae-b2b8-ecd3a8a7bab5" />
+    <Column Name="displayName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.displayName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="3fd0c97f-0590-4651-90ff-ed3ea54d98ea">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="givenName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.givenName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="698f28a7-6e61-4e6c-a7b5-038cb2564d93">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="id" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.id" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="93317fa3-8ced-4811-8cbb-102d92c98569">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="jobTitle" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.jobTitle" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="874a72fe-9e12-4631-9084-85ea521a7324">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="mail" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.mail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="0655ea60-7a6c-4e1b-9739-b580ac439034">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="mobilePhone" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.mobilePhone" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="9de9824d-e434-4937-a680-fda745869b71">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="officeLocation" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.officeLocation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="3e306d10-d84f-4362-990a-7fb242da8bf1">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="surname" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.surname" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="7" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="06abc38c-fb9f-4edc-b3a1-fe746652b37d">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="userPrincipalName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.userPrincipalName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="8" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="04265af4-0c6f-48f1-9a5b-aa7955439b96">
+      <PlacingContainer>
+        <PlacingContainer idref="83e07d6e-fd7b-4f6c-8c59-576303e35d76" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RunQuery" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SysGraphAPI.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;vResult:=selfVM.RestGet( vAdHocQuery ,  'Bearer' ,  self.SysGraphAPI.GetDecodedAccessToken ,  '' )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="15" id="aaaa89b7-22db-49a6-b0ee-16471f6a0194">
+      <PlacingContainer>
+        <PlacingContainer idref="ad70a801-38b4-424d-94cf-20d9b05e57ee" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="vResult" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="16" id="577e1cab-f2b1-4e77-b21c-6a14fea950b9">
+      <PlacingContainer>
+        <PlacingContainer idref="ad70a801-38b4-424d-94cf-20d9b05e57ee" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="AdHocQuery" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vAdHocQuery" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="15" id="b48e5447-61c2-4b86-bd88-3b7e38fbf946">
+      <ColumnForPickList>
+        <Column Name="AdHocPickList" idref="c3239234-ce30-43f9-9fae-1fb2f4978e7f" />
+      </ColumnForPickList>
+      <PlacingContainer>
+        <PlacingContainer idref="ad70a801-38b4-424d-94cf-20d9b05e57ee" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="AdHocPickList" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Set{'https://graph.microsoft.com/v1.0/users/'+self.id+'/?$expand=manager','https://graph.microsoft.com/v1.0/users/'+self.id+'/photo/$value',&#xD;&#xA;vFreeQuery}" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="16" id="c3239234-ce30-43f9-9fae-1fb2f4978e7f">
+      <PlacingContainer>
+        <PlacingContainer idref="ad70a801-38b4-424d-94cf-20d9b05e57ee" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="vFreeQuery" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vFreeQuery" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="13" id="4a14010c-70e8-4b0e-b2df-3962509849ae">
+      <PlacingContainer>
+        <PlacingContainer idref="ad70a801-38b4-424d-94cf-20d9b05e57ee" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Pict" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vBlob" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="6" YPos="1" id="c5abcbe5-6bfa-455e-9c53-f33a4de2ebcc">
+      <PlacingContainer>
+        <PlacingContainer idref="e257e6f8-bcd1-4f9c-811c-b39fa3c33d3a" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.BlobType" Value="Image" />
+        <TaggedValue Tag="Eco.BlobType" Value="Image" />
+      </TaggedValue>
+    </Column>
+    <Column Name="GetPhoto" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SysGraphAPI.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;vBlob:=selfVM.RestGet( 'https://graph.microsoft.com/v1.0/users/'+self.id+'/photo/$value' ,  'Bearer' ,  self.SysGraphAPI.GetDecodedAccessToken ,  'imagenesting' ).Base64ToBlob" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="8" id="a6253f25-e92c-427e-ac23-2f1f7df1874d">
+      <PlacingContainer>
+        <PlacingContainer idref="e257e6f8-bcd1-4f9c-811c-b39fa3c33d3a" />
+      </PlacingContainer>
+    </Column>
   </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="ee107d95-c5f3-467b-8476-d893c8901cdf">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="83e07d6e-fd7b-4f6c-8c59-576303e35d76">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="e257e6f8-bcd1-4f9c-811c-b39fa3c33d3a" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="9bd3e46a-27c1-4333-9cba-5b6662192eba" />
+          </ChildContainers>
+        </PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="ad70a801-38b4-424d-94cf-20d9b05e57ee" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
   <SpanVariables>
+    <SpanVariable Name="vAdHocQuery" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vBlob" InitialValue="" TypeName="Blob" UserData="" />
+    <SpanVariable Name="vFreeQuery" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vResult" InitialValue="" TypeName="String" UserData="" />
   </SpanVariables>
 </Span>
