@@ -101,6 +101,35 @@
     </Class>
     <Class Name="SysGraphAPI" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="38553568-7d6a-4c34-9438-9f599d552420">
       <Feature>
+        <Method Name="GetContentFromDriveIdAndIdAndVersion" CodeComment="Returns the url to the image" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="058dddec-e866-4f3d-9bf4-c79a25ad41d8">
+          <Parameter>
+            <Parameter Name="driveid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="driveitem" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="version" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="LookUpFromUrl" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0e8239f5-08f4-4a5c-929b-a901c2843497">
           <Parameter>
             <Parameter Name="url" Kind="In">
