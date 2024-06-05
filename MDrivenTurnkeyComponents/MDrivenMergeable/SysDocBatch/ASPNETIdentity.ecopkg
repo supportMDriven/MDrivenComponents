@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="eb18d545-8d55-4a15-b9ba-13e814742fec">
+  <OwnedElement>
+    <Class Name="SysDoc" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2484ee09-c927-4bd9-abc0-75bda7b74ba2">
+      <Feature>
+        <Attribute Name="DocName" Multiplicity="" Visibility="Public" id="154625e2-4913-4ab6-9694-ec5eb05cc3f9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="ConvertToPDFWithLibreOffice" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="2f2c1ae2-7f82-4189-b6bb-1ee762597ce0">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="IsReport" Multiplicity="" Visibility="Public" id="3e9a9589-988b-4daa-86e0-cc3ca6cdbf65">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ConversionLog" Multiplicity="" Visibility="Public" id="4089130b-cb33-402f-a78f-a096e30e59bc">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DocData" Multiplicity="" Visibility="Public" id="4697da64-45fe-4e6d-99d7-e2d1587bf917">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+        <Method Name="ConvertToMSOfficeWithLibreOffice" CodeComment="Will convert to ods to xlsx, and odt to docx" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="59877f93-ce17-435f-a14a-a341cefeee67">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="DocDirectory" Multiplicity="" Visibility="Public" id="5d8fb669-1b80-4e5f-934c-97ce9efa4933">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="InfoOnFailed" Multiplicity="" Visibility="Public" id="8e094d92-ed49-4688-b883-14dc4ead2277">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class Name="SysMDrivenMiscSettingsSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8126c287-328a-4c06-b703-5417934358f2">
+      <Feature>
+        <Attribute Name="GlobalReadOnlyMode" Multiplicity="" Visibility="Public" id="64ba49e3-3ecf-4518-993a-dd22cab1d6f5">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalToolbarMode" Multiplicity="" Visibility="Public" id="8fd75a7d-c42f-4801-ae6a-bdbecac04c62">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LibreOfficeInstallPathAndExe" Multiplicity="" Visibility="Public" id="fc468dac-0b87-4795-b128-6246b4a4b61b">
+          <PlacedClass>
+            <PlacedClass idref="1341c6d8-4bd3-4623-bb27-cfe9d6485cf5" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="SysDocBatchCurrentSysDocBatchSysSingletonSysSingletonsCurrentSysDocBatch" id="900ae307-cf0f-4e69-8ce1-8e7845edf0f2">
+      <AssociationEnd>
+        <AssociationEnd Name="SysSingletonsCurrentSysDocBatch" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="bfcb013b-6cb9-4865-9667-a4617eab728b">
+          <Participant>
+            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="CurrentSysDocBatch" IsNavigable="True" Multiplicity="1" Visibility="Public" id="edbe4d44-f065-4721-bc49-25db92e6d241">
+          <Participant>
+            <Class Name="SysDocBatch" idref="d0351ee3-1d98-49bc-b7ff-088639bc4612" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ad4cf46f-0195-4197-bef2-9f8dd89a3870">
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="SysDocBatchSysDocBatchSysDocSysDocs" id="c7133463-9b36-453c-89db-00a784917136">
+      <AssociationEnd>
+        <AssociationEnd Name="SysDocBatch" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="97d5b351-1de4-4ca1-a0dc-298ee83efae4">
+          <Participant>
+            <Class Name="SysDocBatch" idref="d0351ee3-1d98-49bc-b7ff-088639bc4612" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysDocs" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="5aecf465-7c1f-4f7a-a5c0-7ad221e91247">
+          <Participant>
+            <Class Name="SysDoc" idref="2484ee09-c927-4bd9-abc0-75bda7b74ba2" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="SysDocBatch" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d0351ee3-1d98-49bc-b7ff-088639bc4612">
+      <Feature>
+        <Attribute Name="SysDocBatchViewRequested" Multiplicity="" Visibility="Public" id="0bfffd90-9668-4b8b-8531-a03d1e02b114">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="OnSysDocBatchViewClose" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b5035e81-131f-4ab3-b059-6d808cfceaee">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.SysDocs-&gt;foreach(x|x.delete)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="SysDocBatchViewShowing" Multiplicity="" Visibility="Public" id="c5868cb2-0e68-4315-b06b-a132549662c3">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperclass" />
+  </TaggedValue>
+</Package>

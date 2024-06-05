@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysDocBatchView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="34694623-d2de-46da-8521-9ea249e4e21a">
+  <Class>
+    <Class Name="SysDocBatch" idref="d0351ee3-1d98-49bc-b7ff-088639bc4612" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysDoc" ExpressionActAsForActions="" id="69b32eee-03a4-4271-ba26-d58fe4846ebe">
+      <Class>
+        <Class Name="SysDoc" idref="2484ee09-c927-4bd9-abc0-75bda7b74ba2" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="DocDirectory" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DocDirectory" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8236d27e-2302-49eb-b778-60d8fc62019a" />
+        <Column Name="DocName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DocName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="86312b56-d020-4a0d-98b3-2c819899789e" />
+        <Column Name="InfoOnFailed" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.InfoOnFailed" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="68767a9a-3abc-4aed-8fd1-e7c292da97bd" />
+        <Column Name="IsReport" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsReport" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="305974c6-7efb-4bd8-af2f-4c7e6c21c405" />
+        <Column Name="PDF" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ConvertToPDFWithLibreOffice" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="0e636c81-62cf-4a12-8ca5-4c771bae4c29" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysDocs" idref="c5e53ec6-dd6f-49d0-97e6-30a866c4af74" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="SysDocs" ActionPeriodicityMillisec="-1" ColSpan="13" ColSpanWhenInGrid="1" Expression="self.SysDocs" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="11" StyleRef="" XPos="0" YPos="1" id="c5e53ec6-dd6f-49d0-97e6-30a866c4af74">
+      <ReferedNesting>
+        <Nesting Name="SysDoc" idref="69b32eee-03a4-4271-ba26-d58fe4846ebe" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="ZipCreate" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vData:=selfVM.SysDocBatchZip( self )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="02093b3f-3bbd-4507-9246-3ff0c1b7b4d5" />
+    <Column Name="DownloadZip" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="selfVM.Download( 'Somefile.zip' ,  vData )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="c3c8f6c5-e0f7-4a2e-b713-c25a94ee7f7b" />
+    <Column Name="vData" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vData-&gt;length" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="0" id="4bff6662-f506-4651-8f7c-0a0a0662991a" />
+    <Column Name="DownloadSelectedDoc" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vData:=selfVM.Download( vCurrent_SysDoc.DocName  ,vCurrent_SysDoc.DocData)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="d32824ba-658a-4595-aed3-6f306c65da0a" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vData" InitialValue="" TypeName="Blob" UserData="" />
+  </SpanVariables>
+</Span>
