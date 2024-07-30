@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TestTinyMCEResult" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ac1eec53-27ec-4110-949d-0557c6994f3b">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="TinyMCEData" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.TinyMCEData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="1" YPos="0" id="521bb3b7-a411-4295-baf4-a2b8794598d9">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+</Span>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="HiddenTableColumns" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="08429d74-4d80-4ac7-8002-f8d8834cbb0b">
+  <Category>
+    <Category Name="TestCases" idref="56f7aa14-c91f-47e2-b950-281ca61cee43" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="9393d77d-f639-4001-8c99-0a4a8aef6cb7">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9101f921-9e93-49a2-8f47-b2671d63f10a" />
+        <Column Name="URL" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.URL" ExpressionForReadOnly="true" ExpressionForVisible="vColumnsHidden" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f8680e7d-ae0c-4858-9edc-b5298b504196" />
+        <Column Name="EmailAddress" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.EmailAddress" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="e9c340b1-4c17-4a0a-8943-e4378fb036b2" />
+        <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="8284d9a3-0387-481b-9997-372b40bf7401" />
+        <Column Name="BooleanNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="" ExpressionForVisible="vColumnsHidden" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="ba8f2a1b-a17a-4b4e-8bf5-dc432257818d" />
+        <Column Name="Int64Nullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int64Nullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="9f45e8f7-a1f5-4275-9db0-9c9611cd5cd8" />
+        <Column Name="DecimalNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DecimalNullable" ExpressionForReadOnly="" ExpressionForVisible="vColumnsHidden" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="919e9b71-3b7f-4a7a-b3ff-d85d610bcc7e" />
+        <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="fab" XPos="1" YPos="7" id="6af129be-2296-4ff4-8b6e-4f01c3a9628d">
+          <ActionToExecute>
+            <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+          </ActionToExecute>
+          <TaggedValue>
+            <TaggedValue Tag="Icon" Value="pan_tool" />
+            <TaggedValue Tag="IconButton" Value="True" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllClass1" idref="7762008e-fdb0-49ba-98d3-be8bac127972" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="HideColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vColumnsHidden := not vColumnsHidden" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4768312e-3020-4751-9c8b-47e8e079c194" />
+    <Column Name="AllClass1" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="1" YPos="1" id="7762008e-fdb0-49ba-98d3-be8bac127972">
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="9393d77d-f639-4001-8c99-0a4a8aef6cb7" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="HideColumn_Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if vColumnsHidden then&#xD;&#xA;  'Hide columns'&#xD;&#xA;else&#xD;&#xA;  'Show columns'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="801fd543-3d91-415a-ad2e-b36bb0ef12ff" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vColumnsHidden" InitialValue="false" TypeName="Boolean" UserData="" />
+  </SpanVariables>
+</Span>

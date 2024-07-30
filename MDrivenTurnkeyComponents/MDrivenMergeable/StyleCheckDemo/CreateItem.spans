@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="CreateItem" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="14368b21-c5c6-41f6-a519-b7bd037939f9">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="107caaa5-ed79-414e-9b2f-4e38a0f1a8a8" />
+    <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Telephone" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="6be5481a-739c-479b-b726-4cf9e909b6bf" />
+    <Column Name="URL" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.URL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="d31f8877-9634-4f69-a7dd-201cddb8b576" />
+  </OwnedColumns>
+</Span>

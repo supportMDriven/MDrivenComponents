@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="WeekDefinitionView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="829d1320-7cde-401a-a952-1e748c9afe2f">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="WeekDefinition" idref="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" />
+  </Class>
+  <Nesting>
+    <Nesting Name="FirstDayOfWeekPickList" ExpressionActAsForActions="" id="6a1f90c4-17d3-4c63-81d2-ea089dd8fc8e">
+      <Class>
+        <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="dc8a3c44-499a-4cf6-8456-dcf3e6d6b979" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="FirstDayOfWeekPickList" idref="5c2295ba-f7e2-4272-87c8-bbe931af8110" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="YearToGenerateWeeksForPickList" ExpressionActAsForActions="" id="3115d43b-1a03-41dd-9e82-5744d6d84a44">
+      <Class>
+        <Class Name="Year" idref="7ed408e9-8600-4611-bb8a-c03431312040" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="628eb13f-9aed-4e57-9cbe-698b4d48acf6" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="YearToGenerateWeeksForPickList" idref="b6dcdf85-26df-4702-9d2d-04562a69e5d4" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="WeeksList" ExpressionActAsForActions="" id="d0045088-c2cf-43f4-b988-43573ba4b6df">
+      <Class>
+        <Class Name="Week" idref="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="YearNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.YearNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Year" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ff9f64de-5a8d-4546-a8c4-5e37cab53459" />
+        <Column Name="WeekNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.WeekNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Week" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="70038743-1b65-4982-abaa-2845b8c9603e" />
+        <Column Name="EvenWeek" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.EvenWeek then&#xD;&#xA;  true&#xD;&#xA;else&#xD;&#xA;  Boolean.nullValue&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="bc4f81d0-6dbb-4042-a425-cc8b73d719ec" />
+        <Column Name="WeekOrdinal" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.WeekOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="3621d606-87ed-400a-8f21-0d2a1da52d38" />
+        <Column Name="FirstDayOfWeek" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.FirstDayOfWeek.WeekDayAbbr" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="9fa126f4-5a3f-426b-9e01-6d446b5cd50c" />
+        <Column Name="Dates" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.Days-&gt;orderBy(d|d.Date).asString-&gt;asCommaList" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="151471a1-6142-495c-a932-bf52f01dd782" />
+        <Column Name="Months" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Months.asString-&gt;asCommaList" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="aea79b29-3a6e-4142-a2f2-53eb32298618" />
+        <Column Name="Next" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Next.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="861e2165-b412-4737-b1b0-39889d702f9f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="WeeksSortedOnYearAndWeekNumber" idref="d2db85a1-5b96-4a6c-baaf-fe44bce1b9ad" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="NotWorkDaysPickList" ExpressionActAsForActions="" id="90fed82d-96c6-4a3f-8a49-28d19f2cc17f">
+      <Class>
+        <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e1e2fd9e-76f8-4c96-bdec-9b950a138eb6" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="NotWorkDaysPickList" idref="0d4403b0-bff4-4457-8f36-fb6ff64cd3f9" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="NotWorkDaysList" ExpressionActAsForActions="" id="ad365a9b-8bde-4529-a073-cc7c4752c899">
+      <Class>
+        <Class Name="DayOfWeek" idref="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="047f5883-3f8d-4829-9ce5-7b05ad8eac42" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="NotWorkDaysList" idref="c9b30f50-459f-47be-b9ff-a4287e8678f0" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="3745e667-ecc3-4b2a-a4b9-a4fbb686a365" />
+    <Column Name="FirstDayOfWeek" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FirstDayOfWeek" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="927748ad-0d69-4e36-99be-eea9c9a69b42">
+      <ColumnForPickList>
+        <Column Name="FirstDayOfWeekPickList" idref="5c2295ba-f7e2-4272-87c8-bbe931af8110" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="FirstDayOfWeekPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="DayOfWeek.allInstances-&gt;orderBy(x|x.DayNumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5c2295ba-f7e2-4272-87c8-bbe931af8110">
+      <ReferedNesting>
+        <Nesting Name="FirstDayOfWeekPickList" idref="6a1f90c4-17d3-4c63-81d2-ea089dd8fc8e" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="YearToGenerateWeeksFor" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.YearToGenerateWeeksFor" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="4" RowSpan="1" StyleRef="" XPos="4" YPos="8" id="f18d95cc-4440-4a4b-96a1-9f11271c93ab">
+      <ColumnForPickList>
+        <Column Name="YearToGenerateWeeksForPickList" idref="b6dcdf85-26df-4702-9d2d-04562a69e5d4" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="YearToGenerateWeeksForPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Year.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b6dcdf85-26df-4702-9d2d-04562a69e5d4">
+      <ReferedNesting>
+        <Nesting Name="YearToGenerateWeeksForPickList" idref="3115d43b-1a03-41dd-9e82-5744d6d84a44" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="NotWorkDays" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vNotWorkDays" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="f646dd49-ec6e-46f8-9dea-1bc2d5069cfc">
+      <ColumnForPickList>
+        <Column Name="NotWorkDaysPickList" idref="0d4403b0-bff4-4457-8f36-fb6ff64cd3f9" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="NotWorkDaysPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="DayOfWeek.allinstances-&gt;difference(self.NotWorkDays)-&gt;orderBy(x|x.DayNumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0d4403b0-bff4-4457-8f36-fb6ff64cd3f9">
+      <ReferedNesting>
+        <Nesting Name="NotWorkDaysPickList" idref="90fed82d-96c6-4a3f-8a49-28d19f2cc17f" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="NotWorkDays_Add" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.NotWorkDays.Add(vNotWorkDays)" ExpressionForReadOnly="vNotWorkDays.IsNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="3" id="dfb75ee6-b797-4247-aa56-88ea2acd774d" />
+    <Column Name="NotWorkDays_Remove" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.NotWorkDays.Remove(vCurrent_NotWorkDaysList)" ExpressionForReadOnly="vCurrent_NotWorkDaysList.IsNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="7" id="6d76f78a-724a-49b9-8ecc-e7efd06c5f99" />
+    <Column Name="NotWorkDaysList" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.NotWorkDays" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="0" YPos="4" id="c9b30f50-459f-47be-b9ff-a4287e8678f0">
+      <ReferedNesting>
+        <Nesting Name="NotWorkDaysList" idref="ad365a9b-8bde-4529-a073-cc7c4752c899" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="FirstWeekOrdinal" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.FirstWeek.WeekOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="9" YPos="0" id="d23088af-d2b6-4191-9f15-ccace4b42d78" />
+    <Column Name="LastWeekOrdinal" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.LastWeek.WeekOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="9" YPos="1" id="f8bd4952-182e-4d8a-91c5-d120db6eab85" />
+    <Column Name="Log" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Log" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="4" RowSpan="6" StyleRef="" XPos="11" YPos="2" id="63723061-6d81-428a-9554-fc9336c4c304" />
+    <Column Name="WeeksSortedOnYearAndWeekNumber" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="self.Weeks-&gt;orderBy(w|w.Year.YearNumber, w.WeekNumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="0" YPos="9" id="d2db85a1-5b96-4a6c-baaf-fe44bce1b9ad">
+      <ReferedNesting>
+        <Nesting Name="WeeksList" idref="d0045088-c2cf-43f4-b988-43573ba4b6df" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="NumberOfWeeksInAllWeeksInOrder" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AllWeeksInOrder-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="4" RowSpan="1" StyleRef="" XPos="10" YPos="8" id="afa48274-5ce0-4c0e-bde0-557f7e6b13f7" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vNotWorkDays" InitialValue="" TypeName="DayOfWeek" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

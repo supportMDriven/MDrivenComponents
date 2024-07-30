@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SeveralTables" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="12" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9b71a3fb-f060-4d6f-84dc-8c40fd4b3e22">
+  <Category>
+    <Category Name="Layout" idref="b039cece-9431-4546-9977-08f480dce7d2" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="7a517d3d-851c-40bb-be92-0dfb05b004bf">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'A few fields with a large table at the bottom.\r\n' +&#xD;&#xA;'The table should extend the viewmodel section,\r\n' +&#xD;&#xA;'make this description scroll upwards out of sight.\r\n' " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="9" YPos="2" id="b2a3d204-7d57-44f5-a14c-37dc1938834f" />
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="6" id="7353541e-70c3-497f-8ccc-20ba920eb6ce" />
+        <Column Name="DoubleNotNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.DoubleNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="38b217b3-3068-4fb5-87c6-1e4d989d2946" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisClass1" idref="b1975f72-80d1-4475-9852-efcefbd71bce" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TransientClass" ExpressionActAsForActions="" id="3a933bd0-a5f1-4d06-96f9-c17662f46744">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomethingInside" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="fd5eb49e-03cf-40f6-871e-1b2af5937598" />
+        <Column Name="SomethingInside2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8a174710-c054-4066-9b8a-a69848ac83a6" />
+        <Column Name="SomethingInside3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8cafd6b8-f2ce-4d3f-97dc-75e60af10558" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllTransientClass" idref="948d0257-8961-40f6-b94a-b5357486fe16" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TransientClassUpplerRight" ExpressionActAsForActions="" id="a7e24b71-cb00-4a26-8f3a-77bab622880f">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomethingInside" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e49a9e47-aebe-430c-a146-ee429722b0d7" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting Name="TransientClassUpplerLeft" ExpressionActAsForActions="" id="367af972-65a3-4d61-b532-f7b9893bbbf7">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomethingInside" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="611182c7-a0cf-4980-99cc-0f1be545eb60" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllTransientClassUpperLeft" idref="625786b0-dfc7-4837-88d8-a5bbc81fa317" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TransientClassUpplerMiddle" ExpressionActAsForActions="" id="75a52349-3919-4354-a359-4ae452b134a2">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomethingInside" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="08e44da3-d78a-4e14-b229-c7752e98546e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllTransientClassUpperMiddle" idref="495c7f03-7881-4d3a-bed9-d3d1750f3559" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ThisClass1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class1.allInstances-&gt;first" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="0" id="b1975f72-80d1-4475-9852-efcefbd71bce">
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="7a517d3d-851c-40bb-be92-0dfb05b004bf" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllTransientClass" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="TransientClass.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="9" id="948d0257-8961-40f6-b94a-b5357486fe16">
+      <ReferedNesting>
+        <Nesting Name="TransientClass" idref="3a933bd0-a5f1-4d06-96f9-c17662f46744" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Add50MoreInList" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Sequence{1..50}-&gt;forEach(TransientClass.Create)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="8" id="b782dc18-83df-4db7-8a1f-263bb64feea9" />
+    <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Telephone" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="1" id="55c3c06f-cea0-444f-9774-abb6607f305e" />
+    <Column Name="AllTransientClassUpperLeft" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="TransientClass.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="0" id="625786b0-dfc7-4837-88d8-a5bbc81fa317">
+      <ReferedNesting>
+        <Nesting Name="TransientClassUpplerLeft" idref="367af972-65a3-4d61-b532-f7b9893bbbf7" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllTransientClassUpperMiddle" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="TransientClass.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="4" YPos="0" id="495c7f03-7881-4d3a-bed9-d3d1750f3559">
+      <ReferedNesting>
+        <Nesting Name="TransientClassUpplerMiddle" idref="75a52349-3919-4354-a359-4ae452b134a2" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

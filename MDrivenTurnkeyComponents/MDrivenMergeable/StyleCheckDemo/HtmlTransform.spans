@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="HtmlTransform" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="15" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c0d4bb4a-5f85-4fdd-897f-e13e33ce59f8">
+  <Class>
+    <Class Name="ReportRoot" idref="3990fd7e-81a4-4185-b339-9046f831b693" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="XHtmlReportAsString" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vResultHTML := self.XHtmlReportAsString(ReportRoot.ViewModels.ReportingViewmodel)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="11" id="939e1638-9939-4cd6-b2ab-4313a664fa48" />
+    <Column Name="opendocumentreportasblob" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vResultHTML := self.opendocumentreportasblob(ReportRoot.ViewModels.ReportingViewmodel).asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="11" id="a7239075-eeb3-4f29-86ad-3919c5e65390" />
+    <Column Name="opendocumentreportshow" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vResultHTML := self.opendocumentreportshow(ReportRoot.ViewModels.ReportingViewmodel).asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="11" id="0f03f601-a351-40d7-8edb-ef5bf7135c0b" />
+    <Column Name="TemplateHtml" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.TemplateHtml" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="1" YPos="0" id="e44f7b09-ea53-46cc-8cae-ea0952dd199b" />
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="af99dd88-7d4e-48fb-b66d-7a55b23f7f4d" />
+    <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Text" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="5" YPos="6" id="1cec66e8-51a2-43d4-9526-450a7c3303bc" />
+    <Column Name="ReportFileName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ReportFileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="833bb6da-cd02-4618-82a3-f3edc665be3c" />
+    <Column Name="TemplateIsHtml" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.TemplateIsHtml" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="8f1a574e-ff17-4e56-b20f-fd252f6fb805" />
+    <Column Name="vResultHTML" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="vResultHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="1" YPos="12" id="9f35a81c-49e5-4635-afdf-1bdaa9da461e" />
+    <Column Name="vResultHTMLRendered" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="vResultHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="1" YPos="18" id="e34f1209-c457-4fb5-a162-8b0be15b91cf">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DerivedHtmlReportAsString" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.XHtmlReportAsString(ReportRoot.ViewModels.ReportingViewmodel)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="1" YPos="24" id="dcd409ff-c77f-415f-9376-296929e32847">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vReportRoot" InitialValue="" TypeName="Class1" UserData="" />
+    <SpanVariable Name="vResultHTML" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ActionAndButtons" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="07588de7-e066-4043-9efd-631cae5d777d">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Klass1namnMedÅÄÖ" ExpressionActAsForActions="" id="62d742bf-2997-42de-8965-bb3f3f202c54">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AnObjectOfClass1" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="24163648-70c9-41d4-8990-bf07eac675d4" />
+        <Column Name="ShowModalTesterClassAction" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="a28af4f1-3317-4bca-a999-34a68912a0fa">
+          <ActionToExecute>
+            <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="IntegerNotNullable" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.IntegerNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="57642481-ca6a-4241-ada3-3bcd4d047c7c" />
+        <Column Name="AddOne" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="vCurrent_Klass1namnMedÅÄÖ.IntegerNotNullable := vCurrent_Klass1namnMedÅÄÖ.IntegerNotNullable +1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt; (local action)" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="5694d2ce-439e-4b47-85c6-eae180062255" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisClass1" idref="050a2f7f-d7bc-4d87-80f3-6b91670d959d" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="ThisClass1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class1.allInstances-&gt;first" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="0" id="050a2f7f-d7bc-4d87-80f3-6b91670d959d">
+      <ReferedNesting>
+        <Nesting Name="Klass1namnMedÅÄÖ" idref="62d742bf-2997-42de-8965-bb3f3f202c54" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AddOneWithActionNamedDifferently" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="20f4f4a7-358f-47af-b7ad-89e443f6c94e">
+      <ActionToExecute>
+        <ContextAction Name="ViewModelActionNotInRoot" idref="0fe5ec7f-4ff1-4fee-aa87-bb2b567d3f1c" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="AddOneWithoutLevelSetting" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ebd045b0-b884-49e1-a5d9-48707bb6526e">
+      <ActionToExecute>
+        <ContextAction Name="ViewModelActionWithoutLevelSetting" idref="9a1b9845-df0d-4fd2-ab8a-3ad4baaeb0d8" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ÖkaEnMedNamnSomÄrAnnorlunda" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="3cd1c0e0-3a35-41ad-bc6b-85ae42574200">
+      <ActionToExecute>
+        <ContextAction Name="VymodellActionSomÖkarMedEn" idref="65a3e4b7-ab2e-44ce-b94d-ac293d4e12cd" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'Above should ask question and then add one to integer'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="4064cfee-fac3-4d5c-b91d-9b121fcb574a" />
+  </OwnedColumns>
+</Span>

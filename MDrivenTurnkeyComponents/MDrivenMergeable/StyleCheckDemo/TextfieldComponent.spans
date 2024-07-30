@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TextfieldComponent" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="29b9f550-a379-4f88-b7b2-b8928ac55695">
+  <Category>
+    <Category Name="AngularJSComponents" idref="4be3ee37-338e-4795-aa32-b1d0661655fd" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="9706af37-68d2-48c0-bea7-7d8d533a3af6">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="drive_file_rename_outline" />
+      </TaggedValue>
+    </Column>
+    <Column Name="String_HelperText" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Helper text for input'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="0999f282-89fb-4def-a0ad-4a3516414d72" />
+    <Column Name="String_Placeholder" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Placeholder for input'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="ba15efb4-d35e-4927-8ca7-97170e7d7bac" />
+    <Column Name="Int16Nullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int16Nullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="1a74f476-863f-4f9e-965f-66f7c26de6c3" />
+    <Column Name="DecimalInput" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DecimalNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="fe938106-fb2e-4976-add8-bf6d10f71aef">
+      <TaggedValue>
+        <TaggedValue Tag="InputMode" Value="decimal" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+        <TaggedValue Tag="Icon" Value="attach_money" />
+        <TaggedValue Tag="IconInInput" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="UrlInput" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.URL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="b60153ea-712e-48a2-a60e-fd8ecb299f13" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="UseAngularJSComponents" Value="true" />
+  </TaggedValue>
+</Span>

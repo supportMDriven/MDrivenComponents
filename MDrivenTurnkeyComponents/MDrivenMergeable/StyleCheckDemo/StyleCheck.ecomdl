@@ -1,0 +1,91 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="4db96d57-8a1c-44e4-9e2d-cf769b5bd9f6" />
+    <Package Name="CalendarPackage" FileName="CalendarPackage" GUID="8c9141e9-297a-4f9a-be23-a747a29367f7" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions>
+    <TagExtension Name="Plan" FileName="Plan" GUID="1f60e0d6-b87c-4701-ae18-2b3de1ad666b" />
+  </TagExtensions>
+  <Diagrams>
+    <Diagram Name="ForASPNETIdentity" FileName="ForASPNETIdentity" GUID="7f5d5bb1-210b-4e82-9068-db661712522a" />
+    <Diagram Name="Calendar" FileName="Calendar" GUID="c00d77df-e19d-45dd-bcf1-dba41eddbe7c" />
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="f42c8106-2bdd-4110-93ff-2b3de9394d2c" />
+  </Diagrams>
+  <Spans>
+    <Span Name="MainTesterAngular" FileName="MainTesterAngular" GUID="02134160-dc3a-4f58-81c3-e974c392d168" />
+    <Span Name="ActionAndButtons" FileName="ActionAndButtons" GUID="07588de7-e066-4043-9efd-631cae5d777d" />
+    <Span Name="HiddenTableColumns" FileName="HiddenTableColumns" GUID="08429d74-4d80-4ac7-8002-f8d8834cbb0b" />
+    <Span Name="PopupTestVM" FileName="PopupTestVM" GUID="09645083-5470-42e5-a9a8-d2ae1577607d" />
+    <Span Name="FullHeightTable" FileName="FullHeightTable" GUID="0b30252e-0f2b-4172-9831-e99b8e4ceec5" />
+    <Span Name="TextField" FileName="TextField" GUID="0b486c45-291c-4b0c-9485-a8f916a42cf0" />
+    <Span Name="BlobTeststing" FileName="BlobTeststing" GUID="0e0a3122-3090-4bcf-b9f9-e47f7d78a066" />
+    <Span Name="FileUpload" FileName="FileUpload" GUID="0f1193c7-bad2-433f-a021-b08e8096124c" />
+    <Span Name="TableClientSorting" FileName="TableClientSorting" GUID="0f6f2c25-b804-4f02-a880-376876dc60e0" />
+    <Span Name="ShowUploadDownload" FileName="ShowUploadDownload" GUID="10896d1d-a77a-4377-83b2-22095a630551" />
+    <Span Name="CreateItem" FileName="CreateItem" GUID="14368b21-c5c6-41f6-a519-b7bd037939f9" />
+    <Span Name="CountryView" FileName="CountryView" GUID="1746ee3e-df60-401a-9584-aafbde0f829f" />
+    <Span Name="TestForGAVisibility" FileName="TestForGAVisibility" GUID="272c5f81-d930-4d41-a815-6fe2af7a20f3" />
+    <Span Name="TextfieldComponent" FileName="TextfieldComponent" GUID="29b9f550-a379-4f88-b7b2-b8928ac55695" />
+    <Span Name="Headers" FileName="Headers" GUID="2b972ebb-5bd2-4b1e-9e1f-432b6d1742a6" />
+    <Span Name="ModalTesterWithoutRoot" FileName="ModalTesterWithoutRoot" GUID="2dabdb85-b581-4b31-9c89-0b14e17ca64e" />
+    <Span Name="ImageComponent" FileName="ImageComponent" GUID="42c8bc60-3274-44a1-a20d-11763300940d" />
+    <Span Name="RedirectView" FileName="RedirectView" GUID="438846d2-70bf-449d-a958-7fa71f620f9d" />
+    <Span Name="ImageUploadComponent" FileName="ImageUploadComponent" GUID="43af354f-eb59-4471-bf9a-75565d881d5c" />
+    <Span Name="InputFields" FileName="InputFields" GUID="46cd97e5-e814-4963-a89e-5c93cd5cf5a1" />
+    <Span Name="Buttons" FileName="Buttons" GUID="4fefce68-90c0-4b6d-b2f2-be817bbce750" />
+    <Span Name="YearView" FileName="YearView" GUID="5de76341-4be5-4215-97b1-7cd387bcdf78" />
+    <Span Name="WideTableNOTTouchingBottom" FileName="WideTableNOTTouchingBottom" GUID="6f95da42-e66f-48bc-add4-d1f434ed7eeb" />
+    <Span Name="PopUpForButton" FileName="PopUpForButton" GUID="72b97557-f0ef-4fba-8412-acf2717df1c8" />
+    <Span Name="WeekDefinitionView" FileName="WeekDefinitionView" GUID="829d1320-7cde-401a-a952-1e748c9afe2f" />
+    <Span Name="PopUpDetails" FileName="PopUpDetails" GUID="84712e17-c8cc-48d7-aba3-66a580e034f9" />
+    <Span Name="DatePicker" FileName="DatePicker" GUID="856f89b4-d442-420b-b40a-621ef18e5bda" />
+    <Span Name="ImageUpload" FileName="ImageUpload" GUID="8667bc25-b94a-4632-8da3-55e112a3d2c8" />
+    <Span Name="DateAndTime" FileName="DateAndTime" GUID="866f5a62-dc18-4eaf-aae3-23619968540e" />
+    <Span Name="DateStructureBrowser" FileName="DateStructureBrowser" GUID="86919079-eafb-46d3-b35a-0b8b339f3f31" />
+    <Span Name="ThreeStackedGroupBoxes" FileName="ThreeStackedGroupBoxes" GUID="883404fb-4830-43e9-9817-974a58fb0d93" />
+    <Span Name="SeekerInModal" FileName="SeekerInModal" GUID="8a9807e3-e603-4c27-82ff-fbf7cb3fb65b" />
+    <Span Name="ViewModelToXmlAndJson" FileName="ViewModelToXmlAndJson" GUID="8e0f1fc1-4312-4bc4-84ed-1b1e20a837af" />
+    <Span Name="Class1Seeker" FileName="Class1Seeker" GUID="92d71d13-145d-4e9d-a46e-8b0facae3353" />
+    <Span Name="TestViewmodelAsXmlAndJson" FileName="TestViewmodelAsXmlAndJson" GUID="9360f959-ec06-4508-9235-49afa4e6bdfb" />
+    <Span Name="CheckboxComponent" FileName="CheckboxComponent" GUID="97f43334-c657-4b30-832e-0824c801bfb3" />
+    <Span Name="SeveralTables" FileName="SeveralTables" GUID="9b71a3fb-f060-4d6f-84dc-8c40fd4b3e22" />
+    <Span Name="SS_UpdateTime" FileName="SS_UpdateTime" GUID="9de7b664-412e-4e69-9d5b-40015b93fbf0" />
+    <Span Name="ReportingViewmodel" FileName="ReportingViewmodel" GUID="a64ee144-af98-4415-a9cf-9a1e4f832bf9" />
+    <Span Name="TableWithPopUp" FileName="TableWithPopUp" GUID="a7a32307-7924-47c1-bd3c-76251e6b36b1" />
+    <Span Name="TestTinyMCEResult" FileName="TestTinyMCEResult" GUID="ac1eec53-27ec-4110-949d-0557c6994f3b" />
+    <Span Name="ModalWindow" FileName="ModalWindow" GUID="ac7501dd-877b-4525-a6ae-b41ce882ef0c" />
+    <Span Name="FileComponent" FileName="FileComponent" GUID="aea695f0-f55c-4572-990a-275752fbcc62" />
+    <Span Name="CountryBrowser" FileName="CountryBrowser" GUID="b21ea6c6-9645-4335-afb0-470a9d900d45" />
+    <Span Name="MainTesterMVC" FileName="MainTesterMVC" GUID="b8ac041f-ebbd-4266-81a6-920ed062f29a" />
+    <Span Name="Class1View" FileName="Class1View" GUID="bb002079-178a-48d7-8d28-fa1fa3aa0294" />
+    <Span Name="WideTableTouchingBottom" FileName="WideTableTouchingBottom" GUID="bfc25f23-a1c9-4c63-8b23-dacce1a8cae1" />
+    <Span Name="HtmlTransform" FileName="HtmlTransform" GUID="c0d4bb4a-5f85-4fdd-897f-e13e33ce59f8" />
+    <Span Name="TextFieldMVC" FileName="TextFieldMVC" GUID="c2931f8c-3175-44b0-a128-a95002bb5068" />
+    <Span Name="NumericField" FileName="NumericField" GUID="c9666b54-8f0e-4c73-b2c8-3530cb51dc6a" />
+    <Span Name="DataTableReadonly" FileName="DataTableReadonly" GUID="c9822d5e-24a4-4217-a53d-076f9e9120ec" />
+    <Span Name="Select" FileName="Select" GUID="d1f20b97-0dd8-49cc-add0-104590184562" />
+    <Span Name="DataTableEditable" FileName="DataTableEditable" GUID="d2f763f4-6b17-43ea-acf6-b9f258d91789" />
+    <Span Name="TestForm" FileName="TestForm" GUID="d314cd73-bde4-476d-8201-e883e74d3d45" />
+    <Span Name="NewTextElements" FileName="NewTextElements" GUID="d4919d28-135f-439f-92a2-7bd57df0af63" />
+    <Span Name="HourOfDayValuestore" FileName="HourOfDayValuestore" GUID="d555b201-9038-4646-9b66-23d5dd582f76" />
+    <Span Name="TimePicker" FileName="TimePicker" GUID="d70562be-5eb5-4ac7-aa01-422e1315e18a" />
+    <Span Name="UserProfilePage" FileName="UserProfilePage" GUID="db667c39-fdea-45fd-b1a5-e1cb193310f8" />
+    <Span Name="GlobalSettings" FileName="GlobalSettings" GUID="ddf94fcb-2b9d-4c59-afe9-38ef47a8cfde" />
+    <Span Name="TinyMCE" FileName="TinyMCE" GUID="e0119b4b-ceda-4cde-8374-92142b0d25e9" />
+    <Span Name="RenderedBy" FileName="RenderedBy" GUID="e16ffd6d-f545-48e6-8c3a-b56c98eb9ca0" />
+    <Span Name="ButtonComponent" FileName="ButtonComponent" GUID="e3ec06f0-ce94-4629-a998-09a01de48c77" />
+    <Span Name="Index" FileName="Index" GUID="ea8bf272-9ea1-4b3a-bf47-4b9942f044e3" />
+    <Span Name="ModalTester" FileName="ModalTester" GUID="ea9774f0-c436-4ddb-b22f-416ada6fed73" />
+    <Span Name="BooleanComponents" FileName="BooleanComponents" GUID="ecb96343-dcc7-4c3a-aee9-84bb76dd2f3b" />
+    <Span Name="TextInputTypes" FileName="TextInputTypes" GUID="f3041482-bf0d-4901-9d15-092a920c98cc" />
+    <Span Name="TableActions" FileName="TableActions" GUID="f5b7d458-dc6e-4248-af3b-4058929711f8" />
+    <Span Name="WeekDefinitionBrowser" FileName="WeekDefinitionBrowser" GUID="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />
+    <Span Name="CheckboxMVC" FileName="CheckboxMVC" GUID="fa569215-685e-4053-98ff-0342554ec9e8" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

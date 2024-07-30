@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TableClientSorting" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="0f6f2c25-b804-4f02-a880-376876dc60e0">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="TableOne" ExpressionActAsForActions="" id="80854e48-6ac3-480c-bd7f-06f6219c2a64">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7070dd08-213d-4cd2-ada5-87ef0fd43e22">
+          <TaggedValue>
+            <TaggedValue Tag="ClientSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Int16Nullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int16Nullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="2462bf69-c20a-441e-821c-b88af579b618">
+          <TaggedValue>
+            <TaggedValue Tag="ClientSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="TimeSpanValueNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TimeSpanValueNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="2815ca85-af5e-4bc4-a9bf-c372236f3829">
+          <TaggedValue>
+            <TaggedValue Tag="ClientSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TableSortingOne" idref="e0ffab90-81d2-4c40-9db6-c6f34377445c" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="TableTwo" ExpressionActAsForActions="" id="5cdb7f8a-7e60-4ef7-9d8c-dce6f28240e8">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1c120152-8442-4846-b3be-cd53ccc8422e">
+          <TaggedValue>
+            <TaggedValue Tag="ClientSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Telephone" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="2513e7dc-517c-43ad-9ab2-ff7fa6d15478">
+          <TaggedValue>
+            <TaggedValue Tag="ClientSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="DateTimeNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="e910f57d-8c68-424e-9ee0-1a0e2b88ea21">
+          <TaggedValue>
+            <TaggedValue Tag="ClientSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TableSortingTwo" idref="8b2d3284-e897-4cbd-a59f-43b99f1ff6da" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="TableSortingOne" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="e0ffab90-81d2-4c40-9db6-c6f34377445c">
+      <ReferedNesting>
+        <Nesting Name="TableOne" idref="80854e48-6ac3-480c-bd7f-06f6219c2a64" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="TableSortingTwo" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="7" YPos="0" id="8b2d3284-e897-4cbd-a59f-43b99f1ff6da">
+      <ReferedNesting>
+        <Nesting Name="TableTwo" idref="5cdb7f8a-7e60-4ef7-9d8c-dce6f28240e8" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

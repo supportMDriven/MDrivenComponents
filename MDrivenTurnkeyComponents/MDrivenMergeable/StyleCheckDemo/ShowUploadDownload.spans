@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ShowUploadDownload" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="10896d1d-a77a-4377-83b2-22095a630551">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="ed878a62-2070-4f97-bb67-5dac762f6057">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="File_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File_FileName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="bce724ba-73eb-49ca-80ea-555e1b47d3c4" />
+        <Column Name="File_ContentType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File_ContentType" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="609edb28-41c5-4fe2-bd70-500e0b812134" />
+        <Column Name="File" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="dea628b7-eb93-4043-8671-694b9db8213e" />
+        <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="119a3057-6120-4333-ac32-1ab8d45aa832" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllClass1" idref="3bf31707-f505-4942-9720-4848d52f99ec" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="UploadFile" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="6f42fbb1-2180-410d-8d20-2a51997f9e00" />
+    <Column Name="UploadFileReadOnly" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="2cd01e2d-8233-45bf-8146-55ec57b8999e" />
+    <Column Name="UploadFileStatic" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="2827422d-2c4c-4ead-aff6-1e79c960cd95" />
+    <Column Name="ImageUpload" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="cbfd5bdc-7437-470a-afe4-e6891ca78e72" />
+    <Column Name="ImageUploadReadOnly" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="4" id="26a11107-f28b-4af1-81eb-5caf6f15b9bf" />
+    <Column Name="ImageUploadStatic" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="6" id="304a8999-955a-4218-b71d-66266e7deb9d" />
+    <Column Name="AllClass1" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Grid with Download inside" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="1" YPos="8" id="3bf31707-f505-4942-9720-4848d52f99ec">
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="ed878a62-2070-4f97-bb67-5dac762f6057" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="UploadFileStatic_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="2" id="006aa8d6-37e4-4207-967a-aa08d3fa3586" />
+  </OwnedColumns>
+</Span>

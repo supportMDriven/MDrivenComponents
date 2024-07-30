@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="DataTableReadonly" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c9822d5e-24a4-4217-a53d-076f9e9120ec">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="6b4d7e20-7abd-4697-b827-9e3ac4c70e17">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleReadonly" idref="6df37c69-afaf-4aa8-a135-28271ac384b5" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModalWithOtherObject" idref="afc46383-4878-4b0d-8ae8-0ef7dbf59ac7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowThreeStackedGroupBoxes" idref="292ec6b4-dcb0-4312-bcd1-eb15df8397ff" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="TestViewmodelAsXmlAndJson" idref="94ac3c34-0ef2-4890-83b1-0726bd5d39ef" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="Delete" idref="cf6251eb-c9c3-488d-8dcb-3e1cc4054463" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="AddXToString" idref="d1921119-6a8b-4946-b8a4-11b29b76770a" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowCreateItem" idref="3fadfd3e-7f92-43c7-b12f-27d54b320ea4" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Popup" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="27" id="02572066-1b49-4f51-846e-d3efc4b5a72f">
+          <ActionToExecute>
+            <ClassAction Name="ShowEditPopup" idref="29e020fd-fcc0-4cbe-a27c-e5e9ecc65bf7" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="23" id="958fde5e-eeed-462d-89fa-96e4ea66da95" />
+        <Column Name="EmailAddress" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.EmailAddress" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="24" id="fb1c0bb1-dd86-416f-a611-5eba3a25fcdc" />
+        <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Telephone" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="25" id="ed521036-32c6-45bb-9882-b022ac0f4b7e" />
+        <Column Name="BooleanNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="55c679f9-8a2a-4d8b-924d-a5a23a99d311" />
+        <Column Name="BooleanNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="cabdb59c-fd4e-4b98-8e9d-1a2bfba81675" />
+        <Column Name="ByteNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ByteNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="58c1f45f-2b06-417c-ac5a-9f58f97027c2" />
+        <Column Name="ByteNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ByteNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="8dd1ee29-d411-4eed-a7fb-9e2f7f2fc3bc" />
+        <Column Name="DateTimeNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="f3246562-663a-4736-830d-fd7e7e1de49f">
+          <TaggedValue>
+            <TaggedValue Tag="StringFormatAngular" Value="short" />
+          </TaggedValue>
+        </Column>
+        <Column Name="DateTimeNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="ab892bbc-c818-4ee5-a086-3b057fc9ed4b" />
+        <Column Name="DecimalNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DecimalNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="b65be3b1-4138-4840-b998-6cc27fc117a6" />
+        <Column Name="DecimalNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DecimalNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="7707e75f-6768-4905-8d36-59eb2bfe8ef9" />
+        <Column Name="DoubleNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DoubleNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="93d9496f-37cd-4a2f-a7cc-a00392bb38c0" />
+        <Column Name="DoubleNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DoubleNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="13f3c6d6-e01f-430b-81aa-e988e3a7aa5e" />
+        <Column Name="Int16NotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int16NotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="6cd791b8-66e3-488c-93f7-420e39ae582f" />
+        <Column Name="Int16Nullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int16Nullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="13" id="317d9fef-49d1-4cc8-9bee-1715eb5dfcd1" />
+        <Column Name="File" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="12" id="7575d87f-eacd-47c2-8481-ced318014c67">
+          <TaggedValue>
+            <TaggedValue Tag="BlobDownloadLink" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Int64NotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int64NotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="14" id="b75b20e3-5dd6-43ca-9e11-d70f728dab97" />
+        <Column Name="Int64Nullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Int64Nullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="15" id="3463ea3f-9c20-46ee-8614-41150d301a86" />
+        <Column Name="IntegerNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IntegerNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="16" id="1c4173d9-fb77-461d-a746-27589d290d80" />
+        <Column Name="IntegerNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IntegerNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="17" id="d3db4c71-f1dc-48e2-b43a-2155361d33b6" />
+        <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="18" id="99f6a70a-bd05-4afe-9945-b4f352e2f643" />
+        <Column Name="TimeSpanValueNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TimeSpanValueNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="19" id="9f137104-3055-4583-bea6-4152d1e0d13d" />
+        <Column Name="TimeSpanValueNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TimeSpanValueNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="20" id="625d07e4-e8fa-4dde-a9ac-63563b175b81" />
+        <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String:=self.String + '1'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="21" id="e1c5734c-57a5-4fb9-9b9f-ad2fe4505135">
+          <ActionRenderedBy>
+            <Column Name="RenderedBy" idref="1b820efd-b793-4c8d-8ae5-1a41152fa8e3" />
+          </ActionRenderedBy>
+        </Column>
+        <Column Name="RenderedBy" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Click here to add 1'" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="22" id="1b820efd-b793-4c8d-8ae5-1a41152fa8e3">
+          <RendersAction>
+            <Column Name="ActionColumn" idref="e1c5734c-57a5-4fb9-9b9f-ad2fe4505135" />
+          </RendersAction>
+        </Column>
+        <Column Name="ActionColumn2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="fab" XPos="1" YPos="26" id="0059c48b-17a6-4c2b-9fa9-9b1522120f4e">
+          <ActionToExecute>
+            <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+          </ActionToExecute>
+          <TaggedValue>
+            <TaggedValue Tag="IconButton" Value="True" />
+            <TaggedValue Tag="Icon" Value="visibility" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="DataTableReadOnly" idref="ddd67485-a112-4feb-aeba-01e5e641e943" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="False" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="DataTableReadOnly" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="1" YPos="0" id="ddd67485-a112-4feb-aeba-01e5e641e943">
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="6b4d7e20-7abd-4697-b827-9e3ac4c70e17" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

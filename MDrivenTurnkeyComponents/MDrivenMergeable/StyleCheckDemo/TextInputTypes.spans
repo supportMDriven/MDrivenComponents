@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TextInputTypes" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="f3041482-bf0d-4901-9d15-092a920c98cc">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Text fields with different input types'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h1" XPos="1" YPos="1" id="1e2769ec-7381-4c47-b61b-c14707c84476" />
+    <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Improved UX for input on the mobile phones and tablets'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="2" id="e90288d8-ae38-462e-a875-b995f7bff7ab" />
+    <Column Name="Password" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Password" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="2a35afe0-7cf9-4507-85cb-4f7411f36e6b">
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="password" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Telephone" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="50790683-1e62-4ce0-a17e-d21b3a98d941">
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="tel" />
+      </TaggedValue>
+    </Column>
+    <Column Name="EmailAddress" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.EmailAddress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="2ddbecbe-2678-4c21-af72-6277181f21be">
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="email" />
+      </TaggedValue>
+    </Column>
+    <Column Name="URL" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.URL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="370fc82a-20e0-4dc9-af01-96c0315097f2">
+      <TaggedValue>
+        <TaggedValue Tag="Texttype" Value="url" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DataIsLink" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'mailto:' + self.EmailAddress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="83b01d3b-a80d-4123-b32b-8f57213d98fc">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DataIsLink_LinkText" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.EmailAddress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="58ed5785-d8d2-4f3c-8dae-9f74071ae45c" />
+  </OwnedColumns>
+  <SpanValidations>
+    <SpanValidationRule Name="Rule1" Expression="self.ValidationState" Message="Some validaiton error appears">
+      <ValidatesColumns>
+        <Column Name="Password" idref="2a35afe0-7cf9-4507-85cb-4f7411f36e6b" />
+        <Column Name="EmailAddress" idref="2ddbecbe-2678-4c21-af72-6277181f21be" />
+        <Column Name="URL" idref="370fc82a-20e0-4dc9-af01-96c0315097f2" />
+        <Column Name="Telephone" idref="50790683-1e62-4ce0-a17e-d21b3a98d941" />
+      </ValidatesColumns>
+    </SpanValidationRule>
+  </SpanValidations>
+</Span>

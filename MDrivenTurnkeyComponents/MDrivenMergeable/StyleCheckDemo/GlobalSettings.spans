@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="GlobalSettings" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ddf94fcb-2b9d-4c59-afe9-38ef47a8cfde">
+  <Class>
+    <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysSingleton" ExpressionActAsForActions="" id="65b053c5-308d-4aa5-964e-43d5dd5ebd29">
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="TestObjectPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="84f43bbd-d596-46d2-9a5c-d7c262f33d7e">
+          <ReferedNesting>
+            <Nesting Name="TestObjectPickList" idref="4a0603ec-7de2-459d-bd17-14b470601c81" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="TestObject" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.TestObject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="d0ef5e96-9417-4393-8963-59ba5fd08350">
+          <ColumnForPickList>
+            <Column Name="TestObjectPickList" idref="84f43bbd-d596-46d2-9a5c-d7c262f33d7e" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="ToggleEnableGA" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToggleEnableGA" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="5c95a7b5-34af-479b-a063-356940ac5288" />
+        <Column Name="ToggleVisiblityGA" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToggleVisiblityGA" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="3" id="504bc9bd-e243-467f-8e7a-773e30d6645e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TheSysSingleton" idref="1c5454fe-bf81-472c-baa0-3b2ee746db6f" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TestObjectPickList" ExpressionActAsForActions="" id="4a0603ec-7de2-459d-bd17-14b470601c81">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="dc4fdf60-37ec-4304-9e25-2e330573e666" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TestObjectPickList" idref="84f43bbd-d596-46d2-9a5c-d7c262f33d7e" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="TheSysSingleton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="0" id="1c5454fe-bf81-472c-baa0-3b2ee746db6f">
+      <ReferedNesting>
+        <Nesting Name="SysSingleton" idref="65b053c5-308d-4aa5-964e-43d5dd5ebd29" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

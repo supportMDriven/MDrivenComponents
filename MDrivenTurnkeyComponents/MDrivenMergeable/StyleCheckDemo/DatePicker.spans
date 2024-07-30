@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="DatePicker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="856f89b4-d442-420b-b40a-621ef18e5bda">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="'DateTime picker element'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h1" XPos="1" YPos="1" id="15b0a106-0cff-4f7c-9599-d19931e529e8" />
+    <Column Name="DateTimeNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="b5477af8-9b47-49c7-8a43-f0cf7b065636" />
+    <Column Name="DateTimeNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="07da5820-bb3a-4434-8d2c-98aa4a380acf" />
+    <Column Name="DateTimeNullableStatic" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="4" id="7f42b620-4c20-4973-89b8-492d99489d2d" />
+    <Column Name="DateTimeNotNullableStatic" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DateTimeNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="17793cbc-5314-4040-909f-0e594937a819" />
+    <Column Name="NullTextInstr" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="'Above should show nothing as text when picker i null'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h6" XPos="4" YPos="5" id="7e9e7fa0-bcea-4593-90ae-694e2bdbe618" />
+    <Column Name="SetToNull" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="6" id="aa15591f-ef79-46b2-be87-ea994242fe0f">
+      <ActionToExecute>
+        <ContextAction Name="SetNullableToNull" idref="70f5e8d0-91e5-4991-be65-8139d3c0f629" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="DateTimeNotNullable_MinVal" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'2021-03-16'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="4" id="c0427939-7b3d-44a5-be07-c90f8e353972" />
+    <Column Name="TestCalendar" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.DateTimeNullable.Compare(self.DateTimeNotNullable)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Today - 2 month" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="2" id="332312f8-2c5f-417a-a707-57f88aaf3f6d" />
+    <Column Name="DateOne" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vDateOne" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="391a97ab-7c27-4c6e-9e0e-023b32ce806f" />
+    <Column Name="DateTwo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vDateTwo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="8" id="4926889d-f6c5-450c-9e6b-f1f3573c20b1" />
+    <Column Name="DateComparison" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vDateOne &gt; vDateTwo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="8" id="c371a446-937d-4863-893a-125c971eaac9" />
+  </OwnedColumns>
+  <SpanValidations>
+    <SpanValidationRule Name="Rule1" Expression="self.ValidationState" Message="Some validation error appears">
+      <ValidatesColumns>
+        <Column Name="DateTimeNullable" idref="07da5820-bb3a-4434-8d2c-98aa4a380acf" />
+        <Column Name="DateTimeNotNullableStatic" idref="17793cbc-5314-4040-909f-0e594937a819" />
+        <Column Name="DateTimeNullableStatic" idref="7f42b620-4c20-4973-89b8-492d99489d2d" />
+        <Column Name="DateTimeNotNullable" idref="b5477af8-9b47-49c7-8a43-f0cf7b065636" />
+      </ValidatesColumns>
+    </SpanValidationRule>
+  </SpanValidations>
+  <SpanVariables>
+    <SpanVariable Name="vDateOne" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vDateTwo" InitialValue="" TypeName="DateTime" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="HideNavbar" Value="true" />
+  </TaggedValue>
+</Span>

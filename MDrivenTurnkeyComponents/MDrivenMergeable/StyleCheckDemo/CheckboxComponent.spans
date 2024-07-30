@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="CheckboxComponent" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="97f43334-c657-4b30-832e-0824c801bfb3">
+  <Category>
+    <Category Name="AngularJSComponents" idref="4be3ee37-338e-4795-aa32-b1d0661655fd" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="BooleanNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNotNullable" ExpressionForReadOnly="vReadOnly" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="61cf02cb-cdca-45ce-853c-61ac4b6f9f4c" />
+    <Column Name="BooleanNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="vReadOnly" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="6061f0e3-0eb2-4276-8c32-7281b4c995eb" />
+    <Column Name="BooleanStatic" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ca15fa87-e030-4af4-bd76-f482fc847dc1" />
+    <Column Name="SwitchNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNotNullable" ExpressionForReadOnly="vReadOnly" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="c3625613-479a-4ce1-97fd-9b527d028ee1">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SwitchNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="vReadOnly" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="1" id="1192f2a8-4310-4726-ab30-30e1cebc74f3">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="ToggleReadonly" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="3" id="ffe955a9-2c57-4077-a5cf-fe1e6d5ceb58">
+      <ActionToExecute>
+        <ContextAction Name="ToggleReadonOnly" idref="ebe2b36a-c186-4d2b-a52f-86914a81a849" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vReadOnly" InitialValue="" TypeName="Boolean" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="UseAngularJSComponents" Value="true" />
+  </TaggedValue>
+</Span>

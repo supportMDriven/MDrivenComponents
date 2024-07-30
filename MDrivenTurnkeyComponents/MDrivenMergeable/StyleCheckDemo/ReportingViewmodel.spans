@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ReportingViewmodel" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="a64ee144-af98-4415-a9cf-9a1e4f832bf9">
+  <Class>
+    <Class Name="ReportRoot" idref="3990fd7e-81a4-4185-b339-9046f831b693" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="TemplateHtml" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TemplateHtml" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="f32ea7c9-9591-4006-9add-eec5fa7bad3a" />
+    <Column Name="TemplateBlob" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TemplateHtml.StringToBase64" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="306e4e83-ff59-4074-8ea9-ab6c18ec15a8" />
+    <Column Name="ReportFileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ReportFileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="a2976b08-18ca-48ce-99c5-fa1a85018e39" />
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="460f594f-5e58-4f59-aa5e-3b148a61063f" />
+    <Column Name="Text" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Text" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="27acec6b-094f-46ac-94ff-5c77350fb7f8" />
+  </OwnedColumns>
+</Span>

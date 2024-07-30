@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="NewTextElements" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="d4919d28-135f-439f-92a2-7bd57df0af63">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="DefaultChip" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Default chip'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="chip" XPos="1" YPos="1" id="a1907cfc-9eda-4117-ae58-b79f66c11106" />
+    <Column Name="DangerChip" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Danger colored chip'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="chip danger" XPos="1" YPos="4" id="5b9966d6-ba85-47ef-9b3a-da0813961a00" />
+    <Column Name="WarningChip" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Warning colored chip'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="chip warning" XPos="1" YPos="7" id="d2fe88ee-e311-401f-a4f7-44c0fb9daeb6" />
+    <Column Name="SuccessChip" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Success colored chip'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="14" id="a143a177-b86f-40d0-9828-a3d8c6202c75" />
+    <Column Name="InfoChip" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Info colored chip'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="chip info" XPos="1" YPos="10" id="34db5ad0-5937-4992-b6a9-fffed5cd4e71" />
+  </OwnedColumns>
+</Span>

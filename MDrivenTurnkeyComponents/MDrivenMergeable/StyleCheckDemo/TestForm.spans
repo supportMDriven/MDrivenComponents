@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TestForm" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="d314cd73-bde4-476d-8201-e883e74d3d45">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="True" />
+  </TaggedValue>
+</Span>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Headers" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2b972ebb-5bd2-4b1e-9e1f-432b6d1742a6">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysSingleton" ExpressionActAsForActions="" id="8002908c-6b92-4a13-b195-a5c90e7577b6">
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c8fb0ef7-6c8b-4d87-b0fc-33dda121f287" />
+        <Column Name="St1_Copy" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="0" Expression="'★'" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" StyleRefIsExpression="True" XPos="1" YPos="9" id="a8e24a8e-678f-4e6a-b11b-386ac3afe780" />
+        <Column Name="TransientLog" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="0" Expression="self.TransientLog" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="fa6f8738-3617-46f2-8053-6631528c174a" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="0" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="bc1f2a40-1b13-4271-b1df-cbe75e438cd3" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysSingletonsTestObject" idref="649de22f-f5de-49f4-bdb0-2f0375a37f79" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="SysSingleton2" ExpressionActAsForActions="" id="7649d12b-c9aa-484b-867c-56eca7159c9f">
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9bf32cbe-1850-47f4-9621-4069d597402d" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="d276a16b-7625-43e6-ae2e-9d58e7e4fe4a" />
+        <Column Name="TestObject_Textarea" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TestObject.Textarea" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="76d5ebf7-046d-4be9-bbf5-1820aa0c2d41" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysSingletonsTestObject2" idref="59b5906c-7c65-40e0-aacb-f5215ceb4f84" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Header3" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'HeaderTest'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h3 page-header" XPos="0" YPos="0" id="ad7bb06c-cc71-4c69-b83b-987db3875cc9" />
+    <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'This header description is grey'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="subheader" XPos="0" YPos="1" id="7ab1394b-e87a-442d-ba26-ee7ccbc546bb" />
+    <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="tk-top-item primary" XPos="10" YPos="0" id="664d451b-fec2-4380-bccb-1cb693c50371" />
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="2" id="3b911244-ff0a-401b-a7c5-ce2e892ad45a">
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="KompetensvalInfo" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SysSingletonsTestObject" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysSingletonsTestObject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="primary-group" XPos="0" YPos="3" id="649de22f-f5de-49f4-bdb0-2f0375a37f79">
+      <ReferedNesting>
+        <Nesting Name="SysSingleton" idref="8002908c-6b92-4a13-b195-a5c90e7577b6" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="SysSingletonsTestObject2" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="self.SysSingletonsTestObject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="secondary-group" XPos="3" YPos="3" id="59b5906c-7c65-40e0-aacb-f5215ceb4f84">
+      <ReferedNesting>
+        <Nesting Name="SysSingleton2" idref="7649d12b-c9aa-484b-867c-56eca7159c9f" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

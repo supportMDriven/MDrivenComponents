@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="BooleanComponents" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ecb96343-dcc7-4c3a-aee9-84bb76dd2f3b">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Checkbox and Switch components'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h2" XPos="1" YPos="1" id="538c0034-83cc-420a-96b7-441075a312c2" />
+    <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Checkbox nullable'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="2" id="b59e1485-d484-4623-8a1a-c965d1bda69b" />
+    <Column Name="CheckboxNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="9bb6b936-d4ce-40e5-a9e8-dbd7794bc516" />
+    <Column Name="DescriptionTwo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Checkbox not nullable'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="4" id="f98b0724-7424-43f4-a400-817f9edabc8b" />
+    <Column Name="CheckboxNotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.BooleanNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Checkbox checked" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="e86523f8-b51e-456c-a4db-d6a2f1e0ed7b" />
+    <Column Name="DescriptionThree" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Static presentation (nullable)'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="8" id="254c359c-3c15-4dd1-b196-ec7c7aa7ae23" />
+    <Column Name="BooleanNullableStatic" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="c3be4662-fa13-4eaa-bec7-fc77f8ac5b24" />
+    <Column Name="DesctiprionFour" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Static presentation (not nullable)'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="12" id="af7b2798-d461-4ed4-be5f-4bc3711ae48d" />
+    <Column Name="BooleanNotNullableStatic" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.BooleanNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="14" id="43a4a743-ab08-4f0d-ba3f-9da9bcc4bd2f" />
+    <Column Name="SwitchNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="3" id="1202bf1f-2fe5-46de-9a25-240b8e6fea5c">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SwitchNotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.BooleanNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="6" id="2c4683e7-d31c-4e98-8b64-52b505b5ba30">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <SpanValidations>
+    <SpanValidationRule Name="Rule1" Expression="self.ValidationState" Message="Some validation error appears">
+      <ValidatesColumns>
+        <Column Name="SwitchNullable" idref="1202bf1f-2fe5-46de-9a25-240b8e6fea5c" />
+        <Column Name="SwitchNotNullable" idref="2c4683e7-d31c-4e98-8b64-52b505b5ba30" />
+        <Column Name="CheckboxNullable" idref="9bb6b936-d4ce-40e5-a9e8-dbd7794bc516" />
+        <Column Name="CheckboxNotNullable" idref="e86523f8-b51e-456c-a4db-d6a2f1e0ed7b" />
+      </ValidatesColumns>
+    </SpanValidationRule>
+  </SpanValidations>
+</Span>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ModalTesterWithoutRoot" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2dabdb85-b581-4b31-9c89-0b14e17ca64e">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="15cf44d1-df0d-441e-9ad2-46fd0592c635">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleReadonly" idref="6df37c69-afaf-4aa8-a135-28271ac384b5" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="39c7ca07-bb16-4843-9d5f-70f9c0367054" />
+        <Column Name="ThisClass1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="1" id="ef7c2c6b-63b0-434b-b3fc-f1d8fc438efc">
+          <ReferedNesting>
+            <Nesting Name="Class12" idref="cdf1e8ec-6887-40ee-93bb-8f252f731ff7" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllClass1" idref="74f38f8d-aba0-4607-9fa9-67c16c23d8d3" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Class12" ExpressionActAsForActions="" id="cdf1e8ec-6887-40ee-93bb-8f252f731ff7">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Class1AsString" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="778232a9-259a-4957-b9d7-5f808c4a74aa" />
+        <Column Name="TransientLog" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.TransientLog" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="1" YPos="6" id="6402cfeb-e88f-41e0-a824-025cd8dd088c" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisClass1" idref="ef7c2c6b-63b0-434b-b3fc-f1d8fc438efc" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleReadonly" idref="6df37c69-afaf-4aa8-a135-28271ac384b5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="AllClass1" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="0" YPos="1" id="74f38f8d-aba0-4607-9fa9-67c16c23d8d3">
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="15cf44d1-df0d-441e-9ad2-46fd0592c635" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="SysSingletonLog" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.TransientLog" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="9" YPos="6" id="0f961f63-e1d8-4fb9-94f4-3e1431f0a274" />
+    <Column Name="RootObject" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="if self.isNull then&#xD;&#xA;  'root object is null'&#xD;&#xA;else&#xD;&#xA;  self.asString&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="73490e08-d739-48a3-bcf1-1f53d1b5f09c" />
+  </OwnedColumns>
+</Span>

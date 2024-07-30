@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Select" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="d1f20b97-0dd8-49cc-add0-104590184562">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class2sPickList" ExpressionActAsForActions="" id="a7bad891-cad6-4fc7-a0dd-7b20afb1b616">
+      <Class>
+        <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="39dbc4ea-6902-44b1-9834-e1e7c3d70a6a" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Class2sPickList" idref="eacbb802-b176-4fa9-9342-bbf3fe5d44d6" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="61217c29-99e0-4586-8ced-1b49dfe7178d">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2d964ac5-0dc2-44e1-8856-64c502b379cb" />
+        <Column Name="Class2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Class2" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="nullrep" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="1f390cf9-4d37-4cdf-8567-1f9a5a03a47b">
+          <ColumnForPickList>
+            <Column Name="Class2PickList" idref="b3391034-2c92-4311-ba0f-cb7e697f6c51" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="Class2PickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class2.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b3391034-2c92-4311-ba0f-cb7e697f6c51">
+          <ReferedNesting>
+            <Nesting Name="Class2PickList" idref="eb45c0f7-608a-4f79-9121-15331fd13bc8" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SomeClass1s" idref="c7ebe70b-8ae9-40d0-ae18-5d8a752c9029" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="Class2PickList" ExpressionActAsForActions="" id="eb45c0f7-608a-4f79-9121-15331fd13bc8">
+      <Class>
+        <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="40c73e0d-de0a-49bc-8ea2-b96e1e586dff" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Class2PickList" idref="b3391034-2c92-4311-ba0f-cb7e697f6c51" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="vClass2s" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vClass2s" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="Pick Class2" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="263a7fac-d542-4d65-8efa-d1fc9dee6293">
+      <ColumnForPickList>
+        <Column Name="Class2sPickList" idref="eacbb802-b176-4fa9-9342-bbf3fe5d44d6" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="Class2sPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class2.allInstances-&gt;difference(self.Class2s)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="eacbb802-b176-4fa9-9342-bbf3fe5d44d6">
+      <ReferedNesting>
+        <Nesting Name="Class2sPickList" idref="a7bad891-cad6-4fc7-a0dd-7b20afb1b616" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="SomeClass1s" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="Class1.allInstances-&gt;subsequence(1, 10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="6" StyleRef="" XPos="1" YPos="2" id="c7ebe70b-8ae9-40d0-ae18-5d8a752c9029">
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="61217c29-99e0-4586-8ced-1b49dfe7178d" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vClass2s" InitialValue="" TypeName="Class2" UserData="" />
+  </SpanVariables>
+</Span>

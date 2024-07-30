@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="PopupTestVM" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="09645083-5470-42e5-a9a8-d2ae1577607d">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7fc128f7-1ff6-4217-81ee-d5413db5d525">
+      <PlacingContainer>
+        <PlacingContainer idref="734bce55-4179-4b86-b944-72fb164aa544" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="EmailAddress" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.EmailAddress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="44f4675d-3e59-4000-a746-c27de2ce2777">
+      <PlacingContainer>
+        <PlacingContainer idref="734bce55-4179-4b86-b944-72fb164aa544" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="70e7b4c5-c707-4c4e-8d5c-b922426cd7c2">
+      <PlacingContainer>
+        <PlacingContainer idref="734bce55-4179-4b86-b944-72fb164aa544" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ActionColumn2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="406ce822-6156-4dad-9279-66c0e8479b42">
+      <PlacingContainer>
+        <PlacingContainer idref="734bce55-4179-4b86-b944-72fb164aa544" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ActionColumn3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="cc281aae-d955-43fb-984b-5385f3cbc35f">
+      <PlacingContainer>
+        <PlacingContainer idref="734bce55-4179-4b86-b944-72fb164aa544" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="734bce55-4179-4b86-b944-72fb164aa544" />
+  </PlacingContainer>
+</Span>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="FileComponent" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="aea695f0-f55c-4572-990a-275752fbcc62">
+  <Category>
+    <Category Name="AngularJSComponents" idref="4be3ee37-338e-4795-aa32-b1d0661655fd" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="File" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="d851828d-f7c2-4ca1-a803-7da8ec310727" />
+    <Column Name="File_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="4b8b248a-5787-4304-91bc-f129e12776aa" />
+    <Column Name="StaticFile" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="6570c189-6e62-4999-845c-7d0e21404bb5" />
+    <Column Name="StaticFile_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="6a137121-d829-43ee-8b10-a8919f07e3db" />
+    <Column Name="DownloadFile" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="1" id="9051ab04-25b4-4780-bae9-e55298914ae5">
+      <TaggedValue>
+        <TaggedValue Tag="BlobDownloadLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DownloadFile_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.File_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="2" id="5c1fead4-a7b8-49c0-88ca-98ccd774725b" />
+    <Column Name="AnotherFile" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AnotherFile" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="7db63c4d-4d35-404d-9350-de910a697189" />
+    <Column Name="AnotherFile_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AnotherFile_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="68e874b3-36aa-404f-a381-929728bb5856" />
+    <Column Name="AnotherFileStatic" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AnotherFile" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="4" id="627c9804-273a-4507-af9e-93732d25f937" />
+    <Column Name="AnotherFileStatic_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AnotherFile_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="5" id="82e58bc3-ba89-47bd-bf7d-4390ab89ee09" />
+    <Column Name="DownloadAnotherFile" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AnotherFile" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="4" id="3306c119-924e-44b9-9630-1e3b4ffe1a9d">
+      <TaggedValue>
+        <TaggedValue Tag="BlobDownloadLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DownloadAnotherFile_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AnotherFile_FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="5" id="c9a7cc37-9e1e-485e-99aa-78d4b38fae72" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="UseAngularJSComponents" Value="true" />
+  </TaggedValue>
+</Span>

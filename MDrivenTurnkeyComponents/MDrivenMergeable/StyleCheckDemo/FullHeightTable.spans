@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="FullHeightTable" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="0b30252e-0f2b-4172-9831-e99b8e4ceec5">
+  <Category>
+    <Category Name="Layout" idref="b039cece-9431-4546-9977-08f480dce7d2" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="TransientClass" ExpressionActAsForActions="" id="11ed42ce-d52f-4da8-b998-54cb94331688">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c32201a2-c1ee-4119-b8b1-a9a21b652a08" />
+        <Column Name="NewColumn2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="33a9af4e-bf70-49b4-bf7c-368b921990e0" />
+        <Column Name="NewColumn3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="555cc6f4-fa9b-4752-8a09-c72556468220" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllTransientClass" idref="f9a2c2f4-cc27-4f56-b8ba-ec2374835907" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllTransientClass" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="TransientClass.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="f9a2c2f4-cc27-4f56-b8ba-ec2374835907">
+      <ReferedNesting>
+        <Nesting Name="TransientClass" idref="11ed42ce-d52f-4da8-b998-54cb94331688" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

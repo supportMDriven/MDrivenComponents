@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="UserProfilePage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="db667c39-fdea-45fd-b1a5-e1cb193310f8">
+  <Class>
+    <Class Name="UserProfile" idref="b5a0309a-a981-4fd1-9205-3af4841a99be" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="Avatar" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Avatar" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f8c34f33-ff8f-488d-8186-f17069f6489c">
+      <PlacingContainer>
+        <PlacingContainer idref="c44d4b96-c7d3-48e5-a8af-dfd2aee0796d" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="FirstName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.FirstName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a781ecde-0459-4e15-8900-6dbd57fe8128">
+      <PlacingContainer>
+        <PlacingContainer idref="9ca7a45b-6758-4a01-b5db-c910d9fbaba5" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="supervised_user_circle" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="LastName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.LastName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="d2191506-cf39-42fe-80a6-379a24b60c7d">
+      <PlacingContainer>
+        <PlacingContainer idref="9ca7a45b-6758-4a01-b5db-c910d9fbaba5" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="account_circle" />
+        <TaggedValue Tag="IconPosition" Value="before" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Email" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Email" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="682cd92d-c682-4839-bf57-c3b2abcd1e6c">
+      <PlacingContainer>
+        <PlacingContainer idref="9ca7a45b-6758-4a01-b5db-c910d9fbaba5" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="email" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+        <TaggedValue Tag="IconInInput" Value="true" />
+      </TaggedValue>
+    </Column>
+    <Column Name="BirthDate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BirthDate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="53129ef0-26e3-4e27-bcc0-f8e1eda6c453">
+      <PlacingContainer>
+        <PlacingContainer idref="9ca7a45b-6758-4a01-b5db-c910d9fbaba5" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="child_care" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="8d0ae265-dc59-416f-b0c8-15fd71f7c618">
+      <PlacingContainer>
+        <PlacingContainer idref="27e1dc76-80b2-4457-93ec-ac2f68806ab8" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="add" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="FullName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="772398fa-75ee-4e36-98e9-fa7176c6c809">
+      <PlacingContainer>
+        <PlacingContainer idref="9ca7a45b-6758-4a01-b5db-c910d9fbaba5" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="IconPosition" Value="before" />
+        <TaggedValue Tag="Icon" Value="person_search" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="04f4b300-56de-46dc-b54a-70224df1fb8d">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="e35451c7-1453-45ee-b8c0-f59212f7a2f6">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="c44d4b96-c7d3-48e5-a8af-dfd2aee0796d" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="9ca7a45b-6758-4a01-b5db-c910d9fbaba5" />
+          </ChildContainers>
+        </PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="27e1dc76-80b2-4457-93ec-ac2f68806ab8" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

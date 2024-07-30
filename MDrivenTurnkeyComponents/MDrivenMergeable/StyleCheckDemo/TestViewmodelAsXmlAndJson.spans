@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TestViewmodelAsXmlAndJson" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9360f959-ec06-4508-9235-49afa4e6bdfb">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="vXmlJson" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="vXmlJson" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="9" StyleRef="" XPos="1" YPos="2" id="272e1d25-5484-462d-8fc4-759203d049c6" />
+    <Column Name="Class1String" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e30c2f06-95e8-4028-b4cc-0cebd0871674" />
+    <Column Name="CreateXML" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vXmlJson := selfVM.ViewModelAsXml(Class1.Viewmodels.ViewModelToXmlAndJson,  self )" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="1" id="488de955-d51c-4379-9c45-09282b43244d" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vXmlJson" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

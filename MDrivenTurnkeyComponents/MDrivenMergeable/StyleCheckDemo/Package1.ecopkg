@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="4db96d57-8a1c-44e4-9e2d-cf769b5bd9f6">
+  <OwnedElement>
+    <Class Name="Class2" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2da52bba-2c16-45bf-b96e-dc049e0cfb1f">
+      <Feature>
+        <Attribute Name="Attribute2" Multiplicity="" Visibility="Public" id="15b36f8d-d949-4a36-8561-169cbe7e3344">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Attribute3" Multiplicity="" Visibility="Public" id="75d46670-917a-4b26-a2a2-becd0a70b8d2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Attribute1" Multiplicity="" Visibility="Public" id="a39f15ab-0abc-4e57-b810-eb8cb2ae3d67">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.attribute1" />
+      </TaggedValue>
+    </Class>
+    <Class Name="ReportRoot" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="3990fd7e-81a4-4185-b339-9046f831b693">
+      <Feature>
+        <Attribute Name="ReportFileName" Multiplicity="" Visibility="Public" id="1f54fed4-234e-45a0-b206-da3a2c71797f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="String" Multiplicity="" Visibility="Public" id="82e871d3-c390-4ac5-8fed-0f54a549854e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Text" Multiplicity="" Visibility="Public" id="a90f4bdb-0e02-4906-854a-be66baaa86c1">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureOneObject" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="c0df5a3c-4cc4-4f46-b3d2-c7cc559bbdb0">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="ReportRoot" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let x = ReportRoot.allInstances-&gt;first in&#xD;&#xA;(&#xD;&#xA;  if x.notNull then&#xD;&#xA;    x&#xD;&#xA;  else&#xD;&#xA;    ReportRoot.Create&#xD;&#xA;  endif&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="TemplateHtml" Multiplicity="" Visibility="Public" id="ef63f3a7-a725-4ece-89f7-0a1b0cb8340d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TemplateIsHtml" Multiplicity="" Visibility="Public" id="fe0d30f4-d681-48d4-b764-a58bfdea3dfe">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="SysSingletonSysSingletonThemeDataPickedThemeData" id="446fa2e3-f05c-465b-a5f4-ce21005e0e0b">
+      <AssociationEnd>
+        <AssociationEnd Name="PickedThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3f6b98b7-815a-49da-9ed8-f6756a8a14c7">
+          <Participant>
+            <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingleton" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="69562f4d-b2db-43a5-ba5e-cce1b1da0a35">
+          <Participant>
+            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="Class2Class2Class1Class1s" id="5f1d2666-1043-4fe3-8108-68849f8b139a">
+      <AssociationEnd>
+        <AssociationEnd Name="Class2" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="93ba9248-83fd-4797-87d5-72e6c18728c3">
+          <Participant>
+            <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Class1s" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="51525c83-4576-47f1-aea7-e142c8044c80">
+          <Participant>
+            <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="ThemeDataThemeDataThemeColorThemeColors" id="6543afbd-b1ee-48d9-8b05-7715f8bbcc69">
+      <AssociationEnd>
+        <AssociationEnd Name="ThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9399263a-c7d9-464d-a979-3c8bdfca974e">
+          <Participant>
+            <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="ThemeColors" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2037335b-0f89-4482-8941-ad00e090c3d2">
+          <Participant>
+            <Class Name="ThemeColor" idref="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="ThemeData" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="805d2f20-e352-4d83-a68b-88b3ce393e2d">
+      <Feature>
+        <Method Name="EnsureThemeColors" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="46438196-65d5-454e-9c5b-65223c357e41">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Set{'--base-bg-color',&#xD;&#xA;'--navbar-bg-color',&#xD;&#xA;'--navbar-brand-color',&#xD;&#xA;'--navbar-link-color',&#xD;&#xA;'--sidebar-bg-color',&#xD;&#xA;'--primary-color',&#xD;&#xA;'--primary-color-dark ',&#xD;&#xA;'--text-on-primary ',&#xD;&#xA;'--danger-color',&#xD;&#xA;'--danger-color-dark ',&#xD;&#xA;'--text-on-danger ',&#xD;&#xA;'--warning-color',&#xD;&#xA;'--warning-color-dark ',&#xD;&#xA;'--text-on-warning ',&#xD;&#xA;'--success-color',&#xD;&#xA;'--success-color-dark ',&#xD;&#xA;'--text-on-success ',&#xD;&#xA;'--save-action-bg-color',&#xD;&#xA;'--save-action-bg-color-dark ',&#xD;&#xA;'--save-action-text-color',&#xD;&#xA;'--cancel-action-bg-color',&#xD;&#xA;'--cancel-action-bg-color-dark ',&#xD;&#xA;'--cancel-action-text-color',&#xD;&#xA;'--redo-action-bg-color',&#xD;&#xA;'--redo-action-bg-color-dark ',&#xD;&#xA;'--redo-action-text-color',&#xD;&#xA;'--undo-action-bg-color',&#xD;&#xA;'--undo-action-bg-color-dark ',&#xD;&#xA;'--undo-action-text-color',&#xD;&#xA;'--data-table-header-bg-color',&#xD;&#xA;'--data-table-header-text-color',&#xD;&#xA;'--data-table-body-bg-color',&#xD;&#xA;'--data-table-body-text-color'}-&gt;difference(self.ThemeColors.Name)-&gt;foreach(color| &#xD;&#xA;let newc=ThemeColor.Create in(&#xD;&#xA;  newc.Name:=color;&#xD;&#xA;  self.ThemeColors.Add(newc)&#xD;&#xA;))" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="80549d2d-14a8-460b-bb21-6e95b45100fc">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedCSS" Multiplicity="" Visibility="Public" id="a717e10a-4061-49bc-9f68-93a2c822d2ea">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="':root {'+&#xD;&#xA;self.ThemeColors-&gt;select(tc|tc.On)-&gt;collect(tc|tc.DerivedCSS)-&gt;asSeparatedList('\r\n')&#xD;&#xA;+&#xD;&#xA;self.ThemeSizes-&gt;select(ts|ts.On)-&gt;collect(ts|ts.DerivedCSS)-&gt;asSeparatedList('\r\n')&#xD;&#xA;+&#xD;&#xA;' }'" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="EnsureThemeSizes" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b08bedac-e7a0-400b-9a75-5a4b5aab17ff">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Set{'--base-font-size',&#xD;&#xA;'--base-border-radius',&#xD;&#xA;'--navbar-height',&#xD;&#xA;'--data-table-header-height',&#xD;&#xA;'--data-table-row-height'}-&gt;difference(self.ThemeSizes.Name)-&gt;foreach(sname| &#xD;&#xA;let news=ThemeSize.Create in(&#xD;&#xA;  news.Name:=sname;&#xD;&#xA;  self.ThemeSizes.Add(news)&#xD;&#xA;))" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="AppliedCSSForHtml" Multiplicity="" Visibility="Public" id="cae5bee3-fd04-4ffa-882d-73ecb0aaad16">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="'&lt;style&gt;'+self.DerivedCSS+'&lt;/style&gt;'" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+      </TaggedValue>
+    </Class>
+    <Class Name="TransientClass" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d">
+      <Feature>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="28a21c61-bfeb-4e78-9b6c-27fa1d89cf23">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let words = 'eyebrow,nuance,enjoy,favour,approve,coerce,apple,empirical,warn,gossip,suitcase,grant,burial,interest,prosecute,eavesdrop,chop,arena,operation,reliance,execute,conservation,treasurer,bride,location,sulphur,barrier,insert,outfit,principle'.split(','.toCharArray) in&#xD;&#xA;  (&#xD;&#xA;    self.SomethingInside := words-&gt;at0(Int32.random(30)) + ' ' + Int32.random(30000).asString&#xD;&#xA;  )" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="SomethingInside" Multiplicity="" Visibility="Public" id="7682b245-54d8-49db-8af3-19849c1fdb41">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class Name="ThemeSize" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b23ff679-7019-4903-a0f0-d42fc224ce8d">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="74ccb1a3-68bd-4b65-aa09-da72e2f550a3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Value" InitialValue="12" Multiplicity="" Visibility="Public" id="90b2e775-5121-4fc5-a51a-f250cc9ae6ac">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="On" Multiplicity="" Visibility="Public" id="d2493c30-c3d9-4b68-8cbb-82f5a4511f86">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedCSS" Multiplicity="" Visibility="Public" id="e341db12-b429-4523-b70e-90ad9ba4527e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.name+':'+self.Value.asstring+'px;'" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="UserProfile" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b5a0309a-a981-4fd1-9205-3af4841a99be">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="3237e546-41d0-4ddd-936b-2bccfc2854f2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.FirstName + ' ' + self.LastName" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Email" Multiplicity="" Visibility="Public" id="4784a377-4faa-4705-adad-b175d73b9ba7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LastName" Multiplicity="" Visibility="Public" id="625a2997-1db5-4103-86c4-93ab90e51326">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="BirthDate" Multiplicity="" Visibility="Public" id="b0330698-304e-44cc-aa6a-83bed497c6c7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Avatar" Multiplicity="" Visibility="Public" id="d97e9bf3-6500-4d73-95b6-e6eafe7b5fff">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Image" />
+          </Type>
+        </Attribute>
+        <Attribute Name="FirstName" Multiplicity="" Visibility="Public" id="ecb2ad04-89f3-4c9d-b3fa-fba56b9e0a3c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Class1" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="c5eeb875-5705-4f26-a555-b3c235b62160">
+      <Feature>
+        <Attribute Name="String" Multiplicity="" Visibility="Public" id="00d2d33b-68e9-43dc-b7e1-029ee4daad3c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ValidationState" InitialValue="true" Multiplicity="" Visibility="Public" id="050e1915-f194-43f6-8995-a97986f62e35">
+          <TaggedValue>
+            <TaggedValue Tag="persistence" Value="transient" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TinyMCEData3" Multiplicity="" Visibility="Public" id="0cf339af-6b8f-42d2-8688-99e3439ecfe6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="IntegerNotNullable" Multiplicity="" Visibility="Public" id="0e0889ca-50a9-4e3f-9b15-b53477077c01">
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ByteNotNullable" Multiplicity="" Visibility="Public" id="1c2ccb9b-041a-4353-80a2-e835eb264250">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+        <Attribute Name="MltDecimal" Multiplicity="" Visibility="Public" id="1e6339ac-6d0e-4315-a5e5-c00d5ecc8c87">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.DecimalNullable*100" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DoubleNullable" Multiplicity="" Visibility="Public" id="2c1d259e-2e3e-4f06-9fa0-ab0b0d21efa0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Double" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EmailAddress" Multiplicity="" Visibility="Public" id="2e5c7def-8a7d-47cb-9831-7cb7b490854c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SubMenuVisibilityTrigger" Multiplicity="" Visibility="Public" id="308fb722-adb2-40d6-8c3a-5eed7a069e65">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Telephone" Multiplicity="" Visibility="Public" id="362ea8e7-2bc5-4493-a062-b29de0a998f0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="File" Multiplicity="" Visibility="Public" id="374b8395-8d33-4d95-85e0-7773144b54a9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.BlobType" Value="Blob" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Float" Multiplicity="" Visibility="Public" id="41d7e603-fb6b-4fe5-88b8-bec88f6c9f0d">
+          <Type>
+            <Datatype idref="Single" />
+          </Type>
+        </Attribute>
+        <Attribute Name="MenuItemVisible" Multiplicity="" Visibility="Public" id="43e2f8ff-65f3-4073-a264-37c46dc58fbf">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Int64Nullable" Multiplicity="" Visibility="Public" id="53f7f4d5-da79-4453-bc9a-0bcb112419ca">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Int64" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AnotherFile" Multiplicity="" Visibility="Public" id="549203c2-6862-411f-8a56-27b9b5bff8e7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+        <Attribute Name="BooleanNotNullable" Multiplicity="" Visibility="Public" id="5a8cd0b5-568c-41f8-9e9e-bc6beb5cfd47">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="MenuItemEnabled" Multiplicity="" Visibility="Public" id="61edb1de-0327-4dde-aac2-6cf7c151e86d">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DecimalNullable" Multiplicity="" Visibility="Public" id="638468c8-1b15-4e77-a0c1-e6f3ac6949f7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Image_Name" Multiplicity="" Visibility="Public" id="660872af-07f4-457e-99d6-7462620d09d2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="MenuVisibilityTrigger" Multiplicity="" Visibility="Public" id="682bdd3c-7192-4115-a315-a910ee8d6ac3">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="AddToLog" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="6afd39c0-2ac7-4c5e-bd77-91c1a6f31172">
+          <Parameter>
+            <Parameter Name="aText" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.TransientLog := self.TransientLog + aText + '\r\n'" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="File_ContentType" Multiplicity="" Visibility="Public" id="6e745399-e10f-4732-8b49-27416166f6c4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TimeSpanValueNotNullable" Multiplicity="" Visibility="Public" id="791514ff-cc5c-4fbc-af3d-7dd25c2cd5c8">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="'00:00'" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="TimeSpan" />
+          </Type>
+        </Attribute>
+        <Attribute Name="BooleanNullable" Multiplicity="" Visibility="Public" id="83250345-77d1-436f-975c-d58fd41b6a85">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SubMenuEnableState" Multiplicity="" Visibility="Public" id="859c5140-8a2d-4cd5-81fb-51bc2a181ed4">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DateTimeNullable" Multiplicity="" Visibility="Public" id="8733279b-ad12-4c7e-8e1c-2a6600361d08">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AnotherFile_FileName" Multiplicity="" Visibility="Public" id="8b02ab1b-1747-4eb1-bede-34c1327609e3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DateTimeNotNullable" Multiplicity="" Visibility="Public" id="95134f50-32cb-451c-87e1-6baeec0e2144">
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Textarea" Multiplicity="" Visibility="Public" id="9eda8fc4-09be-482f-aac9-35b4d95e37e7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Int16NotNullable" Multiplicity="" Visibility="Public" id="a3709081-664c-439b-abb4-ae237c86a117">
+          <Type>
+            <Datatype idref="Int16" />
+          </Type>
+        </Attribute>
+        <Attribute Name="URL" Multiplicity="" Visibility="Public" id="a450b0b2-78f9-4b27-be2b-67c44cf1fb98">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DecimalNotNullable" Multiplicity="" Visibility="Public" id="a6e251fd-b7fc-4835-9397-137c1417f2a6">
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="MenuEnableState" Multiplicity="" Visibility="Public" id="b3795b06-901c-4cce-ad0d-4ab59b2f8b6b">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TransientLog" Multiplicity="" Visibility="Public" id="b8754502-331d-46e3-a69d-395c1b47602b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ByteNullable" Multiplicity="" Visibility="Public" id="be1f6b5f-fa8b-4d8a-b176-17b77a2a681b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TinyMCEData2" Multiplicity="" Visibility="Public" id="c14863bc-5157-4964-9b32-1d38dab89b2c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Icon" Multiplicity="" Visibility="Public" id="c89ca0ff-5241-4688-9186-3110543ec790">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Image" />
+          </Type>
+        </Attribute>
+        <Attribute Name="File_DerivedSettable" Multiplicity="" Visibility="Public" id="ce04a58a-1a35-413f-a2ac-559b3609aad0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.BlobType" Value="Blob" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivedSettable" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.File" />
+            <TaggedValue Tag="Eco.DerivationOCLSet" Value="self.File := vInputParameter" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Int16Nullable" Multiplicity="" Visibility="Public" id="d784794e-661c-4b8b-8d67-db0257879353">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Int16" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TinyMCEData" Multiplicity="" Visibility="Public" id="d8185935-20cf-4d4a-a735-991338b0db1e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="TimeSpanValueNullable" Multiplicity="" Visibility="Public" id="e0c3eb4f-b091-44d0-8c13-dcb3e2d8f8a1">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="TimeSpan" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EnableAG" Multiplicity="" Visibility="Public" id="e27c4ef8-47eb-45b5-b74a-5c68175e655d">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="IntegerNullable" Multiplicity="" Visibility="Public" id="e4403744-d930-43c2-8213-e74486ca3296">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="File_FileName" Multiplicity="" Visibility="Public" id="e7022949-148b-45ae-90b4-d4bc6fee1b71">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DoubleNotNullable" Multiplicity="" Visibility="Public" id="e97f9ce5-c68a-4702-9bab-543dff905bf9">
+          <Type>
+            <Datatype idref="Double" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Int64NotNullable" Multiplicity="" Visibility="Public" id="ebf4b501-4bb9-4f7f-b7b5-a7126ca578a1">
+          <Type>
+            <Datatype idref="Int64" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Password" Multiplicity="" Visibility="Public" id="f0b0bded-c509-441b-a8d3-cc0d43c29fcd">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ReadOnlyState" Multiplicity="" Visibility="Public" id="f0df561b-1123-4e4c-a95d-aec29f9129e7">
+          <TaggedValue>
+            <TaggedValue Tag="persistence" Value="transient" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Image" Multiplicity="" Visibility="Public" id="f1a773fd-c5d2-463e-a1cc-4ec16e3463d9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.BlobType" Value="Image" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.string" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="SysSingletonSysSingletonsTestObjectClass1TestObject" id="d98060ab-bb4e-4db1-806a-17d21172c699">
+      <AssociationEnd>
+        <AssociationEnd Name="TestObject" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4886b551-0b24-4868-9bc9-9be7527548f5">
+          <Participant>
+            <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsTestObject" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="d35b50ad-fc02-445e-b6fa-d2bd697d9c09">
+          <Participant>
+            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="Class2Class2sClass1Class1" id="da9ade28-c81b-4d3d-8118-04ee606d4836">
+      <AssociationEnd>
+        <AssociationEnd Name="Class1" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="56b01ebd-24e2-4018-af37-1b528859abbb">
+          <Participant>
+            <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Class2s" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="bca06ec8-7645-4267-8e26-703e1949202d">
+          <Participant>
+            <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="ThemeColor" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="fbe4d57e-f10a-432f-b505-0d0d7e4af6de">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="01b8af2a-09c1-4535-871f-3191e8d23b7c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedCSS" Multiplicity="" Visibility="Public" id="2f941e42-fd9f-410d-a23a-0aa053ce8dfc">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.name+':'+self.DerivedRGB+';'" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="B" Multiplicity="" Visibility="Public" id="3b661b29-ec73-4f7e-a637-98b6d9c8d4e3">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DerivedRGB" Multiplicity="" Visibility="Public" id="592e2b50-e3cc-46f7-97b7-0fb1f1b6babf">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.R.asstring+','+self.G.asstring+','+self.B.asstring" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="On" Multiplicity="" Visibility="Public" id="5d6ccca4-d8c1-433a-8e6b-208e4bb6db3d">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="G" Multiplicity="" Visibility="Public" id="8c05f664-7c85-443b-a81a-08be1e55fe5e">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AsRGBHex" Multiplicity="" Visibility="Public" id="b651e0f6-dce3-4fd6-9f42-9d7dc81522a5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCLSet" Value="let val=Set{'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'} in&#xD;&#xA;(&#xD;&#xA;  let res=vInputParameter.Replace('#','').tolower.tochararray()-&gt;collect(d|val-&gt;indexof0(d.asstring)) in&#xD;&#xA;  (&#xD;&#xA;    self.R:=res.At(1)*16+res.At(2);&#xD;&#xA;    self.G:=res.At(3)*16+res.At(4);&#xD;&#xA;    self.B:=res.At(5)*16+res.At(6)&#xD;&#xA;  )&#xD;&#xA;&#xD;&#xA;)" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="'#'+self.R.ToString('X2')+self.G.ToString('X2')+self.B.ToString('X2')" />
+            <TaggedValue Tag="Eco.DerivedSettable" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="R" Multiplicity="" Visibility="Public" id="bba19d97-4399-4221-82a2-49c7fcae5e5a">
+          <Type>
+            <Datatype idref="Byte" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association Name="" EffectiveName="ThemeDataThemeDataThemeSizeThemeSizes" id="fcc2320b-0fa2-49da-956d-d27eafb1ffb1">
+      <AssociationEnd>
+        <AssociationEnd Name="ThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="96ada9f4-5a27-4659-911a-b4bea7e7d8e3">
+          <Participant>
+            <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="ThemeSizes" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="6032f69a-43af-40c0-ab18-3fcb14d39215">
+          <Participant>
+            <Class Name="ThemeSize" idref="b23ff679-7019-4903-a0f0-d42fc224ce8d" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+</Package>

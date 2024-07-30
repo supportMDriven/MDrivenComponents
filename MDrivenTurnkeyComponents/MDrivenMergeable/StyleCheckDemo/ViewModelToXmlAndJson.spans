@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ViewModelToXmlAndJson" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="8e0f1fc1-4312-4bc4-84ed-1b1e20a837af">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class2" ExpressionActAsForActions="" id="834ccbbc-2978-452b-b9ea-8899a41b35c8">
+      <Class>
+        <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e1cfb7a5-1ec3-46fe-9ba3-14034c268d5c" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Class2s" idref="f2f4526b-0e52-420f-b834-2a492bf42a19" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="AsDottedTagInParent" ExpressionActAsForActions="" id="0b2db567-1f75-4979-8835-fcbad5ef1ac6">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="506dd3f1-eeb2-4906-9d3d-b71e9c3bde88" />
+        <Column Name="DoubleNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DoubleNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="0ee130e9-1a7c-4243-b370-78417c934447" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisClass1AsDottedTag" idref="66f65f15-534c-4c8a-95d0-073f87165e41" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="NotVisibleIsNull" ExpressionActAsForActions="" id="12e0f50c-ffc0-40a6-ab69-0335d37b9b69">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="ShouldNotBeRendered" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="77447dc6-c46f-433c-b6ed-86c8d8834ff5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisClassAsNull" idref="5fc02b38-a19d-473a-bb31-9cb613dff58c" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="AsChildTag" ExpressionActAsForActions="" id="5d822273-4459-4883-8607-987dd86179b2">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7df11047-bd22-46e4-ba72-ec5aa1f96f51" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisClass1AsChildTag" idref="890f59c3-b6c3-4cb8-a2d4-2058c3de0811" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="974624e4-e975-47b4-919b-e5755bdd3991" />
+    <Column Name="EmailAddress" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.EmailAddress" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="0a006736-1561-48cc-b65d-7d9455507288" />
+    <Column Name="IntegerNotNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IntegerNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="70906e3e-a1b1-4cc3-8730-470b5ee512ea" />
+    <Column Name="IntegerNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IntegerNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="bdb5275b-3e26-4e1b-bec0-5ab89ac784a7" />
+    <Column Name="Class2s" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Class2s" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="4" id="f2f4526b-0e52-420f-b834-2a492bf42a19">
+      <ReferedNesting>
+        <Nesting Name="Class2" idref="834ccbbc-2978-452b-b9ea-8899a41b35c8" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="ThisClass1AsDottedTag" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="7" id="66f65f15-534c-4c8a-95d0-073f87165e41">
+      <ReferedNesting>
+        <Nesting Name="AsDottedTagInParent" idref="0b2db567-1f75-4979-8835-fcbad5ef1ac6" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="ThisClass1AsChildTag" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="13" id="890f59c3-b6c3-4cb8-a2d4-2058c3de0811">
+      <ReferedNesting>
+        <Nesting Name="AsChildTag" idref="5d822273-4459-4883-8607-987dd86179b2" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="XmlChildnode" Value="True" />
+        <TaggedValue Tag="NodeName" Value="Class1AsChildTagWithNodeName" />
+      </TaggedValue>
+    </Column>
+    <Column Name="ThisClassAsNull" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class1.nullValue" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="10" id="5fc02b38-a19d-473a-bb31-9cb613dff58c">
+      <ReferedNesting>
+        <Nesting Name="NotVisibleIsNull" idref="12e0f50c-ffc0-40a6-ab69-0335d37b9b69" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="XmlChildnode" Value="True" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+</Span>

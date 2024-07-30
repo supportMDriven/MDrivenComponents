@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ModalTester" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ea9774f0-c436-4ddb-b22f-416ada6fed73">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleReadonly" idref="6df37c69-afaf-4aa8-a135-28271ac384b5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="RootObject" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt; self.asString" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="65f81fad-3843-4e26-ae2b-b02f302d8426" />
+    <Column Name="TransientLog" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.TransientLog" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="1" YPos="1" id="794406bd-5810-44b5-804d-6f62cf782a61" />
+    <Column Name="SysSingletonLog" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.TransientLog" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="8" YPos="1" id="03422d0f-c2dc-4e69-8875-6e767033716a" />
+    <Column Name="vShouldBeSetOnShow" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vShouldBeSetOnShow" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="c41b3801-0688-4238-a4a1-1dafe60deb4f" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vModalResult" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vShouldBeSetOnShow" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

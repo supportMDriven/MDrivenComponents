@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="RenderedBy" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="e16ffd6d-f545-48e6-8c3a-b56c98eb9ca0">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="TableRenderedBy" ExpressionActAsForActions="" id="f23031e3-0fc0-483f-9401-2d485dfe2b5d">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0a33bbec-de7c-4fef-a04f-35924a79b6aa">
+          <RendersAction>
+            <Column Name="ActionColumn" idref="a810d6b2-e04c-433a-b138-864b555024c8" />
+          </RendersAction>
+        </Column>
+        <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a810d6b2-e04c-433a-b138-864b555024c8">
+          <ActionRenderedBy>
+            <Column Name="Name" idref="0a33bbec-de7c-4fef-a04f-35924a79b6aa" />
+          </ActionRenderedBy>
+          <ActionToExecute>
+            <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="BooleanNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BooleanNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f9798857-dea3-4f70-bad4-625ad294e29e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TableWithRenderedBy" idref="728a33a9-1a13-41d1-a034-5f3e61221392" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'RenderedBy text element'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="0" id="68fd710a-03f7-43af-9c4c-bc7f15408734" />
+    <Column Name="RenderedByAction" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String:=self.String + ' Clicked on rendered by'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e6d6d1b3-abc4-4f2f-be47-b02f43a51f5e">
+      <ActionRenderedBy>
+        <Column Name="StaticStringWithRenderedBy" idref="7b181bd2-1d03-43ae-abe2-ca05e9e17053" />
+      </ActionRenderedBy>
+    </Column>
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="d1706ab8-00be-41be-b7ce-ed45d648946b" />
+    <Column Name="StaticStringWithRenderedBy" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Clickable text'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="7b181bd2-1d03-43ae-abe2-ca05e9e17053">
+      <RendersAction>
+        <Column Name="RenderedByAction" idref="e6d6d1b3-abc4-4f2f-be47-b02f43a51f5e" />
+      </RendersAction>
+    </Column>
+    <Column Name="TableWithRenderedBy" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="1" YPos="3" id="728a33a9-1a13-41d1-a034-5f3e61221392">
+      <ReferedNesting>
+        <Nesting Name="TableRenderedBy" idref="f23031e3-0fc0-483f-9401-2d485dfe2b5d" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Instruction" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="'Clicking on an the rendered test item should navigate to the test items page'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="4" StyleRef="h6" XPos="3" YPos="4" id="79a1447f-797c-442c-9e5c-cd8e8b650a85" />
+    <Column Name="Instruction_Copy" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="'Clicking on the &quot;Clickable text&quot; should add a string to the editable String field'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="4" StyleRef="h6" XPos="3" YPos="0" id="ddbbc36b-24c8-43cc-a59c-df8f7c44dee8" />
+    <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="" XPos="7" YPos="1" id="af1a8824-2fe1-46b7-9dfe-004b921a51b3" />
+    <Column Name="RenderedByImage" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="8" id="d30a75a8-e9c8-421f-9a73-d858e6d8a332">
+      <ActionToExecute>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+</Span>

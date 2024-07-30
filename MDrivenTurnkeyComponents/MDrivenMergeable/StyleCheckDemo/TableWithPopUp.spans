@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TableWithPopUp" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="a7a32307-7924-47c1-bd3c-76251e6b36b1">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="DataTableWithPopUp" ExpressionActAsForActions="" id="c9e1530e-8e0b-4fc2-ae18-441144b67795">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="AddXToString" idref="d1921119-6a8b-4946-b8a4-11b29b76770a" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClassActionDoingShowModalWithOtherObject" idref="afc46383-4878-4b0d-8ae8-0ef7dbf59ac7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="Delete" idref="cf6251eb-c9c3-488d-8dcb-3e1cc4054463" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="TestViewmodelAsXmlAndJson" idref="94ac3c34-0ef2-4890-83b1-0726bd5d39ef" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleReadonly" idref="6df37c69-afaf-4aa8-a135-28271ac384b5" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowThreeStackedGroupBoxes" idref="292ec6b4-dcb0-4312-bcd1-eb15df8397ff" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Icon" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Icon" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e0ff598f-4eb1-4230-9c83-ded5f7bbb41f" />
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="42d36249-0db3-4a25-8eb4-913cc277ea43" />
+        <Column Name="Action" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Info'" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="2b46b372-8fbb-41fd-a6c0-5bfb4dfd1584">
+          <RendersAction>
+            <Column Name="ButtonWithPopUp" idref="02d75226-5734-4a86-8183-1cc413d1a46b" />
+          </RendersAction>
+        </Column>
+        <Column Name="ButtonWithPopUp" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="2" id="02d75226-5734-4a86-8183-1cc413d1a46b">
+          <ActionRenderedBy>
+            <Column Name="Action" idref="2b46b372-8fbb-41fd-a6c0-5bfb4dfd1584" />
+          </ActionRenderedBy>
+          <ActionToExecute>
+            <ContextAction Name="ButtonWithPopUp" idref="399a681f-61c4-4863-86e2-a56eecdac7a1" />
+          </ActionToExecute>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllClass1" idref="75fab2cf-2b47-4cb4-a5fd-6677b2b6da50" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Class2sHeader" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Class2sHeader'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="cf484673-abe8-41b4-a4e5-77e3862d3cdb" />
+    <Column Name="AllClass1" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="0" YPos="1" id="75fab2cf-2b47-4cb4-a5fd-6677b2b6da50">
+      <ReferedNesting>
+        <Nesting Name="DataTableWithPopUp" idref="c9e1530e-8e0b-4fc2-ae18-441144b67795" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

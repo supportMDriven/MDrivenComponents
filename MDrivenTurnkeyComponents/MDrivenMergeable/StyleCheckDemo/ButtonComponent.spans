@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ButtonComponent" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="e3ec06f0-ce94-4629-a998-09a01de48c77">
+  <Category>
+    <Category Name="AngularJSComponents" idref="4be3ee37-338e-4795-aa32-b1d0661655fd" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="DefaultButton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="893e0f30-7d56-40bf-b529-6ac16d094979">
+      <ActionToExecute>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="TextButton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="text" XPos="3" YPos="1" id="c875108e-fab5-490c-81c7-2f85323f8891" />
+    <Column Name="OutlinedButton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="outlined" XPos="5" YPos="1" id="8884e5a5-44cc-44f7-8aaf-85ba1a523b80" />
+    <Column Name="DefaultPrimary" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="primary" XPos="1" YPos="3" id="0abef6f2-9656-4231-9725-461145963ac1" />
+    <Column Name="TextPrimary" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="text primary" XPos="3" YPos="3" id="1fa252a4-a4aa-41aa-ac92-7dcf65bd1e00" />
+    <Column Name="OutlinedPrimary" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="outlined primary" XPos="5" YPos="3" id="f62cd312-0c1b-40d9-b804-658aaaf64e4f" />
+    <Column Name="DefaultDanger" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="danger" XPos="1" YPos="5" id="c58e8dc9-413d-4540-824b-59f7eaa5497a" />
+    <Column Name="TextDanger" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="text danger" XPos="3" YPos="5" id="6a299fce-c255-44a7-8e9d-df01b884fbba" />
+    <Column Name="OutlinedDanger" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="vDisabled" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="outlined danger" XPos="5" YPos="5" id="08173266-f8f0-4aa2-aff0-27f2dafb9eb4" />
+    <Column Name="DisabledStateTrigger" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vDisabled" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="572d4aff-f652-4cb5-bcae-fa2a4820c404" />
+    <Column Name="DefaultButton_Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vButtonPresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="734b46ba-970c-44c6-922f-788203f9b3b3" />
+    <Column Name="DefaultButton_Presentation_HelperText" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Change button text dynamically'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="4b3bc152-34ee-4fc0-b729-3e2901efcdd5" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vButtonPresentation" InitialValue="Default button" TypeName="String" UserData="" />
+    <SpanVariable Name="vDisabled" InitialValue="false" TypeName="Boolean" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="UseAngularJSComponents" Value="true" />
+  </TaggedValue>
+</Span>

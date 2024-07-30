@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SeekerInModal" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="8a9807e3-e603-4c27-82ff-fbf7cb3fb65b">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="ShowSeekerInModal" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="dc61b306-97d0-4ba7-8688-bf464e188480">
+      <ActionToExecute>
+        <ContextAction Name="ShowModal" idref="a1b9d285-214a-425c-9b86-a926a98ccc56" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ActionName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="d0ad7377-7548-4657-8a6f-718546a3fb20">
+      <ActionToExecute>
+        <ContextAction Name="ShowInputInModal" idref="67895605-1281-456d-86e4-590dcf2f6dfa" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="9a9fb9fa-36e2-4479-b669-16ae4fdb48f3">
+      <ActionToExecute>
+        <ContextAction Name="ShowClass1" idref="1da339ed-45b7-43ca-816e-98de5b7b4e19" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+</Span>

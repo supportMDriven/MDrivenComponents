@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SS_UpdateTime" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9de7b664-412e-4e69-9d5b-40015b93fbf0">
+  <Class>
+    <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
+  </Class>
+  <CriteriaForServerSideExecute>
+    <CriteriaForServerSideExecute Interval="60" MaxAnswers="-1" PreEAL="" PSOcl="Calendar.allInstances" SerializedBlocking="False" />
+  </CriteriaForServerSideExecute>
+  <OwnedColumns>
+    <Column Name="MinuteUpdate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ServerMinute := DateTime.Now" ExpressionForReadOnly="self.ServerMinute = DateTime.Now" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8e7592fb-86e4-4e4f-8b87-7d27e3b23147" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.UIAllowed" Value="False" />
+  </TaggedValue>
+</Span>

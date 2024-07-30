@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="NumericField" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c9666b54-8f0e-4c73-b2c8-3530cb51dc6a">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Numeric input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h1" XPos="1" YPos="1" id="8309c106-784e-4a71-b5a5-878f61c64dd9" />
+    <Column Name="ByteInput" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Byte input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="2" id="ff3a2ade-3da0-424b-817d-050f275ff00a" />
+    <Column Name="ByteNotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ByteNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="b74a12e8-c34b-4d48-bd8e-2a5028b3331b" />
+    <Column Name="ByteNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ByteNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="3" id="c3ba3fb9-157b-46de-b1f7-b36fc493d047" />
+    <Column Name="Integer16Inputs" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Int16 input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="4" id="854a6f9b-7eee-4de4-b489-b7ce6c98bc57" />
+    <Column Name="Int16NotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Int16NotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="7eeeaf92-fa29-4892-b2cb-7b0d475d144a" />
+    <Column Name="Int16Nullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Int16Nullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="5" id="d591a1fd-c763-4f84-8677-ee8dc18550d5" />
+    <Column Name="Integer64Inputs" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Int64 input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="6" id="c06097ff-4041-4adf-b357-118afd12242d" />
+    <Column Name="Int64NotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Int64NotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="0b4fa549-7f0b-4906-a3f9-10f37fa11a1f" />
+    <Column Name="Int64Nullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Int64Nullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="7" id="0919a353-361b-45e8-96f6-3cc9e51b4d76" />
+    <Column Name="IntegerInput" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Integer input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="8" id="2c55bbec-27b0-4c32-85d1-a3bac2b6232b" />
+    <Column Name="IntegerNotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.IntegerNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="994460ee-ef42-4fe5-8140-fdadaf7b1f31" />
+    <Column Name="IntegerNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.IntegerNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="9" id="20ce062e-6a54-463d-abb7-d24b88679072" />
+    <Column Name="DeciamlInput" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Decimal input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="10" id="47f29027-e71f-4bef-955e-5fbc5a50d3f0" />
+    <Column Name="DecimalNotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.DecimalNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="07050f58-fd01-48ff-ae5c-5bcb4cef65d6" />
+    <Column Name="DecimalNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.DecimalNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="11" id="2472091e-59cc-4292-bcad-81b77156b040" />
+    <Column Name="DoubleInput" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Double input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="12" id="52977c05-0dd6-4b72-a025-58bca07b33c7" />
+    <Column Name="DoubleNotNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.DoubleNotNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="1" YPos="13" id="2e956a38-e168-4fc8-be2f-3377c9b6c0f5" />
+    <Column Name="DoubleNullable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.DoubleNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="4" YPos="13" id="603219b3-3845-44a3-a6f2-84267e92d1a4" />
+  </OwnedColumns>
+  <SpanValidations>
+    <SpanValidationRule Name="Rule1" Expression="self.ValidationState" Message="Some validation error appears">
+      <ValidatesColumns>
+        <Column Name="DecimalNotNullable" idref="07050f58-fd01-48ff-ae5c-5bcb4cef65d6" />
+        <Column Name="Int64Nullable" idref="0919a353-361b-45e8-96f6-3cc9e51b4d76" />
+        <Column Name="Int64NotNullable" idref="0b4fa549-7f0b-4906-a3f9-10f37fa11a1f" />
+        <Column Name="IntegerNullable" idref="20ce062e-6a54-463d-abb7-d24b88679072" />
+        <Column Name="DecimalNullable" idref="2472091e-59cc-4292-bcad-81b77156b040" />
+        <Column Name="DoubleNotNullable" idref="2e956a38-e168-4fc8-be2f-3377c9b6c0f5" />
+        <Column Name="DoubleNullable" idref="603219b3-3845-44a3-a6f2-84267e92d1a4" />
+        <Column Name="Int16NotNullable" idref="7eeeaf92-fa29-4892-b2cb-7b0d475d144a" />
+        <Column Name="IntegerNotNullable" idref="994460ee-ef42-4fe5-8140-fdadaf7b1f31" />
+        <Column Name="ByteNotNullable" idref="b74a12e8-c34b-4d48-bd8e-2a5028b3331b" />
+        <Column Name="ByteNullable" idref="c3ba3fb9-157b-46de-b1f7-b36fc493d047" />
+        <Column Name="Int16Nullable" idref="d591a1fd-c763-4f84-8677-ee8dc18550d5" />
+      </ValidatesColumns>
+    </SpanValidationRule>
+  </SpanValidations>
+</Span>

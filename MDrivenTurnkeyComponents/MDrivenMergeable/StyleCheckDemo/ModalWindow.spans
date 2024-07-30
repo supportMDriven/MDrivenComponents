@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ModalWindow" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ac7501dd-877b-4525-a6ae-b41ce882ef0c">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Class1_String" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="ad7fbafe-8d5a-473d-be05-bd5f1847ea91" />
+    <Column Name="ShowClass1X" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="ShowItem - Should close this and navigate" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="04ff6951-c04f-410f-8633-a22c850a07e3">
+      <ActionToExecute>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="vEnableModalOK" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="vEnableModalOK" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Enable this should enable the Modal OK button" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="914de36c-e36e-4e2c-af2e-2ef749972994" />
+    <Column Name="vShouldBeSetOnShow" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="vShouldBeSetOnShow" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ff0e71cd-dfc6-4907-b317-4533a86d1a74" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vEnableModalOK" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vShouldBeSetOnShow" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

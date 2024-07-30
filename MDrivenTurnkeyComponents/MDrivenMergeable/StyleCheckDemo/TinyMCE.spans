@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TinyMCE" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="30" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="e0119b4b-ceda-4cde-8374-92142b0d25e9">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TinyMCEData" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" ContentOverride="True" Expression="self.TinyMCEData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="2" YPos="1" id="d26d4b3f-4c80-42a0-84d7-2759942548e0">
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="TinyMCE" />
+      </TaggedValue>
+    </Column>
+    <Column Name="TinyMCEDataRaw" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="self.TinyMCEData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="2" YPos="10" id="4542ca51-85aa-4128-8d53-5feafeb79191" />
+    <Column Name="TinyMCEResultAsHTML" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="self.TinyMCEData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="12" StyleRef="" XPos="2" YPos="18" id="67626c67-6b40-4e5d-91d8-47991856e31f">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="plugins" InitialValue="link print code lists" TypeName="String" UserData="" />
+    <SpanVariable Name="toolbar" InitialValue="bulllist" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="InputFields" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="15" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="46cd97e5-e814-4963-a89e-5c93cd5cf5a1">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysSingletonsTestObjectPickList" ExpressionActAsForActions="" id="246720c1-115e-4fe3-b4ee-c3c17906cb9f">
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="129f2e5d-2a41-48d7-a433-89b849b7664f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysSingletonsTestObjectPickList" idref="746d989a-e788-474e-8a70-490f85e68998" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Input field will replace text-fields, number-fields, float-fields, datapickers, timespans'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="2" StyleRef="h3" XPos="0" YPos="0" id="4996ca86-f8c8-4444-af8e-2a0f839d6d50" />
+    <Column Name="HeaderDefault" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Default input fields'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="2" id="f88c59c3-8796-41a6-9f14-a860c7267609" />
+    <Column Name="AmountOfCats" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ByteNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="3" id="166403b2-2c28-408d-aabb-ad30a88a40ab">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="pets" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="AmountOfCats_HelperText" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Textarea" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="7" id="95953694-16e1-44c3-8bae-e4df846181b1" />
+    <Column Name="AmountOfCats_Placeholder" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Textarea" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="8" id="5b75778e-d0da-49f8-b249-1f629a482d80" />
+    <Column Name="IntegerNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.IntegerNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="45fc0c25-d22e-41f5-aba3-e4f5e6d438ec">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="euro" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Int16Nullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Int16Nullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="5" id="d97dbae0-7f0a-4f2f-9358-d1c3b87fb077" />
+    <Column Name="Int64Nullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Int64Nullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="3" id="d31d60d8-4752-4a61-b45b-ec8d2981e9cd" />
+    <Column Name="DoubleNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.DoubleNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="4" id="814e5286-25f7-44f5-a66c-52647324ab76" />
+    <Column Name="DecimalNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.DecimalNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="5" id="7a0ae7dc-ead1-4d33-8877-9032af2e39f0">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="euro" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DateTimeNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.DateTimeNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="a1e89932-52a8-4d58-8657-72ddd4adc6b3" />
+    <Column Name="TimeSpanValueNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.TimeSpanValueNullable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="4" id="d9c6dc05-704c-4227-9010-5d3756a55ba3" />
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="5" id="5f67c531-9ac9-4562-b56a-37299dee539b" />
+    <Column Name="String_HelperText" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Helper text for String input'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="6" id="03dfebfb-3086-41ab-9024-0738c88f3ba3" />
+    <Column Name="String_Placeholder" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Data binded placeholder'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="5" id="c6aad438-2a36-49bb-b092-86f2d933a4dd" />
+    <Column Name="Textarea" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Textarea" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="3" StyleRef="" XPos="9" YPos="3" id="6cbcb0ff-e55e-4cad-80d7-0026cd17ca0c" />
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="'Input fields alignment with different components'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="7" id="2105ca89-99c9-4f37-a464-a2eecde68d4b" />
+    <Column Name="InputFieldTester" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="9" id="29c89e4f-bb45-4e56-a689-0f47cd0f2d55" />
+    <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="6" YPos="9" id="4b4a6c6f-4b65-4a82-9a5c-39cdf6cbbb87">
+      <ActionToExecute>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="File" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.File" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="9" id="53787a03-004a-403f-b45b-dc538f16daf1" />
+    <Column Name="URL" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.URL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="11" id="55ff2993-58bb-4a24-ab2b-e0d2f7a6d185">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="link" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="vSysSingletonsTestObject" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSysSingletonsTestObject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="11" id="45e983b5-d880-4a64-99af-dddc32ec9d5f">
+      <ColumnForPickList>
+        <Column Name="SysSingletonsTestObjectPickList" idref="746d989a-e788-474e-8a70-490f85e68998" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="SysSingletonsTestObjectPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.allInstances-&gt;difference(self.SysSingletonsTestObject)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="746d989a-e788-474e-8a70-490f85e68998">
+      <ReferedNesting>
+        <Nesting Name="SysSingletonsTestObjectPickList" idref="246720c1-115e-4fe3-b4ee-c3c17906cb9f" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Password" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Password" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="9" YPos="9" id="ea4e2ea2-d4e6-4546-ac7c-a0245d8214d0" />
+    <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Telephone number" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="12" id="88a566a5-1cea-415d-84c5-ae3e58951305">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="phone" />
+        <TaggedValue Tag="IconPosition" Value="after" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Telephone__HelperText" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Helper text for input control'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="13" id="53ee39f9-49f1-4f23-a173-96cb00e93937" />
+    <Column Name="Telephone_Placeholder" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Format: 123-456-7890'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="0" YPos="14" id="2c08ae65-8fd2-4d8b-b360-82aaf185c2f9" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSysSingletonsTestObject" InitialValue="" TypeName="SysSingleton" UserData="" />
+  </SpanVariables>
+</Span>

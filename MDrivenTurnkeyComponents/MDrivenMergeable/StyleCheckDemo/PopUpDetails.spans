@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="PopUpDetails" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="84712e17-c8cc-48d7-aba3-66a580e034f9">
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'ThisIs Test description'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="4" id="ed8a29ec-f35b-41b8-a50f-e57eef7057f2" />
+    <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="5" id="b6bf1eca-cdd9-4091-ac45-867cfeefceaf" />
+  </OwnedColumns>
+</Span>

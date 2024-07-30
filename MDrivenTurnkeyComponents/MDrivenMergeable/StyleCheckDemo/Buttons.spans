@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Buttons" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="16" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="4fefce68-90c0-4b6d-b2f2-be817bbce750">
+  <Category>
+    <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteAll" idref="5d6b6f62-abe5-46ee-a619-b6aa45283ab3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleValidation" idref="a7586af3-816e-4439-aae9-ecdfdd6d44a7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClassActionDoingShowModal" idref="88a056e6-27c3-48dd-a4a8-fffeecf82318" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowModalTester" idref="84c1d77f-2395-4d34-a239-c09978302335" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="DescriptionOne" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Default button colours'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="2" id="4b95523e-2d7a-467d-abec-87a08e347db6" />
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Button component'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h1" XPos="1" YPos="1" id="2f3f1c77-407f-43d2-bbf1-79860dc6ad12" />
+    <Column Name="ButtonDefault" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="8316c392-2107-44a2-9962-dd921a7a9e6a">
+      <ActionToExecute>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="ButtonFlat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="flat" XPos="3" YPos="3" id="f21b7e5a-1cbd-4171-90c7-7224b3c895d5" />
+    <Column Name="ButtonOutlined" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="outlined" XPos="5" YPos="3" id="934502fa-9e0d-4857-885b-f33b6ee988d8" />
+    <Column Name="ButtonShaped" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="shaped" XPos="7" YPos="3" id="5ba05674-5812-49d3-9986-20878a860b64" />
+    <Column Name="DescriptionTwo" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Primary color buttons'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="4" id="e0afe4c1-4bb6-4323-a12d-59f7ebfeb924" />
+    <Column Name="PrimaryDefault" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="primary fab" XPos="1" YPos="5" id="faaa3952-ff1c-4f9a-84b7-2e6c4ebf3d60">
+      <TaggedValue>
+        <TaggedValue Tag="Icon" Value="settings_bluetooth" />
+        <TaggedValue Tag="IconButton" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="PrimaryFlat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="flat primary" XPos="3" YPos="5" id="bbdcc5bf-b809-4597-939f-12ed2ad16464" />
+    <Column Name="PrimaryOutlined" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="outlined primary" XPos="5" YPos="5" id="cbc7866d-be5f-449f-b609-5f7d55199658" />
+    <Column Name="PrimaryShaped" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="shaped primary" XPos="7" YPos="5" id="6ce2135a-8de8-44e6-bdbc-5008a540e45c" />
+    <Column Name="DescriptionThree" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Danger color buttons'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="6" id="04dcdc4b-4697-41d6-ad7e-c8d34a732d72" />
+    <Column Name="DangerDefault" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="danger" XPos="1" YPos="7" id="1ac905fe-5d26-4180-add7-d23968a9edde" />
+    <Column Name="DangerFlat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="falt danger" XPos="3" YPos="7" id="e0f0e844-eb64-4381-8210-8ae6ff135ce8" />
+    <Column Name="DangerOutlined" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="outlined danger" XPos="5" YPos="7" id="c5999f30-1600-4f5e-baf4-ac8f41540395" />
+    <Column Name="DangerShaped" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="shaped danger" XPos="7" YPos="7" id="defd6144-18cb-462a-a2e9-eb537d314fd6" />
+    <Column Name="DescriptionFour" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Warning color buttons'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="8" id="90a2a5d3-880c-4d63-a7d2-acc33123b0ce" />
+    <Column Name="WarningDefault" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="warning" XPos="1" YPos="9" id="2b272065-6d46-43dc-8ccd-889c5fb67ac0" />
+    <Column Name="WarningFlat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="flat warning" XPos="3" YPos="9" id="6ac5e651-cfbf-4cd0-86fd-c3eabd340437" />
+    <Column Name="WarningOutlined" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="outlined warning" XPos="5" YPos="9" id="58f01923-f5ba-4fda-ad14-3c82556999d8" />
+    <Column Name="WarningShaped" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="shaped warning" XPos="7" YPos="9" id="eea4c287-9575-481e-bca0-0f32784be2ca" />
+    <Column Name="DescriptionFive" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Success color buttons'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h4" XPos="1" YPos="10" id="93346e46-836c-4813-962a-634cfdea4c0b" />
+    <Column Name="SuccessDefault" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="success" XPos="1" YPos="11" id="13275cce-f67f-4a97-bdce-970228e14bac" />
+    <Column Name="SuccessFlat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="flat success" XPos="3" YPos="11" id="a8e75631-fb3f-4f1f-bd06-1fff7f603756" />
+    <Column Name="SuccessOutlined" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="outlined success" XPos="5" YPos="11" id="7e830a67-8021-423a-b7ce-2e0b97360511" />
+    <Column Name="SuccessShaped" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="self.ReadOnlyState" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="shaped success" XPos="7" YPos="11" id="6ffdde1f-3c68-43f3-97b6-302d7766fe55" />
+    <Column Name="FabButton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="fab" XPos="1" YPos="13" id="46dad249-d530-465a-a3b6-1b7c5236077a" />
+  </OwnedColumns>
+</Span>
