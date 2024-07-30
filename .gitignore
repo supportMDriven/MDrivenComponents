@@ -367,3 +367,8 @@ FodyWeavers.xsd
 /MDrivenTurnkeyComponents/MDrivenMergeable/SysOpenAI/SysOpenAI.PrototypeData.xml
 /MDrivenTurnkeyComponents/MDrivenMergeable/AccountViewOverride/modlr.config
 /MDrivenTurnkeyComponents/MDrivenMergeable/SysTurnkeyTrace/modlr.config
+/MDrivenTurnkeyComponents/MDrivenMergeable/GraphAPI2023/_CachedImages
+/MDrivenTurnkeyComponents/MDrivenMergeable/Office365/_CachedImages
+/MDrivenTurnkeyComponents/MDrivenMergeable/Office365/modlr.config
+/MDrivenTurnkeyComponents/MDrivenMergeable/SysDocBatch/_CachedImages
+/MDrivenTurnkeyComponents/MDrivenMergeable/SysDocBatch/modlr.config

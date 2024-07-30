@@ -5,6 +5,14 @@
       <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
     </MenuGroup>
   </GlobalAction>
+  <ContextAction Name="GrabDriveAndItem" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vUrl:=vCurrent_NewNestedViewModelClass.WebUrl;&#xD;&#xA;vDriveId:=vCurrent_NewNestedViewModelClass.DriveId;&#xD;&#xA;vDriveItemId:=vCurrent_NewNestedViewModelClass.ItemId;&#xD;&#xA;vVersion:=vCurrent_NewNestedViewModelClass.VersionNumber" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="150c605b-1834-4eb8-ae01-4367e0b5a402">
+    <OnlyInThis>
+      <Nesting Name="NewNestedViewModelClass" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
+    </ViewModelContext>
+  </ContextAction>
   <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="1c4f8e2f-06e1-4712-b08a-0f4f0444f99c">
     <MenuGroup>
       <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
@@ -15,7 +23,12 @@
       <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="SearchViaGraphAPI" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysGraphAPI.Create in&#xD;&#xA;(&#xD;&#xA;  SysSingleton.oclSingleton.CurrentUser.SysGraphAPIs.Add(x);&#xD;&#xA;  x&#xD;&#xA;)" Id="86e4c767-6e7d-408a-b6a8-6f2f8f7c1c21">
+  <GlobalAction Name="ShowSearshADUsersViaGraphAPI" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" SaveBeforeNavigate="True" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let gra=SysGraphAPI.Create in&#xD;&#xA;(&#xD;&#xA;  gra.SysUser:=SysSingleton.oclsingleton.CurrentUser;&#xD;&#xA;  gra&#xD;&#xA;  )" Id="3290b78e-06e0-48c4-a8ae-bc45fb1daa19">
+    <BringUpViewModel>
+      <Span Name="SearshADUsersViaGraphAPI" idref="a8d3a538-d1e6-46a6-96fa-a25327395517" />
+    </BringUpViewModel>
+  </GlobalAction>
+  <GlobalAction Name="SearchViaGraphAPI" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" AutoSave="True" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=SysGraphAPI.Create in&#xD;&#xA;(&#xD;&#xA;  SysSingleton.oclSingleton.CurrentUser.SysGraphAPIs.Add(x);&#xD;&#xA;  x&#xD;&#xA;)" Id="86e4c767-6e7d-408a-b6a8-6f2f8f7c1c21">
     <BringUpViewModel>
       <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
     </BringUpViewModel>
@@ -30,6 +43,17 @@
       <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
     </MenuGroup>
   </GlobalAction>
+  <ClassAction Name="ShowSysGraphAPIResultUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="d51044cd-0330-46b7-b81a-92f760d65a1b">
+    <BringUpViewModel>
+      <Span Name="GraphAPIOneUser" idref="62af5cbf-a249-4e64-976c-bab5df07858e" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
+    </ClassToPerformActionOn>
+    <TaggedValue>
+      <TaggedValue Tag="AutoFormTemplate" Value="true" />
+    </TaggedValue>
+  </ClassAction>
   <MenuGroup Name="Edit" SortKey="002" Id="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
   <MenuGroup Name="File" SortKey="001" Id="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
   <MenuGroup Name="Views" SortKey="004" Id="6182c19b-652d-467c-a3cf-74147295b971" />

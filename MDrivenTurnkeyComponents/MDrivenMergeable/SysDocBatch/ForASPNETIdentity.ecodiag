@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="ForASPNETIdentity" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.2762815625" Id="7f5d5bb1-210b-4e82-9068-db661712522a">
+  <PlacedClass>
+    <PlacedClass ClassId="2484ee09-c927-4bd9-abc0-75bda7b74ba2" Color="1692800256" LastKnownName="SysDoc" PickedFeatureVisibility="ShowAll" RenderedHeight="144" RenderedWidth="165" ShowAttributes="False" ShowMethods="False" Size="1" x="496" y="496" id="0fa79293-8f91-4400-9355-34feb381d692">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="d12577fd-6198-4f49-8b85-a5d73dfa4348">
+          <AssociationEnd>
+            <AssociationEnd Name="SysDocs" idref="5aecf465-7c1f-4f7a-a5c0-7ad221e91247" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysDoc" idref="2484ee09-c927-4bd9-abc0-75bda7b74ba2" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="8126c287-328a-4c06-b703-5417934358f2" Color="1692800256" LastKnownName="SysMDrivenMiscSettingsSingleton" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="49" RenderedWidth="254" ShowAttributes="False" ShowMethods="False" Size="1" x="528" y="216" id="1341c6d8-4bd3-4623-bb27-cfe9d6485cf5">
+      <Class>
+        <Class Name="SysMDrivenMiscSettingsSingleton" idref="8126c287-328a-4c06-b703-5417934358f2" />
+      </Class>
+      <PickedStructuralFeatures>
+        <Attribute Name="LibreOfficeInstallPathAndExe" idref="fc468dac-0b87-4795-b128-6246b4a4b61b" />
+      </PickedStructuralFeatures>
+    </PlacedClass>
+    <PlacedClass ClassId="d0351ee3-1d98-49bc-b7ff-088639bc4612" Color="1692800256" LastKnownName="SysDocBatch" PickedFeatureVisibility="ShowAll" RenderedHeight="84" RenderedWidth="169" ShowAttributes="False" ShowMethods="False" Size="1" x="480" y="368" id="4a228b7b-19b1-4de0-9fe3-0557eaef1c9b">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-24" y="84" id="a6d8d2e9-9409-4d63-8ccb-f425ce65e865">
+          <AssociationEnd>
+            <AssociationEnd Name="SysDocBatch" idref="97d5b351-1de4-4ca1-a0dc-298ee83efae4" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="d12577fd-6198-4f49-8b85-a5d73dfa4348">
+              <AssociationEnd>
+                <AssociationEnd Name="SysDocs" idref="5aecf465-7c1f-4f7a-a5c0-7ad221e91247" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-84.5" y="40" id="f05a7c59-85ae-4be3-8bc4-5ec5a930d7d3">
+          <AssociationEnd>
+            <AssociationEnd Name="CurrentSysDocBatch" idref="edbe4d44-f065-4721-bc49-25db92e6d241" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysDocBatch" idref="d0351ee3-1d98-49bc-b7ff-088639bc4612" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="105" ShowAttributes="False" ShowMethods="False" Size="1" x="288" y="272" id="f93a48db-c627-4124-85e1-a65183800504">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="52.5" y="16" id="07cb1158-4c93-4a46-bd7b-5399d6477822">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsCurrentSysDocBatch" idref="bfcb013b-6cb9-4865-9667-a4617eab728b" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-84.5" y="40" id="f05a7c59-85ae-4be3-8bc4-5ec5a930d7d3">
+              <AssociationEnd>
+                <AssociationEnd Name="CurrentSysDocBatch" idref="edbe4d44-f065-4721-bc49-25db92e6d241" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="135" LastKnownName="" RenderedHeight="145" RenderedWidth="197" Size="1" Width="187" x="680" y="360" id="017e5bf0-de4e-424c-a62c-58b681bd0b5e">
+      <Span>
+        <Span Name="SysDocBatchView" idref="34694623-d2de-46da-8521-9ea249e4e21a" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>
