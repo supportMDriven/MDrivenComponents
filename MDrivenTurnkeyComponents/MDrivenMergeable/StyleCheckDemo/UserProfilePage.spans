@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="UserProfilePage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="db667c39-fdea-45fd-b1a5-e1cb193310f8">
+<Span Name="UserProfilePage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="db667c39-fdea-45fd-b1a5-e1cb193310f8">
   <Class>
     <Class Name="UserProfile" idref="b5a0309a-a981-4fd1-9205-3af4841a99be" />
   </Class>

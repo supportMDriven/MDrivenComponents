@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SeveralTablesPlacingContainers" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="12" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="285a3a9e-8794-47d3-8358-aab7518d32b0">
+  <Category>
+    <Category Name="Layout" idref="b039cece-9431-4546-9977-08f480dce7d2" />
+  </Category>
+  <Class>
+    <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Class1" ExpressionActAsForActions="" id="3c7a3237-26b2-4147-9766-f57cfcb8a1e5">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'A few fields with a large table at the bottom.\r\n' +&#xD;&#xA;'The table should extend the viewmodel section,\r\n' +&#xD;&#xA;'make this description scroll upwards out of sight.\r\n' " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="9" YPos="2" id="5ece35da-4794-46e6-a4b1-61ae68daa324">
+          <PlacingContainer>
+            <PlacingContainer idref="6e5d75de-49f3-434c-b7ca-204cfbd0ed3f" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="6" id="798b5fc6-fed0-4a65-a394-a74b4d4c3d9e">
+          <PlacingContainer>
+            <PlacingContainer idref="6e5d75de-49f3-434c-b7ca-204cfbd0ed3f" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="DoubleNotNullable" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.DoubleNotNullable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="0c2189b7-34c8-4f15-9007-582676a586db">
+          <PlacingContainer>
+            <PlacingContainer idref="6e5d75de-49f3-434c-b7ca-204cfbd0ed3f" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="6e5d75de-49f3-434c-b7ca-204cfbd0ed3f" />
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="ThisClass1" idref="43b60ecb-0625-43a4-876b-7f9e2cb60b45" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TransientClass" ExpressionActAsForActions="" id="8f65f82b-6f46-49ed-8670-6e3417452eab">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomethingInside" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="265944b6-dc61-4220-88f0-ad2c5670d1d6">
+          <PlacingContainer>
+            <PlacingContainer idref="6ee673c4-1bbe-40cd-9750-a53f98eb0f31" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="SomethingInside2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9a97a869-3f3d-4c72-83da-cdab1355f1ae">
+          <PlacingContainer>
+            <PlacingContainer idref="6ee673c4-1bbe-40cd-9750-a53f98eb0f31" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="SomethingInside3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="901f0987-85e0-4f4d-9e29-662eb61c44a5">
+          <PlacingContainer>
+            <PlacingContainer idref="6ee673c4-1bbe-40cd-9750-a53f98eb0f31" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="True" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="58b09c0d-473c-4d10-906f-42ff9c8dd492">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="6ee673c4-1bbe-40cd-9750-a53f98eb0f31" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="AllTransientClass" idref="c2a4a771-c69c-4d78-9042-37af710475bc" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TransientClassUpplerMiddle" ExpressionActAsForActions="" id="8fa884a8-b58c-4a2f-8b5a-50fb2a771f7c">
+      <Class>
+        <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="SomethingInside" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomethingInside" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a6eaff47-cb7f-4ce0-adc7-489cceedda4f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllTransientClassUpperMiddle" idref="501ed5c8-081a-496f-86db-e3cbb204c740" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSeekerInModal" idref="067ee43d-591d-46ea-9e2a-98670196de2e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="ThisClass1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class1.allInstances-&gt;first" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="0" id="43b60ecb-0625-43a4-876b-7f9e2cb60b45">
+      <PlacingContainer>
+        <PlacingContainer idref="bf855ac7-0d59-4579-8135-f5523b2c3d15" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Class1" idref="3c7a3237-26b2-4147-9766-f57cfcb8a1e5" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllTransientClass" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="TransientClass.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="9" id="c2a4a771-c69c-4d78-9042-37af710475bc">
+      <PlacingContainer>
+        <PlacingContainer idref="711713ee-a8de-49ea-855f-8be50897123a" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="TransientClass" idref="8f65f82b-6f46-49ed-8670-6e3417452eab" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Add50MoreInList" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Sequence{1..50}-&gt;forEach(TransientClass.Create)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="8" id="e868c73f-3409-4eb8-b14f-ebaf9a337cb0">
+      <PlacingContainer>
+        <PlacingContainer idref="bf855ac7-0d59-4579-8135-f5523b2c3d15" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Telephone" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Telephone" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="1" id="d41a547f-fdd2-4628-b79a-505cb6c0f78c">
+      <PlacingContainer>
+        <PlacingContainer idref="bf855ac7-0d59-4579-8135-f5523b2c3d15" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="AllTransientClassUpperMiddle" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="TransientClass.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="4" YPos="0" id="501ed5c8-081a-496f-86db-e3cbb204c740">
+      <PlacingContainer>
+        <PlacingContainer idref="1c0987da-fd32-44b0-be90-232720e1a373" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="TransientClassUpplerMiddle" idref="8fa884a8-b58c-4a2f-8b5a-50fb2a771f7c" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="f1c02027-f87f-4c7f-8150-86e35012d7cc">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="744b9c36-e5bc-49dc-a2b5-21c30387ac46">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="bf855ac7-0d59-4579-8135-f5523b2c3d15" />
+          </ChildContainers>
+        </PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="1c0987da-fd32-44b0-be90-232720e1a373" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="True" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="711713ee-a8de-49ea-855f-8be50897123a" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

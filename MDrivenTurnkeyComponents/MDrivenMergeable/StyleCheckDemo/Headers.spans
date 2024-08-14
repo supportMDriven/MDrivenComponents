@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="Headers" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2b972ebb-5bd2-4b1e-9e1f-432b6d1742a6">
+<Span Name="Headers" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2b972ebb-5bd2-4b1e-9e1f-432b6d1742a6">
   <Class>
     <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
   </Class>
@@ -34,7 +34,7 @@
   </Nesting>
   <OwnedColumns>
     <Column Name="Header3" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'HeaderTest'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h3 page-header" XPos="0" YPos="0" id="ad7bb06c-cc71-4c69-b83b-987db3875cc9" />
-    <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'This header description is grey'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="subheader" XPos="0" YPos="1" id="7ab1394b-e87a-442d-ba26-ee7ccbc546bb" />
+    <Column Name="Description" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'This header description is green'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="subheader" XPos="0" YPos="1" id="7ab1394b-e87a-442d-ba26-ee7ccbc546bb" />
     <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="tk-top-item primary" XPos="10" YPos="0" id="664d451b-fec2-4380-bccb-1cb693c50371" />
     <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="2" id="3b911244-ff0a-401b-a7c5-ce2e892ad45a">
       <TaggedValue>

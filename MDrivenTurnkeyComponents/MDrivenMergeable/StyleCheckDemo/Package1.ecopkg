@@ -85,6 +85,23 @@
         </Attribute>
       </Feature>
     </Class>
+    <Class Name="SysMDrivenMiscSettingsSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="4456b01a-175e-4c5a-b2e0-97215a170df9">
+      <Feature>
+        <Attribute Name="GlobalToolbarMode" Multiplicity="" Visibility="Public" id="8cf21a50-13e2-4731-86e1-9468bcb4eefa">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalBlazorClient" Multiplicity="" Visibility="Public" id="a3b3e583-414e-40e1-94a5-a91fffcccd8e">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
     <Association Name="" EffectiveName="SysSingletonSysSingletonThemeDataPickedThemeData" id="446fa2e3-f05c-465b-a5f4-ce21005e0e0b">
       <AssociationEnd>
         <AssociationEnd Name="PickedThemeData" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="3f6b98b7-815a-49da-9ed8-f6756a8a14c7">

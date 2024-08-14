@@ -66,5 +66,10 @@
         <Nesting Name="SysSingleton" idref="65b053c5-308d-4aa5-964e-43d5dd5ebd29" />
       </ReferedNesting>
     </Column>
+    <Column Name="Info" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'In GlobalMenu/AccessGroups there is an acttion ShowTestForGAVisibility that should be affected by these accessgroup setting'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h2" XPos="0" YPos="0" id="d1219613-469a-4ddb-ae6b-bc058fc25b30">
+      <TaggedValue>
+        <TaggedValue Tag="UIFirst" Value="String" />
+      </TaggedValue>
+    </Column>
   </OwnedColumns>
 </Span>

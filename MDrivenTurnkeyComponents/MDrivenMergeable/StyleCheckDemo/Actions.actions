@@ -9,16 +9,22 @@
     </ClassToPerformActionOn>
   </ClassAction>
   <GlobalAction Name="ShowTestForGAVisibility" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="0820adec-a2a8-46f8-8413-52735fa76819">
+    <AccessGroups>
+      <AccessGroup Name="TestAG" idref="7ec25c8c-383b-4d7f-a9d1-16b869eb40ba" />
+    </AccessGroups>
     <BringUpViewModel>
       <Span Name="TestForGAVisibility" idref="272c5f81-d930-4d41-a815-6fe2af7a20f3" />
     </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AccessGroups" idref="ee1f7540-b67a-4d05-91a8-8e9239bdd07c" />
+    </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ChekboxMVC" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="0b2120ce-72bd-4ce7-9613-8080cf29ca89">
     <BringUpViewModel>
       <Span Name="CheckboxMVC" idref="fa569215-685e-4053-98ff-0342554ec9e8" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular/MVC" idref="4dbdec47-7209-4a20-ac30-04a35d7aef2f" />
+      <MenuGroup Name="AngularAndBlazor/MVC" idref="4dbdec47-7209-4a20-ac30-04a35d7aef2f" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="ViewModelActionNotInRoot" AreYouSureCancelVerb="" AreYouSureExecuteVerb="Add" AreYouSureQuestion="Add one to the integer?" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_Klass1namnMedÅÄÖ.IntegerNotNullable := vCurrent_Klass1namnMedÅÄÖ.IntegerNotNullable +1" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="0fe5ec7f-4ff1-4fee-aa87-bb2b567d3f1c">
@@ -39,7 +45,7 @@
       <Span Name="Buttons" idref="4fefce68-90c0-4b6d-b2f2-be817bbce750" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ImageUpload" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="19b82350-1513-4c96-9cf0-f4f9b4dcfdb3">
@@ -47,7 +53,7 @@
       <Span Name="ImageUpload" idref="8667bc25-b94a-4632-8da3-55e112a3d2c8" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ShowUploadDownload" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="1ada4be8-9b5d-4866-bd53-666941d9da8a">
@@ -82,7 +88,7 @@
       <Span Name="NewTextElements" idref="d4919d28-135f-439f-92a2-7bd57df0af63" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="20f5fdbf-8994-4fb0-b49f-12f4845da378">
@@ -106,6 +112,14 @@
       <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
     </ClassToPerformActionOn>
   </ClassAction>
+  <ContextAction Name="CreateClass1" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="Class1.Create" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2935d3a7-954c-4831-a3d0-d40ba2bf5ee4">
+    <OnlyInThis>
+      <Span Name="EnsureDataForTest" idref="c85aa26a-74d9-4225-8b08-d915d4c68b88" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="EnsureDataForTest" idref="c85aa26a-74d9-4225-8b08-d915d4c68b88" />
+    </ViewModelContext>
+  </ContextAction>
   <ClassAction Name="ShowEditPopup" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="Show availaiblea actions" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelIsPopUp="True" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="29e020fd-fcc0-4cbe-a27c-e5e9ecc65bf7">
     <BringUpViewModel>
       <Span Name="PopupTestVM" idref="09645083-5470-42e5-a9a8-d2ae1577607d" />
@@ -119,12 +133,20 @@
       <Class Name="Calendar" idref="9ea09760-a7e0-406b-af25-9c82e251dcff" />
     </ClassToPerformActionOn>
   </ClassAction>
+  <ContextAction Name="CreateClass2" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="Class2.Create" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2e9cfe2f-caa0-4f62-b0a3-7de95d89f20b">
+    <OnlyInThis>
+      <Span Name="EnsureDataForTest" idref="c85aa26a-74d9-4225-8b08-d915d4c68b88" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="EnsureDataForTest" idref="c85aa26a-74d9-4225-8b08-d915d4c68b88" />
+    </ViewModelContext>
+  </ContextAction>
   <GlobalAction Name="AngularShowFileUpload" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="File upload" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="2f965f24-8916-402e-a9dc-f058c7c7838f">
     <BringUpViewModel>
       <Span Name="FileUpload" idref="0f1193c7-bad2-433f-a021-b08e8096124c" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="CreateYear" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="Year.allInstances-&gt;isEmpty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Year.Create" Id="2fdf455a-bba9-438d-85a9-92452e932f04">
@@ -157,12 +179,17 @@
       <Span Name="Class1Seeker" idref="92d71d13-145d-4e9d-a46e-8b0facae3353" />
     </ViewModelContext>
   </ContextAction>
+  <GlobalAction Name="EnsureDataForTest" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="0001" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton" Id="3cbaaa73-59a9-48c3-9cdf-5d63b609cbb6">
+    <BringUpViewModel>
+      <Span Name="EnsureDataForTest" idref="c85aa26a-74d9-4225-8b08-d915d4c68b88" />
+    </BringUpViewModel>
+  </GlobalAction>
   <GlobalAction Name="ShowDataTableReadonly" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="Data-table (readonly)" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="3d6d26c2-b70e-4310-afda-a076969c36d8">
     <BringUpViewModel>
       <Span Name="DataTableReadonly" idref="c9822d5e-24a4-4217-a53d-076f9e9120ec" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="HoursOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="3e1f08a8-93ed-43e5-9484-84ef398ae519">
@@ -197,17 +224,25 @@
       <MenuGroup Name="TestCases" idref="f4fc072c-ae3b-49c2-b33d-ee60cc64dd1b" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="ShowHeaders" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="43b12fd3-e42b-4581-b0c8-696cf2b588e7">
+  <GlobalAction Name="ShowHeaders" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="SysSingleton.oclsingleton.TestObject-&gt;notempty" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclsingleton.TestObject" Id="43b12fd3-e42b-4581-b0c8-696cf2b588e7">
     <BringUpViewModel>
       <Span Name="Headers" idref="2b972ebb-5bd2-4b1e-9e1f-432b6d1742a6" />
     </BringUpViewModel>
+  </GlobalAction>
+  <GlobalAction Name="ShowSeveralTablesPlacingContainers" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="449fa988-dfb1-4dc4-8bad-0d2c795e6bd8">
+    <BringUpViewModel>
+      <Span Name="SeveralTablesPlacingContainers" idref="285a3a9e-8794-47d3-8358-aab7518d32b0" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="Layout" idref="cd5faf93-773e-4997-864d-897a31ea1324" />
+    </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ActionAndButtons" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="462c94c4-6668-4e03-8a7a-74300a570d00">
     <BringUpViewModel>
       <Span Name="ActionAndButtons" idref="07588de7-e066-4043-9efd-631cae5d777d" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="DateStructure" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Calendar.SO" Id="4c4260e7-4747-462e-916e-4a5d0d0892ec">
@@ -239,7 +274,15 @@
       <Span Name="BooleanComponents" idref="ecb96343-dcc7-4c3a-aee9-84bb76dd2f3b" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="ShowSeveralTablesPlacingContainersWork" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="54115829-aad7-4436-9a3a-726c714aed11">
+    <BringUpViewModel>
+      <Span Name="SeveralTablesPlacingContainersWork" idref="f2ff7b96-1bf6-4192-bb1d-2cc99de15594" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="Layout" idref="cd5faf93-773e-4997-864d-897a31ea1324" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="AngularShowTextField" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="Text fields" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="5463c7a3-96aa-4269-b940-0e7b753bea1b">
@@ -247,7 +290,7 @@
       <Span Name="TextField" idref="0b486c45-291c-4b0c-9485-a8f916a42cf0" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="TextfieldComponent" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="55f26b48-4c9b-422e-b35a-3e64b68600a4">
@@ -255,7 +298,7 @@
       <Span Name="TextfieldComponent" idref="29b9f550-a379-4f88-b7b2-b8928ac55695" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <ClassAction Name="ViewWeekDefinitionBrowser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="56d8f837-4082-478c-b57c-682a47e8e389">
@@ -300,7 +343,7 @@
       <Span Name="ImageComponent" idref="42c8bc60-3274-44a1-a20d-11763300940d" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="VymodellActionSomÖkarMedEn" AreYouSureCancelVerb="Nej" AreYouSureExecuteVerb="Ja" AreYouSureQuestion="Öka siffran med ett?" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_Klass1namnMedÅÄÖ.IntegerNotNullable := vCurrent_Klass1namnMedÅÄÖ.IntegerNotNullable +1" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="65a3e4b7-ab2e-44ce-b94d-ac293d4e12cd">
@@ -327,7 +370,7 @@
       <Span Name="Select" idref="d1f20b97-0dd8-49cc-add0-104590184562" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="6bfd1fd3-420c-45c7-afee-f43033491576">
@@ -340,7 +383,7 @@
       <Span Name="FileComponent" idref="aea695f0-f55c-4572-990a-275752fbcc62" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <ClassAction Name="ToggleReadonly" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.ReadOnlyState := not self.ReadOnlyState" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="6df37c69-afaf-4aa8-a135-28271ac384b5">
@@ -354,7 +397,7 @@
       <Span Name="TableActions" idref="f5b7d458-dc6e-4248-af3b-4058929711f8" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="TableClientSorting" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="703afaf8-41df-49ff-a912-fd8d7032ae8a">
@@ -378,7 +421,7 @@
       <Span Name="TextInputTypes" idref="f3041482-bf0d-4901-9d15-092a920c98cc" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <ClassAction Name="FixupCalendar" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="Calendar.SO.FixupCalendar" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="7333079e-8c72-4aed-9b8c-cb92f2fb9d85">
@@ -429,12 +472,12 @@
       <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
     </ClassToPerformActionOn>
   </ClassAction>
-  <GlobalAction Name="ShowUserProfilePage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="86d6aef4-1a68-446e-b1a8-b428fb51938d">
+  <GlobalAction Name="ShowUserProfilePage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" SaveBeforeNavigate="True" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="let x=UserProfile.allinstances-&gt;first in&#xD;&#xA;(&#xD;&#xA; x.isnull-&gt;casetruefalse(UserProfile.Create,x)&#xD;&#xA;)" Id="86d6aef4-1a68-446e-b1a8-b428fb51938d">
     <BringUpViewModel>
       <Span Name="UserProfilePage" idref="db667c39-fdea-45fd-b1a5-e1cb193310f8" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="PlacingContainersTest" idref="1e26a965-cc5f-41bd-b72a-0dc90e19262c" />
+      <MenuGroup Name="Layout" idref="cd5faf93-773e-4997-864d-897a31ea1324" />
     </MenuGroup>
   </GlobalAction>
   <ClassAction Name="ClassActionDoingShowModal" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="self.AddToLog('--------------------------------------------------------');&#xD;&#xA;self.AddToLog('The vModalResult_vCurrent_ModalWindow should be the same as self');&#xD;&#xA;self.AddToLog('Class-action: Expression of modal ok running');&#xD;&#xA;self.AddToLog('Class-action: vModalResult_vCurrent_ModalWindow.asString = ' + vModalResult_vCurrent_ModalWindow.asString);&#xD;&#xA;self.AddToLog('Class-action: self.asString = ' + self.asString);&#xD;&#xA;&#xD;&#xA;SysSingleton.oclSingleton.AddToLog('Class-action: Expression of modal ok running');&#xD;&#xA;if self.isNull then&#xD;&#xA;  SysSingleton.oclSingleton.AddToLog('Class-action: self is null')&#xD;&#xA;else&#xD;&#xA;  SysSingleton.oclSingleton.AddToLog('Class-action: self.asString = ' + self.asString)&#xD;&#xA;endif" ViewModelExecuteExpressionOnShow="vShouldBeSetOnShow := 'SetInOnShow'" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vEnableModalOK" ViewModelRootObjectExpression="self" Id="88a056e6-27c3-48dd-a4a8-fffeecf82318">
@@ -535,7 +578,7 @@
       <Span Name="DatePicker" idref="856f89b4-d442-420b-b40a-621ef18e5bda" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="InputFields" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="b771d9d4-6e5c-4c9c-b304-068598b201bb">
@@ -543,7 +586,7 @@
       <Span Name="InputFields" idref="46cd97e5-e814-4963-a89e-5c93cd5cf5a1" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="AngularShowRenderedBy" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="RenderedBy" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="bc245cb5-c712-43ba-8fff-965e7a60f641">
@@ -551,7 +594,7 @@
       <Span Name="RenderedBy" idref="e16ffd6d-f545-48e6-8c3a-b56c98eb9ca0" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="NewHourOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="HourOfDay.Create" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="bcd6e0f2-8964-4c60-aec5-d9a5c5b6b520">
@@ -587,7 +630,7 @@
       <Span Name="BlobTeststing" idref="0e0a3122-3090-4bcf-b9f9-e47f7d78a066" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="ContextActionDoingShowModal" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="vCurrent_ModalTester.AddToLog('--------------------------------------------------------');&#xD;&#xA;vCurrent_ModalTester.AddToLog('Context action with &quot;self&quot; - should be the viewmodel root object');&#xD;&#xA;vCurrent_ModalTester.AddToLog('Context-action: Expression of modal ok running');&#xD;&#xA;vCurrent_ModalTester.AddToLog('Context-action: vModalResult_vCurrent_ModalWindow.asString = ' + vModalResult_vCurrent_ModalWindow.asString);&#xD;&#xA;vCurrent_ModalTester.AddToLog('Context-action: self.asString = ' + vCurrent_ModalTester.asString)" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="True" ViewModelModalOkEnableExpression="vEnableModalOK" ViewModelRootObjectExpression="vCurrent_ModalTester" Id="cb64f268-db87-4799-a30b-d68395dc3290">
@@ -622,7 +665,7 @@
       <Span Name="CheckboxComponent" idref="97f43334-c657-4b30-832e-0824c801bfb3" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <ClassAction Name="AddXToString" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.String := self.String + 'X'" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="d1921119-6a8b-4946-b8a4-11b29b76770a">
@@ -677,7 +720,7 @@
       <Span Name="DataTableEditable" idref="d2f763f4-6b17-43ea-acf6-b9f258d91789" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="TableWithPopUp" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="df3eaced-b027-4ac4-ace0-e87caaf077e3">
@@ -693,7 +736,7 @@
       <Span Name="DateAndTime" idref="866f5a62-dc18-4eaf-aae3-23619968540e" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ShowSeveralTablesNextToEachOther" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e195faab-710a-4293-a27a-f6c8904e2512">
@@ -702,11 +745,6 @@
     </BringUpViewModel>
     <MenuGroup>
       <MenuGroup Name="Layout" idref="cd5faf93-773e-4997-864d-897a31ea1324" />
-    </MenuGroup>
-  </GlobalAction>
-  <GlobalAction Name="ShowLocalizationAdmin" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e69e7809-559c-4fe6-9c6f-d6573a5c9fad">
-    <MenuGroup>
-      <MenuGroup Name="Admin" idref="df52c1fb-373f-4967-84ec-af03d500ad2d" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="DeleteHourOfDay" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_HourOfDay.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e6e31658-ffc7-4b98-9050-df87fc515f8f">
@@ -746,7 +784,7 @@
       <Span Name="NumericField" idref="c9666b54-8f0e-4c73-b2c8-3530cb51dc6a" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ButtonComponent" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="ee59ab88-b864-4189-a945-6e396e0e56aa">
@@ -754,7 +792,7 @@
       <Span Name="ButtonComponent" idref="e3ec06f0-ce94-4629-a998-09a01de48c77" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="f0e9a58b-4b13-4ac0-9dd9-6234564db1ef">
@@ -771,6 +809,9 @@
     <BringUpViewModel>
       <Span Name="GlobalSettings" idref="ddf94fcb-2b9d-4c59-afe9-38ef47a8cfde" />
     </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AccessGroups" idref="ee1f7540-b67a-4d05-91a8-8e9239bdd07c" />
+    </MenuGroup>
   </GlobalAction>
   <ClassAction Name="LinkDays" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="self.notNull" ExecuteExpression="self.LinkDays" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="f7ac10ce-3404-407f-824e-61a91056d5f4">
     <ClassToPerformActionOn>
@@ -787,7 +828,7 @@
       <Span Name="TextFieldMVC" idref="c2931f8c-3175-44b0-a128-a95002bb5068" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular/MVC" idref="4dbdec47-7209-4a20-ac30-04a35d7aef2f" />
+      <MenuGroup Name="AngularAndBlazor/MVC" idref="4dbdec47-7209-4a20-ac30-04a35d7aef2f" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ModalTesterWithoutRoot" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="fd0712da-114e-48fe-a127-7de5ac95b63e">
@@ -795,7 +836,7 @@
       <Span Name="ModalTesterWithoutRoot" idref="2dabdb85-b581-4b31-9c89-0b14e17ca64e" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Angular" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+      <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="ImageUploadComponent" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="fe13e379-6c59-4744-8a54-217df56ed623">
@@ -803,7 +844,7 @@
       <Span Name="ImageUploadComponent" idref="43af354f-eb59-4471-bf9a-75565d881d5c" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+      <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" idref="c23d9221-d0eb-4808-83f0-7173f1060e26" />
     </MenuGroup>
   </GlobalAction>
   <ContextAction Name="NewWeekDefinition" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="WeekDefinition.Create" Id="ffed1e76-97b7-46ef-a354-8e4c529531e1">
@@ -816,12 +857,13 @@
   </ContextAction>
   <MenuGroup Name="Edit" SortKey="002" Id="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
   <MenuGroup Name="File" SortKey="001" Id="aed3511a-8175-415d-8846-f25a68546c3f" />
-  <MenuGroup Name="Angular/MVC" SortKey="" Id="4dbdec47-7209-4a20-ac30-04a35d7aef2f" />
-  <MenuGroup Name="Angular" SortKey="" Id="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
+  <MenuGroup Name="AccessGroups" SortKey="" Id="ee1f7540-b67a-4d05-91a8-8e9239bdd07c" />
+  <MenuGroup Name="AngularAndBlazor/MVC" SortKey="" Id="4dbdec47-7209-4a20-ac30-04a35d7aef2f" />
+  <MenuGroup Name="AngularAndBlazor" SortKey="001" Id="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
   <MenuGroup Name="TestCases" SortKey="" Id="f4fc072c-ae3b-49c2-b33d-ee60cc64dd1b" />
   <MenuGroup Name="Settings/Calendar" SortKey="0052" Id="913e10f4-cf1d-491c-adc7-1657510ef3f2" />
-  <MenuGroup Name="Layout" SortKey="" Id="cd5faf93-773e-4997-864d-897a31ea1324" />
-  <MenuGroup Name="AngularJSCompnents" SortKey="" Id="c23d9221-d0eb-4808-83f0-7173f1060e26" />
+  <MenuGroup Name="Layout" SortKey="002" Id="cd5faf93-773e-4997-864d-897a31ea1324" />
+  <MenuGroup Name="AngularAndBlazor/AngularJSCompnents" SortKey="" Id="c23d9221-d0eb-4808-83f0-7173f1060e26" />
   <MenuGroup Name="PlacingContainersTest" SortKey="" Id="1e26a965-cc5f-41bd-b72a-0dc90e19262c" />
   <MenuGroup Name="Admin" SortKey="999" Id="df52c1fb-373f-4967-84ec-af03d500ad2d" />
   <MenuGroup Name="AutoForms" SortKey="99999" Id="832bc90a-2034-41f1-9602-54d80f2a5c83" />
@@ -844,12 +886,58 @@
   <Symbol Name="statediagramsymbol" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='130' Foreground='DimGray'&gt;&lt;Run Text='S'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="StateDiagramSymbolID" />
   <Symbol Name="triggermethod" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='Tr'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="TriggerMethodSymbolID" />
   <Symbol Name="constrainedclass" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="ConstraintsSymbolID" />
+  <AccessGroup Name="TestAG" ActAsInterestGroup="False" CodeComment="" EnableExpression="SysSingleton.oclSingleton.ToggleEnableGA" ViewEnableExpression="" VisibleExpression="SysSingleton.oclSingleton.ToggleVisiblityGA" Id="7ec25c8c-383b-4d7f-a9d1-16b869eb40ba">
+    <AbstractActions>
+      <GlobalAction Name="ShowTestForGAVisibility" idref="0820adec-a2a8-46f8-8413-52735fa76819" />
+    </AbstractActions>
+  </AccessGroup>
   <StylesInModel id="845410cc-6e98-4907-b262-19d895ab65c8">
     <StyleColorProperties>
+      <StyleColorProperties A="255" Name="--primary-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="07d52025-37f7-467d-9bb4-4d9596b7cdc7" />
+      <StyleColorProperties A="255" Name="--save-action-text-color" B="0" G="0" IsThemeColor="True" R="0" id="088732f8-399b-4fd7-b070-81f5cb8e5a7b" />
+      <StyleColorProperties A="255" Name="--redo-action-bg-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="088e7c7d-7f65-422b-850f-6c34be8351fc" />
+      <StyleColorProperties A="255" Name="--text-on-success" B="0" G="0" IsThemeColor="True" R="0" id="1672ef3d-18ba-4c3d-af26-a7aa2903b221" />
+      <StyleColorProperties A="255" Name="--cancel-action-bg-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="1a75481d-57fa-4982-835c-2e997ef2c616" />
+      <StyleColorProperties A="255" Name="--success-color" B="0" G="0" IsThemeColor="True" R="0" id="1f6719de-a7ed-4d95-a257-8a132f2f4d2c" />
+      <StyleColorProperties A="255" Name="--navbar-brand-color" B="0" G="0" IsThemeColor="True" R="0" id="2b9514e6-54b8-474b-856b-1cc36afaa983" />
+      <StyleColorProperties A="255" Name="--cancel-action-bg-color" B="0" G="0" IsThemeColor="True" R="0" id="3056af23-b2cf-41e1-97fc-6a1a5fbcd383" />
+      <StyleColorProperties A="255" Name="--navbar-bg-color" B="74" G="76" IsThemeColor="True" R="76" id="4bbbbeca-4db4-45f9-b589-3260116c3aed" />
+      <StyleColorProperties A="255" Name="--redo-action-bg-color" B="0" G="0" IsThemeColor="True" R="0" id="535103a2-ad47-4091-a3ed-37cf5bd670eb" />
+      <StyleColorProperties A="255" Name="--text-on-primary" B="0" G="0" IsThemeColor="True" R="0" id="5e944494-db30-406b-a399-f673186f8d6e" />
+      <StyleColorProperties A="255" Name="--cancel-action-text-color" B="0" G="0" IsThemeColor="True" R="0" id="736d1255-fb2e-482a-8101-283bbad6d4df" />
+      <StyleColorProperties A="255" Name="--navbar-link-color" B="0" G="0" IsThemeColor="True" R="0" id="74428f88-f99b-4679-a2cf-3c081ea55924" />
+      <StyleColorProperties A="255" Name="--save-action-bg-color" B="0" G="0" IsThemeColor="True" R="0" id="84619a1a-45bd-4655-a780-c8b81211f07c" />
+      <StyleColorProperties A="255" Name="--base-bg-color" B="0" G="0" IsThemeColor="True" R="0" id="8fb602b8-0d3f-4fbe-9ce6-1ac8623a0d53" />
+      <StyleColorProperties A="255" Name="--undo-action-bg-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="98e788da-5292-4cae-8926-a84460617b27" />
+      <StyleColorProperties A="255" Name="--undo-action-text-color" B="0" G="0" IsThemeColor="True" R="0" id="a6db5c92-6f7d-4f15-862f-bce50612bb0b" />
       <StyleColorProperties A="255" Name="Color2" B="245" G="112" R="162" id="b0b8658f-2712-49e0-82d0-260818b9b7c5" />
+      <StyleColorProperties A="255" Name="--primary-color" B="167" G="85" IsThemeColor="True" R="68" id="b457a992-d86e-444a-ae4f-eaf4b3045b5f" />
+      <StyleColorProperties A="255" Name="--danger-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="b69c6e4d-cb3a-45ff-baf7-4ed73beb60ef" />
+      <StyleColorProperties A="255" Name="--text-on-danger" B="0" G="0" IsThemeColor="True" R="0" id="b93b2de2-d5f4-4f0c-bf39-04d9a4a7d3e5" />
+      <StyleColorProperties A="255" Name="--sidebar-bg-color" B="0" G="0" IsThemeColor="True" R="0" id="bf233e1d-37ff-42ab-8790-655f31ea85dc" />
+      <StyleColorProperties A="255" Name="--redo-action-text-color" B="0" G="0" IsThemeColor="True" R="0" id="bf4ba9f4-d6f2-4d85-98a6-92757388993c" />
+      <StyleColorProperties A="255" Name="--text-on-warning" B="0" G="0" IsThemeColor="True" R="0" id="cd009ac5-e99d-4732-8ebc-a8d0eeb435b7" />
+      <StyleColorProperties A="255" Name="--warning-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="cdbe98ad-21ab-45cc-90e3-7ba26f09d340" />
+      <StyleColorProperties A="255" Name="--undo-action-bg-color" B="0" G="0" IsThemeColor="True" R="0" id="d016c348-077b-46b1-addb-959a31862c90" />
+      <StyleColorProperties A="255" Name="--danger-color" B="0" G="0" IsThemeColor="True" R="0" id="e36569aa-5881-4b50-85fb-34f48a2120ea" />
+      <StyleColorProperties A="255" Name="--success-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="e4201ef1-dcba-4ef7-bd2f-8919249779fc" />
+      <StyleColorProperties A="255" Name="--warning-color" B="0" G="0" IsThemeColor="True" R="0" id="f8a2e508-f833-4d42-a8a5-75b21460944b" />
       <StyleColorProperties A="255" Name="Color1" B="64" G="255" R="0" id="fcbfd920-9845-440c-bfb1-e56d4a4de536" />
+      <StyleColorProperties A="255" Name="--save-action-bg-color-dark" B="0" G="0" IsThemeColor="True" R="0" id="fda88687-fa7d-47a2-8d32-64ea1e8b9c13" />
     </StyleColorProperties>
     <StyleDefinitions>
+      <StyleDefinition Name="subheader" id="889f55f7-0d72-445d-a3c8-09b151e44a52">
+        <StyleTargets>
+          <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="df56c129-27e4-4010-8507-6c0df5b9ec43">
+            <StyleColorPropertiesFill>
+              <StyleColorProperties Name="Color1" idref="fcbfd920-9845-440c-bfb1-e56d4a4de536" />
+            </StyleColorPropertiesFill>
+            <StyleTargetType>
+              <StyleTargetType Name="component" idref="component" />
+            </StyleTargetType>
+          </StyleTarget>
+        </StyleTargets>
+      </StyleDefinition>
       <StyleDefinition Name="Bg" id="fd1d0bc1-a081-4877-9eb2-0b6c42217e74">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="8013b30e-9f52-4381-bfa0-09c8fff939b7">
@@ -857,7 +945,7 @@
               <StyleColorProperties Name="Color2" idref="b0b8658f-2712-49e0-82d0-260818b9b7c5" />
             </StyleColorPropertiesFill>
             <StyleTargetType>
-              <StyleTargetType Name="component" idref="e41aa6c9-9510-475f-b9c4-c9dc208a96e6" />
+              <StyleTargetType Name="component" idref="component" />
             </StyleTargetType>
           </StyleTarget>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="aea20370-3f5a-47c6-a8d2-077d45c0e1d5">
@@ -865,18 +953,20 @@
               <StyleColorProperties Name="Color1" idref="fcbfd920-9845-440c-bfb1-e56d4a4de536" />
             </StyleColorPropertiesFill>
             <StyleTargetType>
-              <StyleTargetType Name="componentcontent" idref="f0a69492-708b-4d70-9882-5748da8a56be" />
+              <StyleTargetType Name="componentcontent" idref="componentcontent" />
             </StyleTargetType>
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
     </StyleDefinitions>
     <StyleTargetTypes>
-      <StyleTargetType Name="componentlabel" id="33a0c7f6-49e1-42e9-bbcf-3a01c197e562" />
-      <StyleTargetType Name="gridcell" id="393e947e-8d7f-465d-9110-338705e18abb" />
-      <StyleTargetType Name="gridheader" id="82ce7ec6-8cef-4d55-9fe3-3b121140153d" />
-      <StyleTargetType Name="component" id="e41aa6c9-9510-475f-b9c4-c9dc208a96e6" />
-      <StyleTargetType Name="componentcontent" id="f0a69492-708b-4d70-9882-5748da8a56be" />
+      <StyleTargetType Name="component" id="component" />
+      <StyleTargetType Name="componentcontent" id="componentcontent" />
+      <StyleTargetType Name="componentlabel" id="componentlabel" />
+      <StyleTargetType Name="gridcell" id="gridcell" />
+      <StyleTargetType Name="gridcellcontent" id="gridcellcontent" />
+      <StyleTargetType Name="gridheader" id="gridheader" />
+      <StyleTargetType Name="placingcontainer" id="placingcontainer" />
     </StyleTargetTypes>
   </StylesInModel>
 </allactions>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="EnsureDataForTest" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c85aa26a-74d9-4225-8b08-d915d4c68b88">
+  <Class>
+    <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+  </Class>
+  <Nesting>
+    <Nesting Name="TestObjectPickList" ExpressionActAsForActions="" id="850e889b-1ef4-4ebd-8f6c-d95289a09d2b">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fb9299a1-b230-4df6-a8c4-397dccccfec7" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TestObjectPickList" idref="a5dca531-1cd5-4bf4-a497-17176d56db14" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="GridColumns" ExpressionActAsForActions="" id="ea0618ea-5c78-4ff1-b2ae-d6229cb83114">
+      <Class>
+        <Class Name="Class1" idref="c5eeb875-5705-4f26-a555-b3c235b62160" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="String" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="329594d2-e3bc-42f1-b1db-63fcb73fe141">
+          <TaggedValue>
+            <TaggedValue Tag="UIFirst" Value="String" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Class2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Class2" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a24cb6c6-6d58-4215-856f-b0cd6467a4e4">
+          <ColumnForPickList>
+            <Column Name="Class2PickList" idref="cd70f29f-10bb-4a7f-b46b-40cfc0a3062c" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="Class2PickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class2.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cd70f29f-10bb-4a7f-b46b-40cfc0a3062c">
+          <ReferedNesting>
+            <Nesting Name="Class2PickList" idref="802c78cd-ec1a-4873-b9d2-a53d531811bb" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Class1" idref="ffdae8c7-de4a-4ac2-9099-a57ff5323585" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="Class2PickList" ExpressionActAsForActions="" id="802c78cd-ec1a-4873-b9d2-a53d531811bb">
+      <Class>
+        <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6588d4da-89d7-4ddb-8fec-241eb8a00706" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Class2PickList" idref="cd70f29f-10bb-4a7f-b46b-40cfc0a3062c" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="GridColumns2" ExpressionActAsForActions="" id="83236e2b-b3f3-4c11-9fa1-122150ad8556">
+      <Class>
+        <Class Name="Class2" idref="2da52bba-2c16-45bf-b96e-dc049e0cfb1f" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="109ef898-c9f8-4534-8609-4066d1b93d1c">
+          <TaggedValue>
+            <TaggedValue Tag="UIFirst" Value="String" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllClass2" idref="f3ca30b8-b316-45f0-bb43-a1870d1d4112" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="TestObject" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.TestObject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="46c000cc-838c-4b3f-8f50-6b95b5f1271d">
+      <ColumnForPickList>
+        <Column Name="TestObjectPickList" idref="a5dca531-1cd5-4bf4-a497-17176d56db14" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="TestObjectPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Class1.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a5dca531-1cd5-4bf4-a497-17176d56db14">
+      <ReferedNesting>
+        <Nesting Name="TestObjectPickList" idref="850e889b-1ef4-4ebd-8f6c-d95289a09d2b" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Class1" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="Class1.allinstances-&gt;orderby(x|x.asstring)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="0" YPos="2" id="ffdae8c7-de4a-4ac2-9099-a57ff5323585">
+      <ReferedNesting>
+        <Nesting Name="GridColumns" idref="ea0618ea-5c78-4ff1-b2ae-d6229cb83114" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllClass2" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="Class2.allinstances-&gt;orderby(x|x.asstring)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="4" YPos="2" id="f3ca30b8-b316-45f0-bb43-a1870d1d4112">
+      <ReferedNesting>
+        <Nesting Name="GridColumns2" idref="83236e2b-b3f3-4c11-9fa1-122150ad8556" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="SysMDrivenMiscSettingsSingletonGlobalBlazorClient" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysMDrivenMiscSettingsSingleton.oclSingleton.GlobalBlazorClient" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="f2207a76-3abd-4a9a-8aa0-ec891b953a07">
+      <TaggedValue>
+        <TaggedValue Tag="UIFirst" Value="String" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SysMDrivenMiscSettingsSingletonGlobalToolbarMode" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysMDrivenMiscSettingsSingleton.oclSingleton.GlobalToolbarMode" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="76cf4601-68a1-4ab1-bd71-ff276a5ca2aa">
+      <TaggedValue>
+        <TaggedValue Tag="UIFirst" Value="String" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+</Span>

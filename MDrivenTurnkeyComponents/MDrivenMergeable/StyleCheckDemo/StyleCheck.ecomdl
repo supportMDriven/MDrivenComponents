@@ -27,6 +27,7 @@
     <Span Name="CreateItem" FileName="CreateItem" GUID="14368b21-c5c6-41f6-a519-b7bd037939f9" />
     <Span Name="CountryView" FileName="CountryView" GUID="1746ee3e-df60-401a-9584-aafbde0f829f" />
     <Span Name="TestForGAVisibility" FileName="TestForGAVisibility" GUID="272c5f81-d930-4d41-a815-6fe2af7a20f3" />
+    <Span Name="SeveralTablesPlacingContainers" FileName="SeveralTablesPlacingContainers" GUID="285a3a9e-8794-47d3-8358-aab7518d32b0" />
     <Span Name="TextfieldComponent" FileName="TextfieldComponent" GUID="29b9f550-a379-4f88-b7b2-b8928ac55695" />
     <Span Name="Headers" FileName="Headers" GUID="2b972ebb-5bd2-4b1e-9e1f-432b6d1742a6" />
     <Span Name="ModalTesterWithoutRoot" FileName="ModalTesterWithoutRoot" GUID="2dabdb85-b581-4b31-9c89-0b14e17ca64e" />
@@ -63,6 +64,7 @@
     <Span Name="WideTableTouchingBottom" FileName="WideTableTouchingBottom" GUID="bfc25f23-a1c9-4c63-8b23-dacce1a8cae1" />
     <Span Name="HtmlTransform" FileName="HtmlTransform" GUID="c0d4bb4a-5f85-4fdd-897f-e13e33ce59f8" />
     <Span Name="TextFieldMVC" FileName="TextFieldMVC" GUID="c2931f8c-3175-44b0-a128-a95002bb5068" />
+    <Span Name="EnsureDataForTest" FileName="EnsureDataForTest" GUID="c85aa26a-74d9-4225-8b08-d915d4c68b88" />
     <Span Name="NumericField" FileName="NumericField" GUID="c9666b54-8f0e-4c73-b2c8-3530cb51dc6a" />
     <Span Name="DataTableReadonly" FileName="DataTableReadonly" GUID="c9822d5e-24a4-4217-a53d-076f9e9120ec" />
     <Span Name="Select" FileName="Select" GUID="d1f20b97-0dd8-49cc-add0-104590184562" />
@@ -79,6 +81,7 @@
     <Span Name="Index" FileName="Index" GUID="ea8bf272-9ea1-4b3a-bf47-4b9942f044e3" />
     <Span Name="ModalTester" FileName="ModalTester" GUID="ea9774f0-c436-4ddb-b22f-416ada6fed73" />
     <Span Name="BooleanComponents" FileName="BooleanComponents" GUID="ecb96343-dcc7-4c3a-aee9-84bb76dd2f3b" />
+    <Span Name="SeveralTablesPlacingContainersWork" FileName="SeveralTablesPlacingContainersWork" GUID="f2ff7b96-1bf6-4192-bb1d-2cc99de15594" />
     <Span Name="TextInputTypes" FileName="TextInputTypes" GUID="f3041482-bf0d-4901-9d15-092a920c98cc" />
     <Span Name="TableActions" FileName="TableActions" GUID="f5b7d458-dc6e-4248-af3b-4058929711f8" />
     <Span Name="WeekDefinitionBrowser" FileName="WeekDefinitionBrowser" GUID="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />

@@ -81,6 +81,11 @@
         <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
       </Class>
     </PlacedClass>
+    <PlacedClass ClassId="4456b01a-175e-4c5a-b2e0-97215a170df9" Color="1692800256" LastKnownName="SysMDrivenMiscSettingsSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="254" ShowAttributes="False" ShowMethods="False" Size="1" x="760" y="368" id="b2045604-3047-44a0-9b95-d49dfb1605a3">
+      <Class>
+        <Class Name="SysMDrivenMiscSettingsSingleton" idref="4456b01a-175e-4c5a-b2e0-97215a170df9" />
+      </Class>
+    </PlacedClass>
     <PlacedClass ClassId="3990fd7e-81a4-4185-b339-9046f831b693" Color="1692800256" LastKnownName="ReportRoot" PickedFeatureVisibility="ShowAll" RenderedHeight="120" RenderedWidth="119" ShowAttributes="False" ShowMethods="False" Size="1" x="520" y="528" id="ce39ec66-ad0e-4b15-b94f-435b51dba3d8">
       <Class>
         <Class Name="ReportRoot" idref="3990fd7e-81a4-4185-b339-9046f831b693" />
