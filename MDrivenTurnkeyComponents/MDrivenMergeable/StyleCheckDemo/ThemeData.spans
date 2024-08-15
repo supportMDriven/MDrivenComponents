@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ThemeData" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="1a7ddd7a-4e74-4b6f-a72b-79156e03c040">
+  <Class>
+    <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+  </Class>
+  <Nesting>
+    <Nesting Name="PickedThemeDataPickList" ExpressionActAsForActions="" id="2dd3f7e3-d558-4ed6-ae05-35691022e683">
+      <Class>
+        <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0f7d1cc9-90be-4689-853d-c82b36290e2d" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="PickedThemeDataPickList" idref="0218447f-4d25-4d9c-9db2-66016672e961" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="AllThemeData" ExpressionActAsForActions="" id="a9818d8b-df11-4d61-9c17-88d439644c15">
+      <Class>
+        <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7cbf2886-e5ed-4948-9db4-be40af6bd9e3">
+          <TaggedValue>
+            <TaggedValue Tag="UIFirst" Value="String" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllThemeData" idref="507d8f27-fe96-441b-915b-a29f7a4f8a9b" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="CurrentThemeData" ExpressionActAsForActions="" id="3695e5b7-45df-44f6-b867-988c59dd747d">
+      <Class>
+        <Class Name="ThemeData" idref="805d2f20-e352-4d83-a68b-88b3ce393e2d" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="c6afd1ab-bf13-4d07-9153-4d53e0266040" />
+        <Column Name="ThemeColors" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.ThemeColors" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="4" YPos="3" id="8561203c-3512-4666-a504-fc172cae4665">
+          <ReferedNesting>
+            <Nesting Name="ThemeColor" idref="5ed33ce5-e5aa-4486-a9cc-8da187713e8c" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="vCurrent_AllThemeData" idref="44f2086e-c4af-49c8-a3a6-b9e13adf88d2" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ThemeColor" ExpressionActAsForActions="" id="5ed33ce5-e5aa-4486-a9cc-8da187713e8c">
+      <Class>
+        <Class Name="ThemeColor" idref="fbe4d57e-f10a-432f-b505-0d0d7e4af6de" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="1724192a-eaa4-415a-9a3c-82b3d317ea22" />
+        <Column Name="AsRGBHex" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsRGBHex" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="46267bfd-6846-4146-a67b-17ab87f66f82">
+          <TaggedValue>
+            <TaggedValue Tag="Texttype" Value="Color" />
+          </TaggedValue>
+        </Column>
+        <Column Name="R" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.R" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="00a60ecb-8ce7-4970-9c8f-385129d90e67" />
+        <Column Name="G" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.G" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="f74f4474-5553-454f-9ca4-30193298de1a" />
+        <Column Name="B" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.B" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="311dd6ac-44f3-48ff-9593-4736861ed3ca" />
+        <Column Name="On" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.On" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="91214389-0301-48ec-9d54-d325cce055b9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThemeColors" idref="8561203c-3512-4666-a504-fc172cae4665" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="PickedThemeData" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.PickedThemeData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="14ea74a6-d418-4d10-b1d2-a32e79354161">
+      <ColumnForPickList>
+        <Column Name="PickedThemeDataPickList" idref="0218447f-4d25-4d9c-9db2-66016672e961" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="PickedThemeDataPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="ThemeData.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0218447f-4d25-4d9c-9db2-66016672e961">
+      <ReferedNesting>
+        <Nesting Name="PickedThemeDataPickList" idref="2dd3f7e3-d558-4ed6-ae05-35691022e683" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllThemeData" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="ThemeData.allinstances-&gt;orderby(x|x.asstring)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="1" id="507d8f27-fe96-441b-915b-a29f7a4f8a9b">
+      <ReferedNesting>
+        <Nesting Name="AllThemeData" idref="a9818d8b-df11-4d61-9c17-88d439644c15" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="vCurrent_AllThemeData" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vCurrent_AllThemeData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="0" YPos="5" id="44f2086e-c4af-49c8-a3a6-b9e13adf88d2">
+      <ReferedNesting>
+        <Nesting Name="CurrentThemeData" idref="3695e5b7-45df-44f6-b867-988c59dd747d" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

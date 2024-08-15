@@ -155,6 +155,21 @@
             <TaggedValue Tag="Eco.Body" Value="self.TransientLog := self.TransientLog + aText + '\r\n'" />
           </TaggedValue>
         </Method>
+        <Method Name="MiscSetting" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="5ff36d9e-0a07-40b4-9ab0-72311b6572f1">
+          <Parameter>
+            <Parameter Name="setting" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <PlacedClass>
+            <PlacedClass idref="bad7caff-11b3-455a-92ba-cdb5300291aa" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="TransientLog" CodeComment="Use this for logging when there's no context available" Multiplicity="" Visibility="Public" id="cb688c58-f737-4135-ac4b-1032189c1bda">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />

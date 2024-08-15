@@ -26,6 +26,7 @@
     <Span Name="ShowUploadDownload" FileName="ShowUploadDownload" GUID="10896d1d-a77a-4377-83b2-22095a630551" />
     <Span Name="CreateItem" FileName="CreateItem" GUID="14368b21-c5c6-41f6-a519-b7bd037939f9" />
     <Span Name="CountryView" FileName="CountryView" GUID="1746ee3e-df60-401a-9584-aafbde0f829f" />
+    <Span Name="ThemeData" FileName="ThemeData" GUID="1a7ddd7a-4e74-4b6f-a72b-79156e03c040" />
     <Span Name="TestForGAVisibility" FileName="TestForGAVisibility" GUID="272c5f81-d930-4d41-a815-6fe2af7a20f3" />
     <Span Name="SeveralTablesPlacingContainers" FileName="SeveralTablesPlacingContainers" GUID="285a3a9e-8794-47d3-8358-aab7518d32b0" />
     <Span Name="TextfieldComponent" FileName="TextfieldComponent" GUID="29b9f550-a379-4f88-b7b2-b8928ac55695" />
