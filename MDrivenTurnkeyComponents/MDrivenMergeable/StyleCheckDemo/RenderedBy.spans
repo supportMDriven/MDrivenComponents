@@ -85,9 +85,27 @@
     <Column Name="Instruction_Copy" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="'Clicking on the &quot;Clickable text&quot; should add a string to the editable String field'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="4" StyleRef="h6" XPos="3" YPos="0" id="ddbbc36b-24c8-43cc-a59c-df8f7c44dee8" />
     <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="" XPos="7" YPos="1" id="af1a8824-2fe1-46b7-9dfe-004b921a51b3" />
     <Column Name="RenderedByImage" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="8" id="d30a75a8-e9c8-421f-9a73-d858e6d8a332">
+      <ActionRenderedBy>
+        <Column Name="Image2" idref="781e7e04-67f5-4c99-bdd2-396b23afc9b8" />
+      </ActionRenderedBy>
       <ActionToExecute>
         <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
       </ActionToExecute>
+    </Column>
+    <Column Name="Image2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="2" StyleRef="" XPos="5" YPos="8" id="781e7e04-67f5-4c99-bdd2-396b23afc9b8">
+      <RendersAction>
+        <Column Name="RenderedByImage" idref="d30a75a8-e9c8-421f-9a73-d858e6d8a332" />
+      </RendersAction>
+    </Column>
+    <Column Name="BooleanNullable" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.String='true'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="5" id="1b19e74b-188f-484b-aeb0-5a26046cf983">
+      <RendersAction>
+        <Column Name="BooleanNullableClick" idref="0f1e3c08-2080-4858-9b85-da3560b1a77a" />
+      </RendersAction>
+    </Column>
+    <Column Name="BooleanNullableClick" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="(self.String='true')-&gt;casetruefalse(self.String:='false',self.String:='true')" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="6" id="0f1e3c08-2080-4858-9b85-da3560b1a77a">
+      <ActionRenderedBy>
+        <Column Name="BooleanNullable" idref="1b19e74b-188f-484b-aeb0-5a26046cf983" />
+      </ActionRenderedBy>
     </Column>
   </OwnedColumns>
 </Span>

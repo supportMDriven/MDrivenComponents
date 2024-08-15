@@ -525,6 +525,15 @@
             <Datatype idref="Decimal" />
           </Type>
         </Attribute>
+        <Attribute Name="SVGData" Multiplicity="" Visibility="Public" id="a7ded027-1895-444f-8b83-5a79f60bcaf5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="3000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
         <Attribute Name="MenuEnableState" Multiplicity="" Visibility="Public" id="b3795b06-901c-4cce-ad0d-4ab59b2f8b6b">
           <Type>
             <Datatype idref="Boolean" />

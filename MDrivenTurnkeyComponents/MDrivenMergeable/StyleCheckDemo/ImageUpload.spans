@@ -46,5 +46,11 @@
         <TaggedValue Tag="DataIsImageUrl" Value="True" />
       </TaggedValue>
     </Column>
+    <Column Name="SVGData" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SVGData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="6" YPos="2" id="69750e5d-7130-40c3-b841-e275859ccac7" />
+    <Column Name="SVGData2" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SVGData" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="6" YPos="6" id="87af3489-b625-4200-ad39-82d1d626cbf8">
+      <TaggedValue>
+        <TaggedValue Tag="Eco.BlobType" Value="SVG" />
+      </TaggedValue>
+    </Column>
   </OwnedColumns>
 </Span>

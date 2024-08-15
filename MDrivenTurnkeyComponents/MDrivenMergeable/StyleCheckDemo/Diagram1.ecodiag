@@ -9,7 +9,7 @@
         <Class Name="TransientClass" idref="ad8caa41-6d50-4f1b-8ac0-99183cee1d7d" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="c5eeb875-5705-4f26-a555-b3c235b62160" Color="1692800256" LastKnownName="Class1" PickedFeatureVisibility="ShowAll" RenderedHeight="634" RenderedWidth="173" ShowAttributes="False" ShowMethods="False" Size="1" x="152" y="232" id="4e131269-cf16-4db4-afcc-39d0dc6abfef">
+    <PlacedClass ClassId="c5eeb875-5705-4f26-a555-b3c235b62160" Color="1692800256" LastKnownName="Class1" PickedFeatureVisibility="ShowAll" RenderedHeight="646" RenderedWidth="173" ShowAttributes="False" ShowMethods="False" Size="1" x="152" y="232" id="4e131269-cf16-4db4-afcc-39d0dc6abfef">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="4.67185326033881" LabelDistance="8.67990516238286" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="-8" y="0" id="2029d200-ef7c-4e97-a874-4a4d3ac6cf43">
           <AssociationEnd>
