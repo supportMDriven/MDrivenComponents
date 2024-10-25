@@ -82,7 +82,7 @@
     <Span Name="Index" FileName="Index" GUID="ea8bf272-9ea1-4b3a-bf47-4b9942f044e3" />
     <Span Name="ModalTester" FileName="ModalTester" GUID="ea9774f0-c436-4ddb-b22f-416ada6fed73" />
     <Span Name="BooleanComponents" FileName="BooleanComponents" GUID="ecb96343-dcc7-4c3a-aee9-84bb76dd2f3b" />
-    <Span Name="SeveralTablesPlacingContainersWork" FileName="SeveralTablesPlacingContainersWork" GUID="f2ff7b96-1bf6-4192-bb1d-2cc99de15594" />
+    <Span Name="WorkpageSpecificCurrentIssues" FileName="WorkpageSpecificCurrentIssues" GUID="f2ff7b96-1bf6-4192-bb1d-2cc99de15594" />
     <Span Name="TextInputTypes" FileName="TextInputTypes" GUID="f3041482-bf0d-4901-9d15-092a920c98cc" />
     <Span Name="TableActions" FileName="TableActions" GUID="f5b7d458-dc6e-4248-af3b-4058929711f8" />
     <Span Name="WeekDefinitionBrowser" FileName="WeekDefinitionBrowser" GUID="f7a42a48-9ea8-42a7-b163-ca271dbd90dc" />

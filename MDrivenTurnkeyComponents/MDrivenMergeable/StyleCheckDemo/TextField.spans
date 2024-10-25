@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="TextField" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="0b486c45-291c-4b0c-9485-a8f916a42cf0">
+<Span Name="TextField" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" ExpressionForReadOnly="self.ReadOnlyState" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UseSubColumnDisplay="True" id="0b486c45-291c-4b0c-9485-a8f916a42cf0">
   <Category>
     <Category Name="Angular" idref="a95013a5-8545-41a2-a1cc-70b59cc2d5c4" />
   </Category>
@@ -73,14 +73,26 @@
         <TaggedValue Tag="IconPosition" Value="after" />
       </TaggedValue>
     </Column>
-    <Column Name="TextField_Placeholder" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Some data-binded placeholder'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="7" id="d91040f0-c214-4157-9dea-e2ac195063d3" />
-    <Column Name="TextField_HelperText" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Hello, it is helper text for input field'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="8" id="6619f25f-bf43-46f8-bdf7-179d542ef0cb" />
+    <Column Name="TextField_Placeholder" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Some data-binded placeholder'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="7" id="d91040f0-c214-4157-9dea-e2ac195063d3">
+      <AsTransientSubCol>
+        <TransientSubCol />
+      </AsTransientSubCol>
+    </Column>
+    <Column Name="TextField_HelperText" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Hello, it is helper text for input field'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="8" id="6619f25f-bf43-46f8-bdf7-179d542ef0cb">
+      <AsTransientSubCol>
+        <TransientSubCol />
+      </AsTransientSubCol>
+    </Column>
     <Column Name="SomeAction" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="5" id="9674ad3d-8508-4f84-b63b-b6d3d46be628">
       <ActionToExecute>
         <ClassAction Name="ShowClass1" idref="c0bb4466-1387-4311-a8ee-f98ccd65e140" />
       </ActionToExecute>
     </Column>
-    <Column Name="SomeAction_Presentation" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Show ' + self.String" ExpressionForReadOnly="false" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="9" id="0693763a-a859-4323-ad79-0cd1233aa051" />
+    <Column Name="SomeAction_Label" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Dynamic Label: ' + vDynamicLabel" ExpressionForReadOnly="false" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="9" id="0693763a-a859-4323-ad79-0cd1233aa051">
+      <AsTransientSubCol>
+        <TransientSubCol />
+      </AsTransientSubCol>
+    </Column>
     <Column Name="ActionColumn" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.String := self.String + ' Action was executed'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="7" id="33acd59d-cc9c-45f0-89c9-4e3eb65c0c6e" />
     <Column Name="ActionColumn2" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="9" id="7439e821-ce9d-47ad-bf35-e9242541a600">
       <ActionToExecute>
@@ -94,16 +106,32 @@
       </ReferedNesting>
     </Column>
     <Column Name="ToggleVisibility" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vShowElement := not vShowElement" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="2e236579-10e6-4336-bac0-d63c1a7f1695" />
+    <Column Name="DynamicLabels" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vDynamicLabel" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="9" id="a39ce856-0221-48fb-aef4-e606ec9522ce" />
+    <Column Name="FailValidation" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vFailedValidation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="1" id="9a05abd1-a00e-45eb-827a-0ad5682ebb76">
+      <TaggedValue>
+        <TaggedValue Tag="UIFirst" Value="Boolean" />
+      </TaggedValue>
+    </Column>
+    <Column Name="DynamicLabels_Label" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Dynamic Labels:'+vDynamicLabel" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="1b0bdb44-73c6-4d60-9906-74f95eb50b74">
+      <AsTransientSubCol>
+        <TransientSubCol />
+      </AsTransientSubCol>
+    </Column>
   </OwnedColumns>
   <SpanValidations>
-    <SpanValidationRule Name="Rule1" Expression="self.ValidationState" Message="Some validaition error appears">
+    <SpanValidationRule Name="Rule1" Expression="not vFailedValidation" Message="Some validaition error appears">
       <ValidatesColumns>
         <Column Name="Textarea" idref="15c90a00-a749-4130-90e9-47db9d9ca36c" />
+        <Column Name="Header" idref="89ad4c4b-c7a0-438c-80fd-1bb98463ab40" />
+        <Column Name="FailValidation" idref="9a05abd1-a00e-45eb-827a-0ad5682ebb76" />
+        <Column Name="TextFieldWithIconBefore" idref="baa877b3-f933-4b1a-9414-b86a17270eb4" />
         <Column Name="TextField" idref="ffdef3a8-413a-4bca-ab93-0730b266d7b4" />
       </ValidatesColumns>
     </SpanValidationRule>
   </SpanValidations>
   <SpanVariables>
+    <SpanVariable Name="vDynamicLabel" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vFailedValidation" InitialValue="" TypeName="Boolean" UserData="" />
     <SpanVariable Name="vShowElement" InitialValue="true" TypeName="Boolean" UserData="" />
   </SpanVariables>
 </Span>

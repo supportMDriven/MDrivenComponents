@@ -303,12 +303,12 @@
       <MenuGroup Name="AngularAndBlazor" idref="3ffa9ab6-f332-4441-86ba-eeddc6ee9a09" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="ShowSeveralTablesPlacingContainersWork" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="54115829-aad7-4436-9a3a-726c714aed11">
+  <GlobalAction Name="WorkpageSpecificCurrentIssues" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="54115829-aad7-4436-9a3a-726c714aed11">
     <BringUpViewModel>
-      <Span Name="SeveralTablesPlacingContainersWork" idref="f2ff7b96-1bf6-4192-bb1d-2cc99de15594" />
+      <Span Name="WorkpageSpecificCurrentIssues" idref="f2ff7b96-1bf6-4192-bb1d-2cc99de15594" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="Layout" idref="cd5faf93-773e-4997-864d-897a31ea1324" />
+      <MenuGroup Name="TestCases" idref="f4fc072c-ae3b-49c2-b33d-ee60cc64dd1b" />
     </MenuGroup>
   </GlobalAction>
   <GlobalAction Name="AngularShowTextField" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="Text fields" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="SysSingleton.oclSingleton.TestObject" Id="5463c7a3-96aa-4269-b940-0e7b753bea1b">
