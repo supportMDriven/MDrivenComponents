@@ -87,6 +87,20 @@
         <TaggedValue Tag="Eco.TableMapping" Value="Children" />
       </TaggedValue>
     </Class>
+    <Association Name="" EffectiveName="SysUserSysUserSysSessionSysSessions" id="4214b250-9afb-456f-80bf-59646d9ff694">
+      <AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="cbb0a1e9-c9d3-4f91-b530-e2f15d73b6e4">
+          <Participant>
+            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysSessions" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="3cecceca-4550-473e-8ebb-9e0124440bbf">
+          <Participant>
+            <Class Name="SysSession" idref="8ee81196-0f0b-4b97-bdef-7ff31af15c4a" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="56e1db7e-00b4-4273-bb39-1e8ad181328b">
       <Feature>
         <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
@@ -118,6 +132,50 @@
           </Type>
         </Attribute>
         <Attribute Name="ProviderKey" Multiplicity="" Visibility="Public" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="SysSession" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8ee81196-0f0b-4b97-bdef-7ff31af15c4a">
+      <Feature>
+        <Attribute Name="UserAgentString" Multiplicity="" Visibility="Public" id="03e12292-4f04-47dd-846a-1c6e80b47e4a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ServerSessionId" Multiplicity="" Visibility="Public" id="055bbdd4-4e88-4fe3-9c91-9e6a0848ace6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LoginMethod" Multiplicity="" Visibility="Public" id="16759d2e-ff6e-443c-8c45-6e6c5881cc45">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SessionId" Multiplicity="" Visibility="Public" id="5fc0e8be-174f-40c6-8e0c-449b4afe48db">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="RemoteIp" Multiplicity="" Visibility="Public" id="c491f08b-9092-460e-8c1c-5a0971da41ea">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
           <Type>
             <Datatype idref="String" />
           </Type>
@@ -219,6 +277,23 @@
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="SysUserSysUsersCurrentSysSessionSysSessionCurrentSysSession" id="f6eb5173-4764-4abe-a9f7-24ed094282d5">
+      <AssociationEnd>
+        <AssociationEnd Name="CurrentSysSession" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="524721ab-f377-401a-953f-f53f9a40bacc">
+          <Participant>
+            <Class Name="SysSession" idref="8ee81196-0f0b-4b97-bdef-7ff31af15c4a" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysUsersCurrentSysSession" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="6e59ae89-1316-4cc2-b83e-fc2721de558e">
+          <Participant>
+            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
     </Association>
   </OwnedElement>
   <TaggedValue>

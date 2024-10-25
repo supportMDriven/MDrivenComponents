@@ -22,6 +22,18 @@
     </PlacedClass>
     <PlacedClass ClassId="0017d588-d3cf-433b-b763-93ae056419c3" Color="1692800256" LastKnownName="SysUser" PickedFeatureVisibility="ShowAll" RenderedHeight="109" RenderedWidth="116" ShowAttributes="False" ShowMethods="False" Size="1" x="223" y="378" id="2d70768a-97ce-4471-be8c-83b6ab81e6f8">
       <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-40" y="109" id="40487613-0a18-47c3-b157-03fb1650ca60">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUser" idref="cbb0a1e9-c9d3-4f91-b530-e2f15d73b6e4" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="3.38176420169876" LabelDistance="99.241920966162" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="05c58ea5-20e4-4a20-adcf-9e61a51c754b">
+              <AssociationEnd>
+                <AssociationEnd Name="SysSessions" idref="3cecceca-4550-473e-8ebb-9e0124440bbf" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="58" y="64" id="4a3f5003-057f-4457-b7f4-4a6ef3a1e174">
           <AssociationEnd>
             <AssociationEnd Name="SysUsers" idref="2e115e1e-fcc5-432d-b68b-b8416b0b36db" />
@@ -49,9 +61,38 @@
             </AssociationEndConnection>
           </next>
         </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="40" y="109" id="c6f36efc-1122-4d85-bd03-3c17ed9b7b28">
+          <AssociationEnd>
+            <AssociationEnd Name="SysUsersCurrentSysSession" idref="6e59ae89-1316-4cc2-b83e-fc2721de558e" />
+          </AssociationEnd>
+        </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
         <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="8ee81196-0f0b-4b97-bdef-7ff31af15c4a" Color="1692800256" LastKnownName="SysSession" PickedFeatureVisibility="ShowAll" RenderedHeight="97" RenderedWidth="118" ShowAttributes="False" ShowMethods="False" Size="1" x="224" y="696" id="2fc2b713-dea0-4a49-99f6-685e062f4b9f">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="3.38176420169876" LabelDistance="99.241920966162" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="05c58ea5-20e4-4a20-adcf-9e61a51c754b">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSessions" idref="3cecceca-4550-473e-8ebb-9e0124440bbf" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="40" y="0" id="e01e85e7-416f-4de0-865e-2b1505492dd0">
+          <AssociationEnd>
+            <AssociationEnd Name="CurrentSysSession" idref="524721ab-f377-401a-953f-f53f9a40bacc" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="40" y="109" id="c6f36efc-1122-4d85-bd03-3c17ed9b7b28">
+              <AssociationEnd>
+                <AssociationEnd Name="SysUsersCurrentSysSession" idref="6e59ae89-1316-4cc2-b83e-fc2721de558e" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysSession" idref="8ee81196-0f0b-4b97-bdef-7ff31af15c4a" />
       </Class>
     </PlacedClass>
     <PlacedClass Color="1692800256" LastKnownName="SysUserRole" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="100" ShowAttributes="False" ShowMethods="False" Size="1" x="632" y="344" id="9dfb2678-ddcf-4f7d-98a1-1e0c36268a2e">
@@ -132,4 +173,7 @@
       </Class>
     </PlacedClass>
   </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="84" LastKnownName="" NoteContent="UEsDBBQAAAAIAA6yWVlNUGOUWwIAAA0IAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ2WYW/aMBCG/0qWSfsGIazrtq4gIQqjKmNTQ1dp345wJNYcO7LPBfbrZxPKwgj1ND4gxXnu7vVr+5zrBFNiUgSbggvdC3Oi8iqKdJpjAbpdsFRJLVfUTmURrZlYbaJup3MZbaDgUalQoyBwCUKX4UqXkGIv3L1QTxgGc9zQgLNMFBbshVNcURhMmcAJsiy3IwNDMgxu9WRb5ih2qUYCFhyXvXAMXGOVmIPIeiGKltFhMOZyfcNUpbxKOpf3Ll8YzEyxQJWYhSZGxgHtoeFkFCbSKCfuwUpr5OoPVpjex9l6UtAYCsa3vTDBTGLwcFuNJrTlNuVMqgJ4NfS4n1h9LCGFlOZ/DbJfNjTuuieFmZJG2Dm/Ho87u5/1blvKTEGZb9sJgViCWk5ZBk6TXam5MnjEDG1O67YB/hJ1w3RqxdgpgtrWwL3XNXLCNEnF0qN8p9hACFltgQEnVHYJHdc5I63OnGj7U9E6UjRWu7PRzG2F0+lDyQh4YnfgDjiNHYLGBIVmxJ7wbAW3pFYHSxOk2Ad0fcBbH3DhA975gEsf8N4HfPABH71GdbyE18vYa2bsdTP22hl7/Yy9hsZeR2OvpbHX026jp2MF+7b33Evq4Rx0jssfqGRT7Bcg19bJnbDPCvFnEzQCTQPNQIw2JSo6e06+g7IQ6UYh+8PY/NK2XlT2pB73zlOgdm80QAedj2xJeXOlAzO114eBrLncc3NN1s69F5rXGeCwaMcNsH/9DRTsmH+4ldxFaUPujehfR9X/Ify/M73h9KkVzHD9Kuh2uhetryk1JI/23wD931BLAwQKAAAAAAAOsllZYMz2PQwBAAAMAQAACwAcAF9yZWxzLy5yZWxzIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBUeXBlPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dwZi8yMDA1LzEwL3hhbWwvZW50cnkiIFRhcmdldD0iL1hhbWwvRG9jdW1lbnQueGFtbCIgSWQ9IlJkZjlkYzdmN2ViODQ0M2Q2IiAvPjwvUmVsYXRpb25zaGlwcz5QSwMECgAAAAAADrJZWTXN9XcqAQAAKgEAABMAHABbQ29udGVudF9UeXBlc10ueG1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPjxEZWZhdWx0IEV4dGVuc2lvbj0ieGFtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5tcy13cGYueGFtbCt4bWwiIC8+PERlZmF1bHQgRXh0ZW5zaW9uPSJyZWxzIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLXBhY2thZ2UucmVsYXRpb25zaGlwcyt4bWwiIC8+PC9UeXBlcz5QSwECLQAUAAAACAAOsllZTVBjlFsCAAANCAAAEgAAAAAAAAAAAAAAAAAAAAAAWGFtbC9Eb2N1bWVudC54YW1sUEsBAi0ACgAAAAAADrJZWWDM9j0MAQAADAEAAAsAAAAAAAAAAAAAAAAApwIAAF9yZWxzLy5yZWxzUEsBAi0ACgAAAAAADrJZWTXN9XcqAQAAKgEAABMAAAAAAAAAAAAAAAAA+AMAAFtDb250ZW50X1R5cGVzXS54bWxQSwUGAAAAAAMAAwC6AAAAbwUAAAAA" RenderedHeight="84" RenderedWidth="184" Size="1" Width="184" x="400" y="704" id="e88e75c2-8eef-423e-ba15-976d578d48c1" />
+  </PlacedNote>
 </Diagram>
