@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.157625" Id="1241affc-52e6-471d-8457-bceff3483d92">
+<Diagram Name="FinanceAppDemo" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.157625" Id="1241affc-52e6-471d-8457-bceff3483d92">
   <PlacedClass>
     <PlacedClass ClassId="f8635de4-bb5e-472b-8bfa-1ad6ee756a1a" Color="1692800256" LastKnownName="Revenue" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="75" ShowAttributes="False" ShowMethods="False" Size="1" x="208" y="192" id="4d9a3175-c9d2-4332-91a0-313468c8dc87">
       <Class>
-        <Class Name="Revenue" idref="de82ce1b-d65c-48d4-8aea-69f6e7f5abe7" />
+        <Class Name="Revenue" idref="27c357b9-f7a8-4b97-ae39-317183cd72d5" />
       </Class>
       <SpecializationConnection>
         <SpecializationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="37.5" y="16" id="2b9291e8-a975-4a43-bd8a-5f90ed9d4d4e">
           <Class>
-            <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+            <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
           </Class>
           <next>
             <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-24" y="73" id="6960e234-a9d3-49c9-b7b5-80e13ffabbb5">
               <Class>
-                <Class Name="Revenue" idref="de82ce1b-d65c-48d4-8aea-69f6e7f5abe7" />
+                <Class Name="Revenue" idref="27c357b9-f7a8-4b97-ae39-317183cd72d5" />
               </Class>
             </GeneralizationConnection>
           </next>
@@ -22,7 +22,7 @@
     </PlacedClass>
     <PlacedClass ClassId="ea4dcc95-72a6-4d5e-b821-7b7ad1cdaa62" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="105" ShowAttributes="False" ShowMethods="False" Size="1" x="896" y="128" id="5643fea8-117f-4e58-ba78-1652cb0d4de6">
       <Class>
-        <Class Name="SysSingleton" idref="b0548c2d-b502-4d93-b334-9e67d32526d1" />
+        <Class Name="SysSingleton" idref="f8b69944-4599-40d2-80ac-9cbf5d718f5e" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="d5d05d3b-e81b-4e28-a8d3-68b085bb4fa4" Color="1692800256" LastKnownName="Transaction" PickedFeatureVisibility="ShowAll" RenderedHeight="85" RenderedWidth="98" ShowAttributes="False" ShowMethods="False" Size="1" x="696" y="40" id="7223d5f4-3438-43ff-9d86-b3382157222c">
@@ -34,7 +34,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Transaction" idref="a321d952-b97c-48bc-94d5-0a318a61b3b3" />
+        <Class Name="Transaction" idref="378fb2ed-efea-4d6e-849c-94d59043f1c8" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="daf30a1d-578a-4216-9c24-3ca6ab64570c" Color="1692800256" LastKnownName="BudgetItem" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="98" ShowAttributes="False" ShowMethods="False" Size="1" x="672" y="240" id="81fc08f1-3e3e-4779-aead-b983e7182b19">
@@ -46,22 +46,22 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="BudgetItem" idref="c2fead91-d547-425e-974f-6469c0ba6fd7" />
+        <Class Name="BudgetItem" idref="cb17538b-0292-4cb2-b6ff-46d39b57085f" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="a865543c-06a9-48fc-a295-427a648427b1" Color="1692800256" LastKnownName="Expenditure" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="99" ShowAttributes="False" ShowMethods="False" Size="1" x="408" y="200" id="8c535e67-4971-4f5f-b505-2427aa8c070e">
       <Class>
-        <Class Name="Expenditure" idref="691114d7-4115-4f19-a317-fe43284a7512" />
+        <Class Name="Expenditure" idref="069546c0-7308-4ad4-8072-b435e7b4eaa3" />
       </Class>
       <SpecializationConnection>
         <SpecializationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="5042d0ca-05a5-4309-a582-8e4058928437">
           <Class>
-            <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+            <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
           </Class>
           <next>
             <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="16" y="73" id="dd1ad723-af67-422f-b167-6973cfb2cbea">
               <Class>
-                <Class Name="Expenditure" idref="691114d7-4115-4f19-a317-fe43284a7512" />
+                <Class Name="Expenditure" idref="069546c0-7308-4ad4-8072-b435e7b4eaa3" />
               </Class>
             </GeneralizationConnection>
           </next>
@@ -96,17 +96,17 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+        <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
       </Class>
       <GeneralizationConnection>
         <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-24" y="73" id="6960e234-a9d3-49c9-b7b5-80e13ffabbb5">
           <Class>
-            <Class Name="Revenue" idref="de82ce1b-d65c-48d4-8aea-69f6e7f5abe7" />
+            <Class Name="Revenue" idref="27c357b9-f7a8-4b97-ae39-317183cd72d5" />
           </Class>
         </GeneralizationConnection>
         <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="16" y="73" id="dd1ad723-af67-422f-b167-6973cfb2cbea">
           <Class>
-            <Class Name="Expenditure" idref="691114d7-4115-4f19-a317-fe43284a7512" />
+            <Class Name="Expenditure" idref="069546c0-7308-4ad4-8072-b435e7b4eaa3" />
           </Class>
         </GeneralizationConnection>
       </GeneralizationConnection>

@@ -144,6 +144,12 @@
     <None Update="MDrivenMergeable\FinanceAppDemo\documentation.modlrdoc">
       <DependentUpon>FinanceApp.ecomdl</DependentUpon>
     </None>
+    <None Update="MDrivenMergeable\FinanceAppDemo\FinanceApp.ecopkg">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\FinanceAppDemo\FinanceAppDemo.ecodiag">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\Package1.ecopkg">
       <DependentUpon>FinanceApp.ecomdl</DependentUpon>
     </None>

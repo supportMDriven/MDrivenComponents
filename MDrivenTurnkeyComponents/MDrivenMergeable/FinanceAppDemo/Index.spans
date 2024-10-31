@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="62e9a6ea-cd90-4b67-907e-1a3362de5115">
+<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ca8e8b8f-2f3f-4b02-afd1-339bb2a1366c">
   <Class>
-    <Class Name="Transaction" idref="a321d952-b97c-48bc-94d5-0a318a61b3b3" />
+    <Class Name="Transaction" idref="378fb2ed-efea-4d6e-849c-94d59043f1c8" />
   </Class>
   <OwnedColumns>
     <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Welcome to Finance App'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCMarginBottom="20" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="1" YPos="0" id="b7583cb2-a171-4e13-83cb-27525826f2e5">
