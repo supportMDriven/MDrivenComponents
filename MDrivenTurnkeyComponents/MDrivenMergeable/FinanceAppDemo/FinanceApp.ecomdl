@@ -1,0 +1,19 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="bd240b65-7d59-4e3f-90dd-9f1f732ff69e" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="1241affc-52e6-471d-8457-bceff3483d92" />
+  </Diagrams>
+  <Spans>
+    <Span Name="Budget" FileName="Budget" GUID="2708d205-d58f-4c68-bf3f-807a004cfc45" />
+    <Span Name="Index" FileName="Index" GUID="62e9a6ea-cd90-4b67-907e-1a3362de5115" />
+    <Span Name="Dashboard" FileName="Dashboard" GUID="c2bf4a9d-e290-4ee4-9bd1-080f0d2c0914" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

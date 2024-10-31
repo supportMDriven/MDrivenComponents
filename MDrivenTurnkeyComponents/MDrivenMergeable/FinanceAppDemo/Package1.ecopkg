@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="bd240b65-7d59-4e3f-90dd-9f1f732ff69e">
+  <OwnedElement>
+    <Association Name="" EffectiveName="BudgetItemBudgetItemsBudgetCategoryBudgetCategory" id="0593a783-0076-4017-acb4-68c77fad83cc">
+      <AssociationEnd>
+        <AssociationEnd Name="BudgetCategory" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="74d8e773-7b37-4483-b8e5-f5c589782797">
+          <Participant>
+            <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="BudgetItems" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="adec9b98-f7ff-4bc6-bb58-99435330162d">
+          <Participant>
+            <Class Name="BudgetItem" idref="c2fead91-d547-425e-974f-6469c0ba6fd7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Expenditure" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="691114d7-4115-4f19-a317-fe43284a7512">
+      <Superclass>
+        <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Transaction" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="a321d952-b97c-48bc-94d5-0a318a61b3b3">
+      <Feature>
+        <Attribute Name="Description" Multiplicity="" Visibility="Public" id="13569170-65a6-484f-b511-a98608c88045">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIAK0RX1lISSztjQIAACAIAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWWYW/TMBCG/4oVvkLTDBgwtZWqbWUTZULLYBLfbsk1sXDsyD6v7X4957YbKU3nql9iP3f3+nV8zijHgqTRYtUo7cZJTdSepakramzADRpZWOPMggaFadKl1ItVejIcnqYraFTaWnSoCUKCJGQ4cy0UOE42E/YRE3GHK5oqWemGwXEyxwUlYi41XqGsah6ZejKJuHZX67ZGvUl1qeFBYTlOZqAcbhMr0NU4Qf3Ou0TMlFleSLtVvk16Z25DvkTc+OYBbe4fHEnyARice0XeYm68DeKCpF6u+8DC3C6O6xlNM2ikWo+THCuD4uf1djSnteKUN8Y2oLZD97uFdcdyskhF/d+gfOLQLAtPFitrvOY1v5nNhpsfe7duTWWhrdeDnECXYMu5rCBo4p26sx73mHPOyUvzoF6jLqQrWAwvEey6A+687pBX0pGxstjLd4hNtTbbV2CqCC1vYeCGR6R1mQNt/yqyI01vtW8cLcOrcLh8aCWByvkN3ACHsefgMEftJMlHPFohbCnrkEWOlMWAkxjwPgZ8iAEfY8BpDPgUAz7HgC9Ro4ZRIuplFjUzi7qZRe3Mon5mUUOzqKNZ1NIs6ulJr6czC7u299xLuuEKXI3lb7SmL/Y7UGjrFE7YV4v4pw+6BEdTJ0Ffrlq0dPSc/ALLELleIbvD2D/JrRctn9T93nkIdO6NHuhF570sqe6v9MLM+frwUPWXe26u+TK490rzOgK8bNp+A5yMfoCFDTMZ3Xo9yWtjSZTIDVi2m0uX/7wjgixot91WsTBWIN+urdofl06A5pmWGxi+FcsaSEjCRrAm0fLNVnN3KwVHO0YopOZVCblgKgRbfETtDyKdUeUoDepGaUduuvssmPwFUEsDBAoAAAAAAK0RX1nbopwcDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUjkwODNmNjIxNTA2NzQyMzAiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAACtEV9ZNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAK0RX1lISSztjQIAACAIAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAACtEV9Z26KcHAwBAAAMAQAACwAAAAAAAAAAAAAAAADZAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAACtEV9ZNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAAAqBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAAChBQAAAAA=" />
+          </ModelDocumentation>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Document" Multiplicity="" Visibility="Public" id="6ac30cbf-0244-421d-8eac-df4e61aee317">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIALwRX1mo+SW0TQIAAKMHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/aMBCG/0qUfR4hbOu2iiAhCqMaq6aGrdK+HeFIrDl2ZJ8L2a+fTVIWRqj5RJzn7t57HZ/HKWbEpAgOJRc6CQui6jaKdFZgCXpQskxJLXc0yGQZ7ZnYHaLRcHgTHaDkUaVQoyBwCUKX4VZXkGESHl+oZwyDNR5oylkuSgsm4Qp3FAYrJnCJLC/sytSQDIN7vayrAsUx1VzAhuM2CRfANTaJOYg8CVG8NToMFlzu75hqlDdJ1/LR5QuDB1NuUKVmo4mRccBgZjgZhak0yolzknq57oMVpts4W08KWkDJeJ2EKeYSgx/3zWpKNbcpH6QqgTdLT21j3bWUFFJW/LfI/tjQOHZPCnMljbA9v1kshsef9a6uZK6gKupBSiC2oLYrloPTZHdqrQyeMTOb07ZmgL9G3TGdWTG2RVB1B2y97pBLpkkqlp3lu8SmQsjmE5hyQmW30HHDK9K6zIW2fxWtI2Vvta82mrlP4bJ9qBgBT+0XeAQuY2egMUWhGbFnvFrBbanVwbIUKfYBIx/wzge89wEffMCND/joAz75gM9eo4Zewutl7DUz9roZe+2MvX7GXkNjr6Ox19LY6+mo19OFgnbsvcySbjgHXeD2FyrZF/sNyI11cifsi0L83QfNQdNUMxDzQ4WKrp6Tn6AsRLpXSHsY+1/a0YvKntTz2XkJdO6NHuik84ltqeivdGJW9vowkPeXexmu6d6598rwugKcNu18AE7G30HBkZmMH42YsNIqCOQusDcXsorc3wpq1+E4csA46kRE7c08+QtQSwMECgAAAAAAvBFfWS4TfwYMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSM2UzOTEyZWI0NTM5NGQxYyIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAALwRX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAvBFfWaj5JbRNAgAAowcAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAALwRX1kuE38GDAEAAAwBAAALAAAAAAAAAAAAAAAAAJkCAABfcmVscy8ucmVsc1BLAQItAAoAAAAAALwRX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAOoDAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAGEFAAAAAA==" />
+          </ModelDocumentation>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Blob" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Date" Multiplicity="" Visibility="Public" id="9a43e23e-cbab-42a8-84a3-089cfd0df174">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIAHcRX1ngQfLcTAIAAKMHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVbW/aMBDHv0qUvR4h3dZtFSChtoxqrJoatkp7dw1HYs2xo/O5kH362YSyMEKdd7F/9/Q/+zzKMGehVbStpDLjuGSur5LE5CVWYAaVyEkbveZBrqtkI9R6m1wMh5fJFiqZ1IQGFYN3EHsPV6aGHMfxboOeMY6WuOWpFIWqHDiOF7jmOFoIhXMURelWppZ1HN2ZeVOXqHaubhU8SVyN4xlIg61jCaoYx6jeWhNHM6k3N4LazFunS/3g/cXRva2ekDL7ZFiw9cDg2kq2hJm25JPzKfVy3R+XmNnbuXha8QwqIZtxnGGhMfpx165m3Ejn8l5TBbJdetwX1l3LmJDz8r9F8ceZpqn/IyxIW+VqfjObDXef066pdUFQl80gY1AroNVCFOBzcp1aksUj5tr5dKVZkK9RN8LkLhlXIlDTAfdad8i5MKxJ5Ef+TrGpUro9AlPJSK6FnhueSa3LnOT2L6JTpOqN9tVZC38UTsuHWjDIzJ3AHXBqew0GM1RGsHjGsxF8S10eIs+Q0xBwEQLehYD3IeBDCLgMAR9DwKcQ8Dko1DBIBLVMg2KmQTXToJxpUM80KGgaVDQNSpoGNb3o1XRGsB97L7Okay7BlLj6haT7bL8B+7HO/oZ9IcTffdAtGJ4aAep2WyPx2XvyE8hBbHoT2V/G/k03epHcTT2enadA593ogQ55PooVl/2RDszCPR8Wiv5wL8M123j1XhleZ4BD044H4GT0HQh2zGT0YNVkWWK0cruRXkeuERETKNN2c5R4YJR0LJL9yzz5C1BLAwQKAAAAAAB3EV9ZJeqU8QwBAAAMAQAACwAcAF9yZWxzLy5yZWxzIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBUeXBlPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dwZi8yMDA1LzEwL3hhbWwvZW50cnkiIFRhcmdldD0iL1hhbWwvRG9jdW1lbnQueGFtbCIgSWQ9IlI1ZmQzMzcyZTMyM2I0MzdlIiAvPjwvUmVsYXRpb25zaGlwcz5QSwMECgAAAAAAdxFfWTXN9XcqAQAAKgEAABMAHABbQ29udGVudF9UeXBlc10ueG1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPjxEZWZhdWx0IEV4dGVuc2lvbj0ieGFtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5tcy13cGYueGFtbCt4bWwiIC8+PERlZmF1bHQgRXh0ZW5zaW9uPSJyZWxzIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLXBhY2thZ2UucmVsYXRpb25zaGlwcyt4bWwiIC8+PC9UeXBlcz5QSwECLQAUAAAACAB3EV9Z4EHy3EwCAACjBwAAEgAAAAAAAAAAAAAAAAAAAAAAWGFtbC9Eb2N1bWVudC54YW1sUEsBAi0ACgAAAAAAdxFfWSXqlPEMAQAADAEAAAsAAAAAAAAAAAAAAAAAmAIAAF9yZWxzLy5yZWxzUEsBAi0ACgAAAAAAdxFfWTXN9XcqAQAAKgEAABMAAAAAAAAAAAAAAAAA6QMAAFtDb250ZW50X1R5cGVzXS54bWxQSwUGAAAAAAMAAwC6AAAAYAUAAAAA" />
+          </ModelDocumentation>
+          <Type>
+            <Datatype idref="Date" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Amount" Multiplicity="" Visibility="Public" id="9f63caf9-6d0d-4d5f-8046-27d19397cb67">
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <ModelDocumentation>
+        <ModelDocumentation Content="UEsDBBQAAAAIAEoRX1lWzouYaAIAANAHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/TMBCG/4oVPtM0AwZMbaVqW9lEmdBSmMS3W3pNLBw7Op/Xll+P3XQjpemcb3Gee+/8Xnwe5ViwNFpsaqXtOKmYm4s0tUWFNdhBLQsy1qx4UJg6XUu92qRnw+F5uoFapQ2hRc0QBJKgcGEbKHCc7D7QEyZigRueKlnq2oPjZI4rTsRcarxBWVZ+ZerYJOLW3mybCvVO6lrDo8LlOJmBstgKK9DlOEH91tlEzJRZX0lqK29FF+Y+6CXiztWPSLl7tCzZBWBw6RQ7wtw4CsWFknq57osvzO7jfD6jeQa1VNtxkmNpUPy4bVdz3ioveWeoBtUuPew31l3LmZCL6r9F+ceHZll4IyzJOO33/GY2G+4e7922MSVBU20HOYNeAi3nsoRQk+/UghweMJde02/NgXqNupK28MX4LQJtO+De6w55Iy0bksWB3jE21dq0v8BUMZJvYeCGJ0rrMke1/cvoHal7s3310TL8Csfbh0YyqNz/gTvgOPYSLOaorWT5hCczhJb6OmSRI2cx4CwGvIsB72PAhxhwHgM+xoBPMeBz1KhhlIh6mUXNzKJuZlE7s6ifWdTQLOpoFrU0i3p61uvpjGA/9p5nSTdcga1w+QvJ9MV+Aw5jncMJ+0KIv/uga7A8tRL09aZB4pPn5CeQh9j2FrI/jP0f/ehF8if1cHYeA517owd6qfNBLrnqz/TCzP314aDsT/c8XPN1cO+V4XUCeGna4QCcjL4DwY6ZjO6dngQhkNoKUEqspAZdSFCCCbRtm2rFupJFJYBQoPTNIkH4hNqhMCTQN0RbtKM0qI3Sjny6v8YnfwFQSwMECgAAAAAAShFfWYfcD+wMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSMTI2Mjc4MTdmOWU0NDA0ZSIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAEoRX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAShFfWVbOi5hoAgAA0AcAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAEoRX1mH3A/sDAEAAAwBAAALAAAAAAAAAAAAAAAAALQCAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAEoRX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAAUEAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAHwFAAAAAA==" />
+      </ModelDocumentation>
+    </Class>
+    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b0548c2d-b502-4d93-b334-9e67d32526d1">
+      <Feature>
+        <Method Name="GetSystemUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4e4611fa-7ec1-4d81-a5e4-fd29c999f316">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="AutoFormClass" Value="Skip" />
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="TransactionTransactionsBudgetCategoryBudgetCategory" id="b575b531-2414-4843-b424-8d05e4e5174f">
+      <AssociationEnd>
+        <AssociationEnd Name="BudgetCategory" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4c2e8c83-a035-425a-8b45-d8c21ce16aa6">
+          <Participant>
+            <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Transactions" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ba0d99de-e968-419c-bf71-2c1f5e6ea50a">
+          <Participant>
+            <Class Name="Transaction" idref="a321d952-b97c-48bc-94d5-0a318a61b3b3" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="BudgetItem" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="c2fead91-d547-425e-974f-6469c0ba6fd7">
+      <Feature>
+        <Attribute Name="Amount" Multiplicity="" Visibility="Public" id="85af5f5c-8b86-4aab-8899-d766598c0272">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIAOkRX1n9hJhTkAIAADwIAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWWYW/aMBCG/4qVfR4h3dZtFSChtqzVumpqulXatyM5Em+OHdnnFvbrdwZKwwg1Qkg+P359fm2fGeVYkDRaLBul3TipidqzNHVFjQ24QSMLa5xZ0KAwTfok9WKZngyHp+kSGpW2Fh1qgiCQBIUz10KB42TdYR8xEfe4pKmSlW4YHCc3uKBE3EiNVyirmiNTTyYR1+5q1dao11KXGuYKy3EyA+VwI6xAV+ME9VvvEjFT5ulC2k3mG9F7cxf0EnHrmzna3M8dSfIBGJx7Rd5ibrwNyYWUerlugxNz23E8n9E0g0aq1TjJsTIoflxvojmtFEveGtuA2oQetgvrxnKySEX9X1D+5aFZFloWK2u85jW/mc2G6w97t2pNZaGtV4OcQJdgyxtZQciJd+reetxjzlmTl+ZBvUZdSFdwMrxEsKsOuPW6Q15JR8bKYk/vEJtqbTZHYKoILW9h4IZHUusyB7m9zMiONL2zfeXRMhyFw+VDKwlUzidwDRyOPQeHOWonST7i0RnClnIessiRshhwEgPexYD3MeBDDDiNAR9jwKcY8Dlq1DBKRL3MomZmUTezqJ1Z1M8samgWdTSLWppFPT3p9XRmYVv2nmtJd7gCV2P5C63pG/sNKJR1Cjfsi0X80wddgqOpk6Avly1aOnpPfoJliFxvItvL2N/JpRct39T92nkIdN6NHmiX54Msqe6facfc8PPhoeqf7rm45k/BvVeK1xFgt2n7BXAy+g4W1sxkdOf15Hoh5r6skIQkbIR0ArRAdlmXMpRXwbuj+Yc7+MsN0fKzp7Hcg4xed60lOG8hFy/tICksPqL228ihpDW/+eFk0WeOjJijqFCz5yG+sKbZSY7SkPko7Swl3f5lmPwDUEsDBAoAAAAAAOkRX1nWmpFbDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUjAzNDdmNDUwNWNjOTQ4MzQiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAADpEV9ZNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAOkRX1n9hJhTkAIAADwIAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAADpEV9Z1pqRWwwBAAAMAQAACwAAAAAAAAAAAAAAAADcAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAADpEV9ZNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAAAtBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAACkBQAAAAA=" />
+          </ModelDocumentation>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Code" Multiplicity="" Visibility="Public" id="996afb92-3511-42eb-bacb-a0c61d2a5584">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="aa0e131f-aee9-4581-a919-d88573e993bd">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <ModelDocumentation>
+        <ModelDocumentation Content="UEsDBBQAAAAIAEkRX1mv6PYJVgIAAKwHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/TMBCG/0oUPtM0BQZMbaXSrWyiTGgZTOLbNbkmFo4dnc9bs1+P3XYjpemcb7Gfu3v92j6PM8xZaBVtaqnMJK6Ym/MkMXmFNZhBLXLSRq95kOs6eRRqvUlGw+FZsoFaJg2hQcXgE8Q+w7lpIMdJvJ2gB4yjO9zwTIpS1Q6cxEtccxwthcIrFGXlRmaWdRxdm6u2qVBtU10qWEksJvECpMFdYgmqnMSo3loTRwupHy8E7ZTvkt7pW58vjm5svULK7MqwYOuBwdxKtoSZtuTFeUm9XPfHCTP7OFdPK15ALWQ7iTMsNUY/r3ejGbfSpbzRVIPcDd3vF9Ydy5iQ8+q/QfHkQtPU/xGWpK1ya36zWAy3n/OubXRJ0FTtIGNQBVCxFCV4TW6n7sjiATN3Od3SLMjXqAthcifGLRGo7YB7rzvklTCsSeQH+Y6xmVJ6dwRmkpHcFnpueEJalznS9q+ic6TurfbNRQt/FI6XD41gkJk7gVvgOHYOBjNURrB4wJMV/JY6HSLPkNMQMAoB70LA+xDwIQSchYCPIeBTCPgcNGoYJIJepkEz06CbadDONOhnGjQ0DTqaBi1Ng56Oej1dEOzb3nMv6YZLMBUWv5F0X+x3YN/W2d+wr4T4pw+6BMMzI0BdbhokPnlPfgE5iE2vkP1l7J90rRfJ3dTD3nkMdN6NHuhF570ouOqv9MIs3fNhoewv99xcs0fv3ivN6wTwsmmHDXA6/gEEW2Y6vrVq+sUWJXJ0zVibKMrdXhmxFlhEqzbKXVSpqR0nnhwnndBk/0RP/wJQSwMECgAAAAAASRFfWbJaa/UMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSZmNlMGZlNjUwYTIwNDgyZiIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAEkRX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgASRFfWa/o9glWAgAArAcAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAEkRX1myWmv1DAEAAAwBAAALAAAAAAAAAAAAAAAAAKICAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAEkRX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAPMDAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAGoFAAAAAA==" />
+      </ModelDocumentation>
+    </Class>
+    <Class Name="Revenue" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="de82ce1b-d65c-48d4-8aea-69f6e7f5abe7">
+      <Superclass>
+        <Class Name="BudgetCategory" idref="f4140e2d-3389-40bd-833d-c3ad1b04e88a" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+      </TaggedValue>
+    </Class>
+    <Class Name="BudgetCategory" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="f4140e2d-3389-40bd-833d-c3ad1b04e88a">
+      <Feature>
+        <Attribute Name="Code" Multiplicity="" Visibility="Public" id="311f1806-2826-42bc-af16-ebd5833725a8">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIAHERX1l4cFOAXQIAAL8HAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVbU/bMBDHv0qUvV7TdBvbUFupAjrQOjQRGNLeXZNrYs2xs/MZGj797LZAuqY473L+3dPf9nmcYc5Cq2hdS2UmccXcnCaJySuswQxqkZM2esWDXNfJo1CrdTIaDk+SNdQyaQgNKgYfIPYRTk0DOU7izQI9YBzd4ppnUpSqduAkXuCK42ghFF6iKCtnmVnWcXRlLtumQrUJdaFgKbGYxHOQBreBJahyEqN6b00czaV+PBe0rXwb9Fbf+HhxdG3rJVJml4YFWw8MzqxkS5hpS744X1Iv1/1xhZmdn8unFc+hFrKdxBmWGqO7q60141a6kNeaapBb0/2usa4tY0LOq/+M4sm5pqn/IyxJW+V6fjefDzef065tdEnQVO0gY1AFULEQJfia3E7dksU95szFdK1ZkG9R58LkrhjXIlDbAXdad8hLYViTyPfiHWIzpfT2CMwkI7kt9NzwSGld5qC214xOkbo323fnLfxROGwfGsEgM3cCN8Ch7xkYzFAZweIBj2bwW+rqEHmGnIaAUQj4EAI+hoBPIeAkBHwOAV9CwNegUMMgEdQyDYqZBtVMg3KmQT3ToKBpUNE0KGka1HTUq+mcYDf2nmdJ112CqbD4jaT7fH8A+7HO/oZ9I8Q/fdAFGJ4ZAepi3SDx0XvyC8hBbHoL2V3G/kU3epHcTd2fnYdA593ogV7qvBcFV/2ZXpiFez4slP3pnodr9ujVe2N4HQFeNm1/AE7HP4Fgw0zHN1ZN75T4azEShWtJrARSpFcRREtblMhR7vxKTW0k1Kuxce/eOPHO46QTLdm92tN/UEsDBAoAAAAAAHERX1n3ct9PDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUmQzZTM4ZmFlMWUxZTQ3NWUiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAABxEV9ZNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAHERX1l4cFOAXQIAAL8HAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAABxEV9Z93LfTwwBAAAMAQAACwAAAAAAAAAAAAAAAACpAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAABxEV9ZNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAAD6AwAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAABxBQAAAAA=" />
+          </ModelDocumentation>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Amount" Multiplicity="" Visibility="Public" id="3fff815c-75d7-42d9-b067-d1479f526361">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIAFsRX1n4JtGYdAIAAOkHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVXW/TMBSG/4oVrmmaAQOmtlK1rWyiTGgpTOLuNDlNLPwR2cdbw6/HbrOR0nTuVWM/58Ov7deTHAviWrGtFMpOk5qouUhTW9QowY4kL4y2ekOjQsv0iavNNj0bj8/TLUiRNgYtKoKQIAkZLmwDBU6T3YR5xIStcEtzwSslPThNlrihhC25whvkVe1H5o50wm7tTdvUqHaprhWsBZbTZAHC4j6xAFVNE1RvnU3YQuinK272ne+TrvR9yJewOyfXaHK3tsTJBWB06QQ5g7l2JjQXWhrk+h++MdvF+Xpa0QIkF+00ybHSyH7c7kdzaoVPeaeNBLEfeugW1h/LySAV9X+D/I8PzbLwZbAy2im/5jeLxXj389q1ja4MNHU7yglUCaZc8gpCT36nVsbhAXPpc/qlORCvUVfcFr4Zv0QwbQ/stO6RN9ySNrw4yHeMzZXS+yMwF4TGb2Hgxida6zNHvf2r6BWRg9W++mgejsLx8qHhBCL3J3AHHMdegsUcleXEH/FkhbClvg9e5EhZDDiLAe9iwPsY8CEGnMeAjzHgUwz4HBVqHCWiWmZRMbOomllUziyqZxYVNIsqmkUlzaKang1qujDQ2d6zl/TDBdgay19o9FDsN6Bg6xRu2BeD+HsIugZLc8tBXW8bNHTynvwE4yGyg410l3F40lsvGn9TD73zGOi9GwPQS58PvKR6uNILs/TPh4NquNyzueZPQb1XzOsE8LJphwY4m3wHAztmNrl3araqkZH3SsFAerMnpjcMWOH5SpuWlWi8L5VsY7RkfqOYdTIg4e/alRUS44SyC7bMPxdodrPPKSZpKDNJe3XT7n2f/QVQSwMECgAAAAAAWxFfWbAPBD0MAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSZTBiZmI5YzFhMTUwNDM3YyIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAFsRX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAWxFfWfgm0Zh0AgAA6QcAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAFsRX1mwDwQ9DAEAAAwBAAALAAAAAAAAAAAAAAAAAMACAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAFsRX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAABEEAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAIgFAAAAAA==" />
+          </ModelDocumentation>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.BudgetItems.Amount-&gt;sum" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="cc739dfb-8a67-46da-b803-3cf2aec9a856">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <ModelDocumentation>
+        <ModelDocumentation Content="UEsDBBQAAAAIAC8TX1nEgY3HcAIAANoHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/TMBCG/4oVPtM0AwZMbaVqW9lEmdAymMS3a3JNLBw7Op/Xll+P3XYjpemcb3Geu3v9Xnwe5ViwNFqsG6XtOKmZ24s0tUWNDdhBIwsy1ix5UJgmXUm9XKdnw+F5uoZGpS2hRc0QEiQhw4VtocBxsv1AT5iIB1zzVMlKNx4cJ3NcciLmUuMNyqr2K1PHJhG39mbT1qi3qa41LBSW42QGyuIusQJdjRPUb51NxEyZ1ZWknfJd0gdzH/Il4s41C6TcLSxLdgEYXDrFjjA3joK4IKmX6754YXYf5+sZzTNopNqMkxwrg+LH7W41543yKe8MNaB2S4/7jXXXcibkov5vUf7xoVkW3ggrMk77Pb+ZzYbbx3u3aU1F0NabQc6gS6ByLisImnynHsjhAXPpc/qtOVCvUVfSFl6M3yLQpgPuve6QN9KyIVkc5DvGplqb3S8wVYzkWxi44QlpXeZI27+K3pGmt9pXHy3Dr3C8fWglg8r9H7gFjmMvwWKO2kqWT3iyQmip1yGLHDmLAWcx4F0MeB8DPsSA8xjwMQZ8igGfo0YNo0TUyyxqZhZ1M4vamUX9zKKGZlFHs6ilWdTTs15PZwT7sfc8S7rhCmyN5S8k0xf7DTiMdQ4n7Ash/u6DrsHy1ErQ1+sWiU+ek59AHmLbK2R/GPs/+tGL5E/q4ew8Bjr3Rg/0ovNRllz3V3ph5v76cFD1l3servkquPfK8DoBvDTtcABORt+BYMtMRvdOT0IikNoKAUoJ3wqxcGWFLArfNiuXvi2hs1asalnUAggFSo+RuMcn1A6FIRG6oku5HceDURryjtJOoXR/oU/+AlBLAwQKAAAAAAAvE19ZtamfRAwBAAAMAQAACwAcAF9yZWxzLy5yZWxzIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBUeXBlPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dwZi8yMDA1LzEwL3hhbWwvZW50cnkiIFRhcmdldD0iL1hhbWwvRG9jdW1lbnQueGFtbCIgSWQ9IlIxMjQ0ZTM0OWY0Y2Q0MmY0IiAvPjwvUmVsYXRpb25zaGlwcz5QSwMECgAAAAAALxNfWTXN9XcqAQAAKgEAABMAHABbQ29udGVudF9UeXBlc10ueG1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPjxEZWZhdWx0IEV4dGVuc2lvbj0ieGFtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5tcy13cGYueGFtbCt4bWwiIC8+PERlZmF1bHQgRXh0ZW5zaW9uPSJyZWxzIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLXBhY2thZ2UucmVsYXRpb25zaGlwcyt4bWwiIC8+PC9UeXBlcz5QSwECLQAUAAAACAAvE19ZxIGNx3ACAADaBwAAEgAAAAAAAAAAAAAAAAAAAAAAWGFtbC9Eb2N1bWVudC54YW1sUEsBAi0ACgAAAAAALxNfWbWpn0QMAQAADAEAAAsAAAAAAAAAAAAAAAAAvAIAAF9yZWxzLy5yZWxzUEsBAi0ACgAAAAAALxNfWTXN9XcqAQAAKgEAABMAAAAAAAAAAAAAAAAADQQAAFtDb250ZW50X1R5cGVzXS54bWxQSwUGAAAAAAMAAwC6AAAAhAUAAAAA" />
+      </ModelDocumentation>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.OclType.asString+' - '+self.Name" />
+        <TaggedValue Tag="AutoFormClass" Value="SeekerOnly" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

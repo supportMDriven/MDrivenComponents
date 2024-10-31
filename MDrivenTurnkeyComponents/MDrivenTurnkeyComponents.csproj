@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <None Remove="MDrivenMergeable\AccountViewOverride\FreeStandingLogin.spans" />
+    <None Remove="MDrivenMergeable\FinanceAppDemo\Actions.actions" />
+    <None Remove="MDrivenMergeable\FinanceAppDemo\Budget.spans" />
+    <None Remove="MDrivenMergeable\FinanceAppDemo\Dashboard.spans" />
+    <None Remove="MDrivenMergeable\FinanceAppDemo\Index.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\Actions.actions" />
     <None Remove="MDrivenMergeable\GraphAPI2023\GraphAPIOneUser.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\Index.spans" />
@@ -49,6 +53,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Actions.actions">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Actions.actions">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Budget.spans">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Dashboard.spans">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Index.spans">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\Actions.actions">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
@@ -92,6 +108,9 @@
     <None Include="MDrivenMergeable\AccountViewOverride\Snippets.snippets">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </None>
+    <None Include="MDrivenMergeable\FinanceAppDemo\ModlrProject.mproj">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </None>
     <None Include="MDrivenMergeable\GraphAPI2023\ModlrProject.mproj">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </None>
@@ -118,6 +137,18 @@
     </None>
     <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\FinanceAppDemo\Diagram1.ecodiag">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\FinanceAppDemo\documentation.modlrdoc">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\FinanceAppDemo\Package1.ecopkg">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\FinanceAppDemo\Snippets.snippets">
+      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\GraphAPI2023\ASPNETIdentity.ecopkg">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
