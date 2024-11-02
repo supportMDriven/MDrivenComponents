@@ -55,16 +55,16 @@
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Actions.actions">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Budget.spans">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Dashboard.spans">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Index.spans">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\Actions.actions">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
@@ -109,7 +109,7 @@
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\FinanceAppDemo\ModlrProject.mproj">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\GraphAPI2023\ModlrProject.mproj">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
@@ -142,19 +142,19 @@
       <DependentUpon>FinanceApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\documentation.modlrdoc">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\FinanceApp.ecopkg">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\FinanceAppDemo.ecodiag">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\Package1.ecopkg">
       <DependentUpon>FinanceApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\Snippets.snippets">
-      <DependentUpon>FinanceApp.ecomdl</DependentUpon>
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\GraphAPI2023\ASPNETIdentity.ecopkg">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
