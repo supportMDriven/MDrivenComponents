@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="Budget" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b96d5a95-de66-4318-98a8-58d4ac0feb4e">
+<Span Name="Budget" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="7c5e81ef-a531-4687-9e57-135c761c1210">
   <Class>
-    <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
+    <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
   </Class>
   <Nesting>
-    <Nesting Name="RevenueBudgetCategory" ExpressionActAsForActions="" id="c4ebded6-e8c4-4f46-bb96-872620dc9cc7">
+    <Nesting Name="RevenueBudgetCategory" ExpressionActAsForActions="" id="fdfb7a21-5a51-4d94-bb2b-72aacba784bc">
       <Class>
-        <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -33,7 +33,7 @@
             <PlacingContainer idref="35f58c29-48d7-4651-823c-7835e1c8b562" />
           </PlacingContainer>
           <ReferedNesting>
-            <Nesting Name="RevenueBudgetItem" idref="95695439-6d6a-4390-a014-f7ad74c4cace" />
+            <Nesting Name="RevenueBudgetItem" idref="ea7a3b24-efde-48a5-ba2e-daad5ac46cf0" />
           </ReferedNesting>
         </Column>
       </OwnedColumns>
@@ -53,9 +53,9 @@
         <Column Name="RevenueBudget" idref="22b682cb-8538-4e6f-9336-4fd385b989f7" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="RevenueBudgetItem" ExpressionActAsForActions="" id="95695439-6d6a-4390-a014-f7ad74c4cace">
+    <Nesting Name="RevenueBudgetItem" ExpressionActAsForActions="" id="ea7a3b24-efde-48a5-ba2e-daad5ac46cf0">
       <Class>
-        <Class Name="BudgetItem" idref="cb17538b-0292-4cb2-b6ff-46d39b57085f" />
+        <Class Name="BudgetItem" idref="078e1a5a-dd5c-4700-a43e-397ffb2baab5" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -88,9 +88,9 @@
         <Column Name="BudgetItems" idref="fb32c87c-70c3-4def-91c4-545b96296b5a" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="ExpenditureBudgetCategory" ExpressionActAsForActions="" id="827668f2-f9d2-47f2-b147-f4753306af78">
+    <Nesting Name="ExpenditureBudgetCategory" ExpressionActAsForActions="" id="8dcb3eff-e033-42fa-8516-f43f3a5bb738">
       <Class>
-        <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -117,7 +117,7 @@
             <PlacingContainer idref="06f304c2-e9e9-470a-931d-f85e40505e10" />
           </PlacingContainer>
           <ReferedNesting>
-            <Nesting Name="ExpenditureBudgetItem" idref="6b204d92-7b41-4c39-9973-5f224d11aa8c" />
+            <Nesting Name="ExpenditureBudgetItem" idref="21597d65-9963-4a55-b81e-ce5786df36f4" />
           </ReferedNesting>
         </Column>
       </OwnedColumns>
@@ -140,9 +140,9 @@
         <TaggedValue Tag="NavigateOnSingleClickEnable" Value="false" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="ExpenditureBudgetItem" ExpressionActAsForActions="" id="6b204d92-7b41-4c39-9973-5f224d11aa8c">
+    <Nesting Name="ExpenditureBudgetItem" ExpressionActAsForActions="" id="21597d65-9963-4a55-b81e-ce5786df36f4">
       <Class>
-        <Class Name="BudgetItem" idref="cb17538b-0292-4cb2-b6ff-46d39b57085f" />
+        <Class Name="BudgetItem" idref="078e1a5a-dd5c-4700-a43e-397ffb2baab5" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -185,7 +185,7 @@
         <PlacingContainer idref="b47bf538-db0a-444a-811c-a58580a5dc35" />
       </PlacingContainer>
       <ReferedNesting>
-        <Nesting Name="RevenueBudgetCategory" idref="c4ebded6-e8c4-4f46-bb96-872620dc9cc7" />
+        <Nesting Name="RevenueBudgetCategory" idref="fdfb7a21-5a51-4d94-bb2b-72aacba784bc" />
       </ReferedNesting>
     </Column>
     <Column Name="ExpenditureBudget" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Expenditure.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMarginLeft="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="43ce0be6-6619-4f78-99e2-d1e6a83bbd0f">
@@ -193,7 +193,7 @@
         <PlacingContainer idref="2cfb089a-6842-418f-b373-c66f1815f36b" />
       </PlacingContainer>
       <ReferedNesting>
-        <Nesting Name="ExpenditureBudgetCategory" idref="827668f2-f9d2-47f2-b147-f4753306af78" />
+        <Nesting Name="ExpenditureBudgetCategory" idref="8dcb3eff-e033-42fa-8516-f43f3a5bb738" />
       </ReferedNesting>
     </Column>
     <Column Name="Revenue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Revenue'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h5" XPos="1" YPos="1" id="5c54a023-3f08-4564-b7fb-98f742298083">

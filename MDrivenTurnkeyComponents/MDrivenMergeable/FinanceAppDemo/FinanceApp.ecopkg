@@ -5,33 +5,71 @@
       <AssociationEnd>
         <AssociationEnd Name="BudgetCategory" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="74d8e773-7b37-4483-b8e5-f5c589782797">
           <Participant>
-            <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
+            <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="BudgetItems" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="adec9b98-f7ff-4bc6-bb58-99435330162d">
           <Participant>
-            <Class Name="BudgetItem" idref="cb17538b-0292-4cb2-b6ff-46d39b57085f" />
+            <Class Name="BudgetItem" idref="078e1a5a-dd5c-4700-a43e-397ffb2baab5" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="Expenditure" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="069546c0-7308-4ad4-8072-b435e7b4eaa3">
-      <Superclass>
-        <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
-      </Superclass>
+    <Class Name="BudgetItem" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="078e1a5a-dd5c-4700-a43e-397ffb2baab5">
+      <Feature>
+        <Attribute Name="Amount" Multiplicity="" Visibility="Public" id="85af5f5c-8b86-4aab-8899-d766598c0272">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIAOkRX1n9hJhTkAIAADwIAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWWYW/aMBCG/4qVfR4h3dZtFSChtqzVumpqulXatyM5Em+OHdnnFvbrdwZKwwg1Qkg+P359fm2fGeVYkDRaLBul3TipidqzNHVFjQ24QSMLa5xZ0KAwTfok9WKZngyHp+kSGpW2Fh1qgiCQBIUz10KB42TdYR8xEfe4pKmSlW4YHCc3uKBE3EiNVyirmiNTTyYR1+5q1dao11KXGuYKy3EyA+VwI6xAV+ME9VvvEjFT5ulC2k3mG9F7cxf0EnHrmzna3M8dSfIBGJx7Rd5ibrwNyYWUerlugxNz23E8n9E0g0aq1TjJsTIoflxvojmtFEveGtuA2oQetgvrxnKySEX9X1D+5aFZFloWK2u85jW/mc2G6w97t2pNZaGtV4OcQJdgyxtZQciJd+reetxjzlmTl+ZBvUZdSFdwMrxEsKsOuPW6Q15JR8bKYk/vEJtqbTZHYKoILW9h4IZHUusyB7m9zMiONL2zfeXRMhyFw+VDKwlUzidwDRyOPQeHOWonST7i0RnClnIessiRshhwEgPexYD3MeBDDDiNAR9jwKcY8Dlq1DBKRL3MomZmUTezqJ1Z1M8samgWdTSLWppFPT3p9XRmYVv2nmtJd7gCV2P5C63pG/sNKJR1Cjfsi0X80wddgqOpk6Avly1aOnpPfoJliFxvItvL2N/JpRct39T92nkIdN6NHmiX54Msqe6facfc8PPhoeqf7rm45k/BvVeK1xFgt2n7BXAy+g4W1sxkdOf15Hoh5r6skIQkbIR0ArRAdlmXMpRXwbuj+Yc7+MsN0fKzp7Hcg4xed60lOG8hFy/tICksPqL228ihpDW/+eFk0WeOjJijqFCz5yG+sKbZSY7SkPko7Swl3f5lmPwDUEsDBAoAAAAAAOkRX1nWmpFbDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUjAzNDdmNDUwNWNjOTQ4MzQiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAADpEV9ZNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAOkRX1n9hJhTkAIAADwIAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAADpEV9Z1pqRWwwBAAAMAQAACwAAAAAAAAAAAAAAAADcAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAADpEV9ZNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAAAtBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAACkBQAAAAA=" />
+          </ModelDocumentation>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Code" Multiplicity="" Visibility="Public" id="996afb92-3511-42eb-bacb-a0c61d2a5584">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="aa0e131f-aee9-4581-a919-d88573e993bd">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <ModelDocumentation>
+        <ModelDocumentation Content="UEsDBBQAAAAIAEkRX1mv6PYJVgIAAKwHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/TMBCG/0oUPtM0BQZMbaXSrWyiTGgZTOLbNbkmFo4dnc9bs1+P3XYjpemcb7Gfu3v92j6PM8xZaBVtaqnMJK6Ym/MkMXmFNZhBLXLSRq95kOs6eRRqvUlGw+FZsoFaJg2hQcXgE8Q+w7lpIMdJvJ2gB4yjO9zwTIpS1Q6cxEtccxwthcIrFGXlRmaWdRxdm6u2qVBtU10qWEksJvECpMFdYgmqnMSo3loTRwupHy8E7ZTvkt7pW58vjm5svULK7MqwYOuBwdxKtoSZtuTFeUm9XPfHCTP7OFdPK15ALWQ7iTMsNUY/r3ejGbfSpbzRVIPcDd3vF9Ydy5iQ8+q/QfHkQtPU/xGWpK1ya36zWAy3n/OubXRJ0FTtIGNQBVCxFCV4TW6n7sjiATN3Od3SLMjXqAthcifGLRGo7YB7rzvklTCsSeQH+Y6xmVJ6dwRmkpHcFnpueEJalznS9q+ic6TurfbNRQt/FI6XD41gkJk7gVvgOHYOBjNURrB4wJMV/JY6HSLPkNMQMAoB70LA+xDwIQSchYCPIeBTCPgcNGoYJIJepkEz06CbadDONOhnGjQ0DTqaBi1Ng56Oej1dEOzb3nMv6YZLMBUWv5F0X+x3YN/W2d+wr4T4pw+6BMMzI0BdbhokPnlPfgE5iE2vkP1l7J90rRfJ3dTD3nkMdN6NHuhF570ouOqv9MIs3fNhoewv99xcs0fv3ivN6wTwsmmHDXA6/gEEW2Y6vrVq+sUWJXJ0zVibKMrdXhmxFlhEqzbKXVSpqR0nnhwnndBk/0RP/wJQSwMECgAAAAAASRFfWbJaa/UMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSZmNlMGZlNjUwYTIwNDgyZiIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAEkRX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgASRFfWa/o9glWAgAArAcAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAEkRX1myWmv1DAEAAAwBAAALAAAAAAAAAAAAAAAAAKICAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAEkRX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAPMDAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAGoFAAAAAA==" />
+      </ModelDocumentation>
+    </Class>
+    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="42df5c17-b621-401a-86e3-911ef0aba78f">
+      <Feature>
+        <Method Name="GetSystemUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4e4611fa-7ec1-4d81-a5e4-fd29c999f316">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+      </Feature>
       <TaggedValue>
-        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+        <TaggedValue Tag="AutoFormClass" Value="Skip" />
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
       </TaggedValue>
     </Class>
-    <Class Name="Revenue" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="27c357b9-f7a8-4b97-ae39-317183cd72d5">
-      <Superclass>
-        <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
-      </Superclass>
-      <TaggedValue>
-        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
-      </TaggedValue>
-    </Class>
-    <Class Name="Transaction" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="378fb2ed-efea-4d6e-849c-94d59043f1c8">
+    <Class Name="Transaction" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="9925be16-e6c8-4b12-b49a-33137def7d9b">
       <Feature>
         <Attribute Name="Description" Multiplicity="" Visibility="Public" id="13569170-65a6-484f-b511-a98608c88045">
           <ModelDocumentation>
@@ -77,17 +115,17 @@
       <AssociationEnd>
         <AssociationEnd Name="BudgetCategory" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4c2e8c83-a035-425a-8b45-d8c21ce16aa6">
           <Participant>
-            <Class Name="BudgetCategory" idref="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f" />
+            <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="Transactions" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ba0d99de-e968-419c-bf71-2c1f5e6ea50a">
           <Participant>
-            <Class Name="Transaction" idref="378fb2ed-efea-4d6e-849c-94d59043f1c8" />
+            <Class Name="Transaction" idref="9925be16-e6c8-4b12-b49a-33137def7d9b" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="BudgetCategory" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="bed6ae3e-1d60-4a9c-b25e-e8b79e8e829f">
+    <Class Name="BudgetCategory" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cabde175-7a38-4ae9-a69e-8efaf798a5e7">
       <Feature>
         <Attribute Name="Code" Multiplicity="" Visibility="Public" id="311f1806-2826-42bc-af16-ebd5833725a8">
           <ModelDocumentation>
@@ -131,58 +169,20 @@
         <TaggedValue Tag="AutoFormClass" Value="SeekerOnly" />
       </TaggedValue>
     </Class>
-    <Class Name="BudgetItem" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cb17538b-0292-4cb2-b6ff-46d39b57085f">
-      <Feature>
-        <Attribute Name="Amount" Multiplicity="" Visibility="Public" id="85af5f5c-8b86-4aab-8899-d766598c0272">
-          <ModelDocumentation>
-            <ModelDocumentation Content="UEsDBBQAAAAIAOkRX1n9hJhTkAIAADwIAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWWYW/aMBCG/4qVfR4h3dZtFSChtqzVumpqulXatyM5Em+OHdnnFvbrdwZKwwg1Qkg+P359fm2fGeVYkDRaLBul3TipidqzNHVFjQ24QSMLa5xZ0KAwTfok9WKZngyHp+kSGpW2Fh1qgiCQBIUz10KB42TdYR8xEfe4pKmSlW4YHCc3uKBE3EiNVyirmiNTTyYR1+5q1dao11KXGuYKy3EyA+VwI6xAV+ME9VvvEjFT5ulC2k3mG9F7cxf0EnHrmzna3M8dSfIBGJx7Rd5ibrwNyYWUerlugxNz23E8n9E0g0aq1TjJsTIoflxvojmtFEveGtuA2oQetgvrxnKySEX9X1D+5aFZFloWK2u85jW/mc2G6w97t2pNZaGtV4OcQJdgyxtZQciJd+reetxjzlmTl+ZBvUZdSFdwMrxEsKsOuPW6Q15JR8bKYk/vEJtqbTZHYKoILW9h4IZHUusyB7m9zMiONL2zfeXRMhyFw+VDKwlUzidwDRyOPQeHOWonST7i0RnClnIessiRshhwEgPexYD3MeBDDDiNAR9jwKcY8Dlq1DBKRL3MomZmUTezqJ1Z1M8samgWdTSLWppFPT3p9XRmYVv2nmtJd7gCV2P5C63pG/sNKJR1Cjfsi0X80wddgqOpk6Avly1aOnpPfoJliFxvItvL2N/JpRct39T92nkIdN6NHmiX54Msqe6facfc8PPhoeqf7rm45k/BvVeK1xFgt2n7BXAy+g4W1sxkdOf15Hoh5r6skIQkbIR0ArRAdlmXMpRXwbuj+Yc7+MsN0fKzp7Hcg4xed60lOG8hFy/tICksPqL228ihpDW/+eFk0WeOjJijqFCz5yG+sKbZSY7SkPko7Swl3f5lmPwDUEsDBAoAAAAAAOkRX1nWmpFbDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUjAzNDdmNDUwNWNjOTQ4MzQiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAADpEV9ZNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAOkRX1n9hJhTkAIAADwIAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAADpEV9Z1pqRWwwBAAAMAQAACwAAAAAAAAAAAAAAAADcAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAADpEV9ZNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAAAtBAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAACkBQAAAAA=" />
-          </ModelDocumentation>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="Decimal" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Code" Multiplicity="" Visibility="Public" id="996afb92-3511-42eb-bacb-a0c61d2a5584">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="aa0e131f-aee9-4581-a919-d88573e993bd">
-          <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype idref="String" />
-          </Type>
-        </Attribute>
-      </Feature>
-      <ModelDocumentation>
-        <ModelDocumentation Content="UEsDBBQAAAAIAEkRX1mv6PYJVgIAAKwHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/TMBCG/0oUPtM0BQZMbaXSrWyiTGgZTOLbNbkmFo4dnc9bs1+P3XYjpemcb7Gfu3v92j6PM8xZaBVtaqnMJK6Ym/MkMXmFNZhBLXLSRq95kOs6eRRqvUlGw+FZsoFaJg2hQcXgE8Q+w7lpIMdJvJ2gB4yjO9zwTIpS1Q6cxEtccxwthcIrFGXlRmaWdRxdm6u2qVBtU10qWEksJvECpMFdYgmqnMSo3loTRwupHy8E7ZTvkt7pW58vjm5svULK7MqwYOuBwdxKtoSZtuTFeUm9XPfHCTP7OFdPK15ALWQ7iTMsNUY/r3ejGbfSpbzRVIPcDd3vF9Ydy5iQ8+q/QfHkQtPU/xGWpK1ya36zWAy3n/OubXRJ0FTtIGNQBVCxFCV4TW6n7sjiATN3Od3SLMjXqAthcifGLRGo7YB7rzvklTCsSeQH+Y6xmVJ6dwRmkpHcFnpueEJalznS9q+ic6TurfbNRQt/FI6XD41gkJk7gVvgOHYOBjNURrB4wJMV/JY6HSLPkNMQMAoB70LA+xDwIQSchYCPIeBTCPgcNGoYJIJepkEz06CbadDONOhnGjQ0DTqaBi1Ng56Oej1dEOzb3nMv6YZLMBUWv5F0X+x3YN/W2d+wr4T4pw+6BMMzI0BdbhokPnlPfgE5iE2vkP1l7J90rRfJ3dTD3nkMdN6NHuhF570ouOqv9MIs3fNhoewv99xcs0fv3ivN6wTwsmmHDXA6/gEEW2Y6vrVq+sUWJXJ0zVibKMrdXhmxFlhEqzbKXVSpqR0nnhwnndBk/0RP/wJQSwMECgAAAAAASRFfWbJaa/UMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSZmNlMGZlNjUwYTIwNDgyZiIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAEkRX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgASRFfWa/o9glWAgAArAcAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAEkRX1myWmv1DAEAAAwBAAALAAAAAAAAAAAAAAAAAKICAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAEkRX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAPMDAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAGoFAAAAAA==" />
-      </ModelDocumentation>
-    </Class>
-    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="f8b69944-4599-40d2-80ac-9cbf5d718f5e">
-      <Feature>
-        <Method Name="GetSystemUrl" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4e4611fa-7ec1-4d81-a5e4-fd29c999f316">
-          <ReturnParameter>
-            <Parameter Name="" Kind="In">
-              <Type>
-                <Datatype idref="String" />
-              </Type>
-            </Parameter>
-          </ReturnParameter>
-          <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
-          </TaggedValue>
-        </Method>
-      </Feature>
+    <Class Name="Revenue" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d9196c7f-d3e9-4678-b8c7-34214fc860d5">
+      <Superclass>
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+      </Superclass>
       <TaggedValue>
-        <TaggedValue Tag="AutoFormClass" Value="Skip" />
-        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Expenditure" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="eef53ed0-0a63-40b0-865f-c3d8337376a9">
+      <Superclass>
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
       </TaggedValue>
     </Class>
   </OwnedElement>
