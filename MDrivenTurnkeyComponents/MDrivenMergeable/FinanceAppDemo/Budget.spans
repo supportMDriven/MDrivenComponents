@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Budget" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="7c5e81ef-a531-4687-9e57-135c761c1210">
+  <Class>
+    <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+  </Class>
+  <Nesting>
+    <Nesting Name="RevenueBudgetCategory" ExpressionActAsForActions="" id="fdfb7a21-5a51-4d94-bb2b-72aacba784bc">
+      <Class>
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Code" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Code" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5f38dc3c-548a-4159-ba99-782824f22405">
+          <PlacingContainer>
+            <PlacingContainer idref="9aa0152e-1101-4177-9c01-efe680e057d5" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMaxSize="400" PCMinSize="200" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="97f8846c-7a73-496f-bd83-c248e82f824b">
+          <PlacingContainer>
+            <PlacingContainer idref="9aa0152e-1101-4177-9c01-efe680e057d5" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="TotalAmount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BudgetItems-&gt;collect(i|i.Amount)-&gt;sum" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="47169141-283b-4144-bb2b-e9ebc74acaaa">
+          <PlacingContainer>
+            <PlacingContainer idref="9aa0152e-1101-4177-9c01-efe680e057d5" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="BudgetItems" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BudgetItems" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="3" id="fb32c87c-70c3-4def-91c4-545b96296b5a">
+          <PlacingContainer>
+            <PlacingContainer idref="35f58c29-48d7-4651-823c-7835e1c8b562" />
+          </PlacingContainer>
+          <ReferedNesting>
+            <Nesting Name="RevenueBudgetItem" idref="ea7a3b24-efde-48a5-ba2e-daad5ac46cf0" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="25e2ca13-d4bf-4ef9-b23b-0fa5b6b2ef92">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="55b0f2f4-18e7-4ed5-9d4c-d99a7bd82109">
+              <ChildContainers>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'TableHeader'" Type="Row" VisibleExpression="" Wrap="False" id="9aa0152e-1101-4177-9c01-efe680e057d5" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="35f58c29-48d7-4651-823c-7835e1c8b562" />
+              </ChildContainers>
+            </PlacingContainer>
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="RevenueBudget" idref="22b682cb-8538-4e6f-9336-4fd385b989f7" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="RevenueBudgetItem" ExpressionActAsForActions="" id="ea7a3b24-efde-48a5-ba2e-daad5ac46cf0">
+      <Class>
+        <Class Name="BudgetItem" idref="078e1a5a-dd5c-4700-a43e-397ffb2baab5" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMaxSize="400" PCMinSize="400" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="BorderLeft" XPos="1" YPos="1" id="b59a3528-3a6f-4ec7-8c57-ca466ab3e3e1">
+          <PlacingContainer>
+            <PlacingContainer idref="8f476e0b-855d-475d-928e-df8876fa33f7" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Code" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Code" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="7d77ac46-cf43-4396-bcc4-2676b767103b">
+          <PlacingContainer>
+            <PlacingContainer idref="8f476e0b-855d-475d-928e-df8876fa33f7" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Amount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="BorderLeft" XPos="1" YPos="3" id="688f8ef8-1c82-4184-a33d-2ffad435dee6">
+          <PlacingContainer>
+            <PlacingContainer idref="8f476e0b-855d-475d-928e-df8876fa33f7" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="aca09000-5e38-49a7-bfdd-0666ce216047">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'Border'" Type="Row" VisibleExpression="" Wrap="False" id="8f476e0b-855d-475d-928e-df8876fa33f7" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="BudgetItems" idref="fb32c87c-70c3-4def-91c4-545b96296b5a" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ExpenditureBudgetCategory" ExpressionActAsForActions="" id="8dcb3eff-e033-42fa-8516-f43f3a5bb738">
+      <Class>
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Code" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Code" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c45a3396-b109-4be9-9923-a8398e5773c2">
+          <PlacingContainer>
+            <PlacingContainer idref="a4b4ec73-f454-4a26-a6a4-f33230bea6c1" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMaxSize="400" PCMinSize="200" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="4ebdf2f8-6296-4eab-8d88-f81cf931386e">
+          <PlacingContainer>
+            <PlacingContainer idref="a4b4ec73-f454-4a26-a6a4-f33230bea6c1" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="TotalAmount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BudgetItems-&gt;collect(i|i.Amount)-&gt;sum" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="447d129c-980c-444d-8d1a-159af18302d4">
+          <PlacingContainer>
+            <PlacingContainer idref="a4b4ec73-f454-4a26-a6a4-f33230bea6c1" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="BudgetItems" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.BudgetItems" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="3" id="b0faa91f-e806-495c-b18b-ba98bbd07915">
+          <PlacingContainer>
+            <PlacingContainer idref="06f304c2-e9e9-470a-931d-f85e40505e10" />
+          </PlacingContainer>
+          <ReferedNesting>
+            <Nesting Name="ExpenditureBudgetItem" idref="21597d65-9963-4a55-b81e-ce5786df36f4" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="9b374f49-4a84-43ae-be67-7347e56976c2">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="09c8ccd6-e2e7-440b-ab29-53d832ff4395">
+              <ChildContainers>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'TableHeader'" Type="Row" VisibleExpression="" Wrap="False" id="a4b4ec73-f454-4a26-a6a4-f33230bea6c1" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="06f304c2-e9e9-470a-931d-f85e40505e10" />
+              </ChildContainers>
+            </PlacingContainer>
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="ExpenditureBudget" idref="43ce0be6-6619-4f78-99e2-d1e6a83bbd0f" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="NavigateOnSingleClickEnable" Value="false" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="ExpenditureBudgetItem" ExpressionActAsForActions="" id="21597d65-9963-4a55-b81e-ce5786df36f4">
+      <Class>
+        <Class Name="BudgetItem" idref="078e1a5a-dd5c-4700-a43e-397ffb2baab5" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMaxSize="400" PCMinSize="400" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="BorderLeft" XPos="1" YPos="1" id="18c0476b-76d9-4070-84a6-3b85b9cc568c">
+          <PlacingContainer>
+            <PlacingContainer idref="033566f2-3d88-44a5-9acb-4fbf1c1f9a3f" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Code" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Code" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="6a7ec620-dc51-4b1a-8b69-df37c33e9c3b">
+          <PlacingContainer>
+            <PlacingContainer idref="033566f2-3d88-44a5-9acb-4fbf1c1f9a3f" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Amount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="BorderLeft" XPos="1" YPos="3" id="ab3b2a95-551e-4568-b7c0-a2cf0bf56a39">
+          <PlacingContainer>
+            <PlacingContainer idref="033566f2-3d88-44a5-9acb-4fbf1c1f9a3f" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="2c80758c-bc3b-43f6-948a-05c9cc23c3d9">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'Border'" Type="Row" VisibleExpression="" Wrap="False" id="033566f2-3d88-44a5-9acb-4fbf1c1f9a3f" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="BudgetItems" idref="b0faa91f-e806-495c-b18b-ba98bbd07915" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="RevenueBudget" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="Revenue.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMarginRight="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="0" YPos="1" id="22b682cb-8538-4e6f-9336-4fd385b989f7">
+      <PlacingContainer>
+        <PlacingContainer idref="b47bf538-db0a-444a-811c-a58580a5dc35" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="RevenueBudgetCategory" idref="fdfb7a21-5a51-4d94-bb2b-72aacba784bc" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="ExpenditureBudget" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Expenditure.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PCMarginLeft="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="43ce0be6-6619-4f78-99e2-d1e6a83bbd0f">
+      <PlacingContainer>
+        <PlacingContainer idref="2cfb089a-6842-418f-b373-c66f1815f36b" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="ExpenditureBudgetCategory" idref="8dcb3eff-e033-42fa-8516-f43f3a5bb738" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Revenue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Revenue'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h5" XPos="1" YPos="1" id="5c54a023-3f08-4564-b7fb-98f742298083">
+      <PlacingContainer>
+        <PlacingContainer idref="b47bf538-db0a-444a-811c-a58580a5dc35" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Expenditure" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Expenditure'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h5" XPos="1" YPos="1" id="e1411b51-f29a-441d-b5b2-ac37b93a368b">
+      <PlacingContainer>
+        <PlacingContainer idref="2cfb089a-6842-418f-b373-c66f1815f36b" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="100" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d66699b9-5a64-48db-9225-aaea13e09456">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="513ed212-4433-47b8-92f3-d7a459527710">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="b47bf538-db0a-444a-811c-a58580a5dc35" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="2cfb089a-6842-418f-b373-c66f1815f36b" />
+          </ChildContainers>
+        </PlacingContainer>
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+  </TaggedValue>
+</Span>

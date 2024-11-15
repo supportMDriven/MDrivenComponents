@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="FinanceAppDemo" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.157625" Id="1241affc-52e6-471d-8457-bceff3483d92">
+  <PlacedClass>
+    <PlacedClass ClassId="f8635de4-bb5e-472b-8bfa-1ad6ee756a1a" Color="1692800256" LastKnownName="Revenue" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="75" ShowAttributes="False" ShowMethods="False" Size="1" x="208" y="192" id="4d9a3175-c9d2-4332-91a0-313468c8dc87">
+      <Class>
+        <Class Name="Revenue" idref="d9196c7f-d3e9-4678-b8c7-34214fc860d5" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="37.5" y="16" id="2b9291e8-a975-4a43-bd8a-5f90ed9d4d4e">
+          <Class>
+            <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-24" y="73" id="6960e234-a9d3-49c9-b7b5-80e13ffabbb5">
+              <Class>
+                <Class Name="Revenue" idref="d9196c7f-d3e9-4678-b8c7-34214fc860d5" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="ea4dcc95-72a6-4d5e-b821-7b7ad1cdaa62" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="105" ShowAttributes="False" ShowMethods="False" Size="1" x="896" y="128" id="5643fea8-117f-4e58-ba78-1652cb0d4de6">
+      <Class>
+        <Class Name="SysSingleton" idref="42df5c17-b621-401a-86e3-911ef0aba78f" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="d5d05d3b-e81b-4e28-a8d3-68b085bb4fa4" Color="1692800256" LastKnownName="Transaction" PickedFeatureVisibility="ShowAll" RenderedHeight="85" RenderedWidth="98" ShowAttributes="False" ShowMethods="False" Size="1" x="696" y="40" id="7223d5f4-3438-43ff-9d86-b3382157222c">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-49" y="16" id="a6b6240e-551e-414f-89de-ec999df38f5c">
+          <AssociationEnd>
+            <AssociationEnd Name="Transactions" idref="ba0d99de-e968-419c-bf71-2c1f5e6ea50a" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Transaction" idref="9925be16-e6c8-4b12-b49a-33137def7d9b" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="daf30a1d-578a-4216-9c24-3ca6ab64570c" Color="1692800256" LastKnownName="BudgetItem" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="98" ShowAttributes="False" ShowMethods="False" Size="1" x="672" y="240" id="81fc08f1-3e3e-4779-aead-b983e7182b19">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-49" y="40" id="a53da8cd-89f9-4311-9c15-c8a4da08db28">
+          <AssociationEnd>
+            <AssociationEnd Name="BudgetItems" idref="adec9b98-f7ff-4bc6-bb58-99435330162d" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="BudgetItem" idref="078e1a5a-dd5c-4700-a43e-397ffb2baab5" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="a865543c-06a9-48fc-a295-427a648427b1" Color="1692800256" LastKnownName="Expenditure" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="99" ShowAttributes="False" ShowMethods="False" Size="1" x="408" y="200" id="8c535e67-4971-4f5f-b505-2427aa8c070e">
+      <Class>
+        <Class Name="Expenditure" idref="eef53ed0-0a63-40b0-865f-c3d8337376a9" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="5042d0ca-05a5-4309-a582-8e4058928437">
+          <Class>
+            <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="16" y="73" id="dd1ad723-af67-422f-b167-6973cfb2cbea">
+              <Class>
+                <Class Name="Expenditure" idref="eef53ed0-0a63-40b0-865f-c3d8337376a9" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="8aedf356-b362-424e-9fb4-6fe1b178d6a5" Color="1692800256" LastKnownName="BudgetCategory" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="130" ShowAttributes="False" ShowMethods="False" Size="1" x="352" y="80" id="cb15ec3a-8eba-43d9-a8f7-e995a7af345c">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="65" y="48" id="1296f727-7025-4a8d-9bba-7891a7467f40">
+          <AssociationEnd>
+            <AssociationEnd Name="BudgetCategory" idref="74d8e773-7b37-4483-b8e5-f5c589782797" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-49" y="40" id="a53da8cd-89f9-4311-9c15-c8a4da08db28">
+              <AssociationEnd>
+                <AssociationEnd Name="BudgetItems" idref="adec9b98-f7ff-4bc6-bb58-99435330162d" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="65" y="32" id="44e5969f-cf00-4e04-8fc4-2a81a346a00c">
+          <AssociationEnd>
+            <AssociationEnd Name="BudgetCategory" idref="4c2e8c83-a035-425a-8b45-d8c21ce16aa6" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-49" y="16" id="a6b6240e-551e-414f-89de-ec999df38f5c">
+              <AssociationEnd>
+                <AssociationEnd Name="Transactions" idref="ba0d99de-e968-419c-bf71-2c1f5e6ea50a" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="BudgetCategory" idref="cabde175-7a38-4ae9-a69e-8efaf798a5e7" />
+      </Class>
+      <GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-24" y="73" id="6960e234-a9d3-49c9-b7b5-80e13ffabbb5">
+          <Class>
+            <Class Name="Revenue" idref="d9196c7f-d3e9-4678-b8c7-34214fc860d5" />
+          </Class>
+        </GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="16" y="73" id="dd1ad723-af67-422f-b167-6973cfb2cbea">
+          <Class>
+            <Class Name="Expenditure" idref="eef53ed0-0a63-40b0-865f-c3d8337376a9" />
+          </Class>
+        </GeneralizationConnection>
+      </GeneralizationConnection>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedNote>
+    <PlacedNote Color="-922747136" Height="272" LastKnownName="" NoteContent="UEsDBBQAAAAIAEAUX1k8AGn20AMAAEANAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAL1XbW/bNhD+K4T2NbMs92VdEQdwk3gJ5hRDlLbAvp2lk8SFIgWSiq3++h4lxZFqpRywrP5kUc/dPXzuzT6NMbFcSbYvhTTLoLC2eh+GJimwBDMreaKVUZmdJaoMd1xm+3Axn78N91CKsNJoUFpwDgLn4b2pIMFl0L7QDxiwO9zbleC5LAm4DDaY2YBtuMQr5HlBJ6vaqoBdm6umKlC2ri4lbAWmy2ANwmDnWIDMlwHKX2sTsLVQuwuuO+ad0zt16/wF7GNdblHH9dZYbmsHmJ3XwtYaY1VrR+4TUZvEDR+ImOntKJ6Sdg0lF80yiDFXyD5dd6exbQS5/Kh0CaI7+tJfbHgWW402Kb475F/JNFq4J425VrWkO/+yXs/bD2nXVCrXUBXNLLYgU9DphufgOFGm7nSNI8w5+SS1axA/Ql1wkxAZuiLoZgDstR4gr7ixSvNk5O8YtpJSdSWwEhY1pdDh5s9QG2KOuD1FJEXKyWh/kjV3pXB8fai4BRFTBbaAY9tzMBijNNzyB3w2gksp8eBJjDbyARY+wCsf4LUP8MYHeOsD/OYDvPMBfvcKNfcivFpGXjEjr5qRV87Iq2fkFTTyKhp5JY28mi4mNV1r6Mfe4ywZmgswBaZ/o1ZTtjdg3Vi3rsP+0Ij3U6BLMHZlOMjLfYXaPtsnn0ETyJpJIn0zTr+k0YuaOnU8O48Bg70xATrw/MJTW0xHOmA2tD5qyKfDPQ7XeOfU+8HwegZwSNp4AJ6d/gUaWsy/2EpuUZLJbS1HW+SDEuloXbyeLd4EZ2suQSbIVlUlKJvtBj8NyfjJwwifKc1KkJDTaGQusdKgYXRtdosPKGtkWxqOKSM3DRFiFe1bSc84hFZa/UM7l451b8QlA7at0xxtazLrOYSHm/+fIsQWKzMRcUPJYDeg7ylYV2MXmHCX9e7dtcXyP/H6jgVoy7YNY7RXKRMkcK8I5YV+LGhO8iXUmIZnnLQDc5DPidoqnHIXbUq98Inwy1M/d4TxkS4n38allIYES3mWoabeO77Mz2ZJE4ghJAXL2qLnIJjVIE03BxmkKaYnzFSU46xhPKOLMO4qdqgtIye97B6Z268vx/6OxPzQSfiZ4+5GpSiYKdTOtDoPmudle+eIxAXNrq2iMXfE48FN8lbLLdodYlcBfbePijWpdVsT/dlJe9iCh/OiU9yMLIYvZszxqWpdKUOJycgDH7KgB6tabi6bbsAY+sNgjHtB1xeC7ZS+d42242QqRwx6QSndB7OCWg73CSIVyhTW8XRl0yJPHEK6fnbxyzopJuul/9t09g1QSwMECgAAAAAAQBRfWbSWabkMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSNTNiYTcyZTY1NWI2NGEyMCIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAEAUX1k1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAQBRfWTwAafbQAwAAQA0AABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAEAUX1m0lmm5DAEAAAwBAAALAAAAAAAAAAAAAAAAABwEAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAEAUX1k1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAG0FAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAAOQGAAAAAA==" RenderedHeight="282" RenderedWidth="253" Size="1" Width="243" x="144" y="344" id="8ef51a92-233d-406f-a0de-e51575202f57" />
+  </PlacedNote>
+</Diagram>

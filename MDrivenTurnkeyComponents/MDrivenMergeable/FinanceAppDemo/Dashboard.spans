@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Dashboard" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="1ee75f02-6cb1-4f21-a956-818b5ef3f922">
+  <Class>
+    <Class Name="Transaction" idref="9925be16-e6c8-4b12-b49a-33137def7d9b" />
+  </Class>
+  <ModelDocumentation>
+    <ModelDocumentation Content="UEsDBBQAAAAIALoTX1nChFKDQwIAAJIHAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/aMBCG/0qUfR4hbOu2iiAhCqMaq6aGrdK+HeFIrDl2ZJ8L2a+fTVIWRqjzzc5zd69f2+dxihkxKYJDyYVOwoKouo0inRVYgh6ULFNSyx0NMllGeyZ2h2g0HN5EByh5VCnUKAhcgtBluNUVZJiExx/qGcNgjQeacpaL0oJJuMIdhcGKCVwiyws7MzUkw+BeL+uqQHFMNRew4bhNwgVwjU1iDiJPQhRvjQ6DBZf7O6Ya5U3StXx0+cLgwZQbVKnZaGJkHDCYGU5GYSqNcuKcpF6uO7DCdBtn60lBCygZr5MwxVxi8OO+mU2p5jblg1Ql8GbqqV1Ydy4lhZQV/02yPzY0jt1IYa6kEXbNbxaL4fGz3tWVzBVURT1ICcQW1HbFcnCa7E6tlcEzZmZz2qUZ4K9Rd0xnVoxdIqi6A7Zed8gl0yQVy87yXWJTIWRzBKacUNktdNzwirQuc6HtX0XrSNlb7auNZu4oXC4fKkbAU3sCj8Bl7Aw0pig0I/aMVyu4LbU6WJYixT5g5APe+YD3PuCDD7jxAR99wCcf8Nlr1NBLeL2MvWbGXjdjr52x18/Ya2jsdTT2Whp7PR31erpQ0La9l17SDeegC9z+QiX7Yr8BubZO7oZ9UYi/+6A5aJpqBmJ+qFDR1XvyE5SFSPcKaS9j/0/belHZm3reOy+BzrvRA510PrEtFf2VTszKPh8G8v5yL8013Tv3XmleV4DTpp03wMn4Oyg4MpPxoxGTdCn3OrBbEIwjNx5HHSBqH+LJX1BLAwQKAAAAAAC6E19ZZ1VVhwwBAAAMAQAACwAcAF9yZWxzLy5yZWxzIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBUeXBlPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dwZi8yMDA1LzEwL3hhbWwvZW50cnkiIFRhcmdldD0iL1hhbWwvRG9jdW1lbnQueGFtbCIgSWQ9IlJmYTY5ODY5ZjI5NDY0NTM2IiAvPjwvUmVsYXRpb25zaGlwcz5QSwMECgAAAAAAuhNfWTXN9XcqAQAAKgEAABMAHABbQ29udGVudF9UeXBlc10ueG1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPjxEZWZhdWx0IEV4dGVuc2lvbj0ieGFtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5tcy13cGYueGFtbCt4bWwiIC8+PERlZmF1bHQgRXh0ZW5zaW9uPSJyZWxzIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLXBhY2thZ2UucmVsYXRpb25zaGlwcyt4bWwiIC8+PC9UeXBlcz5QSwECLQAUAAAACAC6E19ZwoRSg0MCAACSBwAAEgAAAAAAAAAAAAAAAAAAAAAAWGFtbC9Eb2N1bWVudC54YW1sUEsBAi0ACgAAAAAAuhNfWWdVVYcMAQAADAEAAAsAAAAAAAAAAAAAAAAAjwIAAF9yZWxzLy5yZWxzUEsBAi0ACgAAAAAAuhNfWTXN9XcqAQAAKgEAABMAAAAAAAAAAAAAAAAA4AMAAFtDb250ZW50X1R5cGVzXS54bWxQSwUGAAAAAAMAAwC6AAAAVwUAAAAA" />
+  </ModelDocumentation>
+  <Nesting>
+    <Nesting Name="RevenueDetails" ExpressionActAsForActions="" id="5063f1b7-1809-41ad-a100-9166ae55951a">
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7e47f1d7-845f-40f2-b726-38758fad3fd2" />
+        <Column Name="BudgetAmount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a6d7477f-65bf-43e1-9d31-de0ee4e97c01" />
+        <Column Name="CurrentAmount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Part3" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="5d7ac384-81a2-419f-a964-fd0f0140f2b1" />
+        <Column Name="Variation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Part4" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="1caeb92b-6224-4905-8724-ce087e872886" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="RevenueDataChart" idref="1c61b581-d6e4-4c36-bdae-9623d74a0a53" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ExpenditureDetails" ExpressionActAsForActions="" id="c3353cd3-0ae8-4d1e-b073-c6997a2c8719">
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e4b55391-253c-4f93-9023-e5a8647046c7" />
+        <Column Name="BudgetAmount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Amount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="7917ba92-5166-408b-8cd9-509d545e735d" />
+        <Column Name="CurrentAmount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Part3" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ba3b93b7-1d94-469a-a82c-6ce431ca9512" />
+        <Column Name="Variation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Part4" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="417bd954-0c65-4b85-931c-5751845d75f9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ExpenditureDataChart" idref="e484128e-eb8c-44ba-8282-982de7c00fcb" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="ExpenditureDataChart" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="Expenditure.allinstances-&gt;collect(i|i.Name, i.Amount, i.Transactions.Amount-&gt;sum)-&gt;collect(value|value.Name, value.Amount, value.Part3, value.Part3-value.Amount)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="18" StyleRef="" XPos="2" YPos="6" id="e484128e-eb8c-44ba-8282-982de7c00fcb">
+      <PlacingContainer>
+        <PlacingContainer idref="e1c9b82a-3c0e-4189-9049-9c2a5f9d9243" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="ExpenditureDetails" idref="c3353cd3-0ae8-4d1e-b073-c6997a2c8719" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="ComboChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="RevenueDataChart" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="Revenue.allinstances-&gt;collect(i|i.Name, i.Amount, i.Transactions.Amount-&gt;sum)-&gt;collect(value|value.Name, value.Amount, value.Part3, value.Part3-value.Amount)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="20" StyleRef="" XPos="2" YPos="5" id="1c61b581-d6e4-4c36-bdae-9623d74a0a53">
+      <PlacingContainer>
+        <PlacingContainer idref="e1c9b82a-3c0e-4189-9049-9c2a5f9d9243" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="RevenueDetails" idref="5063f1b7-1809-41ad-a100-9166ae55951a" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="ComboChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="ExpenditureDataChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Annual Expenditure'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="b0fd02cd-dbab-414b-a79e-365568087780">
+      <PlacingContainer>
+        <PlacingContainer idref="e1c9b82a-3c0e-4189-9049-9c2a5f9d9243" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RevenueDataChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Annual Revenue'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="f0ee2170-70a5-42b7-b3df-d9a13ffae9df">
+      <PlacingContainer>
+        <PlacingContainer idref="e1c9b82a-3c0e-4189-9049-9c2a5f9d9243" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="100" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="e1c9b82a-3c0e-4189-9049-9c2a5f9d9243" />
+  </PlacingContainer>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+  </TaggedValue>
+</Span>
