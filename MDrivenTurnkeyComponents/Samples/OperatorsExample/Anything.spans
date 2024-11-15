@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Anything" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c223beb5-0f11-44d1-9386-345f0224652b">
+  <Class>
+    <Class Name="AnythingSingleton" idref="4013d34d-1553-4ab5-acaf-3a8f8074b0c3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Instance" ExpressionActAsForActions="" id="ffdca5e5-e249-4af6-93e7-3fce04e36a37">
+      <Class>
+        <Class Name="AnythingSingleton" idref="4013d34d-1553-4ab5-acaf-3a8f8074b0c3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AlllThings" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Thing.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="d6882aef-4e84-4781-aa62-190248e11d60">
+          <PlacingContainer>
+            <PlacingContainer idref="bb771523-4dd2-49da-90a3-49205fc568da" />
+          </PlacingContainer>
+          <ReferedNesting>
+            <Nesting Name="Things" idref="3116a092-c113-42ac-89bf-3ea083448719" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="ThingCollectionOne" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ThingCollectionOne" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="selfVM.Styles.SectionOne" StyleRefIsExpression="True" XPos="5" YPos="0" id="53975b93-8812-4e82-94b7-ebae4a4da0c8">
+          <PlacingContainer>
+            <PlacingContainer idref="bb771523-4dd2-49da-90a3-49205fc568da" />
+          </PlacingContainer>
+          <ReferedNesting>
+            <Nesting Name="ThingOnes" idref="44a2705f-dad3-4b86-8ff2-a158e60b46ef" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="ThingCollectionTwo" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ThingCollectionTwo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="selfVM.Styles.SectionTwo" StyleRefIsExpression="True" XPos="10" YPos="0" id="669ba2a7-19c9-441f-8961-cf67d7c74c7e">
+          <PlacingContainer>
+            <PlacingContainer idref="bb771523-4dd2-49da-90a3-49205fc568da" />
+          </PlacingContainer>
+          <ReferedNesting>
+            <Nesting Name="ThingTwos" idref="3e529666-3fc0-4a7a-a33d-a6d5c42dd325" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="ResultsCollection" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ThingCollectionOne-&gt;intersection(self.ThingCollectionTwo)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="selfVM.Styles.SectionTwo" StyleRefIsExpression="True" XPos="10" YPos="0" id="ea1500f6-f0e3-4a4d-ade6-dc3855a25242">
+          <PlacingContainer>
+            <PlacingContainer idref="bb771523-4dd2-49da-90a3-49205fc568da" />
+          </PlacingContainer>
+          <ReferedNesting>
+            <Nesting Name="Results" idref="58aa471f-1efa-4ffa-88af-d15fab9c440f" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="bb771523-4dd2-49da-90a3-49205fc568da" />
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="NewColumn" idref="3f098246-4f44-4cba-bb34-08704d054dce" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Things" ExpressionActAsForActions="" id="3116a092-c113-42ac-89bf-3ea083448719">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="AddDetail" idref="34d12d29-975a-4174-ba7c-77c7145fbe9f" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="SomeString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b36d1b5b-a145-46d8-8bca-daae31658df1" />
+        <Column Name="Identity" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Identity" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e5e785df-4666-48fb-a626-431d331b594f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AlllThings" idref="d6882aef-4e84-4781-aa62-190248e11d60" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+        <TaggedValue Tag="MultiSelect" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="ThingOnes" ExpressionActAsForActions="" id="44a2705f-dad3-4b86-8ff2-a158e60b46ef">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="AddDetail" idref="34d12d29-975a-4174-ba7c-77c7145fbe9f" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Identity" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Identity" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a6bf6cba-d436-4c69-82ac-6c95d43156b2">
+          <PlacingContainer>
+            <PlacingContainer idref="28b123b3-cb92-424d-96fe-dba2be83f205" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="bcdd097b-dc02-4365-a8a1-a1456c2d4bce">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MaxSize="30" Reverse="False" SelfAlign="NotSet" StyleExpression="self.SomeString" Type="Row" VisibleExpression="" Wrap="False" id="28b123b3-cb92-424d-96fe-dba2be83f205" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="ThingCollectionOne" idref="53975b93-8812-4e82-94b7-ebae4a4da0c8" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ThingTwos" ExpressionActAsForActions="" id="3e529666-3fc0-4a7a-a33d-a6d5c42dd325">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="AddDetail" idref="34d12d29-975a-4174-ba7c-77c7145fbe9f" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Identity" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Identity" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="944bc559-b7c9-45f2-ade2-4b316f9b5203">
+          <PlacingContainer>
+            <PlacingContainer idref="292ecbcf-8a67-448d-aef9-a98a95c421e1" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="52365f21-797d-4b30-a0e4-0f221e944724">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MaxSize="30" Reverse="False" SelfAlign="NotSet" StyleExpression="self.SomeString" Type="Row" VisibleExpression="" Wrap="False" id="292ecbcf-8a67-448d-aef9-a98a95c421e1" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="ThingCollectionTwo" idref="669ba2a7-19c9-441f-8961-cf67d7c74c7e" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Results" ExpressionActAsForActions="" id="58aa471f-1efa-4ffa-88af-d15fab9c440f">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="AddDetail" idref="34d12d29-975a-4174-ba7c-77c7145fbe9f" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Identity" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Identity" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="1a88715c-58cf-41ee-86e5-a849281d1588">
+          <PlacingContainer>
+            <PlacingContainer idref="1d16df09-9465-44a0-9e03-dcb3a6ab7649" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="31516c44-bf1c-447d-bdd6-1eb40f93f9d5">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MaxSize="30" Reverse="False" SelfAlign="NotSet" StyleExpression="self.SomeString" Type="Row" VisibleExpression="" Wrap="False" id="1d16df09-9465-44a0-9e03-dcb3a6ab7649" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="ResultsCollection" idref="ea1500f6-f0e3-4a4d-ade6-dc3855a25242" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="AnythingSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3f098246-4f44-4cba-bb34-08704d054dce">
+      <PlacingContainer>
+        <PlacingContainer idref="8ccf7fe0-bd65-4598-ad4e-a675713a2afc" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Instance" idref="ffdca5e5-e249-4af6-93e7-3fce04e36a37" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="MoveToTwo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vSelected_Things-&gt;foreach(t|AnythingSingleton.oclSingleton.ThingCollectionTwo.Add(t))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="a396feb4-1076-43ae-aacd-f9b0968013f2">
+      <PlacingContainer>
+        <PlacingContainer idref="813d9113-00fa-480b-adb1-696ac025d77c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="MoveToOne" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vSelected_Things-&gt;foreach(t|AnythingSingleton.oclSingleton.ThingCollectionOne.Add(t))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="1" id="bcf25c92-3e90-4c14-ac69-e9540de23dfb">
+      <PlacingContainer>
+        <PlacingContainer idref="813d9113-00fa-480b-adb1-696ac025d77c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RemoveFromOne" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="AnythingSingleton.oclSingleton.ThingCollectionOne.Remove(vCurrent_ThingOnes)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="58f918e7-f269-45c5-9130-4dd7464abad5">
+      <PlacingContainer>
+        <PlacingContainer idref="813d9113-00fa-480b-adb1-696ac025d77c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RemoveFromTwo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="AnythingSingleton.oclSingleton.ThingCollectionTwo.Remove(vCurrent_ThingTwos)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="05997301-6274-4805-9efd-c7f6e51a6ac1">
+      <PlacingContainer>
+        <PlacingContainer idref="813d9113-00fa-480b-adb1-696ac025d77c" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="1cf80207-da4e-419f-aa63-315da9cf27be">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="8ccf7fe0-bd65-4598-ad4e-a675713a2afc" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="813d9113-00fa-480b-adb1-696ac025d77c" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

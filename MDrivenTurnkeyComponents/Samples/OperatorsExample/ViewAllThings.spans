@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ViewAllThings" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="15a04ef5-e678-4fb7-835f-ae1aa1f5c416">
+  <Class>
+    <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllThing" ExpressionActAsForActions="" id="501ade70-1506-47f6-8ebc-3d463c58e0ce">
+      <Class>
+        <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ContextAction Name="CreateThing" idref="5d1a8835-63b7-4758-8aca-63c867eb0587" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="SomeString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.SomeString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="2b800b33-d3b1-4d64-94d2-d006cf7adccd" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllThings" idref="ce714dff-3d86-418b-ae94-71efcc5e16e0" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="AddDetail" idref="34d12d29-975a-4174-ba7c-77c7145fbe9f" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ViewOneThing" idref="be8bb9b9-32da-4502-b6c4-5a95adea95d9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="AllThings" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="Thing.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="0" id="ce714dff-3d86-418b-ae94-71efcc5e16e0">
+      <ReferedNesting>
+        <Nesting Name="AllThing" idref="501ade70-1506-47f6-8ebc-3d463c58e0ce" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

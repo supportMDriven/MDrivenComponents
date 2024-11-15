@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ViewValueStore" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="816c1ddb-97ad-4e31-9846-6865c6d0c12c">
+  <Class>
+    <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+  </Class>
+  <Nesting>
+    <Nesting Name="ValueStore" ExpressionActAsForActions="" id="e214506b-d8d6-4e94-bd77-5c12ca723734">
+      <Class>
+        <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="6bc853b2-662d-44e6-83f3-da7a2b47adc9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllValueStore" idref="1a5ebeee-91a6-4b32-ae59-54ca64285deb" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllValueStore" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="ValueStore.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="1" id="1a5ebeee-91a6-4b32-ae59-54ca64285deb">
+      <ReferedNesting>
+        <Nesting Name="ValueStore" idref="e214506b-d8d6-4e94-bd77-5c12ca723734" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Add" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="ValueStore.Create" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="4daf4e77-c0bd-4b0a-949f-bf4d49eb888a" />
+    <Column Name="Delete" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrent_ValueStore.Delete" ExpressionForReadOnly="vCurrent_ValueStore.isnull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e071c04f-5cfd-4338-90e6-0035eae0ed6a" />
+  </OwnedColumns>
+</Span>

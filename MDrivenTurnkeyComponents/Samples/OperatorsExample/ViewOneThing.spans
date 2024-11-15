@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ViewOneThing" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b0db4fde-4a19-4424-911d-1eb5829ae6cf">
+  <Class>
+    <Class Name="Thing" idref="19a1388a-7150-40ae-ae26-b75bf6278a1a" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SomeValue_PickListPresentation" ExpressionActAsForActions="" id="9fdf185a-90d8-41a6-811a-f14c98d881c2">
+      <Class>
+        <Class Name="ValueStore" idref="3b172bb0-c2d9-43fa-87df-664bd608546c" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7ba498a2-ebc9-4234-a201-9a88d87fbfc3" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SomeValue_PickList" idref="bca0ee14-a971-47c5-9ac0-f2602434e3a2" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Details" ExpressionActAsForActions="" id="4e83910a-a54d-4bdb-b817-d1ec62bb638c">
+      <Class>
+        <Class Name="Detail" idref="4c54ad1e-65f7-461a-9971-69b657033b35" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="62a9694a-12a4-4081-9f36-553d939c8345" />
+        <Column Name="Attribute2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Attribute2" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="7ea2cedf-fff9-42b4-9a9f-71f7ae4ca6e8" />
+        <Column Name="Attribute3" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Attribute3" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="b79cfeff-2974-44a1-b512-e0fa7d0e0b19" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Details" idref="90435ec5-7458-47ab-854b-7eb38506e677" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ViewOneThing" idref="be8bb9b9-32da-4502-b6c4-5a95adea95d9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="SomeDateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeDateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="174f6078-42f0-4138-9237-691b715664be" />
+    <Column Name="SomeInt" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeInt" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8ce9fb69-d088-4e48-86fb-0ad931c1613a" />
+    <Column Name="SomeString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="b27f702f-f05a-4710-a70b-fff8e1cd8ff4" />
+    <Column Name="SomeValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SomeValue" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="f45f2ba8-abc4-40f6-9ffd-987ffaf6eb47">
+      <ColumnForPickList>
+        <Column Name="SomeValue_PickList" idref="bca0ee14-a971-47c5-9ac0-f2602434e3a2" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="SomeValue_PickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="ValueStore.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="bca0ee14-a971-47c5-9ac0-f2602434e3a2">
+      <ReferedNesting>
+        <Nesting Name="SomeValue_PickListPresentation" idref="9fdf185a-90d8-41a6-811a-f14c98d881c2" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Details" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.Details" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="0" YPos="4" id="90435ec5-7458-47ab-854b-7eb38506e677">
+      <ReferedNesting>
+        <Nesting Name="Details" idref="4e83910a-a54d-4bdb-b817-d1ec62bb638c" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>
