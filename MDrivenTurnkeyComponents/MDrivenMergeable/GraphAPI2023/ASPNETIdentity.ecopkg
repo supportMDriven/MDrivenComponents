@@ -180,6 +180,40 @@
             <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
           </TaggedValue>
         </Method>
+        <Method Name="UploadToFolderWithDriveIdAndId" CodeComment="returns SysGraphAPIResultRow" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="32a2b948-68c4-4826-bb9f-cdc36f393c7a">
+          <Parameter>
+            <Parameter Name="driveid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="itemid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="filename" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="data" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="SysGraphAPIResultRow" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="Search" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="6f80d835-feea-4fa1-8be8-45c7c589ee07">
           <Parameter>
             <Parameter Name="search" Kind="In">
@@ -354,6 +388,35 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="CreateFolderInFolderWithDriveIdAndId" CodeComment="returns SysGraphAPIResultRow" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="ee7c1b2f-0b63-4bc8-8a3a-714618b40aa0">
+          <Parameter>
+            <Parameter Name="driveid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="itemid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="foldername" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="SysGraphAPIResultRow" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
       </Feature>
       <TaggedValue>
         <TaggedValue Tag="persistence" Value="transient" />

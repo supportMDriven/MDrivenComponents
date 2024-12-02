@@ -5,9 +5,9 @@
       <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />
     </MenuGroup>
   </GlobalAction>
-  <ContextAction Name="GrabDriveAndItem" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vUrl:=vCurrent_NewNestedViewModelClass.WebUrl;&#xD;&#xA;vDriveId:=vCurrent_NewNestedViewModelClass.DriveId;&#xD;&#xA;vDriveItemId:=vCurrent_NewNestedViewModelClass.ItemId;&#xD;&#xA;vVersion:=vCurrent_NewNestedViewModelClass.VersionNumber" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="150c605b-1834-4eb8-ae01-4367e0b5a402">
+  <ContextAction Name="GrabDriveAndItem" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vUrl:=vCurrent_ResultRow.WebUrl;&#xD;&#xA;vDriveId:=vCurrent_ResultRow.DriveId;&#xD;&#xA;vDriveItemId:=vCurrent_ResultRow.ItemId;&#xD;&#xA;vVersion:=vCurrent_ResultRow.VersionNumber" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="150c605b-1834-4eb8-ae01-4367e0b5a402">
     <OnlyInThis>
-      <Nesting Name="NewNestedViewModelClass" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
+      <Nesting Name="ResultRow" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
     </OnlyInThis>
     <ViewModelContext>
       <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
@@ -43,6 +43,22 @@
       <MenuGroup Name="File" idref="330081d8-1f73-4fb9-864c-f5edc7c733a9" />
     </MenuGroup>
   </GlobalAction>
+  <ContextAction Name="UpOneFolder" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_ResultRow.NavigateUpToParentFolder" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="a819f5b1-07ad-477c-9c05-84b307f7964c">
+    <OnlyInThis>
+      <Nesting Name="ResultRow" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="DownInFolder" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="vCurrent_ResultRow.IsFolder" ExecuteExpression="vCurrent_ResultRow.NavigateDownInFolder" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="c0c5050f-9954-424d-bf58-5bc89673fd8f">
+    <OnlyInThis>
+      <Nesting Name="ResultRow" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
+    </OnlyInThis>
+    <ViewModelContext>
+      <Span Name="SearchViaGraphAPI" idref="cf6bfd1b-5c5f-4d1c-8cc8-57f747eed38b" />
+    </ViewModelContext>
+  </ContextAction>
   <ClassAction Name="ShowSysGraphAPIResultUser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="d51044cd-0330-46b7-b81a-92f760d65a1b">
     <BringUpViewModel>
       <Span Name="GraphAPIOneUser" idref="62af5cbf-a249-4e64-976c-bab5df07858e" />
