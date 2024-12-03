@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="MDrivenMergeable\AccountViewOverride\FreeStandingLogin.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Actions.actions" />
+    <None Remove="MDrivenMergeable\FinanceAppDemo\AppHome.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Budget.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Dashboard.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Index.spans" />
@@ -55,6 +56,9 @@
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Actions.actions">
+      <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\AppHome.spans">
       <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Budget.spans">

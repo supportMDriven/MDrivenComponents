@@ -8,9 +8,10 @@
     <Diagram Name="FinanceAppDemo" FileName="FinanceAppDemo" GUID="1241affc-52e6-471d-8457-bceff3483d92" />
   </Diagrams>
   <Spans>
+    <Span Name="AppHome" FileName="AppHome" GUID="03bc2a8b-c74a-4333-babd-95e34505a2e6" />
     <Span Name="Dashboard" FileName="Dashboard" GUID="1ee75f02-6cb1-4f21-a956-818b5ef3f922" />
+    <Span Name="Index" FileName="Index" GUID="535ec648-edff-4a68-8c12-a04b0feb46fe" />
     <Span Name="Budget" FileName="Budget" GUID="7c5e81ef-a531-4687-9e57-135c761c1210" />
-    <Span Name="Index" FileName="Index" GUID="deb8cb3d-0042-4592-971e-7572e552e22e" />
   </Spans>
   <Report />
   <ModlrProject>
