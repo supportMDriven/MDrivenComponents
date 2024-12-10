@@ -728,7 +728,7 @@
         </Attribute>
       </Feature>
     </Class>
-    <Class Name="SysGraphAPIError" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="a492dbf6-04db-4e40-9261-a22e297c93ac">
+    <Class Name="SysGraphAPIError" AdditionalNamespaces="" CodeComment="Will be troublesome to extract a bunch of documents if we dont collect any errors in the api and allow developer to handle as see fit" IsAbstract="False" IsSealed="False" id="a492dbf6-04db-4e40-9261-a22e297c93ac">
       <Feature>
         <Attribute Name="Method" Multiplicity="" Visibility="Public" id="60a13b24-4667-413d-9853-b8b055b93792">
           <TaggedValue>

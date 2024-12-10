@@ -29,6 +29,19 @@
         <Column Name="SysGraphAPIResultRows" idref="9ff04481-077b-4a89-b42b-2c47d52b6e53" />
       </ReferedByColumn>
     </Nesting>
+    <Nesting Name="SysGraphAPIError" ExpressionActAsForActions="" id="0f776982-d2de-496f-acad-4e7e3f3594f5">
+      <Class>
+        <Class Name="SysGraphAPIError" idref="a492dbf6-04db-4e40-9261-a22e297c93ac" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Method" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Method" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9904f965-04cc-4814-b2c9-47b4d6e78f3b" />
+        <Column Name="Arguments" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Arguments" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="d682036f-b8f3-4e3b-bcbf-3c10eb730164" />
+        <Column Name="Exception" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Exception" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="7b53f06c-43d0-4577-9fcb-f3817d497336" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysGraphAPIErrors" idref="e4c4bc16-0d37-4024-a4eb-b52aa9987632" />
+      </ReferedByColumn>
+    </Nesting>
   </Nesting>
   <OwnedColumns>
     <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.Search( vSearch )" ExpressionForReadOnly="self.isnull or vSearch.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ead81908-c4dc-4853-8b8a-fcdf5778b7ba">
@@ -138,20 +151,33 @@
         <PlacingContainer idref="68746472-858e-4830-804a-c16ffaff9bae" />
       </PlacingContainer>
     </Column>
+    <Column Name="SysGraphAPIErrors" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIErrors" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="6" id="e4c4bc16-0d37-4024-a4eb-b52aa9987632">
+      <PlacingContainer>
+        <PlacingContainer idref="9c3f3ed6-c2a1-4145-a549-52976e775a1d" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="SysGraphAPIError" idref="0f776982-d2de-496f-acad-4e7e3f3594f5" />
+      </ReferedNesting>
+    </Column>
   </OwnedColumns>
   <PlacingContainer>
     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="75ad7ed6-ecd3-416b-bfca-2c56c7091dfd">
       <ChildContainers>
-        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="f70b4745-a479-4afa-ae77-a9e74d635677" />
-        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="f9e5957a-ca6d-4cf7-9cc2-3ddadd7a457b" />
-        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="818c0665-b264-44ec-a9f2-90a62b47752b" />
-        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="21a90d5d-8546-4881-92af-a8f855da843c" />
-        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="363716ef-2209-4e4b-be54-47a32c0fd5c6">
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="1a423f20-e64a-4b00-ad6d-b4744033e74c">
           <ChildContainers>
-            <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="60d89821-a1c0-4322-94f8-ee2eff13f7e4" />
-            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="vCurrent_ResultRow.IsFolder" Wrap="False" id="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
-            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="68746472-858e-4830-804a-c16ffaff9bae" />
-            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="4413d02f-6b32-4787-9262-c87ce4028ef3" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="363716ef-2209-4e4b-be54-47a32c0fd5c6">
+              <ChildContainers>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="f70b4745-a479-4afa-ae77-a9e74d635677" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="f9e5957a-ca6d-4cf7-9cc2-3ddadd7a457b" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="818c0665-b264-44ec-a9f2-90a62b47752b" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="21a90d5d-8546-4881-92af-a8f855da843c" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="60d89821-a1c0-4322-94f8-ee2eff13f7e4" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="vCurrent_ResultRow.IsFolder" Wrap="False" id="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="68746472-858e-4830-804a-c16ffaff9bae" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="4413d02f-6b32-4787-9262-c87ce4028ef3" />
+              </ChildContainers>
+            </PlacingContainer>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="9c3f3ed6-c2a1-4145-a549-52976e775a1d" />
           </ChildContainers>
         </PlacingContainer>
         <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="True" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
