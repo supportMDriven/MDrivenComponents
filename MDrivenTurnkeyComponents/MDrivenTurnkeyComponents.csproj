@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MDrivenMergeable\Office365\**" />
+    <EmbeddedResource Remove="MDrivenMergeable\Office365\**" />
+    <None Remove="MDrivenMergeable\Office365\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="MDrivenMergeable\AccountViewOverride\FreeStandingLogin.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Actions.actions" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\AppHome.spans" />
@@ -29,7 +35,6 @@
     <Folder Include="EXT_Components\Cards\" />
     <Folder Include="EXT_Components\SharepointDocumentsInteractionWeb\" />
     <Folder Include="EXT_Components\PivotDataGrid\" />
-    <Folder Include="MDrivenMergeable\Office365\" />
     <Folder Include="MDrivenSnippets\" />
   </ItemGroup>
 
