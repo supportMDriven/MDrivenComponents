@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="ForASPNETIdentity" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.55132821597851" Id="7f5d5bb1-210b-4e82-9068-db661712522a">
+<Diagram Name="ForASPNETIdentity" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0.952380952380948" Id="7f5d5bb1-210b-4e82-9068-db661712522a">
   <PlacedClass>
     <PlacedClass ClassId="d463013a-d624-45c4-80fd-73d63fd488fa" Color="1692800256" LastKnownName="SysUserClaim" PickedFeatureVisibility="ShowAll" RenderedHeight="97" RenderedWidth="109" ShowAttributes="False" ShowMethods="False" Size="1" x="720" y="512" id="2427c751-c7cf-4d98-ba69-a93848448e8e">
       <AssociationEndConnection>
@@ -90,6 +90,18 @@
         <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
       </Class>
     </PlacedClass>
+    <PlacedClass ClassId="a492dbf6-04db-4e40-9261-a22e297c93ac" Color="-922779648" LastKnownName="SysGraphAPIError" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="138" ShowAttributes="False" ShowMethods="False" Size="1" x="112" y="936" id="64234629-8642-432a-9ea8-45b18cdf47ed">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="24" y="0" id="f036a32c-7c4a-474a-ae57-c8346e873f97">
+          <AssociationEnd>
+            <AssociationEnd Name="SysGraphAPIErrors" idref="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="SysGraphAPIError" idref="a492dbf6-04db-4e40-9261-a22e297c93ac" />
+      </Class>
+    </PlacedClass>
     <PlacedClass ClassId="38553568-7d6a-4c34-9438-9f599d552420" Color="-922779648" LastKnownName="SysGraphAPI" PickedFeatureVisibility="ShowAll" RenderedHeight="227" RenderedWidth="190" ShowAttributes="False" ShowMethods="False" Size="1" x="304" y="576" id="649eee3d-65c9-4d91-bb73-790f64ffc09d">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="5a9e9bc9-c230-4504-a4fb-5286c1a58310">
@@ -129,6 +141,18 @@
             <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-89.5" y="72" id="5f3cbe62-8b68-4910-8d97-4420d8f920ac">
               <AssociationEnd>
                 <AssociationEnd Name="SysGraphAPIResultUsers" idref="67bb9d4b-2850-4358-8ce5-ca4872d65289" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-72" y="227" id="ef8b96de-8de8-4cfc-9d04-6703418321f9">
+          <AssociationEnd>
+            <AssociationEnd Name="SysGraphAPI" idref="4fc56259-ab8a-4e0a-a7b3-56d5a17d19fa" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="24" y="0" id="f036a32c-7c4a-474a-ae57-c8346e873f97">
+              <AssociationEnd>
+                <AssociationEnd Name="SysGraphAPIErrors" idref="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5" />
               </AssociationEnd>
             </AssociationEndConnection>
           </next>
@@ -222,7 +246,7 @@
         <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="cefde719-fab1-4589-a948-5e415eec2a0d" Color="-922779648" LastKnownName="SysGraphAPIResultRow" PickedFeatureVisibility="ShowAll" RenderedHeight="191" RenderedWidth="177" ShowAttributes="False" ShowMethods="False" Size="1" x="336" y="816" id="efde853a-4432-4a27-87a9-7b29c93bbdc5">
+    <PlacedClass ClassId="cefde719-fab1-4589-a948-5e415eec2a0d" Color="-922779648" LastKnownName="SysGraphAPIResultRow" PickedFeatureVisibility="ShowAll" RenderedHeight="191" RenderedWidth="177" ShowAttributes="False" ShowMethods="False" Size="1" x="336" y="856" id="efde853a-4432-4a27-87a9-7b29c93bbdc5">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.771828046206905" LabelDistance="18.0639858382549" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="0f5358ef-a589-40e3-9fee-6b0f39c684f0">
           <AssociationEnd>

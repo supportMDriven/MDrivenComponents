@@ -67,6 +67,20 @@
         <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
       </Association>
     </Class>
+    <Association Name="" EffectiveName="SysGraphAPIErrorSysGraphAPIErrorsSysGraphAPISysGraphAPI" id="2e5c0813-68bf-4df0-a25a-9580c9cb8f81">
+      <AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4fc56259-ab8a-4e0a-a7b3-56d5a17d19fa">
+          <Participant>
+            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPIErrors" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5">
+          <Participant>
+            <Class Name="SysGraphAPIError" idref="a492dbf6-04db-4e40-9261-a22e297c93ac" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="305f131d-d82d-49fa-8735-f894e1d58636">
       <Feature>
         <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
@@ -713,6 +727,37 @@
           </Type>
         </Attribute>
       </Feature>
+    </Class>
+    <Class Name="SysGraphAPIError" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="a492dbf6-04db-4e40-9261-a22e297c93ac">
+      <Feature>
+        <Attribute Name="Method" Multiplicity="" Visibility="Public" id="60a13b24-4667-413d-9853-b8b055b93792">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Arguments" Multiplicity="" Visibility="Public" id="f175614f-dca9-47b9-aa7c-8ff30e703aa6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Exception" Multiplicity="" Visibility="Public" id="fa98fe5c-e5c9-4750-8208-2cc31cb7aede">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
     </Class>
     <Association Name="" EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser" id="acbe9a76-8505-4796-a7d1-128dc0d52467">
       <AssociationEnd>
