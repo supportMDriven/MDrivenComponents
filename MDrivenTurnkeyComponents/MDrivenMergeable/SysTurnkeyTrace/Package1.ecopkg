@@ -63,6 +63,9 @@
           </Type>
         </Attribute>
       </Feature>
+      <Superclass>
+        <Class Name="SysSuperClass" idref="dc7d180a-7a07-4524-9f62-4a89e100e6b8" />
+      </Superclass>
       <TaggedValue>
         <TaggedValue Tag="AutoFormClass" Value="Skip" />
         <TaggedValue Tag="Eco.DefaultColor" Value="-922751019" />
@@ -96,6 +99,9 @@
           </Type>
         </Attribute>
       </Feature>
+      <Superclass>
+        <Class Name="SysSuperClass" idref="dc7d180a-7a07-4524-9f62-4a89e100e6b8" />
+      </Superclass>
     </Class>
     <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="dc7d180a-7a07-4524-9f62-4a89e100e6b8">
       <Feature>
