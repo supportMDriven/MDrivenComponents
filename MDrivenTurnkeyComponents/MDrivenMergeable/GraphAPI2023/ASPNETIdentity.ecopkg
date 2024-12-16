@@ -62,7 +62,7 @@
         </Attribute>
       </Feature>
     </Class>
-    <Association Name="" EffectiveName="SysGraphAPIResultRowSysGraphAPIResultRowSysGraphAPIResultRowField" id="0888619e-0a77-4200-96c6-8f6ba867e31e">
+    <Association Name="" EffectiveName="SysGraphAPIResultRowSysGraphAPIResultRowSysGraphAPIResultRowFieldSysGraphAPIResultRowFields" id="0888619e-0a77-4200-96c6-8f6ba867e31e">
       <AssociationEnd>
         <AssociationEnd Name="" EffectiveName="SysGraphAPIResultRow" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c74fdfee-f6f5-4515-b56f-8fbd3ece889a">
           <Participant>

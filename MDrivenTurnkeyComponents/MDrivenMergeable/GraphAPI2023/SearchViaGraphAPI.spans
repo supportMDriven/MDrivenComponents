@@ -189,7 +189,7 @@
         <PlacingContainer idref="29ddc69c-2884-483b-b382-df4d76066420" />
       </PlacingContainer>
     </Column>
-    <Column Name="Patch" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vCurrent_ResultRow.PatchField(vFieldName,vFieldValue)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="95eee462-d901-421c-a5ef-a7e3d3ed626d">
+    <Column Name="Patch" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="let res=vCurrent_ResultRow.PatchField(vFieldName,vFieldValue) in&#xD;&#xA;(&#xD;&#xA; (res='ok')-&gt;casetruefalse(vPatchButtonStyle:='green',vPatchButtonStyle:='red')&#xD;&#xA;)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PCSelfAlign="End" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="vPatchButtonStyle" StyleRefIsExpression="True" XPos="0" YPos="0" id="95eee462-d901-421c-a5ef-a7e3d3ed626d">
       <PlacingContainer>
         <PlacingContainer idref="29ddc69c-2884-483b-b382-df4d76066420" />
       </PlacingContainer>
@@ -243,6 +243,7 @@
     <SpanVariable Name="vFieldValue" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vFileName" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vFolderName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vPatchButtonStyle" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vSearch" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vThumbnailUrl" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vUploadedFile" InitialValue="" TypeName="Blob" UserData="" />

@@ -110,4 +110,45 @@
   <Symbol Name="triggermethod" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='Tr'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="TriggerMethodSymbolID" />
   <Symbol Name="constrainedclass" XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;" Id="ConstraintsSymbolID" />
   <AccessGroup Name="IsLoggedIn" ActAsInterestGroup="False" CodeComment="" EnableExpression="SysSingleton.oclSingleton.CurrentUser-&gt;notempty" ViewEnableExpression="" VisibleExpression="SysSingleton.oclSingleton.CurrentUser-&gt;notempty" Id="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+  <StylesInModel id="6c36a69c-e214-4ad6-87f2-a9a56bd7530b">
+    <StyleColorProperties>
+      <StyleColorProperties A="255" Name="red" B="38" G="72" R="216" id="113ccadc-8e0e-42df-8622-edadad731a84" />
+      <StyleColorProperties A="255" Name="green" B="59" G="246" R="11" id="32a6422c-2927-4992-9a8e-ab3ff8237506" />
+    </StyleColorProperties>
+    <StyleDefinitions>
+      <StyleDefinition Name="green" id="1478eb2a-c435-45a1-aba9-b6573215a8b2">
+        <StyleTargets>
+          <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="3443b26b-3ce3-4d28-9f22-ca3357c779c5">
+            <StyleColorPropertiesFill>
+              <StyleColorProperties Name="green" idref="32a6422c-2927-4992-9a8e-ab3ff8237506" />
+            </StyleColorPropertiesFill>
+            <StyleTargetType>
+              <StyleTargetType Name="componentcontent" idref="componentcontent" />
+            </StyleTargetType>
+          </StyleTarget>
+        </StyleTargets>
+      </StyleDefinition>
+      <StyleDefinition Name="red" id="d3ac84b6-a031-418c-9cc2-5d9439be4c8b">
+        <StyleTargets>
+          <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="a036447e-fb24-4a64-8d0a-7148a71f69e1">
+            <StyleColorPropertiesFill>
+              <StyleColorProperties Name="red" idref="113ccadc-8e0e-42df-8622-edadad731a84" />
+            </StyleColorPropertiesFill>
+            <StyleTargetType>
+              <StyleTargetType Name="componentcontent" idref="componentcontent" />
+            </StyleTargetType>
+          </StyleTarget>
+        </StyleTargets>
+      </StyleDefinition>
+    </StyleDefinitions>
+    <StyleTargetTypes>
+      <StyleTargetType Name="component" id="component" />
+      <StyleTargetType Name="componentcontent" id="componentcontent" />
+      <StyleTargetType Name="componentlabel" id="componentlabel" />
+      <StyleTargetType Name="gridcell" id="gridcell" />
+      <StyleTargetType Name="gridcellcontent" id="gridcellcontent" />
+      <StyleTargetType Name="gridheader" id="gridheader" />
+      <StyleTargetType Name="placingcontainer" id="placingcontainer" />
+    </StyleTargetTypes>
+  </StylesInModel>
 </allactions>
