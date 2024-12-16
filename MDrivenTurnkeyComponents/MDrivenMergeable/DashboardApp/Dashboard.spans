@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Dashboard" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="100" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="307990f8-8d7b-4127-8d3b-55fea9902eb0">
+  <Class>
+    <Class Name="Dashboard" idref="56082a8f-3980-4914-8752-c92958f3e539" />
+  </Class>
+  <Nesting>
+    <Nesting Name="DonutChartDetails" ExpressionActAsForActions="" id="4177e17f-f616-48d1-a613-27650010484d">
+      <OwnedColumns>
+        <Column Name="Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.ItemsList('Category', 5)-&gt;at0(Dashboard.AmountsListOne(5)-&gt;indexOf0(self))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="edc635d3-b5bf-4671-9e77-7ac961d11bb1" />
+        <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="934f9c69-8599-4b0e-af4d-87c06450dcbe" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="DonutChart" idref="ff18c17f-a3f9-410d-ab5c-4b6a343003ea" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="LineChartDetails" ExpressionActAsForActions="" id="3b4e32bd-b667-4791-b419-ed34635ffbf2">
+      <OwnedColumns>
+        <Column Name="Period" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.DatesList(15)-&gt;at0(Dashboard.AmountsListOne(15)-&gt;indexOf0(self))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b45bf313-f5cd-49af-93bf-bd216e1ca4a2" />
+        <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self + Dashboard.RandomNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="40e1275b-00b3-4003-b3e3-93904024d637" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="LineChart" idref="c6270fda-0020-49ce-8210-a874db1df1a6" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="BarChartDetails" ExpressionActAsForActions="" id="95f1dbf1-86e4-497a-811a-c3a0cdc3c85a">
+      <OwnedColumns>
+        <Column Name="Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.ItemsList('Item', 15)-&gt;at0(Dashboard.AmountsListOne(15)-&gt;indexOf0(self))" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ad969110-d941-4c95-bcab-7dff29a44330" />
+        <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self + Dashboard.RandomNumber" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="81fcf64b-387f-4a7b-9429-06af16b36418" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="BarChart" idref="ffc71f7a-59e6-4b36-9e71-8aa89f0428df" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ColumnChartDetails" ExpressionActAsForActions="" id="a15e4f96-6193-4f6f-a76f-3ae662868d8d">
+      <OwnedColumns>
+        <Column Name="Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.ItemsList('Item', 15)-&gt;at0(Dashboard.AmountsListTwo(15)-&gt;indexOf0(self))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4a121d7e-2f7e-4565-a46c-559cb4a6f81c" />
+        <Column Name="Value1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self + Dashboard.RandomNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f749ab15-57b7-4053-8e29-e3ce1eaa417e" />
+        <Column Name="Value2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self + Dashboard.RandomNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="72bfbe80-95a1-4e70-bf7d-a22e3eedc638" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ColumnChart" idref="7bbb4f52-f2c1-47c1-bfed-7bc8177bfddc" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="PerformanceChartDetails" ExpressionActAsForActions="" id="9fd0d603-4501-4b6f-bbd9-5c2723748f23">
+      <OwnedColumns>
+        <Column Name="Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if vFilter='Today' then&#xD;&#xA;  Dashboard.NumbersList(15, 22)-&gt;collect(i|i.asString)-&gt;at0(Dashboard.AmountsListOne(15)-&gt;indexOf0(self))&#xD;&#xA;else&#xD;&#xA;  if vFilter='This Month' then&#xD;&#xA;    Dashboard.NumbersList(15, 29)-&gt;collect(i|i.asString)-&gt;at0(Dashboard.AmountsListOne(15)-&gt;indexOf0(self))&#xD;&#xA;  else&#xD;&#xA;    if vFilter='This Year' then&#xD;&#xA;      Dashboard.NumbersList(15, 11)-&gt;collect(i|i.asString)-&gt;at0(Dashboard.AmountsListOne(15)-&gt;indexOf0(self))&#xD;&#xA;    else&#xD;&#xA;      Dashboard.DatesList(15)-&gt;at0(Dashboard.AmountsListOne(15)-&gt;indexOf0(self))&#xD;&#xA;    endif&#xD;&#xA;  endif&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c729e62d-5336-479e-b4e2-62910a3e0990" />
+        <Column Name="Value1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self + Dashboard.RandomNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="17a62299-5072-4c0f-9bd7-d13b454ba4a4" />
+        <Column Name="Value2" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self + Dashboard.RandomNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="fc29fdf9-4004-40ae-b5d9-a78e56c08424" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="PerformanceChart" idref="3c3e3818-efd7-4298-afca-17531875f48a" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="DonutChart" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.AmountsListOne(5)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="1" YPos="1" id="ff18c17f-a3f9-410d-ab5c-4b6a343003ea">
+      <PlacingContainer>
+        <PlacingContainer idref="1fc45776-86c2-44fd-97e1-3389274913e1" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="DonutChartDetails" idref="4177e17f-f616-48d1-a613-27650010484d" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="DonutChart" />
+        <TaggedValue Tag="Angular_Ext_Component" Value="DonutChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="PerformanceChart" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="Dashboard.AmountsListOne(15)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="1" YPos="19" id="3c3e3818-efd7-4298-afca-17531875f48a">
+      <PlacingContainer>
+        <PlacingContainer idref="88b5c87d-6cd0-44a9-888d-bb71a418092d" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="PerformanceChartDetails" idref="9fd0d603-4501-4b6f-bbd9-5c2723748f23" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="PerformanceChart" />
+        <TaggedValue Tag="Angular_Ext_Component" Value="PerformanceChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="RevenueCardHeading" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Net Revenue'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="1" id="6abbcda0-05c8-401c-8981-23334717253d">
+      <PlacingContainer>
+        <PlacingContainer Name="RevenueCard" idref="33ba934d-bbaa-4512-8fc3-70b78ec37391" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RevenueCardStat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if Dashboard.OclSgn.Ratio&gt; 0 then&#xD;&#xA;  String.format('{0:P0} over today',Dashboard.OclSgn.Ratio)&#xD;&#xA;else&#xD;&#xA; '-'&#xD;&#xA;endif " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="2" id="cc143d4b-3aaa-4cee-aadd-2dcec10f4d12">
+      <PlacingContainer>
+        <PlacingContainer Name="RevenueCard" idref="33ba934d-bbaa-4512-8fc3-70b78ec37391" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RevenueCardValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="String.format('{0:N0} Ugx', Dashboard.OclSgn.AmountOne)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 White" XPos="1" YPos="3" id="f50952f9-317f-4a45-9b0c-37bfa45c9764">
+      <PlacingContainer>
+        <PlacingContainer Name="RevenueCard" idref="33ba934d-bbaa-4512-8fc3-70b78ec37391" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ExpenditureCardHeading" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Expenditure'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="1" id="742f23d8-3317-4f75-9da3-f1a97d5721fc">
+      <PlacingContainer>
+        <PlacingContainer Name="ExpensesCard" idref="1d1d2a35-567d-4887-936f-67577c55e1fb" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ExpenditureCardValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="String.format('{0:N0} Ugx', Dashboard.OclSgn.AmountTwo)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 White" XPos="1" YPos="3" id="e450b16d-3a45-42db-b04c-73b312b46ec1">
+      <PlacingContainer>
+        <PlacingContainer Name="ExpensesCard" idref="1d1d2a35-567d-4887-936f-67577c55e1fb" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ExpenditureCardStat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if Dashboard.OclSgn.Ratio&gt; 0 then&#xD;&#xA;String.format('{0:P0} over today', Dashboard.OclSgn.Ratio)&#xD;&#xA;else&#xD;&#xA;'-'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="2" id="6171a9e6-7d6c-48db-8be6-3a0176bd5948">
+      <PlacingContainer>
+        <PlacingContainer Name="ExpensesCard" idref="1d1d2a35-567d-4887-936f-67577c55e1fb" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="OrderCardHeading" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'New Orders'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="1" id="6d6db4d2-481d-42ac-ae18-8bc194a5537f">
+      <PlacingContainer>
+        <PlacingContainer Name="OrdersCard" idref="c41ed548-513a-4769-a67d-6214164f78ae" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="OrderCardValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.OclSgn.Number" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 White" XPos="1" YPos="3" id="a068f9f7-2f2b-4751-9988-3830cbb006ea">
+      <PlacingContainer>
+        <PlacingContainer Name="OrdersCard" idref="c41ed548-513a-4769-a67d-6214164f78ae" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="OrderCardStat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if Dashboard.OclSgn.Ratio&gt; 0 then&#xD;&#xA;  String.format('{0:P0} more vs yesterday', Dashboard.OclSgn.Ratio)&#xD;&#xA;else&#xD;&#xA; '-'&#xD;&#xA;endif " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="2" id="0df598b6-5010-4c59-8d3f-16efea04b1f7">
+      <PlacingContainer>
+        <PlacingContainer Name="OrdersCard" idref="c41ed548-513a-4769-a67d-6214164f78ae" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CustomerCardValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.OclSgn.Number" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 White" XPos="1" YPos="3" id="2599db2c-b3b5-4e89-a207-ac57678207b4">
+      <PlacingContainer>
+        <PlacingContainer Name="CustomersCard" idref="91acebe3-f92e-4c21-9cde-9a95e3b930b8" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CustomerCardHeading" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'New Customers'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="1" id="52497a30-1fce-445d-a6db-c3f23dcb7f64">
+      <PlacingContainer>
+        <PlacingContainer Name="CustomersCard" idref="91acebe3-f92e-4c21-9cde-9a95e3b930b8" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CustomerCardStat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if Dashboard.OclSgn.Ratio&gt; 0 then&#xD;&#xA;String.format('{0:P0}', Dashboard.OclSgn.Ratio)&#xD;&#xA;else&#xD;&#xA;'-'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="2" id="134c7376-c5fb-49bf-a64a-ddc8a7ea9787">
+      <PlacingContainer>
+        <PlacingContainer Name="CustomersCard" idref="91acebe3-f92e-4c21-9cde-9a95e3b930b8" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ProfitCardValue" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="String.format('{0:N0} Ugx',Dashboard.OclSgn.AmountOne)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 White" XPos="1" YPos="3" id="39edf0d4-0c7a-4d92-9630-e41c345a171d">
+      <PlacingContainer>
+        <PlacingContainer Name="ProfitCard" idref="1043d8db-f288-490a-9bb4-8ccbf63af68b" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ProfitCardHeading" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Profit'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="1" id="78814074-f481-4825-ad14-93562da46eec">
+      <PlacingContainer>
+        <PlacingContainer Name="ProfitCard" idref="1043d8db-f288-490a-9bb4-8ccbf63af68b" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ProfitCardStat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if Dashboard.OclSgn.Ratio&gt; 0 then&#xD;&#xA;String.format('{0:P0}', Dashboard.OclSgn.Ratio)&#xD;&#xA;else&#xD;&#xA;'-'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="White" XPos="1" YPos="2" id="09cd8392-1d62-49a5-bcb5-f616223e434e">
+      <PlacingContainer>
+        <PlacingContainer Name="ProfitCard" idref="1043d8db-f288-490a-9bb4-8ccbf63af68b" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="LineChart" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="Dashboard.AmountsListOne(15)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="1" YPos="19" id="c6270fda-0020-49ce-8210-a874db1df1a6">
+      <PlacingContainer>
+        <PlacingContainer idref="fcdacdc8-9ce1-4899-baa9-8af9287413ee" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="LineChartDetails" idref="3b4e32bd-b667-4791-b419-ed34635ffbf2" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="LineChart" />
+        <TaggedValue Tag="Angular_Ext_Component" Value="LineChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="BarChart" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.AmountsListOne(15)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="ffc71f7a-59e6-4b36-9e71-8aa89f0428df">
+      <PlacingContainer>
+        <PlacingContainer idref="3fe55f96-56a3-4768-aa0e-83fbcfd36e7c" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="BarChartDetails" idref="95f1dbf1-86e4-497a-811a-c3a0cdc3c85a" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="BarChart" />
+        <TaggedValue Tag="Angular_Ext_Component" Value="BarChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="ColumnChart" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.AmountsListTwo(15)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="7bbb4f52-f2c1-47c1-bfed-7bc8177bfddc">
+      <PlacingContainer>
+        <PlacingContainer idref="38c4982f-7899-4cfe-bc4a-06bb3299228c" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="ColumnChartDetails" idref="a15e4f96-6193-4f6f-a76f-3ae662868d8d" />
+      </ReferedNesting>
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="ColumnChart" />
+        <TaggedValue Tag="Angular_Ext_Component" Value="ColumnChart" />
+      </TaggedValue>
+    </Column>
+    <Column Name="GeneratePageData" ActionPeriodicityMillisec="7000" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.Generate" ExpressionForReadOnly="vKeepGenerating=false" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="1" id="bead3772-6083-4f71-b137-f4276178d8fc">
+      <PlacingContainer>
+        <PlacingContainer idref="8288b949-2475-4c1b-8b1d-9413e94da02b" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="vFilter" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCMarginBottom="10" PCMarginLeft="40" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9307b69f-24dc-4fdb-9228-c0e046e6fa71">
+      <ColumnForPickList>
+        <Column Name="FilterOptions" idref="c6e1ced5-0337-4f5e-ba0b-9a4da69fc2c4" />
+      </ColumnForPickList>
+      <PlacingContainer>
+        <PlacingContainer idref="39fead95-1e09-4454-91f0-6e327b1a4100" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="FilterOptions" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Set{'','Today', 'This Month', 'This Year'}" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="c6e1ced5-0337-4f5e-ba0b-9a4da69fc2c4">
+      <PlacingContainer>
+        <PlacingContainer idref="39fead95-1e09-4454-91f0-6e327b1a4100" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="DonutChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="String.format('Sales Overview ({0:N0} Ugx)',Dashboard.OclSgn.AmountOne)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8240c112-397d-462d-b21c-bde94befc137">
+      <PlacingContainer>
+        <PlacingContainer idref="1fc45776-86c2-44fd-97e1-3389274913e1" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="PerformanceChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Annual Business Performance'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="677f3d18-5230-4093-af4d-1d293f4326b8">
+      <PlacingContainer>
+        <PlacingContainer idref="88b5c87d-6cd0-44a9-888d-bb71a418092d" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="LineChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Annual Profit'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="48b19248-1cbd-4c25-a0e9-6997c566e2e8">
+      <PlacingContainer>
+        <PlacingContainer idref="fcdacdc8-9ce1-4899-baa9-8af9287413ee" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="BarChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Inventory Sales Overview'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="2e354951-bedd-461a-8269-dbcd546563e0">
+      <PlacingContainer>
+        <PlacingContainer idref="3fe55f96-56a3-4768-aa0e-83fbcfd36e7c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ColumnChart_Title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Yearly Performance'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="acfb6bed-68a5-4276-b057-494fa8adcedc">
+      <PlacingContainer>
+        <PlacingContainer idref="38c4982f-7899-4cfe-bc4a-06bb3299228c" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Year" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="2024" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="898f8551-1fd0-4a0f-8e0e-05951ef45dd8">
+      <PlacingContainer>
+        <PlacingContainer idref="88b5c87d-6cd0-44a9-888d-bb71a418092d" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Month" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'October'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="2a296769-1a32-46eb-98e7-d8312534632a">
+      <PlacingContainer>
+        <PlacingContainer idref="88b5c87d-6cd0-44a9-888d-bb71a418092d" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="Dashboard.OclSgn.Number.notNull" Wrap="False" id="2a57d85f-9847-4296-9ae6-066a854b0c22">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="8288b949-2475-4c1b-8b1d-9413e94da02b" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginTop="20" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="b24b6112-8151-4bcd-9bb3-b69658e32726">
+          <ChildContainers>
+            <PlacingContainer Name="RevenueCard" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceAround" Reverse="False" SelfAlign="NotSet" StyleDesign="NewStyle2" StyleExpression="'Card Blue'" Type="Column" VisibleExpression="" Wrap="False" id="33ba934d-bbaa-4512-8fc3-70b78ec37391" />
+            <PlacingContainer Name="ExpensesCard" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceAround" Reverse="False" SelfAlign="NotSet" StyleDesign="NewStyle2" StyleExpression="'Card Red'" Type="Column" VisibleExpression="" Wrap="False" id="1d1d2a35-567d-4887-936f-67577c55e1fb" />
+            <PlacingContainer Name="OrdersCard" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceAround" Reverse="False" SelfAlign="NotSet" StyleDesign="NewStyle2" StyleExpression="'Card Orange'" Type="Column" VisibleExpression="" Wrap="False" id="c41ed548-513a-4769-a67d-6214164f78ae" />
+          </ChildContainers>
+        </PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginLeft="20" MarginRight="20" MarginTop="20" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="434e9929-6707-442f-a0f5-a3e02d5cb784">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" Reverse="False" SelfAlign="Stretch" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="1fc45776-86c2-44fd-97e1-3389274913e1" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="3e90c4d1-d2da-49ce-a6b9-1782813d5698">
+              <ChildContainers>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="fcdacdc8-9ce1-4899-baa9-8af9287413ee" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="7a186405-dad6-4465-a85a-ae205d132e2a">
+                  <ChildContainers>
+                    <PlacingContainer Name="CustomersCard" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'Card Green'" Type="Column" VisibleExpression="" Wrap="False" id="91acebe3-f92e-4c21-9cde-9a95e3b930b8" />
+                    <PlacingContainer Name="ProfitCard" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'Card Purple'" Type="Column" VisibleExpression="" Wrap="False" id="1043d8db-f288-490a-9bb4-8ccbf63af68b" />
+                  </ChildContainers>
+                </PlacingContainer>
+              </ChildContainers>
+            </PlacingContainer>
+          </ChildContainers>
+        </PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="39fead95-1e09-4454-91f0-6e327b1a4100" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="Start" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MarginLeft="50" MarginRight="50" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="88b5c87d-6cd0-44a9-888d-bb71a418092d" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MarginLeft="50" MarginRight="50" MarginTop="30" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="2953b469-4988-47c0-9093-037109b7f041">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MinSize="400" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="3fe55f96-56a3-4768-aa0e-83fbcfd36e7c" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MinSize="400" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="38c4982f-7899-4cfe-bc4a-06bb3299228c" />
+          </ChildContainers>
+        </PlacingContainer>
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vFilter" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vKeepGenerating" InitialValue="true" TypeName="Boolean" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="InitialZoom" Value="49" />
+    <TaggedValue Tag="HideSidebar" Value="True" />
+  </TaggedValue>
+</Span>

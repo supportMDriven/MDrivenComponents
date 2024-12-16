@@ -17,6 +17,9 @@
 
   <ItemGroup>
     <None Remove="MDrivenMergeable\AccountViewOverride\FreeStandingLogin.spans" />
+    <None Remove="MDrivenMergeable\DashboardApp\Actions.actions" />
+    <None Remove="MDrivenMergeable\DashboardApp\Dashboard.spans" />
+    <None Remove="MDrivenMergeable\DashboardApp\Index.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Actions.actions" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\AppHome.spans" />
     <None Remove="MDrivenMergeable\FinanceAppDemo\Budget.spans" />
@@ -70,6 +73,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\AccountViewOverride\Actions.actions">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\DashboardApp\Actions.actions">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\DashboardApp\Dashboard.spans">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\DashboardApp\Index.spans">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\FinanceAppDemo\Actions.actions">
       <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
@@ -152,6 +164,9 @@
     <None Include="MDrivenMergeable\AccountViewOverride\Snippets.snippets">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </None>
+    <None Include="MDrivenMergeable\DashboardApp\ModlrProject.mproj">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
+    </None>
     <None Include="MDrivenMergeable\FinanceAppDemo\ModlrProject.mproj">
       <DependentUpon>FinanceAppDemo.ecomdl</DependentUpon>
     </None>
@@ -184,6 +199,18 @@
     </None>
     <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\DashboardApp\Dashboard.ecodiag">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\DashboardApp\documentation.modlrdoc">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\DashboardApp\Package1.ecopkg">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\DashboardApp\Snippets.snippets">
+      <DependentUpon>DashboardApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\FinanceAppDemo\Diagram1.ecodiag">
       <DependentUpon>FinanceApp.ecomdl</DependentUpon>
