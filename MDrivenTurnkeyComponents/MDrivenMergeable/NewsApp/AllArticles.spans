@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AllArticles" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="200" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="0677677c-a7a2-456e-87fe-b296babaa710">
+  <Class>
+    <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Articles1" ExpressionActAsForActions="" id="ee49c6b5-d737-4bed-897c-88ce0f61c8e6">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowArticle" idref="bc3beb37-8dfd-4a39-acee-cd41c33664d5" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="description" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.description" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="2" StyleRef="'NA__TextEllipsis4 NA__TextBreak'" StyleRefIsExpression="True" XPos="1" YPos="0" id="e04c9d2a-d54e-4cec-8ee9-91a79427fb1a">
+          <PlacingContainer>
+            <PlacingContainer idref="d0b237c5-da56-4916-82d5-26f0acaf1658" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="author" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="if self.author.Trim.isNullOrEmpty then&#xD;&#xA;''&#xD;&#xA;else&#xD;&#xA;'By '+self.author&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCMaxSize="150" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="'TextGrey NA__TextEllipsis'" StyleRefIsExpression="True" XPos="1" YPos="0" id="36e2e6b5-0b6d-4280-b295-18f635cabf72">
+          <PlacingContainer>
+            <PlacingContainer idref="46c79aab-75b7-45cd-9cf1-4f51663beff2" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.title" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="3" StyleRef="'h6 NA__TextEllipsis2'" StyleRefIsExpression="True" XPos="1" YPos="0" id="c5c5d9a3-3646-4601-8c75-f4216cf38588">
+          <PlacingContainer>
+            <PlacingContainer idref="90def125-8d42-4e94-90ee-61fa5f5b391f" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="urlToImage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.urlToImage" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="1" YPos="0" id="9bd946e0-11de-487b-acca-312c14341582">
+          <PlacingContainer>
+            <PlacingContainer idref="9aa84770-ad34-4f43-b057-4267bbb451a4" />
+          </PlacingContainer>
+          <TaggedValue>
+            <TaggedValue Tag="DataIsImageUrl" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="publishedAt" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.publishedAt" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="TextGrey" XPos="1" YPos="0" id="153f9b2f-c19d-4fda-95e3-d72cd2f64223">
+          <PlacingContainer>
+            <PlacingContainer idref="46c79aab-75b7-45cd-9cf1-4f51663beff2" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Read" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="ButtonLight" XPos="1" YPos="1" id="802bfa9a-a793-4066-b894-de35cd814043">
+          <ActionToExecute>
+            <ClassAction Name="ShowArticle" idref="bc3beb37-8dfd-4a39-acee-cd41c33664d5" />
+          </ActionToExecute>
+          <PlacingContainer>
+            <PlacingContainer idref="b8ed1186-8310-44d9-a1c5-54cdb36369fe" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="d461a9a4-0806-45be-ae60-32cf69b1c842">
+          <ChildContainers>
+            <PlacingContainer Name="Card" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="1" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'Card'" Type="Column" VisibleExpression="" Wrap="True" id="f551e952-377b-4615-84d0-d03f5df797b0">
+              <ChildContainers>
+                <PlacingContainer Name="CardTitle" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="be9f063f-855c-4622-93f8-7e10c844a080">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginLeft="10" MarginRight="10" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="90def125-8d42-4e94-90ee-61fa5f5b391f" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="CardImage" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="60b3a83b-5a06-48f9-89c5-74e586aa6a84">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MaxSize="348" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="9aa84770-ad34-4f43-b057-4267bbb451a4" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="CardDescription" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="15e073d4-ae09-4c29-9b4e-2c6964422850">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="d0b237c5-da56-4916-82d5-26f0acaf1658" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="e7ed2bfe-1a1d-4b43-8d4d-7ecd6629a064">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="b8ed1186-8310-44d9-a1c5-54cdb36369fe" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="CardFooter" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'CardBottom'" Type="Column" VisibleExpression="" Wrap="False" id="7c7b9ea9-18be-498e-a44d-cf5e869fe9ed">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="46c79aab-75b7-45cd-9cf1-4f51663beff2" />
+                  </ChildContainers>
+                </PlacingContainer>
+              </ChildContainers>
+            </PlacingContainer>
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="Results" idref="0ca7bc79-75b6-4d5d-86f1-1eadfd1f7ebb" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="Pages" ExpressionActAsForActions="" id="a6fed41f-3399-47b2-9b92-fd8c0132e1e5">
+      <Class>
+        <Class Name="Pagination" idref="6141dabf-871d-4d4b-b8c4-66b38867d8da" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="PageNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekerPage:=self.PageNumber-1;selfVM.Search;Pagination.Paginate(vSeekerPage+1, vSeekerPageCount, 3)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c4202014-fdf4-47b7-a241-c9e27740a426">
+          <PlacingContainer>
+            <PlacingContainer Name="Page" idref="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="PageNumber_Style" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if (self.PageNumber-1) = vSeekerPage then&#xD;&#xA;'PageActive'&#xD;&#xA;else&#xD;&#xA;'Page'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="0040bb29-c67e-4826-9099-e2c63cc05369">
+          <PlacingContainer>
+            <PlacingContainer Name="Page" idref="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="PageNumber_Label" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.PageNumber&#xD;&#xA;" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="377a5045-6746-4e6a-b09b-d406ba272b95">
+          <PlacingContainer>
+            <PlacingContainer Name="Page" idref="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="PageNumber_Visible" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.PageNumber&gt;0" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="4128b170-8d1e-482e-8666-85885ba4124b">
+          <PlacingContainer>
+            <PlacingContainer Name="Page" idref="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="BlankPage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'...'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="0b0738ed-76ce-4096-90a0-86c10fa3e07f">
+          <PlacingContainer>
+            <PlacingContainer Name="Page" idref="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="BlankPage_Visible" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.PageNumber=0" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PCIndex="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="b36b3f0a-aa80-43fa-8582-acf175d7aba5">
+          <PlacingContainer>
+            <PlacingContainer Name="Page" idref="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="PaginationWrapper" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MarginBottom="70" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="e5ca2062-4c98-4f13-ba35-be2553845b6b">
+          <ChildContainers>
+            <PlacingContainer Name="Page" AlignContent="Start" AlignItem="Center" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="aa7cb148-a674-4efd-a11a-a37c16ae5891" />
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="NewColumn" idref="3e69c329-0605-47b0-86d0-19c21a3a2990" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="seekauthor" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="86772646-09b5-440e-bdf9-d7cba0dadf34">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.author.sqllikecaseinsensitive(vSeekParamWildcard) or (a.author=vSeekParam))-&gt;orderby(a|a.author)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a4447a43-0caa-41aa-9c20-9df386dbe851" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.author" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seektitle" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="bfbbf0af-8c50-4d81-912f-0f0b34bc2ef1">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.title.sqllikecaseinsensitive(vSeekParamWildcard) or (a.title=vSeekParam))-&gt;orderby(a|a.title)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7ab91498-c988-4ed7-ab18-602f43639ed1" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.title" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekdescription" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="168ecaef-60e8-44b1-b3cd-ca90625e92d8">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.url.sqllikecaseinsensitive(vSeekParamWildcard) or (a.url=vSeekParam))-&gt;orderby(a|a.url)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5436d548-e763-4ac7-b800-f5daeb8443fe" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.description" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="33b78651-7773-402f-a605-3cf199d2c4b1">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="24cc420e-be12-47bf-8723-ab7d3a365d68" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="12c07fe5-a359-4b9d-ad84-f186c2f99dde">
+      <PlacingContainer>
+        <PlacingContainer idref="80df553b-782e-42bc-9f1e-5b11da085f3e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';&#xD;&#xA;vSeekerPageLength:=vFilterResults.strToInt;&#xD;&#xA;vShowNoResultsLabel:=false;&#xD;&#xA;selfVM.Search;&#xD;&#xA;vShowNoResultsLabel:=true;&#xD;&#xA;Pagination.Paginate(vSeekerPage+1, vSeekerPageCount, 3)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="8f15a002-951d-42db-a446-72e48b7e9f4c">
+      <PlacingContainer>
+        <PlacingContainer idref="80df553b-782e-42bc-9f1e-5b11da085f3e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="13" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="0ca7bc79-75b6-4d5d-86f1-1eadfd1f7ebb">
+      <PlacingContainer>
+        <PlacingContainer idref="c13b4480-1a57-433a-ad20-0fc095d46fba" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Articles1" idref="ee49c6b5-d737-4bed-897c-88ce0f61c8e6" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if (vSeekerPageCount &gt; 0) then&#xD;&#xA;Pagination.allinstances&#xD;&#xA;else&#xD;&#xA;Pagination.emptyList&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="3e69c329-0605-47b0-86d0-19c21a3a2990">
+      <PlacingContainer>
+        <PlacingContainer idref="c94ac20a-1ba1-4941-92a8-eb3d10b9fffb" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Pages" idref="a6fed41f-3399-47b2-9b92-fd8c0132e1e5" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="PagePaginationFormat" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Pagination.allinstances-&gt;collect(i|i.PageNumber.asString)-&gt;asCommaList" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="97018862-aa4c-49ce-96e7-63d7805bee4b">
+      <PlacingContainer>
+        <PlacingContainer idref="c5fff009-eb47-4f3e-bdba-ed381887fd23" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="CurrentPage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekerPage + 1" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="964112b2-1dac-4cfe-93a0-0acb03324462">
+      <PlacingContainer>
+        <PlacingContainer idref="c5fff009-eb47-4f3e-bdba-ed381887fd23" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Filter_Results" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vFilterResults" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="14" id="ea61c0a6-e4b3-4079-93fc-d0a3e103037c">
+      <ColumnForPickList>
+        <Column Name="Filter_Results_pickList" idref="5932c5c1-5f6c-4a3a-91a5-7811617e09b3" />
+      </ColumnForPickList>
+      <PlacingContainer>
+        <PlacingContainer idref="c1e7949a-58ce-42b0-be3d-447c58edd664" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Filter_Results_pickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Set{'10', '20', '40', '60', '80', '100'}" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="15" id="5932c5c1-5f6c-4a3a-91a5-7811617e09b3">
+      <PlacingContainer>
+        <PlacingContainer idref="c1e7949a-58ce-42b0-be3d-447c58edd664" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="PresFilter_Results" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Result'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="16" id="784c61df-5a82-4633-99f5-e4b7db7bdc0e">
+      <PlacingContainer>
+        <PlacingContainer idref="c1e7949a-58ce-42b0-be3d-447c58edd664" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="PageSize" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekerPageLength" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="50fd8a83-f823-4325-9a07-872421b739f0">
+      <PlacingContainer>
+        <PlacingContainer idref="c5fff009-eb47-4f3e-bdba-ed381887fd23" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="TotalResults" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekerResultCount" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="4eaadcbe-07b1-45d2-b625-6c6dda5644f8">
+      <PlacingContainer>
+        <PlacingContainer idref="c5fff009-eb47-4f3e-bdba-ed381887fd23" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="NoDataLabel" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'No Results'" ExpressionForReadOnly="" ExpressionForVisible="vShowNoResultsLabel and (vSeekerResultCount=0)" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCMarginLeft="5" PCMarginTop="30" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e70488f8-e463-402d-8726-ecfa88b33cf3">
+      <PlacingContainer>
+        <PlacingContainer idref="c13b4480-1a57-433a-ad20-0fc095d46fba" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="200" MarginLeft="20" MarginRight="20" MarginTop="20" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="f848fbe4-d458-4771-9aa6-a490b378962b">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="c5fff009-eb47-4f3e-bdba-ed381887fd23" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="80df553b-782e-42bc-9f1e-5b11da085f3e" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="c1e7949a-58ce-42b0-be3d-447c58edd664" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="c13b4480-1a57-433a-ad20-0fc095d46fba" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="c94ac20a-1ba1-4941-92a8-eb3d10b9fffb" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vFilterResults" InitialValue="10" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="20" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(Articles1)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vShowNoResultsLabel" InitialValue="false" TypeName="Boolean" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+  </TaggedValue>
+</Span>

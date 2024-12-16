@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AccessTokenViewModel" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="8" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="7da51e14-6250-4618-8556-9e72ed06bb34">
+  <Class>
+    <Class Name="AccessToken" idref="7ee592e0-1b88-4d54-961a-47b3b6f0e050" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Auth" ExpressionActAsForActions="" id="4eadb1bc-cd1a-471a-b8ca-e6455373d23b">
+      <Class>
+        <Class Name="AccessToken" idref="7ee592e0-1b88-4d54-961a-47b3b6f0e050" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="DEFAULTREQUESTHEADERMINUS_User_Agent" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'MDriven/7.0.0'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="82d33195-62d5-4a81-a3f8-67b0eaca2420" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting Name="SourceViewModelClass" ExpressionActAsForActions="" id="9d8443b9-9fda-4aeb-ad25-32447ec5ffaf">
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Split('.'.Chars(0))-&gt;first" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="414bdec1-3208-4c68-a9a4-e70d86adc45b" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Sources_pickList" idref="314ad5f6-ecf6-4b4c-ab38-750f3e651c2b" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowAccessToken" idref="3ca3b9e4-56f8-4a16-b363-220ded9c7cfd" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="APIKey" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.token" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="dfc2d10c-ff73-48d6-a5b6-22bc5d91cc5f">
+      <PlacingContainer>
+        <PlacingContainer idref="02097035-0631-4dc8-b1a8-dca7b495368f" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="RequestsLeft" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.RequestsLeft" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PCMarginTop="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="c091d3ab-9974-4e5d-a2d1-d1f3db208bd4">
+      <PlacingContainer>
+        <PlacingContainer idref="02097035-0631-4dc8-b1a8-dca7b495368f" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="SearchTerm" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSearchTerm" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PCMarginTop="10" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="12" id="35bb3566-1b5a-41c7-9605-8b2128c4f46e">
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="GetArticles" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="let searchUrl = 'https://newsapi.org/v2/everything?language=en&amp;pageSize=30'+'&amp;apiKey='+self.token in&#xD;&#xA;(&#xD;&#xA;  (not vSource.isNullOrEmpty).whentrue(vSearchUrl := searchUrl + '&amp;domains='+vSource);&#xD;&#xA;  (not vSearchTerm.isNullOrEmpty).whentrue(vSearchUrl := vSearchUrl + '&amp;q='+vSearchTerm);&#xD;&#xA;  (not vSort.isNullOrEmpty).whentrue(vSearchUrl := vSearchUrl + '&amp;sortBy=' + vSort) &#xD;&#xA;&#xD;&#xA;);&#xD;&#xA;vPage:=1;&#xD;&#xA;vResult:=selfVM.RestGet(vSearchUrl, '', '', 'Auth');&#xD;&#xA;self.RequestsLeft:=self.RequestsLeft - 1;&#xD;&#xA;selfVM.Save" ExpressionForReadOnly="(self.Token.IsNullOrEmpty) or (self.Token.Trim.Length &lt; 1) or (vSource.IsNullOrEmpty)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="4" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="654f23b7-68ef-4e65-ad70-9add69518cc6">
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Source" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSource" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="f7322f8d-46b3-4d77-afba-f9f66a0e68b9">
+      <ColumnForPickList>
+        <Column Name="Sources_pickList" idref="314ad5f6-ecf6-4b4c-ab38-750f3e651c2b" />
+      </ColumnForPickList>
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="NewsArticles" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vResult" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="15" StyleRef="" XPos="2" YPos="3" id="e6d27b7f-c001-4e6c-a977-b0805894ebca">
+      <PlacingContainer>
+        <PlacingContainer idref="4789e648-6bf1-4e49-9776-f1937804eadd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Sources_pickList" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Set{'google.com', ' techcrunch.com', 'bbc.co.uk'}" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="12" id="314ad5f6-ecf6-4b4c-ab38-750f3e651c2b">
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="SourceViewModelClass" idref="9d8443b9-9fda-4aeb-ad25-32447ec5ffaf" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="SortBy" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSort" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="14" id="3a4a70c0-a2f5-4564-81c5-52d89f56e196">
+      <ColumnForPickList>
+        <Column Name="SortBy_pickList" idref="1c441c4a-3e19-4aa7-8c04-e4e37a5cc57a" />
+      </ColumnForPickList>
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="LoadNextPage" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vPage := vPage + 1;&#xD;&#xA;vResult:=selfVM.RestGet(vSearchUrl + '&amp;page='+vPage.asString, '', '', 'Auth');&#xD;&#xA;self.RequestsLeft:=self.RequestsLeft - 1;&#xD;&#xA;selfVM.Save" ExpressionForReadOnly="(vResult.JsonGetProp('totalResults').strToInt.Divide(100) = vPage.ToDecimal) or ((vResult.JsonGetProp('totalResults').strToInt.Divide(100) - vResult.JsonGetProp('totalResults').strToInt.Divide(100).ToInt32) = 0) or (vResult.JsonGetProp('totalResults').strToInt &lt; 100)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="13" id="f6901aed-2e2a-4d58-acb9-7d637af0d0f6">
+      <PlacingContainer>
+        <PlacingContainer idref="4789e648-6bf1-4e49-9776-f1937804eadd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ExtractData" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="selfVM.JSonToObjects(APIResult,vResult)" ExpressionForReadOnly="vResult.JSonGetProp('status') &lt;&gt; 'ok'" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="74c9901e-9460-4473-b415-8e5db228dbd9">
+      <PlacingContainer>
+        <PlacingContainer idref="4789e648-6bf1-4e49-9776-f1937804eadd" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Page" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vPage" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="16" id="34a08c8a-3757-4df1-b492-fe4ea2315cf3">
+      <PlacingContainer>
+        <PlacingContainer idref="adb9972c-5268-451e-ab0b-7f77dac2323f" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="SortBy_pickList" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Set{'relevancy', 'popularity', 'publishedAt'}" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="15" id="1c441c4a-3e19-4aa7-8c04-e4e37a5cc57a">
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="SearchUrl" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="vSearchUrl+ '&amp;page='+vPage.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="17" id="c3bba8c9-c4ab-4e43-8f98-c6e237dcc655">
+      <PlacingContainer>
+        <PlacingContainer idref="adb9972c-5268-451e-ab0b-7f77dac2323f" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="ClearSearch" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vPage:=1;&#xD;&#xA;vResult:='';&#xD;&#xA;vSearchTerm:='';&#xD;&#xA;vSearchUrl='';&#xD;&#xA;vSource:=''" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="5" PCMarginTop="5" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="18" id="8c958017-ff9e-4317-98e8-24204f3aa944">
+      <PlacingContainer>
+        <PlacingContainer idref="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="SortValue" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSort" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="97ccedc6-edc2-4daf-ba67-ba8406b409ce">
+      <PlacingContainer>
+        <PlacingContainer idref="02097035-0631-4dc8-b1a8-dca7b495368f" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="NewColumn" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'https://newsapi.org/'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="newsapi.org" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="ec8729e7-c283-4c9b-95ec-91bc89cbaa5f">
+      <PlacingContainer>
+        <PlacingContainer idref="a9d4432e-9e0c-4cf2-9c9e-fde3e4298ec4" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsLink" Value="True" />
+        <TaggedValue Tag="OpenInNewTab" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="NewColumn2" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Get a free API Key from'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCMarginBottom="7" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="cd04cfb2-c3c7-41ee-868b-5b7bace9d534">
+      <PlacingContainer>
+        <PlacingContainer idref="a9d4432e-9e0c-4cf2-9c9e-fde3e4298ec4" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="a0cca171-72aa-44fb-a45f-b55a0a8ffe1e">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="50d0423c-e1e6-4959-9745-0c9abcc1a942">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="a9d4432e-9e0c-4cf2-9c9e-fde3e4298ec4" />
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="02097035-0631-4dc8-b1a8-dca7b495368f" />
+          </ChildContainers>
+        </PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="c41f2d28-8368-41f4-a69f-a9f32ee1a686" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="4789e648-6bf1-4e49-9776-f1937804eadd" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="Start" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="adb9972c-5268-451e-ab0b-7f77dac2323f" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vPage" InitialValue="1" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vResult" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSearchTerm" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSearchUrl" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSort" InitialValue="publishedAt" TypeName="String" UserData="" />
+    <SpanVariable Name="vSource" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

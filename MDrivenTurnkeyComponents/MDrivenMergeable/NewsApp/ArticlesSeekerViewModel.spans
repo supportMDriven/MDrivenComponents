@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ArticlesSeekerViewModel" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b4e3d45f-e470-4795-8182-036e87877867">
+  <Class>
+    <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Articles1" ExpressionActAsForActions="" id="e9a02347-924b-44ef-b34e-05f2ec951a91">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="AsString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e85db4cd-ddbb-4924-8ef9-0bda81d6f272" />
+        <Column Name="author" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.author" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="65e4ffa6-a81e-43cd-9c8d-dcb193d6d63c" />
+        <Column Name="content" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.content" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="09506695-87d4-4ee3-be57-412efa93febf" />
+        <Column Name="description" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.description" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="573e3532-a529-4cec-a0f6-4078543bf281" />
+        <Column Name="publishedAt" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.publishedAt" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f27695b6-0302-4386-a878-c31141931125" />
+        <Column Name="title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.title" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="99d57bd4-c765-43a0-b7dd-2003994c26f8" />
+        <Column Name="url" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.url" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cfda8341-1d36-49e5-bcd5-e7461eb62d42" />
+        <Column Name="urlToImage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.urlToImage" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="678087ab-46a5-4d77-8992-db56b1199359" />
+        <Column Name="APIResult" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.APIResult.asstring" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0ef79ddd-bc45-416b-b55c-3e8dc58a0f00" />
+        <Column Name="source" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.source.asstring" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="84784567-398b-42a4-b471-44c663810066" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Results" idref="32be5042-deb0-497c-831c-66fe014b966f" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="true" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekauthor" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="592a1540-97fd-4b32-9a4e-98f8870513e3">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.author.sqllikecaseinsensitive(vSeekParamWildcard) or (a.author=vSeekParam))-&gt;orderby(a|a.author)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="38252e3d-00d7-4a8b-9fc6-4604e2713f58" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.author" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcontent" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="07c6e21b-4759-4667-b642-bcbbc9fb15bd">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.content.sqllikecaseinsensitive(vSeekParamWildcard) or (a.content=vSeekParam))-&gt;orderby(a|a.content)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="720017e9-8a62-43bb-8828-1adb1a7fde37" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.content" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekdescription" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="c8f7fc93-f659-41e5-b14d-ca57f93ea78f">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.description.sqllikecaseinsensitive(vSeekParamWildcard) or (a.description=vSeekParam))-&gt;orderby(a|a.description)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7bdeecf3-02cc-46a6-855e-eb991d01cb32" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.description" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seektitle" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="b6dae524-057b-4b60-835a-a9f75d05f6e8">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.title.sqllikecaseinsensitive(vSeekParamWildcard) or (a.title=vSeekParam))-&gt;orderby(a|a.title)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f93ad658-8f3a-4d20-960e-c47a87762662" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.title" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekurl" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="af572dcd-daab-472b-bdf7-fe8ee4294275">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.url.sqllikecaseinsensitive(vSeekParamWildcard) or (a.url=vSeekParam))-&gt;orderby(a|a.url)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="54ef2b0c-f815-4faa-a646-a6bdc8986ae9" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.url" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekurlToImage" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="b592aeb6-09ed-4cfa-b208-e4b450e7c82d">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(a|a.urlToImage.sqllikecaseinsensitive(vSeekParamWildcard) or (a.urlToImage=vSeekParam))-&gt;orderby(a|a.urlToImage)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7bbf061f-3267-4d77-ae7f-531b13085263" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Articles1.urlToImage" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="277bf745-37e8-46da-90f2-1df96840a095">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0ca6100d-aa40-4e5a-bd95-c146f819dac0" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2568f9d7-e3cb-4fbc-9b37-8983ea4ceedb">
+      <PlacingContainer>
+        <PlacingContainer idref="4a422031-e24a-46a1-93c3-9f1b79caad25" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="e994850a-a4f6-4be7-9d99-d3bfe405d943">
+      <PlacingContainer>
+        <PlacingContainer idref="4a422031-e24a-46a1-93c3-9f1b79caad25" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Results" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="32be5042-deb0-497c-831c-66fe014b966f">
+      <PlacingContainer>
+        <PlacingContainer idref="1e02ed8c-5c30-411b-9449-94ef3c700820" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Articles1" idref="e9a02347-924b-44ef-b34e-05f2ec951a91" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="f0a2571f-ffd1-4024-93d6-375fbd9a30ce">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="4a422031-e24a-46a1-93c3-9f1b79caad25" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="50" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="1e02ed8c-5c30-411b-9449-94ef3c700820" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(Articles1)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

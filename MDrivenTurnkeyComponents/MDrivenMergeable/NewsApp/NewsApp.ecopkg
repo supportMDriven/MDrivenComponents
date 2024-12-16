@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="NewsApp" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="ae31d652-1ca0-4e8a-8c7b-1e5f67d962c0">
+  <OwnedElement>
+    <Association Name="" EffectiveName="Source1sourceArticles1Articles1" id="209ad45f-58a7-457b-8d8e-1dedde49aac0">
+      <AssociationEnd>
+        <AssociationEnd Name="Articles1" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="6678bbce-290a-418a-9dd0-4bf8259ec2f0">
+          <Participant>
+            <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="source" Aggregation="Composite" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="704d8759-b896-43c7-ab26-49b253c52193">
+          <Participant>
+            <Class Name="Source1" idref="aada3ccc-4338-4396-a350-0018aa12dd11" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="APIResultAPIResultArticles1articles" id="4c035800-bd6c-479e-bbe0-33cd1afd1971">
+      <AssociationEnd>
+        <AssociationEnd Name="APIResult" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a0c6c77c-76a4-43e8-b97b-30ebf778ac01">
+          <Participant>
+            <Class Name="APIResult" idref="6e6e9d86-e7a5-488b-8b71-3639b3c2032f" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="articles" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="4d94b075-a085-4041-ab7d-495d4f3738fe">
+          <Participant>
+            <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Pagination" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="6141dabf-871d-4d4b-b8c4-66b38867d8da">
+      <Feature>
+        <Attribute Name="PageNumber" Multiplicity="" Visibility="Public" id="5aaacad1-5b1a-4580-a83d-85cc716471e2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="Paginate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="cf34a966-3f0a-408e-b964-f094d45404de">
+          <Parameter>
+            <Parameter Name="currentPage" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+            <Parameter Name="pageCount" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+            <Parameter Name="window" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Pagination.allinstances-&gt;delete;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Bag{1..Bag{3,pageCount}-&gt;minValue}-&gt;collect(i|&#xD;&#xA;  let page = Pagination.Create in&#xD;&#xA;  (page.PageNumber:=i) &#xD;&#xA;);&#xD;&#xA;&#xD;&#xA;(currentPage &gt; (window + 2)).whentrue(&#xD;&#xA;  let page = Pagination.Create in&#xD;&#xA;  (&#xD;&#xA;    page.PageNumber:=0&#xD;&#xA;  )&#xD;&#xA;);&#xD;&#xA;&#xD;&#xA;let startWindow = Bag{4, (currentPage-1)}-&gt;maxValue in&#xD;&#xA;(&#xD;&#xA;  let endWindow = Bag{pageCount, (currentPage+1)}-&gt;minValue in&#xD;&#xA;  (&#xD;&#xA;    Bag{(startWindow)..(endWindow)}-&gt;foreach(i|&#xD;&#xA;      let page = Pagination.Create in&#xD;&#xA;      (page.PageNumber:=i)&#xD;&#xA;    );&#xD;&#xA;&#xD;&#xA;    ((currentPage-1) &lt; (pageCount - window)).whentrue(&#xD;&#xA;      let page = Pagination.Create in&#xD;&#xA;      (&#xD;&#xA;        page.PageNumber:=0&#xD;&#xA;      ) &#xD;&#xA;    );&#xD;&#xA;    ((pageCount &gt; 3) and (pageCount &lt;&gt; endWindow)).whentrue(&#xD;&#xA;      let page = Pagination.Create in&#xD;&#xA;      (&#xD;&#xA;        page.PageNumber:=pageCount&#xD;&#xA;      )&#xD;&#xA;    )&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class Name="APIResult" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="6e6e9d86-e7a5-488b-8b71-3639b3c2032f" />
+    <Class Name="AccessToken" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="7ee592e0-1b88-4d54-961a-47b3b6f0e050">
+      <Feature>
+        <Attribute Name="Token" Multiplicity="" Visibility="Public" id="5efaa9b8-2253-4792-b457-2fac1ffd14b7">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="RequestsLeft" InitialValue="100" Multiplicity="" Visibility="Public" id="6d3d6a10-3533-411f-a784-aa04f5253bd9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Source1" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="aada3ccc-4338-4396-a350-0018aa12dd11">
+      <Feature>
+        <Attribute Name="name" Multiplicity="" Visibility="Public" id="0e1be701-e97b-4de5-bc92-f5e0f5175105">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="id" Multiplicity="" Visibility="Public" id="41898824-5906-4ddf-9847-406f73da5438">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class Name="Articles1" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b6dbfa56-afa8-4c85-b29f-c77476bb3261">
+      <Feature>
+        <Attribute Name="urlToImage" Multiplicity="" Visibility="Public" id="0456974a-48a8-4abd-af80-e1db0c53268a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="500" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="publishedAt" Multiplicity="" Visibility="Public" id="0d291cf6-b587-482c-946f-ff34f05a65dd">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Date" />
+          </Type>
+        </Attribute>
+        <Attribute Name="description" Multiplicity="" Visibility="Public" id="4377e97f-ce78-44c3-943f-99d3bb90eae5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="5000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="url" Multiplicity="" Visibility="Public" id="673a0951-44fc-4e04-af52-02c7422b3095">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Length" Value="1000" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="author" Multiplicity="" Visibility="Public" id="7f94fb83-1bd8-4817-bb06-b71da97326c3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="title" Multiplicity="" Visibility="Public" id="9945f350-d95a-49a2-afcc-69bba9698725">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="content" Multiplicity="" Visibility="Public" id="9de20d9d-2cfb-49fa-8e8e-231a0ab94960">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="5000" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="" />
+  </TaggedValue>
+</Package>
