@@ -42,6 +42,18 @@
         <Column Name="SysGraphAPIErrors" idref="e4c4bc16-0d37-4024-a4eb-b52aa9987632" />
       </ReferedByColumn>
     </Nesting>
+    <Nesting Name="Fields" ExpressionActAsForActions="" id="2d7c14d8-ddb3-4abe-bb08-9c90d5d45f8f">
+      <Class>
+        <Class Name="SysGraphAPIResultRowField" idref="49fd1818-654d-4a15-a0ad-632d60860a2a" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ebddbc84-7f2a-45c4-8f5d-5f4d10cc2f8a" />
+        <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Value" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="fd44fcfb-44b0-41b1-9d31-ec753a65da31" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Fields" idref="18199397-ddd9-483b-a261-034a567c6544" />
+      </ReferedByColumn>
+    </Nesting>
   </Nesting>
   <OwnedColumns>
     <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows-&gt;delete;&#xD;&#xA;self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;self.Search( vSearch )" ExpressionForReadOnly="self.isnull or vSearch.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ead81908-c4dc-4853-8b8a-fcdf5778b7ba">
@@ -79,9 +91,9 @@
         <PlacingContainer idref="21a90d5d-8546-4881-92af-a8f855da843c" />
       </PlacingContainer>
     </Column>
-    <Column Name="SysGraphAPIResultRows" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="10" StyleRef="" XPos="0" YPos="4" id="9ff04481-077b-4a89-b42b-2c47d52b6e53">
+    <Column Name="SysGraphAPIResultRows" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.SysGraphAPIResultRows" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="4" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="10" StyleRef="" XPos="0" YPos="4" id="9ff04481-077b-4a89-b42b-2c47d52b6e53">
       <PlacingContainer>
-        <PlacingContainer idref="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
+        <PlacingContainer idref="f5ffe4df-f038-442f-8dba-7392a2cc0ecb" />
       </PlacingContainer>
       <ReferedNesting>
         <Nesting Name="ResultRow" idref="3b61f8cf-f24f-41e4-83c9-4be56b990e10" />
@@ -92,14 +104,14 @@
         <PlacingContainer idref="21a90d5d-8546-4881-92af-a8f855da843c" />
       </PlacingContainer>
     </Column>
-    <Column Name="Thumbnail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;vThumbnailUrl:=self.DriveDriveItemToThumbnailUrl( vDriveId,vDriveItemId)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="00d4ffc2-7acc-4c8c-a182-bb87b6395a10">
+    <Column Name="Thumbnail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SysUser.OpenIdConnectAccessTokenRefresh;&#xD;&#xA;vThumbnailUrl:=self.DriveDriveItemToThumbnailUrl( vDriveId,vDriveItemId)" ExpressionForReadOnly="self.isnull or vDriveId.isnullorempty" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="00d4ffc2-7acc-4c8c-a182-bb87b6395a10">
       <PlacingContainer>
-        <PlacingContainer idref="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
+        <PlacingContainer idref="873ec1a3-9e0a-47d9-8fb4-3f53e9d3b824" />
       </PlacingContainer>
     </Column>
-    <Column Name="vThumbnailUrl" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vThumbnailUrl" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="9" YPos="0" id="135eba18-e706-4c20-af4f-757c0a44a653">
+    <Column Name="vThumbnailUrl" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vThumbnailUrl" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="9" YPos="0" id="135eba18-e706-4c20-af4f-757c0a44a653">
       <PlacingContainer>
-        <PlacingContainer idref="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
+        <PlacingContainer idref="873ec1a3-9e0a-47d9-8fb4-3f53e9d3b824" />
       </PlacingContainer>
       <TaggedValue>
         <TaggedValue Tag="DataIsImageUrl" Value="True" />
@@ -159,6 +171,29 @@
         <Nesting Name="SysGraphAPIError" idref="0f776982-d2de-496f-acad-4e7e3f3594f5" />
       </ReferedNesting>
     </Column>
+    <Column Name="Fields" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrent_ResultRow.SysGraphAPIResultRowFields" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="18199397-ddd9-483b-a261-034a567c6544">
+      <PlacingContainer>
+        <PlacingContainer idref="1b511c0a-4079-49e2-ae49-34769a58f101" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="Fields" idref="2d7c14d8-ddb3-4abe-bb08-9c90d5d45f8f" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vFieldName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e9299535-1729-41e5-8974-cc8c6649f138">
+      <PlacingContainer>
+        <PlacingContainer idref="29ddc69c-2884-483b-b382-df4d76066420" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Value" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vFieldValue" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCGrow="2" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="42c5c035-d106-4540-a6d3-96679ddcbaf6">
+      <PlacingContainer>
+        <PlacingContainer idref="29ddc69c-2884-483b-b382-df4d76066420" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="Patch" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vCurrent_ResultRow.PatchField(vFieldName,vFieldValue)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="95eee462-d901-421c-a5ef-a7e3d3ed626d">
+      <PlacingContainer>
+        <PlacingContainer idref="29ddc69c-2884-483b-b382-df4d76066420" />
+      </PlacingContainer>
+    </Column>
   </OwnedColumns>
   <PlacingContainer>
     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="75ad7ed6-ecd3-416b-bfca-2c56c7091dfd">
@@ -180,7 +215,22 @@
             <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="9c3f3ed6-c2a1-4145-a549-52976e775a1d" />
           </ChildContainers>
         </PlacingContainer>
-        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="True" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d7db71db-6919-4e4b-809b-a1d4952aebb1" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="True" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="d7db71db-6919-4e4b-809b-a1d4952aebb1">
+          <ChildContainers>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="144a7492-1e02-40a8-8179-adfafea05a86">
+              <ChildContainers>
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="4" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="f5ffe4df-f038-442f-8dba-7392a2cc0ecb" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="vCurrent_ResultRow.SysGraphAPIResultRowFields-&gt;size&gt;0" Wrap="False" id="8fee66da-c3a1-4f5c-b7ae-ddc56dc21e1b">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="2" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="1b511c0a-4079-49e2-ae49-34769a58f101" />
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="29ddc69c-2884-483b-b382-df4d76066420" />
+                  </ChildContainers>
+                </PlacingContainer>
+              </ChildContainers>
+            </PlacingContainer>
+            <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="873ec1a3-9e0a-47d9-8fb4-3f53e9d3b824" />
+          </ChildContainers>
+        </PlacingContainer>
       </ChildContainers>
     </PlacingContainer>
   </PlacingContainer>
@@ -189,6 +239,8 @@
     <SpanVariable Name="vAdHocResult" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vDriveId" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vDriveItemId" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vFieldName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vFieldValue" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vFileName" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vFolderName" InitialValue="" TypeName="String" UserData="" />
     <SpanVariable Name="vSearch" InitialValue="" TypeName="String" UserData="" />

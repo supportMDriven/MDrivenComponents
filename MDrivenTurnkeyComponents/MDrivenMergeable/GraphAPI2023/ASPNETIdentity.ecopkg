@@ -62,6 +62,20 @@
         </Attribute>
       </Feature>
     </Class>
+    <Association Name="" EffectiveName="SysGraphAPIResultRowSysGraphAPIResultRowSysGraphAPIResultRowField" id="0888619e-0a77-4200-96c6-8f6ba867e31e">
+      <AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPIResultRow" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c74fdfee-f6f5-4515-b56f-8fbd3ece889a">
+          <Participant>
+            <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="" EffectiveName="SysGraphAPIResultRowFields" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a2a693f4-686f-4197-8430-25f53be340d0">
+          <Participant>
+            <Class Name="SysGraphAPIResultRowField" idref="49fd1818-654d-4a15-a0ad-632d60860a2a" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
     <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf">
       <Association>
         <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
@@ -69,12 +83,12 @@
     </Class>
     <Association Name="" EffectiveName="SysGraphAPIErrorSysGraphAPIErrorsSysGraphAPISysGraphAPI" id="2e5c0813-68bf-4df0-a25a-9580c9cb8f81">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4fc56259-ab8a-4e0a-a7b3-56d5a17d19fa">
+        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4fc56259-ab8a-4e0a-a7b3-56d5a17d19fa">
           <Participant>
             <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPIErrors" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5">
+        <AssociationEnd Name="SysGraphAPIErrors" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5">
           <Participant>
             <Class Name="SysGraphAPIError" idref="a492dbf6-04db-4e40-9261-a22e297c93ac" />
           </Participant>
@@ -486,6 +500,29 @@
         </Attribute>
       </Feature>
     </Class>
+    <Class Name="SysGraphAPIResultRowField" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="49fd1818-654d-4a15-a0ad-632d60860a2a">
+      <Feature>
+        <Attribute Name="Value" Multiplicity="" Visibility="Public" id="5570b2dc-951c-4024-b97f-99d6db94c12d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="8fe3c547-d17a-4308-bce4-8e8a134d82c0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
     <Association Name="" EffectiveName="SysUserSysUserSysTokenSysTokens" id="54c8cf82-f8b5-4dce-9203-874075a328ec">
       <AssociationEnd>
         <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c1b15df4-18a1-43f4-9085-5a4c278ee5e5">
@@ -820,6 +857,30 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="PatchField" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="47987b88-fa1a-45eb-bb39-12845929c445">
+          <Parameter>
+            <Parameter Name="name" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="value" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="DriveId" Multiplicity="" Visibility="Public" id="725a5a53-a0a6-4f71-a4ef-215abf2118eb">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
