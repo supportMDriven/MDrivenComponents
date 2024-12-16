@@ -837,6 +837,35 @@
     </Association>
     <Class Name="SysGraphAPIResultRow" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cefde719-fab1-4589-a948-5e415eec2a0d">
       <Feature>
+        <Method Name="SendInvite" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0f08441e-09a5-497e-b4cc-a5d58a4e92c2">
+          <Parameter>
+            <Parameter Name="email" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="message" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="writeaccess" Kind="In">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="NavigateUpToParentFolder" CodeComment="Clears adds to SysGraphAPIResultRows and adds new" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3f58a64e-412a-4685-8c21-230a2fb6e518">
           <ReturnParameter>
             <Parameter Name="returnparam" Kind="Out">
@@ -857,6 +886,18 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="GetPermissionsAsJson" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="420cf90b-cf9d-4cde-8153-102bc865e8a0">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
         <Method Name="PatchField" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="47987b88-fa1a-45eb-bb39-12845929c445">
           <Parameter>
             <Parameter Name="name" Kind="In">

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <allactions>
+  <ClassAction Name="Permission" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelIsPopUp="True" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="03409f65-a397-4be5-b3fd-7cb26d30f27b">
+    <BringUpViewModel>
+      <Span Name="Permission" idref="4735996d-1dd2-4cb5-a2bd-a8ad0d54c04f" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+    </ClassToPerformActionOn>
+  </ClassAction>
   <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="0d157ec7-c42f-4350-b4a2-e42a4698f176">
     <MenuGroup>
       <MenuGroup Name="Edit" idref="22be19f2-9f61-4bc5-88a1-27e6257490c6" />

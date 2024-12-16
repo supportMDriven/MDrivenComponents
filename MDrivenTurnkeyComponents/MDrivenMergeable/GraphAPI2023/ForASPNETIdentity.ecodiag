@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="ForASPNETIdentity" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0.952380952380948" Id="7f5d5bb1-210b-4e82-9068-db661712522a">
+<Diagram Name="ForASPNETIdentity" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.27628156249999" Id="7f5d5bb1-210b-4e82-9068-db661712522a">
   <PlacedClass>
     <PlacedClass ClassId="d463013a-d624-45c4-80fd-73d63fd488fa" Color="1692800256" LastKnownName="SysUserClaim" PickedFeatureVisibility="ShowAll" RenderedHeight="97" RenderedWidth="109" ShowAttributes="False" ShowMethods="False" Size="1" x="720" y="512" id="2427c751-c7cf-4d98-ba69-a93848448e8e">
       <AssociationEndConnection>
@@ -258,7 +258,7 @@
         <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="cefde719-fab1-4589-a948-5e415eec2a0d" Color="-922779648" LastKnownName="SysGraphAPIResultRow" PickedFeatureVisibility="ShowAll" RenderedHeight="203" RenderedWidth="177" ShowAttributes="False" ShowMethods="False" Size="1" x="336" y="856" id="efde853a-4432-4a27-87a9-7b29c93bbdc5">
+    <PlacedClass ClassId="cefde719-fab1-4589-a948-5e415eec2a0d" Color="-922779648" LastKnownName="SysGraphAPIResultRow" PickedFeatureVisibility="ShowAll" RenderedHeight="227" RenderedWidth="177" ShowAttributes="False" ShowMethods="False" Size="1" x="336" y="856" id="efde853a-4432-4a27-87a9-7b29c93bbdc5">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.771828046206905" LabelDistance="18.0639858382549" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="0f5358ef-a589-40e3-9fee-6b0f39c684f0">
           <AssociationEnd>

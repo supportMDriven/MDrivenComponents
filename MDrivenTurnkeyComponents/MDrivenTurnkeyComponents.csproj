@@ -22,16 +22,12 @@
     <None Remove="MDrivenMergeable\GraphAPI2023\Actions.actions" />
     <None Remove="MDrivenMergeable\GraphAPI2023\GraphAPIOneUser.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\Index.spans" />
+    <None Remove="MDrivenMergeable\GraphAPI2023\Permission.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\SearshADUsersViaGraphAPI.spans" />
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
-    <None Remove="MDrivenMergeable\SysTurnkeyTrace\Actions.actions" />
-    <None Remove="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTrace.spans" />
-    <None Remove="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTraceSeeker.spans" />
-    <None Remove="MDrivenMergeable\SysTurnkeyTrace\Index.spans" />
-    <None Remove="MDrivenMergeable\SysTurnkeyTrace\TraceLog.spans" />
     <None Remove="MDrivenMergeable\SysUserAuthentication\Actions.actions" />
     <None Remove="MDrivenMergeable\SysUserAuthentication\Index.spans" />
   </ItemGroup>
@@ -89,6 +85,9 @@
     <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\Index.spans">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\Permission.spans">
+      <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -103,21 +102,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\Actions.actions">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTrace.spans">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTraceSeeker.spans">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\Index.spans">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\TraceLog.spans">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysUserAuthentication\Actions.actions">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
@@ -145,9 +129,6 @@
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
-    </None>
-    <None Include="MDrivenMergeable\SysTurnkeyTrace\ModlrProject.mproj">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysUserAuthentication\ModlrProject.mproj">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
@@ -214,18 +195,6 @@
     </None>
     <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
-    </None>
-    <None Update="MDrivenMergeable\SysTurnkeyTrace\Diagram1.ecodiag">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </None>
-    <None Update="MDrivenMergeable\SysTurnkeyTrace\documentation.modlrdoc">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </None>
-    <None Update="MDrivenMergeable\SysTurnkeyTrace\Package1.ecopkg">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
-    </None>
-    <None Update="MDrivenMergeable\SysTurnkeyTrace\Snippets.snippets">
-      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysUserAuthentication\AuthenticationPackage.ecopkg">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
