@@ -1,0 +1,22 @@
+<Model>
+  <Packages>
+    <Package Name="NewsApp" FileName="NewsApp" GUID="ae31d652-1ca0-4e8a-8c7b-1e5f67d962c0" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="NewsAppDiagram" FileName="NewsAppDiagram" GUID="91e7997e-f0ac-4954-bc7b-45b3867dde19" />
+  </Diagrams>
+  <Spans>
+    <Span Name="AllArticles" FileName="AllArticles" GUID="0677677c-a7a2-456e-87fe-b296babaa710" />
+    <Span Name="TokenSeeker" FileName="TokenSeeker" GUID="56c7d033-c78f-4610-9b52-94ffd21fa596" />
+    <Span Name="ArticleViewModel" FileName="ArticleViewModel" GUID="57bd9a4a-3a33-4da4-af0b-5a445015d787" />
+    <Span Name="AccessTokenViewModel" FileName="AccessTokenViewModel" GUID="7da51e14-6250-4618-8556-9e72ed06bb34" />
+    <Span Name="ArticlesSeekerViewModel" FileName="ArticlesSeekerViewModel" GUID="b4e3d45f-e470-4795-8182-036e87877867" />
+    <Span Name="Index" FileName="Index" GUID="cb9fcb87-7754-4d54-ba97-1d14e017f3c9" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="NewsAppDiagram" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.21550625" Id="91e7997e-f0ac-4954-bc7b-45b3867dde19">
+  <PlacedClass>
+    <PlacedClass ClassId="832d552f-5e62-49ec-a577-5dc219e72869" Color="1692800256" LastKnownName="Pagination" PickedFeatureVisibility="ShowAll" RenderedHeight="72" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="928" y="344" id="257a63ca-f960-493c-b778-f8bc05c99e1c">
+      <Class>
+        <Class Name="Pagination" idref="6141dabf-871d-4d4b-b8c4-66b38867d8da" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="03b9d53d-6b0e-4dd0-b81a-f793a781ade8" Color="1692800256" LastKnownName="AccessToken" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="134" ShowAttributes="False" ShowMethods="False" Size="1" x="360" y="296" id="5c582ea5-4d8e-4c77-8f8c-5eb75c0ebcda">
+      <Class>
+        <Class Name="AccessToken" idref="7ee592e0-1b88-4d54-961a-47b3b6f0e050" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="a349968c-a7dc-47f7-a0f3-f869e6a17526" Color="1692800256" LastKnownName="Articles1" PickedFeatureVisibility="ShowAll" RenderedHeight="121" RenderedWidth="97" ShowAttributes="False" ShowMethods="False" Size="1" x="672" y="328" id="9bd67adb-b141-4bcf-8445-f75a81fb42b2">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="0" y="121" id="12b0bed3-130d-4ddd-8c11-941456c6d1b3">
+          <AssociationEnd>
+            <AssociationEnd Name="Articles1" idref="6678bbce-290a-418a-9dd0-4bf8259ec2f0" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="4.60374123972715" LabelDistance="3.62799368236278" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="273ec2ac-40b8-4620-ad0f-b486cf826e2e">
+          <AssociationEnd>
+            <AssociationEnd Name="articles" idref="4d94b075-a085-4041-ab7d-495d4f3738fe" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="0" y="31" id="6689b6fd-c191-4eaf-9245-ebff1fda293a">
+              <AssociationEnd>
+                <AssociationEnd Name="APIResult" idref="a0c6c77c-76a4-43e8-b97b-30ebf778ac01" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="949dcc33-81b6-4ce4-bea0-eda097ae69e2" Color="1692800256" LastKnownName="APIResult" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="81" ShowAttributes="False" ShowMethods="False" Size="1" x="600" y="240" id="b7184678-86ce-4d9e-988b-363034a00972">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="0" y="31" id="6689b6fd-c191-4eaf-9245-ebff1fda293a">
+          <AssociationEnd>
+            <AssociationEnd Name="APIResult" idref="a0c6c77c-76a4-43e8-b97b-30ebf778ac01" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="APIResult" idref="6e6e9d86-e7a5-488b-8b71-3639b3c2032f" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ee84f43e-2996-4420-adf6-0389aa48ada9" Color="1692800256" LastKnownName="Source1" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="75" ShowAttributes="False" ShowMethods="False" Size="1" x="744" y="520" id="dace50e2-1b00-4da7-b388-557c959d30e3">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="5bb487af-af62-4d05-bff3-7bf4956c8609">
+          <AssociationEnd>
+            <AssociationEnd Name="source" idref="704d8759-b896-43c7-ab26-49b253c52193" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="0" y="121" id="12b0bed3-130d-4ddd-8c11-941456c6d1b3">
+              <AssociationEnd>
+                <AssociationEnd Name="Articles1" idref="6678bbce-290a-418a-9dd0-4bf8259ec2f0" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Source1" idref="aada3ccc-4338-4396-a350-0018aa12dd11" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>

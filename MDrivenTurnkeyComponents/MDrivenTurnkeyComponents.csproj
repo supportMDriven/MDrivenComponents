@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MDrivenMergeable\Dashboard\**" />
     <Compile Remove="MDrivenMergeable\Office365\**" />
+    <EmbeddedResource Remove="MDrivenMergeable\Dashboard\**" />
     <EmbeddedResource Remove="MDrivenMergeable\Office365\**" />
+    <None Remove="MDrivenMergeable\Dashboard\**" />
     <None Remove="MDrivenMergeable\Office365\**" />
   </ItemGroup>
 
@@ -24,6 +27,13 @@
     <None Remove="MDrivenMergeable\GraphAPI2023\Index.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\SearchViaGraphAPI.spans" />
     <None Remove="MDrivenMergeable\GraphAPI2023\SearshADUsersViaGraphAPI.spans" />
+    <None Remove="MDrivenMergeable\NewsApp\AccessTokenViewModel.spans" />
+    <None Remove="MDrivenMergeable\NewsApp\Actions.actions" />
+    <None Remove="MDrivenMergeable\NewsApp\AllArticles.spans" />
+    <None Remove="MDrivenMergeable\NewsApp\ArticlesSeekerViewModel.spans" />
+    <None Remove="MDrivenMergeable\NewsApp\ArticleViewModel.spans" />
+    <None Remove="MDrivenMergeable\NewsApp\Index.spans" />
+    <None Remove="MDrivenMergeable\NewsApp\TokenSeeker.spans" />
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
@@ -95,6 +105,27 @@
     <EmbeddedResource Include="MDrivenMergeable\GraphAPI2023\SearshADUsersViaGraphAPI.spans">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\AccessTokenViewModel.spans">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\Actions.actions">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\AllArticles.spans">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\ArticlesSeekerViewModel.spans">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\ArticleViewModel.spans">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\Index.spans">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\NewsApp\TokenSeeker.spans">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysCert\Actions.actions">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +173,9 @@
     </None>
     <None Include="MDrivenMergeable\GraphAPI2023\ModlrProject.mproj">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\NewsApp\ModlrProject.mproj">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
@@ -199,6 +233,27 @@
     </None>
     <None Update="MDrivenMergeable\GraphAPI2023\Snippets.snippets">
       <DependentUpon>GraphAPI2023.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\Diagram1.ecodiag">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\documentation.modlrdoc">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\NewsApp.ecopkg">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\NewsAppDiagram.ecodiag">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\Package1.ecopkg">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\Snippets.snippets">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\NewsApp\ViewModel2.ecodiag">
+      <DependentUpon>NewsApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysCert\ASPNETIdentity.ecopkg">
       <DependentUpon>SysCert.ecomdl</DependentUpon>

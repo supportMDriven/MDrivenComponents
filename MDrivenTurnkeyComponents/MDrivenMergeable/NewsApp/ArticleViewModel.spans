@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ArticleViewModel" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="57bd9a4a-3a33-4da4-af0b-5a445015d787">
+  <Class>
+    <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+  </Class>
+  <Nesting>
+    <Nesting Name="ArticleDetails" ExpressionActAsForActions="" id="9e86e856-a180-41ab-a997-a48bf85ce36c">
+      <Class>
+        <Class Name="Articles1" idref="b6dbfa56-afa8-4c85-b29f-c77476bb3261" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowArticle" idref="bc3beb37-8dfd-4a39-acee-cd41c33664d5" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="description" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.description" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="2" StyleRef="'NA__TextEllipsis4 NA__TextBreak'" StyleRefIsExpression="True" XPos="1" YPos="0" id="07c045e9-102c-4d96-b822-8d2633df1a1f">
+          <PlacingContainer>
+            <PlacingContainer idref="4976b782-b59d-450c-9153-fd295a944064" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="author" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="if self.author.Trim.isNullOrEmpty then&#xD;&#xA;''&#xD;&#xA;else&#xD;&#xA;'By '+self.author&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PCMaxSize="150" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="'TextGrey NA__TextEllipsis'" StyleRefIsExpression="True" XPos="1" YPos="0" id="8d362b19-c49e-4629-b9ba-ecd9de3a202a">
+          <PlacingContainer>
+            <PlacingContainer idref="d0abba1c-6308-4e03-b78d-e651fa6a3bfd" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="title" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.title" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="3" StyleRef="'h6 NA__TextEllipsis2'" StyleRefIsExpression="True" XPos="1" YPos="0" id="c68dec95-dd1a-4c72-a801-ecb1052a2adc">
+          <PlacingContainer>
+            <PlacingContainer idref="75bcc117-411a-4048-b07a-f745639f6268" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="urlToImage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.urlToImage" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="1" YPos="0" id="fb3a32be-5cce-4bca-88e1-42e6bb419b40">
+          <PlacingContainer>
+            <PlacingContainer idref="a16e7ded-ad68-409d-b9c1-12684bd1c4f0" />
+          </PlacingContainer>
+          <TaggedValue>
+            <TaggedValue Tag="DataIsImageUrl" Value="True" />
+            <TaggedValue Tag="DataIsImageUrl" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="publishedAt" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.publishedAt" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="TextGrey" XPos="1" YPos="0" id="72aff662-90d2-4e27-a916-6588de88b61c">
+          <PlacingContainer>
+            <PlacingContainer idref="d0abba1c-6308-4e03-b78d-e651fa6a3bfd" />
+          </PlacingContainer>
+        </Column>
+        <Column Name="Read" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="ButtonLight" XPos="1" YPos="1" id="43320e93-60c7-488b-9827-9fa60af76de0">
+          <ActionToExecute>
+            <ClassAction Name="ShowArticle" idref="bc3beb37-8dfd-4a39-acee-cd41c33664d5" />
+          </ActionToExecute>
+          <PlacingContainer>
+            <PlacingContainer idref="9164e1e4-7d32-44f7-a15f-d817b47f1b8d" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="e77865b5-3b70-4d8c-b00b-ef8065cbe474">
+          <ChildContainers>
+            <PlacingContainer Name="Card" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="1" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'Card'" Type="Column" VisibleExpression="" Wrap="True" id="857b62b4-6079-4ef4-b23f-215f41ee8671">
+              <ChildContainers>
+                <PlacingContainer Name="CardTitle" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="11b85682-bc54-4cab-b3a3-ece41255075a">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginLeft="10" MarginRight="10" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="75bcc117-411a-4048-b07a-f745639f6268" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="CardImage" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="b06d3ac0-017d-46c6-ab99-418b869d49bb">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="Stretch" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Center" MaxSize="348" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="a16e7ded-ad68-409d-b9c1-12684bd1c4f0" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="CardDescription" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="7c63ce15-b197-4871-9bb9-2610159ed897">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="4976b782-b59d-450c-9153-fd295a944064" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="_Copy" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="93426bb1-98ff-4fef-9ab3-33f995f44bfa">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="9164e1e4-7d32-44f7-a15f-d817b47f1b8d" />
+                  </ChildContainers>
+                </PlacingContainer>
+                <PlacingContainer Name="CardFooter" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'CardBottom'" Type="Column" VisibleExpression="" Wrap="False" id="7c725e34-0c78-42b8-9089-c1d84f911125">
+                  <ChildContainers>
+                    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="d0abba1c-6308-4e03-b78d-e651fa6a3bfd" />
+                  </ChildContainers>
+                </PlacingContainer>
+              </ChildContainers>
+            </PlacingContainer>
+          </ChildContainers>
+        </PlacingContainer>
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column Name="MoreNews" idref="ab7ae4cd-487c-4dea-9205-c6639688f6a9" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="False" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="False" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowArticle" idref="bc3beb37-8dfd-4a39-acee-cd41c33664d5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="title" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.title" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="13648a06-fae0-4086-a6d3-8d98804e33d5">
+      <PlacingContainer>
+        <PlacingContainer idref="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="author" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'By '+self.author" ExpressionForReadOnly="" ExpressionForVisible="not self.author.isNullOrEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="TextGrey" XPos="0" YPos="2" id="e1d25e55-e76a-4350-87b6-b3078a6bdd82">
+      <PlacingContainer>
+        <PlacingContainer idref="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="content" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.content" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PCMarginTop="20" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="text-break" XPos="0" YPos="5" id="e12d76a5-a9d4-4929-9c26-7fb5c05a9782">
+      <PlacingContainer>
+        <PlacingContainer idref="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="publishedAt" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.publishedAt" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="TextGrey" XPos="0" YPos="1" id="6148fca8-9f99-443b-a609-1ad4285d8243">
+      <PlacingContainer>
+        <PlacingContainer idref="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="source" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'From: '+self.source.name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="First" NullRowRepresentation="&lt;not set&gt;" PCIndex="5" PCMarginTop="20" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="TextGrey" XPos="0" YPos="12" id="cd5658ec-75ee-4d3e-9f9c-8a693a846887">
+      <PlacingContainer>
+        <PlacingContainer idref="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="MoreNewsTitle" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'More News'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h5" XPos="1" YPos="1" id="7a2e1fdd-e825-48d4-8c29-0d1d0e533696">
+      <PlacingContainer>
+        <PlacingContainer idref="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
+      </PlacingContainer>
+    </Column>
+    <Column Name="MoreNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(art|art.author.sqlLikeCaseInsensitive('%'+self.author+'%') or (art.author=self.author))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ab7ae4cd-487c-4dea-9205-c6639688f6a9">
+      <PlacingContainer>
+        <PlacingContainer idref="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting Name="ArticleDetails" idref="9e86e856-a180-41ab-a997-a48bf85ce36c" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="urlToImage" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.urlToImage" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PCMarginTop="30" PCSelfAlign="Start" PresentationString="" PresentationStringColSpan="2" RowSpan="6" StyleRef="" XPos="0" YPos="6" id="f7c7e347-b48f-4149-8116-309a849c2752">
+      <PlacingContainer>
+        <PlacingContainer idref="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue Tag="DataIsImageUrl" Value="True" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginLeft="20" MarginRight="20" MarginTop="15" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="c03d98fa-f4d1-49ed-bf7f-d37bb8b20c3e">
+      <ChildContainers>
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="b4f301d1-ea89-4228-b63f-533eabfc390e" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="'HorizontalRow'" Type="Row" VisibleExpression="" Wrap="False" id="95ecb0ac-6d41-4137-b273-55fce837f84e" />
+        <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+    <TaggedValue Tag="Savebar" Value="True" />
+  </TaggedValue>
+</Span>
