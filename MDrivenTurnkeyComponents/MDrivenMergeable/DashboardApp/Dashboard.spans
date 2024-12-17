@@ -188,7 +188,7 @@
         <TaggedValue Tag="Angular_Ext_Component" Value="ColumnChart" />
       </TaggedValue>
     </Column>
-    <Column Name="GeneratePageData" ActionPeriodicityMillisec="7000" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.Generate" ExpressionForReadOnly="vKeepGenerating=false" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="1" id="bead3772-6083-4f71-b137-f4276178d8fc">
+    <Column Name="GeneratePageData" ActionPeriodicityMillisec="7000" ColSpan="1" ColSpanWhenInGrid="1" Expression="Dashboard.Generate;&#xD;&#xA;selfVM.Save" ExpressionForReadOnly="vKeepGenerating=false" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="1" id="bead3772-6083-4f71-b137-f4276178d8fc">
       <PlacingContainer>
         <PlacingContainer idref="8288b949-2475-4c1b-8b1d-9413e94da02b" />
       </PlacingContainer>
@@ -285,7 +285,6 @@
     <SpanVariable Name="vKeepGenerating" InitialValue="true" TypeName="Boolean" UserData="" />
   </SpanVariables>
   <TaggedValue>
-    <TaggedValue Tag="Eco.AutoSave" Value="True" />
     <TaggedValue Tag="InitialZoom" Value="49" />
     <TaggedValue Tag="HideSidebar" Value="True" />
   </TaggedValue>
