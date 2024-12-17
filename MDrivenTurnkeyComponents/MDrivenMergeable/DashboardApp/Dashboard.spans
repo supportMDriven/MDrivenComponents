@@ -285,6 +285,7 @@
     <SpanVariable Name="vKeepGenerating" InitialValue="true" TypeName="Boolean" UserData="" />
   </SpanVariables>
   <TaggedValue>
+    <TaggedValue Tag="Eco.AutoSave" Value="True" />
     <TaggedValue Tag="InitialZoom" Value="49" />
     <TaggedValue Tag="HideSidebar" Value="True" />
   </TaggedValue>
