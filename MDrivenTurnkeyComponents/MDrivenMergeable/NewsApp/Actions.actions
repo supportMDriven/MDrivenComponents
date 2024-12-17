@@ -199,7 +199,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="Card" id="6a2fa071-206f-41a9-a7f3-ac2849fb897f">
+      <StyleDefinition Name="NewsCard" id="6a2fa071-206f-41a9-a7f3-ac2849fb897f">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" BorderBottom="1" BorderBottomLeftRadius="5" BorderBottomRightRadius="5" BorderLeft="1" BorderRight="1" BorderTop="1" BorderTopLeftRadius="5" BorderTopRightRadius="5" MarginBottom="5" MarginLeft="5" MarginRight="5" MarginTop="5" Shadow="blurry" WidthMax="350" WidthMin="300" id="b673fbf6-4b0d-45ed-b98a-509328ac7c71">
             <StyleColorPropertiesFill>
@@ -241,7 +241,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="CardBottom" id="acf86f9f-d756-4408-bd31-189e2a349ee3">
+      <StyleDefinition Name="NewsCardBottom" id="acf86f9f-d756-4408-bd31-189e2a349ee3">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" BorderBottomLeftRadius="5" BorderBottomRightRadius="5" BorderTop="2" MarginTop="3" PaddingLeft="10" PaddingRight="10" id="4f36eb21-edef-44cf-812a-26211ebd204b">
             <StyleColorPropertiesFill>

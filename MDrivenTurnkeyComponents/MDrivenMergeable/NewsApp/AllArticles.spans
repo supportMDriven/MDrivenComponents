@@ -56,7 +56,7 @@
       <PlacingContainer>
         <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="d461a9a4-0806-45be-ae60-32cf69b1c842">
           <ChildContainers>
-            <PlacingContainer Name="Card" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="1" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'Card'" Type="Column" VisibleExpression="" Wrap="True" id="f551e952-377b-4615-84d0-d03f5df797b0">
+            <PlacingContainer Name="Card" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="1" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="selfVM.Styles.NewsCard" Type="Column" VisibleExpression="" Wrap="True" id="f551e952-377b-4615-84d0-d03f5df797b0">
               <ChildContainers>
                 <PlacingContainer Name="CardTitle" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="be9f063f-855c-4622-93f8-7e10c844a080">
                   <ChildContainers>
@@ -78,7 +78,7 @@
                     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="b8ed1186-8310-44d9-a1c5-54cdb36369fe" />
                   </ChildContainers>
                 </PlacingContainer>
-                <PlacingContainer Name="CardFooter" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'CardBottom'" Type="Column" VisibleExpression="" Wrap="False" id="7c7b9ea9-18be-498e-a44d-cf5e869fe9ed">
+                <PlacingContainer Name="CardFooter" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="selfVM.Styles.NewsCardBottom" Type="Column" VisibleExpression="" Wrap="False" id="7c7b9ea9-18be-498e-a44d-cf5e869fe9ed">
                   <ChildContainers>
                     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="46c79aab-75b7-45cd-9cf1-4f51663beff2" />
                   </ChildContainers>

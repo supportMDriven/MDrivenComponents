@@ -16,7 +16,7 @@
       <StyleColorProperties A="255" Name="Color3" B="18" G="57" R="220" id="ce2b943f-8c90-45f8-a20d-232e37f79088" />
     </StyleColorProperties>
     <StyleDefinitions>
-      <StyleDefinition Name="Purple" id="0b321545-0134-4a93-9615-bfa85f8b4bcd">
+      <StyleDefinition Name="PurpleCard" id="0b321545-0134-4a93-9615-bfa85f8b4bcd">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="df54a65a-41c0-4a38-b1e9-48f30dcbc575">
             <StyleColorPropertiesFill>
@@ -28,7 +28,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="Red" id="0bb4f832-e230-4f43-a5c7-86111af9b9ec">
+      <StyleDefinition Name="RedCard" id="0bb4f832-e230-4f43-a5c7-86111af9b9ec">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="cca62952-ae36-4f24-90f8-f75215710ebf">
             <StyleColorPropertiesFill>
@@ -40,7 +40,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="Green" id="29e7de37-b4ac-4ae0-a671-c9027f3b8b4f">
+      <StyleDefinition Name="GreenCard" id="29e7de37-b4ac-4ae0-a671-c9027f3b8b4f">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="5c84200e-8851-47a5-8ae8-cac98796aaf3">
             <StyleColorPropertiesFill>
@@ -52,7 +52,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="Card" id="a3f3ad29-7262-4d70-a7de-d380744426cd">
+      <StyleDefinition Name="ScoreCard" id="a3f3ad29-7262-4d70-a7de-d380744426cd">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" BorderBottomLeftRadius="5" BorderBottomRightRadius="5" BorderTopLeftRadius="5" BorderTopRightRadius="5" MarginBottom="5" MarginLeft="5" MarginRight="5" MarginTop="5" PaddingBottom="3" PaddingLeft="10" PaddingRight="10" PaddingTop="3" id="002568fe-fb92-401a-bfe9-191677d0e0b6">
             <StyleTargetType>
@@ -61,7 +61,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="Orange" id="d41dc4f0-b727-4d08-a3c5-75b203ca1aeb">
+      <StyleDefinition Name="OrangeCard" id="d41dc4f0-b727-4d08-a3c5-75b203ca1aeb">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="a055228f-7096-4583-b4bd-0a4308109653">
             <StyleColorPropertiesFill>
@@ -85,7 +85,7 @@
           </StyleTarget>
         </StyleTargets>
       </StyleDefinition>
-      <StyleDefinition Name="Blue" id="f75c7a86-9604-4ef8-b08d-e39a1b3918ca">
+      <StyleDefinition Name="BlueCard" id="f75c7a86-9604-4ef8-b08d-e39a1b3918ca">
         <StyleTargets>
           <StyleTarget AlignHorizontal="" AlignVertical="" Animation="" id="3e55e130-ba3c-4524-9aec-c3f7cec50845">
             <StyleColorPropertiesFill>
