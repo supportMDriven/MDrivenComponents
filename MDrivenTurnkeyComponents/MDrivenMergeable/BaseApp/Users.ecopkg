@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Users" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="8a565bd5-0376-458d-b100-9e5af536d091">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="5dcc8de3-485c-4871-9fc6-bdfc4e29c8cf" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="User" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="25d349db-53c8-4e23-9044-01cc1f706d01">
+      <Feature>
+        <Method Name="OnUpdate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="010a8bfc-9e57-410e-a521-2815c8baab5e">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.OnUpdate;&#xD;&#xA;self.UserNameUnderEdit.setToNull" />
+          </TaggedValue>
+        </Method>
+        <Method Name="SendUserConfirmation" CodeComment="Sends new confirmation, either by creating a new UserConfirmation or by sending a new email for an existing UserConfirmation" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="01a90ff4-53e5-4c0d-bec6-55db02e76241">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="UserConfirmation" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let uc = self.UserConfirmations-&gt;select(uc | uc.AcceptValid)-&gt;first in -- Existing&#xD;&#xA;(&#xD;&#xA;  let cc = &#xD;&#xA;    if uc.isNull then&#xD;&#xA;      self.CreateUserConfirmation&#xD;&#xA;    else&#xD;&#xA;      uc&#xD;&#xA;    endif in&#xD;&#xA;  (&#xD;&#xA;    UserConfirmationValidation.oclSingleton.CreatedInSession := cc;&#xD;&#xA;    cc.ConstructMessage;&#xD;&#xA;    cc&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Log" Multiplicity="" Visibility="Public" id="17dff438-a4ee-48c8-acea-7347ac6f84ed">
+          <PlacedClass>
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="1819bfac-8223-4a5e-917e-cdc432f72dd7">
+          <PlacedClass>
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="6fef1bfb-4af9-476a-b7f2-f6d35c9d2753" />
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="if self.UserNameUnderEdit.isNull then&#xD;&#xA;    self.FirstName + ' ' + self.LastName&#xD;&#xA;else&#xD;&#xA;  self.UserNameUnderEdit&#xD;&#xA;endif" />
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="Eco.DerivedSettable" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCLSet" Value="self.UserNameUnderEdit := vInputParameter;&#xD;&#xA;let names = UserNameUnderEdit.Split(' '.toCharArray)-&gt;trim-&gt;reject(x|x.isNullOrEmpty) in&#xD;&#xA;(&#xD;&#xA;  self.FirstName := names.at(1);&#xD;&#xA;  self.LastName := names.at(2)&#xD;&#xA;)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EffectiveUserHasAccess" Multiplicity="" Visibility="Public" id="19a83707-cfc4-4391-9b0e-c087c0913a67">
+          <PlacedClass>
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="6fef1bfb-4af9-476a-b7f2-f6d35c9d2753" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="(SysSingleton.EU = self) or&#xD;&#xA;SysSingleton.SO.UserIsInAdminMode" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="IsFakeAccount" CodeComment="This account has been created from FakeName data" Multiplicity="" Visibility="Public" id="26317410-753d-4a45-ad51-9223f5f83bfc">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="UserEmail" CodeComment="This is the an email stored in the USER object. Used when no email is available in the SysUser object" Multiplicity="" Visibility="Public" id="2eac4d0e-f14d-46d2-a76b-e329631ab0f0">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="CreateWelcomeNotification" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4d6cbc7d-ee42-4a5f-a641-4707334668df">
+          <PlacedClass>
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let n = UserWelcomeNotification.create in&#xD;&#xA;(&#xD;&#xA;  n.AddUser(self);&#xD;&#xA;  n.User := self;&#xD;&#xA;  n&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="CreateUserConfirmation" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="55590658-8299-4184-80b5-5184dc293c8c">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="UserConfirmation" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let uc = UserConfirmation.Create in&#xD;&#xA;(&#xD;&#xA;  uc.User := self;&#xD;&#xA;  uc&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="UserCanSwitchModes" CodeComment="Can this user switch between modes (normal / admin)?" Multiplicity="" Visibility="Public" id="563b4493-7ae1-46c0-adf3-9b05973cf0ea">
+          <ModelDocumentation>
+            <ModelDocumentation Content="UEsDBBQAAAAIABV/OVHfWG3JEgMAAMAKAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAALVW23LaMBD9FY370JcEY3rPADM0CSVTknYwaWb6ttiLraksMZLMpV/flbkUFxO9NBnyIPlo9+zRXtSNMbFcSbYuhDS9ILd2cRWGJsmxANMqeKKVUXPbSlQRrricr8NOu/0+XEMhwoVGg9KCMxA4C1dmAQn2guqDXmLApri2A8EzWRCwF4xxbgM25hJHyLOcdgalVQG7M6PNIkdZmbqVMBOY9oIhCINbwwJk1gtQXpYmYEOhVjdcb5lvjU7VxNkL2ENZzFDH5cxYbksHaF2XwpYaY1VqR85RasQdL4iY2Z0jf0raIRRcbHrB/V4RFoM0LEbN51tEbDeCzD8oXYDYbj3tgjzei61Gm+T/bPLfdDSK3EpjplUpKf5Xw2G7+iMdNwuVaVjkm1ZsQaag0zHPwPGjW5vqEmuYa7JJYZYgnkPdcJMQGQoX9OYIuNP9CDnixirNk5q9U9hASrVNh4GwqOk6Ha59htox5oTbX4+kSNHo7Sud5i4tTsOHBbcgYsrGCnB69hoMxigNt3yJZz24KyUePInRRj5Axwd44wO89QHe+QDvfYAPPsBHH+CTV6i2F+HVMvKKGXnVjLxyRl49I6+gkVfRyCtp5NW006jpUMOuBe57yfFxASbH9Cdq1XT2Hqxr8dZV2BeN+KsJdAvGDgwHebteoLZn6+QHaAJZ00hkV4zNH6kNo6ZKrffOU8DRDGkAHXg+8dTmzZ4OmDGNkhKyZnf75hqvnHrPNK8zgMOl1Rtgv/sdNFSY2jSJMVPIHu9qU6BD8Ekpj+aeWV6S4v1pjhoZ0L9dKVaoFA2bK82APdK4vWLfdMpdK2cUAy0ykNxU3bgbkr1+NzyQ+C98aiPusxJp0B+pVcWLccMMCprQmL6M8/7dnElVi9I5hSVw4Z4PF4zb17QWK9gYxuWW1l6hl+P0DKFZaYmyRKbmbIKQor5g9PzJ3Q3ShU1wyXHlNqky2f1OxZo9oMdSVbMchHjBIEBuGkjSb8+xFlnFHmSdakkZyXBNtWAuTj7mYJhVbIaHJKnyuIp5u+/J3nD3bO3/AVBLAwQKAAAAAAAVfzlRSDO2yQwBAAAMAQAACwAcAF9yZWxzLy5yZWxzIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBUeXBlPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dwZi8yMDA1LzEwL3hhbWwvZW50cnkiIFRhcmdldD0iL1hhbWwvRG9jdW1lbnQueGFtbCIgSWQ9IlI5ZTUxMGU4NWRhNDc0YzVjIiAvPjwvUmVsYXRpb25zaGlwcz5QSwMECgAAAAAAFX85UTXN9XcqAQAAKgEAABMAHABbQ29udGVudF9UeXBlc10ueG1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPjxEZWZhdWx0IEV4dGVuc2lvbj0ieGFtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5tcy13cGYueGFtbCt4bWwiIC8+PERlZmF1bHQgRXh0ZW5zaW9uPSJyZWxzIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLXBhY2thZ2UucmVsYXRpb25zaGlwcyt4bWwiIC8+PC9UeXBlcz5QSwECLQAUAAAACAAVfzlR31htyRIDAADACgAAEgAAAAAAAAAAAAAAAAAAAAAAWGFtbC9Eb2N1bWVudC54YW1sUEsBAi0ACgAAAAAAFX85UUgztskMAQAADAEAAAsAAAAAAAAAAAAAAAAAXgMAAF9yZWxzLy5yZWxzUEsBAi0ACgAAAAAAFX85UTXN9XcqAQAAKgEAABMAAAAAAAAAAAAAAAAArwQAAFtDb250ZW50X1R5cGVzXS54bWxQSwUGAAAAAAMAAwC6AAAAJgYAAAAA" />
+          </ModelDocumentation>
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="SysSingleton.oclSingleton.CurrentUser.IsAdmin" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AccountConfirmed" CodeComment="True if any confirmations has been accepted" Multiplicity="" Visibility="Public" id="588e7bf8-c5b4-4682-9c3d-4a538b9dc5d3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.UserConfirmations-&gt;exists(uc|uc.Confirmed.notNull) or&#xD;&#xA;self.AccountConfirmationNotRequired" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="FirstName" Multiplicity="" Visibility="Public" id="790a4703-2f5b-41d6-8f1a-371b7719556b">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="RegistrationComplete" CodeComment="Place to put rules for a user registration being complete" Multiplicity="" Visibility="Public" id="852895da-3919-4ee1-a196-8437b3ceca2f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.RegistrationPageDone and&#xD;&#xA;not self.NamePresentation.isNullOrEmpty" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="AddToLog" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8a907bd7-e8cc-4989-9561-63de8f05b1f4">
+          <Parameter>
+            <Parameter Name="aText" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <PlacedClass>
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Log := self.Log + aText + '\r\n'" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="NamePresentation" Multiplicity="" Visibility="Public" id="8fe45698-46c3-40ad-920d-c57e683751ec">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.FirstName + ' ' + self.LastName" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a6e2bd9f-cff9-481e-a1cc-8f4066bc6153">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.onCreate" />
+          </TaggedValue>
+        </Method>
+        <Method Name="FindUserFromEmail" CodeComment="Search with SQL in the DB" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="ab4eed3e-b0b1-4299-8c16-3f5af729e2da">
+          <Parameter>
+            <Parameter Name="email" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="User" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.FormerNames" Value="GetExistingUserWithAccountUsingEmail" />
+            <TaggedValue Tag="Eco.Body" Value="if Utils.ValidEmailCheck(email) then&#xD;&#xA;  User.PSEval(User.allinstances-&gt;select(u|u.UserEmail=email),2,0,'')-&gt;first&#xD;&#xA;else&#xD;&#xA;  User.nullValue&#xD;&#xA;endif" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="UserNameUnderEdit" CodeComment="Temporary storage while editing complete name" Multiplicity="" Visibility="Public" id="c18cae10-0a75-4789-ae43-f9f94d0b30ae">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="persistence" Value="transient" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AccountConfirmationNotRequired" CodeComment="If True, this user don't need to verify their email address" Multiplicity="" Visibility="Public" id="c8c4341a-8c04-4712-9b0a-697655dda359">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="UseNotifications" CodeComment="If true, notifications are created and shown to this user" InitialValue="true" Multiplicity="" Visibility="Public" id="d51eba9e-5d6f-475c-a7ed-21ada94aa403">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="8890da62-bbe9-4982-a887-6281217156b0" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="UserEmailValid" CodeComment="Returns NULL is no email exists" Multiplicity="" Visibility="Public" id="d5ffa74b-4ec7-4ca2-823c-b97557e2ebe4">
+          <PlacedClass>
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+            <PlacedClass idref="6fef1bfb-4af9-476a-b7f2-f6d35c9d2753" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="if not self.UserEmail.isNullOrEmpty then&#xD;&#xA;  Utils.ValidEmailCheck(self.UserEmail)&#xD;&#xA;else&#xD;&#xA;  Boolean.nullValue&#xD;&#xA;endif" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EffectiveEmail" Multiplicity="" Visibility="Public" id="dfc97c96-4eb7-47c6-9a4d-473f3a23cc16">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="if self.SysUser-&gt;notEmpty then&#xD;&#xA;  self.SysUser.UserName&#xD;&#xA;else&#xD;&#xA;  self.UserEmail&#xD;&#xA;endif" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="RegistrationPageDone" CodeComment="The user has accepted the user registration page (might not be enough to be completed though)" Multiplicity="" Visibility="Public" id="e1b2daa2-9f19-4e34-873b-cede68fbbaa6">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LastName" Multiplicity="" Visibility="Public" id="fdaf0c40-1394-42b7-a2cc-b8401362ae77">
+          <PlacedClass>
+            <PlacedClass idref="49f25186-dd4f-4deb-bd8d-d34e2803a6f8" />
+            <PlacedClass idref="611790e8-a4ab-496e-bf73-d1e2322e7c19" />
+          </PlacedClass>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <ModelDocumentation>
+        <ModelDocumentation Content="UEsDBBQAAAAIAFpk21Lj989VNgIAAH0HAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAAIWVYW/aMBCG/0rkfR4hbOu2iiAhCqMaq6aFrtK+HeFIrDl2ZF8K2a+fTVIWRqjzKXGeu3v92j6PE0yJKxkcCiFNzHKi8jYMTZpjAWZQ8FQro3Y0SFUR7rncHcLRcHgTHqAQYanRoCRwCZjLcGtKSDFmxx/6GVmwxgNNBc9kYcGYrXBHLFhxiUvkWW5HphUpFtybZV3mKI+p5hI2ArcxW4Aw2CQWILOYoXxbGRYshNrfcd0ob5Ku1Q+XjwUPVbFBnVQbQ5wqBwxmlaBKY6Iq7cQ9Wmm9XPfDCjNtnK2nJC2g4KKOWYKZwuDxvhlNqBY25YPSBYhm6KmdWHcsIY2U5v8N8j82NBq5L42ZVpW0c36zWAyPj/WuLlWmoczrQUIgt6C3K56B02RXaq0rPGNmNqd1uwLxGnXHTWrF2CmCrjtg63WHXHJDSvP0LN8lNpVSNVtgKgi1XULHDa9I6zIX2v5VtI4UvdW+2mjutsLl9KHkBCKxO/AIXMbOwGCC0nDiz3i1gltSq4OnCVLkA0Y+4J0PeO8DPviAGx/w0Qd88gGfvUYNvYTXy8hrZuR1M/LaGXn9jLyGRl5HI6+lkdfTUa+nCw1t23vpJd1wASbH7S/Uqi/2G5Br6+RO2BeN+LsPmoOhqeEg54cSNV09Jz9BW4hMr5D2MPb/tK0XtT2p573zEujcGz3QSecT31LeX+nErOz1UUHWX+6luSZ7594rzesKcFq08wY4GX8HDUdmMg677+2dO/kLUEsDBAoAAAAAAFpk21J70+IgDAEAAAwBAAALABwAX3JlbHMvLnJlbHMgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUmMzODdjMjhlYjM4MTQ5ZWMiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQKAAAAAABaZNtSNc31dyoBAAAqAQAAEwAcAFtDb250ZW50X1R5cGVzXS54bWwgohgAKKAUAAAAAAAAAAAAAAAAAAAAAAAAAAAA77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+PERlZmF1bHQgRXh0ZW5zaW9uPSJ4YW1sIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm1zLXdwZi54YW1sK3htbCIgLz48RGVmYXVsdCBFeHRlbnNpb249InJlbHMiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQub3BlbnhtbGZvcm1hdHMtcGFja2FnZS5yZWxhdGlvbnNoaXBzK3htbCIgLz48L1R5cGVzPlBLAQItABQAAAAIAFpk21Lj989VNgIAAH0HAAASAAAAAAAAAAAAAAAAAAAAAABYYW1sL0RvY3VtZW50LnhhbWxQSwECLQAKAAAAAABaZNtSe9PiIAwBAAAMAQAACwAAAAAAAAAAAAAAAACCAgAAX3JlbHMvLnJlbHNQSwECLQAKAAAAAABaZNtSNc31dyoBAAAqAQAAEwAAAAAAAAAAAAAAAADTAwAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAwADALoAAABKBQAAAAA=" />
+      </ModelDocumentation>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.FormerNames" Value="Person" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-932932115" />
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="if self.NamePresentation.Trim &lt;&gt; '' then&#xD;&#xA;  self.NamePresentation.Trim&#xD;&#xA;else&#xD;&#xA;  '&lt;NamePresentation missing&gt;'&#xD;&#xA;endif" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="UserWelcomeNotificationUserWelcomeNotificationsUserUserUser" id="2d0fc6fd-cdbf-46cc-a1a4-2f8ca1b47b12">
+      <AssociationEnd>
+        <AssociationEnd Name="User" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="441ade8b-aaff-4c07-80d0-e6178e5de9e0">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserWelcomeNotificationsUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="fae01bb1-a9e9-4c43-9d83-a597bff5d669">
+          <Participant>
+            <Class Name="UserWelcomeNotification" idref="79a7869e-d32c-42bb-8da9-9b8e05cf0a19" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="Utils" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="35317324-8543-45f5-9c89-52d65d95f85f">
+      <Feature>
+        <Method Name="PrependText" CodeComment="Prepends with the Prepend string if Text is not null or empty" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3eb3910b-0ccf-4b13-b7c3-86ee487ef459">
+          <Parameter>
+            <Parameter Name="Prepend" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="Text" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Utils.SurroundText(Prepend,Text,'')" />
+          </TaggedValue>
+        </Method>
+        <Method Name="ValidEmailCheck" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="72a97fc3-8857-4c37-8e4d-81cb42db7733">
+          <Parameter>
+            <Parameter Name="email" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="email.regExpMatch('^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$')" />
+          </TaggedValue>
+        </Method>
+        <Method Name="Date" CodeComment="Get Date with subscription" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a9747ed6-8c8d-4194-9919-a0f9117ef1d2">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let sm = Calendar.SO.ServerMinute in -- Subscribe&#xD;&#xA;(&#xD;&#xA;  DateTime.Date.AddMilliseconds(sm.Millisecond - sm.Millisecond)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="SurroundText" CodeComment="Prepends and Postpends string if Text is not null or empty" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a9753a76-bf9b-47e1-bca4-eda717791797">
+          <Parameter>
+            <Parameter Name="Prepend" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="Text" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="Postpend" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if Text.IsNullOrEmpty then&#xD;&#xA;  Text&#xD;&#xA;else&#xD;&#xA;  Prepend + Text + Postpend&#xD;&#xA;endif" />
+          </TaggedValue>
+        </Method>
+        <Method Name="DateTimeSmartFormat" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="df2987ed-4ae6-4dd6-b54b-fe26e55ba09e">
+          <Parameter>
+            <Parameter Name="aDateTime" Kind="In">
+              <Type>
+                <Datatype idref="DateTime?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if aDateTime.isNull then&#xD;&#xA;  String.nullValue&#xD;&#xA;else&#xD;&#xA;  if aDateTime.Date = Calendar.Date then&#xD;&#xA;    if Calendar.Now &gt; aDateTime then&#xD;&#xA;      if (Calendar.Now - aDateTime).TotalHours &lt; 1.5 then&#xD;&#xA;        if (Calendar.Now - aDateTime).TotalHours &lt; 1 then&#xD;&#xA;          if (Calendar.Now - aDateTime).TotalMinutes &lt; 30 then&#xD;&#xA;            if (Calendar.Now - aDateTime).TotalMinutes &lt; 10 then&#xD;&#xA;              if (Calendar.Now - aDateTime).TotalMinutes &lt; 2 then&#xD;&#xA;                'Moments ago'&#xD;&#xA;              else&#xD;&#xA;                'Less than 10 minutes ago'&#xD;&#xA;              endif&#xD;&#xA;            else&#xD;&#xA;              'Less than 30 minutes ago'&#xD;&#xA;            endif&#xD;&#xA;          else&#xD;&#xA;            'Less than one hour ago'&#xD;&#xA;          endif&#xD;&#xA;        else&#xD;&#xA;          'About an hour ago'&#xD;&#xA;        endif&#xD;&#xA;      else&#xD;&#xA;        (Calendar.Now - aDateTime).TotalHours.round.asString + ' hours ago'&#xD;&#xA;      endif&#xD;&#xA;    else&#xD;&#xA;      aDateTime.formatDateTime('HH:mm:ss') -- Future&#xD;&#xA;    endif&#xD;&#xA;  else&#xD;&#xA;    aDateTime.formatDateTime('yy-MM-dd HH:mm:ss')&#xD;&#xA;  endif&#xD;&#xA;endif" />
+          </TaggedValue>
+        </Method>
+        <Method Name="Now" CodeComment="Get time with subscription every minute" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="ee5be2de-a880-4c92-ad52-4e6fdb633bd0">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="DateTime" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let sm = Calendar.SO.ServerMinute in -- Subscribe&#xD;&#xA;(&#xD;&#xA;  DateTime.Now.AddMilliseconds(sm.Millisecond - sm.Millisecond)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-939474944" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="UserValidOwnerUserUser_children2" id="557c6c82-1b0d-41e7-a737-8a4e2e928ab4">
+      <AssociationEnd>
+        <AssociationEnd Name="ValidOwner" CodeComment="For a PH, get the owner, for an UWA, the UWA itself" IsNavigable="True" Multiplicity="1" Visibility="Public" id="de6fc950-98ed-4e99-ba51-d5c2afb54e70">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self -- Should be overridden in PlaceholderUser" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="User_children2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="5b86b838-57a2-40c8-819e-9c54fbfb9625">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="SysUserSysUser3UserEffectiveUser" id="679f896a-781e-4691-907b-b8a003d9af59">
+      <AssociationEnd>
+        <AssociationEnd Name="SysUser3" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="ca971906-d449-4d33-a4c9-c522befae19e">
+          <Participant>
+            <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="EffectiveUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="994ed94b-ac57-47d2-8006-1e92022e5164">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="if self.User-&gt;notEmpty then &#xD;&#xA;  self.User&#xD;&#xA;else&#xD;&#xA;  self.LookupUser&#xD;&#xA;endif" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="UserEffectiveUserSysSingletonSysUser2" id="c708f594-94b2-4a31-8b09-e81e8aa4b25a">
+      <AssociationEnd>
+        <AssociationEnd Name="EffectiveUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="f98b4d7e-6819-4c65-a7a3-c33a543c8200">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="if self.CurrentUser.IsLocked then&#xD;&#xA;  User.nullValue&#xD;&#xA;else&#xD;&#xA;  self.CurrentUser.User&#xD;&#xA;endif" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="SysUser2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="48a7e020-aefd-40e7-a893-6324f75f3377">
+          <Participant>
+            <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="UserRegistrationNotificationUserRegistrationNotificationsUserUserUser" id="d36c4f28-9b2b-4cdb-9bff-a77194427277">
+      <AssociationEnd>
+        <AssociationEnd Name="User" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4a06193a-4b80-4135-926a-5a95c272f1ae">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserRegistrationNotificationsUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="7f575576-b7bb-4bf0-8d15-ca11013f89c5">
+          <Participant>
+            <Class Name="UserRegistrationNotification" idref="b350979f-2a85-4f8e-9e53-b89b60c9cede" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="UserUserWithAccountIfAvailableUserUser_children" id="f462b39e-f352-43e8-a126-2a34517908f7">
+      <AssociationEnd>
+        <AssociationEnd Name="UserWithAccountIfAvailable" CodeComment="If a PH, get's the UWA if it's been created (NOT OwnedBy)" IsNavigable="True" Multiplicity="1" Visibility="Public" id="51974873-e3bf-4f88-b5b0-76247abbbd24">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self -- Should be overridden in PlaceholderUser" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="User_children" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="3ce762a4-aa77-408e-9d2c-d9ce702f9ce1">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ScheduledTasksValueStore" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="a4da01cb-be24-4f01-9ca8-f3266fa30021">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="ScheduledTask" idref="78d70915-b236-4c4f-b4c8-26d654e5b9d1" />
+  </Class>
+  <Nesting>
+    <Nesting Name="ScheduledTask" ExpressionActAsForActions="" id="d3651c6b-c963-4003-8312-da789a1d20fa">
+      <Class>
+        <Class Name="ScheduledTask" idref="78d70915-b236-4c4f-b4c8-26d654e5b9d1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Enabled" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Enabled" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="c606445e-b257-4e9e-ba9e-71106e1dbeda" />
+        <Column Name="Type" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.oclType.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="893c21f6-294f-4585-8c95-ac8296ad50ac" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="6f3d62c9-87a1-49b5-86e5-22e6d66a16a1" />
+        <Column Name="SheduledAt" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.SheduledAt" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="3b91f5f3-6cc2-4f2d-b84d-966fb8445a6e" />
+        <Column Name="LastExecution" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.LastExecution.formatDateTime('g')" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="2fa3d240-b7b9-492d-9262-5d16b3039e39" />
+        <Column Name="NextOccurance" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.NextOccurance.formatDateTime('g')" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="0ee53076-6c0c-4cdb-a7ea-f6e9fe501a3a" />
+        <Column Name="ShouldStartNow" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ShouldStartNow" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="c47220c4-6993-441a-b2b4-23c6a640129c" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllScheduledTask" idref="71b4ad28-bf6d-4b5f-b934-2fa028b043d1" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllScheduledTask" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="ScheduledTask.allinstances-&gt;orderBy(x|x.Name)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="1" id="71b4ad28-bf6d-4b5f-b934-2fa028b043d1">
+      <ReferedNesting>
+        <Nesting Name="ScheduledTask" idref="d3651c6b-c963-4003-8312-da789a1d20fa" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="UpdateTime" ActionPeriodicityMillisec="3000" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.TouchTime" ExpressionForReadOnly="false" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="1" id="4edf6ea2-d3af-4fc4-b01a-494c1eef922f" />
+    <Column Name="NowDateTime" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.NowDateTime.formatDateTime('G')" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="8" YPos="0" id="10405e55-609d-4025-842a-b6d6c73d0bc8" />
+  </OwnedColumns>
+</Span>

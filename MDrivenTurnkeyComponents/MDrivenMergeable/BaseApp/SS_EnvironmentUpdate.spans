@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SS_EnvironmentUpdate" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="cfa45719-60bd-4fc7-bea1-b40409559e8f">
+  <Category>
+    <Category Name="ServerSide" idref="6dd08983-4b7d-45df-a8f3-de45fc4734b1" />
+  </Category>
+  <Class>
+    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+  </Class>
+  <CriteriaForServerSideExecute>
+    <CriteriaForServerSideExecute Interval="60" MaxAnswers="-1" PreEAL="" PSOcl="SysSingleton.allInstances" SerializedBlocking="True" />
+  </CriteriaForServerSideExecute>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="UpdateEnvironment" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AppEnvironment := vEnvironment;&#xD;&#xA;if not vSiteURL.isNullOrEmpty then&#xD;&#xA;  self.SiteURL := vSiteURL&#xD;&#xA;else&#xD;&#xA;  self.SiteURL&#xD;&#xA;endif" ExpressionForReadOnly="(self.AppEnvironment = vEnvironment) and&#xD;&#xA;(self.SiteURL = vSiteURL)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a2fe6963-f56f-46b2-be0b-0e6173f5cff2" />
+    <Column Name="unlockSysUsers" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;&#xD;&#xA;  select(su|su.TestAccount and su.IsLocked)-&gt;&#xD;&#xA;    forEach(su|su.IsLocked := false)" ExpressionForReadOnly="self.AppEnvironment.isNullOrEmpty or (self.AppEnvironment.toLower = 'prod')" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="27c334e0-5357-46c6-853e-963c978a4ce4" />
+    <Column Name="SetFakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.FakeEmailSending := true" ExpressionForReadOnly="(self.AppEnvironment.toLower = 'prod') or SysSingleton.oclSingleton.FakeEmailSending.notNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="91a4d82f-ab7d-49e2-a11c-12f4a048f4d0" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vEnvironment" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSiteURL" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.UIAllowed" Value="False" />
+  </TaggedValue>
+</Span>

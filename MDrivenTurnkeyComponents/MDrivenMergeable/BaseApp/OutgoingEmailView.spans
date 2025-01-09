@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OutgoingEmailView" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5d48a518-f063-4046-a375-328938d02298">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+  </Class>
+  <Nesting>
+    <Nesting Name="EmailAttachments" ExpressionActAsForActions="" id="3cfe42ba-9d05-4ca9-8a5b-8bcc1f49f2f5">
+      <Class>
+        <Class Name="EmailAttachment" idref="a9b3662b-92f8-42f8-83b8-3ee76b2c6486" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Attachment" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.file" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="3df68a62-2860-499e-8f86-3238ae7770a6">
+          <TaggedValue>
+            <TaggedValue Tag="BlobDownloadLink" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Attachment_FileName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.name" ExpressionForReadOnly="true" ExpressionForVisible="false" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="fca67a5e-56dc-4670-84c4-2a128a889c08" />
+        <Column Name="Attachment_ContentType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.mediatype" ExpressionForReadOnly="true" ExpressionForVisible="false" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e6d74b9e-7522-499b-be90-3feb5422a7c0" />
+        <Column Name="mediatype" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.mediatype" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="82d2a799-4af5-49a3-a59f-c6974b0695af" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="EmailAttachments" idref="b377b451-6a9b-4611-802e-126dc81f6712" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="EmailType" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.oclType.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h5" XPos="0" YPos="0" id="58304ec8-ffbe-4a84-9fe7-692163f1a279" />
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.ChangeTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="1" id="42067a24-d832-4165-94eb-916500c5b904" />
+    <Column Name="Queued" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="96759e17-6559-40db-9b3f-9417fc31b0c1" />
+    <Column Name="errorinfo" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.errorinfo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="18" id="3a6bab52-a7c8-4736-b63d-48ce33dfefc1" />
+    <Column Name="from" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.from" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="648f1a4c-3674-4f55-8c22-164f8f25a90a" />
+    <Column Name="frompresentation" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.frompresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="25b9ddc7-3e5e-43fb-99ca-b9db7ffb0289" />
+    <Column Name="MaxSendTries" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.MaxSendTries" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="2" id="48e81919-30e7-4d84-9b3d-e6e6ddd95539" />
+    <Column Name="SendTries" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SendTries" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="2" id="f2eaaff5-ecb7-4ec9-b10f-e49084bb87f0" />
+    <Column Name="State" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.State" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="1" id="6042cef8-37d5-4a35-8c69-0633bf3cfcaf" />
+    <Column Name="subject" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.subject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="82ccb9da-1985-402a-907b-148e6c963d30" />
+    <Column Name="to" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.to" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="4abbec14-2620-447f-b141-ada7a26fc263" />
+    <Column Name="EmailAttachments" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="self.EmailAttachments" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="10" id="b377b451-6a9b-4611-802e-126dc81f6712">
+      <ReferedNesting>
+        <Nesting Name="EmailAttachments" idref="3cfe42ba-9d05-4ca9-8a5b-8bcc1f49f2f5" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="PresEmailAttachments" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Attachments'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="h5" XPos="0" YPos="9" id="efd76318-8a48-4611-af8e-47343aef5026" />
+    <Column Name="body" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="self.body" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="4" StyleRef="html-viewing" XPos="0" YPos="5" id="ec7cb76d-8331-4ba5-8480-29006c5965c6">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="exceptionInfo" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="self.exceptionInfo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="15" id="ce186117-ab80-4fed-af1a-32f5a5304eb7" />
+    <Column Name="FakeSent" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.FakeSent" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="ea018b5c-a6c5-4cd6-9629-fe9ae6131d3e" />
+  </OwnedColumns>
+</Span>

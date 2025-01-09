@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="InvitationHtmlTemplates" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5c358636-17a0-4cfe-9614-e226fdaf5c55">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
+  </Category>
+  <Class>
+    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+  </Class>
+  <Nesting>
+    <Nesting Name="TemplateSingleton" ExpressionActAsForActions="" id="a89126ca-d011-4cf8-ac1c-6c976e8200f9">
+      <Class>
+        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditResetPassword" idref="fc5fd275-dfd8-427f-875d-8900c86efa90" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditUserConfirmation" idref="f7edc091-d622-43e2-9072-4844f046354d" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditUserRegistration" idref="f3c1c6aa-e42f-4d21-b69e-5166fcc95c78" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditWelcomeForConfirmedUser" idref="5fb29010-7b53-49a7-9aa3-e3a9b5278d07" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="UserNotificationUpdate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserNotificationUpdate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="6f5fcbec-3f3a-4b40-a071-26754785f24c">
+          <ColumnForPickList>
+            <Column Name="InvitationToJoinFramePickList" idref="148865f7-e949-4d5e-8445-95b9c2332c69" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="InvitationToJoinFramePickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances-&gt;orderBy(x|x.Name)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="148865f7-e949-4d5e-8445-95b9c2332c69">
+          <ReferedNesting>
+            <Nesting Name="InvitationToJoinFragmentPickList" idref="01a57f18-38f9-4750-a3c3-72cdb7ce5b62" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="UserNotificationUpdate_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserNotificationUpdate.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="1" id="6b4625af-ede1-4c0e-aa8b-b9bdcf91f8fe">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="EditInvitationToJoinFragment" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="65c22e89-6761-4919-b4e8-c36603106293">
+          <ActionToExecute>
+            <ClassAction Name="EditUserNotificationUpdate" idref="8a2919cd-1342-4943-babf-a679706422d1" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="UserUpdates" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'User updates'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="4f6bbe89-281c-4e91-b76a-b41540985960" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TemplateSingleton" idref="415d6c6e-3aab-4559-b931-6926430c333d" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="InvitationToJoinFragmentPickList" ExpressionActAsForActions="" id="01a57f18-38f9-4750-a3c3-72cdb7ce5b62">
+      <Class>
+        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowHtmlTemplateEditor" idref="eb460c5f-3dc3-4235-ad39-ca5f01ef8d23" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="bb2c3d9d-aed9-448a-a557-7c682125f1a6" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="InvitationToJoinFramePickList" idref="148865f7-e949-4d5e-8445-95b9c2332c69" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="InvitationToMergeFragmentPickList" ExpressionActAsForActions="" id="b1033735-20e0-4063-b605-b953d5625619">
+      <Class>
+        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowHtmlTemplateEditor" idref="eb460c5f-3dc3-4235-ad39-ca5f01ef8d23" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6c1b9236-1a9e-49db-9f1c-dd12f7cd8d81" />
+      </OwnedColumns>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TemplateSingleton" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="0" id="415d6c6e-3aab-4559-b931-6926430c333d">
+      <ReferedNesting>
+        <Nesting Name="TemplateSingleton" idref="a89126ca-d011-4cf8-ac1c-6c976e8200f9" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

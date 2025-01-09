@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TagExtension Name="Plan" Id="1f60e0d6-b87c-4701-ae18-2b3de1ad666b">
+  <TaggedValueType>
+    <TaggedValueType Name="SystemResource" Default="False" UseForTaggable="Class" Id="4f2a183c-55fb-400c-8c6d-ee88d6388a26">
+      <SymbolWhenNotEmpty>
+        <Symbol Name="resource" idref="ab744200-0b73-4687-9b47-f807344f8c53" />
+      </SymbolWhenNotEmpty>
+      <TaggedValueTypeValue>
+        <TaggedValueTypeValue Value="False" />
+        <TaggedValueTypeValue Value="True">
+          <Symbol>
+            <Symbol Name="resource" idref="ab744200-0b73-4687-9b47-f807344f8c53" />
+          </Symbol>
+        </TaggedValueTypeValue>
+      </TaggedValueTypeValue>
+    </TaggedValueType>
+    <TaggedValueType Name="persistence" Default="" UseForTaggable="Attribute" Id="81fea0e8-e7de-4cde-b092-7824b7ca0da6">
+      <TaggedValueTypeValue>
+        <TaggedValueTypeValue Value="transient">
+          <Symbol>
+            <Symbol Name="transientclass" idref="TransientSymbolID" />
+          </Symbol>
+        </TaggedValueTypeValue>
+      </TaggedValueTypeValue>
+    </TaggedValueType>
+  </TaggedValueType>
+</TagExtension>

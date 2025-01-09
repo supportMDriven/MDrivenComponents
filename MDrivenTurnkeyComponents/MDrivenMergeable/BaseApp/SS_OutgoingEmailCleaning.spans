@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SS_OutgoingEmailCleaning" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="45b9f9e6-2e2c-4c44-bf30-93d315385110">
+  <Category>
+    <Category Name="ServerSide" idref="6dd08983-4b7d-45df-a8f3-de45fc4734b1" />
+  </Category>
+  <Class>
+    <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+  </Class>
+  <CriteriaForServerSideExecute>
+    <CriteriaForServerSideExecute Interval="600" MaxAnswers="200" PreEAL="vDeleteBefore := DateTime.Now.addDays(-3)" PSOcl="OutgoingEmail.allInstances-&gt;select(oe|(oe.State='Sent') and (oe.ChangeTime &lt; vDeleteBefore))" SerializedBlocking="False" />
+  </CriteriaForServerSideExecute>
+  <OwnedColumns>
+    <Column Name="DeleteMe" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Delete" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="78b254ae-50ae-4ee4-9c5f-4911e77f6f34" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vDeleteBefore" InitialValue="" TypeName="DateTime" UserData="" />
+  </SpanVariables>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.UIAllowed" Value="False" />
+  </TaggedValue>
+</Span>

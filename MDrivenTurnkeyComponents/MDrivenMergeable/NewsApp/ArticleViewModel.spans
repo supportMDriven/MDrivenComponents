@@ -136,7 +136,7 @@
         <PlacingContainer idref="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
       </PlacingContainer>
     </Column>
-    <Column Name="MoreNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(art|art.author.sqlLikeCaseInsensitive('%'+self.author+'%') or (art.author=self.author))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ab7ae4cd-487c-4dea-9205-c6639688f6a9">
+    <Column Name="MoreNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(art|art.author.sqlLikeCaseInsensitive('%'+self.author+'%') or (art.author=self.author))-&gt;excluding(self)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ab7ae4cd-487c-4dea-9205-c6639688f6a9">
       <PlacingContainer>
         <PlacingContainer idref="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
       </PlacingContainer>

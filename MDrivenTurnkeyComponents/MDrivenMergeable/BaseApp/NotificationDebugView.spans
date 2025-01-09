@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="NotificationDebugView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="53dca8ec-e39d-4c6c-8513-7f4c3cdd8d55">
+  <Category>
+    <Category Name="Debug" idref="19336e56-5897-467a-a867-8550585794ca" />
+  </Category>
+  <Class>
+    <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+  </Class>
+  <Nesting>
+    <Nesting Name="UserNotification" ExpressionActAsForActions="" id="b7e36a60-c794-4c18-b9e4-2d5f50a7e0f6">
+      <Class>
+        <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="DebugNotification" idref="23245998-5efc-4b89-997a-afa85260d8b8" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Active" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Active" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="4c5047ed-5710-4e88-9a19-b0e5aac14a11" />
+        <Column Name="User" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.User.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="8c78043b-18ca-4dc6-abf8-f504907024e2" />
+        <Column Name="ReminderAfter" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ReminderAfter" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="bd26a9ef-ea7f-4958-b414-ff72d49bd052" />
+        <Column Name="Dismissed" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Dismissed" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="c3d70de8-faef-40a9-bb07-90758d3cbca5" />
+        <Column Name="EffectiveMessage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.EffectiveMessage" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="9f550c98-93c6-4cdd-9b2f-936aac065a5e" />
+        <Column Name="NotificationMessages" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="3" Expression="self.OutgoingNotifications" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="1" YPos="14" id="2d97e647-f2a6-4811-a55e-347da814cfc5">
+          <ReferedNesting>
+            <Nesting Name="OutgoingNotification" idref="e184a675-bbe8-4e66-9131-59eeac0ab315" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="ThisUserNotification" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="3" Expression="self" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="20" id="e3a983d4-6c4f-4369-9620-c0049eb7157c">
+          <ReferedNesting>
+            <Nesting Name="UserNotification2" idref="2246a84c-ae5b-4bef-9679-8aa79a037ce0" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UserNotifications" idref="e39fff48-b0f4-40b3-9df0-681123fd3829" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="OutgoingNotification" ExpressionActAsForActions="" id="e184a675-bbe8-4e66-9131-59eeac0ab315">
+      <Class>
+        <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="124c5b07-ad90-4617-9fe3-4d0c267a8fa8" />
+        <Column Name="Subject" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Subject" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="32b078da-d240-49ad-8940-b59fefec8655" />
+        <Column Name="MessageSent" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.MessageSent" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="e26837dd-7fce-4049-80d6-cd03d1e9572d" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="NotificationMessages" idref="2d97e647-f2a6-4811-a55e-347da814cfc5" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="UserNotification2" ExpressionActAsForActions="" id="2246a84c-ae5b-4bef-9679-8aa79a037ce0">
+      <Class>
+        <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="EffectiveHtmlMessage" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="self.EffectiveHtmlMessage" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt; (notification, not message)" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="2" YPos="10" id="f6a0cff4-63f0-43fa-ab92-9779f11f4640">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ThisUserNotification" idref="e3a983d4-6c4f-4369-9620-c0049eb7157c" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="3676a9d8-05eb-45c7-8dca-09960a1acdc6" />
+    <Column Name="Type" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.oclType.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5adf2fb1-d515-4002-8402-7b6add293dc2" />
+    <Column Name="ShowAfter" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.ShowAfter)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="449025de-f12e-4670-9907-33d3c3a04cf1" />
+    <Column Name="ShowUntil" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.ShowUntil)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="2" id="e293797e-50a6-489c-b773-1825ce33a694" />
+    <Column Name="SendMessageAfter" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.SendMessageAfter)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="26582374-6147-4b63-b28f-f37dc0128da4" />
+    <Column Name="ReminderAfterMinutes" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ReminderAfterMinutes" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="3" id="6b4b141b-f197-47e8-b82a-0672e73a826e" />
+    <Column Name="Active" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.Active" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="f34e87d2-ec1b-4468-89e8-29b5c4270908" />
+    <Column Name="Cancelled" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.Cancelled)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="3" id="30634ebe-4743-48bf-a357-c907542cbf7d" />
+    <Column Name="Cleared" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Utils.DateTimeSmartFormat(self.Cleared)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="2" id="6ab71aa7-6535-4b3b-9366-239281fab7d4" />
+    <Column Name="UserNotifications" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="self.UserNotifications" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="4" id="e39fff48-b0f4-40b3-9df0-681123fd3829">
+      <ReferedNesting>
+        <Nesting Name="UserNotification" idref="b7e36a60-c794-4c18-b9e4-2d5f50a7e0f6" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

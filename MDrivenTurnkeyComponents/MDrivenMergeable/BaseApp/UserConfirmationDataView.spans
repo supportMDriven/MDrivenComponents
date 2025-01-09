@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="UserConfirmationDataView" ColCount="24" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="18" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="c2eacf38-70e1-4ac4-a2bf-f072855d6610">
+  <Category>
+    <Category Name="MessageDataView" idref="f45a6c86-0982-4053-a34d-8c7f7655360f" />
+  </Category>
+  <Class>
+    <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TemplateHtml" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.HtmlTemplate.EmailXHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="ddc30fcf-95b2-4a2c-959f-4e1480c76232" />
+    <Column Name="ToUser" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.User" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="13" id="0cc816aa-4f59-4c3f-9ea7-8d5fcf2bc6cf" />
+    <Column Name="ConfirmationCode" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ConfirmationCode" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="2" id="50c1085a-1674-4ad9-835d-5bc813a20030" />
+    <Column Name="ConfirmationURL" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ConfirmationURL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="3" id="13e482a0-14cc-4a27-916a-be7048b1bac9" />
+    <Column Name="FromUserName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FromUser.NamePresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="4" id="81455030-0d26-43b7-9128-ed9a31f1c924" />
+    <Column Name="ToUserName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ToUser.NamePresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="5" id="fb1d7ccc-6594-4b2d-9fd6-28dcba1eca46" />
+    <Column Name="ToUserEmail" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ToUser.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="6" id="c6dcda1d-5ea6-4218-89a9-fed8816dec2e" />
+    <Column Name="ToUserLastName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ToUser.LastName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="7" id="bcbb95c2-54bf-4bbd-9da1-8d900e61512c" />
+    <Column Name="ToUserFirstName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ToUser.FirstName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="8" id="40a523e3-6de5-4fc4-80b5-c1549422f82a" />
+    <Column Name="AcceptFrom" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.AcceptFrom" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="9" id="0da56eb9-f77e-4319-b6e4-f33ad02337c5" />
+    <Column Name="AcceptUntil" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.AcceptUntil" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="10" id="6c3bb18e-1021-407f-9f39-8e7b2559367b" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.Presentation" Value="Attesterare" />
+  </TaggedValue>
+</Span>

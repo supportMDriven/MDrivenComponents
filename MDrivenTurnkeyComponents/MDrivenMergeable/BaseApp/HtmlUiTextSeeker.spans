@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="HtmlUiTextSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9d148551-e9f4-411a-b956-f136d1678503">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
+  </Category>
+  <Class>
+    <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+  </Class>
+  <Nesting>
+    <Nesting Name="HtmlTemplate" ExpressionActAsForActions="" id="f2548d89-8088-4a02-8ae8-c24f4384c81f">
+      <Class>
+        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3d4bef3d-3ad9-4d59-b12b-1aded901b7c3" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UiTemplates" idref="eb1c98df-1330-4471-a978-fd7da9bf8478" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="7e605655-207b-4ac2-a148-be233dc0fc16">
+      <Class>
+        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlUiText.allinstances-&gt;select(a|a.Name.sqllike(vSeekParamWildcard) or (a.Name=vSeekParam))-&gt;orderby(a|a.Name)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a2589e2b-6bb9-4c2a-aece-4bd7ab888af5" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="HtmlTemplate.Name" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="ddeffba0-2351-4ca5-8491-30c0efcfe28c">
+      <Class>
+        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlUiText.allinstances-&gt;orderby(a|a.Name)" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cbf57e40-2778-405f-b832-5acd61a00e05" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="EditTemplate" idref="bd6bb0d2-f17b-43b0-ba6d-9fb896ff822c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2c6e9f09-ed51-4c07-b5cd-42d0a5f55a10" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="d139178c-369b-4c6d-8c88-f64b913c6119" />
+    <Column Name="UiTemplates" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="eb1c98df-1330-4471-a978-fd7da9bf8478">
+      <ReferedNesting>
+        <Nesting Name="HtmlTemplate" idref="f2548d89-8088-4a02-8ae8-c24f4384c81f" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(HtmlUiText)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekParamWildcard" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

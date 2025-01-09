@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AccessDenied" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b0d73e64-1637-4b60-b48c-b7a7c66e14fa">
+  <Category>
+    <Category Name="OpenViews" idref="22c6e2f8-34a8-4393-9e95-7a78985228f9" />
+  </Category>
+  <Class>
+    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+  </Class>
+  <Nesting>
+    <Nesting Name="SysSingleton" ExpressionActAsForActions="" id="70845b88-11cb-495f-a86e-ae9975dcd8a5">
+      <Class>
+        <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="NotLoggedIn" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'You are not logged in, please log in'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h1" XPos="0" YPos="0" id="7a73a028-b637-4f86-8c01-4d0ef93e8c0c" />
+        <Column Name="CurrentUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="6d9a4fd6-964c-4be3-8683-c543a8135910">
+          <ReferedNesting>
+            <Nesting Name="SysUser" idref="782ab2a3-c5df-406a-b632-c3ea4cb01858" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysSingleton" idref="e2d3d6bc-d3cb-4ca7-9d81-4205c9eea8e2" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="False" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="782ab2a3-c5df-406a-b632-c3ea4cb01858">
+      <Class>
+        <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ShowSysUser" idref="313b5778-c907-41ee-8b0f-d3fb09454acd" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="DeleteSysUser" idref="d477f9ed-9679-468b-94c5-b10eb0f70b07" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="LoggedInButNoUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'You are logged in as '+self.UserName+', please complete the user registration.'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;notEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h2" XPos="0" YPos="1" id="17dc7fd4-fa05-4330-9c85-329afd914f02" />
+        <Column Name="LoggedInUserAccessDenied" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'You are logged in as '+self.UserName+', but access is denied to the requested view.'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;notEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;notEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h2" XPos="0" YPos="2" id="77d39ab7-f9c9-4875-a138-5a3e4559bcf7" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="CurrentUser" idref="6d9a4fd6-964c-4be3-8683-c543a8135910" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="SysSingleton" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="e2d3d6bc-d3cb-4ca7-9d81-4205c9eea8e2">
+      <ReferedNesting>
+        <Nesting Name="SysSingleton" idref="70845b88-11cb-495f-a86e-ae9975dcd8a5" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

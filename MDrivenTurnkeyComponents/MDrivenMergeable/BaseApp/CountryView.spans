@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="CountryView" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b6e9648d-2993-4000-878b-51e5a83b875b">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="Country" idref="284c29e6-2516-4cc0-bed8-85af08fdb185" />
+  </Class>
+  <Nesting>
+    <Nesting Name="WeekDefinitionPickList" ExpressionActAsForActions="" id="3b6ea5ce-bab6-4892-a5aa-8e2acf31f53e">
+      <Class>
+        <Class Name="WeekDefinition" idref="77cb80f6-106d-4acf-8362-7a78a59e0a46" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b636fe55-f081-4244-8978-4b028c36db31" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="WeekDefinitionPickList" idref="d97c921c-e56c-412f-8438-9ee4ab00ff7c" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="76b44ef8-9d90-429e-b945-f57ac8ff587f" />
+    <Column Name="WeekDefinition" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.WeekDefinition" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;needs to be set&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="43acebd8-2a72-45d0-afcf-5d1b01bc03e3">
+      <ColumnForPickList>
+        <Column Name="WeekDefinitionPickList" idref="d97c921c-e56c-412f-8438-9ee4ab00ff7c" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="WeekDefinitionPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="WeekDefinition.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d97c921c-e56c-412f-8438-9ee4ab00ff7c">
+      <ReferedNesting>
+        <Nesting Name="WeekDefinitionPickList" idref="3b6ea5ce-bab6-4892-a5aa-8e2acf31f53e" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

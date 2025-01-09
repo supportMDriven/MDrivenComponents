@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Planning" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="d440fce7-5440-47b3-97be-d0c11fe3d64a">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="5dcc8de3-485c-4871-9fc6-bdfc4e29c8cf" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class Name="FakeName" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="1b4f1eaa-ee17-4a6d-8920-c49e23d05490">
+      <Feature>
+        <Method Name="DeleteFakeUser" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.CreatedUser-&gt;notEmpty" Visibility="Public" id="1c22fb0a-d5b9-454a-a215-9f76e550d21c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.CreatedUser.SysUser.delete;&#xD;&#xA;self.CreatedUser.delete" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="LastName" Multiplicity="" Visibility="Public" id="216d961d-8ab0-41de-a5f4-1d020a02ad18">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="name.split(' '.toCharArray)-&gt;last" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Json" Multiplicity="" Visibility="Public" id="48edace6-dddb-49b3-8815-0518a234e70e">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="name" Multiplicity="" Visibility="Public" id="6a283c04-6940-4ce2-b027-6553737e64f8">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="CreateFakeUser" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.CreatedUser-&gt;isEmpty" Visibility="Public" id="72d7fd2e-83fb-401c-8388-40f07444b1a8">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="User" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let su = SysUser.create in&#xD;&#xA;(&#xD;&#xA;  su.id := Guid.newGuid.asString;&#xD;&#xA;  su.SecurityStamp := Guid.newGuid.asString;&#xD;&#xA;  su.UserName := self.email;&#xD;&#xA;  su.TestAccount := true;&#xD;&#xA;  su.SetPassword(self.password);&#xD;&#xA;  let uwa = su.CreateUser in&#xD;&#xA;  (&#xD;&#xA;    uwa.FakedFrom := self;&#xD;&#xA;    uwa.FirstName := self.FirstName;&#xD;&#xA;    uwa.LastName := self.LastName;&#xD;&#xA;    uwa.IsFakeAccount := true;&#xD;&#xA;    uwa&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="email_u" Multiplicity="" Visibility="Public" id="73bdecfd-9569-4a3d-92a8-98352cca6287">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="password" Multiplicity="" Visibility="Public" id="9c69083c-2ef4-42d6-a20e-1aaba7637a6d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="FirstName" Multiplicity="" Visibility="Public" id="a843583d-5572-43b4-826d-1a4013b34d41">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="name.split(' '.toCharArray)-&gt;first" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="username" Multiplicity="" Visibility="Public" id="a85b282e-3fc8-4b3b-ba00-33e7eb678536">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="email" Multiplicity="" Visibility="Public" id="bddc3e56-efd3-488f-b4a0-c92d6f728c7a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="(self.FirstName + '.' + self.LastName + '@' + self.email_d).toLower.replace('å', 'a').replace('ä', 'a').replace('ö', 'o')" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="address" Multiplicity="" Visibility="Public" id="c645a659-838c-4886-ac08-12744e8b320c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="email_d" Multiplicity="" Visibility="Public" id="d785987b-d765-496f-bed2-a56a1f30f70c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="email_url" Multiplicity="" Visibility="Public" id="d7bdd716-ceb5-4a31-b1d5-acdc68ce2c46">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Used" Multiplicity="" Visibility="Public" id="e2881be3-ee1a-4825-a089-cb53b1fb612b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.CreatedUser-&gt;notEmpty" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="False" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-922812161" />
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.email" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="SysSuperClassRootObjectSysAsyncTicketSysAsyncTicketsRootObject" id="31be4b9f-15d5-4682-aee1-4f1a65fc4aba">
+      <AssociationEnd>
+        <AssociationEnd Name="RootObject" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="e3c5e5ca-882c-4cbf-9d9f-400499c567ef">
+          <Participant>
+            <Class Name="SysSuperClass" idref="5dcc8de3-485c-4871-9fc6-bdfc4e29c8cf" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysAsyncTicketsRootObject" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="7930d064-d808-4dfc-98f7-e5c25a3e0d79">
+          <Participant>
+            <Class Name="SysAsyncTicket" idref="5a30908a-d2d1-4f4b-82a4-c2778947e6ab" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="NotificationNotifications2UserClearedBy" id="58b7600b-c381-4ef7-86a2-93423331aa31">
+      <AssociationEnd>
+        <AssociationEnd Name="ClearedBy" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="43e9e518-ddad-4585-bfdc-b777ed213a47">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="Notifications2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="e2e053eb-1502-4bdc-8515-e5e5959eb426">
+          <Participant>
+            <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="UserNotificationUserNotificationsToShowUserShowForUser" id="59df4b43-2218-4f24-b61c-a9188e211c54">
+      <AssociationEnd>
+        <AssociationEnd Name="ShowForUser" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="3e23c81b-9c90-42a2-be8a-e39dc920ecbb">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserNotificationsToShow" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ebfce634-da54-435c-b5cf-73ef588cb410">
+          <Participant>
+            <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.ActiveNotificationsForMe-&gt;&#xD;&#xA;  select(ns|&#xD;&#xA;    (ns.Notification.ShowAfter &lt;= DateTime.UtcNow) and &#xD;&#xA;    (ns.Notification.ShowUntil &gt;= DateTime.UtcNow)  )" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="UserUserActiveNotificationUserNotificationActiveNotificationsForMe" id="7c36591a-a920-47be-9d6b-6732afaf415a">
+      <AssociationEnd>
+        <AssociationEnd Name="UserActiveNotification" IsNavigable="False" Multiplicity="0..1" Visibility="Public" id="aa0186e3-ac23-48bf-9cda-955bc334a78e">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="ActiveNotificationsForMe" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="043fd845-36de-4a6a-97e9-ff44ea53cb13">
+          <Participant>
+            <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.UserNotifications-&gt;select(ns|ns.Active)" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="UserFromUserNotificationNotifications3" id="97778201-802e-44ed-8078-024834f2712e">
+      <AssociationEnd>
+        <AssociationEnd Name="FromUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="e840cc4c-34df-4443-b5b7-ba75968f7c4b">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="User.nullValue" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="Notifications3" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="82ac89c6-4637-42b8-8a33-26f82a212c2f">
+          <Participant>
+            <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="HtmlTemplateHtmlTemplateOutgoingMessageOutgoingMessagesHtmlTemplate" id="d7fd03a9-eb87-41c0-8314-8b49246e7921">
+      <AssociationEnd>
+        <AssociationEnd Name="HtmlTemplate" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="28c5bbd5-288b-4196-b721-f525ae5bebf2">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="OutgoingMessagesHtmlTemplate" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="0a53b00e-cab2-4c54-ba0a-bb4715ae27f7">
+          <Participant>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="UserNotificationUserNotificationOutgoingNotificationOutgoingNotifications" id="daff1aea-dddd-49dd-8ed6-f493f7fe7a8f">
+      <AssociationEnd>
+        <AssociationEnd Name="UserNotification" IsNavigable="True" Multiplicity="1" Visibility="Public" id="cf79538d-e735-47d2-a825-7baf4a748396">
+          <Participant>
+            <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="OutgoingNotifications" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="08dc0710-3ed7-4a00-900c-30f4b8006055">
+          <Participant>
+            <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="NotificationNotificationsUserNotifiedUsers" id="e0e9a4cf-6ae4-499b-b6ba-54c0ca4ce78e">
+      <AssociationEnd>
+        <AssociationEnd Name="Notifications" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="7568aad6-b44a-4ecc-9315-ad1acf0e960c">
+          <Participant>
+            <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+            <TaggedValue Tag="Eco.InnerLinkName" Value="Notification" />
+            <TaggedValue Tag="Eco.LinkRoleName" Value="UserNotifications" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="NotifiedUsers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="63b70acc-596f-4fa8-9387-eec186a82dd4">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.BusinessDeleteRule" Value="NeedNotBeEmptyNoWarning" />
+            <TaggedValue Tag="Eco.InnerLinkName" Value="User" />
+            <TaggedValue Tag="Eco.LinkRoleName" Value="UserNotifications" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+      <Class>
+        <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+      </Class>
+    </Association>
+    <Association Name="" EffectiveName="UserCreatedUserFakeNameFakedFrom" id="fc67b13a-ab97-44fd-8a12-75281931a381">
+      <AssociationEnd>
+        <AssociationEnd Name="CreatedUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a12270f2-5438-4d17-b616-3c0c932c9338">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="FakedFrom" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="5df7d106-3ae8-4fc4-9fe1-8f7ff84c8cd4">
+          <Participant>
+            <Class Name="FakeName" idref="1b4f1eaa-ee17-4a6d-8920-c49e23d05490" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Embed" Value="False" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SuperClass" />
+  </TaggedValue>
+</Package>

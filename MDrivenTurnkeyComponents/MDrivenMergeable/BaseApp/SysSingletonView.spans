@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysSingletonView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="dffea145-ac24-4d2d-83fb-9cccda77e43c">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllSysSingleton" ExpressionActAsForActions="" id="a92520d5-b362-4b55-a1d5-0e65250b870a">
+      <Class>
+        <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ClearSysUserOverride" idref="8010087a-456f-4adf-af85-0f0ce2aec582" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="SystemURLOverride" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SystemURLOverride" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="cde6073b-fcd8-4beb-b47c-24416fcd107a" />
+        <Column Name="EffectiveSystemURL" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.EffectiveSystemURL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="aa5e8063-a780-4535-86f2-e04506eaf2b5" />
+        <Column Name="WaitWithOutgoingEmailCreation" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.WaitWithOutgoingEmailCreation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="2" id="d907bd9b-abdf-428f-a801-80a2b5aa7b58">
+          <TaggedValue>
+            <TaggedValue Tag="Switch" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="CreateNewSysUsersAsAdmins" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.CreateNewSysUsersAsAdmins" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="3" id="3a1b90e8-a221-4a31-a84d-ab0577b559fc">
+          <TaggedValue>
+            <TaggedValue Tag="Switch" Value="True" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SysSingleton" idref="c3c245cb-12b3-4bf3-a59b-adcdb95b613a" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="SysSingleton" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="3" id="c3c245cb-12b3-4bf3-a59b-adcdb95b613a">
+      <ReferedNesting>
+        <Nesting Name="AllSysSingleton" idref="a92520d5-b362-4b55-a1d5-0e65250b870a" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

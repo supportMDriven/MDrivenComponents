@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OutgoingNotificationDataView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="9058838d-14ae-4051-943c-a6b748dcb53f">
+  <AccessGroups>
+    <AccessGroup Name="IsLoggedIn" idref="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+  </AccessGroups>
+  <Category>
+    <Category Name="MessageDataView" idref="f45a6c86-0982-4053-a34d-8c7f7655360f" />
+  </Category>
+  <Class>
+    <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TemplateComment" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'&#xD;&#xA;&#xD;&#xA;Used to create OutgoingNotification when creating Email. &#xD;&#xA;Uses InvitationNotification to get the invitation details.&#xD;&#xA;&#xD;&#xA;'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="15" id="958372b5-c159-4c33-b46e-2e83b18d3039" />
+    <Column Name="TemplateHtml" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.HtmlTemplate.EmailXHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="2e1ddd38-8897-467a-aa32-503074aed8aa" />
+    <Column Name="SiteURL" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.SiteURL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="14" id="fcbf04d0-4d08-46ec-abfb-6168f93234fa" />
+    <Column Name="EffectiveEmail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f274f9a7-33c1-4e37-864b-3cc789c4a227" />
+    <Column Name="ToUserFirstName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.FirstName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="3bd44444-fbdd-416d-9e8e-741dbdd04eda" />
+    <Column Name="ToUserLastName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.LastName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="34dae444-e87d-40d8-a097-136e3cf4f7f5" />
+    <Column Name="ToUserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.NamePresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="1457a7a8-1def-4945-b384-c945e754a5cb" />
+    <Column Name="ToUserEmail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="3c810728-78a4-490e-81fe-9bcea7a4d86b" />
+    <Column Name="InvitedBy" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FromUser.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="15" id="aa02e133-f9f8-4a01-947c-ebe0ce36a166" />
+  </OwnedColumns>
+</Span>

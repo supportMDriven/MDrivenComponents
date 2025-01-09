@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="FakeNameView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="0ab41c7a-9deb-4e66-919a-fcf8c742543f">
+  <AccessGroups>
+    <AccessGroup Name="IsDevOrTestEnvironment" idref="97223f4b-8152-496a-ad5e-4581dc8a4ca5" />
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+    <AccessGroup Name="Debugging" idref="e0c117bd-3126-4ec4-8d5c-f277bc1cce25" />
+  </AccessGroups>
+  <Category>
+    <Category Name="Debug" idref="19336e56-5897-467a-a867-8550585794ca" />
+  </Category>
+  <Class>
+    <Class Name="FakeName" idref="1b4f1eaa-ee17-4a6d-8920-c49e23d05490" />
+  </Class>
+  <Nesting>
+    <Nesting Name="FakeName" ExpressionActAsForActions="self.CreatedUser" id="c25492b8-3160-4899-979b-d021478df31a">
+      <Class>
+        <Class Name="FakeName" idref="1b4f1eaa-ee17-4a6d-8920-c49e23d05490" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="CreatedUser" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="if self.CreatedUser.notNull then&#xD;&#xA;  self.CreatedUser.asString&#xD;&#xA;else&#xD;&#xA;  '&lt;no user&gt;'&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="20" id="c219a7c0-777e-4eab-852c-6130925b5af4" />
+        <Column Name="FirstName" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.FirstName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="18" id="de9828d3-ad11-491d-b77a-2fa7c8a20249" />
+        <Column Name="LastName" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.LastName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="19" id="43492f67-bbd2-40ec-a1cc-8e0ac14e6c18" />
+        <Column Name="email" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.email" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="12" id="a90504dd-d033-4267-9789-ddac8e094fdb" />
+        <Column Name="password" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="2" Expression="self.password" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="16" id="74236e02-ccb4-4b57-8a67-6b55cace10cc" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="FakeNames" idref="01cb844a-d9df-40a5-9dc6-cd5df4a6ea91" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+        <TaggedValue Tag="Editable" Value="True" />
+        <TaggedValue Tag="MultiSelect" Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="DeleteFakeName" idref="eaedf9c9-f624-4fab-ac73-28447c907cda" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="CreateFakeUser" idref="107f2a68-d837-4975-b5ca-dd3890522651" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="FakeNames" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="FakeName.allInstances-&gt;orderBy(fn|fn.CreatedUser-&gt;isEmpty, fn.CreatedUser.EffectiveEmail)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="9" StyleRef="" XPos="0" YPos="1" id="01cb844a-d9df-40a5-9dc6-cd5df4a6ea91">
+      <ReferedNesting>
+        <Nesting Name="FakeName" idref="c25492b8-3160-4899-979b-d021478df31a" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="NamesToGet" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vNamesToGet" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cffa8ddf-ec22-4224-a317-903b20507423" />
+    <Column Name="GetNewOnes" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Sequence{1..vNamesToGet}-&gt;forEach&#xD;&#xA;(&#xD;&#xA;  vJSON := selfVM.RestGet('https://api.namefake.com/swedish-sweden/random','','','');&#xD;&#xA;  let fn = selfVM.JSonToObjects(FakeName,  vJSON ) in&#xD;&#xA;  (&#xD;&#xA;    fn.Json := vJSON&#xD;&#xA;  )&#xD;&#xA;)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="dbe72ad5-26e2-43e4-a781-f921b5950760" />
+    <Column Name="DeleteUnused" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="FakeName.allInstances-&gt;select(x|x.CreatedUser.isNull).delete" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="f2e2b577-83b0-4736-9078-52058bf08330" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vJSON" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vNamesToGet" InitialValue="20" TypeName="Integer" UserData="" />
+  </SpanVariables>
+</Span>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Notifications" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" CorrectLinesOnMove="False" Designer="" ShowAssociationNames="NotDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.1025" Id="2a85b58b-1668-47db-8004-5139147e6600">
+  <PlacedClass>
+    <PlacedClass ClassId="046049b5-4ab4-427b-8f2a-5c846c83444f" Color="1692800256" LastKnownName="UserRegistrationNotification" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="214" ShowAttributes="False" ShowMethods="False" Size="1" x="1136" y="248" id="255243cc-ae63-4497-aaf6-0ff78abf6f4a">
+      <Class>
+        <Class Name="UserRegistrationNotification" idref="b350979f-2a85-4f8e-9e53-b89b60c9cede" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-107" y="8" id="b4bbad70-e677-4b47-99fe-c4300d66e9c8">
+          <Class>
+            <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="94.5" y="136" id="e8f2ada8-ac34-419f-b99f-3f91ada4a720">
+              <Class>
+                <Class Name="UserRegistrationNotification" idref="b350979f-2a85-4f8e-9e53-b89b60c9cede" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="1fc0e693-04f6-4955-aeb9-5b4ccc177ab3" Color="1692800256" LastKnownName="HtmlTemplate" PickedFeatureVisibility="HideAll" RenderedHeight="31" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="368" y="632" id="326efc28-c357-48e8-ada0-b846c1b90ba1">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.650117471243028" LabelDistance="19.0219943601156" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="True" x="8" y="0" id="404a97f2-7fe2-494a-b796-217bf5f34107">
+          <AssociationEnd>
+            <AssociationEnd Name="HtmlTemplate" idref="28c5bbd5-288b-4196-b721-f525ae5bebf2" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="376" y="552" id="1b9215f4-ea6e-4017-81c4-01ee9e2777b9">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="1" ViaPointsStartsHere="False" x="76" y="120" id="c230027c-de34-4e0b-b479-1549db6f0037">
+                  <AssociationEnd>
+                    <AssociationEnd Name="OutgoingMessagesHtmlTemplate" idref="0a53b00e-cab2-4c54-ba0a-bb4715ae27f7" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="c109542b-be02-4351-abeb-58f5ff685f77" Color="1692800256" LastKnownName="UserNotification" PickedFeatureVisibility="ShowAll" RenderedHeight="156" RenderedWidth="144" ShowAttributes="False" ShowMethods="False" Size="1" x="608" y="152" id="3e13b76b-3e53-472f-8d64-4952cf76fa6a">
+      <AssociationConnection>
+        <AssociationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="87e4832a-cbaa-4574-a96b-077e78adf589">
+          <Association>
+            <Association Name="NotificationNotificationsUserNotifiedUsers" idref="e0e9a4cf-6ae4-499b-b6ba-54c0ca4ce78e" />
+          </Association>
+          <next>
+            <LinkClassConnectViaPoint AssociationId="" NextLegDrawKind="0" PercentFromStart="50" x="546.25" y="120" id="bce50d5e-219d-49c6-8c9b-c652a941928f">
+              <AssociationEndConnection>
+                <AssociationEndConnection idref="302dbb69-38c2-4910-afbd-355f74b5d040" />
+              </AssociationEndConnection>
+            </LinkClassConnectViaPoint>
+          </next>
+        </AssociationConnection>
+      </AssociationConnection>
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.89683959986249" LabelDistance="15.0263516456772" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="156" id="64e3d05d-8fc9-4891-bc93-d7c3b6e2d763">
+          <AssociationEnd>
+            <AssociationEnd Name="UserNotification" idref="cf79538d-e735-47d2-a825-7baf4a748396" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.202000100584" LabelDistance="14.1464262540112" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="False" x="-72" y="104" id="9a68a56c-054c-4d09-9f80-aa8eb6ab667b">
+          <AssociationEnd>
+            <AssociationEnd Name="UserNotificationsToShow" idref="ebfce634-da54-435c-b5cf-73ef588cb410" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.05758360365053" LabelDistance="16.1055337053947" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-72" y="16" id="c87fbbb1-5141-402e-a2b1-007d57fdb5d1">
+          <AssociationEnd>
+            <AssociationEnd Name="ActiveNotificationsForMe" idref="043fd845-36de-4a6a-97e9-ff44ea53cb13" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="46bb4e39-4d2e-4e19-87f5-b7d39518adfe" Color="1692800256" LastKnownName="Notification" PickedFeatureVisibility="ShowAll" RenderedHeight="298" RenderedWidth="189" ShowAttributes="False" ShowMethods="False" Size="2" x="864" y="104" id="4c4a43ae-1e80-4998-89d2-152f5e828b9b">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.93265452677235" LabelDistance="12.4102841184902" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-94.5" y="16" id="302dbb69-38c2-4910-afbd-355f74b5d040">
+          <AssociationConnection>
+            <LinkClassConnectViaPoint idref="bce50d5e-219d-49c6-8c9b-c652a941928f" />
+          </AssociationConnection>
+          <AssociationEnd>
+            <AssociationEnd Name="Notifications" idref="7568aad6-b44a-4ecc-9315-ad1acf0e960c" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-1.935325286728" LabelDistance="12.3233782620457" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="99" y="16" id="495b8549-8612-4d92-b764-226acd4422da">
+              <AssociationEnd>
+                <AssociationEnd Name="NotifiedUsers" idref="63b70acc-596f-4fa8-9387-eec186a82dd4" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.0716290656575" LabelDistance="10.0236125718407" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="94.5" y="16" id="44059ed5-0dab-4704-861d-2a8fc1bea206">
+          <AssociationEnd>
+            <AssociationEnd Name="Notifications3" idref="82ac89c6-4637-42b8-8a33-26f82a212c2f" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.830386058769803" LabelDistance="15.7230150873042" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-32" y="0" id="d2446dd9-04f7-4c29-890b-732f0c4ffdc6">
+          <AssociationEnd>
+            <AssociationEnd Name="Notifications2" idref="e2e053eb-1502-4bdc-8515-e5e5959eb426" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+      </Class>
+      <GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="94.5" y="64" id="432605cb-3a36-41a1-975e-4b9eb50d83a6">
+          <Class>
+            <Class Name="UserWelcomeNotification" idref="79a7869e-d32c-42bb-8da9-9b8e05cf0a19" />
+          </Class>
+        </GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="94.5" y="136" id="e8f2ada8-ac34-419f-b99f-3f91ada4a720">
+          <Class>
+            <Class Name="UserRegistrationNotification" idref="b350979f-2a85-4f8e-9e53-b89b60c9cede" />
+          </Class>
+        </GeneralizationConnection>
+      </GeneralizationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="ade7129c-b97e-4bac-ad61-80e1e9971ce6" Color="1692800256" LastKnownName="OutgoingNotificationSummary" PickedFeatureVisibility="ShowAll" RenderedHeight="31" RenderedWidth="232" ShowAttributes="False" ShowMethods="False" Size="1" x="400" y="352" id="4f1331ec-62e6-483a-b579-14412e1b9827">
+      <Class>
+        <Class Name="OutgoingNotificationSummary" idref="29d1db30-210b-4ca6-86b1-a6b9db3cc120" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-88" y="31" id="3ee14fc9-ab21-4485-8868-9f0d9c8025ab">
+          <Class>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="40" y="0" id="6baf2aae-cca2-4b43-99c9-14c67c45dfd7">
+              <Class>
+                <Class Name="OutgoingNotificationSummary" idref="29d1db30-210b-4ca6-86b1-a6b9db3cc120" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="4ea44c57-b635-4c67-80ee-108c04853b48" Color="1692800256" LastKnownName="User" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="170" RenderedWidth="198" ShowAttributes="False" ShowMethods="False" Size="2" x="224" y="104" id="8890da62-bbe9-4982-a887-6281217156b0">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.935325286728" LabelDistance="12.3233782620457" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="99" y="16" id="495b8549-8612-4d92-b764-226acd4422da">
+          <AssociationEnd>
+            <AssociationEnd Name="NotifiedUsers" idref="63b70acc-596f-4fa8-9387-eec186a82dd4" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="99" y="64" id="5e7af535-aede-48c3-8cd3-a00f8a6b3593">
+          <AssociationEnd>
+            <AssociationEnd Name="UserActiveNotification" idref="aa0186e3-ac23-48bf-9cda-955bc334a78e" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-2.05758360365053" LabelDistance="16.1055337053947" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-72" y="16" id="c87fbbb1-5141-402e-a2b1-007d57fdb5d1">
+              <AssociationEnd>
+                <AssociationEnd Name="ActiveNotificationsForMe" idref="043fd845-36de-4a6a-97e9-ff44ea53cb13" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="3.37682178180504" LabelDistance="24.0558738359624" NextLegDrawKind="1" SideToUse="1" ViaPointsStartsHere="True" x="99" y="152" id="9b128d8a-9c0b-4b11-879d-20a837bd286d">
+          <AssociationEnd>
+            <AssociationEnd Name="ShowForUser" idref="3e23c81b-9c90-42a2-be8a-e39dc920ecbb" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="488" y="256" id="318b529c-6aad-4c4f-b19f-e24f8870c49f">
+              <next>
+                <FreeAirViaPoint NextLegDrawKind="1" x="488" y="256" id="585a06c7-2c11-40d7-aa53-bb0036ddd895">
+                  <next>
+                    <AssociationEndConnection LabelAngle="-2.202000100584" LabelDistance="14.1464262540112" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="False" x="-72" y="104" id="9a68a56c-054c-4d09-9f80-aa8eb6ab667b">
+                      <AssociationEnd>
+                        <AssociationEnd Name="UserNotificationsToShow" idref="ebfce634-da54-435c-b5cf-73ef588cb410" />
+                      </AssociationEnd>
+                    </AssociationEndConnection>
+                  </next>
+                </FreeAirViaPoint>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.09067533227188" LabelDistance="16.4685519532106" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="True" x="16" y="0" id="9da33ca3-bcb6-48d5-b6ae-729ebfe305db">
+          <AssociationEnd>
+            <AssociationEnd Name="ClearedBy" idref="43e9e518-ddad-4585-bfdc-b777ed213a47" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="240" y="72" id="4ef86180-cfd5-4da3-aa1a-6f96fc07ae70">
+              <next>
+                <FreeAirViaPoint NextLegDrawKind="1" x="832" y="72" id="50c64119-bdd8-4952-910a-33cfaad40577">
+                  <next>
+                    <AssociationEndConnection LabelAngle="-0.830386058769803" LabelDistance="15.7230150873042" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-32" y="0" id="d2446dd9-04f7-4c29-890b-732f0c4ffdc6">
+                      <AssociationEnd>
+                        <AssociationEnd Name="Notifications2" idref="e2e053eb-1502-4bdc-8515-e5e5959eb426" />
+                      </AssociationEnd>
+                    </AssociationEndConnection>
+                  </next>
+                </FreeAirViaPoint>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.160520999439457" LabelDistance="49.3360975443127" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="0" y="170" id="e0adee72-0e2c-42fe-aa7b-abfb2688b32b">
+          <AssociationEnd>
+            <AssociationEnd Name="ToUser" idref="3438f596-74d2-40f0-8e33-9daca43fe072" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+      </Class>
+      <PickedBehavioralFeatures>
+        <Method Name="CreateWelcomeNotification" idref="4d6cbc7d-ee42-4a5f-a641-4707334668df" />
+      </PickedBehavioralFeatures>
+      <PickedStructuralFeatures>
+        <Attribute Name="Name" idref="1819bfac-8223-4a5e-917e-cdc432f72dd7" />
+        <Attribute Name="IsFakeAccount" idref="26317410-753d-4a45-ad51-9223f5f83bfc" />
+        <Attribute Name="UserCanSwitchModes" idref="563b4493-7ae1-46c0-adf3-9b05973cf0ea" />
+        <Attribute Name="NamePresentation" idref="8fe45698-46c3-40ad-920d-c57e683751ec" />
+        <Attribute Name="UserNameUnderEdit" idref="c18cae10-0a75-4789-ae43-f9f94d0b30ae" />
+        <Attribute Name="UseNotifications" idref="d51eba9e-5d6f-475c-a7ed-21ada94aa403" />
+      </PickedStructuralFeatures>
+    </PlacedClass>
+    <PlacedClass ClassId="bc20c4ac-3ec3-4336-82bb-aa01af992231" Color="1692800256" LastKnownName="UserWelcomeNotification" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="195" ShowAttributes="False" ShowMethods="False" Size="1" x="1128" y="152" id="9aec60d2-2ec1-474a-bf5e-96086376e7a8">
+      <Class>
+        <Class Name="UserWelcomeNotification" idref="79a7869e-d32c-42bb-8da9-9b8e05cf0a19" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-97.5" y="32" id="695a0d15-e16f-41b1-a427-77f26730eae2">
+          <Class>
+            <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+          </Class>
+          <next>
+            <GeneralizationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="94.5" y="64" id="432605cb-3a36-41a1-975e-4b9eb50d83a6">
+              <Class>
+                <Class Name="UserWelcomeNotification" idref="79a7869e-d32c-42bb-8da9-9b8e05cf0a19" />
+              </Class>
+            </GeneralizationConnection>
+          </next>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="da522f72-33c3-46c6-903e-7a42989d9848" Color="-926875712" LastKnownName="OutgoingNotification" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="165" ShowAttributes="False" ShowMethods="False" Size="1" x="576" y="424" id="9e135a3c-63f1-4c88-95de-4f9c09b6a4da">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.988861180574364" LabelDistance="12.6964261192753" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="16" y="0" id="9cdb0442-8957-4f3c-be65-66c42a15d626">
+          <AssociationEnd>
+            <AssociationEnd Name="OutgoingNotifications" idref="08dc0710-3ed7-4a00-900c-30f4b8006055" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-1.89683959986249" LabelDistance="15.0263516456772" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="156" id="64e3d05d-8fc9-4891-bc93-d7c3b6e2d763">
+              <AssociationEnd>
+                <AssociationEnd Name="UserNotification" idref="cf79538d-e735-47d2-a825-7baf4a748396" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+      </Class>
+      <SpecializationConnection>
+        <SpecializationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-82.5" y="40" id="fa989bf4-1053-4be4-a5fb-7b216943c7f2">
+          <Class>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Class>
+        </SpecializationConnection>
+      </SpecializationConnection>
+    </PlacedClass>
+    <PlacedClass ClassId="7e5e598c-0bee-4728-823d-dfdc257da03c" Color="-926875712" LastKnownName="OutgoingEmail" PickedFeatureVisibility="ShowAll" RenderedHeight="239" RenderedWidth="122" ShowAttributes="False" ShowMethods="False" Size="1" x="216" y="640" id="9e95b11b-72e1-4410-ad0b-b4b22e52140e">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="3.23652625059095" LabelDistance="102.325807344961" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-8" y="0" id="d8875e2e-98df-4daf-9ce0-9074fce93f95">
+          <AssociationEnd>
+            <AssociationEnd Name="OutgoingEmails" idref="763bffdb-aab5-48b0-83d8-7d0af27edf5e" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="4ea44c57-b635-4c67-80ee-108c04853b48" Color="1692800256" LastKnownName="User" PickedFeatureVisibility="HideAll" RenderedHeight="31" RenderedWidth="47" ShowAttributes="False" ShowMethods="False" Size="1" x="1160" y="104" id="f1528a11-0ec5-4783-a475-e53e5bfc8950">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.45076118000509" LabelDistance="10.9521691807857" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-23.5" y="16" id="d913bee0-4288-4c43-a2ed-c19dddc9232d">
+          <AssociationEnd>
+            <AssociationEnd Name="FromUser" idref="e840cc4c-34df-4443-b5b7-ba75968f7c4b" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-2.0716290656575" LabelDistance="10.0236125718407" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="94.5" y="16" id="44059ed5-0dab-4704-861d-2a8fc1bea206">
+              <AssociationEnd>
+                <AssociationEnd Name="Notifications3" idref="82ac89c6-4637-42b8-8a33-26f82a212c2f" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="1d11b097-f2c8-48b8-98f4-708847819725" Color="-926875712" LastKnownName="OutgoingMessage" PickedFeatureVisibility="ShowAll" RenderedHeight="144" RenderedWidth="152" ShowAttributes="False" ShowMethods="False" Size="1" x="224" y="432" id="fa33a7f0-2cff-4233-9f65-b62db8866913">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="3.21665478663" LabelDistance="93.0567918093868" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="0" y="0" id="392aace4-84d6-4ddc-ab31-26fdc802d9a9">
+          <AssociationEnd>
+            <AssociationEnd Name="OutgoingMessagesToMe" idref="954dba67-e36b-423b-88c2-3ab841345ec9" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.160520999439457" LabelDistance="49.3360975443127" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="0" y="170" id="e0adee72-0e2c-42fe-aa7b-abfb2688b32b">
+              <AssociationEnd>
+                <AssociationEnd Name="ToUser" idref="3438f596-74d2-40f0-8e33-9daca43fe072" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.104800262007104" LabelDistance="127.405387564387" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-16" y="144" id="6694e9ff-b703-4a64-af5c-0c6c02e55653">
+          <AssociationEnd>
+            <AssociationEnd Name="OutgoingMessage" idref="f347f910-ca43-4a72-ad2e-1b611f2e2766" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="3.23652625059095" LabelDistance="102.325807344961" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-8" y="0" id="d8875e2e-98df-4daf-9ce0-9074fce93f95">
+              <AssociationEnd>
+                <AssociationEnd Name="OutgoingEmails" idref="763bffdb-aab5-48b0-83d8-7d0af27edf5e" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="1" ViaPointsStartsHere="False" x="76" y="120" id="c230027c-de34-4e0b-b479-1549db6f0037">
+          <AssociationEnd>
+            <AssociationEnd Name="OutgoingMessagesHtmlTemplate" idref="0a53b00e-cab2-4c54-ba0a-bb4715ae27f7" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+      </Class>
+      <GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="76" y="32" id="358ab7ed-5f08-4b03-8d58-43f638112630">
+          <Class>
+            <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+          </Class>
+          <next>
+            <SpecializationConnection NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-82.5" y="40" id="fa989bf4-1053-4be4-a5fb-7b216943c7f2">
+              <Class>
+                <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+              </Class>
+            </SpecializationConnection>
+          </next>
+        </GeneralizationConnection>
+        <GeneralizationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="40" y="0" id="6baf2aae-cca2-4b43-99c9-14c67c45dfd7">
+          <Class>
+            <Class Name="OutgoingNotificationSummary" idref="29d1db30-210b-4ca6-86b1-a6b9db3cc120" />
+          </Class>
+        </GeneralizationConnection>
+      </GeneralizationConnection>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedDiagrams>
+    <PlacedDiagram Color="-1765226296" Height="593.197278911565" LastKnownName="" RenderedHeight="593.197278911565" RenderedWidth="632.539682539682" Size="1" Width="632.539682539682" x="1384" y="368" id="b7868734-bba2-4a8b-a8e6-4e758a8513a0">
+      <DrawnDiagram>
+        <Diagram Name="SystemTemplatesAndTexts" idref="3533026f-ee78-4cf8-83fd-00ca4b83e2e0" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+  </PlacedDiagrams>
+  <PlacedNote>
+    <PlacedNote Color="-924786464" Height="190" LastKnownName="" NoteContent="UEsDBBQAAAAIAM6lX1NRbgBmJQMAAEsKAAASABwAWGFtbC9Eb2N1bWVudC54YW1sIKIYACigFAAAAAAAAAAAAAAAAAAAAAAAAAAAALVWUVPjNhD+Kxr34Z7AMW1pj0syk3IEmOY4BnO9mb4JZ2NrTpY82hVJ+uu7sgM4xKCHTv1kS9/ufvuttOtxDgUpa8Sm1gYnSUXUnKUpFhXUEo9rVTiLdkXHha3TtTKrTXoyGp2mG1nrtHGAYEgGB0nwcIaNLGCStBvuERJxDxuaaVWamoGTZAErSsRCGbgCVVa8MvNkE3GNV9umAtO6ujDyQcNyksylRugca2nKSQLmyGMi5tquPyvXMe+c3tu74C8RN75+AJf7ByRFPgCOz70m7yC33gVy35jaIK7/wcRwZ8fxrKG5rJXeTpIcSgvi23W3mtNWs8sb62qpu6Xvu8T6azk5oKJ6taj+YdPsJHw5KJ31hnP+aT4ftQ9rt21s6WRTbY9zkmYp3XKhShk4caXunYc9zDn7ZLW91O+hPissmAynKN22B9xp3UNeKSTrVLHn7xA2M8Z2R2CmCRyXMOBGb1DrYw64vURkRerBaH+ytQpH4TB92SiSOucT2AIObc8lQg4GFalHeDNCKCnzUEUOlMUAJzHAzzHALzHArzHAaQzwWwzwewzwMSrUKIqIaplFxcyiamZRObOonllU0CyqaBaVNItqejKo6dzJXdt76iV9cy2xguXf4OyQ7RdJoa1TuGGXDuDHEOhCIs1QSXOxacDRm/fkL+kYRDhIZHcZhze59YLjm7rfOw8BvbkxAHrm+V0tqRqO9IxZ8PjwshwO99Rc83VQ753m9QbguWj7DXA6vpVOtpjp+M6b3hzDxyNWczr3pq0lfhqnDJiO057Fgl2KL9L94CnVKRVad9JtXBPUcf83ltSKi91Ot0ugMIxFwfHI+YJQ8GkQqOpGg0isAaF5LvNoJCuwsmuhjJAiZCbsSnCT33nCAbLpC6n/Rm+GV1Tr1yRXXmuxBJ5cqmn/VnaEnq3F/8Lp1kEjHXz1VPJI6W+diT+80suOHV8ppY9qQOQTJpidog8o7JppOuERUOwnJ1Gw21ZVqiS9T719jfO+No+qm8J9mqyj1vCkIlNxyJXmd65yXz8MNW9Pg6w7nOArIRrfWda8XUIwG+K6+4Oc/gtQSwMECgAAAAAAzqVfUwSFLnAMAQAADAEAAAsAHABfcmVscy8ucmVscyCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxSZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgVHlwZT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cGYvMjAwNS8xMC94YW1sL2VudHJ5IiBUYXJnZXQ9Ii9YYW1sL0RvY3VtZW50LnhhbWwiIElkPSJSZDAxN2MzMjRlOGNiNGIyYiIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBAoAAAAAAM6lX1M1zfV3KgEAACoBAAATABwAW0NvbnRlbnRfVHlwZXNdLnhtbCCiGAAooBQAAAAAAAAAAAAAAAAAAAAAAAAAAADvu788P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxUeXBlcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9jb250ZW50LXR5cGVzIj48RGVmYXVsdCBFeHRlbnNpb249InhhbWwiIENvbnRlbnRUeXBlPSJhcHBsaWNhdGlvbi92bmQubXMtd3BmLnhhbWwreG1sIiAvPjxEZWZhdWx0IEV4dGVuc2lvbj0icmVscyIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLnJlbGF0aW9uc2hpcHMreG1sIiAvPjwvVHlwZXM+UEsBAi0AFAAAAAgAzqVfU1FuAGYlAwAASwoAABIAAAAAAAAAAAAAAAAAAAAAAFhhbWwvRG9jdW1lbnQueGFtbFBLAQItAAoAAAAAAM6lX1MEhS5wDAEAAAwBAAALAAAAAAAAAAAAAAAAAHEDAABfcmVscy8ucmVsc1BLAQItAAoAAAAAAM6lX1M1zfV3KgEAACoBAAATAAAAAAAAAAAAAAAAAMIEAABbQ29udGVudF9UeXBlc10ueG1sUEsFBgAAAAADAAMAugAAADkGAAAAAA==" RenderedHeight="200" RenderedWidth="643" Size="1" Width="633" x="688" y="704" id="104ae99f-b070-43c4-a0a6-a631d3d43a84" />
+  </PlacedNote>
+</Diagram>
