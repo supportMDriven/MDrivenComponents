@@ -20,6 +20,7 @@
     <None Remove="MDrivenMergeable\BaseApp\AccessDenied.spans" />
     <None Remove="MDrivenMergeable\BaseApp\Actions.actions" />
     <None Remove="MDrivenMergeable\BaseApp\AdminDashboard.spans" />
+    <None Remove="MDrivenMergeable\BaseApp\BaseAppIndex.spans" />
     <None Remove="MDrivenMergeable\BaseApp\CountryBrowser.spans" />
     <None Remove="MDrivenMergeable\BaseApp\CountryView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\DateStructureBrowser.spans" />
@@ -31,7 +32,6 @@
     <None Remove="MDrivenMergeable\BaseApp\HtmlUiTemplateSelection.spans" />
     <None Remove="MDrivenMergeable\BaseApp\HtmlUiTextEditor.spans" />
     <None Remove="MDrivenMergeable\BaseApp\HtmlUiTextSeeker.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\Index.spans" />
     <None Remove="MDrivenMergeable\BaseApp\InvitationHtmlTemplates.spans" />
     <None Remove="MDrivenMergeable\BaseApp\LandingPage.spans" />
     <None Remove="MDrivenMergeable\BaseApp\NotificationDebugView.spans" />
@@ -135,6 +135,9 @@
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\AdminDashboard.spans">
+      <DependentUpon>BaseApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\BaseApp\BaseAppIndex.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\CountryBrowser.spans">

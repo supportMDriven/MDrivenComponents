@@ -42,7 +42,7 @@
       <AccessGroup Name="IsDevOrTestEnvironment" idref="97223f4b-8152-496a-ad5e-4581dc8a4ca5" />
     </AccessGroups>
     <BringUpViewModel>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </BringUpViewModel>
     <ClassToPerformActionOn>
       <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
@@ -256,10 +256,10 @@
       <Span Name="UserRegistrationView" idref="69697983-ab55-4499-bc52-440a992c1aa9" />
     </BringUpViewModel>
     <OnlyInThis>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </OnlyInThis>
     <ViewModelContext>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </ViewModelContext>
   </ContextAction>
   <ClassAction Name="ViewWeekDefinitionBrowser" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="510d44ff-552f-49c2-bc34-2667571a3e3f">
@@ -296,10 +296,10 @@
       <Span Name="LandingPage" idref="4f73b54a-9630-448c-9aef-3da9816d7785" />
     </BringUpViewModel>
     <OnlyInThis>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </OnlyInThis>
     <ViewModelContext>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </ViewModelContext>
   </ContextAction>
   <ClassAction Name="SendPasswordResetEMail" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="self.GetResetPasswordTicket" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5992da5e-80d9-43b0-bf43-560712bd1990">
@@ -315,7 +315,7 @@
       <AccessGroup Name="IsLoggedIn" idref="604b5133-919a-456a-8f3d-54f9e2d223e0" />
     </AccessGroups>
     <BringUpViewModel>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </BringUpViewModel>
     <OnlyInThis>
       <Span Name="UserRegistrationView" idref="69697983-ab55-4499-bc52-440a992c1aa9" />
@@ -326,7 +326,7 @@
   </ContextAction>
   <ContextAction Name="ToggleAdminMode" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" AutoSave="True" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_SysUserModeSelector.AdminModeRequested := not vCurrent_SysUserModeSelector.AdminModeRequested;&#xD;&#xA;selfVM.save" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" SaveBeforeNavigate="True" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5a7dc729-6633-415b-b0ad-adc20dbbd914">
     <BringUpViewModel>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </BringUpViewModel>
     <OnlyInThis>
       <Span Name="SysUserModeSelector" idref="c2605952-1845-4103-b0cc-ba73b218dd0b" />
@@ -402,7 +402,7 @@
   </ClassAction>
   <ClassAction Name="AcceptConfirmation" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="self.SearchValid and&#xD;&#xA;not self.EffectiveUserAndLinksMismatch and&#xD;&#xA;self.FoundWithSearch.AcceptConfirmation?" ExecuteExpression="self.FoundWithSearch.AcceptConfirmation" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" SaveBeforeNavigate="True" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="65a8bda1-cf1e-4b2b-ab0c-2a7acbd1c53d">
     <BringUpViewModel>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </BringUpViewModel>
     <ClassToPerformActionOn>
       <Class Name="UserConfirmationValidation" idref="2973e91d-5b1e-4fe7-a27a-dbbe3a4ec8f7" />
@@ -440,10 +440,10 @@
       <Span Name="StartScreenForUser" idref="87823758-5e40-48d4-a1d7-09b961ad853a" />
     </BringUpViewModel>
     <OnlyInThis>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </OnlyInThis>
     <ViewModelContext>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </ViewModelContext>
   </ContextAction>
   <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="6eb54244-b0ce-4de0-84c9-1f5489da7755">
@@ -482,7 +482,7 @@
   </ClassAction>
   <ClassAction Name="ClearSysUserOverride" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" AutoSave="True" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="SysSingleton.oclSingleton.SysUserOverride.notNull" ExecuteExpression="SysSingleton.oclSingleton.SysUserOverride := SysUser.nullValue" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" SaveBeforeNavigate="True" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="8010087a-456f-4adf-af85-0f0ce2aec582">
     <BringUpViewModel>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </BringUpViewModel>
     <ClassToPerformActionOn>
       <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
@@ -501,10 +501,10 @@
       <Span Name="UserConfirmation" idref="ddfdf193-f6bf-450c-8d0e-7d85620a92ff" />
     </BringUpViewModel>
     <OnlyInThis>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </OnlyInThis>
     <ViewModelContext>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </ViewModelContext>
   </ContextAction>
   <GlobalAction Name="OutgoingEmails" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="selfVM.Search" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="859cecf5-9e5e-44a4-a6f2-e623c2de69c7">
@@ -887,10 +887,10 @@
       <Span Name="AdminDashboard" idref="cb189309-dc9c-4e2f-9528-36ad785a0533" />
     </BringUpViewModel>
     <OnlyInThis>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </OnlyInThis>
     <ViewModelContext>
-      <Span Name="Index" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+      <Span Name="BaseAppIndex" idref="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     </ViewModelContext>
   </ContextAction>
   <GlobalAction Name="OnboardingAndAccountTemplates" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="e177b007-5f51-4228-9696-0052d9b8be3e">

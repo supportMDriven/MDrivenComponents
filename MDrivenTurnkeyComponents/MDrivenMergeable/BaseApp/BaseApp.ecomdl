@@ -28,6 +28,7 @@
   </Diagrams>
   <Spans>
     <Span Name="UserConfirmationBrowser" FileName="UserConfirmationBrowser" GUID="00a2564a-5f6a-4d86-b448-301bbd44fc36" />
+    <Span Name="Index" FileName="Index" GUID="028d06d3-f2e7-4fd5-adb5-f428196165c1" />
     <Span Name="FakeNameView" FileName="FakeNameView" GUID="0ab41c7a-9deb-4e66-919a-fcf8c742543f" />
     <Span Name="UserMessagingDebug" FileName="UserMessagingDebug" GUID="0d5fa048-6cb5-4ff3-ad5d-8f36527bb3d3" />
     <Span Name="HourOfDayValuestore" FileName="HourOfDayValuestore" GUID="262fb10c-41f8-437a-a674-71bbd0eb08cc" />
@@ -39,7 +40,7 @@
     <Span Name="SetPasswordPage" FileName="SetPasswordPage" GUID="4441398b-7e82-4461-9abb-7de2bd91c2c1" />
     <Span Name="SS_OutgoingEmailCleaning" FileName="SS_OutgoingEmailCleaning" GUID="45b9f9e6-2e2c-4c44-bf30-93d315385110" />
     <Span Name="SysUserMerge" FileName="SysUserMerge" GUID="47726558-cdff-4044-973e-c0b8cc1b94bd" />
-    <Span Name="Index" FileName="Index" GUID="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+    <Span Name="BaseAppIndex" FileName="BaseAppIndex" GUID="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
     <Span Name="LandingPage" FileName="LandingPage" GUID="4f73b54a-9630-448c-9aef-3da9816d7785" />
     <Span Name="NotificationDebugView" FileName="NotificationDebugView" GUID="53dca8ec-e39d-4c6c-8513-7f4c3cdd8d55" />
     <Span Name="RedirectView" FileName="RedirectView" GUID="555aa9f1-5098-41da-8971-bd0511d860f5" />
