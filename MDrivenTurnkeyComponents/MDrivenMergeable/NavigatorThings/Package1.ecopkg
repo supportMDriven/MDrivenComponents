@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="b36fb39e-f897-43a5-ad3d-7bd1d0bb0628">
+  <OwnedElement>
+    <Class Name="ThingWithImage" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="6cddc31e-94b6-4a94-929f-538c065de85c">
+      <Feature>
+        <Attribute Name="Image" Multiplicity="" Visibility="Public" id="bd451835-3073-42a0-85c4-084c5a48fb04">
+          <Type>
+            <Datatype idref="Image" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SomeText" Multiplicity="" Visibility="Public" id="e4edbbcb-431f-4395-b37b-20abfa4ee746">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+  </OwnedElement>
+</Package>

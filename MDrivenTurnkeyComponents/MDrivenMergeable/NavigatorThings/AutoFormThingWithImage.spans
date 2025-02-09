@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="AutoFormThingWithImage" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9b0cae33-aae7-4dbf-ad5b-88d255310ad2">
+  <Category>
+    <Category Name="AutoForms" idref="948c592c-7e66-459a-abdd-43c517c0fcf5" />
+  </Category>
+  <Class>
+    <Class Name="ThingWithImage" idref="6cddc31e-94b6-4a94-929f-538c065de85c" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowThingWithImage" idref="fdcd99de-ee2c-4ef8-ab16-623991f98297" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="0" id="06cf60fa-b4e2-4bc9-a828-8a6421dba743" />
+    <Column Name="SomeText" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SomeText" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="f938cd9c-49f0-457f-b894-041cbe6e5dc5" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

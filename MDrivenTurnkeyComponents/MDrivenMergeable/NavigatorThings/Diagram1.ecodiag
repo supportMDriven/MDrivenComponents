@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="a23dfec1-2de4-4cc2-8008-e6d8e3ac03ea">
+  <PlacedClass>
+    <PlacedClass ClassId="6cddc31e-94b6-4a94-929f-538c065de85c" Color="1692800256" LastKnownName="ThingWithImage" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="132" ShowAttributes="False" ShowMethods="False" Size="1" x="296" y="112" id="498f8edc-9cf6-471b-8af0-05e111ce4257">
+      <Class>
+        <Class Name="ThingWithImage" idref="6cddc31e-94b6-4a94-929f-538c065de85c" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>

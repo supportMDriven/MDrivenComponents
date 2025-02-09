@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allactions>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormThingWithImage.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="0fd2e589-cde2-4a22-a408-c41da287e122">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="6cb49f13-6268-4b1f-bbbf-0a3a24cf46a1" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormThingWithImage" idref="9b0cae33-aae7-4dbf-ad5b-88d255310ad2" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormThingWithImage" idref="9b0cae33-aae7-4dbf-ad5b-88d255310ad2" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="23cbaf2e-5370-475b-ae87-182059320582">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="338c69e0-4771-4ec8-b4ed-af296d2a71a0" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="AutoFormThingWithImageSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2c954582-9129-4873-ac21-562ba7effb63">
+    <BringUpViewModel>
+      <Span Name="AutoFormThingWithImageSeeker" idref="0641ca69-f143-4f17-9e6a-94015e9c5b57" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="6cb49f13-6268-4b1f-bbbf-0a3a24cf46a1" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </GlobalAction>
+  <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="2edabab3-486e-45a9-bedd-63fcd1c41c3e">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="b8c880fc-c93f-4814-921b-4d4dcc7a4ebc" />
+    </MenuGroup>
+  </GlobalAction>
+  <ClassAction Name="ShowThingWithImageMobile" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="not self.isnull" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="680e1a3a-7f10-4a71-8ff3-9a27a9b267da">
+    <BringUpViewModel>
+      <Span Name="ThingWithImageMobile" idref="2fdf14b5-3818-4bbb-be38-4e0c717c0cd1" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="ThingWithImage" idref="6cddc31e-94b6-4a94-929f-538c065de85c" />
+    </ClassToPerformActionOn>
+  </ClassAction>
+  <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="9cb47afc-d311-42fe-a1d8-fffab4abc37d">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="338c69e0-4771-4ec8-b4ed-af296d2a71a0" />
+    </MenuGroup>
+  </GlobalAction>
+  <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="b1db9a8e-85c2-4e65-b64e-3cb35ab0a693">
+    <MenuGroup>
+      <MenuGroup Name="File" idref="338c69e0-4771-4ec8-b4ed-af296d2a71a0" />
+    </MenuGroup>
+  </GlobalAction>
+  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_Root.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="b335c0f4-922a-4e40-883e-bfb3d45f3f59">
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="6cb49f13-6268-4b1f-bbbf-0a3a24cf46a1" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="ThingWithImageMobile" idref="2fdf14b5-3818-4bbb-be38-4e0c717c0cd1" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="ThingWithImageMobile" idref="2fdf14b5-3818-4bbb-be38-4e0c717c0cd1" />
+    </ViewModelContext>
+  </ContextAction>
+  <ContextAction Name="NewThingWithImage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="ThingWithImage.Create" Id="ba078570-7b8f-49d0-b481-1ad65472922f">
+    <BringUpViewModel>
+      <Span Name="AutoFormThingWithImage" idref="9b0cae33-aae7-4dbf-ad5b-88d255310ad2" />
+    </BringUpViewModel>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="6cb49f13-6268-4b1f-bbbf-0a3a24cf46a1" />
+    </MenuGroup>
+    <OnlyInThis>
+      <Span Name="AutoFormThingWithImageSeeker" idref="0641ca69-f143-4f17-9e6a-94015e9c5b57" />
+    </OnlyInThis>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+    <ViewModelContext>
+      <Span Name="AutoFormThingWithImageSeeker" idref="0641ca69-f143-4f17-9e6a-94015e9c5b57" />
+    </ViewModelContext>
+  </ContextAction>
+  <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="fb649367-b85b-47cb-880d-6ebfc31a00b2">
+    <MenuGroup>
+      <MenuGroup Name="Edit" idref="b8c880fc-c93f-4814-921b-4d4dcc7a4ebc" />
+    </MenuGroup>
+  </GlobalAction>
+  <ClassAction Name="ShowThingWithImage" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="fdcd99de-ee2c-4ef8-ab16-623991f98297">
+    <BringUpViewModel>
+      <Span Name="AutoFormThingWithImage" idref="9b0cae33-aae7-4dbf-ad5b-88d255310ad2" />
+    </BringUpViewModel>
+    <ClassToPerformActionOn>
+      <Class Name="ThingWithImage" idref="6cddc31e-94b6-4a94-929f-538c065de85c" />
+    </ClassToPerformActionOn>
+    <MenuGroup>
+      <MenuGroup Name="AutoForms" idref="6cb49f13-6268-4b1f-bbbf-0a3a24cf46a1" />
+    </MenuGroup>
+    <TaggedValue>
+      <TaggedValue Tag="AutoForm" Value="true" />
+    </TaggedValue>
+  </ClassAction>
+  <MenuGroup Name="AutoForms" SortKey="99999" Id="6cb49f13-6268-4b1f-bbbf-0a3a24cf46a1" />
+  <MenuGroup Name="File" SortKey="001" Id="338c69e0-4771-4ec8-b4ed-af296d2a71a0" />
+  <MenuGroup Name="Edit" SortKey="002" Id="b8c880fc-c93f-4814-921b-4d4dcc7a4ebc" />
+  <MenuGroup Name="Seekers" SortKey="003" Id="67803813-43a0-4bfc-b2f9-0d03bb4cf4ca" />
+  <MenuGroup Name="Views" SortKey="004" Id="d19ea46d-88b7-42db-9e77-15e9c012d425" />
+</allactions>

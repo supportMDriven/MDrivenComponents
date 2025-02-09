@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ThingWithImageMobile" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2fdf14b5-3818-4bbb-be38-4e0c717c0cd1">
+  <Category>
+    <Category Name="&lt;New Category&gt;" idref="501e02a0-b7b1-4d34-88fb-c574d37c458f" />
+  </Category>
+  <Class>
+    <Class Name="ThingWithImage" idref="6cddc31e-94b6-4a94-929f-538c065de85c" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowThingWithImage" idref="fdcd99de-ee2c-4ef8-ab16-623991f98297" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Image" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="0" id="f3bc3770-7e5b-4b00-8a37-5d22d396f113" />
+    <Column Name="SomeText" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SomeText" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="e31110b0-09c6-4f32-8536-a06f420cea55" />
+    <Column Name="ControlToTakePictureViaJavascript" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Image" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="4" StyleRef="" XPos="0" YPos="4" id="c131628d-b7d3-40ad-9ea0-30810921e7db">
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="TakePicture" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="AutoForm" Value="true" />
+  </TaggedValue>
+</Span>

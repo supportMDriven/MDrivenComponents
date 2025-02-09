@@ -1,0 +1,20 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="b36fb39e-f897-43a5-ad3d-7bd1d0bb0628" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="a23dfec1-2de4-4cc2-8008-e6d8e3ac03ea" />
+  </Diagrams>
+  <Spans>
+    <Span Name="AutoFormThingWithImageSeeker" FileName="AutoFormThingWithImageSeeker" GUID="0641ca69-f143-4f17-9e6a-94015e9c5b57" />
+    <Span Name="ThingWithImageMobile" FileName="ThingWithImageMobile" GUID="2fdf14b5-3818-4bbb-be38-4e0c717c0cd1" />
+    <Span Name="AutoFormThingWithImage" FileName="AutoFormThingWithImage" GUID="9b0cae33-aae7-4dbf-ad5b-88d255310ad2" />
+    <Span Name="Index" FileName="Index" GUID="f8e3ac79-b10e-4d9c-95ad-29e1c364782a" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>
