@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="UserSettings" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="(self = SysSingleton.EU) or SysSingleton.oclSingleton.UserIsInAdminMode" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="ColumnDesignOrder" id="de8701b3-3c23-4df7-bb1b-ebb35e0d1663">
+  <AccessGroups>
+    <AccessGroup Name="UserWithAccount" idref="482a21b7-b0de-490b-80c9-cedc52441d03" />
+    <AccessGroup Name="UserWithConfirmedAccount" idref="6e30a67a-6c27-49f6-bd5b-06cae3ed08fd" />
+  </AccessGroups>
+  <Category>
+    <Category Name="UserSettings" idref="46cc1aeb-12fa-4a8e-948b-5c6b619cffa1" />
+  </Category>
+  <Class>
+    <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="UserSettings" idref="5ec3ed97-916f-40ff-996a-b6b326879464" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="LoginName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.SysUser.UserName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="8b4ee105-5abb-4caf-b87d-2103a165a7aa" />
+    <Column Name="FirstName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FirstName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="834447d7-84d6-42d0-960b-0b77ed67fd5b" />
+    <Column Name="LastName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.LastName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="d9a698f2-3a41-4af0-a93b-d9c90d0aa8c4" />
+    <Column Name="UseNotifications" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.UseNotifications" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="1" id="fd455838-e16a-4557-94fb-5ce71485111a">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="IsFakeAccount" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.IsFakeAccount" ExpressionForReadOnly="true" ExpressionForVisible="self.IsFakeAccount" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="e86ae24f-8114-45a7-adb2-89fe8487e962" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.AutoSave" Value="True" />
+  </TaggedValue>
+</Span>

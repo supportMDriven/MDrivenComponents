@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="ScheduledTaskEditor" ColCount="6" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="7ea82359-76bd-442c-a5d0-5d508649b3ae">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="ScheduledTask" idref="78d70915-b236-4c4f-b4c8-26d654e5b9d1" />
+  </Class>
+  <Nesting>
+    <Nesting Name="ScheduledTime" ExpressionActAsForActions="" id="bedf3a8a-530b-4bf5-a853-19bb76706369">
+      <Class>
+        <Class Name="ScheduledTime" idref="9fc5f637-991f-4746-a1ce-f2d1026d9bba" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Active" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Active" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="259756fa-f02a-4e77-978a-06fe2581943e" />
+        <Column Name="TimeOfDayEditing" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.TimeOfDayEditing" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="1b45dbad-0419-4145-9750-fe19701a785c" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ExecutionTimes" idref="c54f8f24-6fd2-4526-b4cf-06c1c35d82cf" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="TaskTicket" ExpressionActAsForActions="" id="617c3140-c1ca-46ab-8af4-73f1930e5cbd">
+      <Class>
+        <Class Name="TaskTicket" idref="f56c4d76-ee7f-48c8-b249-e05e87ef5b8b" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a638e435-e247-444a-8e46-9763e8024a7f" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="b4fcca93-873e-4f4e-96a9-e87f8b00218a" />
+        <Column Name="Log" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Log" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="6c296b10-a922-4804-b1a3-ab2d0abd2a52" />
+        <Column Name="ErrorInfo" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ErrorInfo" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="077943ee-43bc-4985-8f80-d2a067b56698" />
+        <Column Name="ExceptionInfo" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ExceptionInfo" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="38aa996a-a0ae-4318-bbd2-e4ed82bbaa8e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TaskTickets" idref="828a4b98-6d9d-43b4-8c49-604c98b439cf" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b3753c73-3179-48be-9be8-bb527e094c82" />
+    <Column Name="TimesHeader" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="'Times'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="2" id="be3c91e8-6fc6-4051-aa21-0ced670f1ec8" />
+    <Column Name="ExecutionTimes_Add" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ScheduledTimes.add(ScheduledTime.Create)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="5d62ef35-8d21-45b8-845e-6b6116f03982" />
+    <Column Name="PeExecutionTimes_Delete" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vCurrent_ScheduledTime.Delete" ExpressionForReadOnly="vCurrent_ScheduledTime.IsNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="2" id="057839bc-ebda-4277-9f9c-ff2bc7ab1773" />
+    <Column Name="ExecutionTimes" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.ScheduledTimes-&gt;orderBy(t|t.TimeOfDay)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="7" StyleRef="" XPos="0" YPos="3" id="c54f8f24-6fd2-4526-b4cf-06c1c35d82cf">
+      <ReferedNesting>
+        <Nesting Name="ScheduledTime" idref="bedf3a8a-530b-4bf5-a853-19bb76706369" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="LastExecution" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.LastExecution.formatDateTime('g')" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="0" id="1c4968c2-58bc-4af3-97f8-47d47bbe3219" />
+    <Column Name="NextExecution" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.NextOccurance.formatDateTime('g')" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="1" id="561864d5-5e82-45af-8ae0-109e53d87bc3" />
+    <Column Name="StartWindowMinutes" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.StartWindowMinutes" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="89271670-9e32-4a79-be4c-884b6335b2fd" />
+    <Column Name="TaskTickets" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.TaskTickets" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="10" id="828a4b98-6d9d-43b4-8c49-604c98b439cf">
+      <ReferedNesting>
+        <Nesting Name="TaskTicket" idref="617c3140-c1ca-46ab-8af4-73f1930e5cbd" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

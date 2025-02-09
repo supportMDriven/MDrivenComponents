@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="SystemTemplatesAndTexts" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" CorrectLinesOnMove="False" Designer="" ShowAssociationNames="NotDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.2762815625" Id="3533026f-ee78-4cf8-83fd-00ca4b83e2e0">
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <PlacedClass>
+    <PlacedClass ClassId="6c184fed-f2ac-451f-9994-e698f2556314" Color="1692800256" LastKnownName="HtmlUiText" PickedFeatureVisibility="ShowAll" RenderedHeight="61" RenderedWidth="92" ShowAttributes="False" ShowMethods="False" Size="1" x="1240" y="72" id="38706580-9767-47cf-856a-1771514c8ca4">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.80732644754345" LabelDistance="10.9103802520207" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-46" y="24" id="1d8cf5da-1f37-4568-9a9d-79976bb03458">
+          <AssociationEnd>
+            <AssociationEnd Name="UserRegistrationText" idref="816f2963-74bd-4d4d-8166-6326400a243f" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="1008" y="96" id="4da1ee12-f9c9-4b0d-a269-047218e93af8">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="ed40d80a-0c80-4f92-858d-a2507214e083">
+                  <AssociationEnd>
+                    <AssociationEnd Name="SysSingletonsUserRegistrationText" idref="4239361f-fdb0-4e48-9ff8-cebf315a6b5a" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.67109758628985" LabelDistance="11.4476633323352" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-46" y="40" id="bb385401-5de1-415d-b730-50532505182b">
+          <AssociationEnd>
+            <AssociationEnd Name="LandingPageText" idref="ce104c12-23cf-499c-834d-a5b0974e5676" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="1024" y="112" id="6f24a462-880a-4f67-8f4a-ca83bb406f48">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-8" y="0" id="8a51ea64-3975-427b-9c50-f3465926ba9f">
+                  <AssociationEnd>
+                    <AssociationEnd Name="TemplateSingletonsLandingPageText" idref="75f4311f-7012-48c8-8fd9-352fc204bb88" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="1fc0e693-04f6-4955-aeb9-5b4ccc177ab3" Color="1692800256" LastKnownName="HtmlTemplate" PickedFeatureVisibility="ShowAll" RenderedHeight="229" RenderedWidth="249" ShowAttributes="False" ShowMethods="False" Size="3" x="704" y="64" id="7e51e243-5977-4b5c-b964-a4bd26c595d3">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.68696459857964" LabelDistance="9.889731838512" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-124.5" y="72" id="1dff7fa2-fe01-4814-a1bf-39bb8d755e9c">
+          <AssociationEnd>
+            <AssociationEnd Name="UserRegistration" idref="c683c695-f696-4bcf-9d0a-953a7adb9d47" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="224" y="136" id="98143b3c-9e79-4e35-93a7-d3bea245ea3c">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="b1329cf8-9218-4524-9187-31e5b9ff6d42">
+                  <AssociationEnd>
+                    <AssociationEnd Name="SysSingletonsUserRegistrationTemplate" idref="625d0aa0-bea8-4562-ba96-85ed373540b9" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="4.19920977443854" LabelDistance="31.0617784152881" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="3e0999c3-a661-431b-a361-9807cc83a042">
+          <AssociationEnd>
+            <AssociationEnd Name="MessageFragments" idref="16c6b28c-1050-48da-b519-50f93e507b64" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.3494654620833" LabelDistance="6.09454130036018" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-124.5" y="104" id="668d5506-c6a6-4b35-97b3-e42e9cf36da7">
+          <AssociationEnd>
+            <AssociationEnd Name="ResetPassword" idref="4d099138-6dea-4a03-a74e-151724a8f3d7" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="256" y="168" id="e85d216d-b894-4cab-a36c-68b3fb6ed4e3">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.82100323084024" LabelDistance="15.5639009640883" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="a672f9cb-a285-4d79-9c29-ec2f6a05c4fa">
+                  <AssociationEnd>
+                    <AssociationEnd Name="SysSingletonsResetPasswordTemplate" idref="16e0d0aa-552a-4106-9ada-5ab2ab19ff4b" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.525204661962172" LabelDistance="25.8425134366591" NextLegDrawKind="1" SideToUse="1" ViaPointsStartsHere="True" x="124.5" y="48" id="75ca29c8-a8a7-4d86-959e-9e322e679d7b">
+          <AssociationEnd>
+            <AssociationEnd Name="MessageFrame" idref="f12708ec-3b2e-48c6-a68b-7c432bb47a48" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="880" y="112" id="336e9b51-2929-4ba2-9642-0c0cd408f9ae">
+              <next>
+                <FreeAirViaPoint NextLegDrawKind="1" x="880" y="40" id="6c7556da-cdbd-4e74-a247-0faaf283a3a4">
+                  <next>
+                    <FreeAirViaPoint NextLegDrawKind="1" x="752" y="40" id="51f1af3c-3a80-47a7-9c6f-ef1b34a1d67e">
+                      <next>
+                        <AssociationEndConnection LabelAngle="4.19920977443854" LabelDistance="31.0617784152881" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="3e0999c3-a661-431b-a361-9807cc83a042">
+                          <AssociationEnd>
+                            <AssociationEnd Name="MessageFragments" idref="16c6b28c-1050-48da-b519-50f93e507b64" />
+                          </AssociationEnd>
+                        </AssociationEndConnection>
+                      </next>
+                    </FreeAirViaPoint>
+                  </next>
+                </FreeAirViaPoint>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.98173614031591" LabelDistance="10.7151574161833" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-124.5" y="48" id="9acd613c-33d6-4f9d-909e-83b24f3c4bca">
+          <AssociationEnd>
+            <AssociationEnd Name="WelcomeForConfirmedUser" idref="86a92c4f-fff5-4844-b099-c7d31b17b6f3" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="208" y="112" id="1ea02e80-72cb-47a3-adb1-fedb91d3d274">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="1dddd4f1-f37d-4d1c-9029-f6aac9425780">
+                  <AssociationEnd>
+                    <AssociationEnd Name="SysSingletons2" idref="af39081d-c4b3-4d5e-894c-b3bb4b660a5f" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.82045773544458" LabelDistance="11.0964991934198" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-124.5" y="24" id="dd9f3087-d480-4a21-b4cc-ecf86cfbdee1">
+          <AssociationEnd>
+            <AssociationEnd Name="UserConfirmation" idref="020274ef-ed19-4a65-ba93-a93eb405ee71" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="192" y="88" id="90103209-6d59-4f43-a9f1-563fabc7906b">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-56" y="0" id="40f1ce0f-04a2-49bf-8fb9-6eddb5889309">
+                  <AssociationEnd>
+                    <AssociationEnd Name="SysSingletonsUserConfirmation" idref="eccd863a-056a-47d3-b181-d89ec44c1693" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="af58beed-1bf8-4d1d-968c-4d823f7b089a" Color="1692800256" LastKnownName="TemplateSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="240" y="472" id="8023b940-4828-4d0b-8980-191550da551f">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="32" y="0" id="2db61a23-f1b7-450a-9a1b-5d2ff7b3dc2a">
+          <AssociationEnd>
+            <AssociationEnd Name="TemplateSingletonsInvitationToJoinFragment" idref="9886e25d-7269-4904-9a5c-b64545629e6c" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="af58beed-1bf8-4d1d-968c-4d823f7b089a" Color="1692800256" LastKnownName="TemplateSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="1032" y="208" id="82d00980-0d42-4d94-a344-3d79d07e88b3">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-8" y="0" id="8a51ea64-3975-427b-9c50-f3465926ba9f">
+          <AssociationEnd>
+            <AssociationEnd Name="TemplateSingletonsLandingPageText" idref="75f4311f-7012-48c8-8fd9-352fc204bb88" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="ed40d80a-0c80-4f92-858d-a2507214e083">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsUserRegistrationText" idref="4239361f-fdb0-4e48-9ff8-cebf315a6b5a" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="1fc0e693-04f6-4955-aeb9-5b4ccc177ab3" Color="1692800256" LastKnownName="HtmlTemplate" PickedFeatureVisibility="ShowAll" RenderedHeight="229" RenderedWidth="249" ShowAttributes="False" ShowMethods="False" Size="3" x="704" y="384" id="8e9e1470-066f-4e89-86c6-e5502505381c">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.612466150248805" LabelDistance="22.5386522267696" NextLegDrawKind="1" SideToUse="1" ViaPointsStartsHere="True" x="124.5" y="48" id="5002b5a8-3add-4d7a-8f46-e1d4db703006">
+          <AssociationEnd>
+            <AssociationEnd Name="MessageFrame" idref="f12708ec-3b2e-48c6-a68b-7c432bb47a48" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="880" y="432" id="48b54f17-9c11-4cb9-a200-1a38c1414664">
+              <next>
+                <FreeAirViaPoint NextLegDrawKind="1" x="880" y="360" id="ce831843-501c-453b-90f6-eb0fd532040a">
+                  <next>
+                    <FreeAirViaPoint NextLegDrawKind="1" x="752" y="360" id="4ca495f5-9fee-40a4-b092-fa4ac421e43d">
+                      <next>
+                        <AssociationEndConnection LabelAngle="4.19920977443854" LabelDistance="31.0617784152881" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="7d328320-c7d5-4eb8-be3a-fd3bb280a6d7">
+                          <AssociationEnd>
+                            <AssociationEnd Name="MessageFragments" idref="16c6b28c-1050-48da-b519-50f93e507b64" />
+                          </AssociationEnd>
+                        </AssociationEndConnection>
+                      </next>
+                    </FreeAirViaPoint>
+                  </next>
+                </FreeAirViaPoint>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.6901555811952" LabelDistance="16.2065925669851" NextLegDrawKind="1" SideToUse="3" ViaPointsStartsHere="True" x="-124.5" y="48" id="590ebfdb-5035-41f9-9417-0fdacc7f350d">
+          <AssociationEnd>
+            <AssociationEnd Name="UserNotificationUpdate" idref="5c1dc334-70dd-4cfd-a228-5b94a3a306af" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="1" x="272" y="432" id="8b179b32-011f-4a7f-b14e-126caf9d49e6">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="32" y="0" id="2db61a23-f1b7-450a-9a1b-5d2ff7b3dc2a">
+                  <AssociationEnd>
+                    <AssociationEnd Name="TemplateSingletonsInvitationToJoinFragment" idref="9886e25d-7269-4904-9a5c-b64545629e6c" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="4.19920977443854" LabelDistance="31.0617784152881" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="7d328320-c7d5-4eb8-be3a-fd3bb280a6d7">
+          <AssociationEnd>
+            <AssociationEnd Name="MessageFragments" idref="16c6b28c-1050-48da-b519-50f93e507b64" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="af58beed-1bf8-4d1d-968c-4d823f7b089a" Color="1692800256" LastKnownName="TemplateSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="248" y="296" id="b502c9a2-779f-4e05-99fb-aeb4f079a97d">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="1dddd4f1-f37d-4d1c-9029-f6aac9425780">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletons2" idref="af39081d-c4b3-4d5e-894c-b3bb4b660a5f" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-56" y="0" id="40f1ce0f-04a2-49bf-8fb9-6eddb5889309">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsUserConfirmation" idref="eccd863a-056a-47d3-b181-d89ec44c1693" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.82100323084024" LabelDistance="15.5639009640883" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="a672f9cb-a285-4d79-9c29-ec2f6a05c4fa">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsResetPasswordTemplate" idref="16e0d0aa-552a-4106-9ada-5ab2ab19ff4b" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-24" y="0" id="b1329cf8-9218-4524-9187-31e5b9ff6d42">
+          <AssociationEnd>
+            <AssociationEnd Name="SysSingletonsUserRegistrationTemplate" idref="625d0aa0-bea8-4562-ba96-85ed373540b9" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+  <PlacedViewModels>
+    <PlacedViewModel Color="-1765226296" Height="192" LastKnownName="" RenderedHeight="202" RenderedWidth="301" Size="1" Width="291" x="584" y="664" id="a192b7e7-a064-47d6-8615-0ba7128370fb">
+      <Span>
+        <Span Name="HtmlTemplateEditor" idref="5c01840e-e531-4388-8fcd-1cba4b9d1bb2" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="253" LastKnownName="" RenderedHeight="263" RenderedWidth="261" Size="1" Width="251" x="272" y="664" id="b132d9b7-f849-4deb-b694-cfabab31973e">
+      <Span>
+        <Span Name="OnboardAndAccountHtmlTemplates" idref="294ba038-cc67-44bc-8815-7a2ced4f6b57" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="173" LastKnownName="" RenderedHeight="183" RenderedWidth="274" Size="1" Width="264" x="272" y="936" id="d93d5283-c9da-45d4-af44-194b7a0fe229">
+      <Span>
+        <Span Name="InvitationHtmlTemplates" idref="5c358636-17a0-4cfe-9614-e226fdaf5c55" />
+      </Span>
+    </PlacedViewModel>
+    <PlacedViewModel Color="-1765226296" Height="281" LastKnownName="" RenderedHeight="291" RenderedWidth="427" Size="1" Width="417" x="1000" y="664" id="ff46cfba-21aa-4ff9-b239-4138873754dc">
+      <Span>
+        <Span Name="HtmlUiTextEditor" idref="5a1ee598-e6ec-489f-971b-1ec32652ca6d" />
+      </Span>
+    </PlacedViewModel>
+  </PlacedViewModels>
+</Diagram>

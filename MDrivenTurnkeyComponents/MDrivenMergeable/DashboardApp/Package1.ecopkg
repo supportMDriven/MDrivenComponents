@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="043f0f16-c269-4278-9cf0-e0e94a42f586">
+  <OwnedElement>
+    <Class Name="Dashboard" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="56082a8f-3980-4914-8752-c92958f3e539">
+      <Feature>
+        <Attribute Name="AmountOne" Multiplicity="" Visibility="Public" id="1240b9a4-23cf-49bf-822b-05a00ac66bd9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="AmountsListTwo" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="16b8376c-5b9a-4010-8cd3-291401a076c5">
+          <Parameter>
+            <Parameter Name="size" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Collection(Integer)" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if not Dashboard.OclSgn.RandomPick.isNull then&#xD;&#xA;  Bag{1..size}-&gt;collect(i| Bag{Dashboard.OclSgn.RandomNumberThree * 1000 * i, Dashboard.OclSgn.RandomNumberTwo * i * 100, Dashboard.OclSgn.RandomNumberOne * i * 1000}-&gt;at0(Dashboard.OclSgn.RandomPick))&#xD;&#xA;else&#xD;&#xA; Bag{1..size}&#xD;&#xA;endif " />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="RandomNumberTwo" Multiplicity="" Visibility="Public" id="254f57d0-df82-4c30-89ac-0a32f380e536">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Number" Multiplicity="" Visibility="Public" id="41954d43-4b6d-4aa2-baa3-c3ba03062beb">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="Generate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4bb7448b-6f2c-4242-8ad9-46de554e9dc8">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let sgn = Dashboard.OclSgn in&#xD;&#xA;(&#xD;&#xA;sgn.RandomPick:=Integer.random(3);&#xD;&#xA;sgn.RandomNumberOne:=Integer.random(10)+1;&#xD;&#xA;sgn.RandomNumberTwo:=Integer.random(100)+1;&#xD;&#xA;sgn.RandomNumberThree:=Integer.random(10)+1;&#xD;&#xA;sgn.Ratio:=sgn.RandomNumberOne.Divide(100);&#xD;&#xA;sgn.AmountOne:=sgn.RandomNumberTwo * sgn.RandomNumberOne * 1000;&#xD;&#xA;sgn.AmountTwo:=sgn.RandomNumberTwo * sgn.RandomNumberThree * 1000;&#xD;&#xA;sgn.Number:=sgn.RandomNumberTwo.Divide(2)&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Ratio" Multiplicity="" Visibility="Public" id="5429444a-9e6a-4e40-8c96-512ef0411534">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Decimal" />
+          </Type>
+        </Attribute>
+        <Attribute Name="RandomNumberOne" Multiplicity="" Visibility="Public" id="5527d881-f882-42d1-937c-338f7574aed5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="RandomPick" InitialValue="0" Multiplicity="" Visibility="Public" id="63ed2d77-8c79-46ea-91d3-580dd351c1ce">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="0" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AmountTwo" Multiplicity="" Visibility="Public" id="67cb1cae-6935-4f44-bea1-a7c1095e7dfe">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="RandomNumber" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="70be0d87-314d-400a-91ee-018eda562d6b">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Bag{Integer.random(10000), Integer.random(100000), Integer.random(100000)}-&gt;at0(Integer.random(3))" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="RandomNumberThree" Multiplicity="" Visibility="Public" id="82dd74c6-8397-4357-ae77-12577761ef97">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method Name="NumbersList" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="8d070138-6528-4ee4-80d8-3ae9a87e462b">
+          <Parameter>
+            <Parameter Name="size" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+            <Parameter Name="max" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Collection(Integer)" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Bag{1..size}-&gt;collect(i| Bag{Dashboard.OclSgn.RandomNumberOne * i, max, (Dashboard.OclSgn.RandomNumberTwo * i).Divide(2).ToInt32}-&gt;minValue)-&gt;orderGeneric(i|i, OclSortDirection::ascending)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a03985b7-4227-41ae-b780-d8ccf7ea0706">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Dashboard.Generate" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OclSgn" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a2968c37-f995-4793-aee4-ec347aa19f1c">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="Dashboard" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Dashboard.oclSingleton" />
+          </TaggedValue>
+        </Method>
+        <Method Name="AmountsListOne" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="e6b0be4f-a98c-48c5-9aa6-fca56c2f66ca">
+          <Parameter>
+            <Parameter Name="size" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Collection(Integer)" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if not Dashboard.OclSgn.RandomPick.isNull then&#xD;&#xA;  Bag{1..size}-&gt;collect(i| Bag{Dashboard.OclSgn.RandomNumberTwo * i * 100, Dashboard.OclSgn.RandomNumberOne * i * 1000, Dashboard.OclSgn.RandomNumberThree * 1000 * i}-&gt;at0(Dashboard.OclSgn.RandomPick))&#xD;&#xA;else&#xD;&#xA; Bag{1..size}&#xD;&#xA;endif " />
+          </TaggedValue>
+        </Method>
+        <Method Name="ItemsList" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="f0450bc1-e54a-4d68-bff5-087fdb2e2602">
+          <Parameter>
+            <Parameter Name="item" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="size" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Collection(String)" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Bag{1..size}-&gt;collect(i| item+'  '+i.asString)" />
+          </TaggedValue>
+        </Method>
+        <Method Name="DatesList" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="fe17ab53-77ae-46ba-8e2e-26b2cef2ee63">
+          <Parameter>
+            <Parameter Name="size" Kind="In">
+              <Type>
+                <Datatype idref="Integer" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Collection(String)" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="Bag{1..size}-&gt;collect(i| &#xD;&#xA;  Bag{Dashboard.OclSgn.RandomNumberThree , Dashboard.OclSgn.RandomNumberOne, (Dashboard.OclSgn.RandomNumberOne-i).abs+1, 12}-&gt;minValue.asString.padLeft(2, '0'.ToCharArray-&gt;first) + '/' + &#xD;&#xA;  Bag{(30 - Dashboard.OclSgn.RandomNumberOne - i).abs+1, (30 - Dashboard.OclSgn.RandomNumberThree).abs, 30}-&gt;minValue.asString.padLeft(2, '0'.ToCharArray-&gt;first) + '/2024' )-&gt;collect(i|i.tryParse(''))-&gt;orderGeneric(i|i.DayOfYear, OclSortDirection::ascending)-&gt;collect(i|i.formatDateTime('M/d/yyyy'))" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+</Package>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="CountryBrowser" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="6e5fc719-6da6-44e7-b953-f9c9ce3b2711">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="Country" idref="284c29e6-2516-4cc0-bed8-85af08fdb185" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllCountry" ExpressionActAsForActions="" id="1cf61fa7-780e-41dc-9e72-919c6f31792f">
+      <Class>
+        <Class Name="Country" idref="284c29e6-2516-4cc0-bed8-85af08fdb185" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a8945577-cb5c-4b59-a296-578eef6a4773" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllCountry" idref="077150d5-807e-431e-a953-6100626f3412" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="CountryPickList" ExpressionActAsForActions="" id="ae82ec60-1974-43ba-9910-99dc42a6c485">
+      <Class>
+        <Class Name="Country" idref="284c29e6-2516-4cc0-bed8-85af08fdb185" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="818b49c0-5965-41bf-b74b-8fc85b6f67d5" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="CountryPickList" idref="e8a256b1-7330-4a23-92c2-2ab953f16e0a" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllCountry" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="Country.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="1" id="077150d5-807e-431e-a953-6100626f3412">
+      <ReferedNesting>
+        <Nesting Name="AllCountry" idref="1cf61fa7-780e-41dc-9e72-919c6f31792f" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="DefaultCountryForUsers" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.DefaultCountryForUsers" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="83b85f74-a573-4669-bf8c-e3c91d0cab52">
+      <ColumnForPickList>
+        <Column Name="CountryPickList" idref="e8a256b1-7330-4a23-92c2-2ab953f16e0a" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="CountryPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Country.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e8a256b1-7330-4a23-92c2-2ab953f16e0a">
+      <ReferedNesting>
+        <Nesting Name="CountryPickList" idref="ae82ec60-1974-43ba-9910-99dc42a6c485" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

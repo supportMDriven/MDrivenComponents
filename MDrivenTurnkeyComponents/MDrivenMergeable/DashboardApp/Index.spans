@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="76b75c69-d304-410d-9257-df634fe33276">
+  <Class>
+    <Class Name="Dashboard" idref="56082a8f-3980-4914-8752-c92958f3e539" />
+  </Class>
+</Span>

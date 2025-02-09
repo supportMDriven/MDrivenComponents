@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OutgoingEmailSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="29608132-25ac-4b8a-8dbf-c494b369426f">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+  </Class>
+  <Nesting>
+    <Nesting Name="OutgoingEmail" ExpressionActAsForActions="" id="cb8a4fcd-4525-40c3-bd7c-791ef5c069f9">
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Queued" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6225ab86-13aa-4da8-b49d-4c4938e37f08" />
+        <Column Name="LastChange" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="Calendar.DateTimeSmartFormat(self.ChangeTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="71779cc5-81f0-406e-980e-fd622d23c32b" />
+        <Column Name="State" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.State" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3a169d41-8737-479b-b7ff-9d2b386929e9" />
+        <Column Name="from" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.from" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fa931759-e39f-4754-a71b-33cc6b79f87d" />
+        <Column Name="to" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.to" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="84c9b962-c210-4ef3-afaf-8675b8512bf0" />
+        <Column Name="subject" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.subject" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="db65dd70-75fb-49af-833f-abce53df37ea" />
+        <Column Name="SendTries" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.SendTries" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="036a8e94-aa48-46a0-a883-793f3912cd4b" />
+        <Column Name="MaxSendTries" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.MaxSendTries" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5d3477b1-7b88-4513-a5b3-4b9a278c1add" />
+        <Column Name="errormessage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.errorinfo" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="12d0c263-0010-4fdb-8cf1-59bfc21bc32b" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Emails" idref="8c169316-88ab-4272-a394-910e155ca05e" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
+        <TaggedValue Tag="MultiSelect" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="7e958cad-577d-4364-943d-062d98b36c0e">
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a | (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d097b8d3-9364-46ba-b65b-c682e0ff248e" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekerrormessage" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="debc2c8f-f976-48ac-9adb-ace53c791940">
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.errorinfo.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3eea3d58-6ee5-47fc-8f2d-23fd32f39226" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.errormessage" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekfrom" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="5c2982b0-1451-4525-9959-b9508be48e59">
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.from.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9f0bca73-22e0-437c-ba59-f1d86fdced72" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.from" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seeksubject" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="5c4ed5de-177e-444c-ac37-f63fef55f6bc">
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.subject.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="bfc5f340-4475-488d-96d5-7db184a5936f" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.subject" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekto" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="414df7b5-33f0-462e-a891-126c0736c156">
+      <Class>
+        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.to.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7e8ee10c-a572-4d51-b8c6-1ad468a8d04b" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.to" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Filter" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f174461f-5906-4e13-b396-c8be27f54416" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="eaf3a6cf-4091-4ffe-afd5-711cd0ad50b4">
+      <TaggedValue>
+        <TaggedValue Tag="MaxFetch" Value="200" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Emails" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="8c169316-88ab-4272-a394-910e155ca05e">
+      <ReferedNesting>
+        <Nesting Name="OutgoingEmail" idref="cb8a4fcd-4525-40c3-bd7c-791ef5c069f9" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="DeleteSelected" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="12" YPos="0" id="c2371023-42b8-4f3d-a746-8d3df1177f6b">
+      <ActionToExecute>
+        <ContextAction Name="DeleteSelectedEmails" idref="b17563f2-a5c1-419e-a854-8d586f52b47a" />
+      </ActionToExecute>
+    </Column>
+    <Column Name="FakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.SO.FakeEmailSending" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="1abb335d-812e-4a26-a841-ced4412c1e84">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="AutoRefresh" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vAutoRefresh" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="0" id="725f76b4-cf76-4b1d-a325-cf7c7e0f02af">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="AutoSearch" ActionPeriodicityMillisec="3000" ColSpan="2" ColSpanWhenInGrid="1" Expression="selfVM.Search" ExpressionForReadOnly="not vAutoRefresh" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="32943d23-e76d-4464-be66-a7fd022799bf">
+      <TaggedValue>
+        <TaggedValue Tag="MaxFetch" Value="200" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vAutoRefresh" InitialValue="true" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vHideSent" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />
+    <SpanVariable Name="vSeekerResult" InitialValue="" TypeName="Collection(OutgoingEmail)" UserData="" />
+    <SpanVariable Name="vSeekerResultCount" InitialValue="" TypeName="Int64" UserData="" />
+    <SpanVariable Name="vSeekParam" InitialValue="" TypeName="String" UserData="" />
+  </SpanVariables>
+</Span>

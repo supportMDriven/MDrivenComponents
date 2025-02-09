@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="NotificationMessageBrowser" ColCount="15" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ffe27d8d-a1a5-449b-a6f6-1c5df3f182ee">
+  <AccessGroups>
+    <AccessGroup Name="UserWithConfirmedAccount" idref="6e30a67a-6c27-49f6-bd5b-06cae3ed08fd" />
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="AdminPages" idref="6b3c0655-81bc-4b6a-8c31-f37b3b906624" />
+  </Category>
+  <Class>
+    <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+  </Class>
+  <Nesting>
+    <Nesting Name="AllNotificationMessages" ExpressionActAsForActions="" id="283b4b05-b529-451f-93d9-45730951c1cb">
+      <Class>
+        <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="ToUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ToUser.NamePresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="5d41d5fa-8963-4b19-adeb-666ac9202c75" />
+        <Column Name="UserEmail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ToUser.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="349bfc9b-be78-40c3-9945-4c4a99adb09d" />
+        <Column Name="Subject" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Subject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="fc5dd92b-f62c-4410-bd5e-149e70945d80" />
+        <Column Name="EmailSent" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.MessageSent" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="d858d868-5b38-46b2-9b30-8f522960c585" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllNotificationMessage" idref="d1aac7cf-74ea-425d-83ae-81ed768d1c26" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="AllNotificationMessage" ActionPeriodicityMillisec="-1" ColSpan="15" ColSpanWhenInGrid="1" Expression="OutgoingNotification.Allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="d1aac7cf-74ea-425d-83ae-81ed768d1c26">
+      <ReferedNesting>
+        <Nesting Name="AllNotificationMessages" idref="283b4b05-b529-451f-93d9-45730951c1cb" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

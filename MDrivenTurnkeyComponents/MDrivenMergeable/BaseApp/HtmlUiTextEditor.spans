@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="HtmlUiTextEditor" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5a1ee598-e6ec-489f-971b-1ec32652ca6d">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
+  </Category>
+  <Class>
+    <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="EditTemplate" idref="bd6bb0d2-f17b-43b0-ba6d-9fb896ff822c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d956fd08-8669-435c-8e9d-fa8463b5c3ea" />
+    <Column Name="UiHTMLEditor" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="self.UiHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="9" StyleRef="" XPos="0" YPos="2" id="b00671a2-e704-4218-8e2c-bdb76c157ce0">
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="TinyMCE" />
+      </TaggedValue>
+    </Column>
+    <Column Name="UiHTML" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.UiHTML" ExpressionForReadOnly="" ExpressionForVisible="vShowUiHTML" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="1" YPos="12" id="936c269d-a974-4286-8a29-7e36b1e0dd8e" />
+    <Column Name="ShowUiHTML" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vShowUiHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="4c045e83-efcd-42cd-978c-5392ed75fe1d" />
+    <Column Name="Body" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'UI Template body'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h6" XPos="0" YPos="1" id="208a1fa6-bb10-46f1-90c9-501fac674068" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vShowUiHTML" InitialValue="" TypeName="Boolean" UserData="" />
+  </SpanVariables>
+</Span>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="DateStructureBrowser" ColCount="24" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="30" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="83fb8823-645a-4347-9883-17b1a9e8f283">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="Calendar" idref="8d1fc776-63dd-44a7-a2c6-a34a232085e9" />
+  </Class>
+  <Nesting>
+    <Nesting Name="Year" ExpressionActAsForActions="" id="f2274243-1930-40a0-8b06-2d61e5620622">
+      <Class>
+        <Class Name="Year" idref="4baf70e7-cd00-4b5e-aa68-c3ec25f07d97" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="YearNumber" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="2" Expression="self.YearNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="9" id="9734c05f-2549-4e7c-b731-f7d9c337a2fc" />
+        <Column Name="YearOrdinal" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.YearOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="19" id="19402d41-fa02-4156-a5ff-06b30c197eb2" />
+        <Column Name="NextYear" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Next" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;none&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="20" id="612999bf-99a2-4e39-bd49-9e7449661d66">
+          <ColumnForPickList>
+            <Column Name="NextPickList" idref="4dc1614e-c65b-427d-ae66-dabafe455412" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="NextPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Year.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="4dc1614e-c65b-427d-ae66-dabafe455412">
+          <ReferedNesting>
+            <Nesting Name="NextPickList" idref="2da0e6de-e7ba-43cf-b763-6a29c39fbc68" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllYears" idref="58695cc4-4799-4203-b9d1-d482378d493c" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+        <TaggedValue Tag="Editable" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="MonthsInYear" ExpressionActAsForActions="" id="f80a4aad-2368-4b31-a355-de484246fdea">
+      <Class>
+        <Class Name="Month" idref="0ac3317f-2408-49b8-a747-5482702ea2d3" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="MonthNumber" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.MonthNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="8" id="4320482e-aaf2-40d2-9f53-3611d3367d35" />
+        <Column Name="MonthOrdinal" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.MonthOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="11" id="42977ebc-73b6-4b99-95e9-38969de94b58" />
+        <Column Name="MonthOfYear_Name" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="2" Expression="self.MonthOfYear.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="8" id="609fdd42-63d8-4d07-adfb-116d9c5621ed" />
+        <Column Name="DaysInMonth" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="self.Days-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="35" StyleRef="" XPos="8" YPos="1" id="a73cd41a-7c2b-4d78-a97e-f7fad6a3dbd3" />
+        <Column Name="FirstDate" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.FirstDate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="9" id="d2c6b584-fde1-4e1e-a44c-21c016b60e09" />
+        <Column Name="LastDate" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.LastDate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="10" id="311d7577-78b3-4382-b74c-0f5ab9d469e8" />
+        <Column Name="Next" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="if self.Next-&gt;notEmpty then &#xD;&#xA;  self.Next.MonthOfYear.Name&#xD;&#xA;else &#xD;&#xA;  '&lt;none&gt;' &#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="8" id="06676de9-f046-4d50-994c-46b713160655" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="MonthsInYear" idref="25bb59a9-5769-4c96-9842-22b72035ee76" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="DaysInMonth" ExpressionActAsForActions="" id="a6289385-c53d-4c08-85b6-eb7ebb8aebc7">
+      <Class>
+        <Class Name="Day" idref="21eedf3b-e020-4344-90a5-5f0ddbc5f984" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="DayInMonth" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DayInMonth" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="1bf99c50-7d87-46e2-bf76-c1f3d67f1400" />
+        <Column Name="DayInYear" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.DayInYear" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="bd458be6-5fff-4c72-bc29-dca1ea8b5e20" />
+        <Column Name="Date" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Date" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ca6dc5f7-de96-48fd-beb0-e54ab61b17b3" />
+        <Column Name="DayOrdinal" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.DayOrdinal" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="e7d87667-bd5f-48aa-8beb-a31b130f7832" />
+        <Column Name="DayOfWeek" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.DayOfWeek.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="fe758b54-eac8-4ba0-b6d6-61aa5e6d753a" />
+        <Column Name="WeekDayAbbr" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.WeekDayAbbr" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="b861ed54-ed50-41b2-9c57-5308ba857a73" />
+        <Column Name="NotWork" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DayOfWeek.NotWorkDayForEffectiveUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="c751bef2-2e8c-4592-b2ed-bb49cfca80a5" />
+        <Column Name="Weeks" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.Weeks.asString-&gt;asCommaList" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="f3fae552-8241-4cdb-9538-447f763f8bc7" />
+        <Column Name="WeekForEffectiveUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.WeekForEffectiveUser.WeekNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="90ec6f6a-12bb-4377-87c4-abc7a8965895" />
+        <Column Name="CalcWeekNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="(self.DayInYear - self.DayOfWeek.DayNumber + 9) div 7 " ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="8a76d4a3-a31a-4344-aab6-a5735bd732e0" />
+        <Column Name="Tomorrow" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Tomorrow.Date" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="dfad3275-c377-413f-9d2e-ea22e828de35" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="DaysInMonth" idref="54f7cb61-7293-4e22-8bd9-e70d807f6b0f" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="AllDaysOfWeek" ExpressionActAsForActions="" id="757a97b8-c7bb-4e11-a1c6-1565c6d283eb">
+      <Class>
+        <Class Name="DayOfWeek" idref="7ae7f1b0-4ec8-4b31-9b36-40bae23049a8" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="DayNumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.DayNumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="72d081ee-f5ca-460f-b784-9c7494256c42" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="b123904c-707b-40eb-99a0-066e19a0ae83" />
+        <Column Name="WeekDayAbbr" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.WeekDayAbbr" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="96c78318-99ab-44b6-8434-e359ec6ea418" />
+        <Column Name="FirstDayOfWeekForEffectiveUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.FirstDayOfWeekForEffectiveUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="4ce5c41f-42b6-493c-8b2b-63f9012be14b" />
+        <Column Name="NotWorkDayForEffectiveUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.NotWorkDayForEffectiveUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="97c13cc9-7a9c-426b-adb9-435c03387f7e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllDaysOfWeek" idref="73017a4d-d3a9-4f1d-a2f7-15d37a4c148d" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="AllDaysOfMonth" ExpressionActAsForActions="" id="30ea0f4d-edcf-4380-8652-2fc044accd8c">
+      <Class>
+        <Class Name="DayOfMonth" idref="5418de57-e8ef-4f1e-82c8-7661530b8954" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Daynumber" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Daynumber" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="3a540470-cb1f-4f67-b5c3-07786273312f" />
+        <Column Name="DaysLinked" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Days-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="6b30acff-64ba-4252-89a9-0407aad4d3a3" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="AllDaysOfMonth" idref="5a0d9a63-05cc-4bc3-91a4-bf234949c520" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="NextPickList" ExpressionActAsForActions="" id="2da0e6de-e7ba-43cf-b763-6a29c39fbc68">
+      <Class>
+        <Class Name="Year" idref="4baf70e7-cd00-4b5e-aa68-c3ec25f07d97" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="39dc5c85-e1ca-4fd9-bdc0-47e083c2687f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="NextPickList" idref="4dc1614e-c65b-427d-ae66-dabafe455412" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="AllYears" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="Year.Allinstances-&gt;orderBy(x|x.YearNumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="1" id="58695cc4-4799-4203-b9d1-d482378d493c">
+      <ReferedNesting>
+        <Nesting Name="Year" idref="f2274243-1930-40a0-8b06-2d61e5620622" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllDaysOfWeek" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="DayOfWeek.allInstances-&gt;orderBy(d|d.Daynumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="16" id="73017a4d-d3a9-4f1d-a2f7-15d37a4c148d">
+      <ReferedNesting>
+        <Nesting Name="AllDaysOfWeek" idref="757a97b8-c7bb-4e11-a1c6-1565c6d283eb" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="AllDaysOfMonth" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="DayOfMonth.allInstances-&gt;orderBy(dof|dof.Daynumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="26" id="5a0d9a63-05cc-4bc3-91a4-bf234949c520">
+      <ReferedNesting>
+        <Nesting Name="AllDaysOfMonth" idref="30ea0f4d-edcf-4380-8652-2fc044accd8c" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="MonthsInYear" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="vCurrent_Year.Months-&gt;orderBy(m|m.MonthNumber)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="6" id="25bb59a9-5769-4c96-9842-22b72035ee76">
+      <ReferedNesting>
+        <Nesting Name="MonthsInYear" idref="f80a4aad-2368-4b31-a355-de484246fdea" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="DaysInMonth" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="vCurrent_MonthsInYear.Days-&gt;orderBy(d|d.Date)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="35" StyleRef="" XPos="8" YPos="1" id="54f7cb61-7293-4e22-8bd9-e70d807f6b0f">
+      <ReferedNesting>
+        <Nesting Name="DaysInMonth" idref="a6289385-c53d-4c08-85b6-eb7ebb8aebc7" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="FirstDayInCalendar" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.FirstDayInCalendar.Date" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3b09764b-1426-4877-b5a4-01ae4a2af899" />
+    <Column Name="LastDayInCalendar" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.LastDayInCalendar.Date" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="abdab261-4893-4abb-8ab5-99353305015d" />
+    <Column Name="SizeOfAllDaysInOrder" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.AllDaysInOrder-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="18" YPos="0" id="aa942ef1-8c37-4c4e-bfdd-ed1a457bc799" />
+    <Column Name="EffectiveCountry" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.EffectiveCountry.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="e5c43ffd-cdd8-4768-b9a0-bcfe7929bc85" />
+    <Column Name="EffectiveWeekDefinition" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.EffectiveCountry.WeekDefinition.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="14" YPos="0" id="fae20cc8-87d7-4072-a28c-6d69593135fa" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="MVC" Value="false" />
+  </TaggedValue>
+</Span>

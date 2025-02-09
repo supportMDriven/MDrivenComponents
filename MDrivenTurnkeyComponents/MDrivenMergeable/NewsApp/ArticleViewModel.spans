@@ -57,7 +57,7 @@
       <PlacingContainer>
         <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" MarginBottom="20" MarginTop="10" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="True" id="e77865b5-3b70-4d8c-b00b-ef8065cbe474">
           <ChildContainers>
-            <PlacingContainer Name="Card" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="1" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'Card'" Type="Column" VisibleExpression="" Wrap="True" id="857b62b4-6079-4ef4-b23f-215f41ee8671">
+            <PlacingContainer Name="Card" AlignContent="Start" AlignItem="NotSet" CanScroll="False" Grow="1" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="selfVM.Styles.NewsCard" Type="Column" VisibleExpression="" Wrap="True" id="857b62b4-6079-4ef4-b23f-215f41ee8671">
               <ChildContainers>
                 <PlacingContainer Name="CardTitle" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="11b85682-bc54-4cab-b3a3-ece41255075a">
                   <ChildContainers>
@@ -74,12 +74,12 @@
                     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="4976b782-b59d-450c-9153-fd295a944064" />
                   </ChildContainers>
                 </PlacingContainer>
-                <PlacingContainer Name="_Copy" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="93426bb1-98ff-4fef-9ab3-33f995f44bfa">
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="93426bb1-98ff-4fef-9ab3-33f995f44bfa">
                   <ChildContainers>
                     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="9164e1e4-7d32-44f7-a15f-d817b47f1b8d" />
                   </ChildContainers>
                 </PlacingContainer>
-                <PlacingContainer Name="CardFooter" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="'CardBottom'" Type="Column" VisibleExpression="" Wrap="False" id="7c725e34-0c78-42b8-9089-c1d84f911125">
+                <PlacingContainer Name="CardFooter" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="selfVM.Styles.NewsCardBottom" Type="Column" VisibleExpression="" Wrap="False" id="7c725e34-0c78-42b8-9089-c1d84f911125">
                   <ChildContainers>
                     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="SpaceBetween" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="d0abba1c-6308-4e03-b78d-e651fa6a3bfd" />
                   </ChildContainers>
@@ -136,7 +136,7 @@
         <PlacingContainer idref="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
       </PlacingContainer>
     </Column>
-    <Column Name="MoreNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(art|art.author.sqlLikeCaseInsensitive('%'+self.author+'%') or (art.author=self.author))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ab7ae4cd-487c-4dea-9205-c6639688f6a9">
+    <Column Name="MoreNews" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Articles1.allinstances-&gt;select(art|art.author.sqlLikeCaseInsensitive('%'+self.author+'%') or (art.author=self.author))-&gt;excluding(self)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="ab7ae4cd-487c-4dea-9205-c6639688f6a9">
       <PlacingContainer>
         <PlacingContainer idref="cd8847b6-8d56-4e6a-a915-b9a779ae3b3f" />
       </PlacingContainer>

@@ -1,0 +1,89 @@
+<Model>
+  <Packages>
+    <Package Name="Users" FileName="Users" GUID="8a565bd5-0376-458d-b100-9e5af536d091" />
+    <Package Name="CalendarPackage" FileName="CalendarPackage" GUID="8c9141e9-297a-4f9a-be23-a747a29367f7" />
+    <Package Name="PasswordReset" FileName="PasswordReset" GUID="a5095c4f-e57c-46b3-be21-ef66cf745bbf" />
+    <Package Name="Planning" FileName="Planning" GUID="d440fce7-5440-47b3-97be-d0c11fe3d64a" />
+    <Package Name="UserMessaging" FileName="UserMessaging" GUID="de73b553-7d15-46ea-9c43-63550b99faec" />
+    <Package Name="EmailSending" FileName="EmailSending" GUID="e0ee4256-dc3d-411d-9357-8dc7d626a15f" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions>
+    <TagExtension Name="Plan" FileName="Plan" GUID="1f60e0d6-b87c-4701-ae18-2b3de1ad666b" />
+  </TagExtensions>
+  <Diagrams>
+    <Diagram Name="UserOnboarding" FileName="UserOnboarding" GUID="1b3a60de-a46c-4894-99d6-bd995c459cb3" />
+    <Diagram Name="User" FileName="User" GUID="1b8319b5-aff7-49fa-b21c-9003225a75a8" />
+    <Diagram Name="Notifications" FileName="Notifications" GUID="2a85b58b-1668-47db-8004-5139147e6600" />
+    <Diagram Name="SystemTemplatesAndTexts" FileName="SystemTemplatesAndTexts" GUID="3533026f-ee78-4cf8-83fd-00ca4b83e2e0" />
+    <Diagram Name="UserIdentification" FileName="UserIdentification" GUID="3c910b93-02b4-434e-baa2-0df4c13593e6" />
+    <Diagram Name="OutgoingEmail.SendingStateMachine" FileName="OutgoingEmail.SendingStateMachine" GUID="7e2b8f87-a4d5-462c-846e-256b614489ca" />
+    <Diagram Name="OutgoingEmail" FileName="OutgoingEmail" GUID="968442ff-c2d2-442c-a9a0-0e7e63ec0332" />
+    <Diagram Name="ScheduledTasks" FileName="ScheduledTasks" GUID="9d481037-ac24-4461-bfc0-6d28ff64fd14" />
+    <Diagram Name="Calendar" FileName="Calendar" GUID="c00d77df-e19d-45dd-bcf1-dba41eddbe7c" />
+    <Diagram Name="SystemClasses" FileName="SystemClasses" GUID="d2b12ea9-3777-4416-8f92-e7bf963e7544" />
+    <Diagram Name="ResetPasswordTicket.ResetPasswordStateMachine" FileName="ResetPasswordTicket.ResetPasswordStateMachine" GUID="e5b44514-fff4-48ac-91cf-7875ac9c942a" />
+    <Diagram Name="PasswordReset" FileName="PasswordReset" GUID="fb77c6a4-2405-437b-8129-08773b59abba" />
+  </Diagrams>
+  <Spans>
+    <Span Name="UserConfirmationBrowser" FileName="UserConfirmationBrowser" GUID="00a2564a-5f6a-4d86-b448-301bbd44fc36" />
+    <Span Name="Index" FileName="Index" GUID="028d06d3-f2e7-4fd5-adb5-f428196165c1" />
+    <Span Name="FakeNameView" FileName="FakeNameView" GUID="0ab41c7a-9deb-4e66-919a-fcf8c742543f" />
+    <Span Name="UserMessagingDebug" FileName="UserMessagingDebug" GUID="0d5fa048-6cb5-4ff3-ad5d-8f36527bb3d3" />
+    <Span Name="HourOfDayValuestore" FileName="HourOfDayValuestore" GUID="262fb10c-41f8-437a-a674-71bbd0eb08cc" />
+    <Span Name="SysUserView" FileName="SysUserView" GUID="28402c66-bc14-41ed-a76d-fcbe8913a1ea" />
+    <Span Name="OnboardAndAccountHtmlTemplates" FileName="OnboardAndAccountHtmlTemplates" GUID="294ba038-cc67-44bc-8815-7a2ced4f6b57" />
+    <Span Name="OutgoingEmailSeeker" FileName="OutgoingEmailSeeker" GUID="29608132-25ac-4b8a-8dbf-c494b369426f" />
+    <Span Name="UserSeeker" FileName="UserSeeker" GUID="387b4941-d752-4503-9115-e468e2d32bd5" />
+    <Span Name="SS_ConstructNotificationMessage" FileName="SS_ConstructNotificationMessage" GUID="3aad79da-dfac-47f1-b587-4609d231feb2" />
+    <Span Name="SetPasswordPage" FileName="SetPasswordPage" GUID="4441398b-7e82-4461-9abb-7de2bd91c2c1" />
+    <Span Name="SS_OutgoingEmailCleaning" FileName="SS_OutgoingEmailCleaning" GUID="45b9f9e6-2e2c-4c44-bf30-93d315385110" />
+    <Span Name="SysUserMerge" FileName="SysUserMerge" GUID="47726558-cdff-4044-973e-c0b8cc1b94bd" />
+    <Span Name="BaseAppIndex" FileName="BaseAppIndex" GUID="4d804fc8-e153-473c-86fc-b4f822fe5cee" />
+    <Span Name="LandingPage" FileName="LandingPage" GUID="4f73b54a-9630-448c-9aef-3da9816d7785" />
+    <Span Name="NotificationDebugView" FileName="NotificationDebugView" GUID="53dca8ec-e39d-4c6c-8513-7f4c3cdd8d55" />
+    <Span Name="RedirectView" FileName="RedirectView" GUID="555aa9f1-5098-41da-8971-bd0511d860f5" />
+    <Span Name="HtmlUiTextEditor" FileName="HtmlUiTextEditor" GUID="5a1ee598-e6ec-489f-971b-1ec32652ca6d" />
+    <Span Name="HtmlTemplateEditor" FileName="HtmlTemplateEditor" GUID="5c01840e-e531-4388-8fcd-1cba4b9d1bb2" />
+    <Span Name="InvitationHtmlTemplates" FileName="InvitationHtmlTemplates" GUID="5c358636-17a0-4cfe-9614-e226fdaf5c55" />
+    <Span Name="OutgoingEmailView" FileName="OutgoingEmailView" GUID="5d48a518-f063-4046-a375-328938d02298" />
+    <Span Name="UserRegistrationView" FileName="UserRegistrationView" GUID="69697983-ab55-4499-bc52-440a992c1aa9" />
+    <Span Name="OutgoingMessage" FileName="OutgoingMessage" GUID="6c04c8fc-2121-4df2-a88d-12b56bb29066" />
+    <Span Name="CountryBrowser" FileName="CountryBrowser" GUID="6e5fc719-6da6-44e7-b953-f9c9ce3b2711" />
+    <Span Name="ResetPassword" FileName="ResetPassword" GUID="7753a0ae-e771-464f-8e0d-094eaf222f90" />
+    <Span Name="ScheduledTaskEditor" FileName="ScheduledTaskEditor" GUID="7ea82359-76bd-442c-a5d0-5d508649b3ae" />
+    <Span Name="YearView" FileName="YearView" GUID="823f5f0b-62a5-4d72-85ed-3f01db6dc774" />
+    <Span Name="DateStructureBrowser" FileName="DateStructureBrowser" GUID="83fb8823-645a-4347-9883-17b1a9e8f283" />
+    <Span Name="ResetPasswordPage" FileName="ResetPasswordPage" GUID="84699c70-0eb8-4fdb-8b76-ff3017b2da2e" />
+    <Span Name="StartScreenForUser" FileName="StartScreenForUser" GUID="87823758-5e40-48d4-a1d7-09b961ad853a" />
+    <Span Name="WeekDefinitionBrowser" FileName="WeekDefinitionBrowser" GUID="8838d738-a3d4-4635-a137-ff36e4bbec3c" />
+    <Span Name="SysAsyncTicketBrowser" FileName="SysAsyncTicketBrowser" GUID="89fb1e6d-1ab0-4363-b07a-8f78be7e0f57" />
+    <Span Name="OutgoingNotificationDataView" FileName="OutgoingNotificationDataView" GUID="9058838d-14ae-4051-943c-a6b748dcb53f" />
+    <Span Name="DebugControlView" FileName="DebugControlView" GUID="9a9d2161-287e-4860-8b77-d91d2caebf1e" />
+    <Span Name="HtmlUiTextSeeker" FileName="HtmlUiTextSeeker" GUID="9d148551-e9f4-411a-b956-f136d1678503" />
+    <Span Name="ScheduledTasksValueStore" FileName="ScheduledTasksValueStore" GUID="a4da01cb-be24-4f01-9ca8-f3266fa30021" />
+    <Span Name="AccessDenied" FileName="AccessDenied" GUID="b0d73e64-1637-4b60-b48c-b7a7c66e14fa" />
+    <Span Name="SysUsersSeeker" FileName="SysUsersSeeker" GUID="b4d675a3-43de-4ee8-9da1-5a9c9a8f8462" />
+    <Span Name="SysUserSetPassword" FileName="SysUserSetPassword" GUID="b64bd4a3-6247-418d-af75-04b8d0b2f1be" />
+    <Span Name="CountryView" FileName="CountryView" GUID="b6e9648d-2993-4000-878b-51e5a83b875b" />
+    <Span Name="WelcomeMessageTemplate" FileName="WelcomeMessageTemplate" GUID="bcb619d9-1f56-4ba7-a1fd-df58e4335fc9" />
+    <Span Name="SysUserModeSelector" FileName="SysUserModeSelector" GUID="c2605952-1845-4103-b0cc-ba73b218dd0b" />
+    <Span Name="UserConfirmationDataView" FileName="UserConfirmationDataView" GUID="c2eacf38-70e1-4ac4-a2bf-f072855d6610" />
+    <Span Name="AdminDashboard" FileName="AdminDashboard" GUID="cb189309-dc9c-4e2f-9528-36ad785a0533" />
+    <Span Name="SS_UpdateTime" FileName="SS_UpdateTime" GUID="cb65cb83-e383-4ba8-89af-2933ede035bb" />
+    <Span Name="SS_EnvironmentUpdate" FileName="SS_EnvironmentUpdate" GUID="cfa45719-60bd-4fc7-bea1-b40409559e8f" />
+    <Span Name="SS_OutgoingEmail" FileName="SS_OutgoingEmail" GUID="d84c177f-c976-4dd7-8876-0589bb2dfb35" />
+    <Span Name="HtmlUiTemplateSelection" FileName="HtmlUiTemplateSelection" GUID="ddc2cfc9-4027-4560-874e-4356920825f6" />
+    <Span Name="UserConfirmation" FileName="UserConfirmation" GUID="ddfdf193-f6bf-450c-8d0e-7d85620a92ff" />
+    <Span Name="UserSettings" FileName="UserSettings" GUID="de8701b3-3c23-4df7-bb1b-ebb35e0d1663" />
+    <Span Name="SysSingletonView" FileName="SysSingletonView" GUID="dffea145-ac24-4d2d-83fb-9cccda77e43c" />
+    <Span Name="HtmlTemplateSeeker" FileName="HtmlTemplateSeeker" GUID="ee9f3f8b-4b98-49fe-bf4d-1113ac650dd8" />
+    <Span Name="WeekDefinitionView" FileName="WeekDefinitionView" GUID="fde92536-cc68-47ea-981c-b1d2c2f3a854" />
+    <Span Name="NotificationMessageBrowser" FileName="NotificationMessageBrowser" GUID="ffe27d8d-a1a5-449b-a6f6-1c5df3f182ee" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="ScheduledTasks" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="0" Id="9d481037-ac24-4461-bfc0-6d28ff64fd14">
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <PlacedClass>
+    <PlacedClass ClassId="c3f3bba5-e658-43e4-9b18-2b0176b7e1d9" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="84" RenderedWidth="202" ShowAttributes="False" ShowMethods="False" Size="1" x="144" y="72" id="1e94e0c0-e08f-4b1b-9ec8-a939cc2a9d48">
+      <Class>
+        <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+      </Class>
+      <PickedBehavioralFeatures>
+        <Method Name="SO" idref="7c1e44e2-dcd3-4856-add2-a0d41ebd80f4" />
+      </PickedBehavioralFeatures>
+      <PickedStructuralFeatures>
+        <Attribute Name="DebuggingAllowed" idref="81715cf1-8bbe-45a3-b6b4-7f5028e7397e" />
+        <Attribute Name="CreateNewSysUsersAsAdmins" idref="a4545e34-df4d-4341-bd78-1128d3f59e07" />
+      </PickedStructuralFeatures>
+    </PlacedClass>
+    <PlacedClass ClassId="7b6695cc-8674-4bd6-a11b-8ac3a23f2ee8" Color="1692800256" LastKnownName="SysAsyncTicket" PickedFeatureVisibility="ShowAll" RenderedHeight="179" RenderedWidth="156" ShowAttributes="False" ShowMethods="False" Size="1" x="1376" y="48" id="1fdf1671-c22d-4d26-acc1-4e9910b03ce2">
+      <Class>
+        <Class Name="SysAsyncTicket" idref="5a30908a-d2d1-4f4b-82a4-c2778947e6ab" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="883f952f-e68d-4e3c-add9-2908131a726e" Color="1692800256" LastKnownName="ScheduledTask" PickedFeatureVisibility="ShowAll" RenderedHeight="191" RenderedWidth="158" ShowAttributes="False" ShowMethods="False" Size="1" x="416" y="72" id="3463bd70-4575-492c-a2d9-c580f99521ed">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.61611193146329" LabelDistance="13.1702965294823" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-32" y="191" id="4ef451c4-e0b3-4587-9004-107daf12454a">
+          <AssociationEnd>
+            <AssociationEnd Name="ScheduledTask" idref="bc3b84b1-4669-4c2d-b28a-aac4d0c07ae1" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397446" LabelDistance="9.34314575050766" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-32" y="0" id="6763fe70-9ec6-404b-ae90-a35c6d8ebc79">
+              <AssociationEnd>
+                <AssociationEnd Name="ScheduledTimes" idref="5fcd98ad-3c41-4099-a294-a8bf3b824a1d" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.0682803379727002" LabelDistance="96.8322398879573" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="0" y="191" id="98bd9ff1-e327-4657-bafb-e37d853342c6">
+          <AssociationEnd>
+            <AssociationEnd Name="ScheduledTask2" idref="aaa5fbaf-3e1c-4f4d-b24f-6714bb6cfb55" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="3.2494823577911" LabelDistance="117.074119986231" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="7dbcbb2f-fa61-47ab-987d-6672d4723fec">
+              <AssociationEnd>
+                <AssociationEnd Name="NextExecutionTime" idref="497b6399-d709-41cd-8f8e-e79a48aa05d5" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-1.98965840275421" LabelDistance="18.1780515670091" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="True" x="79" y="48" id="a119c376-c462-49b6-af33-35c5f342e497">
+          <AssociationEnd>
+            <AssociationEnd Name="ScheduledTask" idref="f6aa8a78-75f0-4371-a8e2-3d71e1342b6e" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-2.0156461263504" LabelDistance="19.5049111449615" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-57" y="48" id="da9ee4f2-fb35-402d-b477-78ab0a458026">
+              <AssociationEnd>
+                <AssociationEnd Name="TaskTickets" idref="55ca8401-dbad-4f34-9e86-dca31e6aeb73" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ScheduledTask" idref="78d70915-b236-4c4f-b4c8-26d654e5b9d1" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="4fb836f3-d37d-4614-b152-3863540e2f8b" Color="-931102592" LastKnownName="SysSuperClass" PickedFeatureVisibility="ShowAll" RenderedHeight="156" RenderedWidth="119" ShowAttributes="False" ShowMethods="False" Size="1" x="1120" y="64" id="6a720fc8-24d7-470d-a3f2-c24c9c256688">
+      <Class>
+        <Class Name="SysSuperClass" idref="5dcc8de3-485c-4871-9fc6-bdfc4e29c8cf" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="ae69bf7d-4b2c-42a0-8f0f-e2477e4882e4" Color="1692800256" LastKnownName="ScheduledTime" PickedFeatureVisibility="ShowAll" RenderedHeight="85" RenderedWidth="137" ShowAttributes="False" ShowMethods="False" Size="1" x="416" y="344" id="7783b6b5-bafd-4e17-aa39-3089a6a46501">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397446" LabelDistance="9.34314575050766" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="-32" y="0" id="6763fe70-9ec6-404b-ae90-a35c6d8ebc79">
+          <AssociationEnd>
+            <AssociationEnd Name="ScheduledTimes" idref="5fcd98ad-3c41-4099-a294-a8bf3b824a1d" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="3.2494823577911" LabelDistance="117.074119986231" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="0" y="0" id="7dbcbb2f-fa61-47ab-987d-6672d4723fec">
+          <AssociationEnd>
+            <AssociationEnd Name="NextExecutionTime" idref="497b6399-d709-41cd-8f8e-e79a48aa05d5" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="ScheduledTime" idref="9fc5f637-991f-4746-a1ce-f2d1026d9bba" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="734899f4-c4b0-44ad-a719-e275d5ebb06f" Color="1692800256" LastKnownName="TaskTicket" PickedFeatureVisibility="ShowAll" RenderedHeight="108" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="808" y="72" id="c2981ca1-dca0-4f15-8cf3-44da5d7ca4a5">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-2.0156461263504" LabelDistance="19.5049111449615" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="False" x="-57" y="48" id="da9ee4f2-fb35-402d-b477-78ab0a458026">
+          <AssociationEnd>
+            <AssociationEnd Name="TaskTickets" idref="55ca8401-dbad-4f34-9e86-dca31e6aeb73" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="TaskTicket" idref="f56c4d76-ee7f-48c8-b249-e05e87ef5b8b" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>

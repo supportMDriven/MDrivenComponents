@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysUserModeSelector" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c2605952-1845-4103-b0cc-ba73b218dd0b">
+  <AccessGroups>
+    <AccessGroup Name="UserCanSwitchMode" idref="5d3c0dc7-ce6e-4b00-b57f-2b07ce5a93b1" />
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="SysUser" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="12ebc12f-d23b-4759-8df1-a463554bf866" />
+    <Column Name="IsInAdminUserMode" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.IsInAdminUserMode" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser.IsAdmin=true" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="56d9d9a7-a5d8-4a9c-9ab4-0d150ab916e8" />
+    <Column Name="ToggleAdminMode" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser.IsAdmin=true" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="3" id="a68a90fb-6775-42b0-b9b3-86dacac84ad0">
+      <ActionToExecute>
+        <ContextAction Name="ToggleAdminMode" idref="5a7dc729-6633-415b-b0ad-adc20dbbd914" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+</Span>

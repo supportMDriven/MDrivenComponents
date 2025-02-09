@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="UserMessaging" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="de73b553-7d15-46ea-9c43-63550b99faec">
+  <DefaultSuperClass>
+    <Class Name="SysSuperClass" idref="5dcc8de3-485c-4871-9fc6-bdfc4e29c8cf" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Association Name="" EffectiveName="UserConfirmationValidationUserConfirmationValidationsCreatedInSessionUserConfirmationCreatedInSession" id="0ca1441f-3d66-4f31-a0f8-f88b3f2e8fc1">
+      <AssociationEnd>
+        <AssociationEnd Name="CreatedInSession" CodeComment="Holds the last sent confirmation IN THIS SESSION. Used to show progress" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="321c5ace-0fc5-4b06-8e1c-e6d2cf02226b">
+          <Participant>
+            <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserConfirmationValidationsCreatedInSession" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="e69312ea-317d-452a-9769-13b828d5da7d">
+          <Participant>
+            <Class Name="UserConfirmationValidation" idref="2973e91d-5b1e-4fe7-a27a-dbbe3a4ec8f7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="TemplateSingletonSysSingletonsUserConfirmationHtmlTemplateUserConfirmation" id="0fdab33c-9f75-4752-972c-90dce82959ca">
+      <AssociationEnd>
+        <AssociationEnd Name="UserConfirmation" CodeComment="Confirmation of email and welcome" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="020274ef-ed19-4a65-ba93-a93eb405ee71">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsUserConfirmation" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="eccd863a-056a-47d3-b181-d89ec44c1693">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="UserConfirmationValidation" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="2973e91d-5b1e-4fe7-a27a-dbbe3a4ec8f7">
+      <Feature>
+        <Attribute Name="ShowEmailSending" CodeComment="Show a UI message about that the message WILL BE sent" Multiplicity="" Visibility="Public" id="022e1c54-fcfc-43e6-b3c1-0952cae6a9ec">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="let lastsent = self.CreatedInSession.LastSent in&#xD;&#xA;(&#xD;&#xA;  lastsent.oclIsInState(#Queued) or lastsent.oclIsInState(#Retrying)&#xD;&#xA;)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NoConfirmationFound" Multiplicity="" Visibility="Public" id="1392e4fd-81fa-4c0b-8467-f472c35d61ae">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="(not self.SearchedOnCode.IsNullOrEmpty) and self.FoundWithSearch-&gt;isEmpty" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ShowEmailSent" CodeComment="Show a UI message about the email has been sent off" Multiplicity="" Visibility="Public" id="244d7393-57b5-4dd8-b624-0cabda93d276">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.CreatedInSession.LastSent.oclIsInState(#Sent)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AutoAccept" CodeComment="If set the confirmation will automatically accept the confirmation code and move on." Multiplicity="" Visibility="Public" id="41268e8f-3ef9-42da-b76f-1b4c50c0b607">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EffectiveUserAndLinksMismatch" CodeComment="The logged in user is not the same user as the confimation created in this session (ecospace) or found ny entering a confirmation code" Multiplicity="" Visibility="Public" id="48dff071-29b5-4a1b-b217-e91107f79382">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="(self.FoundWithSearch.notNull and (SysSingleton.oclSingleton.EffectiveUser &lt;&gt; self.FoundWithSearch.User)) or&#xD;&#xA;(self.CreatedInSession.notNull and (SysSingleton.oclSingleton.EffectiveUser &lt;&gt; self.CreatedInSession.User))" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="Reset" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="532c05d5-4389-45ff-842d-5a74c246ccaa">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.EnteredCode.setToNull;&#xD;&#xA;self.FoundWithSearch := UserConfirmation.nullValue;&#xD;&#xA;self.SearchedOnCode.setToNull;&#xD;&#xA;self.AutoAccept := false" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="SearchedOnCode" Multiplicity="" Visibility="Public" id="5bb05763-0261-4198-a5fb-14bac34a9094">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="SendNewEmail" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="(self.CreatedInSession.isNull or self.CreatedInSession.LastSent.oclIsInState(#Sent) or self.CreatedInSession.LastSent.oclIsInState(#SendingFailed))" Visibility="Public" id="6ae5bfff-e5ce-42c8-b771-1dbedc5a3f19">
+          <Parameter>
+            <Parameter Name="toUserWithAccount" Kind="In">
+              <Type>
+                <Datatype idref="User" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Reset;&#xD;&#xA;toUserWithAccount.SendUserConfirmation" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="EnteredCode" Multiplicity="" Visibility="Public" id="aae51396-6f70-4c46-b9b4-c04ac4a6e8f3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Length" Value="40" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SearchValid" CodeComment="A code has been entered and a search has been executed" Multiplicity="" Visibility="Public" id="af306de5-a987-4f69-aaf3-99259daa4016">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="not self.EnteredCode.isNullOrEmpty and&#xD;&#xA;(self.EnteredCode = self.SearchedOnCode)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SearchOrClearNow" CodeComment="Searching or a clearing of the UI should be done. Entered and Searched for codes don't match any more" Multiplicity="" Visibility="Public" id="b8b70f8f-fea4-44b0-8a99-3595bb566ee1">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="(self.EnteredCode &lt;&gt; self.SearchedOnCode)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ShowCodeEntry" CodeComment="The UI should show the Code entry field. Code has been sent or the sending state is unknown" Multiplicity="" Visibility="Public" id="cbdf6f40-bd2a-4824-a7f7-df6372d653d3">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.CreatedInSession.isNull or &#xD;&#xA;self.CreatedInSession.AcceptValid" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EffectiveUserConfirmationWanted" CodeComment="Should the UI suggest user confirms?" Multiplicity="" Visibility="Public" id="e0ed9c09-ec68-43ae-8f64-cbab1b45ff52">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="let u = SysSingleton.oclSingleton.EffectiveUser in&#xD;&#xA;(&#xD;&#xA;  u.notNull and not u.AccountConfirmed&#xD;&#xA;)" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LastMessageSent" Multiplicity="" Visibility="Public" id="e29808d4-5dda-43b9-8b63-f7f21a03ddf2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.CreatedInSession.LastSent.Sent" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ShowEmailFailure" CodeComment="Show a UI message about that the last message failed to be sent" Multiplicity="" Visibility="Public" id="e38ff0b0-fe5c-4c1a-b954-7eb838b23b64">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="let lastsent = self.CreatedInSession.LastSent in&#xD;&#xA;(&#xD;&#xA;  lastsent.oclIsInState(#SendingFailed)&#xD;&#xA;)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="InvalidCodeEntered" CodeComment="A search has been done. A UserConfirmation has been found, but it's not valid for any reason" Multiplicity="" Visibility="Public" id="f8ff3bd6-8381-49fe-9c06-3b412a49a5cb">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.SearchValid and self.FoundWithSearch.notNull and (not self.FoundWithSearch.AcceptValid)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-923736436" />
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class Name="OutgoingNotificationSummary" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="29d1db30-210b-4ca6-86b1-a6b9db3cc120">
+      <Superclass>
+        <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-926875712" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="UserConfirmationUserConfirmationsUserUser" id="2c832b33-8fc3-4d17-a0a7-9aa28aff41bf">
+      <AssociationEnd>
+        <AssociationEnd Name="User" IsNavigable="True" Multiplicity="1" Visibility="Public" id="59730c29-0c05-4bd8-adf0-e55dae615001">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserConfirmations" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c7e56450-2b08-4778-bcc6-f21e1a472d1e">
+          <Participant>
+            <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="OutgoingMessageOutgoingMessageOutgoingEmailOutgoingEmails" id="30458d2a-e87a-428f-9d91-ce31ab2fe61c">
+      <AssociationEnd>
+        <AssociationEnd Name="OutgoingMessage" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="f347f910-ca43-4a72-ad2e-1b611f2e2766">
+          <Participant>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="OutgoingEmails" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="763bffdb-aab5-48b0-83d8-7d0af27edf5e">
+          <Participant>
+            <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="UserNotification" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="43276570-c706-4336-b817-fa95580118ed">
+      <Association>
+        <Association Name="NotificationNotificationsUserNotifiedUsers" idref="e0e9a4cf-6ae4-499b-b6ba-54c0ca4ce78e" />
+      </Association>
+      <Feature>
+        <Attribute Name="Active" CodeComment="Not Dismissed and the Notification is Active" Multiplicity="" Visibility="Public" id="07018829-1ddf-4ee6-b946-eef57ad20872">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Dismissed.isNull and self.Notification.Active" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="CreateOutgoingNotification" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.User.UseNotifications " Visibility="Public" id="0c768304-bc21-44c7-82d5-34a9f784074d">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="OutgoingNotification" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if self.User.UseNotifications then&#xD;&#xA;  let nm = OutgoingNotification.Create in&#xD;&#xA;  (&#xD;&#xA;    nm.UserNotification := self;&#xD;&#xA;    nm.ConstructMessage;&#xD;&#xA;    self.UpdateReminderTime;&#xD;&#xA;    nm&#xD;&#xA;  )&#xD;&#xA;else&#xD;&#xA;  OutgoingNotification.nullValue&#xD;&#xA;endif" />
+          </TaggedValue>
+        </Method>
+        <Method Name="ClearNotification" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3b84492c-52b5-4238-b5b1-6e0e26d331e0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Notification.ClearedBy := self.User;&#xD;&#xA;self.Notification.Cleared := DateTime.UtcNow" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="EffectiveMessage" Multiplicity="" Visibility="Public" id="659bcfb6-0860-4d52-8e7b-8886fcac7e26">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Notification.GetText(self)" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ReminderAfter" CodeComment="After this time, send a new message (email)" Multiplicity="" Visibility="Public" id="6fde2a67-3c86-4d90-acf1-6d33d65edb8d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="NewNotificationNow" CodeComment="Call to check if new notification should be created at the time supplied" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b5df0ecc-0516-4a07-afa1-4055f58df529">
+          <Parameter>
+            <Parameter Name="vNow" Kind="In">
+              <Type>
+                <Datatype idref="DateTime?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Active and&#xD;&#xA;(&#xD;&#xA;  -- Initial sending&#xD;&#xA;  (&#xD;&#xA;    (self.Notification.SendMessageAfter &lt; vNow) and&#xD;&#xA;    (self.Notification.SendMessageAfter &gt; self.OutgoingNotifications.CreateTime-&gt;maxValue)&#xD;&#xA;  ) or&#xD;&#xA;  (&#xD;&#xA;    -- Reminder (s)&#xD;&#xA;    self.ReminderAfter.notNull and &#xD;&#xA;    (self.ReminderAfter &lt; vNow) and&#xD;&#xA;    (self.ReminderAfter &gt; self.OutgoingNotifications.CreateTime-&gt;maxValue)&#xD;&#xA;  )&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Dismissed" Multiplicity="" Visibility="Public" id="c12ba182-8718-4e5f-ba68-2a2eee8c02e0">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EffectiveHtmlMessage" Multiplicity="" Visibility="Public" id="c30f4482-f8ee-470e-8f11-dbe550da9638">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Notification.GetTextAsHtml(self)" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="UpdateReminderTime" CodeComment="Sets the reminder time, moving forward only" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="f02e24a3-fa33-416a-a324-7091a7379a95">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ReminderAfter := &#xD;&#xA;  if self.Notification.ReminderAfterMinutes.notNull then&#xD;&#xA;    let newTime = DateTime.Now.AddMinutes(self.Notification.ReminderAfterMinutes) in&#xD;&#xA;    (&#xD;&#xA;      if self.ReminderAfter.isNull or (self.ReminderAfter &lt; newTime) then&#xD;&#xA;        newTime&#xD;&#xA;      else&#xD;&#xA;        self.ReminderAfter &#xD;&#xA;      endif&#xD;&#xA;    )&#xD;&#xA;    else&#xD;&#xA;      DateTime.nullValue&#xD;&#xA;    endif" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Notification.asString" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-932139705" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="TemplateSingletonSysSingletons2HtmlTemplateWelcomeForConfirmedUser" id="489aaf76-53bc-4d32-b598-69b91240ecc4">
+      <AssociationEnd>
+        <AssociationEnd Name="WelcomeForConfirmedUser" CodeComment="Welcome, your account is ready!" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="86a92c4f-fff5-4844-b099-c7d31b17b6f3">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletons2" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="af39081d-c4b3-4d5e-894c-b3bb4b660a5f">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="HtmlUiTextUserRegistrationTextTemplateSingletonSysSingletonsUserRegistrationText" id="53b204e9-030b-4475-8d0c-0c18f78cb6da">
+      <AssociationEnd>
+        <AssociationEnd Name="UserRegistrationText" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="816f2963-74bd-4d4d-8166-6326400a243f">
+          <Participant>
+            <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsUserRegistrationText" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="4239361f-fdb0-4e48-9ff8-cebf315a6b5a">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="HtmlTemplateUserRegistrationTemplateSingletonSysSingletonsUserRegistrationTemplate" id="58cadda2-da91-4db8-892b-60ee067c6ff0">
+      <AssociationEnd>
+        <AssociationEnd Name="UserRegistration" CodeComment="Template for saying that the user should complete the registration in the UserRegistration page" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c683c695-f696-4bcf-9d0a-953a7adb9d47">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsUserRegistrationTemplate" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="625d0aa0-bea8-4562-ba96-85ed373540b9">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="TemplateSingletonTemplateSingletonsInvitationToJoinFragmentHtmlTemplateUserNotificationUpdate" id="6061eca7-5e2f-4750-8051-72723ef3b3be">
+      <AssociationEnd>
+        <AssociationEnd Name="UserNotificationUpdate" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="5c1dc334-70dd-4cfd-a228-5b94a3a306af">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.FormerNames" Value="InvitationToJoinFrame" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="TemplateSingletonsInvitationToJoinFragment" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="9886e25d-7269-4904-9a5c-b64545629e6c">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="HtmlTemplateMessageFrameHtmlTemplateMessageFragments" id="704b67ed-fd12-4644-b953-3cdbb45a145b">
+      <AssociationEnd>
+        <AssociationEnd Name="MessageFrame" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="f12708ec-3b2e-48c6-a68b-7c432bb47a48">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="MessageFragments" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="16c6b28c-1050-48da-b519-50f93e507b64">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="OutgoingMessageOutgoingMessagesLastSentOutgoingEmailLastSent" id="75fe60a0-8b26-45f2-9904-70b9f6792093">
+      <AssociationEnd>
+        <AssociationEnd Name="LastSent" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a256a671-c057-4a9a-95bc-bcbdf58d6f13">
+          <Participant>
+            <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.OutgoingEmails-&gt;orderBy(x|x.CreateTime)-&gt;last" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd Name="OutgoingMessagesLastSent" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="feac17f7-94a9-43fa-9134-ba97ef2ac7ff">
+          <Participant>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="derived" Value="True" />
+      </TaggedValue>
+    </Association>
+    <Class Name="UserWelcomeNotification" AdditionalNamespaces="" CodeComment="Message to the user after confirming the email address." IsAbstract="False" IsSealed="False" id="79a7869e-d32c-42bb-8da9-9b8e05cf0a19">
+      <Feature>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="bddd7b44-4249-4e9e-a0fd-f3d7b6e3c1cf">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.OnCreate;&#xD;&#xA;self.SendMessageAfter := DateTime.UtcNow" />
+          </TaggedValue>
+        </Method>
+        <Method Name="GetText" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="dc2b51a5-4dda-4e30-9395-139fa8a6a825">
+          <Parameter>
+            <Parameter Name="aUserNotification" Kind="In">
+              <Type>
+                <Datatype idref="UserNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="'Welcome, your account is now confirmed.'" />
+          </TaggedValue>
+        </Method>
+        <Method Name="PrepareOutgoingNotification" CodeComment="Called from OutgoingNotification, ConstructMessage to fill in the message" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="f02c3937-cabb-4491-8f5a-97f2ce1dc8d8">
+          <Parameter>
+            <Parameter Name="message" Kind="In">
+              <Type>
+                <Datatype idref="OutgoingNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="message.Subject := TemplateSingleton.SO.WelcomeForConfirmedUser.EmailSubject;&#xD;&#xA;message.HtmlTemplate := TemplateSingleton.SO.WelcomeForConfirmedUser;&#xD;&#xA;message.DataViewModelTemplate := OutgoingNotification.ViewModels.WelcomeMessageTemplate" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <Superclass>
+        <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-932139705" />
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+      </TaggedValue>
+    </Class>
+    <Class Name="OutgoingNotification" AdditionalNamespaces="" CodeComment="Note! General message class. DOES NOT KNOW which template to use. Calls Notification subclass" IsAbstract="False" IsSealed="False" id="7f78cee0-de16-44ea-bd76-550ae6471772">
+      <Feature>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="634df68b-6193-40f3-85a8-aae3fcfe0259">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.OnCreate" />
+          </TaggedValue>
+        </Method>
+        <Method Name="ConstructMessage" CodeComment="Construct message, use the specific notification class's method" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d7f60c8a-a0cc-41b1-9898-34c637eabbd5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ToUser := self.UserNotification.User;&#xD;&#xA;self.UserNotification.Notification.PrepareOutgoingNotification(self);&#xD;&#xA;self.base.ConstructMessage" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <Superclass>
+        <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-926875712" />
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+        <TaggedValue Tag="Eco.DerivationExpressions" Value="&quot;SourceDescription='OutgoingNotification for ' + self.UserNotification.asString&quot;" />
+        <TaggedValue Tag="Eco.FormerNames" Value="NotificationMessage" />
+      </TaggedValue>
+    </Class>
+    <Class Name="OutgoingMessage" AdditionalNamespaces="" CodeComment="Superclass for outgoing message, for example emails and text messages" IsAbstract="False" IsSealed="False" id="9028de00-cf51-4839-a675-6357adc067d0">
+      <Feature>
+        <Attribute Name="SourceDescription" CodeComment="Debugging help, describes what created this OutgoingMessage" Multiplicity="" Visibility="Public" id="37378812-e006-43b4-adb9-370569b19a27">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="'No source description'" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="SetMessageSent" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="42b952ba-03cd-4e75-ac7a-dd9b7d93e0b6">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.MessageSent := DateTime.Now" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="MessageSent" Multiplicity="" Visibility="Public" id="6eacbd2a-5aae-4fde-89e2-4dc2d7333188">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.FormerNames" Value="EmailSent" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="CreateOutgoingEmail" CodeComment="Creates Email object from already created data" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.ToUser.UserEmailValid = true" Visibility="Public" id="77089f86-1842-428f-a0aa-fa71389d4291">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="let oe = OutgoingEmail.create in&#xD;&#xA;(&#xD;&#xA;  oe.OutgoingMessage := self;&#xD;&#xA;  oe.to := self.ToUser.NamePresentation + '&lt;' + self.ToUser.EffectiveEmail + '&gt;';&#xD;&#xA;  oe.subject := self.Subject;&#xD;&#xA;  oe.body := self.Body&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Subject" Multiplicity="" Visibility="Public" id="8203c2e6-4a30-4199-b027-01048e6e7053">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Body" Multiplicity="" Visibility="Public" id="a6d983e8-e0cd-4cb0-a0be-c4ba50deee84">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="DataViewModelTemplate" Multiplicity="" Visibility="Public" id="ef07371d-67bd-44d1-a167-4baa66ed6c94">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Method Name="ConstructMessage" CodeComment="Merges HTML with data (stores in object)" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="ef378cfa-dbd7-45f5-9ea7-5e6d2aaf0f3d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Subject := self.HtmlTemplate.EmailSubject;&#xD;&#xA;self.Body := self.XHtmlReportAsString(self.DataViewModelTemplate);&#xD;&#xA;(not SysSingleton.SO.WaitWithOutgoingEmailCreation).&#xD;&#xA;  whenTrue(self.CreateOutgoingEmail)&#xD;&#xA;" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.MessageSent.ToShortDateString + ': ' + self.ToUser.EffectiveEmail" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-926875712" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="UserConfirmationValidationUserConfirmationValidationsFoundWithSearchUserConfirmationFoundWithSearch" id="97e2da2a-66e2-46ac-848f-234d9dd60e4b">
+      <AssociationEnd>
+        <AssociationEnd Name="FoundWithSearch" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9b3565b3-2204-4b2e-b47f-cb53bce5b494">
+          <Participant>
+            <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserConfirmationValidationsFoundWithSearch" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="b245402f-d095-4f65-87c4-79ecbdd2a923">
+          <Participant>
+            <Class Name="UserConfirmationValidation" idref="2973e91d-5b1e-4fe7-a27a-dbbe3a4ec8f7" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue Tag="persistence" Value="transient" />
+      </TaggedValue>
+    </Association>
+    <Association Name="" EffectiveName="HtmlTemplateResetPasswordTemplateSingletonSysSingletonsResetPasswordTemplate" id="a02d3ded-5294-4efa-8897-4843ead221a4">
+      <AssociationEnd>
+        <AssociationEnd Name="ResetPassword" CodeComment="Send when a user has REQUESTED to reset their password" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4d099138-6dea-4a03-a74e-151724a8f3d7">
+          <Participant>
+            <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="SysSingletonsResetPasswordTemplate" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="16e0d0aa-552a-4106-9ada-5ab2ab19ff4b">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="UserRegistrationNotification" AdditionalNamespaces="" CodeComment="Message to the user to sign up (register). Used when the User is created BEFORE the SysUser" IsAbstract="False" IsSealed="False" id="b350979f-2a85-4f8e-9e53-b89b60c9cede">
+      <Feature>
+        <Method Name="GetText" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3929c122-8f37-4d08-99a1-18796113565a">
+          <Parameter>
+            <Parameter Name="aUserNotification" Kind="In">
+              <Type>
+                <Datatype idref="UserNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="'Please register.'" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3f022235-346c-4a51-942e-6c84dcc084a9">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.OnCreate;&#xD;&#xA;self.SendMessageAfter := DateTime.UtcNow" />
+          </TaggedValue>
+        </Method>
+        <Method Name="PrepareOutgoingNotification" CodeComment="Called from OutgoingNotification, ConstructMessage to fill in the message" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="e8c03863-7aed-4e08-a79f-5e5d7fddd23e">
+          <Parameter>
+            <Parameter Name="message" Kind="In">
+              <Type>
+                <Datatype idref="OutgoingNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="message.Subject := TemplateSingleton.SO.UserRegistration.EmailSubject;&#xD;&#xA;message.HtmlTemplate := TemplateSingleton.SO.UserRegistration;&#xD;&#xA;message.DataViewModelTemplate := OutgoingNotification.ViewModels.WelcomeMessageTemplate" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <Superclass>
+        <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-932139705" />
+        <TaggedValue Tag="Eco.TableMapping" Value="Parent" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="OutgoingMessageOutgoingMessagesToMeUserToUser" id="bc6bea88-9c52-4ca5-a084-148fbf741188">
+      <AssociationEnd>
+        <AssociationEnd Name="ToUser" IsNavigable="True" Multiplicity="1" Visibility="Public" id="3438f596-74d2-40f0-8e33-9daca43fe072">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="OutgoingMessagesToMe" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="954dba67-e36b-423b-88c2-3ab841345ec9">
+          <Participant>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association Name="" EffectiveName="HtmlUiTextLandingPageTextTemplateSingletonTemplateSingletonsLandingPageText" id="c132427a-79ba-4078-9d3e-1f00733a5705">
+      <AssociationEnd>
+        <AssociationEnd Name="LandingPageText" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ce104c12-23cf-499c-834d-a5b0974e5676">
+          <Participant>
+            <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="TemplateSingletonsLandingPageText" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="75f4311f-7012-48c8-8fd9-352fc204bb88">
+          <Participant>
+            <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="TemplateSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="e80a5a96-8f8c-439c-a384-e16be3d9dcc0">
+      <Feature>
+        <Method Name="SO" CodeComment="Shortcut for oclSingleton" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="True" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0cd37140-4043-442d-8970-98ce42785b5d">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="TemplateSingleton" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="TemplateSingleton.oclSingleton" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+    <Class Name="HtmlUiText" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="e9fed548-7a65-46d4-a511-dded74b48874">
+      <Feature>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="3587764b-e2f5-4460-b271-3f573825ecab">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="UiHTML" Multiplicity="" Visibility="Public" id="3c459b69-e0b6-449d-a596-5abc2e2c8bc5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.FormerNames" Value="HTML" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="'UI text: ' + self.Name" />
+      </TaggedValue>
+    </Class>
+    <Class Name="Notification" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="f1a8b389-62b5-4ad3-841a-076ab620c2fd">
+      <Feature>
+        <Method Name="Initialize" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0ca6546a-1ab3-47fb-8220-c1b3a5c9b1f1">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ShowAfter := DateTime.UtcNow;&#xD;&#xA;self.ShowUntil := self.ShowAfter.addDays(30);&#xD;&#xA;self.SendMessageAfter := DateTime.UtcNow.AddHours(4);&#xD;&#xA;self.UserNotifications-&gt;forEach(ns|ns.Dismissed := DateTime.nullValue)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Active" CodeComment="Not Cleared or Cancelled" Multiplicity="" Visibility="Public" id="11bbc1c8-4b28-48be-b9c0-abe126199234">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.Cleared.isNull and self.Cancelled.isNull" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="GetText" CodeComment="Gets (constructs) the notification text as text only" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="2a8dcd79-70ed-450e-adec-82c9b75d2a7b">
+          <Parameter>
+            <Parameter Name="aUserNotification" Kind="In">
+              <Type>
+                <Datatype idref="UserNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="'&lt;GetMessage() not implemented in subclass '+self.oclType.asString+'&gt;'" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="ShowUntil" Multiplicity="" Visibility="Public" id="4de10ca5-dce3-4d56-a00e-d8d1db8d4e0b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Cancelled" CodeComment="System cancelled" Multiplicity="" Visibility="Public" id="6cb921c9-3cd7-4041-9d10-03c2bee57635">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="SendMessageAfter" CodeComment="When this point in time has passed, create a new NotificationMessage" Multiplicity="" Visibility="Public" id="7b2dc484-28f5-425f-9fc8-4824812c1f8a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ReminderAfterMinutes" Multiplicity="" Visibility="Public" id="94c2edc6-bd7c-42a0-bda4-105e4d4bcfbf">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Cleared" Multiplicity="" Visibility="Public" id="9d81eac6-0ed6-406a-84d3-ec69f1be0fb4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ShowAfter" Multiplicity="" Visibility="Public" id="ae2d6c28-4de3-403e-a293-c2bf3a23a80c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="PrepareOutgoingNotification" CodeComment="Called from NotificationMessage, ConstructMessage to complete the message" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="b3007ae2-42cd-4f55-bd24-d5c03e402fc3">
+          <Parameter>
+            <Parameter Name="message" Kind="In">
+              <Type>
+                <Datatype idref="OutgoingNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="message.Subject := 'PrepareNotificationMessage not correctly overridden.'" />
+          </TaggedValue>
+        </Method>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b520166a-443f-4150-b82e-4293a9ebd425">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.OnCreate;&#xD;&#xA;self.Initialize" />
+          </TaggedValue>
+        </Method>
+        <Method Name="GetTextAsHtml" CodeComment="Gets (constructs) the FULL notification text as XHTML " IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="True" IsSealed="False" IsStatic="False" IsVirtual="True" Postcondition="" Precondition="" Visibility="Public" id="c0bc5671-20a5-4dc7-a41e-5a300eba002d">
+          <Parameter>
+            <Parameter Name="forUserNotification" Kind="In">
+              <Type>
+                <Datatype idref="UserNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="'No message fragment creation implemented.'" />
+          </TaggedValue>
+        </Method>
+        <Method Name="CreateOutgoingNotifications" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="c8479f0f-d0a1-4406-bdfa-72403ed7f275">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.UserNotifications.CreateOutgoingNotification" />
+          </TaggedValue>
+        </Method>
+        <Method Name="Cancel" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.Cancelled.isNull" Visibility="Public" id="d3956578-3d35-4378-9c04-4e8da129aab3">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.Cancelled := DateTime.UtcNow" />
+          </TaggedValue>
+        </Method>
+        <Method Name="AddUser" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="e15fa153-8550-4345-b597-52ce2bd8cd5c">
+          <Parameter>
+            <Parameter Name="aUser" Kind="In">
+              <Type>
+                <Datatype idref="User" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="UserNotification" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.NotifiedUsers.add(aUser);&#xD;&#xA;self.UserNotifications-&gt;select(un|un.User=aUser)-&gt;first" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.oclType.asString" />
+        <TaggedValue Tag="Eco.DefaultColor" Value="-932139705" />
+      </TaggedValue>
+    </Class>
+    <Association Name="" EffectiveName="UserFromUserOutgoingMessageOutgoingMessagesFromMe" id="f8b51b14-3380-4dc2-8a02-010bc28e77b4">
+      <AssociationEnd>
+        <AssociationEnd Name="FromUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="9c36b07a-53b5-4bce-9ac1-e432c7fc19e7">
+          <Participant>
+            <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="OutgoingMessagesFromMe" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="02c566fe-66a7-4fe1-9da7-ae020f9d6496">
+          <Participant>
+            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="HtmlTemplate" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="fd44be6e-038e-43dc-8196-0bbe918a0565">
+      <Feature>
+        <Attribute Name="XHTML" CodeComment="HTML with some replaces for complience" Multiplicity="" Visibility="Public" id="1c8205bc-3903-4f5b-a3a4-051fbec97f55">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.EmailHTML.replace('&amp;nbsp;', '&amp;#xA0;')" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EmailXHTML" CodeComment="HTML with some replaces for complience" Multiplicity="" Visibility="Public" id="3520e9a3-cb6a-41fa-b238-96763468d9b2">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="self.EmailHTML.replace('&amp;nbsp;', '&amp;#xA0;')" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NameOfDataViewModel" Multiplicity="" Visibility="Public" id="3dfd5fc0-fa72-4422-8be9-975390cc216f">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.FormerNames" Value="NameOfViewModelForData" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EmailSubject" CodeComment="Used when this is an email template" Multiplicity="" Visibility="Public" id="459c18a6-f117-45ee-a54d-d79b09922569">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="FramingType" Multiplicity="" Visibility="Public" id="4f508b1e-8ad9-4d13-827a-1dc1f30111f5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="if self.MessageFrame.notNull then&#xD;&#xA;  'Fragment'&#xD;&#xA;else&#xD;&#xA;  if self.MessageFragments-&gt;notEmpty then&#xD;&#xA;    'Frame'&#xD;&#xA;  else&#xD;&#xA;  ''&#xD;&#xA;  endif&#xD;&#xA;endif" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="NotificationHTML" CodeComment="Message to show to user in Notification" Multiplicity="" Visibility="Public" id="b3f7af19-3804-41ab-b4c9-ceb280670a0c">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="d19a7178-8cbf-47bd-8b53-2bd116aab70b">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Length" Value="100" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="EmailHTML" CodeComment="NOT to be used in XHTML transform" Multiplicity="" Visibility="Public" id="f50992d9-2704-4038-9a3e-f38f5a0f72b2">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.FormerNames" Value="HtmlCode" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Text" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Name" />
+      </TaggedValue>
+    </Class>
+    <Class Name="UserConfirmation" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="fe921f0f-c327-4e86-90fc-d66d78a1da9c">
+      <Feature>
+        <Attribute Name="ConfirmationCode" CodeComment="Genereated ID used in the confirmation link URL" Multiplicity="" Visibility="Public" id="0652a09f-0aca-4ee8-904b-fd43b84907df">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="Eco.Length" Value="40" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AcceptFrom" Multiplicity="" Visibility="Public" id="1feaf8cb-006d-4e19-a565-294150b8b311">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="ConfirmationURL" CodeComment="URL to the viewmodel and id to open the confirmation screen" Multiplicity="" Visibility="Public" id="47bbb2b6-b2e7-4a08-875a-920b8d56b4b4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="SysSingleton.oclSingleton.EffectiveSystemURL + '/Turnkey/DisplayWithVariables?view=' + UserConfirmation.ViewModels.UserConfirmation + '&amp;id=$null$&amp;vConfirmationCode='+self.ConfirmationCode" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="AcceptUntil" Multiplicity="" Visibility="Public" id="652d24e4-d135-4640-b886-c291f0d6fc39">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method Name="ConstructMessage" CodeComment="Constructs message and creates the email" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7d2f2fa6-25a6-41d1-b058-8c6efeee0702">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.ToUser := self.User;&#xD;&#xA;self.HtmlTemplate := TemplateSingleton.SO.UserConfirmation;&#xD;&#xA;self.DataViewModelTemplate := UserConfirmation.ViewModels.UserConfirmationDataView;&#xD;&#xA;self.base.ConstructMessage" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="AcceptValid" CodeComment="That this UserConfirmation can be Accepted" Multiplicity="" Visibility="Public" id="8d2d3f6f-ca1c-47ae-85d3-f0b9570e863a">
+          <TaggedValue>
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="(self.MessageSent.notNull) and (not self.Locked) and DateTime.Now.inDateRange( self.AcceptFrom, self.AcceptUntil) and self.Confirmed.isNull" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="True" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="9392b151-fe78-4b3e-8c5f-82a985bc85b4">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.base.OnCreate;&#xD;&#xA;self.ConfirmationCode:=self.Guid.asString;&#xD;&#xA;self.AcceptFrom:=DateTime.Now;&#xD;&#xA;self.AcceptUntil:=self.AcceptFrom.AddHours(24)" />
+          </TaggedValue>
+        </Method>
+        <Attribute Name="Confirmed" Multiplicity="" Visibility="Public" id="a5dd9db2-2a85-4971-b31e-4468874eb344">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="null" />
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute Name="Locked" CodeComment="Is this confirmation has been locked by an Admin" Multiplicity="" Visibility="Public" id="ca4b571e-5301-4815-8057-658f04495997">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method Name="AcceptConfirmation" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="self.AcceptValid" Visibility="Public" id="d17536d4-7245-4644-a44b-41b007f8b447">
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="if self.AcceptValid then&#xD;&#xA;  if self.User = SysSingleton.oclSingleton.EffectiveUser then&#xD;&#xA;    true&#xD;&#xA;  else&#xD;&#xA;    -- Link SysUser and User if they are not linked. Is this really needed now?&#xD;&#xA;    (SysSingleton.oclSingleton.CurrentUser.notNull and SysSingleton.oclSingleton.EffectiveUser.isNull).&#xD;&#xA;        whenTrue(self.User.SysUser := SysSingleton.oclSingleton.CurrentUser) -- Link logged in SysUser to the confirming User&#xD;&#xA;  endif;&#xD;&#xA;  self.Confirmed := DateTime.Now;&#xD;&#xA;  self.User.CreateWelcomeNotification&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <Superclass>
+        <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+      </Superclass>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.DefaultColor" Value="-926875712" />
+        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="if self.User.notNull then&#xD;&#xA;  self.User.NamePresentation&#xD;&#xA;else&#xD;&#xA;  'User empty'&#xD;&#xA;endif" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperClass" />
+  </TaggedValue>
+</Package>

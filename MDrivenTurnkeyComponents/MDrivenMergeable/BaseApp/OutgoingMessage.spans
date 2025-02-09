@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OutgoingMessage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="6c04c8fc-2121-4df2-a88d-12b56bb29066">
+  <AccessGroups>
+    <AccessGroup Name="UserWithAccount" idref="482a21b7-b0de-490b-80c9-cedc52441d03" />
+    <AccessGroup Name="UserWithConfirmedAccount" idref="6e30a67a-6c27-49f6-bd5b-06cae3ed08fd" />
+  </AccessGroups>
+  <Category>
+    <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
+  </Category>
+  <Class>
+    <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowOutgoingMessage" idref="74de295e-60c2-4c9e-93a4-cf42bb9a16cf" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="Subject" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="self.Subject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="6ce797d4-6c6b-45b5-bd13-a47a1d66dac6" />
+    <Column Name="FromUser" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="if self.FromUser.notNull then&#xD;&#xA; self.FromUser.asString&#xD;&#xA;else&#xD;&#xA;  '&lt;not set&gt;'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="e9cfbb4a-92c0-47ba-ab51-d9da59f07abe" />
+    <Column Name="ToUser" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.ToUser.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="2" id="87eee86a-2220-43b2-8df9-651e893b466b" />
+    <Column Name="ToUserEmail" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.ToUser.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="f4fbe599-cba2-40cc-90e7-0bfec982ce7e" />
+    <Column Name="MessageSent" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.MessageSent" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="3" id="ca03a2d9-8daf-42e9-bcd1-8aa23ebd9f40" />
+    <Column Name="BodyHtml" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="self.Body" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="6" StyleRef="resizevertical" XPos="2" YPos="5" id="56c275a8-3646-4d7e-b9a0-6baf3e9077d5" />
+    <Column Name="DataViewModelTemplate" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.DataViewModelTemplate" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="4" id="37d66227-c325-47bd-a048-575224b24aab" />
+    <Column Name="HtmlTemplate" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.HtmlTemplate.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="88bb851c-9f8c-4ca1-b6c7-61d0832ca44d" />
+    <Column Name="Body" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="self.Body" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="6" StyleRef="htmlexample" XPos="2" YPos="11" id="3fc7c3c8-bfac-45fb-a3e5-949445e11113">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Source" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Source: ' + self.SourceDescription" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="0" YPos="1" id="744c8aa4-80e8-49ea-8e7d-ac224d7efd1b" />
+  </OwnedColumns>
+</Span>
