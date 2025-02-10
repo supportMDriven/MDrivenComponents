@@ -64,12 +64,12 @@
     </Class>
     <Association Name="" EffectiveName="SysGraphAPIResultRowSysGraphAPIResultRowSysGraphAPIResultRowFieldSysGraphAPIResultRowFields" id="0888619e-0a77-4200-96c6-8f6ba867e31e">
       <AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPIResultRow" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c74fdfee-f6f5-4515-b56f-8fbd3ece889a">
+        <AssociationEnd Name="SysGraphAPIResultRow" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c74fdfee-f6f5-4515-b56f-8fbd3ece889a">
           <Participant>
             <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="" EffectiveName="SysGraphAPIResultRowFields" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a2a693f4-686f-4197-8430-25f53be340d0">
+        <AssociationEnd Name="SysGraphAPIResultRowFields" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a2a693f4-686f-4197-8430-25f53be340d0">
           <Participant>
             <Class Name="SysGraphAPIResultRowField" idref="49fd1818-654d-4a15-a0ad-632d60860a2a" />
           </Participant>
@@ -221,6 +221,35 @@
               </Type>
             </Parameter>
             <Parameter Name="filename" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="data" Kind="In">
+              <Type>
+                <Datatype idref="Blob" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter Name="returnparam" Kind="Out">
+              <Type>
+                <Datatype idref="SysGraphAPIResultRow" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method Name="UpdateContentDriveIdAndId" CodeComment="New content in existing document " IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="69f6b968-e655-4479-b8ae-e51bfccd76be">
+          <Parameter>
+            <Parameter Name="driveid" Kind="In">
+              <Type>
+                <Datatype idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter Name="itemid" Kind="In">
               <Type>
                 <Datatype idref="String" />
               </Type>

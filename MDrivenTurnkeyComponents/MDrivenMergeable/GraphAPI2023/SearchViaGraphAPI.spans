@@ -143,12 +143,12 @@
         <PlacingContainer idref="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
       </PlacingContainer>
     </Column>
-    <Column Name="UploadedFile_FileName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vFileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="9a209d9e-42eb-4d7f-8436-3f65775b21cf">
+    <Column Name="UploadedFile_FileName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vFileName" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_ResultRow.IsFolder" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="9a209d9e-42eb-4d7f-8436-3f65775b21cf">
       <PlacingContainer>
         <PlacingContainer idref="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
       </PlacingContainer>
     </Column>
-    <Column Name="UPLOAD" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="let res=self.UploadToFolderWithDriveIdAndId(vCurrent_ResultRow.DriveId,vCurrent_ResultRow.ItemId,vFileName,vUploadedFile) in&#xD;&#xA;(&#xD;&#xA;  res.notnull-&gt;whentrue(self.SysGraphAPIResultRows.Add(res))&#xD;&#xA;)" ExpressionForReadOnly="vFileName-&gt;isnullorempty or (vUploadedFile-&gt;size=0) or (vCurrent_ResultRow.isnull) or (not vCurrent_ResultRow.isFolder)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="e9c142a7-73b9-4053-8a50-42a4d97d1169">
+    <Column Name="UPLOAD" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="let res=self.UploadToFolderWithDriveIdAndId(vCurrent_ResultRow.DriveId,vCurrent_ResultRow.ItemId,vFileName,vUploadedFile) in&#xD;&#xA;(&#xD;&#xA;  res.notnull-&gt;whentrue(self.SysGraphAPIResultRows.Add(res))&#xD;&#xA;)" ExpressionForReadOnly="vFileName-&gt;isnullorempty or (vUploadedFile-&gt;size=0) or (vCurrent_ResultRow.isnull) or (not vCurrent_ResultRow.isFolder)" ExpressionForVisible="vCurrent_ResultRow.IsFolder" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="e9c142a7-73b9-4053-8a50-42a4d97d1169">
       <PlacingContainer>
         <PlacingContainer idref="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
       </PlacingContainer>
@@ -194,6 +194,11 @@
         <PlacingContainer idref="29ddc69c-2884-483b-b382-df4d76066420" />
       </PlacingContainer>
     </Column>
+    <Column Name="UPDATEFILE" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="let res=self.UpdateContentDriveIdAndId(vCurrent_ResultRow.DriveId,vCurrent_ResultRow.ItemId,vUploadedFile) in&#xD;&#xA;(&#xD;&#xA;  res.notnull-&gt;whentrue(self.SysGraphAPIResultRows.Add(res))&#xD;&#xA;)" ExpressionForReadOnly="(vUploadedFile-&gt;size=0)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="23a05615-2976-4513-a17a-98d8031002ca">
+      <PlacingContainer>
+        <PlacingContainer idref="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
+      </PlacingContainer>
+    </Column>
   </OwnedColumns>
   <PlacingContainer>
     <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="75ad7ed6-ecd3-416b-bfca-2c56c7091dfd">
@@ -207,7 +212,7 @@
                 <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="818c0665-b264-44ec-a9f2-90a62b47752b" />
                 <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="21a90d5d-8546-4881-92af-a8f855da843c" />
                 <PlacingContainer Name="" AlignContent="Start" AlignItem="End" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="60d89821-a1c0-4322-94f8-ee2eff13f7e4" />
-                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="vCurrent_ResultRow.IsFolder" Wrap="False" id="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
+                <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="f5d2294f-e862-4f76-ad4d-9003a8ff4093" />
                 <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Row" VisibleExpression="" Wrap="False" id="68746472-858e-4830-804a-c16ffaff9bae" />
                 <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="4413d02f-6b32-4787-9262-c87ce4028ef3" />
               </ChildContainers>
