@@ -1,0 +1,15 @@
+<Model>
+  <Packages>
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="33858003-7ed8-4ff7-b144-91d6beb89928" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="933d9536-dc14-4728-9e5e-7eab55cc7f7e" />
+  </Diagrams>
+  <Spans />
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

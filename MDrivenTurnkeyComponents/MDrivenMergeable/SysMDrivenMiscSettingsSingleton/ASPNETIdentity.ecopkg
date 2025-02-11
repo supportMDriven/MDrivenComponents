@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="33858003-7ed8-4ff7-b144-91d6beb89928">
+  <OwnedElement>
+    <Class Name="SysMDrivenMiscSettingsSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="83217de3-05ce-4126-817c-786b4b4ae888">
+      <Feature>
+        <Attribute Name="GlobalSeekerGridExportFileMaxRows" Multiplicity="" Visibility="Public" id="215d85c2-6074-434a-8967-2f578312eb59">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalReadOnlyModeUseSaveAndLock" Multiplicity="" Visibility="Public" id="22a6e760-ecd0-46f2-92c0-15d64a81f87a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="1" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalSeekersAlwaysNew" Multiplicity="" Visibility="Public" id="29b0a40a-d128-4c8b-8f2a-ab3d702e378d">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="1" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalNavigateOnDoubleClickWithoutMenu" Multiplicity="" Visibility="Public" id="30e467fe-2dae-4f58-9158-a79182675160">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="1" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalSeekerGridShowImportOnlyONTV" Multiplicity="" Visibility="Public" id="32c7d25a-2879-4971-b57c-77296684ce62">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="1" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="LibreOfficeInstallPathAndExe" Multiplicity="" Visibility="Public" id="9186699e-a79c-4d23-a415-4541ee13cc0a">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalToolbarMode" Multiplicity="" Visibility="Public" id="a3cc9774-5edb-4729-abf0-530527cbc283">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalModalOfferOpenStandalone" InitialValue="true" Multiplicity="" Visibility="Public" id="caca1682-6263-4793-a0b1-7e89ba60bd55">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalHideActionOnDisable" Multiplicity="" Visibility="Public" id="cb19347c-5828-4f80-b916-a87cede03a36">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalCenteredPopUp" Multiplicity="" Visibility="Public" id="dbb5de09-85b9-42ba-9e98-0bd0c56754f5">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.DefaultDBValue" Value="1" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute Name="GlobalReadOnlyMode" Multiplicity="" Visibility="Public" id="f63a7c0a-b561-4430-80e2-3fbd6b926806">
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+      </TaggedValue>
+    </Class>
+  </OwnedElement>
+</Package>

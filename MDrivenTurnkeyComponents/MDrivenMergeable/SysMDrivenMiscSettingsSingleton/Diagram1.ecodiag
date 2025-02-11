@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram Name="Diagram1" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" Designer="" ShowAssociationNames="DimDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.55132821597852" Id="933d9536-dc14-4728-9e5e-7eab55cc7f7e">
+  <PlacedClass>
+    <PlacedClass ClassId="83217de3-05ce-4126-817c-786b4b4ae888" Color="1692800256" LastKnownName="SysMDrivenMiscSettingsSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="169" RenderedWidth="254" ShowAttributes="False" ShowMethods="False" Size="1" x="472" y="136" id="712aacd8-2ca6-4af2-85c7-2ca526d27e7b">
+      <Class>
+        <Class Name="SysMDrivenMiscSettingsSingleton" idref="83217de3-05ce-4126-817c-786b4b4ae888" />
+      </Class>
+    </PlacedClass>
+  </PlacedClass>
+</Diagram>
