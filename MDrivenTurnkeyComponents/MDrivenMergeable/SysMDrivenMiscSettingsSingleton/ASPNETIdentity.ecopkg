@@ -19,7 +19,7 @@
             <Datatype idref="Boolean" />
           </Type>
         </Attribute>
-        <Attribute Name="GlobalSeekersAlwaysNew" Multiplicity="" Visibility="Public" id="29b0a40a-d128-4c8b-8f2a-ab3d702e378d">
+        <Attribute Name="GlobalUnRootedAlwaysNew" Multiplicity="" Visibility="Public" id="29b0a40a-d128-4c8b-8f2a-ab3d702e378d">
           <TaggedValue>
             <TaggedValue Tag="Eco.DefaultDBValue" Value="1" />
           </TaggedValue>

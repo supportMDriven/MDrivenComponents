@@ -95,6 +95,7 @@
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
+    <None Remove="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Actions.actions" />
     <None Remove="MDrivenMergeable\SysUserAuthentication\Actions.actions" />
     <None Remove="MDrivenMergeable\SysUserAuthentication\Index.spans" />
   </ItemGroup>
@@ -365,6 +366,9 @@
     <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Actions.actions">
+      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysUserAuthentication\Actions.actions">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -400,6 +404,9 @@
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\ModlrProject.mproj">
+      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysUserAuthentication\ModlrProject.mproj">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
@@ -565,6 +572,18 @@
     </None>
     <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\ASPNETIdentity.ecopkg">
+      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Diagram1.ecodiag">
+      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\documentation.modlrdoc">
+      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Snippets.snippets">
+      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysUserAuthentication\AuthenticationPackage.ecopkg">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
