@@ -21,7 +21,7 @@ The Models are mergeable Models that can be added to an already existing project
 All these Models, Components and Snippets are accessible with in the [Turnkey Live Editor](https://wiki.mdriven.net/Documentation:TK_Live_View) of the [MDriven Designer](https://mdriven.net/downloads).
 
 ## Sys Patterns
-These are Models and Classes starting the Prefix 'Sys' that provide built-in MDriven features.  
+These are Models and Classes starting the Prefix 'Sys' that provide access to built-in MDriven features.  
 The Models and their Classes are recognized by the MDriven Turnkey and MDriven Server.  
 
 These include:
