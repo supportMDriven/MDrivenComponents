@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OpenDocTemplateSelection" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="4a17f606-c0c3-4042-82e6-cdde34dd8c1a">
+  <Category>
+    <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
+  </Category>
+  <Class>
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="TemplateSingleton" ExpressionActAsForActions="" id="a808281e-65c6-424e-9c8a-986a009c57ea">
+      <Class>
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditUserConfirmation" idref="1b05e5f5-3433-4bae-b3cb-9a8abbf59fe3" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="SearchVisits" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchVisits" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="ec16b023-a122-4884-bf22-bfe01d8c2da9">
+          <ColumnForPickList>
+            <Column Name="SearchVisitsPickList" idref="ed291068-0d10-46e0-ab66-90ab957d7c7c" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="SearchVisitsPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OpenDocTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ed291068-0d10-46e0-ab66-90ab957d7c7c">
+          <ReferedNesting>
+            <Nesting Name="SearchVisitsPickList" idref="961384c6-4b80-4e13-979d-fef95d4738c2" />
+          </ReferedNesting>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="TemplateSingleton" idref="b173322f-ccb1-406e-9d45-5630e0207367" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="SearchVisitsPickList" ExpressionActAsForActions="" id="961384c6-4b80-4e13-979d-fef95d4738c2">
+      <Class>
+        <Class Name="OpenDocTemplate" idref="ca78a15d-a391-405c-a242-e6ad311fe9ce" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ff51c668-eda3-40d8-ba35-73efd5feea8f" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="SearchVisitsPickList" idref="ed291068-0d10-46e0-ab66-90ab957d7c7c" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="TemplateSingleton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b173322f-ccb1-406e-9d45-5630e0207367">
+      <ReferedNesting>
+        <Nesting Name="TemplateSingleton" idref="a808281e-65c6-424e-9c8a-986a009c57ea" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

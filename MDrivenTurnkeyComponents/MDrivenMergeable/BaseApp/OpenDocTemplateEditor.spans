@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OpenDocTemplateEditor" ColCount="6" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9bb2edf4-5334-466f-8c14-5c8efb3eb185">
+  <Class>
+    <Class Name="OpenDocTemplate" idref="ca78a15d-a391-405c-a242-e6ad311fe9ce" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TemplateSize" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.TemplateBlob-&gt;Length" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="2" StyleRef="" XPos="2" YPos="5" id="05e1c783-3da3-4318-898c-d18a4b3c4775">
+      <TaggedValue>
+        <TaggedValue Tag="BlobDownloadLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Filename" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.Filename" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="8bdcc524-78a9-440b-a8bd-015d9b6e6712" />
+    <Column Name="Upload" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TemplateBlob" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="1c4822f7-d563-4a4f-a938-eab4a1d21cec" />
+    <Column Name="Upload_FileName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="1eaf3242-0fac-4ca5-8605-7262ce224e19" />
+    <Column Name="Download" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TemplateBlob" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="2" StyleRef="" XPos="2" YPos="3" id="765ff550-1d0c-46e6-82e1-20d9c0c4d4a5">
+      <TaggedValue>
+        <TaggedValue Tag="BlobDownloadLink" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="Download_FileName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FileName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="0dd675b2-c614-4fd9-a08f-9e252e700c8c" />
+    <Column Name="LastChange" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="5" YPos="2" id="cd00d715-07e4-46d2-aa20-544f7d0deb7e" />
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="e9feef1a-079c-406f-8e32-86064664ddaa" />
+  </OwnedColumns>
+</Span>

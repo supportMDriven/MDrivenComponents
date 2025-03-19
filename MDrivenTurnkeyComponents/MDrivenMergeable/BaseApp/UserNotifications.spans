@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="UserNotifications" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="dd2f2029-e1fb-4ecb-90d5-61dbe8e655ce">
+  <Class>
+    <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+  </Class>
+  <Nesting>
+    <Nesting Name="UserNotification" ExpressionActAsForActions="self.Notification" id="e54531bf-fcf8-4e0b-8abb-1040908f3a73">
+      <Class>
+        <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Created" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="bfec80a7-25bb-4052-ac7b-f2ddd4148c39" />
+        <Column Name="Notification" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fc0df2f9-c27a-4115-86f3-dbf6634d66d6" />
+        <Column Name="Created_CssClass" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="0" Expression="'time-string'" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="13" id="0323cb8d-55ff-456f-b88f-1580f20b0879" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UserNotificationsToShow" idref="d07fbb97-ba92-45c7-8d3b-6a11ba2a9985" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowUserNotifications" idref="1250c7c1-bccd-4387-9cd9-6cdeed39f9a2" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="CreateCombinedOutgoingNotification" idref="22982e6f-8ac6-4e9c-8dbb-e907af2bf13f" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="UserNotificationsToShow" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserNotificationsToShow" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Notifications" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="1" YPos="0" id="d07fbb97-ba92-45c7-8d3b-6a11ba2a9985">
+      <ReferedNesting>
+        <Nesting Name="UserNotification" idref="e54531bf-fcf8-4e0b-8abb-1040908f3a73" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+    <TaggedValue Tag="FixColSize" Value="True" />
+  </TaggedValue>
+</Span>

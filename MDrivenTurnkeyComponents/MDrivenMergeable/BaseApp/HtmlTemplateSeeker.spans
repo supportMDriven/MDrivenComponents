@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="HtmlTemplateSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ee9f3f8b-4b98-49fe-bf4d-1113ac650dd8">
+<Span Name="HtmlTemplateSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="561a15f6-81f8-48e6-a3ab-0af38fa6c9c7">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,17 +7,17 @@
     <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
   </Category>
   <Class>
-    <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+    <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
   </Class>
   <Nesting>
-    <Nesting Name="HtmlTemplate" ExpressionActAsForActions="" id="77661d95-1b3e-4e96-be58-77a0b4b2fe5a">
+    <Nesting Name="HtmlTemplate" ExpressionActAsForActions="" id="5eb9c0da-00b3-4f3a-9caf-0e9226b71a66">
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+            <ClassAction Name="Delete" idref="cd9ce670-5eb9-49ff-9b64-d7cf3e934f09" />
           </AbstractAction>
         </OptOutActionInNesting>
       </OptOutActionInNesting>
@@ -33,9 +33,9 @@
         <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seekName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="2bf8cf51-0679-4c28-ac37-42164519f22a">
+    <Nesting Name="seekName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="5a4d8d73-b92a-4b21-bf4f-1a1df7849da2">
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allinstances-&gt;select(a|a.Name.sqllike(vSeekParamWildcard) or (a.Name=vSeekParam))-&gt;orderby(a|a.Name)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f5250d97-f340-473f-bdfe-f11006e3860b" />
@@ -44,9 +44,9 @@
         <TaggedValue Tag="Eco.HiliteGridColumn" Value="HtmlTemplate.Name" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="757aa25a-47b1-41cb-9143-2a2df426fe2f">
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="b384e546-b60f-4785-aa2f-1295011b2b68">
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d9261814-f757-4d19-97bc-69869239cb30" />
@@ -59,7 +59,7 @@
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+        <ClassAction Name="Delete" idref="cd9ce670-5eb9-49ff-9b64-d7cf3e934f09" />
       </AbstractAction>
     </OptOutActionInSpan>
   </OptOutActionInSpan>
@@ -68,7 +68,7 @@
     <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vSeekParamWildcard:='%'+vSeekParam+'%';selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="cbe90da8-bc89-47e3-a64c-03db22a1902c" />
     <Column Name="HtmlTemplates" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="99b4d6da-f93d-4ddd-ae78-9edb9daad348">
       <ReferedNesting>
-        <Nesting Name="HtmlTemplate" idref="77661d95-1b3e-4e96-be58-77a0b4b2fe5a" />
+        <Nesting Name="HtmlTemplate" idref="5eb9c0da-00b3-4f3a-9caf-0e9226b71a66" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

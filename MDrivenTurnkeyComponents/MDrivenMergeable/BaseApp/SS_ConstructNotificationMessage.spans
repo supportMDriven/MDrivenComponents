@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="SS_ConstructNotificationMessage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="3aad79da-dfac-47f1-b587-4609d231feb2">
+<Span Name="SS_ConstructNotificationMessage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="819ee1dc-6d5e-4b74-9c40-27f266996250">
   <Category>
     <Category Name="ServerSide" idref="6dd08983-4b7d-45df-a8f3-de45fc4734b1" />
   </Category>
   <Class>
-    <Class Name="Notification" idref="f1a8b389-62b5-4ad3-841a-076ab620c2fd" />
+    <Class Name="Notification" idref="f7ff6f44-9d8f-495c-8447-761e13012941" />
   </Class>
   <CriteriaForServerSideExecute>
     <CriteriaForServerSideExecute Interval="20" MaxAnswers="10" PreEAL="vNow := DateTime.UtcNow" PSOcl="Notification.allInstances-&gt;select(n | (n.SendMessageAfter.notnull) and (n.SendMessageAfter &lt; vNow))" SerializedBlocking="False" />
@@ -32,17 +32,13 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="DeleteNotification" idref="7d0ecd9b-7541-462b-96bd-73dd09b2f330" />
+        <ClassAction Name="DeleteNotification" idref="33a0ce71-3597-4133-bba3-0065aaa0b732" />
       </AbstractAction>
     </OptOutActionInSpan>
-    <OptOutActionInSpan>
-      <AbstractAction>
-        <ClassAction Name="DebugNotification" idref="92b7873b-feda-4f9f-8301-7a2b47492935" />
-      </AbstractAction>
-    </OptOutActionInSpan>
+    <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="ConstructMessage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CreateOutgoingNotifications;&#xD;&#xA;self.SendMessageAfter := DateTime.nullValue" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b4a063e6-f9dd-4282-a87c-2ee6c6fa8617" />
+    <Column Name="ConstructMessage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.SendOutgoingNotifications;&#xD;&#xA;self.SendMessageAfter := DateTime.nullValue" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b4a063e6-f9dd-4282-a87c-2ee6c6fa8617" />
   </OwnedColumns>
   <SpanVariables>
     <SpanVariable Name="vNow" InitialValue="" TypeName="DateTime" UserData="" />

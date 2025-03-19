@@ -1,75 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="UserConfirmation" CodeComment="This is a landing page for users confirming" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ddfdf193-f6bf-450c-8d0e-7d85620a92ff">
-  <Category>
-    <Category Name="Onboarding" idref="dd27bcdc-1567-4ea3-8055-a39433eae158" />
-  </Category>
+<Span Name="UserConfirmation" CodeComment="This is a landing page for users confirming" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b8cbb282-cde3-4145-a65d-0eb02d04aae6">
+  <AccessGroups>
+    <AccessGroup Name="IsLoggedIn" idref="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+  </AccessGroups>
   <Class>
-    <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+    <Class Name="UserConfirmation" idref="1bad90a4-e11d-4e82-a403-ed0db1d1094a" />
   </Class>
   <Nesting>
-    <Nesting Name="UserConfirmationValidation" ExpressionActAsForActions="" id="5fb13fc7-23dd-4fdc-93ae-6628f7ca1385">
+    <Nesting Name="UserConfirmationValidation" ExpressionActAsForActions="" id="f3527d88-a921-4d75-a2d9-c93b0d3d8858">
       <Class>
-        <Class Name="UserConfirmationValidation" idref="2973e91d-5b1e-4fe7-a27a-dbbe3a4ec8f7" />
+        <Class Name="UserConfirmationValidation" idref="00c2b5e0-3a1c-441f-8c8d-5c79f57ebcfa" />
       </Class>
       <OwnedColumns>
-        <Column Name="SendingAnEmailToYou" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="'Sending an email to you...'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowEmailSending" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="0" id="a3a3c46a-d978-4654-aac0-deea00890807" />
-        <Column Name="TheEmailHasBeenSent" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="'The email has been sent to you...'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowEmailSent" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="1" id="70639a5f-76d4-48e4-9b48-7bf96fe53414" />
-        <Column Name="FailedToSendEmail" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'Sorry, we failed to send the email to you.'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowEmailFailure" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="2" id="bc3916d2-6fb7-4392-a159-fa24b01806ef" />
-        <Column Name="EnterCodeFromURL" ActionPeriodicityMillisec="100" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.EnteredCode := vConfirmationCode.Trim.subString(1,36);&#xD;&#xA;vConfirmationCode := '';&#xD;&#xA;self.AutoAccept := true" ExpressionForReadOnly="vConfirmationCode.isNullorEmpty" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="3d2f34e9-eb1e-46d6-b046-1dcd206eb886" />
-        <Column Name="ConfirmationCode" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.EnteredCode" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowCodeEntry" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="3" RowSpan="1" StyleRef="" XPos="3" YPos="3" id="a6e12437-9c85-4fdb-a98b-036fbcb473ee" />
-        <Column Name="SearchOrClear" ActionPeriodicityMillisec="100" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekerResult-&gt;clear;&#xD;&#xA;self.EnteredCode := self.EnteredCode.Trim;&#xD;&#xA;if self.EnteredCode.regExpMatch('^[{|(]?[0-9a-fA-F]{8}[-]?([0-9a-fA-F]{4}[-]?){3}[0-9a-fA-F]{12}[)|}]?$') then&#xD;&#xA;  vSearch := self.EnteredCode;&#xD;&#xA;  selfVM.Search;&#xD;&#xA;  UserConfirmationValidation.oclSingleton.FoundWithSearch := vSeekerResult-&gt;first&#xD;&#xA;else&#xD;&#xA;  UserConfirmationValidation.oclSingleton.FoundWithSearch := UserConfirmation.nullValue&#xD;&#xA;endif;&#xD;&#xA;self.SearchedOnCode := self.EnteredCode" ExpressionForReadOnly="not vCurrent_UserConfirmationValidation.SearchOrClearNow" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="90132916-f876-4070-ac54-d2ec7c6199b7" />
-        <Column Name="NoConfirmationFoundForThisCode" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'No confirmation found for this code'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.NoConfirmationFound" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="4" id="53e751b9-1c5d-444b-8359-96b0ced1f160" />
-        <Column Name="ConfirmationCodeNotValid" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'This confirmation code is not valid.'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.InvalidCodeEntered" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="3" RowSpan="1" StyleRef="h4" XPos="0" YPos="5" id="23a9e4ce-eaeb-4aab-a9f2-5432bdb240f5" />
-        <Column Name="CodeBelongsToAnotherUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'The code you entered belongs to another user.'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.EffectiveUserAndLinksMismatch" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="6" id="dde9f569-12ba-416a-8bc5-86fcf6473a96" />
-        <Column Name="AcceptConfirmation" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="7" id="6eb62a48-8af4-489f-970f-9acda9b20ea2">
+        <Column Name="SendingAnEmailToYou" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'Sending an email to you...'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowEmailSending" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 centered-text" XPos="0" YPos="0" id="023b81a5-e078-4cef-90a6-280d12a37052">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="TheEmailHasBeenSent" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'The email has been sent to you...'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowEmailSent" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 centered-text" XPos="0" YPos="1" id="3df783d2-e166-45bd-903b-895ed75314ea">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="FailedToSendEmail" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="'Sorry, we failed to send the email to you.'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowEmailFailure" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 centered-text" XPos="0" YPos="2" id="5860c1db-6a6f-43f0-9e2d-ce30c7f6df96">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="EnterCodeFromURL" ActionPeriodicityMillisec="100" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.EnteredCode := vConfirmationCode.Trim.subString(1,36);&#xD;&#xA;vConfirmationCode := '';&#xD;&#xA;self.AutoAccept := true" ExpressionForReadOnly="vConfirmationCode.isNullorEmpty" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="2" id="03f6211d-fd35-4bad-805d-4cfa1630a1ea" />
+        <Column Name="ConfirmationCode" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.EnteredCode" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.ShowCodeEntry" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="f84fac49-cd76-4d46-b4d8-00f7b1ec3754">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="SearchOrClear" ActionPeriodicityMillisec="100" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekerResult-&gt;clear;&#xD;&#xA;self.EnteredCode := self.EnteredCode.Trim;&#xD;&#xA;if self.EnteredCode.regExpMatch('^[{|(]?[0-9a-fA-F]{8}[-]?([0-9a-fA-F]{4}[-]?){3}[0-9a-fA-F]{12}[)|}]?$') then&#xD;&#xA;  vSearch := self.EnteredCode;&#xD;&#xA;  selfVM.Search;&#xD;&#xA;  UserConfirmationValidation.oclSingleton.FoundWithSearch := vSeekerResult-&gt;first&#xD;&#xA;else&#xD;&#xA;  UserConfirmationValidation.oclSingleton.FoundWithSearch := UserConfirmation.nullValue&#xD;&#xA;endif;&#xD;&#xA;self.SearchedOnCode := self.EnteredCode" ExpressionForReadOnly="not vCurrent_UserConfirmationValidation.SearchOrClearNow" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="3" id="0d8d375d-ac78-4066-af63-9f488304f50a" />
+        <Column Name="NoConfirmationFoundForThisCode" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'No confirmation found for this code'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.NoConfirmationFound" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 centered-text" XPos="0" YPos="4" id="b70f1773-f995-4b4f-abc2-72fa19f3b7e4">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="ConfirmationCodeNotValid" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'This confirmation code is not valid.'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.InvalidCodeEntered" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="3" RowSpan="1" StyleRef="h4 centered-text" XPos="0" YPos="5" id="9c8a6248-6650-4c34-8560-3a2e849b5095">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="CodeBelongsToAnotherUser" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'The code you entered belongs to another user.'" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.EffectiveUserAndLinksMismatch" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4 centered-text" XPos="0" YPos="6" id="2536ae60-de10-450c-ad4c-8bbdad063c54">
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="AcceptConfirmation" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="primary" XPos="0" YPos="7" id="22cd402c-93d0-4b6e-aff5-d46c65635672">
           <ActionToExecute>
-            <ClassAction Name="AcceptConfirmation" idref="65a8bda1-cf1e-4b2b-ab0c-2a7acbd1c53d" />
+            <ClassAction Name="AcceptConfirmation" idref="f9894952-92ef-4dcc-9d7c-a607eb3c167a" />
+          </ActionToExecute>
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
+        </Column>
+        <Column Name="AutoAcceptConfirmation" ActionPeriodicityMillisec="100" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.AutoAccept" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="11" id="3899b487-c3b0-4f5e-94e2-d44443666658">
+          <ActionToExecute>
+            <ClassAction Name="AcceptConfirmation" idref="f9894952-92ef-4dcc-9d7c-a607eb3c167a" />
           </ActionToExecute>
         </Column>
-        <Column Name="AutoAcceptConfirmation" ActionPeriodicityMillisec="100" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="vCurrent_UserConfirmationValidation.AutoAccept" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="7" id="274dd247-f1e4-4ce4-9453-582412f4c868">
+        <Column Name="FakeCodeEntry" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="11" id="60fca3b6-e3e0-4cd5-a4fb-da853963a993">
           <ActionToExecute>
-            <ClassAction Name="AcceptConfirmation" idref="65a8bda1-cf1e-4b2b-ab0c-2a7acbd1c53d" />
+            <ClassAction Name="FakeCodeEntry" idref="58a968bd-6fe1-4397-9dc1-4036a4d85ab4" />
           </ActionToExecute>
         </Column>
-        <Column Name="FakeCodeEntry" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="not vCurrent_UserConfirmationValidation.ShowEmailSent" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="44979015-5933-4db0-be4b-5097c59c384c">
+        <Column Name="SendNewEmail" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="primary outlined" XPos="0" YPos="8" id="4364a4af-c8ca-4a61-855d-6241f62025a6">
           <ActionToExecute>
-            <ClassAction Name="FakeCodeEntry" idref="9746109d-223a-4e61-a782-f458c2d39363" />
+            <ClassAction Name="SendNewEmail" idref="749c7564-4a57-4c4e-9d1b-a3532f6e4c68" />
           </ActionToExecute>
+          <GroupBox>
+            <Column Name="ConfirmationGroupbox" idref="9fef736f-5044-4124-a29c-8a89d522ad6a" />
+          </GroupBox>
         </Column>
-        <Column Name="SendNewEmail" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="8" id="045ab096-e074-433c-b71e-6419f9b86231">
-          <ActionToExecute>
-            <ClassAction Name="SendNewEmail" idref="578567c0-0c31-4e17-a7e8-39cd03fc0577" />
-          </ActionToExecute>
+        <Column Name="EffectiveUser" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.EffectiveUser.asString" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="12" id="12486eef-0dc5-4677-96d0-14f079f68b25" />
+        <Column Name="ShowCodeEntry" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ShowCodeEntry" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="12" id="f43a0419-9720-43ae-b6ac-b3d4b870861f" />
+        <Column Name="AutoAccept" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.AutoAccept" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="12" id="0af10176-b622-44b4-b6a0-5b5c9686f3b8" />
+        <Column Name="SendNewEmailPrecondition" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SendNewEmail?" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="12" id="1acd654e-1eda-415d-bbe3-7f86ff3bd403" />
+        <Column Name="CreatedInSessionPres" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.CreatedInSession.asString" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="13" id="253624f2-4bad-4495-9a5c-da279e5241f7" />
+        <Column Name="SearchedOnCode" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchedOnCode" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="13" id="c6f63936-2948-4d7d-b774-0546dba3acef" />
+        <Column Name="SearchNow" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchOrClearNow" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="13" id="ef4967e9-19a8-48ae-8b1a-8dd14c9ef028" />
+        <Column Name="SearchValid" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchValid" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="13" id="571d894a-2465-4b26-b02b-25e6eb86c209" />
+        <Column Name="FoundWithSearchPres" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.FoundWithSearch.asString" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="14" id="e69cd7df-2ea3-44d2-90c1-77ffb6a8cf03" />
+        <Column Name="EffectiveUserAndLinksMismatch" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.EffectiveUserAndLinksMismatch" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="14" id="d1967657-3167-49f7-88e0-d11a18c21124" />
+        <Column Name="InvalidCodeEntered" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.InvalidCodeEntered" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="14" id="9cde4cef-7b73-4022-9b0e-d270d2ed5e88" />
+        <Column Name="NoConfirmationFound" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.NoConfirmationFound" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="14" id="112f6753-258c-4043-b23e-2bcdc683c952" />
+        <Column Name="ConfirmationGroupbox" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsGroupBox="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="9" StyleRef="group-card" XPos="3" YPos="2" id="9fef736f-5044-4124-a29c-8a89d522ad6a">
+          <TaggedValue>
+            <TaggedValue Tag="HideHeading" Value="True" />
+          </TaggedValue>
         </Column>
-        <Column Name="EffectiveUser" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.EffectiveUser.asString" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="5e62fa57-0dfb-4d79-8fbd-23ccd63841df" />
-        <Column Name="ShowCodeEntry" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.ShowCodeEntry" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="11" id="c7c802a3-e01a-4354-bd54-baa4ac371a93" />
-        <Column Name="AutoAccept" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.AutoAccept" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="11" id="c8fc2bb4-1776-4d7e-9f62-62cb9b874822" />
-        <Column Name="CreatedInSessionPres" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.CreatedInSession.asString" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="12" id="8967ebce-2ed1-4824-99df-68f25b42b29b" />
-        <Column Name="SearchedOnCode" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchedOnCode" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="12" id="95cb08fe-b49b-4932-9645-5905b6794992" />
-        <Column Name="SearchNow" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchOrClearNow" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="12" id="2eeb0005-6bd0-4598-a3da-23416e73a3a2" />
-        <Column Name="SearchValid" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SearchValid" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="12" id="89df71bb-126d-461c-bd03-58a7e0c45cd5" />
-        <Column Name="FoundWithSearchPres" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.FoundWithSearch.asString" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="13" id="4a6df17e-478e-41b5-b9b2-d994f26f834a" />
-        <Column Name="EffectiveUserAndLinksMismatch" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.EffectiveUserAndLinksMismatch" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="13" id="1def5b5a-88e8-47e8-b43c-363f48339a89" />
-        <Column Name="InvalidCodeEntered" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.InvalidCodeEntered" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="13" id="34ad3ca4-dcd3-4521-8ccb-b964616c8c8b" />
-        <Column Name="NoConfirmationFound" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.NoConfirmationFound" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.Debugging" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="13" id="54fb0dba-ff33-4786-ac82-eea2c5cb6e15" />
+        <Column Name="Pattern" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="''" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="1" StyleRef="pattern pattern-20" XPos="0" YPos="0" id="dd2dcbf4-0415-4f28-9dde-3f4c721c53b9" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="UserConfirmationValidation" idref="2e8bd01d-2852-46f8-8d38-6373c1e3ff9a" />
+        <Column Name="UserConfirmationValidation" idref="790be523-3525-486d-a974-e550a4d9520b" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="SearchExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="a6f2a08c-4325-4513-a9b6-feacbaaa6758">
+    <Nesting Name="SearchExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="f6358a05-3ed6-4565-a0c3-dfab74e069a8">
       <Class>
-        <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+        <Class Name="UserConfirmation" idref="1bad90a4-e11d-4e82-a403-ed0db1d1094a" />
       </Class>
       <OwnedColumns>
-        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="UserConfirmation.allinstances-&gt;select(a|a.ConfirmationCode=vSearch)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="8c8b80b6-3b21-4098-80f5-c755062521a1" />
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="UserConfirmation.allinstances-&gt;select(a|a.ConfirmationCode=vSearch)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="b42e1155-d156-44bf-95f3-7adf7f308de2" />
       </OwnedColumns>
     </Nesting>
   </Nesting>
   <OwnedColumns>
-    <Column Name="UserConfirmationValidation" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="UserConfirmationValidation.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="10" id="2e8bd01d-2852-46f8-8d38-6373c1e3ff9a">
+    <Column Name="UserConfirmationValidation" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="UserConfirmationValidation.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="11" id="790be523-3525-486d-a974-e550a4d9520b">
       <ReferedNesting>
-        <Nesting Name="UserConfirmationValidation" idref="5fb13fc7-23dd-4fdc-93ae-6628f7ca1385" />
+        <Nesting Name="UserConfirmationValidation" idref="f3527d88-a921-4d75-a2d9-c93b0d3d8858" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

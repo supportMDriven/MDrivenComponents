@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SysUserLocked" ColCount="6" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="f4884058-aebb-4185-bb92-8c0174c565cd">
+  <AccessGroups>
+    <AccessGroup Name="IsLoggedIn" idref="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+  </AccessGroups>
+  <Class>
+    <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="sDeleteSysUser" idref="ddd84482-29b5-48e6-b76f-885cad27cbb8" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ShowSysUser" idref="69fb0a6b-9b45-4d2e-b2ec-7728a6d056f9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="SendPasswordResetEMail" idref="0564655d-aaae-4dfd-a5a9-dae817a3fc8d" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="LockedAccount" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'Your account is locked. Please contact SciFree if you think this is incorrect.'" ExpressionForReadOnly="" ExpressionForVisible="self.IsLocked " IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="1" id="9fa3be2b-6b6d-4e11-be5f-e1f8f8fb87e3" />
+  </OwnedColumns>
+</Span>

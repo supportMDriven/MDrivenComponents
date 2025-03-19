@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="RedirectView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="555aa9f1-5098-41da-8971-bd0511d860f5">
+<Span Name="RedirectView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="c19d5cef-53c4-48e6-97c4-46da9ecf981c">
   <Category>
     <Category Name="OpenViews" idref="22c6e2f8-34a8-4393-9e95-7a78985228f9" />
   </Category>
   <Class>
-    <Class Name="RedirectHandler" idref="0fa0d14f-6761-45ba-9adf-bbf81f196431" />
+    <Class Name="RedirectHandler" idref="bf7b211b-13f0-460a-920f-ac016d68ebef" />
   </Class>
   <Nesting>
-    <Nesting Name="RedirectHandler" ExpressionActAsForActions="" id="52ea5242-9ad6-46c4-a4cb-7cf89cf16d00">
+    <Nesting Name="RedirectHandler" ExpressionActAsForActions="" id="fa55b386-24d6-49d2-8f1b-6b077b393eed">
       <Class>
-        <Class Name="RedirectHandler" idref="0fa0d14f-6761-45ba-9adf-bbf81f196431" />
+        <Class Name="RedirectHandler" idref="bf7b211b-13f0-460a-920f-ac016d68ebef" />
       </Class>
       <OwnedColumns>
         <Column Name="UpdateTimes" ActionPeriodicityMillisec="1000" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.UpdateTimes" ExpressionForReadOnly="self.RedirectToIndex.notNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="3" id="16c7e4e3-517e-402f-a516-4d9b0ef73d09" />
         <Column Name="RedirectToIndex" ActionPeriodicityMillisec="1000" ColSpan="4" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="4" id="f7e4506b-c4f5-4cef-8789-2cf97dd9b850">
           <ActionToExecute>
-            <ClassAction Name="RedirectToIndex" idref="031219c5-63bf-4b50-aaee-6ccd687efd8e" />
+            <ClassAction Name="RedirectToIndex" idref="004898aa-6a81-4060-b41d-18f73da09842" />
           </ActionToExecute>
         </Column>
         <Column Name="Now" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.Now)" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.DBG" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="5" YPos="3" id="c05f963f-8c43-4176-8ce2-1e9e3358bcdf" />
@@ -29,7 +29,7 @@
   <OwnedColumns>
     <Column Name="ThisRedirectHandler" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="RedirectHandler.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="5" YPos="8" id="4c39c6c0-f2a9-4f7f-886e-ea4400933c9a">
       <ReferedNesting>
-        <Nesting Name="RedirectHandler" idref="52ea5242-9ad6-46c4-a4cb-7cf89cf16d00" />
+        <Nesting Name="RedirectHandler" idref="fa55b386-24d6-49d2-8f1b-6b077b393eed" />
       </ReferedNesting>
     </Column>
     <Column Name="RawURL" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="'You tried to go to ' + RawURL + ', and can we can\'t find that.'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="1" id="9d8fec87-7d6c-495b-9b9b-e427f54eb59b" />

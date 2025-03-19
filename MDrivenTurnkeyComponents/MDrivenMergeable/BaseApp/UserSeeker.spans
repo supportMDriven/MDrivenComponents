@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="UserSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="387b4941-d752-4503-9115-e468e2d32bd5">
+<Span Name="UserSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="fa719772-a325-4b81-b5f8-f1b54c75759f">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
     <AccessGroup Name="Debugging" idref="e0c117bd-3126-4ec4-8d5c-f277bc1cce25" />
@@ -8,93 +8,14 @@
     <Category Name="AdminPages" idref="6b3c0655-81bc-4b6a-8c31-f37b3b906624" />
   </Category>
   <Class>
-    <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+    <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
   </Class>
   <Nesting>
-    <Nesting Name="ShowAll" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="e96f61f0-202c-49a9-a4fc-dfa3f3d0ec52">
+    <Nesting Name="SeekerResult" ExpressionActAsForActions="" id="5a66cc99-2ab1-4973-ab83-6301160587e1">
       <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
-      </Class>
-      <OwnedColumns>
-        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allinstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam.isNullOrEmpty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2a56bfc6-7556-45c3-b310-59ff3c206571" />
-      </OwnedColumns>
-    </Nesting>
-    <Nesting Name="SearchExpression_EMail" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="143eb895-5f74-41e8-b4d1-d879629d5407">
-      <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
       </Class>
       <OptOutActionInNesting>
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-      </OptOutActionInNesting>
-      <OwnedColumns>
-        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allinstances-&gt;select(a|a.SysUser.UserName.SqlLike(vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam.isNullOrEmpty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d1b0bcaf-2ee9-4960-bd74-6145199e1895" />
-      </OwnedColumns>
-      <TaggedValue>
-        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Name" />
-        <TaggedValue Tag="Eco.SeekerDefaultOrderColumnName" Value="Registrerad" />
-      </TaggedValue>
-    </Nesting>
-    <Nesting Name="SearchExpression_Firstname" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="1eb16cbd-8c85-404e-a5cc-ad8635ef941d">
-      <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
-      </Class>
-      <OptOutActionInNesting>
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-      </OptOutActionInNesting>
-      <OwnedColumns>
-        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allinstances-&gt;select(a|a.FirstName.SqlLike(vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam.isNullOrEmpty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="eaf6fcfe-ef0a-4bc0-b00c-c10a52a3cf21" />
-      </OwnedColumns>
-    </Nesting>
-    <Nesting Name="SearchExpression_LastName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="48b4fb46-2558-4994-aeb3-651dad0755a5">
-      <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
-      </Class>
-      <OptOutActionInNesting>
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-      </OptOutActionInNesting>
-      <OwnedColumns>
-        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allinstances-&gt;select(a|a.LastName.SqlLike(vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam.isNullOrEmpty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="32e0c2e6-d636-41a6-b5b4-4370c957f6de" />
-      </OwnedColumns>
-    </Nesting>
-    <Nesting Name="OrderExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="fa9a112d-e1ba-4ac6-a5ee-adc92d3a7675">
-      <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
-      </Class>
-      <OwnedColumns>
-        <Column Name="Registrerad" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderBy(a|a.FirstName, a.LastName)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="78302368-8404-49cd-9791-c6c73fdae0ce" />
-      </OwnedColumns>
-    </Nesting>
-    <Nesting Name="SearchResultGrid" ExpressionActAsForActions="" id="94a8af93-584b-4965-8acf-6224835c6cec">
-      <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
-      </Class>
-      <OptOutActionInNesting>
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
@@ -106,30 +27,111 @@
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+            <ClassAction Name="ShowUserNotifications" idref="1250c7c1-bccd-4387-9cd9-6cdeed39f9a2" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="CreateCombinedOutgoingNotification" idref="22982e6f-8ac6-4e9c-8dbb-e907af2bf13f" />
+          </AbstractAction>
+        </OptOutActionInNesting>
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.NamePresentation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="e4bc9322-fc2a-430b-8c18-e1338fc558d3" />
-        <Column Name="EffectiveEmail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="b2c25ecb-02ec-4b63-8dbc-341a2e81bb54" />
-        <Column Name="SysUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="if self.SysUser.notNull then&#xD;&#xA;  self.SysUser.UserName&#xD;&#xA;else&#xD;&#xA;  '&lt;no sysuser&gt;'&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="baa78a86-bf10-41df-b855-f381ea6db656" />
+        <Column Name="LastName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.LastName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="aaa34c45-5a61-431d-9db2-de5b895dca08">
+          <TaggedValue>
+            <TaggedValue Tag="SeekerSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="FirstName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.FirstName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="1b72e6b6-770b-4674-926e-95818e9fefed">
+          <TaggedValue>
+            <TaggedValue Tag="SeekerSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Email" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.EffectiveEmail" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="86916749-f6fe-4515-b3df-7419550c7acb">
+          <TaggedValue>
+            <TaggedValue Tag="SeekerSortable" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="Summary" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.SettingsSummary" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="c29b9f22-c79c-42d2-949f-b845ee473fb7" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="e56c24e1-1d95-4b4d-8348-9e6881c841ca">
+          <TaggedValue>
+            <TaggedValue Tag="SeekerSortable" Value="True" />
+          </TaggedValue>
+        </Column>
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="UsersWithAccount" idref="ba5964bb-d375-4c5d-a4eb-a005404feda0" />
+        <Column Name="SeekerResult" idref="e8a4a1a0-807c-456f-b633-dbf658165330" />
       </ReferedByColumn>
       <TaggedValue>
-        <TaggedValue Tag="IsSeekerResultGrid" Value="true" />
-        <TaggedValue Tag="Eco.AlwaysShowActions" Value="False" />
-        <TaggedValue Tag="ClientSortable" Value="True" />
+        <TaggedValue Tag="IsSeekerResultGrid" Value="True" />
+        <TaggedValue Tag="MultiSelect" Value="True" />
       </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekDefault" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="13bf5ef6-5479-4570-8b55-2d582f89a4e0">
+      <Class>
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam.IsNullOrEmpty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4e788d92-ad9d-4975-85b3-a7cd0c201ffd" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="LastName" />
+        <TaggedValue Tag="Eco.SeekerDefaultOrderColumnName" Value="LastName" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekLastName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="bdb3610b-7dac-4dd8-9402-b51df722dbf8">
+      <Class>
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allinstances-&gt;select(a|a.LastName.sqlLikeCaseInsensitive('%'+vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5f914c41-cf33-44f5-b594-c051d14b2ed3" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.SeekerDefaultOrderColumnName" Value="LastName" />
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="LastName" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekFirstName" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="1802f7c6-1252-4e78-8d27-c7f311ead45c">
+      <Class>
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allinstances-&gt;select(a|a.FirstName.sqlLikeCaseInsensitive('%'+vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e37b1582-faf6-4f19-833c-08352489577c" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="FirstName" />
+        <TaggedValue Tag="Eco.SeekerDefaultOrderColumnName" Value="FirstName" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="seekEmail" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="cbf8dbc9-2004-4e41-a826-bffa03a11db4">
+      <Class>
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUser.allinstances-&gt;select(a|a.UserName.sqlLikeCaseInsensitive('%'+vSeekParam+'%')).User" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b4e00c85-5e51-4677-ad47-17f9c3870af1" />
+      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.SeekerDefaultOrderColumnName" Value="Email" />
+        <TaggedValue Tag="Eco.HiliteGridColumn" Value="Email" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting Name="OrderExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="7844aca2-3a8a-41e8-84d1-b81e65dea267">
+      <Class>
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="FirstName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderBy(x|x.FirstName, x.LastName)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'FirstName') and not vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f95d51a4-7457-4b85-bf5b-af4c6962846e" />
+        <Column Name="FirstName_Reverse" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderDescending(a|a.FirstName, a.LastName)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'FirstName') and vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b2ff53e9-5d15-4222-92d0-b0e6d2c414e0" />
+        <Column Name="LastName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderBy(x|x.LastName, x.FirstName)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'LastName') and not vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d77763b8-11fd-4bb4-ba11-8de6ce07e41d" />
+        <Column Name="LastName_Reverse" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderDescending(x|x.LastName, x.FirstName)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'LastName') and vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="79351585-b710-412b-971f-4dbb52b6a4dc" />
+        <Column Name="Email" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderBy(x|x.Sysuser.UserName)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'Email') and not vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4b69f3c1-1137-4be8-9c47-974e9714b7be" />
+        <Column Name="Email_Reverse" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderDescending(x|x.Sysuser.UserName)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'Email') and not vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1464d0db-ed4e-4dcd-8b27-207c0d30e390" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderBy(x|x.Sysuser.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'CreateTime') and not vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="13266a77-3077-4c0e-af56-46d84ab17b15" />
+        <Column Name="CreateTime_Reverse" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderDescending(x|x.Sysuser.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="(vSeekerOrderColumnName= 'CreateTime') and vSeekerOrderReverseState" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="44e33541-8f02-4fb5-b260-7cda8ae89f52" />
+      </OwnedColumns>
     </Nesting>
   </Nesting>
   <OptOutActionInSpan>
@@ -157,7 +159,7 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+        <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -169,17 +171,23 @@
     <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="SeekValue" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="716b35b9-5973-427f-a10e-cb11e1792e98" />
-    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="4da2b2ea-44fd-4f7a-ac1a-a320aa476301" />
-    <Column Name="UsersWithAccount" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="0" YPos="1" id="ba5964bb-d375-4c5d-a4eb-a005404feda0">
+    <Column Name="Header" ActionPeriodicityMillisec="-1" ColSpan="15" ColSpanWhenInGrid="1" Expression="'Users'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h5" XPos="0" YPos="2" id="47eeae12-f33d-4ed6-bb50-95a264a3e182" />
+    <Column Name="SeekerResult" ActionPeriodicityMillisec="-1" ColSpan="18" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="10" StyleRef="" XPos="0" YPos="3" id="e8a4a1a0-807c-456f-b633-dbf658165330">
       <ReferedNesting>
-        <Nesting Name="SearchResultGrid" idref="94a8af93-584b-4965-8acf-6224835c6cec" />
+        <Nesting Name="SeekerResult" idref="5a66cc99-2ab1-4973-ab83-6301160587e1" />
       </ReferedNesting>
     </Column>
+    <Column Name="ReQuery" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="selfVM.ReQuery" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="6d6f54f7-6421-4d5c-a5f9-b949a3802bb8" />
+    <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="selfVM.Search" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="1" id="3416d2e4-1b64-422f-a692-c5f5e963c8c0">
+      <TaggedValue>
+        <TaggedValue Tag="MaxFetch" Value="400" />
+      </TaggedValue>
+    </Column>
+    <Column Name="SearchFor" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="vSeekParam" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="3c0e65da-6e78-4bca-a62c-702ff55c7ebc" />
   </OwnedColumns>
   <SpanVariables>
-    <SpanVariable Name="vSeekerOrderColumnName_Copy" InitialValue="" TypeName="String" UserData="" />
-    <SpanVariable Name="vSeekerOrderReverseState_Copy" InitialValue="" TypeName="Boolean" UserData="" />
+    <SpanVariable Name="vSeekerOrderColumnName" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable Name="vSeekerOrderReverseState" InitialValue="" TypeName="Boolean" UserData="" />
     <SpanVariable Name="vSeekerPage" InitialValue="" TypeName="Integer" UserData="" />
     <SpanVariable Name="vSeekerPageCount" InitialValue="" TypeName="Integer" UserData="" />
     <SpanVariable Name="vSeekerPageLength" InitialValue="100" TypeName="Integer" UserData="" />

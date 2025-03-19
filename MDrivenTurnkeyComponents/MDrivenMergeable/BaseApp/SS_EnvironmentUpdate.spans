@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="SS_EnvironmentUpdate" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="cfa45719-60bd-4fc7-bea1-b40409559e8f">
+<Span Name="SS_EnvironmentUpdate" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="3be9beb4-85cd-45d3-a694-eba048dcc70e">
   <Category>
     <Category Name="ServerSide" idref="6dd08983-4b7d-45df-a8f3-de45fc4734b1" />
   </Category>
   <Class>
-    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
   </Class>
   <CriteriaForServerSideExecute>
     <CriteriaForServerSideExecute Interval="60" MaxAnswers="-1" PreEAL="" PSOcl="SysSingleton.allInstances" SerializedBlocking="True" />
@@ -14,14 +14,17 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+        <ClassAction Name="ToggleDebugging" idref="120df888-25fa-466d-b131-676b5dc53e70" />
       </AbstractAction>
     </OptOutActionInSpan>
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="UpdateEnvironment" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AppEnvironment := vEnvironment;&#xD;&#xA;if not vSiteURL.isNullOrEmpty then&#xD;&#xA;  self.SiteURL := vSiteURL&#xD;&#xA;else&#xD;&#xA;  self.SiteURL&#xD;&#xA;endif" ExpressionForReadOnly="(self.AppEnvironment = vEnvironment) and&#xD;&#xA;(self.SiteURL = vSiteURL)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a2fe6963-f56f-46b2-be0b-0e6173f5cff2" />
-    <Column Name="unlockSysUsers" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;&#xD;&#xA;  select(su|su.TestAccount and su.IsLocked)-&gt;&#xD;&#xA;    forEach(su|su.IsLocked := false)" ExpressionForReadOnly="self.AppEnvironment.isNullOrEmpty or (self.AppEnvironment.toLower = 'prod')" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="27c334e0-5357-46c6-853e-963c978a4ce4" />
-    <Column Name="SetFakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.FakeEmailSending := true" ExpressionForReadOnly="(self.AppEnvironment.toLower = 'prod') or SysSingleton.oclSingleton.FakeEmailSending.notNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="91a4d82f-ab7d-49e2-a11c-12f4a048f4d0" />
+    <Column Name="UpdateEnvironment" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AppEnvironment := vEnvironment;&#xD;&#xA;if not vSiteURL.isNullOrEmpty then&#xD;&#xA;  self.SiteURL := vSiteURL&#xD;&#xA;else&#xD;&#xA;  self.SiteURL&#xD;&#xA;endif" ExpressionForReadOnly="(self.AppEnvironment = vEnvironment) and&#xD;&#xA;(self.SiteURL = vSiteURL)" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="1eaea785-03b4-479f-b32c-c2a3f5bd62b0" />
+    <Column Name="SetEnvironmentUpdateExecuted" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.EnvironmentUpdateExecuted := true" ExpressionForReadOnly="self.AppEnvironment.isNullOrEmpty or (self.AppEnvironment.toLower = 'prod')" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="a73c4e14-5374-4616-9b42-de1ad7d9ba57" />
+    <Column Name="ClearFakeEmailSendingInProd" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.FakeEmailSending.setToNull" ExpressionForReadOnly="(self.AppEnvironment.toLower &lt;&gt; 'prod') or SysSingleton.oclSingleton.FakeEmailSending.isNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="2d5b070d-cc36-4385-8a13-30697892fc05" />
+    <Column Name="SetFakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.FakeEmailSending := true" ExpressionForReadOnly="(self.AppEnvironment.toLower = 'prod') or SysSingleton.oclSingleton.FakeEmailSending.notNull" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="c8fbd933-9de5-4974-915b-89df1d90df13" />
+    <Column Name="TurnOffScheduledTasks" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="-- Only done once, so that they can be enabled again in Test or Dev&#xD;&#xA;ScheduledTask.allInstances-&gt;&#xD;&#xA;    forEach(st|st.Enabled := false)" ExpressionForReadOnly="self.AppEnvironment.isNullOrEmpty or (self.AppEnvironment.toLower = 'prod') or self.EnvironmentUpdateExecuted" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="5776ce19-470c-4199-93f1-a6b277bdbaf9" />
+    <Column Name="UnlockSysUsers" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;&#xD;&#xA;  select(su|su.TestAccount and su.IsLocked)-&gt;&#xD;&#xA;    forEach(su|su.IsLocked := false)" ExpressionForReadOnly="self.AppEnvironment.isNullOrEmpty or (self.AppEnvironment.toLower = 'prod')" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="a656cf51-a02a-4441-afb8-b979944afbb6" />
   </OwnedColumns>
   <SpanVariables>
     <SpanVariable Name="vEnvironment" InitialValue="" TypeName="String" UserData="" />

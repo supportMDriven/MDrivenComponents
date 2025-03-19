@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="SS_UpdateTime_Copy" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b8fcde30-3a10-48d3-b3f2-4e94e6ce93fd">
+  <Class>
+    <Class Name="Calendar" idref="4a99fb66-c9b5-411e-8bee-9c909043dd14" />
+  </Class>
+  <CriteriaForServerSideExecute>
+    <CriteriaForServerSideExecute Interval="60" MaxAnswers="-1" PreEAL="" PSOcl="Calendar.allInstances" SerializedBlocking="False" />
+  </CriteriaForServerSideExecute>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="FixupCalendar" idref="49c080c9-a13c-4271-9b73-7edf29c026de" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ClearCalendar" idref="3ad1c4fe-eae2-4777-8f79-99f452d18885" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="MinuteUpdate" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ServerMinute := DateTime.Now" ExpressionForReadOnly="self.ServerMinute = DateTime.Now" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="14d7a4f0-63fe-47ba-b210-83c0ec5c1b0a" />
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="Eco.UIAllowed" Value="False" />
+  </TaggedValue>
+</Span>

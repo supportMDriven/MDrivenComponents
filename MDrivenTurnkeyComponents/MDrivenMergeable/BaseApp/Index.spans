@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="028d06d3-f2e7-4fd5-adb5-f428196165c1">
+<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="0f989fa0-2a7a-4b8f-9588-b15174687de3">
   <Class>
-    <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+    <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
   </Class>
   <OwnedColumns>
-    <Column Name="Col" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Use BaseAppIndex ViewModel as your Index Page'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="700d1d40-ef82-431a-824a-5be9b21e2e97" />
+    <Column Name="Col" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Rename BaseAppIndex ViewModel to Index'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="151e157f-acad-42b5-88ec-8308748435ec" />
   </OwnedColumns>
 </Span>

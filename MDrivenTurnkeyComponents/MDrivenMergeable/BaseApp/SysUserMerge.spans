@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="SysUserMerge" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="47726558-cdff-4044-973e-c0b8cc1b94bd">
+<Span Name="SysUserMerge" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="202b83db-7a06-4f4c-aac9-1a7e39518b7f">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,43 +7,43 @@
     <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
   </Category>
   <Class>
-    <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+    <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
   </Class>
   <Nesting>
-    <Nesting Name="SearchExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="6b482cc4-7565-447e-901b-3076addba227">
+    <Nesting Name="SearchExpression" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="409badb5-eb98-43ca-b9c3-c7b8ba52904d">
       <Class>
-        <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+        <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysUser.allinstances-&gt;select(a|a.UserName.SqlLike(vSeekParam+'%'))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cca9c1ce-1e57-4797-95a2-f137bca76f3f" />
       </OwnedColumns>
     </Nesting>
-    <Nesting Name="SearchResultGrid" ExpressionActAsForActions="" id="a4229a28-197b-4ebf-b121-437540f14499">
+    <Nesting Name="SearchResultGrid" ExpressionActAsForActions="" id="7a3aeb42-0aad-4076-8fa3-fd7ad52a9bc3">
       <Class>
-        <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+        <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+            <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DeleteSysUser" idref="d477f9ed-9679-468b-94c5-b10eb0f70b07" />
+            <ClassAction Name="sDeleteSysUser" idref="ddd84482-29b5-48e6-b76f-885cad27cbb8" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+            <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+            <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -64,34 +64,34 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ContextAction Name="MergeExternalLoginsFrom" idref="81841d8f-e47b-43d1-815e-e21016aea852" />
+        <ContextAction Name="MergeExternalLoginsFrom" idref="b1d45775-df06-44e6-b18d-598886b892ca" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="DeleteSysUser" idref="d477f9ed-9679-468b-94c5-b10eb0f70b07" />
+        <ClassAction Name="sDeleteSysUser" idref="ddd84482-29b5-48e6-b76f-885cad27cbb8" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ShowSysUser" idref="313b5778-c907-41ee-8b0f-d3fb09454acd" />
-      </AbstractAction>
-    </OptOutActionInSpan>
-    <OptOutActionInSpan />
-    <OptOutActionInSpan>
-      <AbstractAction>
-        <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+        <ClassAction Name="ShowSysUser" idref="69fb0a6b-9b45-4d2e-b2ec-7728a6d056f9" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+        <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+        <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -103,7 +103,7 @@
     <Column Name="Search" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="37631333-0e01-48e6-8b34-effb74f10c47" />
     <Column Name="SearchResults" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="3" id="48870b19-bcfd-4812-919e-c1e428a062fe">
       <ReferedNesting>
-        <Nesting Name="SearchResultGrid" idref="a4229a28-197b-4ebf-b121-437540f14499" />
+        <Nesting Name="SearchResultGrid" idref="7a3aeb42-0aad-4076-8fa3-fd7ad52a9bc3" />
       </ReferedNesting>
     </Column>
     <Column Name="MergeExplanation" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="'Merging will move external logins to the login above and remove the other login and it\'s user.'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="1" id="43821653-1b64-45ce-9734-ce8a0415d13e" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="SysAsyncTicketBrowser" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="89fb1e6d-1ab0-4363-b07a-8f78be7e0f57">
+<Span Name="SysAsyncTicketBrowser" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="787f66b7-8f1b-4195-b8a8-f0674f136be2">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,12 +7,12 @@
     <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
   </Category>
   <Class>
-    <Class Name="SysAsyncTicket" idref="5a30908a-d2d1-4f4b-82a4-c2778947e6ab" />
+    <Class Name="SysAsyncTicket" idref="f39a6032-39b3-4b91-a3d6-e67b05894c2b" />
   </Class>
   <Nesting>
-    <Nesting Name="SysAsyncTicket" ExpressionActAsForActions="" id="18f74aac-22a8-4805-8bc6-f0c8555372de">
+    <Nesting Name="SysAsyncTicket" ExpressionActAsForActions="" id="86fa1a0a-9e39-411e-90c3-b7df2ca100a2">
       <Class>
-        <Class Name="SysAsyncTicket" idref="5a30908a-d2d1-4f4b-82a4-c2778947e6ab" />
+        <Class Name="SysAsyncTicket" idref="f39a6032-39b3-4b91-a3d6-e67b05894c2b" />
       </Class>
       <OwnedColumns>
         <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="52bfb8db-db50-429e-8563-9791ff9c3209" />
@@ -35,14 +35,14 @@
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="Delete" idref="b2074661-b6ca-42e4-a23c-41b09e38d616" />
+        <ClassAction Name="Delete" idref="37cd3b59-e70e-442d-811a-1009e7f87627" />
       </AbstractAction>
     </OptOutActionInSpan>
   </OptOutActionInSpan>
   <OwnedColumns>
     <Column Name="AllSysAsyncTicket" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysAsyncTicket.allInstances-&gt;orderDescending(x|x.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="b9ddf403-769a-431e-b146-8e3802082076">
       <ReferedNesting>
-        <Nesting Name="SysAsyncTicket" idref="18f74aac-22a8-4805-8bc6-f0c8555372de" />
+        <Nesting Name="SysAsyncTicket" idref="86fa1a0a-9e39-411e-90c3-b7df2ca100a2" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

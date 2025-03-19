@@ -1,213 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="DebugControlView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="SysSingleton.SO.DebuggingAllowed" RowCount="15" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="9a9d2161-287e-4860-8b77-d91d2caebf1e">
-  <AccessGroups>
-    <AccessGroup Name="IsDevOrTestEnvironment" idref="97223f4b-8152-496a-ad5e-4581dc8a4ca5" />
-    <AccessGroup Name="Debugging" idref="e0c117bd-3126-4ec4-8d5c-f277bc1cce25" />
-  </AccessGroups>
-  <Category>
-    <Category Name="Debug" idref="19336e56-5897-467a-a867-8550585794ca" />
-  </Category>
+<Span Name="DebugControlView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="SysSingleton.SO.DebuggingAllowed" RowCount="15" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ef571f3d-1a23-48de-80a4-2ae094be5d97">
   <Class>
-    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
   </Class>
   <Nesting>
-    <Nesting Name="SysSingleton" ExpressionActAsForActions="" id="a56c5aaa-03cb-4659-81a8-701dc9601f56">
+    <Nesting Name="SysSingleton" ExpressionActAsForActions="" id="6037c380-d44d-4a88-a1f4-a95d7e45e878">
       <Class>
-        <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+        <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
       </Class>
       <OptOutActionInNesting>
-        <OptOutActionInNesting>
-          <AbstractAction>
-            <ClassAction Name="ClearSysUserOverride" idref="8010087a-456f-4adf-af85-0f0ce2aec582" />
-          </AbstractAction>
-        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
         <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="Environment" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'Environment: ' + self.AppEnvironment" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="361cd32b-c24a-4b46-8203-a06fa48c60e7" />
-        <Column Name="NotLoggedInLogInRegister" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="'You are not logged in, please log in, register or go to User Ticket Activation.'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;isEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="2" id="e6e1d98c-8e1c-45b9-bc3d-fef377b23d96" />
-        <Column Name="CurrentUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="6" id="cc4da837-a769-4675-90e1-8f1918128b65">
+        <Column Name="Environment" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="'Environment: ' + self.AppEnvironment" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="a5f130f7-8743-47ee-a30f-75c02318de75" />
+        <Column Name="DEBUGGING" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="if vCurrent_SysSingleton.Debugging then&#xD;&#xA;  'success'&#xD;&#xA;else&#xD;&#xA;  ''&#xD;&#xA;endif" StyleRefIsExpression="True" XPos="0" YPos="1" id="0bbeb76a-4d24-4e0a-b75a-46a65a5a68d6">
+          <ActionToExecute>
+            <ClassAction Name="ToggleDebugging" idref="120df888-25fa-466d-b131-676b5dc53e70" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="NotLoggedInLogInRegisterOchTicketActivation" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="'There are no current SysUser'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;isEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="2" id="b40184b3-4fad-4d69-971c-211526e6e59f" />
+        <Column Name="FakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.FakeEmailSending" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="0" id="49f8409a-05cf-4ab7-bf84-71bef12ad67e" />
+        <Column Name="CurrentUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.CurrentUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="5" id="2b5e836a-a7ef-46e5-9702-156e2a7d3b20">
           <ReferedNesting>
-            <Nesting Name="CurrentSysUser" idref="a83504a4-f93b-4c85-9e80-d3391d84ab26" />
+            <Nesting Name="CurrentSysUser" idref="f269b0dd-a3f8-4d1e-bfb1-3f831237f2ce" />
           </ReferedNesting>
         </Column>
-        <Column Name="DEBUGGING" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="if vCurrent_SysSingleton.Debugging then&#xD;&#xA;  'success'&#xD;&#xA;else&#xD;&#xA;  ''&#xD;&#xA;endif" StyleRefIsExpression="True" XPos="0" YPos="1" id="731eb825-08de-4024-b4ae-71f73deb7d77">
+        <Column Name="ClearOverride" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="11" id="a54f24d8-00af-4591-a23c-1e2fab45629c">
           <ActionToExecute>
-            <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+            <ClassAction Name="ClearSysUserOverride" idref="c531886a-6859-4ab3-8bd8-80b7fb46e74f" />
           </ActionToExecute>
         </Column>
-        <Column Name="FakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.FakeEmailSending" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="1" id="c0f6e6f4-75aa-488b-ae2c-07dd701dc16d">
-          <TaggedValue>
-            <TaggedValue Tag="Switch" Value="True" />
-          </TaggedValue>
-        </Column>
-        <Column Name="ClearSysUserOverride" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="11" id="c11726e8-6117-4a0a-8655-91ce331838df">
-          <ActionToExecute>
-            <ClassAction Name="ClearSysUserOverride" idref="8010087a-456f-4adf-af85-0f0ce2aec582" />
-          </ActionToExecute>
-        </Column>
-        <Column Name="LoggedInSysUser" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.LoggedInSysUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="10" id="ef4c7896-5383-49be-b010-52e9df02575b" />
-        <Column Name="WaitWithOutgoingEmailCreation" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.WaitWithOutgoingEmailCreation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="0" id="378847fe-797d-41d1-a4ab-7e7362b91601">
-          <TaggedValue>
-            <TaggedValue Tag="Switch" Value="True" />
-          </TaggedValue>
-        </Column>
+        <Column Name="LoggedInSysUser" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.LoggedInSysUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="4f006d0d-e97e-4eec-9c26-0a1fc4455302" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="SysSingleton" idref="262308cb-7679-439f-a66f-e54da722d812" />
+        <Column Name="SysSingleton" idref="e1b6777a-d8c4-4dbd-8481-c19268159cff" />
       </ReferedByColumn>
       <TaggedValue>
         <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="CurrentSysUser" ExpressionActAsForActions="" id="a83504a4-f93b-4c85-9e80-d3391d84ab26">
+    <Nesting Name="CurrentSysUser" ExpressionActAsForActions="" id="f269b0dd-a3f8-4d1e-bfb1-3f831237f2ce">
       <Class>
-        <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+        <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="SendPasswordResetEMail" idref="5992da5e-80d9-43b0-bf43-560712bd1990" />
+            <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+            <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+            <ClassAction Name="ShowSysUser" idref="69fb0a6b-9b45-4d2e-b2ec-7728a6d056f9" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+            <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DeleteSysUser" idref="d477f9ed-9679-468b-94c5-b10eb0f70b07" />
+            <ClassAction Name="sDeleteSysUser" idref="ddd84482-29b5-48e6-b76f-885cad27cbb8" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="SendPasswordResetEMail" idref="0564655d-aaae-4dfd-a5a9-dae817a3fc8d" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
           </AbstractAction>
         </OptOutActionInNesting>
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="LoggedInButNoUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'You are logged in as '+self.UserName+', please complete the user registration.'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;notEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="3" id="0a1014de-1c45-4d0b-beea-3651de92267d" />
-        <Column Name="LoggedInRecognision" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'You are logged in as '+self.UserName+'!'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;notEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;notEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="4" id="3f8d0415-374f-4887-a535-8a250af9ec93" />
-        <Column Name="EffectiveUserWithAccount" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="self.EffectiveUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="5" id="9f9a26eb-975a-41a9-ab43-435953290864">
+        <Column Name="LoggedInButNoUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Your current SysUser is '+self.UserName+', but no User exists.'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;notEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="3" id="c63640d2-47c7-4474-a9ec-5b304b1ae73b" />
+        <Column Name="LoggedInWithUser" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'You current SysUser is '+self.UserName+', and has a User!'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser-&gt;notEmpty and SysSingleton.oclSingleton.EffectiveUser-&gt;notEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="4" id="37dfec85-bd32-4696-bf93-12da9d89c73c" />
+        <Column Name="IsInAdminUserMode" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.IsInAdminUserMode" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="5" id="ff7e0e68-a80d-4a34-87e5-c96df29cdb67" />
+        <Column Name="AdminModeRequested" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.AdminModeRequested" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="db2793f0-4433-4ed9-8e95-d2c21799564b" />
+        <Column Name="EffectiveUser" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.EffectiveUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="1efcc93b-3027-4e2e-abb0-e5d6c0a65c03">
           <ReferedNesting>
-            <Nesting Name="User" idref="bc004fd1-52d5-42e3-835d-fa009959b070" />
+            <Nesting Name="User" idref="16a7ec12-8a7f-40d1-9d11-a96c951d7682" />
           </ReferedNesting>
         </Column>
-        <Column Name="IsInAdminUserMode" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.IsInAdminUserMode" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="5" id="b804c843-ede2-43b9-a5a3-7735afdf2ffb" />
-        <Column Name="AdminModeRequested" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.AdminModeRequested" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="5670f4ec-ed83-4277-a35d-59fb5076cfbf" />
-        <Column Name="CurrentSysUserIsAdmin" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.IsAdmin" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="7" id="156b8414-f8f0-4b6e-9272-bb4daed1727f" />
+        <Column Name="AccountConfirmationNotRequired" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.AccountConfirmationNotRequiredUI" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="7934896d-c0e4-4f7b-ade9-a6bd1b7419e6" />
+        <Column Name="AccountUsable" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.AccountUsable" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="7" id="f4ad8b5a-c5ec-45a1-879b-c3e4720efc70" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="CurrentUser" idref="cc4da837-a769-4675-90e1-8f1918128b65" />
+        <Column Name="CurrentUser" idref="2b5e836a-a7ef-46e5-9702-156e2a7d3b20" />
       </ReferedByColumn>
       <TaggedValue>
         <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="User" ExpressionActAsForActions="" id="bc004fd1-52d5-42e3-835d-fa009959b070">
+    <Nesting Name="User" ExpressionActAsForActions="" id="16a7ec12-8a7f-40d1-9d11-a96c951d7682">
       <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
-        <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="AccountNotConfirmed" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Your account has not yet been confirmed.'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser.EffectiveUser-&gt;notEmpty and&#xD;&#xA;  not SysSingleton.oclSingleton.CurrentUser.EffectiveUser.AccountConfirmed and&#xD;&#xA;    SysSingleton.oclSingleton.CurrentUser.EffectiveUser.UserConfirmations-&gt;isEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="8" id="b406be02-f646-4413-859f-15fb1026a7af" />
-        <Column Name="AccountConfirmationEmailSent" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'A confirmation email was sent,'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.oclSingleton.CurrentUser.EffectiveUser-&gt;notEmpty and&#xD;&#xA;  not SysSingleton.oclSingleton.CurrentUser.EffectiveUser.AccountConfirmed and&#xD;&#xA;    SysSingleton.oclSingleton.CurrentUser.EffectiveUser.UserConfirmations-&gt;notEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="9" id="dc1b610f-3628-4f40-b835-e868ccc11eec" />
-        <Column Name="UserCanSwitchRoles" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.UserCanSwitchModes" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="9d58f267-c59c-47eb-a54c-9ec5937ba249" />
-        <Column Name="AccountConfirmationNotRequired" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.AccountConfirmationNotRequired" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="798ff14e-48da-44ad-a532-0db06e948439" />
-        <Column Name="AccountConfirmed" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.AccountConfirmed" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="7" YPos="6" id="b946beba-9c82-4a91-a202-83c37ef34373" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="1822b1de-305b-47e2-a4a2-f7acadde2e84" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="EffectiveUserWithAccount" idref="9f9a26eb-975a-41a9-ab43-435953290864" />
+        <Column Name="EffectiveUser" idref="1efcc93b-3027-4e2e-abb0-e5d6c0a65c03" />
       </ReferedByColumn>
-      <TaggedValue>
-        <TaggedValue Tag="Eco.AlwaysShowActions" Value="False" />
-      </TaggedValue>
     </Nesting>
-    <Nesting Name="TestUser" ExpressionActAsForActions="" id="be495451-29ff-4da0-89c1-98ad7269ba6b">
+    <Nesting Name="TestUser" ExpressionActAsForActions="" id="7ed0b238-6cd9-48c4-a2e5-ba6eb0e7f633">
       <Class>
-        <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+        <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DeleteSysUser" idref="d477f9ed-9679-468b-94c5-b10eb0f70b07" />
-          </AbstractAction>
-        </OptOutActionInNesting>
-        <OptOutActionInNesting />
-        <OptOutActionInNesting>
-          <AbstractAction>
-            <ClassAction Name="SendPasswordResetEMail" idref="5992da5e-80d9-43b0-bf43-560712bd1990" />
+            <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+            <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="SendPasswordResetEMail" idref="0564655d-aaae-4dfd-a5a9-dae817a3fc8d" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="sDeleteSysUser" idref="ddd84482-29b5-48e6-b76f-885cad27cbb8" />
+          </AbstractAction>
+        </OptOutActionInNesting>
         <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.UserName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c3e82175-0474-4ddd-b983-5e7bf939116c" />
-        <Column Name="ActivateThisSysUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Activate" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="cfc6818b-cc6e-4ae3-a78c-eb793b1bcfb0">
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.UserName" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="20338574-72d9-40e3-846d-f668133c84c5" />
+        <Column Name="IsLocked" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsLocked" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="cf9cd88e-1966-4dee-ad53-b1ec78d47eea" />
+        <Column Name="IsAdmin" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsAdmin" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="0b691e8f-5034-409c-931d-3f67ff6dc409" />
+        <Column Name="ActivateThisUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="d99a1550-052c-4c49-b477-df6ba72900a5">
           <ActionToExecute>
-            <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+            <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
           </ActionToExecute>
         </Column>
-        <Column Name="IsLocked" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsLocked" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="74924b39-67a8-4af3-bf2f-ca947581314e" />
-        <Column Name="IsAdmin" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsAdmin" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="9193f315-30d6-49bb-9d6a-23be12633004" />
-        <Column Name="User" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="if self.EffectiveUser-&gt;isEmpty then&#xD;&#xA;  '&lt;No user&gt;'&#xD;&#xA;else&#xD;&#xA;  self.EffectiveUser.NamePresentation&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="a7d99983-1ee5-4fff-a837-a56cc4624c0c" />
-        <Column Name="FakedUserPWD" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.User.FakedFrom.password" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="3131fb8d-da13-4d8e-a288-8743a2cd014a" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="TestAccounts" idref="8b5ad213-a1a7-48ea-9449-121db35c7b91" />
+        <Column Name="TestAccounts" idref="1a676c8b-0a23-4994-8196-d39d4d80d22f" />
       </ReferedByColumn>
     </Nesting>
   </Nesting>
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+        <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
     <OptOutActionInSpan />
-    <OptOutActionInSpan>
-      <AbstractAction>
-        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
-      </AbstractAction>
-    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="SysSingleton" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="6" id="262308cb-7679-439f-a66f-e54da722d812">
+    <Column Name="SysSingleton" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="5" id="e1b6777a-d8c4-4dbd-8481-c19268159cff">
       <ReferedNesting>
-        <Nesting Name="SysSingleton" idref="a56c5aaa-03cb-4659-81a8-701dc9601f56" />
+        <Nesting Name="SysSingleton" idref="6037c380-d44d-4a88-a1f4-a95d7e45e878" />
       </ReferedNesting>
     </Column>
-    <Column Name="TestAccounts" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;select(u|u.TestAccount)-&gt;orderBy(u|u.UserName)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="12" id="8b5ad213-a1a7-48ea-9449-121db35c7b91">
+    <Column Name="TestAccounts" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;select(u|u.TestAccount)-&gt;orderBy(u|u.UserName)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="5" StyleRef="" XPos="0" YPos="12" id="1a676c8b-0a23-4994-8196-d39d4d80d22f">
       <ReferedNesting>
-        <Nesting Name="TestUser" idref="be495451-29ff-4da0-89c1-98ad7269ba6b" />
+        <Nesting Name="TestUser" idref="7ed0b238-6cd9-48c4-a2e5-ba6eb0e7f633" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>
   <TaggedValue>
     <TaggedValue Tag="MVC" Value="false" />
-    <TaggedValue Tag="Eco.AutoSave" Value="true" />
   </TaggedValue>
 </Span>
