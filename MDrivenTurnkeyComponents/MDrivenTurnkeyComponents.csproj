@@ -25,7 +25,6 @@
     <None Remove="MDrivenMergeable\BaseApp\CountryView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\DateStructureBrowser.spans" />
     <None Remove="MDrivenMergeable\BaseApp\DebugControlView.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\DirtyObjectsDebug.spans" />
     <None Remove="MDrivenMergeable\BaseApp\FakeNameView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\HourOfDayValuestore.spans" />
     <None Remove="MDrivenMergeable\BaseApp\HtmlTemplateEditor.spans" />
@@ -33,26 +32,18 @@
     <None Remove="MDrivenMergeable\BaseApp\HtmlUiTemplateSelection.spans" />
     <None Remove="MDrivenMergeable\BaseApp\HtmlUiTextEditor.spans" />
     <None Remove="MDrivenMergeable\BaseApp\HtmlUiTextSeeker.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\IndexOld.spans" />
     <None Remove="MDrivenMergeable\BaseApp\InvitationHtmlTemplates.spans" />
     <None Remove="MDrivenMergeable\BaseApp\LandingPage.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\LastUserNotifications.spans" />
     <None Remove="MDrivenMergeable\BaseApp\NotificationDebugView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\NotificationMessageBrowser.spans" />
     <None Remove="MDrivenMergeable\BaseApp\OnboardAndAccountHtmlTemplates.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\OpenDocTemplateEditor.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\OpenDocTemplateSeeker.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\OpenDocTemplateSelection.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\OutgoingCombinedNotificationDataView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\OutgoingEmailSeeker.spans" />
     <None Remove="MDrivenMergeable\BaseApp\OutgoingEmailView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\OutgoingMessage.spans" />
     <None Remove="MDrivenMergeable\BaseApp\OutgoingNotificationDataView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\RedirectView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\ResetPassword.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\ResetPasswordDataView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\ResetPasswordPage.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\RoleValueStore.spans" />
     <None Remove="MDrivenMergeable\BaseApp\ScheduledTaskEditor.spans" />
     <None Remove="MDrivenMergeable\BaseApp\ScheduledTasksValueStore.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SetPasswordPage.spans" />
@@ -64,25 +55,15 @@
     <None Remove="MDrivenMergeable\BaseApp\StartScreenForUser.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysAsyncTicketBrowser.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysSingletonView.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\SysUserLocked.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysUserMerge.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysUserModeSelector.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\SysUserSeeker.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysUserSetPassword.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysUsersSeeker.spans" />
     <None Remove="MDrivenMergeable\BaseApp\SysUserView.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\TaskTicketView.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\TemplateSelection.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserConfirmation.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserConfirmationBrowser.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserConfirmationDataView.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\UserConfirmationMessageDataView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserMessagingDebug.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\UserModeSelector.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\UserNotifications.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\UserNotificationSettings.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\UserRegistration.spans" />
-    <None Remove="MDrivenMergeable\BaseApp\UserRegistrationDataView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserRegistrationView.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserSeeker.spans" />
     <None Remove="MDrivenMergeable\BaseApp\UserSettings.spans" />
@@ -114,7 +95,11 @@
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
-    <None Remove="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysTurnkeyTrace\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTrace.spans" />
+    <None Remove="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTraceSeeker.spans" />
+    <None Remove="MDrivenMergeable\SysTurnkeyTrace\Index.spans" />
+    <None Remove="MDrivenMergeable\SysTurnkeyTrace\TraceLog.spans" />
     <None Remove="MDrivenMergeable\SysUserAuthentication\Actions.actions" />
     <None Remove="MDrivenMergeable\SysUserAuthentication\Index.spans" />
   </ItemGroup>
@@ -172,7 +157,7 @@
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\DebugControlView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\DirtyObjectsDebug.spans">
+    <EmbeddedResource Include="MDrivenMergeable\BaseApp\FakeNameView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\HourOfDayValuestore.spans">
@@ -196,16 +181,10 @@
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\Index.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\IndexOld.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\InvitationHtmlTemplates.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\LandingPage.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\LastUserNotifications.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\NotificationDebugView.spans">
@@ -215,18 +194,6 @@
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\OnboardAndAccountHtmlTemplates.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\OpenDocTemplateEditor.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\OpenDocTemplateSeeker.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\OpenDocTemplateSelection.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\OutgoingCombinedNotificationDataView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\OutgoingEmailSeeker.spans">
@@ -244,13 +211,10 @@
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\RedirectView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\ResetPasswordDataView.spans">
+    <EmbeddedResource Include="MDrivenMergeable\BaseApp\ResetPassword.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\ResetPasswordPage.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\RoleValueStore.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\ScheduledTaskEditor.spans">
@@ -286,28 +250,19 @@
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysSingletonView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUserLocked.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUserMerge.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUserModeSelector.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUserSeeker.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUserSetPassword.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUsersSeeker.spans">
+      <DependentUpon>BaseApp.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\SysUserView.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\TaskTicketView.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\TemplateSelection.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserConfirmation.spans">
@@ -316,25 +271,13 @@
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserConfirmationBrowser.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserConfirmationMessageDataView.spans">
+    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserConfirmationDataView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserMessagingDebug.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserModeSelector.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserNotifications.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserNotificationSettings.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserRegistration.spans">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserRegistrationDataView.spans">
+    <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserRegistrationView.spans">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\BaseApp\UserSeeker.spans">
@@ -427,8 +370,20 @@
     <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Actions.actions">
-      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\Actions.actions">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTrace.spans">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTraceSeeker.spans">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\Index.spans">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\TraceLog.spans">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysUserAuthentication\Actions.actions">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
@@ -466,8 +421,8 @@
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </None>
-    <None Include="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\ModlrProject.mproj">
-      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    <None Include="MDrivenMergeable\SysTurnkeyTrace\ModlrProject.mproj">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysUserAuthentication\ModlrProject.mproj">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>
@@ -490,10 +445,7 @@
     <None Update="MDrivenMergeable\AccountViewOverride\Package1.ecopkg">
       <DependentUpon>AccountViewOverride.ecomdl</DependentUpon>
     </None>
-    <None Update="MDrivenMergeable\BaseApp\AsyncTicketDiagram.ecodiag">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </None>
-    <None Update="MDrivenMergeable\BaseApp\AuthenticationPackage.ecopkg">
+    <None Update="MDrivenMergeable\BaseApp\ASPNETIdentity.ecopkg">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\BaseApp\Calendar.ecodiag">
@@ -506,9 +458,6 @@
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\BaseApp\EmailSending.ecopkg">
-      <DependentUpon>BaseApp.ecomdl</DependentUpon>
-    </None>
-    <None Update="MDrivenMergeable\BaseApp\ForASPNETIdentity.ecodiag">
       <DependentUpon>BaseApp.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\BaseApp\Notifications.ecodiag">
@@ -640,17 +589,17 @@
     <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </None>
-    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\ASPNETIdentity.ecopkg">
-      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    <None Update="MDrivenMergeable\SysTurnkeyTrace\Diagram1.ecodiag">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
-    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Diagram1.ecodiag">
-      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    <None Update="MDrivenMergeable\SysTurnkeyTrace\documentation.modlrdoc">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
-    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\documentation.modlrdoc">
-      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    <None Update="MDrivenMergeable\SysTurnkeyTrace\Package1.ecopkg">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
-    <None Update="MDrivenMergeable\SysMDrivenMiscSettingsSingleton\Snippets.snippets">
-      <DependentUpon>SysMDrivenMiscSettingsSingleton.ecomdl</DependentUpon>
+    <None Update="MDrivenMergeable\SysTurnkeyTrace\Snippets.snippets">
+      <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysUserAuthentication\AuthenticationPackage.ecopkg">
       <DependentUpon>SysUserAuthentication.ecomdl</DependentUpon>

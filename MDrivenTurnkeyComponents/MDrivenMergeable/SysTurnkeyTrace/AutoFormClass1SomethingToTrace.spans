@@ -1,25 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="AutoFormClass1SomethingToTrace" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="5" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="24cd544d-1ea5-471c-903c-054294baa818">
+<Span
+  Name="AutoFormClass1SomethingToTrace"
+  ColCount="10"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="5"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="24cd544d-1ea5-471c-903c-054294baa818">
   <Category>
-    <Category Name="AutoForms" idref="4a0377b8-639f-4f35-a51c-aba1d12f2592" />
+    <Category
+      Name="AutoForms"
+      idref="4a0377b8-639f-4f35-a51c-aba1d12f2592" />
   </Category>
   <Class>
-    <Class Name="Class1SomethingToTrace" idref="d9326a66-4c6d-436a-aaf8-730af2f1e614" />
+    <Class
+      Name="Class1SomethingToTrace"
+      idref="d9326a66-4c6d-436a-aaf8-730af2f1e614" />
   </Class>
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ShowClass1SomethingToTrace" idref="5506e5e4-8546-414f-b437-897817b3497c" />
+        <ClassAction
+          Name="ShowClass1SomethingToTrace"
+          idref="5506e5e4-8546-414f-b437-897817b3497c" />
       </AbstractAction>
     </OptOutActionInSpan>
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="Attribute1" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Attribute1" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="bf104903-6d44-45af-a11e-945d8b5b489d" />
-    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.ChangeTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="acf6859d-2a19-402c-acfd-ff027ab8a8aa" />
-    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.CreateTime" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="fa4ad9b4-21cd-40b1-94e8-295c5a2020ae" />
-    <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="4b4f9055-b8be-4af5-b667-4e1e4ec285e0" />
+    <Column
+      Name="Attribute1"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.Attribute1"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="2"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="0"
+      id="bf104903-6d44-45af-a11e-945d8b5b489d" />
+    <Column
+      Name="ChangeTime"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.ChangeTime"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="2"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="1"
+      id="acf6859d-2a19-402c-acfd-ff027ab8a8aa" />
+    <Column
+      Name="CreateTime"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.CreateTime"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="2"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="2"
+      id="fa4ad9b4-21cd-40b1-94e8-295c5a2020ae" />
+    <Column
+      Name="Guid"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.Guid"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="2"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="3"
+      id="4b4f9055-b8be-4af5-b667-4e1e4ec285e0" />
   </OwnedColumns>
   <TaggedValue>
-    <TaggedValue Tag="AutoForm" Value="true" />
+    <TaggedValue
+      Tag="AutoForm"
+      Value="true" />
   </TaggedValue>
 </Span>

@@ -1,94 +1,473 @@
 <?xml version="1.0" encoding="utf-8"?>
 <allactions>
-  <GlobalAction Name="Redo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Redo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="0da08a24-3e7c-46bf-b309-c935be719c7e">
+  <GlobalAction
+    Name="Redo"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="Redo"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="0da08a24-3e7c-46bf-b309-c935be719c7e">
     <MenuGroup>
-      <MenuGroup Name="Edit" idref="a9f71ee4-e91e-4fea-b2eb-026241853130" />
+      <MenuGroup
+        Name="Edit"
+        idref="a9f71ee4-e91e-4fea-b2eb-026241853130" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="ShowTraceLog" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="16bd15bc-a6cf-4d15-985a-4467b7f004e5">
+  <GlobalAction
+    Name="ShowTraceLog"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="None"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="16bd15bc-a6cf-4d15-985a-4467b7f004e5">
     <BringUpViewModel>
-      <Span Name="TraceLog" idref="5fbf8424-f0eb-44ee-a918-a3267a6cfea3" />
+      <Span
+        Name="TraceLog"
+        idref="5fbf8424-f0eb-44ee-a918-a3267a6cfea3" />
     </BringUpViewModel>
   </GlobalAction>
-  <GlobalAction Name="Save" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Save" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="1a906460-cec7-4fce-bfdf-ad549cb6f462">
+  <GlobalAction
+    Name="Save"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="Save"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="1a906460-cec7-4fce-bfdf-ad549cb6f462">
     <MenuGroup>
-      <MenuGroup Name="File" idref="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
+      <MenuGroup
+        Name="File"
+        idref="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="Exit" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Exit" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="29638a81-7f8d-46db-95ff-b8942b0e8449">
+  <GlobalAction
+    Name="Exit"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="Exit"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="29638a81-7f8d-46db-95ff-b8942b0e8449">
     <MenuGroup>
-      <MenuGroup Name="File" idref="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
+      <MenuGroup
+        Name="File"
+        idref="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
     </MenuGroup>
   </GlobalAction>
-  <ContextAction Name="NewClass1SomethingToTrace" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="Class1SomethingToTrace.Create" Id="415aef43-1933-484e-b33a-c8ddfd38db69">
+  <ContextAction
+    Name="NewClass1SomethingToTrace"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="None"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression="Class1SomethingToTrace.Create"
+    Id="415aef43-1933-484e-b33a-c8ddfd38db69">
     <BringUpViewModel>
-      <Span Name="AutoFormClass1SomethingToTrace" idref="24cd544d-1ea5-471c-903c-054294baa818" />
+      <Span
+        Name="AutoFormClass1SomethingToTrace"
+        idref="24cd544d-1ea5-471c-903c-054294baa818" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AutoForms" idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
+      <MenuGroup
+        Name="AutoForms"
+        idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
     </MenuGroup>
     <OnlyInThis>
-      <Span Name="AutoFormClass1SomethingToTraceSeeker" idref="13237498-a5f7-4659-b625-3d125233de98" />
+      <Span
+        Name="AutoFormClass1SomethingToTraceSeeker"
+        idref="13237498-a5f7-4659-b625-3d125233de98" />
     </OnlyInThis>
     <TaggedValue>
-      <TaggedValue Tag="AutoForm" Value="true" />
+      <TaggedValue
+        Tag="AutoForm"
+        Value="true" />
     </TaggedValue>
     <ViewModelContext>
-      <Span Name="AutoFormClass1SomethingToTraceSeeker" idref="13237498-a5f7-4659-b625-3d125233de98" />
+      <Span
+        Name="AutoFormClass1SomethingToTraceSeeker"
+        idref="13237498-a5f7-4659-b625-3d125233de98" />
     </ViewModelContext>
   </ContextAction>
-  <GlobalAction Name="Undo" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Undo" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="4c17ff71-b3af-463f-ac92-68f019225893">
+  <GlobalAction
+    Name="Undo"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="Undo"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="4c17ff71-b3af-463f-ac92-68f019225893">
     <MenuGroup>
-      <MenuGroup Name="Edit" idref="a9f71ee4-e91e-4fea-b2eb-026241853130" />
+      <MenuGroup
+        Name="Edit"
+        idref="a9f71ee4-e91e-4fea-b2eb-026241853130" />
     </MenuGroup>
   </GlobalAction>
-  <ClassAction Name="ShowClass1SomethingToTrace" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" IsDragAction="False" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="self" Id="5506e5e4-8546-414f-b437-897817b3497c">
+  <ClassAction
+    Name="ShowClass1SomethingToTrace"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="None"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    IsDragAction="False"
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression="self"
+    Id="5506e5e4-8546-414f-b437-897817b3497c">
     <BringUpViewModel>
-      <Span Name="AutoFormClass1SomethingToTrace" idref="24cd544d-1ea5-471c-903c-054294baa818" />
+      <Span
+        Name="AutoFormClass1SomethingToTrace"
+        idref="24cd544d-1ea5-471c-903c-054294baa818" />
     </BringUpViewModel>
     <ClassToPerformActionOn>
-      <Class Name="Class1SomethingToTrace" idref="d9326a66-4c6d-436a-aaf8-730af2f1e614" />
+      <Class
+        Name="Class1SomethingToTrace"
+        idref="d9326a66-4c6d-436a-aaf8-730af2f1e614" />
     </ClassToPerformActionOn>
     <MenuGroup>
-      <MenuGroup Name="AutoForms" idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
+      <MenuGroup
+        Name="AutoForms"
+        idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
     </MenuGroup>
     <TaggedValue>
-      <TaggedValue Tag="AutoForm" Value="true" />
+      <TaggedValue
+        Tag="AutoForm"
+        Value="true" />
     </TaggedValue>
   </ClassAction>
-  <ContextAction Name="DeleteThis" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="vCurrent_AutoFormClass1SomethingToTrace.Delete" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="5b9fced0-89ed-4f27-ad75-51510450a2d4">
+  <ContextAction
+    Name="DeleteThis"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression="vCurrent_AutoFormClass1SomethingToTrace.Delete"
+    ExecuteFrameworkRuntimeAction="None"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="5b9fced0-89ed-4f27-ad75-51510450a2d4">
     <MenuGroup>
-      <MenuGroup Name="AutoForms" idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
+      <MenuGroup
+        Name="AutoForms"
+        idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
     </MenuGroup>
     <OnlyInThis>
-      <Span Name="AutoFormClass1SomethingToTrace" idref="24cd544d-1ea5-471c-903c-054294baa818" />
+      <Span
+        Name="AutoFormClass1SomethingToTrace"
+        idref="24cd544d-1ea5-471c-903c-054294baa818" />
     </OnlyInThis>
     <TaggedValue>
-      <TaggedValue Tag="AutoForm" Value="true" />
+      <TaggedValue
+        Tag="AutoForm"
+        Value="true" />
     </TaggedValue>
     <ViewModelContext>
-      <Span Name="AutoFormClass1SomethingToTrace" idref="24cd544d-1ea5-471c-903c-054294baa818" />
+      <Span
+        Name="AutoFormClass1SomethingToTrace"
+        idref="24cd544d-1ea5-471c-903c-054294baa818" />
     </ViewModelContext>
   </ContextAction>
-  <GlobalAction Name="Refresh" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="Refresh" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="c6386349-5c8b-4337-87ac-2efe14c8753c">
+  <GlobalAction
+    Name="Refresh"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="Refresh"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="c6386349-5c8b-4337-87ac-2efe14c8753c">
     <MenuGroup>
-      <MenuGroup Name="File" idref="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
+      <MenuGroup
+        Name="File"
+        idref="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
     </MenuGroup>
   </GlobalAction>
-  <GlobalAction Name="AutoFormClass1SomethingToTraceSeeker" AreYouSureCancelVerb="" AreYouSureExecuteVerb="" AreYouSureQuestion="" CodeComment="" DividerGroupTag="" DividerGroupTagSortKey="" EnableExpression="" ExecuteExpression="" ExecuteFrameworkRuntimeAction="None" HintWhenDisabled="" HintWhenEnabled="" Presentation="&lt;Name&gt;" ShortcutKey="" ShortcutKeyModifierAlt="False" ShortcutKeyModifierControl="False" ShortcutKeyModifierShift="False" ShortcutKeyModifierWindows="False" SubMenuGroup="" SubMenuGroupSortKey="" ViewModelExecuteExpressionAfterModalOk="" ViewModelExecuteExpressionOnShow="" ViewModelIsModal="False" ViewModelModalOkEnableExpression="" ViewModelRootObjectExpression="" Id="f6b798bf-d6b6-492f-b4bc-1568acf025fc">
+  <GlobalAction
+    Name="AutoFormClass1SomethingToTraceSeeker"
+    AreYouSureCancelVerb=""
+    AreYouSureExecuteVerb=""
+    AreYouSureQuestion=""
+    CodeComment=""
+    DividerGroupTag=""
+    DividerGroupTagSortKey=""
+    EnableExpression=""
+    ExecuteExpression=""
+    ExecuteFrameworkRuntimeAction="None"
+    HintWhenDisabled=""
+    HintWhenEnabled=""
+    Presentation="&lt;Name&gt;"
+    ShortcutKey=""
+    ShortcutKeyModifierAlt="False"
+    ShortcutKeyModifierControl="False"
+    ShortcutKeyModifierShift="False"
+    ShortcutKeyModifierWindows="False"
+    SubMenuGroup=""
+    SubMenuGroupSortKey=""
+    ViewModelExecuteExpressionAfterModalOk=""
+    ViewModelExecuteExpressionOnShow=""
+    ViewModelIsModal="False"
+    ViewModelModalOkEnableExpression=""
+    ViewModelRootObjectExpression=""
+    Id="f6b798bf-d6b6-492f-b4bc-1568acf025fc">
     <BringUpViewModel>
-      <Span Name="AutoFormClass1SomethingToTraceSeeker" idref="13237498-a5f7-4659-b625-3d125233de98" />
+      <Span
+        Name="AutoFormClass1SomethingToTraceSeeker"
+        idref="13237498-a5f7-4659-b625-3d125233de98" />
     </BringUpViewModel>
     <MenuGroup>
-      <MenuGroup Name="AutoForms" idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
+      <MenuGroup
+        Name="AutoForms"
+        idref="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
     </MenuGroup>
     <TaggedValue>
-      <TaggedValue Tag="AutoForm" Value="true" />
+      <TaggedValue
+        Tag="AutoForm"
+        Value="true" />
     </TaggedValue>
   </GlobalAction>
-  <MenuGroup Name="AutoForms" SortKey="99999" Id="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
-  <MenuGroup Name="Edit" SortKey="002" Id="a9f71ee4-e91e-4fea-b2eb-026241853130" />
-  <MenuGroup Name="File" SortKey="001" Id="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
-  <MenuGroup Name="Views" SortKey="004" Id="b49ee02f-bafa-4335-bf13-7c3d2ae9dfe5" />
-  <MenuGroup Name="Seekers" SortKey="003" Id="0ed1a44d-5fe8-46ea-b3dc-1e07b5b7ed64" />
+  <MenuGroup
+    Name="AutoForms"
+    SortKey="99999"
+    Id="ecbf93a1-e915-445b-bb2d-0f61317a556f" />
+  <MenuGroup
+    Name="Edit"
+    SortKey="002"
+    Id="a9f71ee4-e91e-4fea-b2eb-026241853130" />
+  <MenuGroup
+    Name="File"
+    SortKey="001"
+    Id="a028ce05-2eb1-46de-8477-fd42c635ed2c" />
+  <MenuGroup
+    Name="Views"
+    SortKey="004"
+    Id="b49ee02f-bafa-4335-bf13-7c3d2ae9dfe5" />
+  <MenuGroup
+    Name="Seekers"
+    SortKey="003"
+    Id="0ed1a44d-5fe8-46ea-b3dc-1e07b5b7ed64" />
+  <StylesInModel
+    id="39bbf8c0-d8ad-4c5b-8e43-04cd032260d8">
+    <StyleColorProperties>
+      <StyleColorProperties
+        A="255"
+        Name="Red"
+        B="110"
+        G="110"
+        R="255"
+        id="428675ab-c8ce-46d9-ab2c-ad67f8d579a1" />
+    </StyleColorProperties>
+    <StyleDefinitions>
+      <StyleDefinition
+        Name="Red"
+        id="c512c109-0975-4ca9-9eda-99c94b1a10c2">
+        <StyleTargets>
+          <StyleTarget
+            AlignHorizontal=""
+            AlignVertical=""
+            Animation=""
+            id="2dabffea-978b-4537-91cc-537cb7ec1888">
+            <StyleColorPropertiesFill>
+              <StyleColorProperties
+                Name="Red"
+                idref="428675ab-c8ce-46d9-ab2c-ad67f8d579a1" />
+            </StyleColorPropertiesFill>
+            <StyleTargetType>
+              <StyleTargetType
+                Name="gridcell"
+                idref="gridcell" />
+            </StyleTargetType>
+          </StyleTarget>
+        </StyleTargets>
+      </StyleDefinition>
+    </StyleDefinitions>
+    <StyleTargetTypes>
+      <StyleTargetType
+        Name="component"
+        id="component" />
+      <StyleTargetType
+        Name="componentcontent"
+        id="componentcontent" />
+      <StyleTargetType
+        Name="componentlabel"
+        id="componentlabel" />
+      <StyleTargetType
+        Name="gridcell"
+        id="gridcell" />
+      <StyleTargetType
+        Name="gridcellcontent"
+        id="gridcellcontent" />
+      <StyleTargetType
+        Name="gridheader"
+        id="gridheader" />
+      <StyleTargetType
+        Name="placingcontainer"
+        id="placingcontainer" />
+    </StyleTargetTypes>
+  </StylesInModel>
 </allactions>
