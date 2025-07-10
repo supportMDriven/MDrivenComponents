@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<allactions />
+<allactions>
+  <StylesInModel
+    FastTrackCSS=""
+    id="f5c89b8d-941c-4c9e-ba09-e89d2f674829" />
+</allactions>
