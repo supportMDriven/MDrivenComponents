@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="LastUserNotifications" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="f6d9f376-8ebf-4a80-bbd0-ede0184d0c45">
+  <Class>
+    <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
+  </Class>
+  <Nesting>
+    <Nesting Name="UserNotification" ExpressionActAsForActions="self.Notification" id="7c3278a8-ee05-4baf-8df6-9171737f560f">
+      <Class>
+        <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="CreateNotificationMessage" idref="d2f46c78-dba3-4244-b039-6b4292f262f2" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="feed97b1-0430-47dc-a3f4-63dd463ff7e4" />
+        <Column Name="SendMessageAfter" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.Notification.SendMessageAfter.notNull then&#xD;&#xA;  SysSingleton.DateTimeSmartFormat(self.Notification.SendMessageAfter)&#xD;&#xA;else&#xD;&#xA;  '&lt;should be sent&gt;'&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f7a4ddc2-8304-4268-8257-6f3fda2efbbc" />
+        <Column Name="LastOutgoingMessage" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="SysSingleton.DateTimeSmartFormat(self.LastOutgoingMessage)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a80a76dc-c44e-4f78-a576-fb5dbfd6ba69" />
+        <Column Name="User" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.User.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="e5e538df-f323-43a5-8d43-2d103f1d3327" />
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="df117e98-ce45-4883-bea9-342d44926fef" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="Last100UserNotifications" idref="88a2f060-4553-499c-ab66-fb34193d8bfe" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="Last100UserNotifications" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="UserNotification.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,100)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="resizevertical" XPos="0" YPos="0" id="88a2f060-4553-499c-ab66-fb34193d8bfe">
+      <ReferedNesting>
+        <Nesting Name="UserNotification" idref="7c3278a8-ee05-4baf-8df6-9171737f560f" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="CountryView" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="b6e9648d-2993-4000-878b-51e5a83b875b">
+<Span Name="CountryView" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ec8e35a0-7c80-4656-ab0e-0c2b4abc9dd8">
   <Category>
     <Category Name="ValueStores" idref="c653326b-2911-482b-a340-f4dc858f1b51" />
   </Category>
   <Class>
-    <Class Name="Country" idref="284c29e6-2516-4cc0-bed8-85af08fdb185" />
+    <Class Name="Country" idref="011805e2-4b80-496a-ab28-1760eac12d1a" />
   </Class>
   <Nesting>
-    <Nesting Name="WeekDefinitionPickList" ExpressionActAsForActions="" id="3b6ea5ce-bab6-4892-a5aa-8e2acf31f53e">
+    <Nesting Name="WeekDefinitionPickList" ExpressionActAsForActions="" id="60de637f-d9d0-4c46-b029-52a66dc77d35">
       <Class>
-        <Class Name="WeekDefinition" idref="77cb80f6-106d-4acf-8362-7a78a59e0a46" />
+        <Class Name="WeekDefinition" idref="2f444f03-6794-4a1a-95d3-e529284f4d86" />
       </Class>
       <OwnedColumns>
         <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.AsString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b636fe55-f081-4244-8978-4b028c36db31" />
@@ -28,7 +28,7 @@
     </Column>
     <Column Name="WeekDefinitionPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="WeekDefinition.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d97c921c-e56c-412f-8438-9ee4ab00ff7c">
       <ReferedNesting>
-        <Nesting Name="WeekDefinitionPickList" idref="3b6ea5ce-bab6-4892-a5aa-8e2acf31f53e" />
+        <Nesting Name="WeekDefinitionPickList" idref="60de637f-d9d0-4c46-b029-52a66dc77d35" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

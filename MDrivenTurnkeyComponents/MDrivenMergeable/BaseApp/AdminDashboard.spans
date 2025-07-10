@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="AdminDashboard" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="cb189309-dc9c-4e2f-9528-36ad785a0533">
+<Span Name="AdminDashboard" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bd0ce413-1122-4f4f-859e-7c3661d133a1">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,12 +7,12 @@
     <Category Name="Dashboards" idref="3b3b43c8-b2cd-433c-a11a-08339c00327e" />
   </Category>
   <Class>
-    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
   </Class>
   <Nesting>
-    <Nesting Name="User" ExpressionActAsForActions="" id="7300cdc2-b6ad-4ff1-bc3b-c86ffab331ed">
+    <Nesting Name="User" ExpressionActAsForActions="" id="a5a9b902-1289-4d46-808e-d21da602fac6">
       <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -22,7 +22,7 @@
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+            <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -49,42 +49,42 @@
       </OptOutActionInNesting>
       <OwnedColumns>
         <Column Name="Created" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="24e73f97-42ef-4420-9f3b-4f1070a9ae06" />
-        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.NamePresentation" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c35dd902-28d4-44e5-8466-d28c0705571d" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="3" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="c35dd902-28d4-44e5-8466-d28c0705571d" />
       </OwnedColumns>
       <ReferedByColumn>
         <Column Name="Last10Users" idref="6269c7a5-18a6-4f70-bf84-6a88d27207cb" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="SysUser" ExpressionActAsForActions="" id="d196ea15-4392-4f97-9722-34a7bab5f75d">
+    <Nesting Name="SysUser" ExpressionActAsForActions="" id="199a7d8d-a61b-4708-b940-4ac0f431a6b4">
       <Class>
-        <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+        <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+            <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+            <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="SendPasswordResetEMail" idref="5992da5e-80d9-43b0-bf43-560712bd1990" />
+            <ClassAction Name="SendPasswordResetEMail" idref="0564655d-aaae-4dfd-a5a9-dae817a3fc8d" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+            <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DeleteSysUser" idref="d477f9ed-9679-468b-94c5-b10eb0f70b07" />
+            <ClassAction Name="sDeleteSysUser" idref="ddd84482-29b5-48e6-b76f-885cad27cbb8" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -97,42 +97,38 @@
         <Column Name="Last10SysUsers" idref="58596c6a-25aa-4362-b499-3404d6aa1fb0" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="UserNotification" ExpressionActAsForActions="self.Notification" id="899f191d-28a2-483a-acf0-c799be1342df">
+    <Nesting Name="UserNotification" ExpressionActAsForActions="self.Notification" id="5bbca3f4-14dd-447f-b610-63648dbda1cb">
       <Class>
-        <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+        <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="Dismiss" idref="a1b9f2ce-eadf-4e75-9e06-e177d7d0d950" />
+            <ClassAction Name="Dismiss" idref="0e83faae-87ec-464f-97c8-18a66defa85a" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="Clear" idref="1f4d1283-b5bd-4991-aa89-a8ae48cb2c51" />
+            <ClassAction Name="Clear" idref="aa7b650d-8060-4541-85cc-aca2e5deb817" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DebugUserMessaging" idref="8fbee900-8783-4a85-923b-81f757453408" />
+            <ClassAction Name="DebugUserMessaging" idref="867d3132-1f1c-4a6d-94dc-1b35ca6fac77" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="CreateNotificationMessage" idref="b113d290-1b1a-4e0c-9b6f-8dc4dfac6f17" />
+            <ClassAction Name="CreateNotificationMessage" idref="d2f46c78-dba3-4244-b039-6b4292f262f2" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DeleteNotification" idref="7d0ecd9b-7541-462b-96bd-73dd09b2f330" />
+            <ClassAction Name="DeleteNotification" idref="33a0ce71-3597-4133-bba3-0065aaa0b732" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
-        <OptOutActionInNesting>
-          <AbstractAction>
-            <ClassAction Name="DebugNotification" idref="92b7873b-feda-4f9f-8301-7a2b47492935" />
-          </AbstractAction>
-        </OptOutActionInNesting>
+        <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
         <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="0228549d-6dad-4198-9a1c-731e80e9a216" />
@@ -148,24 +144,34 @@
     <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
+    <Column Name="Update" ActionPeriodicityMillisec="30000" ColSpan="2" ColSpanWhenInGrid="1" Expression="vToday := DateTime.Today;&#xD;&#xA;v7DaysAgo := DateTime.Today.AddDays(-7);&#xD;&#xA;vUpdated := DateTime.Now -- Trigger update" ExpressionForReadOnly="false" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="10" YPos="11" id="f00fd9e9-42a0-4b12-a9a2-90d8e5a47d90" />
     <Column Name="CodeDressStatus" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="if SysSingleton.oclSingleton.CheckCodeDressingActive then&#xD;&#xA;  'Working'&#xD;&#xA;else&#xD;&#xA;  'FAILED!'&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="10" YPos="1" id="07b4bfc9-f0ff-4a99-aeb0-5073e6498e1e" />
     <Column Name="ServerNow" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(Calendar.Now)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="189d8a41-c269-488e-83b6-8fd99d69263d" />
     <Column Name="Debugging" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="if self.Debugging then&#xD;&#xA;  'YES'&#xD;&#xA;else&#xD;&#xA;  'NO'&#xD;&#xA;endif" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="10" YPos="2" id="e4fc1afe-5596-42f8-8373-6355866e06b3" />
     <Column Name="NumberOfSysUsers" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="10" YPos="3" id="2d0184a5-1caf-4e24-9ed2-1e99d23c738d" />
-    <Column Name="Last10Users" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="12" StyleRef="resizevertical" XPos="0" YPos="0" id="6269c7a5-18a6-4f70-bf84-6a88d27207cb">
+    <Column Name="Last10Users" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="User.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="12" StyleRef="resizevertical" XPos="0" YPos="2" id="6269c7a5-18a6-4f70-bf84-6a88d27207cb">
       <ReferedNesting>
-        <Nesting Name="User" idref="7300cdc2-b6ad-4ff1-bc3b-c86ffab331ed" />
+        <Nesting Name="User" idref="a5a9b902-1289-4d46-808e-d21da602fac6" />
       </ReferedNesting>
     </Column>
-    <Column Name="Last10SysUsers" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="12" StyleRef="resizevertical" XPos="5" YPos="0" id="58596c6a-25aa-4362-b499-3404d6aa1fb0">
+    <Column Name="Last10SysUsers" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="SysUser.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="12" StyleRef="resizevertical" XPos="5" YPos="2" id="58596c6a-25aa-4362-b499-3404d6aa1fb0">
       <ReferedNesting>
-        <Nesting Name="SysUser" idref="d196ea15-4392-4f97-9722-34a7bab5f75d" />
+        <Nesting Name="SysUser" idref="199a7d8d-a61b-4708-b940-4ac0f431a6b4" />
       </ReferedNesting>
     </Column>
-    <Column Name="Last10Notifications" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="UserNotification.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="resizevertical" XPos="0" YPos="12" id="d71787aa-96f4-4b5c-9cc7-fc2d167af214">
+    <Column Name="Last10Notifications" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="UserNotification.allInstances-&gt;orderDescending(x|x.CreateTime)-&gt;subSequence(1,10)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="resizevertical" XPos="0" YPos="15" id="d71787aa-96f4-4b5c-9cc7-fc2d167af214">
       <ReferedNesting>
-        <Nesting Name="UserNotification" idref="899f191d-28a2-483a-acf0-c799be1342df" />
+        <Nesting Name="UserNotification" idref="5bbca3f4-14dd-447f-b610-63648dbda1cb" />
       </ReferedNesting>
     </Column>
+    <Column Name="NewUsersLast7Days" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="User.PSEvalValue(User.allInstances-&gt;select(su|su.CreateTime &gt; v7DaysAgo)-&gt;size, vUpdated)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="d8a29154-2c0f-4dde-bc63-20c63d3afd70" />
+    <Column Name="NewSysUsersLast7Days" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysUser.PSEvalValue(SysUser.allInstances-&gt;select(su|su.CreateTime &gt; v7DaysAgo)-&gt;size, vUpdated)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="0" id="40998802-67cf-4a73-88f5-b12fe0cb6bf9" />
+    <Column Name="NewSysUsersToday" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysUser.PSEvalValue(SysUser.allInstances-&gt;select(su|su.CreateTime &gt; vToday)-&gt;size, vUpdated)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3f188090-8eb4-4e12-93f9-4167f8428f34" />
+    <Column Name="NewUsersToday" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="User.PSEvalValue(User.allInstances-&gt;select(su|su.CreateTime &gt; vToday)-&gt;size, vUpdated)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="4" YPos="1" id="0d9467d2-f440-4321-97a5-46b2a54839e9" />
   </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="v7DaysAgo" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vToday" InitialValue="" TypeName="DateTime" UserData="" />
+    <SpanVariable Name="vUpdated" InitialValue="" TypeName="DateTime" UserData="" />
+  </SpanVariables>
 </Span>

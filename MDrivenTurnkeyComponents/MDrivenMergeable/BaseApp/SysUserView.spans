@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="SysUserView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="28402c66-bc14-41ed-a76d-fcbe8913a1ea">
+<Span Name="SysUserView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="60427b31-c041-40aa-b307-600f3b09440e">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
     <AccessGroup Name="Debugging" idref="e0c117bd-3126-4ec4-8d5c-f277bc1cce25" />
@@ -8,12 +8,12 @@
     <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
   </Category>
   <Class>
-    <Class Name="SysUser" idref="61d9836d-3bab-497d-ab04-0d35e66ffd94" />
+    <Class Name="SysUser" idref="3ed2d373-5186-4c1e-abbe-04894db5e19d" />
   </Class>
   <Nesting>
-    <Nesting Name="User" ExpressionActAsForActions="" id="e6a15622-c77f-4e1b-8ec6-2b3867b39f69">
+    <Nesting Name="User" ExpressionActAsForActions="" id="eb08b515-00e6-4a2b-a8c4-cea0d0e7f0ba">
       <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -37,7 +37,7 @@
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+            <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -47,9 +47,9 @@
         <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="2" Expression="self.NamePresentation" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="Effective user's name" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="04c645a0-4c2c-4dd5-90f8-af170efe3d31" />
-        <Column Name="Created" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="7c6a33ff-b1bd-43a6-86f5-d3acc6c29e3c" />
-        <Column Name="UserConfirmations" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.UserConfirmations-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="6" id="a2ac6b73-1992-45eb-aab0-03a2d2a13e18" />
+        <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="2" Expression="self.Name" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="Effective user's name" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="04c645a0-4c2c-4dd5-90f8-af170efe3d31" />
+        <Column Name="Created" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="7c6a33ff-b1bd-43a6-86f5-d3acc6c29e3c" />
+        <Column Name="UserConfirmations" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.UserConfirmations-&gt;size" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="7" id="a2ac6b73-1992-45eb-aab0-03a2d2a13e18" />
       </OwnedColumns>
       <ReferedByColumn>
         <Column Name="EffectiveUserWithAccount" idref="6554e9d9-285a-4fbe-90b2-fa1b4f876409" />
@@ -58,9 +58,9 @@
         <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="SysExternalLoginsList" ExpressionActAsForActions="" id="94725b99-5179-440c-8d3e-f2d7379e15fa">
+    <Nesting Name="SysExternalLoginsList" ExpressionActAsForActions="" id="ab83b401-ffea-4339-accf-06c9a17cca75">
       <Class>
-        <Class Name="SysExternalLogin" idref="1301f227-4657-48e8-be1c-5a9c0b679b2a" />
+        <Class Name="SysExternalLogin" idref="b5dffb25-0158-401d-a973-2515377d51cd" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -79,14 +79,14 @@
         <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="ResetPasswordTicket" ExpressionActAsForActions="" id="5ede349f-18f4-4124-b8b4-9258c9607579">
+    <Nesting Name="ResetPasswordTicket" ExpressionActAsForActions="" id="260a0d7c-f0c7-4d6d-98c7-d5f3cd05e4b5">
       <Class>
-        <Class Name="ResetPasswordTicket" idref="8b1094e3-6a74-4a0d-8d8a-8847697ee05c" />
+        <Class Name="ResetPasswordTicket" idref="76bb5cf6-252b-4298-907a-8f3aa4879277" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="SetPassword" idref="ac117a63-c564-4c77-b2e4-84beb73ea0f6" />
+            <ClassAction Name="SetPassword" idref="c80e2a68-2760-4976-bd19-76061a92c640" />
           </AbstractAction>
         </OptOutActionInNesting>
       </OptOutActionInNesting>
@@ -100,15 +100,15 @@
         <Column Name="ResetPasswordTickets" idref="c0a6bfe1-4563-40fe-83f2-bfae1458d366" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="LookedUpUsers" ExpressionActAsForActions="" id="45e4e46b-b0e0-4c5d-8325-31d027ff37fe">
+    <Nesting Name="LookedUpUsers" ExpressionActAsForActions="" id="949e4fe8-2a89-4f9c-ad4a-15f32d5f2c0c">
       <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="UserSettings" idref="5ec3ed97-916f-40ff-996a-b6b326879464" />
+            <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -116,7 +116,7 @@
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+            <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting />
@@ -145,7 +145,7 @@
         <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="LookedUpUserWithAccount" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="b63e8c4d-d45d-4066-bc8b-0b390abfdeeb" />
+        <Column Name="LookedUpUserWithAccount" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="11" id="b63e8c4d-d45d-4066-bc8b-0b390abfdeeb" />
       </OwnedColumns>
       <ReferedByColumn>
         <Column Name="LookupUser" idref="6a1a489e-73ca-43c9-8c37-82230a5ba44b" />
@@ -155,7 +155,7 @@
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ShowSysUser" idref="313b5778-c907-41ee-8b0f-d3fb09454acd" />
+        <ClassAction Name="ShowSysUser" idref="69fb0a6b-9b45-4d2e-b2ec-7728a6d056f9" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -164,7 +164,7 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="SetAsCurrentSysUser" idref="61bceebd-8971-413d-9c90-c399d1528b20" />
+        <ClassAction Name="SetAsCurrentSysUser" idref="33659bf7-64fd-4d2a-b0fb-8dc3bc7e31a8" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -174,67 +174,85 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+        <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
-      </AbstractAction>
-    </OptOutActionInSpan>
-    <OptOutActionInSpan />
-    <OptOutActionInSpan />
-    <OptOutActionInSpan />
-    <OptOutActionInSpan />
-    <OptOutActionInSpan>
-      <AbstractAction>
-        <ClassAction Name="ActivateThisUser" idref="08ed04cd-6e0e-4483-a03a-5044191cb65e" />
+        <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
     <OptOutActionInSpan />
     <OptOutActionInSpan />
     <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="ActivateThisUser" idref="36676406-049f-494f-9077-9fb94cb7a953" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
     <OptOutActionInSpan />
     <OptOutActionInSpan />
     <OptOutActionInSpan />
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ContextAction Name="SetPassword" idref="da01789e-5335-4089-9411-aaa70814464d" />
+        <ContextAction Name="SetPassword" idref="a626e272-cbc6-4e7a-a4d0-1ef8a3559d73" />
       </AbstractAction>
     </OptOutActionInSpan>
   </OptOutActionInSpan>
   <OwnedColumns>
     <Column Name="UserName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="0" id="4b047a39-31f0-42b2-8ffb-a874ed2a0e6e" />
     <Column Name="Id" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.Id" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="0" id="25388d89-fa0f-4643-adb5-b9205018c96f" />
-    <Column Name="IsAdmin" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsAdmin" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="ee345943-b3d7-4fb7-acec-79b55551fcb6" />
+    <Column Name="IsAdmin" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsAdmin" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="ee345943-b3d7-4fb7-acec-79b55551fcb6">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
     <Column Name="SysExternalLoginsList" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.SysExternalLogins" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="6" YPos="3" id="55e25951-85b7-480b-938a-ee86b4946320">
       <ReferedNesting>
-        <Nesting Name="SysExternalLoginsList" idref="94725b99-5179-440c-8d3e-f2d7379e15fa" />
+        <Nesting Name="SysExternalLoginsList" idref="ab83b401-ffea-4339-accf-06c9a17cca75" />
       </ReferedNesting>
     </Column>
     <Column Name="PasswordHash" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.PasswordHash" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="1" id="8e51d733-13de-4c12-9265-bffc7c1682af" />
     <Column Name="SecurityStamp" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.SecurityStamp" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="8" YPos="2" id="cfc9c55a-79ca-4535-b107-13e63eeaeffc" />
-    <Column Name="IsLocked" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsLocked" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="c71c4307-a827-48ee-bd3a-0f9dc013d11d" />
-    <Column Name="TestAccount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TestAccount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="2ed2ef2a-ff9f-4b41-98f4-a5fba8b58132" />
+    <Column Name="AccountLocked" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsLocked" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="c71c4307-a827-48ee-bd3a-0f9dc013d11d">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="TestAccount" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.TestAccount" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="2ed2ef2a-ff9f-4b41-98f4-a5fba8b58132">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
     <Column Name="ResetPasswordTickets" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.ResetPasswordTickets" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="6" YPos="9" id="c0a6bfe1-4563-40fe-83f2-bfae1458d366">
       <ReferedNesting>
-        <Nesting Name="ResetPasswordTicket" idref="5ede349f-18f4-4124-b8b4-9258c9607579" />
+        <Nesting Name="ResetPasswordTicket" idref="260a0d7c-f0c7-4d6d-98c7-d5f3cd05e4b5" />
       </ReferedNesting>
     </Column>
+    <Column Name="AccountConfirmed" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.AccountUsable" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="051fbbe1-d61b-4924-afd3-dac4740631e5" />
+    <Column Name="AccountConfirmationNotRequired" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.AccountConfirmationNotRequiredUI" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="0b6e04a7-b532-4758-93a8-5b131d895ae3">
+      <TaggedValue>
+        <TaggedValue Tag="Switch" Value="True" />
+      </TaggedValue>
+    </Column>
     <Column Name="Log" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.Log" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="resizevertical" XPos="1" YPos="15" id="ec8c81ab-3d7a-488b-ad22-b64e18efa105" />
-    <Column Name="UsersName" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.User.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="User link's name" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="712145bd-3b65-4673-9711-b36b168e46fa" />
+    <Column Name="UsersName" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.User.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="User link's name" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="10" id="712145bd-3b65-4673-9711-b36b168e46fa" />
     <Column Name="IsNotALogin" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.IsNotALogin" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="3" YPos="2" id="805d81db-6ca0-436d-9bc5-cb123ce3e70b" />
     <Column Name="EffectiveUserWithAccount" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="self.EffectiveUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="6554e9d9-285a-4fbe-90b2-fa1b4f876409">
       <ReferedNesting>
-        <Nesting Name="User" idref="e6a15622-c77f-4e1b-8ec6-2b3867b39f69" />
+        <Nesting Name="User" idref="eb08b515-00e6-4a2b-a8c4-cea0d0e7f0ba" />
       </ReferedNesting>
     </Column>
     <Column Name="LookupUser" ActionPeriodicityMillisec="-1" ColSpan="6" ColSpanWhenInGrid="1" Expression="self.LookupUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="9" id="6a1a489e-73ca-43c9-8c37-82230a5ba44b">
       <ReferedNesting>
-        <Nesting Name="LookedUpUsers" idref="45e4e46b-b0e0-4c5d-8325-31d027ff37fe" />
+        <Nesting Name="LookedUpUsers" idref="949e4fe8-2a89-4f9c-ad4a-15f32d5f2c0c" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

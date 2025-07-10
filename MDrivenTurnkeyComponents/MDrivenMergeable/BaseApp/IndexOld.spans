@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="IndexOld" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="343b3c71-0811-4b46-8826-3886854e9f08">
+  <Class>
+    <Class Name="SysSuperClass" idref="d976067a-a3da-400c-b8f2-3a97783f0e32" />
+  </Class>
+  <OwnedColumns>
+    <Column Name="Col" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'Rename BaseAppIndex ViewModel to Index to use ViewModel'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a6b93cde-7553-46df-aff3-9b823f322094" />
+  </OwnedColumns>
+</Span>

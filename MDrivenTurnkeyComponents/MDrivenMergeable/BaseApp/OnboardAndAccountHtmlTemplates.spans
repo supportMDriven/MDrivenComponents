@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="OnboardAndAccountHtmlTemplates" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="294ba038-cc67-44bc-8815-7a2ced4f6b57">
+<Span Name="OnboardAndAccountHtmlTemplates" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="472e93ed-d5da-4cf3-a62e-9b753dab1bdf">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
-  <Category>
-    <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
-  </Category>
   <Class>
-    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
   </Class>
   <Nesting>
-    <Nesting Name="TemplateSingleton" ExpressionActAsForActions="" id="0c906d9f-d847-4b86-9ddf-28710cad6679">
+    <Nesting Name="TemplateSingleton" ExpressionActAsForActions="" id="aada179a-e8d7-4c00-8c85-59a6eaba6b0b">
       <Class>
-        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+            <ClassAction Name="ToggleDebugging" idref="120df888-25fa-466d-b131-676b5dc53e70" />
           </AbstractAction>
         </OptOutActionInNesting>
+        <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
@@ -29,189 +27,314 @@
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="EditUserNotificationUpdate" idref="8a2919cd-1342-4943-babf-a679706422d1" />
+            <ClassAction Name="EditWelcomeForConfirmedUser" idref="9a3cf68e-8117-4a9c-9a94-3926cade59b4" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditUserConfirmation" idref="1b05e5f5-3433-4bae-b3cb-9a8abbf59fe3" />
           </AbstractAction>
         </OptOutActionInNesting>
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="OnboardingEmails" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Onboarding Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="f2da4bff-5eb1-473c-87a8-278d8d608536" />
-        <Column Name="UserConfirmation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserConfirmation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="2a98c15b-b2e0-4c8a-b8cc-44123e5ef4f1">
+        <Column Name="OnboardingEmails" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Onboarding Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="5ee801ce-8fe2-4992-b468-379b6d1f0762" />
+        <Column Name="UserConfirmation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserConfirmation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="ee5bdb29-42de-47cf-8995-d262d650f573">
           <ColumnForPickList>
-            <Column Name="UserConfirmationPickList" idref="5bb1fc2c-5bc0-4c34-abd1-4e8daf8dd806" />
+            <Column Name="UserConfirmationPickList" idref="48cbdc11-8ca0-4093-b943-80db48c3767b" />
           </ColumnForPickList>
         </Column>
-        <Column Name="UserConfirmationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5bb1fc2c-5bc0-4c34-abd1-4e8daf8dd806">
+        <Column Name="UserConfirmationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="48cbdc11-8ca0-4093-b943-80db48c3767b">
           <ReferedNesting>
-            <Nesting Name="UserConfirmationPickList" idref="7417c476-0f2a-448b-b69a-38f7b2c72cf1" />
+            <Nesting Name="UserConfirmationPickList" idref="6347b8b4-5c68-422f-93a6-4b1209c3f111" />
           </ReferedNesting>
         </Column>
-        <Column Name="EditUserConfirmation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="db10d16f-0d8f-474c-aea1-c08071c7edc7">
+        <Column Name="EditUserConfirmation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="123167f0-ec7f-44b7-aaa0-7173024d60b9">
           <ActionToExecute>
-            <ClassAction Name="EditUserConfirmation" idref="f7edc091-d622-43e2-9072-4844f046354d" />
+            <ClassAction Name="EditUserConfirmation" idref="1b05e5f5-3433-4bae-b3cb-9a8abbf59fe3" />
           </ActionToExecute>
         </Column>
-        <Column Name="UserConfirmation_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserConfirmation.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="1" id="4a938d50-3efd-4c43-809a-4aae29f8241f">
+        <Column Name="UserConfirmation_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserConfirmation.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="1" id="aea8937a-f62d-470e-ba77-723f6d748c32">
           <TaggedValue>
             <TaggedValue Tag="DataIsHtml" Value="True" />
           </TaggedValue>
         </Column>
-        <Column Name="ResetPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ResetPassword" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="8" id="aee0250d-83b9-48d4-83a5-eb7e5ee210c2">
+        <Column Name="ResetPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ResetPassword" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="fb7c587c-fa12-43c1-8169-928687221f00">
           <ColumnForPickList>
-            <Column Name="ResetPasswordPickList" idref="a5b6b8d3-f060-4f81-81f8-dd7ed155824e" />
+            <Column Name="ResetPasswordPickList" idref="b7e6e73c-0eb2-4afc-a86c-7b882ebc2419" />
           </ColumnForPickList>
         </Column>
-        <Column Name="ResetPasswordPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="a5b6b8d3-f060-4f81-81f8-dd7ed155824e">
+        <Column Name="ResetPasswordPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b7e6e73c-0eb2-4afc-a86c-7b882ebc2419">
           <ReferedNesting>
-            <Nesting Name="ResetPasswordPickList" idref="833e7e70-7002-4f6a-9885-9d87385d8ee2" />
+            <Nesting Name="ResetPasswordPickList" idref="a7dbbb0f-9617-4674-a72b-967ead168700" />
           </ReferedNesting>
         </Column>
-        <Column Name="EditResetPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="8" id="23e4447e-cfde-4859-be92-4fe4039a3752">
+        <Column Name="EditResetPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="6" id="45585500-7787-4532-a8dc-77ebf53efb35">
           <ActionToExecute>
-            <ClassAction Name="EditResetPassword" idref="fc5fd275-dfd8-427f-875d-8900c86efa90" />
+            <ClassAction Name="EditResetPassword" idref="77d39e47-20d2-4920-8512-6ef879621391" />
           </ActionToExecute>
         </Column>
-        <Column Name="ResetPassword_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.ResetPassword.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="8" id="71617719-6168-4840-ae3e-83eeb9133fb6">
+        <Column Name="ResetPassword_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.ResetPassword.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="6" id="82a1f21f-341a-46e9-bd30-556db5fc20b1">
           <TaggedValue>
             <TaggedValue Tag="DataIsHtml" Value="True" />
           </TaggedValue>
         </Column>
-        <Column Name="WelcomeForConfirmedUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.WelcomeForConfirmedUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="4466fa9f-0dc5-40b4-95e0-52248b9a5ac1">
+        <Column Name="WelcomeForConfirmedUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.WelcomeForConfirmedUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="2c8ac2df-1211-4482-8a4e-c3c214d2f167">
           <ColumnForPickList>
-            <Column Name="WelcomeForConfirmedUserPickList" idref="798e44bd-6a0b-4982-b6a2-43f296fee921" />
+            <Column Name="WelcomeForConfirmedUserPickList" idref="4fcb442e-da31-44b7-8d6d-f7131db4ae7e" />
           </ColumnForPickList>
         </Column>
-        <Column Name="WelcomeForConfirmedUserPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="798e44bd-6a0b-4982-b6a2-43f296fee921">
+        <Column Name="WelcomeForConfirmedUserPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="4fcb442e-da31-44b7-8d6d-f7131db4ae7e">
           <ReferedNesting>
-            <Nesting Name="WelcomeForConfirmedUserTemplatePickList" idref="16972c33-7517-4e25-9fa6-abed1a38f5be" />
+            <Nesting Name="WelcomeForConfirmedUserTemplatePickList" idref="d604b4a9-eb18-4c2d-a1bb-0125cfea8fda" />
           </ReferedNesting>
         </Column>
-        <Column Name="EditWelcomeForConfirmedUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="3" id="7fd09e19-0c1b-473c-b101-b0adf0920e7e">
+        <Column Name="EditWelcomeForConfirmedUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="3" id="e6783857-003a-4808-9873-217b4f4cece9">
           <ActionToExecute>
-            <ClassAction Name="EditWelcomeForConfirmedUser" idref="5fb29010-7b53-49a7-9aa3-e3a9b5278d07" />
+            <ClassAction Name="EditWelcomeForConfirmedUser" idref="9a3cf68e-8117-4a9c-9a94-3926cade59b4" />
           </ActionToExecute>
         </Column>
-        <Column Name="WelcomeForConfirmedUser_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.WelcomeForConfirmedUser.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="3" id="1185de2b-443e-4f18-a69f-0986218aa63e">
+        <Column Name="WelcomeForConfirmedUser_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.WelcomeForConfirmedUser.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="3" id="446303ae-578c-43d5-b662-c3bad0a4fea3">
           <TaggedValue>
             <TaggedValue Tag="DataIsHtml" Value="True" />
           </TaggedValue>
         </Column>
-        <Column Name="AccountHandlingEmails" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Account Handling Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="7" id="fe64f2b4-70f2-413e-9154-8b4bf04016d8" />
-        <Column Name="UserRegistration" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserRegistration" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="421cfef4-ecb6-4e21-8616-bc7b13cf90c3">
+        <Column Name="AccountHandlingEmails" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Account Handling Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="5" id="748699a4-c696-4fc8-be27-cf17a6f08d9c" />
+        <Column Name="UserRegistration" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserRegistration" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="09df24d9-9961-4c4f-861d-dd2e06abff7a">
           <ColumnForPickList>
-            <Column Name="UserRegistrationPickList" idref="cfbbdc81-fb98-4c87-9565-2b7e06a7d8e7" />
+            <Column Name="UserRegistrationPickList" idref="24b58b31-de79-4d91-bf8f-abe757091a94" />
           </ColumnForPickList>
         </Column>
-        <Column Name="UserRegistrationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="cfbbdc81-fb98-4c87-9565-2b7e06a7d8e7">
+        <Column Name="UserRegistrationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="24b58b31-de79-4d91-bf8f-abe757091a94">
           <ReferedNesting>
-            <Nesting Name="UserRegistrationTemplatePickList" idref="32523d28-6d55-4742-a5f2-902e6111eb74" />
+            <Nesting Name="UserRegistrationTemplatePickList" idref="6f3c8f42-290f-45d5-8408-192a00a9230f" />
           </ReferedNesting>
         </Column>
-        <Column Name="EditUserRegistration" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="5" id="28f5ab50-bcf4-480e-84e9-67bec0dedc17">
+        <Column Name="EditUserRegistration" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="11" id="de86305a-6bff-47bc-934c-6e17120f5e6f">
           <ActionToExecute>
-            <ClassAction Name="EditUserRegistration" idref="f3c1c6aa-e42f-4d21-b69e-5166fcc95c78" />
+            <ClassAction Name="EditUserRegistration" idref="c23f6ca5-a273-4d1f-8ddc-121e46055e67" />
           </ActionToExecute>
         </Column>
-        <Column Name="UserRegistration_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserRegistration.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="5" id="984a05f2-56a2-449f-af98-bd957e3cd065">
+        <Column Name="UserRegistration_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserRegistration.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="11" id="df0c70c7-1741-4e83-88d2-1b10ceac90eb">
           <TaggedValue>
             <TaggedValue Tag="DataIsHtml" Value="True" />
           </TaggedValue>
+        </Column>
+        <Column Name="NotifcationEmails" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Notification Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="8" id="49028fdf-f75f-428b-916c-ed866713c620" />
+        <Column Name="CombinedNotification" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CombinedNotification" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="0364b493-d649-4768-b941-2ab29b18ccc8">
+          <ColumnForPickList>
+            <Column Name="CombinedNotificationPickList" idref="929f2422-4c6e-4196-859d-4721b1db67e0" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="CombinedNotificationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="929f2422-4c6e-4196-859d-4721b1db67e0">
+          <ReferedNesting>
+            <Nesting Name="CombinedNotificationPickList" idref="257c4f40-5669-4c32-8c57-2e26a4161ad6" />
+          </ReferedNesting>
+        </Column>
+        <Column Name="CombinedNotification_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.CombinedNotification.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="9" id="df16e139-c9d2-4902-bcb0-8e2319ecf689">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="EditCombinedNotification" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="9" id="d4809ec3-1299-4ac8-8661-9c6aa16ba79c">
+          <ActionToExecute>
+            <ClassAction Name="EditCombinedNotification" idref="0beac666-59cb-4a71-9b33-4c6d2aad7c18" />
+          </ActionToExecute>
         </Column>
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="TemplateSingleton" idref="77ffd387-70db-4d35-ba38-be7585d5ad41" />
+        <Column Name="TemplateSingleton" idref="936fe23a-bfa5-42f8-90cf-904827006038" />
       </ReferedByColumn>
       <TaggedValue>
         <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="UserConfirmationPickList" ExpressionActAsForActions="" id="7417c476-0f2a-448b-b69a-38f7b2c72cf1">
+    <Nesting Name="UserConfirmationPickList" ExpressionActAsForActions="" id="6347b8b4-5c68-422f-93a6-4b1209c3f111">
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d89b3620-0234-40f8-bfa9-918a1365624e" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UserConfirmationPickList" idref="48cbdc11-8ca0-4093-b943-80db48c3767b" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="ResetPasswordPickList" ExpressionActAsForActions="" id="a7dbbb0f-9617-4674-a72b-967ead168700">
+      <Class>
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9a44beff-ffc7-476d-86b7-1fe007d18af4" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="ResetPasswordPickList" idref="b7e6e73c-0eb2-4afc-a86c-7b882ebc2419" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="WelcomeForConfirmedUserTemplatePickList" ExpressionActAsForActions="" id="d604b4a9-eb18-4c2d-a1bb-0125cfea8fda">
+      <Class>
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="2fb5416c-d343-497d-9ebc-630985a3bdaf" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="WelcomeForConfirmedUserPickList" idref="4fcb442e-da31-44b7-8d6d-f7131db4ae7e" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="UserRegistrationTemplatePickList" ExpressionActAsForActions="" id="6f3c8f42-290f-45d5-8408-192a00a9230f">
+      <Class>
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="04d6c678-ce27-4dba-9107-1c824dbe8522" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UserRegistrationPickList" idref="24b58b31-de79-4d91-bf8f-abe757091a94" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="CombinedNotificationPickList" ExpressionActAsForActions="" id="257c4f40-5669-4c32-8c57-2e26a4161ad6">
+      <Class>
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ec29560f-e50a-4fff-94e5-cd6c0122ba54" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="CombinedNotificationPickList" idref="929f2422-4c6e-4196-859d-4721b1db67e0" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="TemplateSingleton_Copy" ExpressionActAsForActions="" id="b4ffb843-0736-4f0f-b709-e8d497df0da3">
+      <Class>
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
       </Class>
       <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+            <ClassAction Name="EditWelcomeForConfirmedUser" idref="9a3cf68e-8117-4a9c-9a94-3926cade59b4" />
           </AbstractAction>
         </OptOutActionInNesting>
-      </OptOutActionInNesting>
-      <OwnedColumns>
-        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8e622430-b68c-4b59-858c-0f6e47c6f16f" />
-      </OwnedColumns>
-      <ReferedByColumn>
-        <Column Name="UserConfirmationPickList" idref="5bb1fc2c-5bc0-4c34-abd1-4e8daf8dd806" />
-      </ReferedByColumn>
-    </Nesting>
-    <Nesting Name="ResetPasswordPickList" ExpressionActAsForActions="" id="833e7e70-7002-4f6a-9885-9d87385d8ee2">
-      <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
-      </Class>
-      <OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+            <ClassAction Name="EditUserConfirmation" idref="1b05e5f5-3433-4bae-b3cb-9a8abbf59fe3" />
           </AbstractAction>
         </OptOutActionInNesting>
-      </OptOutActionInNesting>
-      <OwnedColumns>
-        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0a6aef00-dbfb-4878-bc99-7644fda69d42" />
-      </OwnedColumns>
-      <ReferedByColumn>
-        <Column Name="ResetPasswordPickList" idref="a5b6b8d3-f060-4f81-81f8-dd7ed155824e" />
-      </ReferedByColumn>
-    </Nesting>
-    <Nesting Name="WelcomeForConfirmedUserTemplatePickList" ExpressionActAsForActions="" id="16972c33-7517-4e25-9fa6-abed1a38f5be">
-      <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
-      </Class>
-      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="Delete" idref="f3c05c15-dda3-4b2e-92e5-c167274cd8d4" />
+            <ClassAction Name="ToggleDebugging" idref="120df888-25fa-466d-b131-676b5dc53e70" />
           </AbstractAction>
         </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
       </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="48fa2b54-6ce1-449e-9bc8-772b6a27ef7b" />
+        <Column Name="OnboardingEmails" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Onboarding Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="f3d1855e-fdf1-4372-b1fb-384712deb665" />
+        <Column Name="UserConfirmation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserConfirmation" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="1" id="09defc50-edd8-46b5-8655-119f5919aa3f">
+          <ColumnForPickList>
+            <Column Name="UserConfirmationPickList" idref="d8aec522-3f18-454d-8b69-2d264b2fa71b" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="UserConfirmationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d8aec522-3f18-454d-8b69-2d264b2fa71b" />
+        <Column Name="EditUserConfirmation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="1" id="fe7f7d1a-d6f1-4700-b84f-820851c9e636">
+          <ActionToExecute>
+            <ClassAction Name="EditUserConfirmation" idref="1b05e5f5-3433-4bae-b3cb-9a8abbf59fe3" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="UserConfirmation_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserConfirmation.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="1" id="90b1bd85-b411-47df-beb1-84c3916a9dfe">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="ResetPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ResetPassword" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="6" id="9197f7fb-65d8-4c67-a780-d50bc6770c67">
+          <ColumnForPickList>
+            <Column Name="ResetPasswordPickList" idref="491da8a1-23a5-4046-b641-15d5d406d18c" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="ResetPasswordPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="491da8a1-23a5-4046-b641-15d5d406d18c" />
+        <Column Name="EditResetPassword" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="6" id="96ddc5e0-e998-4c52-b6ad-68d8ca272b94">
+          <ActionToExecute>
+            <ClassAction Name="EditResetPassword" idref="77d39e47-20d2-4920-8512-6ef879621391" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="ResetPassword_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.ResetPassword.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="6" id="0916b9e6-a31f-4c0c-93ca-35681f612b9d">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="WelcomeForConfirmedUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.WelcomeForConfirmedUser" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="3" id="9e74299e-abe6-4647-8cf4-27124223c4ed">
+          <ColumnForPickList>
+            <Column Name="WelcomeForConfirmedUserPickList" idref="1ebeebe7-31f0-491c-92fc-86ab43b00db6" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="WelcomeForConfirmedUserPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="1ebeebe7-31f0-491c-92fc-86ab43b00db6" />
+        <Column Name="EditWelcomeForConfirmedUser" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="3" id="1dd407eb-974a-46ff-a7b1-16dc8e6c6d2e">
+          <ActionToExecute>
+            <ClassAction Name="EditWelcomeForConfirmedUser" idref="9a3cf68e-8117-4a9c-9a94-3926cade59b4" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="WelcomeForConfirmedUser_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.WelcomeForConfirmedUser.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="3" id="a008094c-5c70-4dfb-beff-3100beef75c8">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="AccountHandlingEmails" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Account Handling Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="5" id="13aed50c-c50e-492b-b750-c26cd753013d" />
+        <Column Name="UserRegistration" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.UserRegistration" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="11" id="8d72e828-6275-4609-9b4d-4706003ef3ed">
+          <ColumnForPickList>
+            <Column Name="UserRegistrationPickList" idref="5b521eaa-4e4b-4137-b367-0a7922598ac6" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="UserRegistrationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="5b521eaa-4e4b-4137-b367-0a7922598ac6" />
+        <Column Name="EditUserRegistration" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="Edit" PresentationStringColSpan="0" RowSpan="1" StyleRef="" XPos="3" YPos="11" id="18ba70bb-3d19-4c19-a298-1187ad3b8241">
+          <ActionToExecute>
+            <ClassAction Name="EditUserRegistration" idref="c23f6ca5-a273-4d1f-8ddc-121e46055e67" />
+          </ActionToExecute>
+        </Column>
+        <Column Name="UserRegistration_EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="8" ColSpanWhenInGrid="1" Expression="self.UserRegistration.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="2" StyleRef="htmlexample" XPos="4" YPos="11" id="b6a6ec0f-f397-4e5d-8229-35dd7278ba1d">
+          <TaggedValue>
+            <TaggedValue Tag="DataIsHtml" Value="True" />
+          </TaggedValue>
+        </Column>
+        <Column Name="NotifcationEmails" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'Notifcation Emails'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="8" id="2d3ecd87-f102-4dbd-9759-3b4c6e542d63" />
+        <Column Name="CombinedNotification" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.CombinedNotification" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="9" id="52e666a4-eb59-45b0-b3d8-c63493b725d7">
+          <ColumnForPickList>
+            <Column Name="CombinedNotificationPickList" idref="585a0a39-6bdd-47b6-876f-9574ddf2e50e" />
+          </ColumnForPickList>
+        </Column>
+        <Column Name="CombinedNotificationPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="585a0a39-6bdd-47b6-876f-9574ddf2e50e" />
       </OwnedColumns>
-      <ReferedByColumn>
-        <Column Name="WelcomeForConfirmedUserPickList" idref="798e44bd-6a0b-4982-b6a2-43f296fee921" />
-      </ReferedByColumn>
-    </Nesting>
-    <Nesting Name="UserRegistrationTemplatePickList" ExpressionActAsForActions="" id="32523d28-6d55-4742-a5f2-902e6111eb74">
-      <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
-      </Class>
-      <OwnedColumns>
-        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9d04d252-9219-4461-b532-495159892aa1" />
-      </OwnedColumns>
-      <ReferedByColumn>
-        <Column Name="UserRegistrationPickList" idref="cfbbdc81-fb98-4c87-9565-2b7e06a7d8e7" />
-      </ReferedByColumn>
-    </Nesting>
-    <Nesting Name="OfferExistingUsersToMergeWithNewPickList" ExpressionActAsForActions="" id="86ccbc72-bdcc-488b-b5cc-bddb0bb0a2ca">
-      <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
-      </Class>
-      <OwnedColumns>
-        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="b971f910-37f3-4496-8dae-3f3aeff894dc" />
-      </OwnedColumns>
+      <TaggedValue>
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="True" />
+      </TaggedValue>
     </Nesting>
   </Nesting>
   <OptOutActionInSpan>
     <OptOutActionInSpan />
     <OptOutActionInSpan />
-    <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+        <ClassAction Name="ToggleDebugging" idref="120df888-25fa-466d-b131-676b5dc53e70" />
       </AbstractAction>
     </OptOutActionInSpan>
+    <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="TemplateSingleton" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="5" id="77ffd387-70db-4d35-ba38-be7585d5ad41">
+    <Column Name="TemplateSingleton" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="4" id="936fe23a-bfa5-42f8-90cf-904827006038">
       <ReferedNesting>
-        <Nesting Name="TemplateSingleton" idref="0c906d9f-d847-4b86-9ddf-28710cad6679" />
+        <Nesting Name="TemplateSingleton" idref="aada179a-e8d7-4c00-8c85-59a6eaba6b0b" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

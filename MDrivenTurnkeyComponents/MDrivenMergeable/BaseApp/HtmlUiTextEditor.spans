@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="HtmlUiTextEditor" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5a1ee598-e6ec-489f-971b-1ec32652ca6d">
+<Span Name="HtmlUiTextEditor" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="dcddf945-d435-46de-9575-bb1956035332">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,12 +7,12 @@
     <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
   </Category>
   <Class>
-    <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+    <Class Name="HtmlUiText" idref="adbdd777-7e76-401a-a139-6c304dcf8f6b" />
   </Class>
   <OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="EditTemplate" idref="bd6bb0d2-f17b-43b0-ba6d-9fb896ff822c" />
+        <ClassAction Name="EditTemplate" idref="493a5f57-d844-4f5f-b719-0f7aa81872af" />
       </AbstractAction>
     </OptOutActionInSpan>
   </OptOutActionInSpan>

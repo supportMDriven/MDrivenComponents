@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="HourOfDayValuestore" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="262fb10c-41f8-437a-a674-71bbd0eb08cc">
+<Span Name="HourOfDayValuestore" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="972770f9-afa1-4d90-b851-f93b0f023572">
   <Class>
-    <Class Name="HourOfDay" idref="cc21f3d5-08f3-4d69-aecf-3e628bde138b" />
+    <Class Name="HourOfDay" idref="4dcf5357-a75d-4372-9bef-841974f31ccc" />
   </Class>
   <Nesting>
-    <Nesting Name="HourOfDay" ExpressionActAsForActions="" id="0f891442-403b-46f6-bceb-9bba04a71329">
+    <Nesting Name="HourOfDay" ExpressionActAsForActions="" id="0d794660-186a-4434-b969-9fd9c5babf45">
       <Class>
-        <Class Name="HourOfDay" idref="cc21f3d5-08f3-4d69-aecf-3e628bde138b" />
+        <Class Name="HourOfDay" idref="4dcf5357-a75d-4372-9bef-841974f31ccc" />
       </Class>
       <OwnedColumns>
         <Column Name="HourOfDay" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="4" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="95678997-fa3a-4ce3-a882-4b1e6d9e74cd" />
@@ -26,7 +26,7 @@
   <OwnedColumns>
     <Column Name="AllHourOfDay" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="HourOfDay.allinstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="a8c64dea-b4ed-47d9-baf6-743ac60747ef">
       <ReferedNesting>
-        <Nesting Name="HourOfDay" idref="0f891442-403b-46f6-bceb-9bba04a71329" />
+        <Nesting Name="HourOfDay" idref="0d794660-186a-4434-b969-9fd9c5babf45" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

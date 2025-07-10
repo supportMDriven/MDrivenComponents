@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="UserSettings" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="(self = SysSingleton.EU) or SysSingleton.oclSingleton.UserIsInAdminMode" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="ColumnDesignOrder" id="de8701b3-3c23-4df7-bb1b-ebb35e0d1663">
+<Span Name="UserSettings" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="(self = SysSingleton.EU) or SysSingleton.oclSingleton.UserIsInAdminMode" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="ColumnDesignOrder" id="5b9c80ae-4de8-46c8-962f-0842f4bd16cf">
   <AccessGroups>
     <AccessGroup Name="UserWithAccount" idref="482a21b7-b0de-490b-80c9-cedc52441d03" />
     <AccessGroup Name="UserWithConfirmedAccount" idref="6e30a67a-6c27-49f6-bd5b-06cae3ed08fd" />
@@ -8,7 +8,7 @@
     <Category Name="UserSettings" idref="46cc1aeb-12fa-4a8e-948b-5c6b619cffa1" />
   </Category>
   <Class>
-    <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+    <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
   </Class>
   <OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -29,7 +29,7 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="MySettings" idref="f4d86ffe-52fc-4e98-939e-c2958d0cc594" />
+        <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -38,7 +38,7 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="UserSettings" idref="5ec3ed97-916f-40ff-996a-b6b326879464" />
+        <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />

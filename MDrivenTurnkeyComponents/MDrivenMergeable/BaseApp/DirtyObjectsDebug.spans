@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="DirtyObjectsDebug" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="994935d9-1cb1-47b1-9284-c0b537c31340">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+    <AccessGroup Name="Debugging" idref="e0c117bd-3126-4ec4-8d5c-f277bc1cce25" />
+  </AccessGroups>
+  <Class>
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
+  </Class>
+  <Nesting>
+    <Nesting Name="DirtyObjects" ExpressionActAsForActions="" id="45974a03-2159-4d21-91e8-3fd948f003ba">
+      <Class>
+        <Class Name="SysSuperClass" idref="d976067a-a3da-400c-b8f2-3a97783f0e32" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="UserSettings" idref="405a2e28-878e-455a-84b2-4fad1941a609" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditUserConfirmation" idref="1b05e5f5-3433-4bae-b3cb-9a8abbf59fe3" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="EditWelcomeForConfirmedUser" idref="9a3cf68e-8117-4a9c-9a94-3926cade59b4" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="CreateCombinedOutgoingNotification" idref="22982e6f-8ac6-4e9c-8dbb-e907af2bf13f" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="oclType" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.oclType.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="6" id="8a029cb7-6d3e-4411-9ac4-6c4691d4ec86" />
+        <Column Name="IsNew" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IsNew" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="6592a735-2bf5-4d55-b3cd-7c629d216941" />
+        <Column Name="Deleted" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="not self.existing" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="5" id="cdf956d7-fbcb-4ad1-b03e-9466fd3c86d9" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="39b8e5e9-cc03-4488-8d98-0ea5be4d1f57" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(self.ChangeTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="888bd0ec-4b02-4683-858a-eecc7fd03c9d" />
+        <Column Name="asString" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="c1cb1e2f-8d93-4e8d-b163-ca67c80dc867" />
+        <Column Name="Guid" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Guid" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="b0b37377-070d-4d76-b44d-05e41fcedcb8" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="DirtyObjects" idref="80dff233-ec62-4244-b5ea-8d666102381e" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="DirtyObjects" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="SysSuperClass.allLoadedObjects-&gt;&#xD;&#xA;  select(ssc|ssc.IsDirty)-&gt;subSequence(1,300)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt; (300 of them)" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="0" id="80dff233-ec62-4244-b5ea-8d666102381e">
+      <ReferedNesting>
+        <Nesting Name="DirtyObjects" idref="45974a03-2159-4d21-91e8-3fd948f003ba" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

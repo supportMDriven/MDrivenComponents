@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="StartScreenForUser" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="87823758-5e40-48d4-a1d7-09b961ad853a">
+<Span Name="StartScreenForUser" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="20" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="831384db-8414-434b-ada0-6bb523a09fab">
   <AccessGroups>
     <AccessGroup Name="UserWithAccount" idref="482a21b7-b0de-490b-80c9-cedc52441d03" />
   </AccessGroups>
@@ -7,34 +7,30 @@
     <Category Name="Dashboards" idref="3b3b43c8-b2cd-433c-a11a-08339c00327e" />
   </Category>
   <Class>
-    <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+    <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
   </Class>
   <Nesting>
-    <Nesting Name="NotificationsForMeList" ExpressionActAsForActions="self.Notification" id="9e34ad3f-3281-4fe3-abda-c586c740800a">
+    <Nesting Name="NotificationsForMeList" ExpressionActAsForActions="self.Notification" id="fe61f8b8-b60e-4b2e-8deb-292945f87912">
       <Class>
-        <Class Name="UserNotification" idref="43276570-c706-4336-b817-fa95580118ed" />
+        <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
       </Class>
       <OptOutActionInNesting>
-        <OptOutActionInNesting>
-          <AbstractAction>
-            <ClassAction Name="DebugNotification" idref="92b7873b-feda-4f9f-8301-7a2b47492935" />
-          </AbstractAction>
-        </OptOutActionInNesting>
+        <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting />
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="CreateNotificationMessage" idref="b113d290-1b1a-4e0c-9b6f-8dc4dfac6f17" />
+            <ClassAction Name="CreateNotificationMessage" idref="d2f46c78-dba3-4244-b039-6b4292f262f2" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DeleteNotification" idref="7d0ecd9b-7541-462b-96bd-73dd09b2f330" />
+            <ClassAction Name="DeleteNotification" idref="33a0ce71-3597-4133-bba3-0065aaa0b732" />
           </AbstractAction>
         </OptOutActionInNesting>
         <OptOutActionInNesting>
           <AbstractAction>
-            <ClassAction Name="DebugUserMessaging" idref="8fbee900-8783-4a85-923b-81f757453408" />
+            <ClassAction Name="DebugUserMessaging" idref="867d3132-1f1c-4a6d-94dc-1b35ca6fac77" />
           </AbstractAction>
         </OptOutActionInNesting>
       </OptOutActionInNesting>
@@ -51,12 +47,12 @@
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ShowSysUser" idref="313b5778-c907-41ee-8b0f-d3fb09454acd" />
+        <ClassAction Name="ShowSysUser" idref="69fb0a6b-9b45-4d2e-b2ec-7728a6d056f9" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="MergeSysUsers" idref="1560ce33-8a2f-424a-a7ee-e80e91152db6" />
+        <ClassAction Name="MergeSysUsers" idref="789c6228-f2da-4527-9aa1-1d159b297cec" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -75,10 +71,10 @@
   <OwnedColumns>
     <Column Name="LoggedInAs" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="'Logged in as ' + SysSingleton.oclSingleton.CurrentUser.UserName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="1" id="91f5d0ae-59d0-4c59-935c-9050593ee9c0" />
     <Column Name="Hello" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="'Hello ' + self.FirstName + '!'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="871f8995-5323-4f82-950a-9b2fe3f358a6" />
-    <Column Name="StartScreenInfo" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="'Startscreen for ' + self.oclType.asString + ' ' + self.NamePresentation + '   (NOT EFFECTIVE USER)'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.EU &lt;&gt; self" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="2" id="ca59759c-ef69-4b61-828a-a1411f55f3b5" />
+    <Column Name="StartScreenInfo" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="'Startscreen for ' + self.oclType.asString + ' ' + self.Name + '   (NOT EFFECTIVE USER)'" ExpressionForReadOnly="" ExpressionForVisible="SysSingleton.EU &lt;&gt; self" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h4" XPos="0" YPos="2" id="ca59759c-ef69-4b61-828a-a1411f55f3b5" />
     <Column Name="ActiveNotificationsForMe" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="self.ActiveNotificationsForMe" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="8" StyleRef="" XPos="0" YPos="4" id="09a12d94-4779-4a23-b60c-8736dac47094">
       <ReferedNesting>
-        <Nesting Name="NotificationsForMeList" idref="9e34ad3f-3281-4fe3-abda-c586c740800a" />
+        <Nesting Name="NotificationsForMeList" idref="fe61f8b8-b60e-4b2e-8deb-292945f87912" />
       </ReferedNesting>
     </Column>
     <Column Name="Now" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="Calendar.DateTimeSmartFormat(Calendar.Now)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="9" YPos="0" id="6584b4c6-9935-4c64-93d0-5c9d50eb8f98" />

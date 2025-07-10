@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="OutgoingCombinedNotificationDataView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="38a63d61-b8f4-478e-b09c-56bb23ac8a21">
+  <Class>
+    <Class Name="OutgoingCombinedNotification" idref="aa2cb7d4-fe2b-48f0-8eeb-ebd151c4fe44" />
+  </Class>
+  <Nesting>
+    <Nesting Name="UserNotificationForRegistration" ExpressionActAsForActions="" id="c11a6b9f-a8ec-4ce6-b647-32a22b76352f">
+      <Class>
+        <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="Dismiss" idref="0e83faae-87ec-464f-97c8-18a66defa85a" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="CreateNotificationMessage" idref="d2f46c78-dba3-4244-b039-6b4292f262f2" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="FragmentHTML" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'&lt;INJECTSTRUCTURE&gt;' + self.Notification.GetTextAsHtml(self).replace('&lt;html&gt;','').replace('&lt;/html&gt;','') + '&lt;/INJECTSTRUCTURE&gt;'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="220977a4-2e6a-4081-96ed-49c501120e74" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UserRegistrationNotifications" idref="4e6b0cf2-1624-4ea0-8392-5a30fd0b8048" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting Name="UserNotification" ExpressionActAsForActions="" id="817a881d-7e73-4298-9702-9d162d9b9d7c">
+      <Class>
+        <Class Name="UserNotification" idref="31b79b74-8d73-49a2-bc15-4e6cce3f2bc5" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="CreateNotificationMessage" idref="d2f46c78-dba3-4244-b039-6b4292f262f2" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction Name="Dismiss" idref="0e83faae-87ec-464f-97c8-18a66defa85a" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column Name="FragmentHTML" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="'&lt;INJECTSTRUCTURE&gt;' + self.Notification.GetTextAsHtml(self).replace('&lt;html&gt;','').replace('&lt;/html&gt;','') + '&lt;/INJECTSTRUCTURE&gt;'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="0a908dd6-1854-4d87-b3fd-7bf1a31d1bfb" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="UserNotifications" idref="f7fe8208-bae8-4930-a99d-b360c4337bd5" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column Name="TemplateHtml" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="TemplateSingleton.SO.CombinedNotification.EmailXHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="8ee7a3aa-4fd6-4266-972d-4bb26c8f6ed9" />
+    <Column Name="SiteURL" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.SiteURL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="14" id="2bc8c65b-1381-4a8e-b64d-b05c867bf65c" />
+    <Column Name="BestSalutation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="if self.ToUser.Name.isNullOrEmpty then&#xD;&#xA;  self.ToUser.EffectiveEmail&#xD;&#xA;else&#xD;&#xA;  self.ToUser.Name&#xD;&#xA;endif" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="3e4d9da3-8c2e-4779-8f76-2caf26562993" />
+    <Column Name="ToUserFirstName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.FirstName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="cff02dc5-17f0-44ac-a04e-408a3eb21769" />
+    <Column Name="ToUserLastName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.LastName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="228b013f-51ca-449a-9bc0-9e68af3b8d3a" />
+    <Column Name="ToUserName" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="4" id="c7dc18ce-c811-4a09-8fe7-f837d27e3184" />
+    <Column Name="EffectiveEmail" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ToUser.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="070b4212-8d1f-49e3-95d9-10560e30e367" />
+    <Column Name="UserRegistrationNotifications" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IncludedNotifications-&gt;select(un|un.Notification.oclIsKindOf(UserRegistrationNotification))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="0" id="4e6b0cf2-1624-4ea0-8392-5a30fd0b8048">
+      <ReferedNesting>
+        <Nesting Name="UserNotificationForRegistration" idref="c11a6b9f-a8ec-4ce6-b647-32a22b76352f" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="UserNotifications" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.IncludedNotifications-&gt;reject(un|un.Notification.oclIsKindOf(UserRegistrationNotification))" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="0" id="f7fe8208-bae8-4930-a99d-b360c4337bd5">
+      <ReferedNesting>
+        <Nesting Name="UserNotification" idref="817a881d-7e73-4298-9702-9d162d9b9d7c" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+</Span>

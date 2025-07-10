@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="UserRegistrationDataView" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" UsePlacingHints="False" id="7b7d2aca-c082-40fe-87c9-a34887ae3dda">
+  <AccessGroups>
+    <AccessGroup Name="IsLoggedIn" idref="604b5133-919a-456a-8f3d-54f9e2d223e0" />
+  </AccessGroups>
+  <Class>
+    <Class Name="UserRegistrationNotification" idref="43855009-0d24-4979-b11f-3ab47941a654" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TemplateHtml" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.HtmlTemplate.EmailXHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NotVisible="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="5fba3744-6443-4dc5-b533-47a28f0f749f" />
+    <Column Name="SiteURL" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.oclSingleton.SiteURL" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="14" id="dc1122b0-f660-470d-a7c2-62dda80ef05b" />
+    <Column Name="EffectiveEmail" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.User.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="21" YPos="15" id="a4b919bf-0e11-41f3-88d9-e38c9f6f710d" />
+  </OwnedColumns>
+</Span>

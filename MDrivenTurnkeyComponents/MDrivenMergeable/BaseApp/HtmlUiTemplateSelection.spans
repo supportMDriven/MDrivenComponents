@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="HtmlUiTemplateSelection" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="ddc2cfc9-4027-4560-874e-4356920825f6">
+<Span Name="HtmlUiTemplateSelection" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="bcd81607-b2de-49e4-a0d6-fcb1f2652a00">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,12 +7,12 @@
     <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
   </Category>
   <Class>
-    <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+    <Class Name="HtmlUiText" idref="adbdd777-7e76-401a-a139-6c304dcf8f6b" />
   </Class>
   <Nesting>
-    <Nesting Name="TemplateSingletonUI" ExpressionActAsForActions="" id="49b04cfe-796e-47f2-84c0-df2a48e57f7e">
+    <Nesting Name="TemplateSingletonUI" ExpressionActAsForActions="" id="022bbfc4-ae34-4065-9bba-1597464ad8c2">
       <Class>
-        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
       </Class>
       <OwnedColumns>
         <Column Name="UITexts" ActionPeriodicityMillisec="-1" ColSpan="10" ColSpanWhenInGrid="1" Expression="'UI Texts'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="d396dfaa-79a2-4a84-9e7b-333102edb3da" />
@@ -23,7 +23,7 @@
         </Column>
         <Column Name="LandingPageTextPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlUiText.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7467c90f-f1f0-49d9-bfd5-80b12bb93ce9">
           <ReferedNesting>
-            <Nesting Name="LandingPageTextPickList" idref="13f78936-62f2-4c73-84ab-a405eed9ada6" />
+            <Nesting Name="LandingPageTextPickList" idref="05b3818e-bfb8-4e97-a177-3d03f3b9ecc9" />
           </ReferedNesting>
         </Column>
         <Column Name="UserRegistrationText" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.UserRegistrationText" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="2" id="66e3089f-19db-4fa8-94c9-5a99f03a60ed">
@@ -33,7 +33,7 @@
         </Column>
         <Column Name="UserRegistrationTextPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlUiText.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="beb9a5e6-95c3-4ba4-ae77-e225378f6e1f">
           <ReferedNesting>
-            <Nesting Name="UserRegistrationTextPickList" idref="ba5a93e5-61b6-4e42-8b8a-13efd4cb2b6c" />
+            <Nesting Name="UserRegistrationTextPickList" idref="77d3963b-9272-4051-a3a0-2b2a88894560" />
           </ReferedNesting>
         </Column>
       </OwnedColumns>
@@ -41,9 +41,9 @@
         <Column Name="TemplateSingleton" idref="fa324dd3-11c1-409b-88e5-3e45ea948e02" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="LandingPageTextPickList" ExpressionActAsForActions="" id="13f78936-62f2-4c73-84ab-a405eed9ada6">
+    <Nesting Name="LandingPageTextPickList" ExpressionActAsForActions="" id="05b3818e-bfb8-4e97-a177-3d03f3b9ecc9">
       <Class>
-        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+        <Class Name="HtmlUiText" idref="adbdd777-7e76-401a-a139-6c304dcf8f6b" />
       </Class>
       <OwnedColumns>
         <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3e180591-63db-48e5-bd20-f8eb5ef6bf99" />
@@ -52,9 +52,9 @@
         <Column Name="LandingPageTextPickList" idref="7467c90f-f1f0-49d9-bfd5-80b12bb93ce9" />
       </ReferedByColumn>
     </Nesting>
-    <Nesting Name="UserRegistrationTextPickList" ExpressionActAsForActions="" id="ba5a93e5-61b6-4e42-8b8a-13efd4cb2b6c">
+    <Nesting Name="UserRegistrationTextPickList" ExpressionActAsForActions="" id="77d3963b-9272-4051-a3a0-2b2a88894560">
       <Class>
-        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+        <Class Name="HtmlUiText" idref="adbdd777-7e76-401a-a139-6c304dcf8f6b" />
       </Class>
       <OwnedColumns>
         <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="ad78c474-f1ba-4951-a820-ed9e1a47299e" />
@@ -67,7 +67,7 @@
   <OwnedColumns>
     <Column Name="TemplateSingleton" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="fa324dd3-11c1-409b-88e5-3e45ea948e02">
       <ReferedNesting>
-        <Nesting Name="TemplateSingletonUI" idref="49b04cfe-796e-47f2-84c0-df2a48e57f7e" />
+        <Nesting Name="TemplateSingletonUI" idref="022bbfc4-ae34-4065-9bba-1597464ad8c2" />
       </ReferedNesting>
     </Column>
   </OwnedColumns>

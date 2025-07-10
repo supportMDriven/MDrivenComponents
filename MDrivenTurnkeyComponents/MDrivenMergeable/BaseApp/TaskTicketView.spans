@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="TaskTicketView" ColCount="10" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="19" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="2913142b-30a3-470d-8d07-a1014d86dfa8">
+  <AccessGroups>
+    <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+    <AccessGroup Name="Debugging" idref="e0c117bd-3126-4ec4-8d5c-f277bc1cce25" />
+  </AccessGroups>
+  <Class>
+    <Class Name="TaskTicket" idref="6d6d962c-3f90-472f-8df4-04992c1ea132" />
+  </Class>
+  <Nesting>
+    <Nesting Name="LookupSysAsyncTickets" ExpressionActAsForActions="" id="a42a7660-8df6-48db-bfce-7a5b8f47c692">
+      <Class>
+        <Class Name="SysAsyncTicket" idref="f39a6032-39b3-4b91-a3d6-e67b05894c2b" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="ViewModel" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.ViewModel" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="f2b0dc4a-4559-43dc-8770-407353bb619d" />
+        <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="SysSingleton.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9781af25-71f1-4285-9a1c-e6a6a3156990" />
+        <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="SysSingleton.DateTimeSmartFormat(self.ChangeTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="70815fe8-18d0-4f2e-aa1e-52e7490e2fbc" />
+        <Column Name="DeleteTime" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="SysSingleton.DateTimeSmartFormat(self.DeleteTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="a79c07f0-7307-48ff-b2dd-b5f34ca7e941" />
+        <Column Name="Done" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="SysSingleton.DateTimeSmartFormat(self.Done)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="049415d5-b5bf-4cac-8fb0-96299c9cd915" />
+        <Column Name="Error" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Error" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="16d07c86-7b87-40de-b1bf-c1179cbc8380" />
+        <Column Name="ExecuteEarliest" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="SysSingleton.DateTimeSmartFormat(self.ExecuteEarliest)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="8230a84b-0fdd-4bce-95e3-9c0c87241af2" />
+        <Column Name="KeepReceiptMinutes" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.KeepReceiptMinutes" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="045d50bc-469f-4838-871a-dc180e44c446" />
+        <Column Name="Priority" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="self.Priority" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="9b207ae0-b349-4c4d-ae3a-2d59c508acf9" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="LookupSysAsyncTickets" idref="e8759943-6a74-47ba-be66-155a473b4d29" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue Tag="MultiSelect" Value="true" />
+        <TaggedValue Tag="Eco.AlwaysShowActions" Value="true" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="TypeOfTask" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="self.oclType.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="h3" XPos="0" YPos="0" id="6eae5f02-ad36-4016-85f1-722db6b1e50f" />
+    <Column Name="ChangeTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.DateTimeSmartFormat(self.ChangeTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="18" YPos="2" id="0cd7cbd8-e406-417d-88f0-1ac0685552c8" />
+    <Column Name="CreateTime" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="18" YPos="1" id="7f9e67e3-d6ed-4b3f-bdd6-d215392449a0" />
+    <Column Name="Done" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="SysSingleton.DateTimeSmartFormat(self.Done)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="18" YPos="3" id="797f478e-f22a-4980-9962-7db80cfe5f52" />
+    <Column Name="ErrorInfo" ActionPeriodicityMillisec="-1" ColSpan="14" ColSpanWhenInGrid="1" Expression="self.ErrorInfo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="ded5ec48-702b-4954-8373-e791e1089303" />
+    <Column Name="ExceptionInfo" ActionPeriodicityMillisec="-1" ColSpan="14" ColSpanWhenInGrid="1" Expression="self.ExceptionInfo" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="4" StyleRef="" XPos="2" YPos="5" id="ba9d3278-43f3-4a72-be77-990f1ea6ab50" />
+    <Column Name="Log" ActionPeriodicityMillisec="-1" ColSpan="14" ColSpanWhenInGrid="1" Expression="self.Log" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="5" StyleRef="" XPos="2" YPos="9" id="4d6a5fe4-68c4-44a3-92f9-03a335f86142" />
+    <Column Name="LookupSysAsyncTickets" ActionPeriodicityMillisec="-1" ColSpan="21" ColSpanWhenInGrid="1" Expression="self.LookupSysAsyncTickets" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="0" YPos="14" id="e8759943-6a74-47ba-be66-155a473b4d29">
+      <ReferedNesting>
+        <Nesting Name="LookupSysAsyncTickets" idref="a42a7660-8df6-48db-bfce-7a5b8f47c692" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="ObjectDescription" ActionPeriodicityMillisec="-1" ColSpan="14" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="3" StyleRef="" XPos="2" YPos="1" id="a5ff0cf9-b3cd-4772-a40e-562911ba08ba" />
+  </OwnedColumns>
+</Span>

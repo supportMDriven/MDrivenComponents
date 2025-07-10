@@ -17,21 +17,26 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="-926892032" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="144" RenderedWidth="202" ShowAttributes="False" ShowMethods="False" Size="1" x="368" y="288" id="561df797-2202-4940-94cb-87483da9c7b9">
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="-926892032" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="203" RenderedWidth="222" ShowAttributes="False" ShowMethods="False" Size="1" x="368" y="288" id="561df797-2202-4940-94cb-87483da9c7b9">
       <Class>
-        <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+        <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
       </Class>
       <PickedBehavioralFeatures>
         <Method Name="SO" idref="7c1e44e2-dcd3-4856-add2-a0d41ebd80f4" />
+        <Method Name="DateTimeSmartFormat" idref="c6ce55b7-85bc-41e5-b9c1-0a56012ff133" />
       </PickedBehavioralFeatures>
       <PickedStructuralFeatures>
+        <Attribute Name="StopEmailQueuing" idref="20deb87e-03bd-41aa-a45c-a60a0bffd245" />
         <Attribute Name="FakeEmailSending" idref="22c4ab49-0303-4438-8520-293a1af6a0c6" />
+        <Attribute Name="EnvironmantUpdateExecuted" idref="3073f423-5b0d-49b1-a179-5b5f163f8f4f" />
         <Attribute Name="UserIsInAdminMode" idref="7b2cd456-574e-4ea4-9d00-b8b025b07f2d" />
         <Attribute Name="DebuggingAllowed" idref="81715cf1-8bbe-45a3-b6b4-7f5028e7397e" />
+        <Attribute Name="EnvironmentUpdateExecuted" idref="9b0d57bd-d4de-4351-aa3e-19cfd8a1d171" />
         <Attribute Name="CreateNewSysUsersAsAdmins" idref="a4545e34-df4d-4341-bd78-1128d3f59e07" />
+        <Attribute Name="AccountConfirmationNotRequiredDefault" idref="dabbcce3-f226-48f5-8c4c-084e84711c56" />
         <Attribute Name="Debugging" idref="e4e93e06-8ae0-4feb-8d57-a1e70519d3ca" />
         <Attribute Name="AppEnvironment" idref="edb79d45-a0ab-4377-af83-0552d0a4988f" />
         <Attribute Name="IsTestOrDevEnvironment" idref="fee99538-0d88-45f1-80a8-fb4dc91d70ae" />
@@ -39,26 +44,26 @@
     </PlacedClass>
     <PlacedClass ClassId="da522f72-33c3-46c6-903e-7a42989d9848" Color="-926875712" LastKnownName="OutgoingNotification" PickedFeatureVisibility="HideAll" RenderedHeight="31" RenderedWidth="165" ShowAttributes="False" ShowMethods="False" Size="1" x="536" y="232" id="6c68e94e-3fd9-4b7b-bf5b-210a6745f767">
       <Class>
-        <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+        <Class Name="OutgoingNotification" idref="84ab5d48-541c-460b-82a7-5fa4e8e032b9" />
       </Class>
       <SpecializationConnection>
         <SpecializationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="48" y="0" id="4006046f-66fe-4095-8a26-4d5e2a407f2c">
           <Class>
-            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+            <Class Name="OutgoingMessage" idref="c2c59e6a-5716-40c8-a71a-a457590c33cb" />
           </Class>
           <next>
             <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-48" y="144" id="438b0e6b-3d44-4297-b03d-d903ba9766d1">
               <Class>
-                <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
+                <Class Name="OutgoingNotification" idref="84ab5d48-541c-460b-82a7-5fa4e8e032b9" />
               </Class>
             </GeneralizationConnection>
           </next>
         </SpecializationConnection>
       </SpecializationConnection>
     </PlacedClass>
-    <PlacedClass ClassId="7e5e598c-0bee-4728-823d-dfdc257da03c" Color="1692800256" LastKnownName="OutgoingEmail" PickedFeatureVisibility="ShowAll" RenderedHeight="239" RenderedWidth="122" ShowAttributes="False" ShowMethods="False" Size="1" x="120" y="40" id="701139a6-7423-40c6-81f9-2b0e86c5e1a9">
+    <PlacedClass ClassId="7e5e598c-0bee-4728-823d-dfdc257da03c" Color="1692800256" LastKnownName="OutgoingEmail" PickedFeatureVisibility="ShowAll" RenderedHeight="299" RenderedWidth="127" ShowAttributes="False" ShowMethods="False" Size="1" x="120" y="40" id="701139a6-7423-40c6-81f9-2b0e86c5e1a9">
       <AssociationEndConnection>
-        <AssociationEndConnection LabelAngle="-1.84521107331909" LabelDistance="8.06566153963859" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-8" y="239" id="5ce2f180-1096-401a-9dc0-4fbd194319e8">
+        <AssociationEndConnection LabelAngle="-1.84521107331909" LabelDistance="8.06566153963859" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="True" x="-8" y="299" id="5ce2f180-1096-401a-9dc0-4fbd194319e8">
           <AssociationEnd>
             <AssociationEnd Name="OutgoingEmail" idref="d7bfd975-fd68-4a9d-bf45-3df99f333100" />
           </AssociationEnd>
@@ -70,14 +75,14 @@
             </AssociationEndConnection>
           </next>
         </AssociationEndConnection>
-        <AssociationEndConnection LabelAngle="-2.01349451279547" LabelDistance="11.738171974518" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="61" y="48" id="8e9eea18-60b2-4aae-a59f-26f3787e3ac1">
+        <AssociationEndConnection LabelAngle="-2.01349451279547" LabelDistance="11.738171974518" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="63.5" y="48" id="8e9eea18-60b2-4aae-a59f-26f3787e3ac1">
           <AssociationEnd>
             <AssociationEnd Name="OutgoingEmails" idref="763bffdb-aab5-48b0-83d8-7d0af27edf5e" />
           </AssociationEnd>
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="1d11b097-f2c8-48b8-98f4-708847819725" Color="-926875712" LastKnownName="OutgoingMessage" PickedFeatureVisibility="ShowAll" RenderedHeight="144" RenderedWidth="152" ShowAttributes="False" ShowMethods="False" Size="1" x="632" y="40" id="71cfe8a0-6333-4522-a32b-f21d847ba39a">
@@ -102,7 +107,7 @@
             <AssociationEnd Name="OutgoingMessage" idref="f347f910-ca43-4a72-ad2e-1b611f2e2766" />
           </AssociationEnd>
           <next>
-            <AssociationEndConnection LabelAngle="-2.01349451279547" LabelDistance="11.738171974518" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="61" y="48" id="8e9eea18-60b2-4aae-a59f-26f3787e3ac1">
+            <AssociationEndConnection LabelAngle="-2.01349451279547" LabelDistance="11.738171974518" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="63.5" y="48" id="8e9eea18-60b2-4aae-a59f-26f3787e3ac1">
               <AssociationEnd>
                 <AssociationEnd Name="OutgoingEmails" idref="763bffdb-aab5-48b0-83d8-7d0af27edf5e" />
               </AssociationEnd>
@@ -111,17 +116,12 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
+        <Class Name="OutgoingMessage" idref="c2c59e6a-5716-40c8-a71a-a457590c33cb" />
       </Class>
       <GeneralizationConnection>
         <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-48" y="144" id="438b0e6b-3d44-4297-b03d-d903ba9766d1">
           <Class>
-            <Class Name="OutgoingNotification" idref="7f78cee0-de16-44ea-bd76-550ae6471772" />
-          </Class>
-        </GeneralizationConnection>
-        <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="40" y="144" id="af0c2ced-2e24-42dd-9dfd-de3918c59d75">
-          <Class>
-            <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+            <Class Name="OutgoingNotification" idref="84ab5d48-541c-460b-82a7-5fa4e8e032b9" />
           </Class>
         </GeneralizationConnection>
       </GeneralizationConnection>
@@ -135,22 +135,8 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
+        <Class Name="UserConfirmation" idref="1bad90a4-e11d-4e82-a403-ed0db1d1094a" />
       </Class>
-      <SpecializationConnection>
-        <SpecializationConnection NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="-48" y="0" id="e8338369-ff14-4000-8895-b2f8c90b5795">
-          <Class>
-            <Class Name="OutgoingMessage" idref="9028de00-cf51-4839-a675-6357adc067d0" />
-          </Class>
-          <next>
-            <GeneralizationConnection NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="40" y="144" id="af0c2ced-2e24-42dd-9dfd-de3918c59d75">
-              <Class>
-                <Class Name="UserConfirmation" idref="fe921f0f-c327-4e86-90fc-d66d78a1da9c" />
-              </Class>
-            </GeneralizationConnection>
-          </next>
-        </SpecializationConnection>
-      </SpecializationConnection>
     </PlacedClass>
     <PlacedClass ClassId="4ea44c57-b635-4c67-80ee-108c04853b48" Color="-932932115" LastKnownName="User" PickedFeatureVisibility="HideAll" RenderedHeight="31" RenderedWidth="47" ShowAttributes="False" ShowMethods="False" Size="1" x="984" y="56" id="db8f8520-47cc-4e75-a9ac-9dbac3507b26">
       <AssociationEndConnection>
@@ -200,7 +186,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="User" idref="25d349db-53c8-4e23-9044-01cc1f706d01" />
+        <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="3348eb4a-6000-419f-b087-d25cf0542c64" Color="1692800256" LastKnownName="EmailAttachment" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="135" ShowAttributes="False" ShowMethods="False" Size="1" x="128" y="344" id="e9bb89c9-d965-428d-b836-96553a08a5bf">
@@ -212,12 +198,12 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="EmailAttachment" idref="a9b3662b-92f8-42f8-83b8-3ee76b2c6486" />
+        <Class Name="EmailAttachment" idref="058830c3-b5a3-490d-b543-d44ff8b673e7" />
       </Class>
     </PlacedClass>
   </PlacedClass>
   <PlacedDiagrams>
-    <PlacedDiagram Color="-1765226296" Height="235.9462016032" LastKnownName="" RenderedHeight="235.9462016032" RenderedWidth="390.210289583981" Size="1" Width="390.210289583981" x="264" y="464" id="058b23e9-0048-4d44-93ef-ee9f166e13e0">
+    <PlacedDiagram Color="-1765226296" Height="235.9462016032" LastKnownName="" RenderedHeight="235.9462016032" RenderedWidth="390.210289583981" Size="1" Width="390.210289583981" x="272" y="568" id="058b23e9-0048-4d44-93ef-ee9f166e13e0">
       <DrawnDiagram>
         <AttributeStateDiagram idref="7e2b8f87-a4d5-462c-846e-256b614489ca" />
       </DrawnDiagram>

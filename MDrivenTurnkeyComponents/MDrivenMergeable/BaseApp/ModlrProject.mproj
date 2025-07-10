@@ -10,13 +10,13 @@
   <Category Name="ValueStore" ColorOnClasses="0" Id="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
   <Category Name="OpenViews" ColorOnClasses="0" Id="22c6e2f8-34a8-4393-9e95-7a78985228f9" />
   <Category Name="MessageDataView" ColorOnClasses="0" Id="f45a6c86-0982-4053-a34d-8c7f7655360f" />
-  <Category Name="AdminPages" ColorOnClasses="0" Id="6b3c0655-81bc-4b6a-8c31-f37b3b906624" />
-  <Category Name="Debug" ColorOnClasses="0" Id="19336e56-5897-467a-a867-8550585794ca" />
-  <Category Name="ServerSide" ColorOnClasses="0" Id="6dd08983-4b7d-45df-a8f3-de45fc4734b1" />
   <Category Name="Onboarding" ColorOnClasses="0" Id="dd27bcdc-1567-4ea3-8055-a39433eae158" />
   <Category Name="ValueStores" ColorOnClasses="0" Id="c653326b-2911-482b-a340-f4dc858f1b51" />
-  <Category Name="Dashboards" ColorOnClasses="0" Id="3b3b43c8-b2cd-433c-a11a-08339c00327e" />
+  <Category Name="AdminPages" ColorOnClasses="0" Id="6b3c0655-81bc-4b6a-8c31-f37b3b906624" />
+  <Category Name="ServerSide" ColorOnClasses="0" Id="6dd08983-4b7d-45df-a8f3-de45fc4734b1" />
   <Category Name="UserSettings" ColorOnClasses="0" Id="46cc1aeb-12fa-4a8e-948b-5c6b619cffa1" />
+  <Category Name="Dashboards" ColorOnClasses="0" Id="3b3b43c8-b2cd-433c-a11a-08339c00327e" />
+  <Category Name="Debug" ColorOnClasses="0" Id="19336e56-5897-467a-a867-8550585794ca" />
   <Category Name="Booking" ColorOnClasses="0" Id="12397800-ab4b-4848-88a2-a5b903f3b236" />
   <Category Name="UserRelations" ColorOnClasses="0" Id="42e01ff4-6ffa-41bd-87a8-65e1ca58532a" />
   <ValueStoreForCodeGenAttribute Name="" CommaSeparatedPossibleValues="ok,notok,okwhenauthenticated" GenerateTag="AllowMVCAccess" GenerateValue="" TypeFilter="Attribute" WikiDoc="The GetImage of MVC, this is default &quot;ok&quot; for byte[] and default notok for strings" WikiFetched="2021-12-18 11:53:05" WikiKey="attribute.allowmvcaccess" />

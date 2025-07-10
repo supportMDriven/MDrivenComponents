@@ -1,54 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="HtmlTemplateEditor" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="5c01840e-e531-4388-8fcd-1cba4b9d1bb2">
+<Span Name="HtmlTemplateEditor" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="d43208f4-d81b-40d5-91bf-f88bb144e7e8">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
-  <Category>
-    <Category Name="ValueStore" idref="37ca7e29-2961-44d5-9391-b3ae473cfd4d" />
-  </Category>
   <Class>
-    <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+    <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
   </Class>
   <Nesting>
-    <Nesting Name="MessageFramePickList" ExpressionActAsForActions="" id="63b76ae3-a69f-4a80-b8de-a5e470bea48e">
+    <Nesting Name="MessageFramePickList" ExpressionActAsForActions="" id="d572bc23-597f-4618-8c65-f9b2fe594672">
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
       <OwnedColumns>
-        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="88bb330c-056b-4aa9-8761-bcee0b89a00f" />
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9c2b1f56-2409-4a56-9b09-1960352ffa90" />
       </OwnedColumns>
       <ReferedByColumn>
-        <Column Name="MessageFramePickList" idref="6a092caa-a1a6-4d6c-b505-941d904927f6" />
+        <Column Name="MessageFramePickList" idref="881dc19b-c98e-43a8-b844-1659b9a3830b" />
       </ReferedByColumn>
     </Nesting>
   </Nesting>
   <OptOutActionInSpan>
-    <OptOutActionInSpan>
-      <AbstractAction>
-        <ClassAction Name="ShowHtmlTemplateEditor" idref="eb460c5f-3dc3-4235-ad39-ca5f01ef8d23" />
-      </AbstractAction>
-    </OptOutActionInSpan>
+    <OptOutActionInSpan />
   </OptOutActionInSpan>
   <OwnedColumns>
-    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="f4b84d90-75ba-4b30-a8be-14296d0d9fa7" />
-    <Column Name="Subject" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.EmailSubject" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="3" id="f1143461-b9d4-405b-96e5-729f32a3931d" />
-    <Column Name="HtmlEditor" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="self.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="9" StyleRef="" XPos="0" YPos="4" id="0c55bcc3-0f7a-46b0-bcbd-e3b71acde601">
+    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="7" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="75af3806-89ff-4fea-8e1c-5f4cd23d136c" />
+    <Column Name="EmailSubject" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.EmailSubject" ExpressionForReadOnly="" ExpressionForVisible="self.MessageFrame.isNull" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="9" id="bcc30ae8-22fb-41ee-91a3-9cc6fc04c148" />
+    <Column Name="NotificationHTMLEditor" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="self.NotificationHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="6" StyleRef="" XPos="0" YPos="2" id="7fbb334f-5c9c-4aa4-9cd0-fde05cdc3e77">
       <TaggedValue>
         <TaggedValue Tag="Angular_Ext_Component" Value="TinyMCE" />
       </TaggedValue>
     </Column>
-    <Column Name="MessageFrame" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.MessageFrame" ExpressionForReadOnly="" ExpressionForVisible="self.MessageFragments-&gt;isEmpty" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="c2f551d7-bc3f-4789-8f12-afe46a9641e2">
+    <Column Name="EmailHTMLEditor" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" ContentOverride="True" Expression="self.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="0" RowSpan="9" StyleRef="" XPos="0" YPos="11" id="42594917-3b30-42b5-81c9-6546ecc184da">
+      <TaggedValue>
+        <TaggedValue Tag="Angular_Ext_Component" Value="TinyMCE" />
+      </TaggedValue>
+    </Column>
+    <Column Name="EmailHTML" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.EmailHTML" ExpressionForReadOnly="" ExpressionForVisible="vShowEmailHTML" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="6" StyleRef="" XPos="1" YPos="25" id="38d593fb-edbd-4665-9ee2-65e25282bd73" />
+    <Column Name="ShowEmailHTML" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vShowEmailHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="24" id="c2859fd6-0a6b-46cc-9f76-4ecdf5ff4e4d" />
+    <Column Name="MessageFrame" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.MessageFrame" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="&lt;no framing&gt;" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="8" id="d133f73a-dcc2-4de5-9611-81107db115f9">
       <ColumnForPickList>
-        <Column Name="MessageFramePickList" idref="6a092caa-a1a6-4d6c-b505-941d904927f6" />
+        <Column Name="MessageFramePickList" idref="881dc19b-c98e-43a8-b844-1659b9a3830b" />
       </ColumnForPickList>
     </Column>
-    <Column Name="MessageFramePickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6a092caa-a1a6-4d6c-b505-941d904927f6">
+    <Column Name="MessageFramePickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="HtmlTemplate.allInstances-&gt;select(t|t.MessageFrame.isNull)-&gt;orderBy(t|t.Name)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="881dc19b-c98e-43a8-b844-1659b9a3830b">
       <ReferedNesting>
-        <Nesting Name="MessageFramePickList" idref="63b76ae3-a69f-4a80-b8de-a5e470bea48e" />
+        <Nesting Name="MessageFramePickList" idref="d572bc23-597f-4618-8c65-f9b2fe594672" />
       </ReferedNesting>
     </Column>
-    <Column Name="FramingType" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FramingType" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="h5" XPos="9" YPos="0" id="37755694-921a-45ab-8844-0fee93520bd5" />
-    <Column Name="Fragments" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="4" Expression="self.MessageFragments.Name-&gt;asCommaList" ExpressionForReadOnly="true" ExpressionForVisible="self.MessageFragments-&gt;notEmpty" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="4bf397d0-df88-4395-a96b-cde0e5781ceb" />
-    <Column Name="NameOfDataViewModel" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.NameOfDataViewModel" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="6" YPos="1" id="3f17badf-a71d-4f60-a422-076fedd6e5ca" />
+    <Column Name="NotificationText" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Notification text'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h6" XPos="0" YPos="1" id="e867005d-c072-44de-8869-4e89cbdf6cf5" />
+    <Column Name="EmailBody" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="'Email body'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h6" XPos="0" YPos="10" id="9722a017-feb0-483f-922b-8adc8bd744b0" />
+    <Column Name="Notes" ActionPeriodicityMillisec="-1" ColSpan="11" ColSpanWhenInGrid="1" Expression="self.Notes" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="4" StyleRef="" XPos="1" YPos="20" id="29dfd973-a685-4c21-a76b-145b18d774d7" />
   </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable Name="vShowEmailHTML" InitialValue="" TypeName="Boolean" UserData="" />
+  </SpanVariables>
 </Span>

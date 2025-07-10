@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package Name="EmailSending" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="e0ee4256-dc3d-411d-9357-8dc7d626a15f">
   <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="5dcc8de3-485c-4871-9fc6-bdfc4e29c8cf" />
+    <Class Name="SysSuperClass" idref="d976067a-a3da-400c-b8f2-3a97783f0e32" />
   </DefaultSuperClass>
   <OwnedElement>
-    <Class Name="EmailAttachment" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="a9b3662b-92f8-42f8-83b8-3ee76b2c6486">
+    <Class Name="EmailAttachment" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="058830c3-b5a3-490d-b543-d44ff8b673e7">
       <Feature>
         <Attribute Name="file" Multiplicity="" Visibility="Public" id="0a3833b5-c18a-4a06-afce-7f66491a8ae4">
           <TaggedValue>
@@ -36,7 +36,21 @@
         <TaggedValue Tag="Eco.DefaultColor" Value="-926875712" />
       </TaggedValue>
     </Class>
-    <Class Name="OutgoingEmail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="b7262d13-132a-451a-877a-bdb8c86a8d09">
+    <Association Name="" EffectiveName="OutgoingEmailLastSentUserConfirmationUserConfirmationsLastSent" id="2c2767bd-1da7-40d5-b313-8406736096a6">
+      <AssociationEnd>
+        <AssociationEnd Name="LastSent" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="5ae4891b-0599-4881-9868-c3ce49c1a90a">
+          <Participant>
+            <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd Name="UserConfirmationsLastSent" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="2224951d-a4a2-473d-8e8a-d5ec15333ebd">
+          <Participant>
+            <Class Name="UserConfirmation" idref="1bad90a4-e11d-4e82-a403-ed0db1d1094a" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class Name="OutgoingEmail" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="5af10931-097e-4fb8-8b40-f0c0aca1b988">
       <Feature>
         <Method Name="ReQueue" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="03a3e928-8e8b-4159-9d08-07bbbe7a7aee">
           <TaggedValue>
@@ -52,9 +66,26 @@
             <Datatype idref="Text" />
           </Type>
         </Attribute>
+        <Method Name="Abort" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="1429c9de-f510-4215-bcfa-6ea536160dbb">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
         <Method Name="SuccessfullySent" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="14dd59e0-5102-40a8-9ef2-d527eca906a2">
           <TaggedValue>
             <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method Name="CreateAsyncTicket" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="1cd991bb-11cf-49fa-806b-42c70c0ac5a0">
+          <ReturnParameter>
+            <Parameter Name="" Kind="In">
+              <Type>
+                <Datatype idref="SysAsyncTicket" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue Tag="Eco.Body" Value="self.RunViewmodelAsync(OutgoingEmail.ViewModels.SS_OutgoingEmail)" />
           </TaggedValue>
         </Method>
         <Attribute Name="MaxSendTries" Multiplicity="" Visibility="Public" id="2095760f-d0c3-422c-aa85-a5c6ed2bcafb">
@@ -108,6 +139,16 @@
             <Datatype idref="Boolean" />
           </Type>
         </Attribute>
+        <Attribute Name="CanBeQueued" Multiplicity="" Visibility="Public" id="7dc7c0e0-5226-4288-914e-c352cc5e25a5">
+          <TaggedValue>
+            <TaggedValue Tag="persistence" Value="transient" />
+            <TaggedValue Tag="derived" Value="True" />
+            <TaggedValue Tag="Eco.DerivationOCL" Value="not (&#xD;&#xA;  self.to.isNullOrEmpty or &#xD;&#xA;  self.subject.isNullOrEmpty or &#xD;&#xA;  self.body.isNullOrEmpty or&#xD;&#xA;  SysSingleton.SO.StopEmailQueuing&#xD;&#xA;)" />
+          </TaggedValue>
+          <Type>
+            <Datatype idref="Boolean" />
+          </Type>
+        </Attribute>
         <Attribute Name="State" Multiplicity="" Visibility="Public" id="8e7d1179-7d41-425b-9a22-3a51867946a1">
           <AttributeStateDiagram>
             <AttributeStateDiagram idref="7e2b8f87-a4d5-462c-846e-256b614489ca" />
@@ -132,6 +173,11 @@
             <TaggedValue Tag="Eco.IsTrigger" Value="True" />
           </TaggedValue>
         </Method>
+        <Method Name="Queue" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="e5091f49-4609-4487-8cce-5808319e0813">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="Sent" Multiplicity="" Visibility="Public" id="eb530a61-b2a1-406a-b48c-659c18cb9cf6">
           <TaggedValue>
             <TaggedValue Tag="Eco.FormerNames" Value="EmailSent" />
@@ -149,6 +195,11 @@
             <Datatype idref="String" />
           </Type>
         </Attribute>
+        <Method Name="DeQueue" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="f9ca5aa2-9593-48b6-88a3-50215ce9b1ce">
+          <TaggedValue>
+            <TaggedValue Tag="Eco.IsTrigger" Value="True" />
+          </TaggedValue>
+        </Method>
         <Attribute Name="body" Multiplicity="" Visibility="Public" id="fcd0ae31-cf1d-4b60-8b07-5cfde7bd723f">
           <TaggedValue>
             <TaggedValue Tag="Eco.AllowNULL" Value="True" />
@@ -169,13 +220,65 @@
                 <Attribute Name="State" idref="8e7d1179-7d41-425b-9a22-3a51867946a1" />
               </StateAttribute>
               <Transition>
-                <Transition Guard="OCL: " id="066e8090-8dd0-449c-b0e8-19a82b713124">
+                <Transition Guard="OCL: " id="1092d63a-e21b-4cfe-874f-01a2c13d03aa">
                   <Source>
-                    <PseudoState Name="Start5" idref="44df8302-9249-4648-9804-9192d478edc6" />
+                    <State Name="Waiting" idref="3c49e090-7ecc-495a-8103-0cfe940699e2" />
                   </Source>
                   <Target>
-                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                    <State Name="Aborted" idref="a3c2984c-d5a6-497f-9026-241a169b0dd2" />
                   </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="Abort" idref="1429c9de-f510-4215-bcfa-6ea536160dbb" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: " id="3568a845-39b2-4669-961e-0168969d8718">
+                  <Source>
+                    <State Name="Retrying" idref="d291b6eb-f093-46ef-843d-3a9547eb89e8" />
+                  </Source>
+                  <Target>
+                    <State Name="Waiting" idref="3c49e090-7ecc-495a-8103-0cfe940699e2" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="DeQueue" idref="f9ca5aa2-9593-48b6-88a3-50215ce9b1ce" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: " id="3dcf905c-8dd5-443f-ab18-af0883723e85">
+                  <Source>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Source>
+                  <Target>
+                    <State Name="Aborted" idref="a3c2984c-d5a6-497f-9026-241a169b0dd2" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="Abort" idref="1429c9de-f510-4215-bcfa-6ea536160dbb" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: " id="4260400a-cc9b-426c-8423-1ab4cdfaf6dd">
+                  <Source>
+                    <State Name="Retrying" idref="d291b6eb-f093-46ef-843d-3a9547eb89e8" />
+                  </Source>
+                  <Target>
+                    <State Name="Aborted" idref="a3c2984c-d5a6-497f-9026-241a169b0dd2" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="Abort" idref="1429c9de-f510-4215-bcfa-6ea536160dbb" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
                 </Transition>
                 <Transition Guard="OCL: " id="46bb47de-49ab-48ee-b072-d34dc0abb0a1">
                   <Source>
@@ -192,6 +295,36 @@
                     </MethodTrigger>
                   </Trigger>
                 </Transition>
+                <Transition Guard="OCL: self.CanBeQueued" id="49307f71-6022-407e-9653-80633c3a14cc">
+                  <Source>
+                    <State Name="Waiting" idref="3c49e090-7ecc-495a-8103-0cfe940699e2" />
+                  </Source>
+                  <Target>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="Queue" idref="e5091f49-4609-4487-8cce-5808319e0813" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition Guard="OCL: " id="64214cc2-9a1f-42f6-bf6b-9650f60d2adb">
+                  <Source>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Source>
+                  <Target>
+                    <State Name="Waiting" idref="3c49e090-7ecc-495a-8103-0cfe940699e2" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="DeQueue" idref="f9ca5aa2-9593-48b6-88a3-50215ce9b1ce" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
                 <Transition Guard="OCL: self.SendTries &gt;= self.MaxSendTries" id="90a78811-c913-4d3f-b275-769b44cab6dc">
                   <Source>
                     <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
@@ -199,6 +332,21 @@
                   <Target>
                     <State Name="SendingFailed" idref="28b057b0-4aad-4cf8-9b3a-486aab3b36a2" />
                   </Target>
+                </Transition>
+                <Transition Guard="OCL: " id="aec0c028-e5eb-47b7-8aad-1f00c91a3ad2">
+                  <Source>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Source>
+                  <Target>
+                    <State Name="Queued" idref="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method Name="ReQueue" idref="03a3e928-8e8b-4159-9d08-07bbbe7a7aee" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
                 </Transition>
                 <Transition Guard="OCL: " id="b3a25714-a5e8-433b-9825-3bc564307a66">
                   <Source>
@@ -245,6 +393,14 @@
                     </MethodTrigger>
                   </Trigger>
                 </Transition>
+                <Transition Guard="OCL: " id="de9f9b93-92c3-4a68-9a17-8095eeebd069">
+                  <Source>
+                    <PseudoState Name="Start5" idref="44df8302-9249-4648-9804-9192d478edc6" />
+                  </Source>
+                  <Target>
+                    <State Name="Waiting" idref="3c49e090-7ecc-495a-8103-0cfe940699e2" />
+                  </Target>
+                </Transition>
                 <Transition Guard="OCL: self.SendTries &gt;= self.MaxSendTries" id="eca16e70-cc5b-4809-b52e-e71d7cc30abc">
                   <Source>
                     <State Name="Retrying" idref="d291b6eb-f093-46ef-843d-3a9547eb89e8" />
@@ -267,6 +423,11 @@
                     <PlacedState idref="b2e8e59b-50ba-43bd-8560-dfb0dc16ae4e" />
                   </PlacedState>
                 </State>
+                <State Name="Waiting" CodeComment="" id="3c49e090-7ecc-495a-8103-0cfe940699e2">
+                  <PlacedState>
+                    <PlacedState idref="a2952c95-be60-4baa-9db4-3476ccb39c24" />
+                  </PlacedState>
+                </State>
                 <PseudoState Name="Start5" CodeComment="" id="44df8302-9249-4648-9804-9192d478edc6">
                   <PlacedState>
                     <PlacedState idref="33a587c3-bea3-4a01-8860-c874bf67b3a6" />
@@ -274,7 +435,7 @@
                 </PseudoState>
                 <State Name="Queued" CodeComment="" id="747e03d5-df4c-48f0-aafb-6e12a8f2a6d0">
                   <Entry>
-                    <Activity Body="self.MaxSendTries := self.MaxSendTries +3;&#xD;&#xA;-- Create ticket for quick processing&#xD;&#xA;SysAsyncTicket.NewTicket(self, OutgoingEmail.ViewModels.SS_OutgoingEmail)" />
+                    <Activity Body="self.MaxSendTries := self.MaxSendTries +3;&#xD;&#xA;self.CreateAsyncTicket" />
                   </Entry>
                   <PlacedState>
                     <PlacedState idref="a4f15538-d587-423d-bb20-745ad361d893" />
@@ -288,7 +449,15 @@
                     <PlacedState idref="b08cbd51-29b9-4a5f-83be-4b408cfaad50" />
                   </PlacedState>
                 </State>
+                <State Name="Aborted" CodeComment="" id="a3c2984c-d5a6-497f-9026-241a169b0dd2">
+                  <PlacedState>
+                    <PlacedState idref="d77ef584-e14a-4d29-8c66-49e80087b239" />
+                  </PlacedState>
+                </State>
                 <State Name="Retrying" CodeComment="" id="d291b6eb-f093-46ef-843d-3a9547eb89e8">
+                  <Entry>
+                    <Activity Body="self.CreateAsyncTicket.ExecuteEarliest:= DateTime.Now.addMinutes(self.SendTries * 10)" />
+                  </Entry>
                   <PlacedState>
                     <PlacedState idref="3d8f2fd2-7098-4753-80e2-31fec9259528" />
                   </PlacedState>
@@ -306,12 +475,12 @@
       <AssociationEnd>
         <AssociationEnd Name="OutgoingEmail" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="d7bfd975-fd68-4a9d-bf45-3df99f333100">
           <Participant>
-            <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+            <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
           </Participant>
         </AssociationEnd>
         <AssociationEnd Name="EmailAttachments" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="1deca91c-dafa-427a-8492-4adc4fdc7196">
           <Participant>
-            <Class Name="EmailAttachment" idref="a9b3662b-92f8-42f8-83b8-3ee76b2c6486" />
+            <Class Name="EmailAttachment" idref="058830c3-b5a3-490d-b543-d44ff8b673e7" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span Name="UserRegistration" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="10" RowHeight="20" TabOrder="ColumnDesignOrder" id="1e45f928-7f7f-442a-a052-1483f8e44f7d">
+  <AccessGroups>
+    <AccessGroup Name="UserWithAccount" idref="482a21b7-b0de-490b-80c9-cedc52441d03" />
+  </AccessGroups>
+  <Category>
+    <Category Name="Onboarding" idref="dd27bcdc-1567-4ea3-8055-a39433eae158" />
+  </Category>
+  <Class>
+    <Class Name="User" idref="56ba8510-8ac1-4880-b3bb-611288a769d1" />
+  </Class>
+  <Nesting>
+    <Nesting Name="CountryPickList" ExpressionActAsForActions="" id="e54e6053-fd77-4d68-8036-5d4eb8dc832a">
+      <Class>
+        <Class Name="Country" idref="011805e2-4b80-496a-ab28-1760eac12d1a" />
+      </Class>
+      <OwnedColumns>
+        <Column Name="Presentation" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.asString" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="8e8ea159-146b-45a5-8c75-e334c4df74da" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column Name="CountryPickList" idref="e553356a-5fc3-4ece-bbd8-a1b129373412" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction Name="MySettings" idref="67cae787-1a4b-4cdb-a323-3cc14b7bfc75" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column Name="EffectiveEmail" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="'Welcome ' + self.EffectiveEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="0" YPos="3" id="962d3a29-61a7-4e10-b670-505384ba1f5f" />
+    <Column Name="UserRegistrationText" ActionPeriodicityMillisec="-1" ColSpan="12" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton.UserRegistrationText.UiHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="0" YPos="0" id="b1ff2828-378a-4c90-864f-54df59f6862a">
+      <TaggedValue>
+        <TaggedValue Tag="DataIsHtml" Value="True" />
+      </TaggedValue>
+    </Column>
+    <Column Name="FirstName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.FirstName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="4" id="ac7e0192-2e3c-435f-9dc0-e5132f833f6b" />
+    <Column Name="LastName" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="self.LastName" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="2" RowSpan="1" StyleRef="" XPos="2" YPos="5" id="8300be06-26e9-4178-89b9-0a91248df28c" />
+    <Column Name="Country" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="self.Country" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="First" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="7" id="3280f16c-c7c0-42a2-9ea7-70b516ee2a34">
+      <ColumnForPickList>
+        <Column Name="CountryPickList" idref="e553356a-5fc3-4ece-bbd8-a1b129373412" />
+      </ColumnForPickList>
+    </Column>
+    <Column Name="CountryPickList" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="Country.allInstances" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="e553356a-5fc3-4ece-bbd8-a1b129373412">
+      <ReferedNesting>
+        <Nesting Name="CountryPickList" idref="e54e6053-fd77-4d68-8036-5d4eb8dc832a" />
+      </ReferedNesting>
+    </Column>
+    <Column Name="Continue" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="11" id="d4574361-2dd2-4a0a-93d8-36f77c887025">
+      <ActionToExecute>
+        <ContextAction Name="Continue" idref="7ff2c2c3-9eae-4530-a09e-5f621cf4559a" />
+      </ActionToExecute>
+    </Column>
+  </OwnedColumns>
+  <TaggedValue>
+    <TaggedValue Tag="HideSidebar" Value="True" />
+    <TaggedValue Tag="Eco.AutoSave" Value="True" />
+  </TaggedValue>
+</Span>

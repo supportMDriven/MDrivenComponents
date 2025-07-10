@@ -13,7 +13,7 @@
             <AssociationEnd Name="EffectiveCountry" idref="abcc3274-08c4-4b4e-a1ea-b767f7ec4204" />
           </AssociationEnd>
           <next>
-            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="101" y="16" id="e4a89807-87b2-4b23-9bdc-2047669033b6">
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="111" y="16" id="e4a89807-87b2-4b23-9bdc-2047669033b6">
               <AssociationEnd>
                 <AssociationEnd Name="SysSingletonsEffectiveCountry" idref="9f1ae7a8-8ade-4190-82a2-1bcfba323b26" />
               </AssociationEnd>
@@ -42,7 +42,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Country" idref="284c29e6-2516-4cc0-bed8-85af08fdb185" />
+        <Class Name="Country" idref="011805e2-4b80-496a-ab28-1760eac12d1a" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="9e54d6d2-d624-4bff-8f58-54b7a6a9a1c9" Color="1692800256" LastKnownName="MonthWeekLink" PickedFeatureVisibility="ShowAll" RenderedHeight="21" RenderedWidth="72" ShowAttributes="False" ShowMethods="False" Size="0" x="736" y="328" id="1cdddb0b-50f4-47fe-bcb4-a82b6cf0ac03">
@@ -61,7 +61,7 @@
         </AssociationConnection>
       </AssociationConnection>
       <Class>
-        <Class Name="MonthWeekLink" idref="f8b48c2b-66e6-4f7b-80cc-4f056c0ae4c0" />
+        <Class Name="MonthWeekLink" idref="75ff3cfa-79d8-4ca3-bc98-596b7f1557a1" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="812208a0-40f0-4a59-86f2-cb4c9d1aecf7" Color="1692800256" LastKnownName="Week" PickedFeatureVisibility="ShowAll" RenderedHeight="179" RenderedWidth="126" ShowAttributes="False" ShowMethods="False" Size="1" x="912" y="456" id="4ae73d34-e10b-4259-a030-68fb1628899d">
@@ -197,7 +197,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Week" idref="ba1bc5e7-b648-4aef-bc1c-7182bd49cbbc" />
+        <Class Name="Week" idref="3bc481b1-d96d-4c0c-92df-d59a482b8da4" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="7bbaa7d1-efd3-47e2-b670-47e6079cc6d5" Color="1692800256" LastKnownName="DayWeekLink" PickedFeatureVisibility="ShowAll" RenderedHeight="21" RenderedWidth="62" ShowAttributes="False" ShowMethods="False" Size="0" x="704" y="512" id="56383cab-ba2d-47f3-ba9d-0eea51f6d2d8">
@@ -216,7 +216,7 @@
         </AssociationConnection>
       </AssociationConnection>
       <Class>
-        <Class Name="DayWeekLink" idref="1ba18253-38cf-4618-9aa9-ae044c013d13" />
+        <Class Name="DayWeekLink" idref="d97f7cb3-dd8f-4e9f-b227-6e940e54c612" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="46bc47be-0890-4676-9c0a-3283ac5a8510" Color="1692800256" LastKnownName="DayOfMonth" PickedFeatureVisibility="ShowAll" RenderedHeight="72" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="744" y="856" id="6921c063-beca-41f7-a6dc-0aa66b377f1c">
@@ -243,7 +243,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="DayOfMonth" idref="5418de57-e8ef-4f1e-82c8-7661530b8954" />
+        <Class Name="DayOfMonth" idref="d1fd809b-d3d5-4f67-8df7-552f63738ade" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="a2a5fd45-d863-4631-b77b-34b94bf93a41" Color="1692800256" LastKnownName="MonthOfYear" PickedFeatureVisibility="ShowAll" RenderedHeight="84" RenderedWidth="114" ShowAttributes="False" ShowMethods="False" Size="1" x="696" y="136" id="7c0446f3-22b0-4c92-a1fc-c479600a05cf">
@@ -266,7 +266,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="MonthOfYear" idref="cab303b6-cd28-44a1-90bf-ea71566d0568" />
+        <Class Name="MonthOfYear" idref="97ddb41b-41bb-4132-8f7e-40abd09f825d" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="7ed408e9-8600-4611-bb8a-c03431312040" Color="1692800256" LastKnownName="Year" PickedFeatureVisibility="ShowAll" RenderedHeight="179" RenderedWidth="125" ShowAttributes="False" ShowMethods="False" Size="1" x="488" y="32" id="8d85a2b0-2f2c-422b-b1bf-3c6ad5c2027b">
@@ -347,7 +347,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Year" idref="4baf70e7-cd00-4b5e-aa68-c3ec25f07d97" />
+        <Class Name="Year" idref="e3be48b7-09b7-415c-9e2c-f9e220d3bd46" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="2f5ad00a-77fd-47c1-8720-f28479a3ae46" Color="1692800256" LastKnownName="Day" PickedFeatureVisibility="ShowAll" RenderedHeight="215" RenderedWidth="154" ShowAttributes="False" ShowMethods="False" Size="1" x="488" y="680" id="a27df8c1-d9e6-4a58-a77a-0c477c45bdb1">
@@ -513,27 +513,34 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Day" idref="21eedf3b-e020-4344-90a5-5f0ddbc5f984" />
+        <Class Name="Day" idref="f3d67100-53d1-4134-9814-ddfd8a54d6d7" />
       </Class>
     </PlacedClass>
-    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="49" RenderedWidth="202" ShowAttributes="False" ShowMethods="False" Size="1" x="736" y="1008" id="bad7caff-11b3-455a-92ba-cdb5300291aa">
+    <PlacedClass ClassId="ad4cf46f-0195-4197-bef2-9f8dd89a3870" Color="1692800256" LastKnownName="SysSingleton" PickedFeatureVisibility="ShowOnlyPicked" RenderedHeight="108" RenderedWidth="222" ShowAttributes="False" ShowMethods="False" Size="1" x="736" y="1008" id="bad7caff-11b3-455a-92ba-cdb5300291aa">
       <AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="8" y="0" id="69f3bbb4-ae90-424e-b628-63c24398c0f0">
           <AssociationEnd>
             <AssociationEnd Name="SysSingletons" idref="77f6aed8-aa10-4e91-9d82-06ad41e1bd68" />
           </AssociationEnd>
         </AssociationEndConnection>
-        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="101" y="16" id="e4a89807-87b2-4b23-9bdc-2047669033b6">
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="1" ViaPointsStartsHere="False" x="111" y="16" id="e4a89807-87b2-4b23-9bdc-2047669033b6">
           <AssociationEnd>
             <AssociationEnd Name="SysSingletonsEffectiveCountry" idref="9f1ae7a8-8ade-4190-82a2-1bcfba323b26" />
           </AssociationEnd>
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+        <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
       </Class>
+      <PickedBehavioralFeatures>
+        <Method Name="DateTimeSmartFormat" idref="c6ce55b7-85bc-41e5-b9c1-0a56012ff133" />
+      </PickedBehavioralFeatures>
       <PickedStructuralFeatures>
+        <Attribute Name="StopEmailQueuing" idref="20deb87e-03bd-41aa-a45c-a60a0bffd245" />
+        <Attribute Name="EnvironmantUpdateExecuted" idref="3073f423-5b0d-49b1-a179-5b5f163f8f4f" />
+        <Attribute Name="EnvironmentUpdateExecuted" idref="9b0d57bd-d4de-4351-aa3e-19cfd8a1d171" />
         <Attribute Name="CreateNewSysUsersAsAdmins" idref="a4545e34-df4d-4341-bd78-1128d3f59e07" />
+        <Attribute Name="AccountConfirmationNotRequiredDefault" idref="dabbcce3-f226-48f5-8c4c-084e84711c56" />
       </PickedStructuralFeatures>
     </PlacedClass>
     <PlacedClass ClassId="4c39bc95-4ee0-439d-bca7-5e704c8c33c9" Color="1692800256" LastKnownName="HourOfDay" PickedFeatureVisibility="ShowAll" RenderedHeight="108" RenderedWidth="129" ShowAttributes="False" ShowMethods="False" Size="1" x="128" y="312" id="c4c2fd79-de87-468b-9e1c-fe71db8c4d3d">
@@ -545,7 +552,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="HourOfDay" idref="cc21f3d5-08f3-4d69-aecf-3e628bde138b" />
+        <Class Name="HourOfDay" idref="4dcf5357-a75d-4372-9bef-841974f31ccc" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="9d9b2b9f-4b3a-4bcc-bb42-a5f3baecb1c5" Color="1692800256" LastKnownName="DayOfWeek" PickedFeatureVisibility="ShowAll" RenderedHeight="120" RenderedWidth="188" ShowAttributes="False" ShowMethods="False" Size="1" x="760" y="688" id="cd7c1eec-8a5f-48ba-b81a-48d68bf7ddb7">
@@ -605,7 +612,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="DayOfWeek" idref="7ae7f1b0-4ec8-4b31-9b36-40bae23049a8" />
+        <Class Name="DayOfWeek" idref="c90cbb66-9181-4ac0-be0e-b1036588cffe" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="4e48e6a6-9cf3-4b9a-bb75-f4dcc184dcc0" Color="1692800256" LastKnownName="WeekDefinition" PickedFeatureVisibility="ShowAll" RenderedHeight="179" RenderedWidth="128" ShowAttributes="False" ShowMethods="False" Size="1" x="1088" y="720" id="d0fd61f8-fa58-4a97-9a68-5d4dd62f5416">
@@ -700,7 +707,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="WeekDefinition" idref="77cb80f6-106d-4acf-8362-7a78a59e0a46" />
+        <Class Name="WeekDefinition" idref="2f444f03-6794-4a1a-95d3-e529284f4d86" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="09da3e6f-234a-4c1b-a9b8-7b6ff2935f74" Color="1692800256" LastKnownName="Month" PickedFeatureVisibility="ShowAll" RenderedHeight="203" RenderedWidth="136" ShowAttributes="False" ShowMethods="False" Size="1" x="488" y="248" id="e0993976-437f-4e60-b340-9c1b765c94b8">
@@ -794,7 +801,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Month" idref="0ac3317f-2408-49b8-a747-5482702ea2d3" />
+        <Class Name="Month" idref="39ea25b5-1a3d-4acb-9c77-3381ea88af1e" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="9ea09760-a7e0-406b-af25-9c82e251dcff" Color="1692800256" LastKnownName="Calendar" PickedFeatureVisibility="ShowAll" RenderedHeight="167" RenderedWidth="151" ShowAttributes="False" ShowMethods="False" Size="1" x="280" y="424" id="e7d05cf2-c139-467a-afc6-384c0f809722">
@@ -922,7 +929,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="Calendar" idref="8d1fc776-63dd-44a7-a2c6-a34a232085e9" />
+        <Class Name="Calendar" idref="4a99fb66-c9b5-411e-8bee-9c909043dd14" />
       </Class>
     </PlacedClass>
   </PlacedClass>

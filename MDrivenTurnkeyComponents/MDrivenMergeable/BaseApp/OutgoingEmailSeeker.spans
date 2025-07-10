@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="OutgoingEmailSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="29608132-25ac-4b8a-8dbf-c494b369426f">
+<Span Name="OutgoingEmailSeeker" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="a7057dad-8688-4f1f-afe6-aa18cc987757">
   <AccessGroups>
     <AccessGroup Name="AdminUserModeActive" idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
   </AccessGroups>
@@ -7,12 +7,12 @@
     <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
   </Category>
   <Class>
-    <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+    <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
   </Class>
   <Nesting>
-    <Nesting Name="OutgoingEmail" ExpressionActAsForActions="" id="cb8a4fcd-4525-40c3-bd7c-791ef5c069f9">
+    <Nesting Name="OutgoingEmail" ExpressionActAsForActions="" id="035cbba0-6746-4d02-8d1f-814e505210c3">
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
       <OwnedColumns>
         <Column Name="Queued" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="2" Expression="Calendar.DateTimeSmartFormat(self.CreateTime)" ExpressionForReadOnly="true" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="6225ab86-13aa-4da8-b49d-4c4938e37f08" />
@@ -33,9 +33,9 @@
         <TaggedValue Tag="MultiSelect" Value="True" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="7e958cad-577d-4364-943d-062d98b36c0e">
+    <Nesting Name="seekcrit" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="82b42457-9c26-46a7-8f7b-f11034e18164">
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a | (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="d097b8d3-9364-46ba-b65b-c682e0ff248e" />
@@ -44,9 +44,9 @@
         <TaggedValue Tag="Eco.HiliteGridColumn" Value="" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seekerrormessage" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="debc2c8f-f976-48ac-9adb-ace53c791940">
+    <Nesting Name="seekerrormessage" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="1ea7cb14-2a2a-4f52-b2b8-e63919b88683">
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.errorinfo.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="3eea3d58-6ee5-47fc-8f2d-23fd32f39226" />
@@ -55,9 +55,9 @@
         <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.errormessage" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seekfrom" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="5c2982b0-1451-4525-9959-b9508be48e59">
+    <Nesting Name="seekfrom" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="6b61e15b-d8a9-40a4-b18b-4bec38233b6c">
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.from.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="9f0bca73-22e0-437c-ba59-f1d86fdced72" />
@@ -66,9 +66,9 @@
         <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.from" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seeksubject" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="5c4ed5de-177e-444c-ac37-f63fef55f6bc">
+    <Nesting Name="seeksubject" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="b90b92f3-27f8-4791-9746-946fe0341b65">
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.subject.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="bfc5f340-4475-488d-96d5-7db184a5936f" />
@@ -77,9 +77,9 @@
         <TaggedValue Tag="Eco.HiliteGridColumn" Value="OutgoingEmail.subject" />
       </TaggedValue>
     </Nesting>
-    <Nesting Name="seekto" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="414df7b5-33f0-462e-a891-126c0736c156">
+    <Nesting Name="seekto" ExpressionActAsForActions="" UsedForSeekerColumns="True" id="06f25927-c58f-46e3-ad32-f97266ad37ab">
       <Class>
-        <Class Name="OutgoingEmail" idref="b7262d13-132a-451a-877a-bdb8c86a8d09" />
+        <Class Name="OutgoingEmail" idref="5af10931-097e-4fb8-8b40-f0c0aca1b988" />
       </Class>
       <OwnedColumns>
         <Column Name="Crit1" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="OutgoingEmail.allinstances-&gt;select(a|a.to.sqllike('%'+vSeekParam+'%') and (not vHideSent or (a.State&lt;&gt;'Sent')))-&gt;orderDescending(a|a.CreateTime)" ExpressionForReadOnly="" ExpressionForVisible="not vSeekParam-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="7e8ee10c-a572-4d51-b8c6-1ad468a8d04b" />
@@ -98,12 +98,12 @@
     </Column>
     <Column Name="Emails" ActionPeriodicityMillisec="-1" ColSpan="16" ColSpanWhenInGrid="1" Expression="vSeekerResult" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="10" StyleRef="" XPos="0" YPos="2" id="8c169316-88ab-4272-a394-910e155ca05e">
       <ReferedNesting>
-        <Nesting Name="OutgoingEmail" idref="cb8a4fcd-4525-40c3-bd7c-791ef5c069f9" />
+        <Nesting Name="OutgoingEmail" idref="035cbba0-6746-4d02-8d1f-814e505210c3" />
       </ReferedNesting>
     </Column>
     <Column Name="DeleteSelected" ActionPeriodicityMillisec="-1" ColSpan="4" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="12" YPos="0" id="c2371023-42b8-4f3d-a746-8d3df1177f6b">
       <ActionToExecute>
-        <ContextAction Name="DeleteSelectedEmails" idref="b17563f2-a5c1-419e-a854-8d586f52b47a" />
+        <ContextAction Name="DeleteSelectedEmails" idref="e39f058e-a256-446c-a25c-a6d11103e567" />
       </ActionToExecute>
     </Column>
     <Column Name="FakeEmailSending" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="SysSingleton.SO.FakeEmailSending" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="10" YPos="0" id="1abb335d-812e-4a26-a841-ced4412c1e84">

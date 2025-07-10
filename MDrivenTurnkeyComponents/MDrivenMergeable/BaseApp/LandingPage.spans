@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="LandingPage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="4f73b54a-9630-448c-9aef-3da9816d7785">
+<Span Name="LandingPage" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="dd5baa65-2d89-4352-a871-a284212c3d18">
   <Category>
     <Category Name="OpenViews" idref="22c6e2f8-34a8-4393-9e95-7a78985228f9" />
   </Category>
   <Class>
-    <Class Name="SysSingleton" idref="7b91dda8-0a49-477c-a5e5-0ded3522113e" />
+    <Class Name="SysSingleton" idref="5be8f242-1995-45be-8066-ce9ba7aeefd3" />
   </Class>
   <OptOutActionInSpan>
     <OptOutActionInSpan />
     <OptOutActionInSpan>
       <AbstractAction>
-        <ClassAction Name="ToggleDebugging" idref="ed3cfba6-a900-4932-a4bf-501f2e64192e" />
+        <ClassAction Name="ToggleDebugging" idref="120df888-25fa-466d-b131-676b5dc53e70" />
       </AbstractAction>
     </OptOutActionInSpan>
     <OptOutActionInSpan />
@@ -24,7 +24,7 @@
     </Column>
     <Column Name="ResetPassword" ActionPeriodicityMillisec="-1" ColSpan="3" ColSpanWhenInGrid="1" Expression="" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PresentationString="&lt;ActionName&gt;" PresentationStringColSpan="0" RowSpan="1" StyleRef="flat primary" XPos="4" YPos="6" id="884f41df-7493-4244-8b8d-e311436ff512">
       <ActionToExecute>
-        <ContextAction Name="ResetPassword" idref="60b08ac7-e7d7-4289-bc59-db3b0a2f7b91" />
+        <ContextAction Name="ResetPassword" idref="31d6465c-1baf-455a-9bfd-6fa2bd6c5c8b" />
       </ActionToExecute>
     </Column>
     <Column Name="IndexPageText" ActionPeriodicityMillisec="-1" ColSpan="5" ColSpanWhenInGrid="1" Expression="TemplateSingleton.oclSingleton.LandingPageText.UiHTML" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="0" RowSpan="2" StyleRef="" XPos="3" YPos="3" id="fd2310ee-286b-40e0-a1b5-772c3c6fc573">

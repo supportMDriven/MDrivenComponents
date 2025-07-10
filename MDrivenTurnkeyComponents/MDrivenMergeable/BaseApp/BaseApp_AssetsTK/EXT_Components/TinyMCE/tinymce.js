@@ -5,6 +5,9 @@ angular.module('ui.tinymce', [])
   .value('uiTinymceConfig', {})
   .directive('uiTinymce', ['$rootScope', '$compile', '$timeout', '$window', '$sce', '$http', 'uiTinymceConfig', 'uiTinymceService', 'getUserOptions', function ($rootScope, $compile, $timeout, $window, $sce, $http, uiTinymceConfig, uiTinymceService, getUserOptions) {
     uiTinymceConfig = uiTinymceConfig || {};
+    uiTinymceConfig.relative_urls = false;
+    uiTinymceConfig.remove_script_host = false;
+    uiTinymceConfig.convert_urls = false;
     if (uiTinymceConfig.baseUrl) {
       tinymce.baseURL = uiTinymceConfig.baseUrl;
     }

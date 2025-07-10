@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Diagram Name="SystemTemplatesAndTexts" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" CorrectLinesOnMove="False" Designer="" ShowAssociationNames="NotDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.2762815625" Id="3533026f-ee78-4cf8-83fd-00ca4b83e2e0">
+<Diagram Name="SystemTemplatesAndTexts" ChangeDate="0001-01-01 00:00:00" ColorOnNew="0" Comment="" CorrectLinesOnMove="False" Designer="" ShowAssociationNames="NotDefaults" ShowMethodReturnTypes="False" ShowMethodSignatures="False" ShowVisibility="False" SnapGridSize="8" SquareNewAssociations="False" SquareNewGeneralizations="False" ZoomScaleFactor="1.1025" Id="3533026f-ee78-4cf8-83fd-00ca4b83e2e0">
   <Category>
     <Category Name="System" idref="d32c2f5e-7416-42d9-be69-f960f44e383d" />
   </Category>
@@ -40,7 +40,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="HtmlUiText" idref="e9fed548-7a65-46d4-a511-dded74b48874" />
+        <Class Name="HtmlUiText" idref="adbdd777-7e76-401a-a139-6c304dcf8f6b" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="1fc0e693-04f6-4955-aeb9-5b4ccc177ab3" Color="1692800256" LastKnownName="HtmlTemplate" PickedFeatureVisibility="ShowAll" RenderedHeight="229" RenderedWidth="249" ShowAttributes="False" ShowMethods="False" Size="3" x="704" y="64" id="7e51e243-5977-4b5c-b964-a4bd26c595d3">
@@ -138,9 +138,25 @@
             </FreeAirViaPoint>
           </next>
         </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.504145634038485" LabelDistance="21.9571310354728" NextLegDrawKind="0" SideToUse="3" ViaPointsStartsHere="True" x="-124.5" y="136" id="e0d6631c-f405-4c98-a254-8eb24c37feb1">
+          <AssociationEnd>
+            <AssociationEnd Name="CombinedNotification" idref="1556e9c8-3211-4965-a8f9-4a7d8f670fb3" />
+          </AssociationEnd>
+          <next>
+            <FreeAirViaPoint NextLegDrawKind="0" x="296" y="200" id="9ae31a59-4e3c-434a-9b91-ba45abdbcc3e">
+              <next>
+                <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="321d8447-3885-4549-897c-396b4e53f98f">
+                  <AssociationEnd>
+                    <AssociationEnd Name="TemplateSingletonsCombinedNotification" idref="7971c24d-c1ff-4af8-9fc5-6de0e7e0747e" />
+                  </AssociationEnd>
+                </AssociationEndConnection>
+              </next>
+            </FreeAirViaPoint>
+          </next>
+        </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="af58beed-1bf8-4d1d-968c-4d823f7b089a" Color="1692800256" LastKnownName="TemplateSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="240" y="472" id="8023b940-4828-4d0b-8980-191550da551f">
@@ -152,11 +168,16 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="af58beed-1bf8-4d1d-968c-4d823f7b089a" Color="1692800256" LastKnownName="TemplateSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="1032" y="208" id="82d00980-0d42-4d94-a344-3d79d07e88b3">
       <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="49" id="77623031-b6f9-402b-822b-e03703f2d0ca">
+          <AssociationEnd>
+            <AssociationEnd Name="TemplateSingletonsSearchVisits" idref="38ef8713-3456-408f-b193-20d2e9e40f21" />
+          </AssociationEnd>
+        </AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-8" y="0" id="8a51ea64-3975-427b-9c50-f3465926ba9f">
           <AssociationEnd>
             <AssociationEnd Name="TemplateSingletonsLandingPageText" idref="75f4311f-7012-48c8-8fd9-352fc204bb88" />
@@ -169,7 +190,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="1fc0e693-04f6-4955-aeb9-5b4ccc177ab3" Color="1692800256" LastKnownName="HtmlTemplate" PickedFeatureVisibility="ShowAll" RenderedHeight="229" RenderedWidth="249" ShowAttributes="False" ShowMethods="False" Size="3" x="704" y="384" id="8e9e1470-066f-4e89-86c6-e5502505381c">
@@ -221,7 +242,7 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="HtmlTemplate" idref="fd44be6e-038e-43dc-8196-0bbe918a0565" />
+        <Class Name="HtmlTemplate" idref="9748a109-4a16-412a-a647-d019be4872b9" />
       </Class>
     </PlacedClass>
     <PlacedClass ClassId="af58beed-1bf8-4d1d-968c-4d823f7b089a" Color="1692800256" LastKnownName="TemplateSingleton" PickedFeatureVisibility="ShowAll" RenderedHeight="49" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="248" y="296" id="b502c9a2-779f-4e05-99fb-aeb4f079a97d">
@@ -229,6 +250,11 @@
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-40" y="0" id="1dddd4f1-f37d-4d1c-9029-f6aac9425780">
           <AssociationEnd>
             <AssociationEnd Name="SysSingletons2" idref="af39081d-c4b3-4d5e-894c-b3bb4b660a5f" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="False" x="48" y="0" id="321d8447-3885-4549-897c-396b4e53f98f">
+          <AssociationEnd>
+            <AssociationEnd Name="TemplateSingletonsCombinedNotification" idref="7971c24d-c1ff-4af8-9fc5-6de0e7e0747e" />
           </AssociationEnd>
         </AssociationEndConnection>
         <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="1" SideToUse="0" ViaPointsStartsHere="False" x="-56" y="0" id="40f1ce0f-04a2-49bf-8fb9-6eddb5889309">
@@ -248,29 +274,38 @@
         </AssociationEndConnection>
       </AssociationEndConnection>
       <Class>
-        <Class Name="TemplateSingleton" idref="e80a5a96-8f8c-439c-a384-e16be3d9dcc0" />
+        <Class Name="TemplateSingleton" idref="0c8b7b0b-65f1-4025-84fe-c690e77b8cfd" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass ClassId="9fc5704e-9933-4767-8695-8c65946acbd2" Color="1692800256" LastKnownName="OpenDocTemplate" PickedFeatureVisibility="ShowAll" RenderedHeight="73" RenderedWidth="146" ShowAttributes="False" ShowMethods="False" Size="1" x="1072" y="432" id="e86b25eb-bba1-4545-b5fc-fcd95adeb796">
+      <AssociationEndConnection>
+        <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="0" ViaPointsStartsHere="True" x="-16" y="0" id="3de02ff8-b547-4853-9244-80d5f0bf46dd">
+          <AssociationEnd>
+            <AssociationEnd Name="SearchVisits" idref="6fe1b74a-6f05-4c82-b557-654127e4819e" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection LabelAngle="-0.785398163397448" LabelDistance="15" NextLegDrawKind="0" SideToUse="2" ViaPointsStartsHere="False" x="-16" y="49" id="77623031-b6f9-402b-822b-e03703f2d0ca">
+              <AssociationEnd>
+                <AssociationEnd Name="TemplateSingletonsSearchVisits" idref="38ef8713-3456-408f-b193-20d2e9e40f21" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class Name="OpenDocTemplate" idref="ca78a15d-a391-405c-a242-e6ad311fe9ce" />
       </Class>
     </PlacedClass>
   </PlacedClass>
   <PlacedViewModels>
-    <PlacedViewModel Color="-1765226296" Height="192" LastKnownName="" RenderedHeight="202" RenderedWidth="301" Size="1" Width="291" x="584" y="664" id="a192b7e7-a064-47d6-8615-0ba7128370fb">
-      <Span>
-        <Span Name="HtmlTemplateEditor" idref="5c01840e-e531-4388-8fcd-1cba4b9d1bb2" />
-      </Span>
-    </PlacedViewModel>
-    <PlacedViewModel Color="-1765226296" Height="253" LastKnownName="" RenderedHeight="263" RenderedWidth="261" Size="1" Width="251" x="272" y="664" id="b132d9b7-f849-4deb-b694-cfabab31973e">
-      <Span>
-        <Span Name="OnboardAndAccountHtmlTemplates" idref="294ba038-cc67-44bc-8815-7a2ced4f6b57" />
-      </Span>
-    </PlacedViewModel>
     <PlacedViewModel Color="-1765226296" Height="173" LastKnownName="" RenderedHeight="183" RenderedWidth="274" Size="1" Width="264" x="272" y="936" id="d93d5283-c9da-45d4-af44-194b7a0fe229">
       <Span>
-        <Span Name="InvitationHtmlTemplates" idref="5c358636-17a0-4cfe-9614-e226fdaf5c55" />
+        <Span Name="InvitationHtmlTemplates" idref="39de3659-29f6-455f-b783-407aee276b68" />
       </Span>
     </PlacedViewModel>
     <PlacedViewModel Color="-1765226296" Height="281" LastKnownName="" RenderedHeight="291" RenderedWidth="427" Size="1" Width="417" x="1000" y="664" id="ff46cfba-21aa-4ff9-b239-4138873754dc">
       <Span>
-        <Span Name="HtmlUiTextEditor" idref="5a1ee598-e6ec-489f-971b-1ec32652ca6d" />
+        <Span Name="HtmlUiTextEditor" idref="dcddf945-d435-46de-9575-bb1956035332" />
       </Span>
     </PlacedViewModel>
   </PlacedViewModels>
