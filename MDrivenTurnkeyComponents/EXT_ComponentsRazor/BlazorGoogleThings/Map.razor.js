@@ -1,4 +1,5 @@
 //import { loadGoogleMap } from './GoogleJS/GoogleJS.js';
+let _globalapikey;
 // load Google.js
 export function loadGoogleMap() {
     return new Promise((resolve, reject) => {
@@ -8,7 +9,7 @@ export function loadGoogleMap() {
         }
         const script = document.createElement("script");
         script.src =
-            "https://maps.googleapis.com/maps/api/js?key=AIzaSyAzpyUX1jemY7FL6d4CEigmALWHsCqFROA&callback=initMap&libraries=geometry,places";
+            "https://maps.googleapis.com/maps/api/js?key=" + _globalapikey + "&callback=initMap&libraries=geometry,places";
         script.async = true;
         script.onerror = reject;
         document.head.appendChild(script);
@@ -17,7 +18,8 @@ export function loadGoogleMap() {
         };
     });
 }
-export function createMap(thediv, dotNetHelper) {
+export function createMap(thediv, dotNetHelper, apikey) {
+    _globalapikey = apikey;
     let ds = new GoogleMapJS();
     ds.InstallIn(thediv, dotNetHelper);
     return ds;
