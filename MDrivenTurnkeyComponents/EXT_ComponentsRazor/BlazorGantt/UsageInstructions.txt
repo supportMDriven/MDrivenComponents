@@ -1,0 +1,15 @@
+﻿BlazorGantt;DateScaler
+Must be PlacingContaier, will look for Data: Start:DateTime, Stop:DateTime columns to placed column.
+Make the Start and Stop sibling "Not Visible" since they will be kidnapped by control
+
+-----------
+
+BlazorGantt;GanttRow
+ - Action: AcceptNewTimeItem , assumes vTargetTimeItem is set to object representing TimeItemInteractive 
+ Other: Must be ListLevel PlacingContainer - and will need a DateScaler above it somewhere
+
+ --------
+
+BlazorGantt;TimeItemInteractive
+ Data: Start:DateTime, Stop:DateTime
+ Other: Must be row-level-PlacingContainer in listview and parent PlacingContainer must be GanttRow 

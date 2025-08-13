@@ -1,0 +1,3 @@
+﻿BlazorThreeJS;Three
+Place on any colum that holds a valid url to a 3d model in stl format
+that <columnname>_Type can have STL,OBJ,GLTF for different model formats - default is STL

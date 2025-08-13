@@ -1,0 +1,2 @@
+﻿BlazorTinyMCE;Editor
+Place on any colum that receive a string. that will be html in content

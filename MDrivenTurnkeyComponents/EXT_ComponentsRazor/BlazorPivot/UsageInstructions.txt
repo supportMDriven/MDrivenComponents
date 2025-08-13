@@ -1,0 +1,20 @@
+﻿BlazorPivot;Pivot
+Set on placing container, under this add listviews (1 or many) where the outer PC has BlazorPivot;PivotIgnoreLevel and the rowbuilder level has BlazorPivot;PivotCell
+
+--------
+
+BlazorPivot;PivotCell
+ Data: Must have PivotX:integer and PivotY:integer , hidden from view will be used for placing within BlazorPivot;Pivot
+Make the PivotX and PivotY "Not Visible" since they will be kidnapped by control
+You can also have SpanX, SpanY to make a cell stretch more cells (1 is default and lowest value)
+
+----------
+
+BlazorPivot;PivotIgnoreLevel
+ Data: none
+ Other: This component removes the outer listview div so that rows (PivotCell) can be placed in Pivot grid
+
+ -------------
+ BlazorPivot;DragDrop
+ Data: AllowDrop, AllowDrag of boolean type
+ Other: Expects action AcceptDrop and variable vDragged<NestingName> variable

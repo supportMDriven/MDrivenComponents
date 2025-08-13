@@ -1,0 +1,40 @@
+﻿BlazorGoogleThings;Map
+Place on any colum
+that <columnname>_CenterLat, <columnname>_CenterLng <columnname>_Zoom should be valid numbers as string
+Optional <columnname>_Positions, nesting to objects holding lat,lng,color,title 
+a column MapAPIKey should return your google map api key
+
+Click on map will set values of variables vLat, vLng, and call AddMarker action; suggested action is to add a Position to the list of positions and this will be represented on the map
+
+----------
+
+
+BlazorGoogleThings;SeriesChart ; string value of ChartType
+    Bar,            // Horizontal bars
+    Column,         // Vertical bars
+    Line,           // Basic line chart
+    Area,           // Filled line
+    SteppedArea,
+    StackedBar,     // Horizontal stacked bars
+    StackedColumn,  // Vertical stacked bars
+    StackedArea,    // Filled stacked lines
+    StackedSteppedArea,
+    Pie,            // Classic pie chart
+    Donut,          // Ring-style pie
+    Histogram,      // Value distribution
+
+ <columnname>_Values: Nesting that has these Columns:    
+Dimension	string/date	The category or time (e.g., “Month”, “Product”).
+Value	number	The numeric measure to plot.
+SeriesBy	string (opt)	Splits into multiple series (e.g., “Region”).
+
+
+  <columnname>_Title?: string;
+  // For Pie/Donut: choose which series to slice (if provided). If omitted, values are aggregated across series.
+  <columnname>_PieSeries?: string;
+  // For Histogram: treat each series as its own histogram (multi‑series). Defaults to false (single histogram).
+  <columnname>_HistogramBySeries?: boolean;
+
+  To catch click in graph add variable vChartClickLabel_<ColumnName> and vChartClickValue_<ColumnName>
+  Add action "GraphClick"
+}
