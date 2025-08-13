@@ -108,6 +108,7 @@
     <Folder Include="EXT_Components\Cards\" />
     <Folder Include="EXT_Components\SharepointDocumentsInteractionWeb\" />
     <Folder Include="EXT_Components\PivotDataGrid\" />
+    <Folder Include="MDrivenMergeable\BlazorTinyMCEExample\BlazorTinyMCE_AssetsTK\" />
     <Folder Include="MDrivenSnippets\" />
   </ItemGroup>
 
