@@ -517,6 +517,26 @@
       TypeName="Boolean"
       UserData="" />
     <SpanVariable
+      Name="vSeekerPage"
+      InitialValue=""
+      TypeName="Integer"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerPageCount"
+      InitialValue=""
+      TypeName="Integer"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerPageLength"
+      InitialValue="100"
+      TypeName="Integer"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerResultCount"
+      InitialValue=""
+      TypeName="Int64"
+      UserData="" />
+    <SpanVariable
       Name="vSeekParam"
       InitialValue=""
       TypeName="String"
