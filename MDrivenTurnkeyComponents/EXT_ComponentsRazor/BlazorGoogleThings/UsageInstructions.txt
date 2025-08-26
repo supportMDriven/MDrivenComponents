@@ -1,7 +1,8 @@
 ﻿BlazorGoogleThings;Map
 Place on any colum
 that <columnname>_CenterLat, <columnname>_CenterLng <columnname>_Zoom should be valid numbers as string
-Optional <columnname>_Positions, nesting to objects holding lat,lng,color,title 
+Optional <columnname>_Positions, nesting to objects holding lat,lng,color,title,polygonifset 
+if polygonifset has value - all positions with same value will be drawn as polygon
 a column MapAPIKey should return your google map api key
 
 Click on map will set values of variables vLat, vLng, and call AddMarker action; suggested action is to add a Position to the list of positions and this will be represented on the map
