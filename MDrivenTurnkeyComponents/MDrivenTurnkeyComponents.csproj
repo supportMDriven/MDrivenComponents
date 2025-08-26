@@ -95,6 +95,8 @@
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
+    <None Remove="MDrivenMergeable\SysTranslations\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysTranslations\LocalizationAdmin.spans" />
     <None Remove="MDrivenMergeable\SysTurnkeyTrace\Actions.actions" />
     <None Remove="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTrace.spans" />
     <None Remove="MDrivenMergeable\SysTurnkeyTrace\AutoFormClass1SomethingToTraceSeeker.spans" />
@@ -108,7 +110,6 @@
     <Folder Include="EXT_Components\Cards\" />
     <Folder Include="EXT_Components\SharepointDocumentsInteractionWeb\" />
     <Folder Include="EXT_Components\PivotDataGrid\" />
-    <Folder Include="MDrivenMergeable\BlazorTinyMCEExample\BlazorTinyMCE_AssetsTK\" />
     <Folder Include="MDrivenSnippets\" />
   </ItemGroup>
 
@@ -371,6 +372,12 @@
     <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysTranslations\Actions.actions">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysTranslations\LocalizationAdmin.spans">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysTurnkeyTrace\Actions.actions">
       <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -421,6 +428,9 @@
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysTranslations\ModlrProject.mproj">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysTurnkeyTrace\ModlrProject.mproj">
       <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>
@@ -589,6 +599,18 @@
     </None>
     <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysTranslations\DiagramTranslation.ecodiag">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysTranslations\documentation.modlrdoc">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysTranslations\Package1.ecopkg">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysTranslations\Snippets.snippets">
+      <DependentUpon>SysTranslations.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysTurnkeyTrace\Diagram1.ecodiag">
       <DependentUpon>SysTurnkeyTrace.ecomdl</DependentUpon>

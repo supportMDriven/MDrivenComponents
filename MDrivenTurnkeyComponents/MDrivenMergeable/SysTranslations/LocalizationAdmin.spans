@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="LocalizationAdmin"
+  ColCount="12"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="10"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="dfd26aa2-58bd-496c-ac7b-68c92fb92cef">
+  <Class>
+    <Class
+      Name="SysTranslatable"
+      idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="SearchExpression"
+      ExpressionActAsForActions=""
+      UsedForSeekerColumns="True"
+      id="792466e3-7164-4878-a26e-deb9199d9ae9">
+      <Class>
+        <Class
+          Name="SysTranslatable"
+          idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
+      </Class>
+      <OwnedColumns>
+        <Column
+          Name="Crit1"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="SysTranslatable.allinstances-&gt;select(a|a.Value.sqlLikeCaseInsensitive(vSeekParam+'%')&#xD;&#xA;or a.Translations-&gt;exists(tr|tr.Value.sqlLikeCaseInsensitive(vSeekParam+'%')))"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="not vImportModeExactMatchOnSearch"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="0"
+          id="ec1d2561-6415-4bd2-8302-c56b4ee619da" />
+        <Column
+          Name="Crit2"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="SysTranslatable.allinstances-&gt;select(a|a.Translations.Language-&gt;exists(l|l=vSelectedLanguage))"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSelectedLanguage-&gt;notnull and (not vImportModeExactMatchOnSearch) and vSearchHavingLang"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="29b6f648-681a-4c22-8e84-5034f55a8f58" />
+        <Column
+          Name="Crit2_Copy"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="SysTranslatable.allinstances-&gt;select(a|not a.Translations.Language-&gt;exists(l|l=vSelectedLanguage))"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSelectedLanguage-&gt;notnull and (not vImportModeExactMatchOnSearch) and (not vSearchHavingLang)"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="0da7aa52-8cd3-40b4-9b74-b9932c944b5c" />
+        <Column
+          Name="Crit3"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="SysTranslatable.allinstances"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="not vImportModeExactMatchOnSearch"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="2ae2abfe-6ea1-4635-8bdf-54f0238559b5" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting
+      Name="SearchExpressionForImport"
+      ExpressionActAsForActions=""
+      UsedForSeekerColumns="True"
+      id="698c9fee-24fa-4140-aa35-42d56feb145d">
+      <Class>
+        <Class
+          Name="SysTranslatable"
+          idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
+      </Class>
+      <OwnedColumns>
+        <Column
+          Name="Crit1"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="SysTranslatable.allinstances-&gt;select(a|(a.Value=vSeekParam) and a.Translations-&gt;exists(tr|tr.Language=vSelectedLanguage))"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vImportModeExactMatchOnSearch"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="0"
+          id="6394aa89-60cd-4768-9640-61167315c128" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting
+      Name="SearchResultGrid"
+      ExpressionActAsForActions=""
+      id="699fd633-2a15-4ac6-95c2-7b3e507fb127">
+      <Class>
+        <Class
+          Name="SysTranslatable"
+          idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
+      </Class>
+      <OwnedColumns>
+        <Column
+          Name="Translatable"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.Value"
+          ExpressionForReadOnly="not vImportModeExactMatchOnSearch "
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="4897f04f-8a23-4b6a-a223-b2b74a44f5b3" />
+        <Column
+          Name="Translation"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.Translations-&gt;select(tr|tr.Language=vSelectedLanguage)-&gt;first.Value"
+          ExpressionForReadOnly="(not vImportModeExactMatchOnSearch)or vSelectedLanguage.isnull"
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="382bdb39-2a51-4087-af17-19f003d37f1f" />
+        <Column
+          Name="AllTranslations"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.Translations.Language.asstring-&gt;ascommalist"
+          ExpressionForReadOnly="true"
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="3"
+          id="f04dee3b-e5f1-488e-a16b-2cf26daa5928" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="SearchResults"
+          idref="556089b9-902d-4d51-8b7e-223d0e6fe71f" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue
+          Tag="MultiSelect"
+          Value="True" />
+        <TaggedValue
+          Tag="IsSeekerResultGrid"
+          Value="true" />
+        <TaggedValue
+          Tag="Editable"
+          Value="True" />
+      </TaggedValue>
+    </Nesting>
+    <Nesting
+      Name="UniqueName"
+      ExpressionActAsForActions=""
+      id="9aca756f-ddc2-45f5-b847-a90eb509b5b8">
+      <Class>
+        <Class
+          Name="SysTranslateLanguage"
+          idref="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed" />
+      </Class>
+      <OwnedColumns>
+        <Column
+          Name="Presentation"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.asString"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="0"
+          id="8c870048-049a-44a9-a6f2-bb2ab009bf10">
+          <TaggedValue>
+            <TaggedValue
+              Tag="UIFirst"
+              Value="String" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="NewColumn_picklist"
+          idref="8a0e7be3-d020-491d-8592-f5c47fa8c373" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OwnedColumns>
+    <Column
+      Name="SPOOLMISSED"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="'Whatever'.Translate('SPOOLMISSED')"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;ActionName&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="10"
+      YPos="2"
+      id="aba42e42-80b1-486f-90a3-08fa952c4e9b" />
+    <Column
+      Name="RESETCACHE"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression=" 'Whatever'.Translate('RESETCACHE')"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;ActionName&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="10"
+      YPos="1"
+      id="b0cc7ed5-c604-4c54-a1c9-b5a96ae2f7c8" />
+    <Column
+      Name="EnsureCommonLanguages"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="Set{'sv','en','fr','de','ja','es','fi'}-&gt;difference( SysTranslateLanguage.allinstances.Code )&#xD;&#xA;-&gt;foreach(x| &#xD;&#xA;        let newlang=SysTranslateLanguage.Create in&#xD;&#xA;        (&#xD;&#xA;          newlang.Code:=x&#xD;&#xA;        )&#xD;&#xA;&#xD;&#xA;        )"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;ActionName&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="10"
+      YPos="0"
+      id="9bde8e55-a02c-4dcb-a510-72b5e1a4f40d" />
+    <Column
+      Name="SeekValue"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="vSeekParam"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="Search for"
+      PresentationStringColSpan="2"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="0"
+      id="e9e98bde-a8d3-4fd7-aa6f-c5cf4a7b0fe2" />
+    <Column
+      Name="Search"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="vSearchHavingLang:=true;&#xD;&#xA;selfVM.Search"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="4"
+      YPos="0"
+      id="6a51a1a8-84f1-41c7-9724-6bed06688594">
+      <TaggedValue>
+        <TaggedValue
+          Tag="MaxFetch"
+          Value="200" />
+      </TaggedValue>
+    </Column>
+    <Column
+      Name="SearchResults"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="10"
+      ColSpanWhenInGrid="1"
+      Expression="vSeekerResult"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="10"
+      StyleRef=""
+      XPos="0"
+      YPos="2"
+      id="556089b9-902d-4d51-8b7e-223d0e6fe71f">
+      <ReferedNesting>
+        <Nesting
+          Name="SearchResultGrid"
+          idref="699fd633-2a15-4ac6-95c2-7b3e507fb127" />
+      </ReferedNesting>
+    </Column>
+    <Column
+      Name="ImportModeExactMatchOnSearch"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="vImportModeExactMatchOnSearch"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="5"
+      YPos="1"
+      id="6333a528-158d-4d89-a9e2-def126c71386" />
+    <Column
+      Name="SelectedLanguage"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="vSelectedLanguage"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="First"
+      NullRowRepresentation="&lt;all languages&gt;"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="8"
+      YPos="0"
+      id="73d6265b-159a-4efd-829d-af5cafe87256">
+      <ColumnForPickList>
+        <Column
+          Name="NewColumn_picklist"
+          idref="8a0e7be3-d020-491d-8592-f5c47fa8c373" />
+      </ColumnForPickList>
+    </Column>
+    <Column
+      Name="NewColumn_picklist"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="SysTranslateLanguage.allinstances-&gt;orderby(x|x.asstring)"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="8a0e7be3-d020-491d-8592-f5c47fa8c373">
+      <ReferedNesting>
+        <Nesting
+          Name="UniqueName"
+          idref="9aca756f-ddc2-45f5-b847-a90eb509b5b8" />
+      </ReferedNesting>
+    </Column>
+    <Column
+      Name="MakeSelectedAvailableInLanguage"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="vSelected_SearchResultGrid-&gt;select(trb|not trb.Translations-&gt;exists(tr|tr.Language=vSelectedLanguage))&#xD;&#xA;-&gt;foreach(trb|let tr=SysTranslation.Create in (trb.Translations.Add(tr);tr.Language:=vSelectedLanguage;tr.Value:=trb.Value))"
+      ExpressionForReadOnly="vSelectedLanguage-&gt;isnull or vSelected_SearchResultGrid-&gt;isempty"
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;ActionName&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="0"
+      YPos="1"
+      id="17cd5f06-a036-48ad-b38b-e7c6ac0ff66a" />
+    <Column
+      Name="SearchMissingSelectedLang"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="vSearchHavingLang:=false;&#xD;&#xA;selfVM.Search"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="5"
+      YPos="0"
+      id="a4f4cb10-9f88-4f3d-9734-d74a9c6908d6">
+      <TaggedValue>
+        <TaggedValue
+          Tag="MaxFetch"
+          Value="200" />
+      </TaggedValue>
+    </Column>
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable
+      Name="vImportModeExactMatchOnSearch"
+      InitialValue=""
+      TypeName="Boolean"
+      UserData="" />
+    <SpanVariable
+      Name="vSearchHavingLang"
+      InitialValue=""
+      TypeName="Boolean"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerPage"
+      InitialValue=""
+      TypeName="Integer"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerPageCount"
+      InitialValue=""
+      TypeName="Integer"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerPageLength"
+      InitialValue="100"
+      TypeName="Integer"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekerResultCount"
+      InitialValue=""
+      TypeName="Int64"
+      UserData="" />
+    <SpanVariable
+      Name="vSeekParam"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
+    <SpanVariable
+      Name="vSelectedLanguage"
+      InitialValue=""
+      TypeName="SysTranslateLanguage"
+      UserData="" />
+  </SpanVariables>
+</Span>
