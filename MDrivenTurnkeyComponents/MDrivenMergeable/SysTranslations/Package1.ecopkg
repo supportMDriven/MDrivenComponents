@@ -1,77 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Package Name="Package1" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="" id="879374a9-c4f1-43b4-9acb-b05e338e9b88">
+<Package
+  Name="Package1"
+  AdditionalNamespaces=""
+  CodeGenCharacterMode="AllowUnicode"
+  DefaultLength="255"
+  GenerateNullableTypes="True"
+  NameSpace="&lt;Default&gt;"
+  ORMappingConfigMode="Medium"
+  PluralSuffix=""
+  id="879374a9-c4f1-43b4-9acb-b05e338e9b88">
   <OwnedElement>
-    <Association Name="" EffectiveName="SysTranslateLanguageLanguageSysTranslationTranslations" id="a0a313ab-562f-4175-9d3c-11095a3e99da">
+    <Class
+      Name="SysCultureSettingsSingleton"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="3e1fb7bb-4642-47d2-9350-8a45c4f31187">
+      <Feature>
+        <Attribute
+          Name="NumberCulture"
+          Multiplicity=""
+          Visibility="Public"
+          id="4e0f2345-1582-4e5f-bbf2-94269c4128ba">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="MetricNotImperial"
+          InitialValue="true"
+          Multiplicity=""
+          Visibility="Public"
+          id="80fb66e5-6cd8-4cd0-b59e-b8fcd8b56c55">
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="TextCulture"
+          Multiplicity=""
+          Visibility="Public"
+          id="86f5a093-aa71-403c-8bfb-71c832b6700c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="DateTimeCulture"
+          Multiplicity=""
+          Visibility="Public"
+          id="ab051fcb-3d1c-472a-aa71-54311a60c061">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.IsSingleton"
+          Value="True" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="SysTranslateLanguageLanguageSysTranslationTranslations"
+      id="a0a313ab-562f-4175-9d3c-11095a3e99da">
       <AssociationEnd>
-        <AssociationEnd Name="Language" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="fccbee4c-30ff-4858-88d4-c130945d395a">
+        <AssociationEnd
+          Name="Language"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="fccbee4c-30ff-4858-88d4-c130945d395a">
           <Participant>
-            <Class Name="SysTranslateLanguage" idref="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed" />
+            <Class
+              Name="SysTranslateLanguage"
+              idref="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="Translations" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="ced7b3e5-8821-4479-856e-1ba9de6a9ccc">
+        <AssociationEnd
+          Name="Translations"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="ced7b3e5-8821-4479-856e-1ba9de6a9ccc">
           <Participant>
-            <Class Name="SysTranslation" idref="f7f417a5-c781-4096-b63f-dbfcb66be543" />
+            <Class
+              Name="SysTranslation"
+              idref="f7f417a5-c781-4096-b63f-dbfcb66be543" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysTranslatable" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="af802151-22d7-42bc-8ee5-9fcb494074f5">
+    <Class
+      Name="SysTranslatable"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="af802151-22d7-42bc-8ee5-9fcb494074f5">
       <Feature>
-        <Attribute Name="Value" Multiplicity="" Visibility="Public" id="2d796ab3-103c-42f8-94ed-de54c8bdc4df">
+        <Attribute
+          Name="Value"
+          Multiplicity=""
+          Visibility="Public"
+          id="2d796ab3-103c-42f8-94ed-de54c8bdc4df">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Value" />
+        <TaggedValue
+          Tag="Eco.DefaultStringRepresentation"
+          Value="self.Value" />
       </TaggedValue>
     </Class>
-    <Class Name="SysTranslateLanguage" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed">
+    <Class
+      Name="SysTranslateLanguage"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="d4153d64-6fd7-4be4-b13e-8d5f4d6965ed">
       <Feature>
-        <Attribute Name="Code" Multiplicity="" Visibility="Public" id="8fc2d2f4-a771-490a-b566-0d5a89421f92">
+        <Attribute
+          Name="Code"
+          Multiplicity=""
+          Visibility="Public"
+          id="8fc2d2f4-a771-490a-b566-0d5a89421f92">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Code" />
+        <TaggedValue
+          Tag="Eco.DefaultStringRepresentation"
+          Value="self.Code" />
       </TaggedValue>
     </Class>
-    <Association Name="" EffectiveName="SysTranslatableTranslatableSysTranslationTranslations" id="f1bdf5f1-56dd-4d55-9fc1-3d9aa0ae8c22">
+    <Association
+      Name=""
+      EffectiveName="SysTranslatableTranslatableSysTranslationTranslations"
+      id="f1bdf5f1-56dd-4d55-9fc1-3d9aa0ae8c22">
       <AssociationEnd>
-        <AssociationEnd Name="Translatable" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a75f52bc-7f65-43ca-9c5f-122506f8d548">
+        <AssociationEnd
+          Name="Translatable"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="a75f52bc-7f65-43ca-9c5f-122506f8d548">
           <Participant>
-            <Class Name="SysTranslatable" idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
+            <Class
+              Name="SysTranslatable"
+              idref="af802151-22d7-42bc-8ee5-9fcb494074f5" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="Translations" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a3857a4f-0a48-437e-b014-26989d8ea8ed">
+        <AssociationEnd
+          Name="Translations"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="a3857a4f-0a48-437e-b014-26989d8ea8ed">
           <Participant>
-            <Class Name="SysTranslation" idref="f7f417a5-c781-4096-b63f-dbfcb66be543" />
+            <Class
+              Name="SysTranslation"
+              idref="f7f417a5-c781-4096-b63f-dbfcb66be543" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysTranslation" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="f7f417a5-c781-4096-b63f-dbfcb66be543">
+    <Class
+      Name="SysTranslation"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="f7f417a5-c781-4096-b63f-dbfcb66be543">
       <Feature>
-        <Attribute Name="Value" Multiplicity="" Visibility="Public" id="45b9f9ff-cef9-4ba9-8e15-5d118a66b627">
+        <Attribute
+          Name="Value"
+          Multiplicity=""
+          Visibility="Public"
+          id="45b9f9ff-cef9-4ba9-8e15-5d118a66b627">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="Eco.DefaultStringRepresentation" Value="self.Value+' '+self.Language.asstring" />
+        <TaggedValue
+          Tag="Eco.DefaultStringRepresentation"
+          Value="self.Value+' '+self.Language.asstring" />
       </TaggedValue>
     </Class>
   </OwnedElement>
