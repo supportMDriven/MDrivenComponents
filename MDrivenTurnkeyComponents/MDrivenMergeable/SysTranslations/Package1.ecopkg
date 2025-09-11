@@ -18,10 +18,41 @@
       id="3e1fb7bb-4642-47d2-9350-8a45c4f31187">
       <Feature>
         <Attribute
-          Name="NumberCulture"
+          Name="TranslationCulture"
           Multiplicity=""
           Visibility="Public"
-          id="4e0f2345-1582-4e5f-bbf2-94269c4128ba">
+          id="12b7fcaa-5e9a-4f20-9c22-dbe0956f2a3d">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="DefaultDecimalDisplay"
+          Multiplicity=""
+          Visibility="Public"
+          id="2ffebd43-839b-4be2-b96d-c375cc3024f7">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Culture"
+          CodeComment="numbers,date and time"
+          Multiplicity=""
+          Visibility="Public"
+          id="7eb37adf-dbbb-47f7-b9cf-09409b15e8c0">
           <TaggedValue>
             <TaggedValue
               Tag="Eco.AllowNULL"
@@ -41,36 +72,6 @@
           <Type>
             <Datatype
               idref="Boolean" />
-          </Type>
-        </Attribute>
-        <Attribute
-          Name="TextCulture"
-          Multiplicity=""
-          Visibility="Public"
-          id="86f5a093-aa71-403c-8bfb-71c832b6700c">
-          <TaggedValue>
-            <TaggedValue
-              Tag="Eco.AllowNULL"
-              Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype
-              idref="String" />
-          </Type>
-        </Attribute>
-        <Attribute
-          Name="DateTimeCulture"
-          Multiplicity=""
-          Visibility="Public"
-          id="ab051fcb-3d1c-472a-aa71-54311a60c061">
-          <TaggedValue>
-            <TaggedValue
-              Tag="Eco.AllowNULL"
-              Value="True" />
-          </TaggedValue>
-          <Type>
-            <Datatype
-              idref="String" />
           </Type>
         </Attribute>
       </Feature>
