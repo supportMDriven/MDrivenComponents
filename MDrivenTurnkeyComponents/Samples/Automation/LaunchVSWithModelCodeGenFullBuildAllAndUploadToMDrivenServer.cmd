@@ -2,12 +2,12 @@
 setlocal
 
 :: Configuration
-set "MODELAUTOMATION_URL=http://localhost:5019"
-set "MODELAUTOMATION_USER=a"
-set "MODELAUTOMATION_PWD=123456"
-set "LOGFILE=C:\Users\hkarlsen\source\repos\MDriven Solution Template1\MDRIVENAUTOMATIONRESULT.log"
-set "MODELFILE=C:\Users\hkarlsen\source\repos\MDriven Solution Template1\MDriven Solution Template1\MDrivenEcoSpaceAndModelNetStandard\MDrivenModel.ecomdl"
-set "SLNFILE=C:\Users\hkarlsen\source\repos\MDriven Solution Template1\MDriven Solution Template1.sln"
+set "MODELAUTOMATION_URL=SomeMDrivenServerUrl"
+set "MODELAUTOMATION_USER=SomeMDrivenServerUser"
+set "MODELAUTOMATION_PWD=SomePWDForTheUSer"
+set "LOGFILE=<local>\MDriven Solution Template1\MDRIVENAUTOMATIONRESULT.log"
+set "MODELFILE=<local>\MDriven Solution Template1\MDriven Solution Template1\MDrivenEcoSpaceAndModelNetStandard\MDrivenModel.ecomdl"
+set "SLNFILE=C<local>\MDriven Solution Template1\MDriven Solution Template1.sln"
 set "DEVENV=C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe"
 
 :: Delete old log file if it exists
