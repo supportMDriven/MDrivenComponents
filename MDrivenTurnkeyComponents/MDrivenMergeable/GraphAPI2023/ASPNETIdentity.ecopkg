@@ -1,1129 +1,2367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Package Name="ASPNETIdentity" AdditionalNamespaces="" CodeGenCharacterMode="AllowUnicode" DefaultLength="255" GenerateNullableTypes="True" NameSpace="&lt;Default&gt;" ORMappingConfigMode="Medium" PluralSuffix="s" id="eb18d545-8d55-4a15-b9ba-13e814742fec">
+<Package
+  Name="ASPNETIdentity"
+  AdditionalNamespaces=""
+  CodeGenCharacterMode="AllowUnicode"
+  DefaultLength="255"
+  GenerateNullableTypes="True"
+  NameSpace="&lt;Default&gt;"
+  ORMappingConfigMode="Medium"
+  PluralSuffix="s"
+  id="eb18d545-8d55-4a15-b9ba-13e814742fec">
   <DefaultSuperClass>
-    <Class Name="SysSuperClass" idref="305f131d-d82d-49fa-8735-f894e1d58636" />
+    <Class
+      Name="SysSuperClass"
+      idref="305f131d-d82d-49fa-8735-f894e1d58636" />
   </DefaultSuperClass>
   <OwnedElement>
-    <Class Name="SysUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0017d588-d3cf-433b-b763-93ae056419c3">
+    <Class
+      Name="SysUser"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="0017d588-d3cf-433b-b763-93ae056419c3">
       <Feature>
-        <Attribute Name="SendMeNews" Multiplicity="" Visibility="Public" id="478748bb-b51a-466c-a099-ce7722d20731">
+        <Attribute
+          Name="SendMeNews"
+          Multiplicity=""
+          Visibility="Public"
+          id="478748bb-b51a-466c-a099-ce7722d20731">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="Boolean" />
+            <Datatype
+              idref="Boolean" />
           </Type>
         </Attribute>
-        <Method Name="OpenIdConnectAccessTokenRefresh" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="63a43724-e760-471f-b4e3-8460e40ece00">
+        <Method
+          Name="OpenIdConnectAccessTokenRefresh"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="63a43724-e760-471f-b4e3-8460e40ece00">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Attribute Name="IsAdmin" Multiplicity="" Visibility="Public" id="6abf6cc3-a120-48a2-a612-4f1c13c95b60">
+        <Attribute
+          Name="IsAdmin"
+          Multiplicity=""
+          Visibility="Public"
+          id="6abf6cc3-a120-48a2-a612-4f1c13c95b60">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="Boolean" />
+            <Datatype
+              idref="Boolean" />
           </Type>
         </Attribute>
-        <Attribute Name="Id" Multiplicity="" Visibility="Public" id="89122322-2cab-435d-8720-ab8c961dc818">
+        <Attribute
+          Name="Id"
+          Multiplicity=""
+          Visibility="Public"
+          id="89122322-2cab-435d-8720-ab8c961dc818">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="PasswordHash" Multiplicity="" Visibility="Public" id="977ffc63-785a-46d8-adc7-59b60a1ff106">
+        <Attribute
+          Name="PasswordHash"
+          Multiplicity=""
+          Visibility="Public"
+          id="977ffc63-785a-46d8-adc7-59b60a1ff106">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="UserName" Multiplicity="" Visibility="Public" id="9f49bb8e-ae50-4ec5-85e5-79c907bafdd3">
+        <Attribute
+          Name="UserName"
+          Multiplicity=""
+          Visibility="Public"
+          id="9f49bb8e-ae50-4ec5-85e5-79c907bafdd3">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="SecurityStamp" Multiplicity="" Visibility="Public" id="f735f6e1-6746-41d8-b1a2-f2084b7b12d2">
+        <Attribute
+          Name="SecurityStamp"
+          Multiplicity=""
+          Visibility="Public"
+          id="f735f6e1-6746-41d8-b1a2-f2084b7b12d2">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
     </Class>
-    <Association Name="" EffectiveName="SysGraphAPIResultRowSysGraphAPIResultRowSysGraphAPIResultRowFieldSysGraphAPIResultRowFields" id="0888619e-0a77-4200-96c6-8f6ba867e31e">
+    <Association
+      Name=""
+      EffectiveName="SysGraphAPIResultRowSysGraphAPIResultRowSysGraphAPIResultRowFieldSysGraphAPIResultRowFields"
+      id="0888619e-0a77-4200-96c6-8f6ba867e31e">
       <AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIResultRow" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c74fdfee-f6f5-4515-b56f-8fbd3ece889a">
+        <AssociationEnd
+          Name="SysGraphAPIResultRow"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="c74fdfee-f6f5-4515-b56f-8fbd3ece889a">
           <Participant>
-            <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+            <Class
+              Name="SysGraphAPIResultRow"
+              idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIResultRowFields" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a2a693f4-686f-4197-8430-25f53be340d0">
+        <AssociationEnd
+          Name="SysGraphAPIResultRowFields"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="a2a693f4-686f-4197-8430-25f53be340d0">
           <Participant>
-            <Class Name="SysGraphAPIResultRowField" idref="49fd1818-654d-4a15-a0ad-632d60860a2a" />
+            <Class
+              Name="SysGraphAPIResultRowField"
+              idref="49fd1818-654d-4a15-a0ad-632d60860a2a" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysUserRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf">
+    <Class
+      Name="SysUserRole"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf">
       <Association>
-        <Association Name="SysUserSysUsersSysRoleSysRoles" idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
+        <Association
+          Name="SysUserSysUsersSysRoleSysRoles"
+          idref="b0f92c8e-057e-4fd4-90ab-39f1d755a876" />
       </Association>
     </Class>
-    <Association Name="" EffectiveName="SysGraphAPIErrorSysGraphAPIErrorsSysGraphAPISysGraphAPI" id="2e5c0813-68bf-4df0-a25a-9580c9cb8f81">
+    <Association
+      Name=""
+      EffectiveName="SysGraphAPIErrorSysGraphAPIErrorsSysGraphAPISysGraphAPI"
+      id="2e5c0813-68bf-4df0-a25a-9580c9cb8f81">
       <AssociationEnd>
-        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="4fc56259-ab8a-4e0a-a7b3-56d5a17d19fa">
+        <AssociationEnd
+          Name="SysGraphAPI"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="4fc56259-ab8a-4e0a-a7b3-56d5a17d19fa">
           <Participant>
-            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+            <Class
+              Name="SysGraphAPI"
+              idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIErrors" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5">
+        <AssociationEnd
+          Name="SysGraphAPIErrors"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="a75fb2ce-49b6-4d61-9e56-9ade1f4ba1d5">
           <Participant>
-            <Class Name="SysGraphAPIError" idref="a492dbf6-04db-4e40-9261-a22e297c93ac" />
+            <Class
+              Name="SysGraphAPIError"
+              idref="a492dbf6-04db-4e40-9261-a22e297c93ac" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysSuperClass" AdditionalNamespaces="" IsAbstract="True" IsSealed="False" id="305f131d-d82d-49fa-8735-f894e1d58636">
+    <Class
+      Name="SysSuperClass"
+      AdditionalNamespaces=""
+      IsAbstract="True"
+      IsSealed="False"
+      id="305f131d-d82d-49fa-8735-f894e1d58636">
       <Feature>
-        <Method Name="OnCreate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
+        <Method
+          Name="OnCreate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="0776a285-d6aa-4bd3-9410-336aa0e8a35b">
           <TaggedValue>
-            <TaggedValue Tag="Eco.Body" Value="CreateTime:=DateTime.Now;&#xD;&#xA;self.Guid.newGuid()" />
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="CreateTime:=DateTime.Now;&#xD;&#xA;self.Guid.newGuid()" />
           </TaggedValue>
         </Method>
-        <Method Name="OnUpdate" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="4ca4702c-1fa2-424c-8af7-bd252ed6e35f">
+        <Method
+          Name="OnUpdate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="4ca4702c-1fa2-424c-8af7-bd252ed6e35f">
           <TaggedValue>
-            <TaggedValue Tag="Eco.Body" Value="self.ChangeTime:=DateTime.Now" />
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.ChangeTime:=DateTime.Now" />
           </TaggedValue>
         </Method>
-        <Attribute Name="ChangeTime" Multiplicity="" Visibility="Public" id="595b61dd-b2d6-4010-9557-88d32ad9e4cd">
+        <Attribute
+          Name="ChangeTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="595b61dd-b2d6-4010-9557-88d32ad9e4cd">
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
-        <Attribute Name="Guid" Multiplicity="" Visibility="Public" id="6c4398ca-d6f8-4763-b162-77c675aa06dc">
+        <Attribute
+          Name="Guid"
+          Multiplicity=""
+          Visibility="Public"
+          id="6c4398ca-d6f8-4763-b162-77c675aa06dc">
           <Type>
-            <Datatype idref="Guid" />
+            <Datatype
+              idref="Guid" />
           </Type>
         </Attribute>
-        <Attribute Name="CreateTime" Multiplicity="" Visibility="Public" id="89803d28-5552-457f-bc84-33f0bf1ba9eb">
+        <Attribute
+          Name="CreateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="89803d28-5552-457f-bc84-33f0bf1ba9eb">
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="Eco.TableMapping" Value="Children" />
+        <TaggedValue
+          Tag="Eco.TableMapping"
+          Value="Children" />
       </TaggedValue>
     </Class>
-    <Class Name="SysGraphAPI" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="38553568-7d6a-4c34-9438-9f599d552420">
+    <Class
+      Name="SysGraphAPI"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="38553568-7d6a-4c34-9438-9f599d552420">
       <Feature>
-        <Method Name="GetContentFromDriveIdAndIdAndVersion" CodeComment="Returns the url to the image" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="058dddec-e866-4f3d-9bf4-c79a25ad41d8">
+        <Method
+          Name="GetContentFromDriveIdAndIdAndVersion"
+          CodeComment="Returns the url to the image"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="058dddec-e866-4f3d-9bf4-c79a25ad41d8">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="driveitem" Kind="In">
+            <Parameter
+              Name="driveitem"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="version" Kind="In">
+            <Parameter
+              Name="version"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Blob" />
+                <Datatype
+                  idref="Blob" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="LookUpFromUrl" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0e8239f5-08f4-4a5c-929b-a901c2843497">
+        <Method
+          Name="LookUpFromUrl"
+          CodeComment="adds to SysGraphAPIResultRows"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="0e8239f5-08f4-4a5c-929b-a901c2843497">
           <Parameter>
-            <Parameter Name="url" Kind="In">
+            <Parameter
+              Name="url"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="SysGraphAPIResultRow" />
+                <Datatype
+                  idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="GetUsers" CodeComment="All users principalname starting with in the SysGraphAPIResultUser" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="1ac95f45-22ce-4546-ab30-b40017a87822">
+        <Method
+          Name="GetUsers"
+          CodeComment="All users principalname starting with in the SysGraphAPIResultUser"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="1ac95f45-22ce-4546-ab30-b40017a87822">
           <Parameter>
-            <Parameter Name="startingwith" Kind="In">
+            <Parameter
+              Name="startingwith"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="GetDecodedAccessToken" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="2b954f01-928b-450f-b353-d1a9adce2e57">
+        <Method
+          Name="GetDecodedAccessToken"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="2b954f01-928b-450f-b353-d1a9adce2e57">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="UploadToFolderWithDriveIdAndId" CodeComment="returns SysGraphAPIResultRow" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="32a2b948-68c4-4826-bb9f-cdc36f393c7a">
+        <Method
+          Name="UploadToFolderWithDriveIdAndId"
+          CodeComment="returns SysGraphAPIResultRow"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="32a2b948-68c4-4826-bb9f-cdc36f393c7a">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="itemid" Kind="In">
+            <Parameter
+              Name="itemid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="filename" Kind="In">
+            <Parameter
+              Name="filename"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="data" Kind="In">
+            <Parameter
+              Name="data"
+              Kind="In">
               <Type>
-                <Datatype idref="Blob" />
+                <Datatype
+                  idref="Blob" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="SysGraphAPIResultRow" />
+                <Datatype
+                  idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="UpdateContentDriveIdAndId" CodeComment="New content in existing document " IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="69f6b968-e655-4479-b8ae-e51bfccd76be">
+        <Method
+          Name="UpdateContentDriveIdAndId"
+          CodeComment="New content in existing document "
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="69f6b968-e655-4479-b8ae-e51bfccd76be">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="itemid" Kind="In">
+            <Parameter
+              Name="itemid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="data" Kind="In">
+            <Parameter
+              Name="data"
+              Kind="In">
               <Type>
-                <Datatype idref="Blob" />
+                <Datatype
+                  idref="Blob" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="SysGraphAPIResultRow" />
+                <Datatype
+                  idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="Search" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="6f80d835-feea-4fa1-8be8-45c7c589ee07">
+        <Method
+          Name="Search"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="6f80d835-feea-4fa1-8be8-45c7c589ee07">
           <Parameter>
-            <Parameter Name="search" Kind="In">
+            <Parameter
+              Name="search"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="LookUpFromDriveIdAndIdAndVersion" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7f38bd75-764b-4863-8fdf-2e76b09cd907">
+        <Method
+          Name="LookUpFromDriveIdAndIdAndVersion"
+          CodeComment="adds to SysGraphAPIResultRows"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="7f38bd75-764b-4863-8fdf-2e76b09cd907">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="itemid" Kind="In">
+            <Parameter
+              Name="itemid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="version" Kind="In">
+            <Parameter
+              Name="version"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="SysGraphAPIResultRow" />
+                <Datatype
+                  idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="GetDecodedRefreshToken" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="846a4111-3e16-48c8-96c7-1a2d103b8b54">
+        <Method
+          Name="GetDecodedRefreshToken"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="846a4111-3e16-48c8-96c7-1a2d103b8b54">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="DriveDriveItemToThumbnailUrl" CodeComment="Returns the url to the image" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="a57afe40-a3ce-4af0-aeac-a731a6814806">
+        <Method
+          Name="DriveDriveItemToThumbnailUrl"
+          CodeComment="Returns the url to the image"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="a57afe40-a3ce-4af0-aeac-a731a6814806">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="driveitem" Kind="In">
+            <Parameter
+              Name="driveitem"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="GetUsersFromGroupId" CodeComment="All users from a groupId in SysGraphAPIResultUser" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="afe140dc-08e8-42e9-b12a-abdf2d219b7d">
+        <Method
+          Name="GetUsersFromGroupId"
+          CodeComment="All users from a groupId in SysGraphAPIResultUser"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="afe140dc-08e8-42e9-b12a-abdf2d219b7d">
           <Parameter>
-            <Parameter Name="groupId" Kind="In">
+            <Parameter
+              Name="groupId"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="LookUpLocationFromDriveIdAndId" CodeComment="adds to SysGraphAPIResultRows" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b5581ad7-a77a-4a48-95e8-5151f333bb38">
+        <Method
+          Name="LookUpLocationFromDriveIdAndId"
+          CodeComment="adds to SysGraphAPIResultRows"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="b5581ad7-a77a-4a48-95e8-5151f333bb38">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="itemid" Kind="In">
+            <Parameter
+              Name="itemid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="SysGraphAPIResultRow" />
+                <Datatype
+                  idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="GetGroupsFromPrincipalUser" CodeComment="id of a group gives you all users in group as SysGraphAPIResultUsers" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d6594441-7035-4c05-b5fb-4824df0daae5">
+        <Method
+          Name="GetGroupsFromPrincipalUser"
+          CodeComment="id of a group gives you all users in group as SysGraphAPIResultUsers"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="d6594441-7035-4c05-b5fb-4824df0daae5">
           <Parameter>
-            <Parameter Name="principalUser" Kind="In">
+            <Parameter
+              Name="principalUser"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="AdHocGetQuery" CodeComment="resturns json" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="d729d2f3-d208-4fe8-af58-d29619d420ac">
+        <Method
+          Name="AdHocGetQuery"
+          CodeComment="resturns json"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="d729d2f3-d208-4fe8-af58-d29619d420ac">
           <Parameter>
-            <Parameter Name="url" Kind="In">
+            <Parameter
+              Name="url"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Attribute Name="StatusFromLastOp" Multiplicity="" Visibility="Public" id="da24edf4-165e-4bfe-9f02-709c0bb395f0">
+        <Attribute
+          Name="StatusFromLastOp"
+          Multiplicity=""
+          Visibility="Public"
+          id="da24edf4-165e-4bfe-9f02-709c0bb395f0">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-            <TaggedValue Tag="Eco.Length" Value="1000" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="1000" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Method Name="CreateFolderInFolderWithDriveIdAndId" CodeComment="returns SysGraphAPIResultRow" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="ee7c1b2f-0b63-4bc8-8a3a-714618b40aa0">
+        <Method
+          Name="CreateFolderInFolderWithDriveIdAndId"
+          CodeComment="returns SysGraphAPIResultRow"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="ee7c1b2f-0b63-4bc8-8a3a-714618b40aa0">
           <Parameter>
-            <Parameter Name="driveid" Kind="In">
+            <Parameter
+              Name="driveid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="itemid" Kind="In">
+            <Parameter
+              Name="itemid"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="foldername" Kind="In">
+            <Parameter
+              Name="foldername"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="SysGraphAPIResultRow" />
+                <Datatype
+                  idref="SysGraphAPIResultRow" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Class>
-    <Class Name="SysToken" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="44635011-812f-43c1-b59f-a2748f3f1680">
+    <Class
+      Name="SysToken"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="44635011-812f-43c1-b59f-a2748f3f1680">
       <Feature>
-        <Attribute Name="ValidUntil" Multiplicity="" Visibility="Public" id="1400f8f0-36e0-4e53-8948-9cfe7321ab07">
+        <Attribute
+          Name="ValidUntil"
+          Multiplicity=""
+          Visibility="Public"
+          id="1400f8f0-36e0-4e53-8948-9cfe7321ab07">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
-        <Method Name="GetValidMinutes" CodeComment="Default is 1 hour , but i azure you can turn it down to 10 minutes" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="7e168d21-defe-484c-9ae3-87caa3271f73">
+        <Method
+          Name="GetValidMinutes"
+          CodeComment="Default is 1 hour , but i azure you can turn it down to 10 minutes"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="7e168d21-defe-484c-9ae3-87caa3271f73">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.Body" Value="50" />
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="50" />
           </TaggedValue>
         </Method>
-        <Attribute Name="Refresh_Token" Multiplicity="" Visibility="Public" id="a00bf950-42f1-4500-b743-9f686fb278fd">
+        <Attribute
+          Name="Refresh_Token"
+          Multiplicity=""
+          Visibility="Public"
+          id="a00bf950-42f1-4500-b743-9f686fb278fd">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-            <TaggedValue Tag="Eco.Length" Value="-1" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="-1" />
           </TaggedValue>
           <Type>
-            <Datatype idref="Text" />
+            <Datatype
+              idref="Text" />
           </Type>
         </Attribute>
-        <Attribute Name="Access_Token" Multiplicity="" Visibility="Public" id="e7d1ca53-7b09-49a7-8048-30ff16a06b34">
+        <Attribute
+          Name="Access_Token"
+          Multiplicity=""
+          Visibility="Public"
+          id="e7d1ca53-7b09-49a7-8048-30ff16a06b34">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-            <TaggedValue Tag="Eco.Length" Value="-1" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="-1" />
           </TaggedValue>
           <Type>
-            <Datatype idref="Text" />
+            <Datatype
+              idref="Text" />
           </Type>
         </Attribute>
-        <Attribute Name="Provider" Multiplicity="" Visibility="Public" id="f605dfd0-d780-40fe-ac76-1f5b3cd98e53">
+        <Attribute
+          Name="Provider"
+          Multiplicity=""
+          Visibility="Public"
+          id="f605dfd0-d780-40fe-ac76-1f5b3cd98e53">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
     </Class>
-    <Class Name="SysGraphAPIResultRowField" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="49fd1818-654d-4a15-a0ad-632d60860a2a">
+    <Class
+      Name="SysGraphAPIResultRowField"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="49fd1818-654d-4a15-a0ad-632d60860a2a">
       <Feature>
-        <Attribute Name="Value" Multiplicity="" Visibility="Public" id="5570b2dc-951c-4024-b97f-99d6db94c12d">
+        <Attribute
+          Name="Value"
+          Multiplicity=""
+          Visibility="Public"
+          id="5570b2dc-951c-4024-b97f-99d6db94c12d">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="8fe3c547-d17a-4308-bce4-8e8a134d82c0">
+        <Attribute
+          Name="Name"
+          Multiplicity=""
+          Visibility="Public"
+          id="8fe3c547-d17a-4308-bce4-8e8a134d82c0">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Class>
-    <Association Name="" EffectiveName="SysUserSysUserSysTokenSysTokens" id="54c8cf82-f8b5-4dce-9203-874075a328ec">
+    <Association
+      Name=""
+      EffectiveName="SysUserSysUserSysTokenSysTokens"
+      id="54c8cf82-f8b5-4dce-9203-874075a328ec">
       <AssociationEnd>
-        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c1b15df4-18a1-43f4-9085-5a4c278ee5e5">
+        <AssociationEnd
+          Name="SysUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="c1b15df4-18a1-43f4-9085-5a4c278ee5e5">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysTokens" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="87ba9e48-0291-43a9-b360-4aa18b4b7e1b">
+        <AssociationEnd
+          Name="SysTokens"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="87ba9e48-0291-43a9-b360-4aa18b4b7e1b">
           <Participant>
-            <Class Name="SysToken" idref="44635011-812f-43c1-b59f-a2748f3f1680" />
+            <Class
+              Name="SysToken"
+              idref="44635011-812f-43c1-b59f-a2748f3f1680" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysRole" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="56e1db7e-00b4-4273-bb39-1e8ad181328b">
+    <Class
+      Name="SysRole"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="56e1db7e-00b4-4273-bb39-1e8ad181328b">
       <Feature>
-        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="59e869ad-6136-49a7-86d2-074a6595cdf9">
+        <Attribute
+          Name="Name"
+          Multiplicity=""
+          Visibility="Public"
+          id="59e869ad-6136-49a7-86d2-074a6595cdf9">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
     </Class>
-    <Class Name="SysGraphAPIResultUser" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="647b4764-a507-43dd-9c7e-a09f9854bdb1">
+    <Class
+      Name="SysGraphAPIResultUser"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="647b4764-a507-43dd-9c7e-a09f9854bdb1">
       <Feature>
-        <Attribute Name="mobilePhone" Multiplicity="" Visibility="Public" id="1adc1130-d1dd-4378-b75e-a0daccbe9e1c">
+        <Attribute
+          Name="mobilePhone"
+          Multiplicity=""
+          Visibility="Public"
+          id="1adc1130-d1dd-4378-b75e-a0daccbe9e1c">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="givenName" Multiplicity="" Visibility="Public" id="3f8bd3da-de78-41f1-a90e-e1f44c8bf2e9">
+        <Attribute
+          Name="givenName"
+          Multiplicity=""
+          Visibility="Public"
+          id="3f8bd3da-de78-41f1-a90e-e1f44c8bf2e9">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="officeLocation" Multiplicity="" Visibility="Public" id="623c3ab6-6817-4bd7-b19b-c542f2f467a7">
+        <Attribute
+          Name="officeLocation"
+          Multiplicity=""
+          Visibility="Public"
+          id="623c3ab6-6817-4bd7-b19b-c542f2f467a7">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="displayName" Multiplicity="" Visibility="Public" id="637c3a8d-b7d6-49be-a3c6-6cb2f367de01">
+        <Attribute
+          Name="displayName"
+          Multiplicity=""
+          Visibility="Public"
+          id="637c3a8d-b7d6-49be-a3c6-6cb2f367de01">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="jobTitle" Multiplicity="" Visibility="Public" id="7db89523-c075-4208-8152-d6d6bad96ec7">
+        <Attribute
+          Name="jobTitle"
+          Multiplicity=""
+          Visibility="Public"
+          id="7db89523-c075-4208-8152-d6d6bad96ec7">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="userPrincipalName" Multiplicity="" Visibility="Public" id="7f8bbbdb-49fe-4d21-8117-7884cc6078d9">
+        <Attribute
+          Name="userPrincipalName"
+          Multiplicity=""
+          Visibility="Public"
+          id="7f8bbbdb-49fe-4d21-8117-7884cc6078d9">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="surname" Multiplicity="" Visibility="Public" id="8725a412-766b-4a41-9318-3bb0c7d6165c">
+        <Attribute
+          Name="surname"
+          Multiplicity=""
+          Visibility="Public"
+          id="8725a412-766b-4a41-9318-3bb0c7d6165c">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="id" Multiplicity="" Visibility="Public" id="d94bc885-3470-4c71-9c56-165401838ecd">
+        <Attribute
+          Name="id"
+          Multiplicity=""
+          Visibility="Public"
+          id="d94bc885-3470-4c71-9c56-165401838ecd">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="mail" Multiplicity="" Visibility="Public" id="f74aed1c-1bcf-4190-be36-89761606f250">
+        <Attribute
+          Name="mail"
+          Multiplicity=""
+          Visibility="Public"
+          id="f74aed1c-1bcf-4190-be36-89761606f250">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Class>
-    <Association Name="" EffectiveName="SysExternalLoginSysExternalLoginsSysUserSysUser" id="6f24b23b-4930-445d-ab8f-99fed6a51e16">
+    <Association
+      Name=""
+      EffectiveName="SysExternalLoginSysExternalLoginsSysUserSysUser"
+      id="6f24b23b-4930-445d-ab8f-99fed6a51e16">
       <AssociationEnd>
-        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="8847b309-9ee6-4258-8365-0b100f9c6108">
+        <AssociationEnd
+          Name="SysUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="8847b309-9ee6-4258-8365-0b100f9c6108">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysExternalLogins" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="b08c5b53-7343-44df-8e77-52d2cfeb0e70">
+        <AssociationEnd
+          Name="SysExternalLogins"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="b08c5b53-7343-44df-8e77-52d2cfeb0e70">
           <Participant>
-            <Class Name="SysExternalLogin" idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
+            <Class
+              Name="SysExternalLogin"
+              idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPIGroupSysGraphAPIGroups" id="822d77c5-1e2f-45e3-bff6-df7e00bfb2a3">
+    <Association
+      Name=""
+      EffectiveName="SysGraphAPISysGraphAPISysGraphAPIGroupSysGraphAPIGroups"
+      id="822d77c5-1e2f-45e3-bff6-df7e00bfb2a3">
       <AssociationEnd>
-        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="b63a195a-fdff-4942-8aa4-382aa3208b58">
+        <AssociationEnd
+          Name="SysGraphAPI"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="b63a195a-fdff-4942-8aa4-382aa3208b58">
           <Participant>
-            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+            <Class
+              Name="SysGraphAPI"
+              idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIGroups" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="68f577a2-f301-447d-a5be-ac4e001fe3a3">
+        <AssociationEnd
+          Name="SysGraphAPIGroups"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="68f577a2-f301-447d-a5be-ac4e001fe3a3">
           <Participant>
-            <Class Name="SysGraphAPIGroup" idref="8475441b-f829-4b78-81f9-72c9a135320f" />
+            <Class
+              Name="SysGraphAPIGroup"
+              idref="8475441b-f829-4b78-81f9-72c9a135320f" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysGraphAPIGroup" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8475441b-f829-4b78-81f9-72c9a135320f">
+    <Class
+      Name="SysGraphAPIGroup"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="8475441b-f829-4b78-81f9-72c9a135320f">
       <Feature>
-        <Attribute Name="onPremisesLastSyncDateTime" Multiplicity="" Visibility="Public" id="049ccc4a-0ee6-45ee-8ed0-18d12e60b2dc">
+        <Attribute
+          Name="onPremisesLastSyncDateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="049ccc4a-0ee6-45ee-8ed0-18d12e60b2dc">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
-        <Attribute Name="mailEnabled" Multiplicity="" Visibility="Public" id="287efc49-59a9-456f-b3cc-bbd3696ac3ed">
+        <Attribute
+          Name="mailEnabled"
+          Multiplicity=""
+          Visibility="Public"
+          id="287efc49-59a9-456f-b3cc-bbd3696ac3ed">
           <Type>
-            <Datatype idref="Boolean" />
+            <Datatype
+              idref="Boolean" />
           </Type>
         </Attribute>
-        <Attribute Name="expirationDateTime" Multiplicity="" Visibility="Public" id="3ad6a48c-5ffa-4fbd-8811-f0e7839f2504">
+        <Attribute
+          Name="expirationDateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="3ad6a48c-5ffa-4fbd-8811-f0e7839f2504">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
-        <Attribute Name="onPremisesDomainName" Multiplicity="" Visibility="Public" id="434a22b9-0e26-4675-b578-941acd281f29">
+        <Attribute
+          Name="onPremisesDomainName"
+          Multiplicity=""
+          Visibility="Public"
+          id="434a22b9-0e26-4675-b578-941acd281f29">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="displayName" Multiplicity="" Visibility="Public" id="4c540cb9-73db-42ce-9828-12cc901b9db9">
+        <Attribute
+          Name="displayName"
+          Multiplicity=""
+          Visibility="Public"
+          id="4c540cb9-73db-42ce-9828-12cc901b9db9">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="id" Multiplicity="" Visibility="Public" id="721edee2-0096-468e-b423-4e46aae182fc">
+        <Attribute
+          Name="id"
+          Multiplicity=""
+          Visibility="Public"
+          id="721edee2-0096-468e-b423-4e46aae182fc">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="description" Multiplicity="" Visibility="Public" id="9f9cb243-59d5-4ac9-aaf4-494e346b5b4f">
+        <Attribute
+          Name="description"
+          Multiplicity=""
+          Visibility="Public"
+          id="9f9cb243-59d5-4ac9-aaf4-494e346b5b4f">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
-            <TaggedValue Tag="Eco.Length" Value="500" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="500" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="securityEnabled" Multiplicity="" Visibility="Public" id="bc52a952-5423-4047-b2a5-1f0860e09cb8">
+        <Attribute
+          Name="securityEnabled"
+          Multiplicity=""
+          Visibility="Public"
+          id="bc52a952-5423-4047-b2a5-1f0860e09cb8">
           <Type>
-            <Datatype idref="Boolean" />
+            <Datatype
+              idref="Boolean" />
           </Type>
         </Attribute>
-        <Attribute Name="mailNickname" Multiplicity="" Visibility="Public" id="c1d5da12-1b64-4d73-81f7-5c6d6527b163">
+        <Attribute
+          Name="mailNickname"
+          Multiplicity=""
+          Visibility="Public"
+          id="c1d5da12-1b64-4d73-81f7-5c6d6527b163">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="createdDateTime" Multiplicity="" Visibility="Public" id="df21cd89-0586-45c2-bc62-a87f4499bace">
+        <Attribute
+          Name="createdDateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="df21cd89-0586-45c2-bc62-a87f4499bace">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
-        <Attribute Name="deletedDateTime" Multiplicity="" Visibility="Public" id="e5b147ee-6ab9-47a5-b38f-672b20bc6ec2">
+        <Attribute
+          Name="deletedDateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="e5b147ee-6ab9-47a5-b38f-672b20bc6ec2">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
-        <Attribute Name="renewedDateTime" Multiplicity="" Visibility="Public" id="ee9fdc10-6cd1-4dde-8184-2955010ef145">
+        <Attribute
+          Name="renewedDateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="ee9fdc10-6cd1-4dde-8184-2955010ef145">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="DateTime" />
+            <Datatype
+              idref="DateTime" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Class>
-    <Class Name="SysExternalLogin" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="8ea431b6-73df-4536-a07a-751b01f5dd17">
+    <Class
+      Name="SysExternalLogin"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="8ea431b6-73df-4536-a07a-751b01f5dd17">
       <Feature>
-        <Attribute Name="LoginProvider" Multiplicity="" Visibility="Public" id="172a11ee-84fb-412e-8f05-520d45d21416">
+        <Attribute
+          Name="LoginProvider"
+          Multiplicity=""
+          Visibility="Public"
+          id="172a11ee-84fb-412e-8f05-520d45d21416">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="ProviderKey" Multiplicity="" Visibility="Public" id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
+        <Attribute
+          Name="ProviderKey"
+          Multiplicity=""
+          Visibility="Public"
+          id="780de44d-2a38-4d28-bc4a-3d59f8d52f98">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
     </Class>
-    <Class Name="SysGraphAPIError" AdditionalNamespaces="" CodeComment="Will be troublesome to extract a bunch of documents if we dont collect any errors in the api and allow developer to handle as see fit" IsAbstract="False" IsSealed="False" id="a492dbf6-04db-4e40-9261-a22e297c93ac">
+    <Class
+      Name="SysGraphAPIError"
+      AdditionalNamespaces=""
+      CodeComment="Will be troublesome to extract a bunch of documents if we dont collect any errors in the api and allow developer to handle as see fit"
+      IsAbstract="False"
+      IsSealed="False"
+      id="a492dbf6-04db-4e40-9261-a22e297c93ac">
       <Feature>
-        <Attribute Name="Method" Multiplicity="" Visibility="Public" id="60a13b24-4667-413d-9853-b8b055b93792">
+        <Attribute
+          Name="Method"
+          Multiplicity=""
+          Visibility="Public"
+          id="60a13b24-4667-413d-9853-b8b055b93792">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Arguments" Multiplicity="" Visibility="Public" id="f175614f-dca9-47b9-aa7c-8ff30e703aa6">
+        <Attribute
+          Name="Arguments"
+          Multiplicity=""
+          Visibility="Public"
+          id="f175614f-dca9-47b9-aa7c-8ff30e703aa6">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Exception" Multiplicity="" Visibility="Public" id="fa98fe5c-e5c9-4750-8208-2cc31cb7aede">
+        <Attribute
+          Name="Exception"
+          Multiplicity=""
+          Visibility="Public"
+          id="fa98fe5c-e5c9-4750-8208-2cc31cb7aede">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Class>
-    <Association Name="" EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser" id="acbe9a76-8505-4796-a7d1-128dc0d52467">
+    <Association
+      Name=""
+      EffectiveName="SysUserCurrentUserSysSingletonSysSingletonsCurrentUser"
+      id="acbe9a76-8505-4796-a7d1-128dc0d52467">
       <AssociationEnd>
-        <AssociationEnd Name="CurrentUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="c58f940a-682a-461e-9c0e-b8536f8381bf">
+        <AssociationEnd
+          Name="CurrentUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="c58f940a-682a-461e-9c0e-b8536f8381bf">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysSingletonsCurrentUser" IsNavigable="False" Multiplicity="0..*" Visibility="Public" id="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b">
+        <AssociationEnd
+          Name="SysSingletonsCurrentUser"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="b02cd4b6-43c2-4b20-9f81-bd82d0b9104b">
           <Participant>
-            <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+            <Class
+              Name="SysSingleton"
+              idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Association>
-    <Class Name="SysSingleton" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="ad4cf46f-0195-4197-bef2-9f8dd89a3870">
+    <Class
+      Name="SysSingleton"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="ad4cf46f-0195-4197-bef2-9f8dd89a3870">
       <TaggedValue>
-        <TaggedValue Tag="Eco.IsSingleton" Value="True" />
+        <TaggedValue
+          Tag="Eco.IsSingleton"
+          Value="True" />
       </TaggedValue>
     </Class>
-    <Association Name="" EffectiveName="SysUserSysUsersSysRoleSysRoles" id="b0f92c8e-057e-4fd4-90ab-39f1d755a876">
+    <Association
+      Name=""
+      EffectiveName="SysUserSysUsersSysRoleSysRoles"
+      id="b0f92c8e-057e-4fd4-90ab-39f1d755a876">
       <AssociationEnd>
-        <AssociationEnd Name="SysUsers" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="2e115e1e-fcc5-432d-b68b-b8416b0b36db">
+        <AssociationEnd
+          Name="SysUsers"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="2e115e1e-fcc5-432d-b68b-b8416b0b36db">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysRoles" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a">
+        <AssociationEnd
+          Name="SysRoles"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="11db81ec-1bbe-44ec-8b5b-3eabbb98d46a">
           <Participant>
-            <Class Name="SysRole" idref="56e1db7e-00b4-4273-bb39-1e8ad181328b" />
+            <Class
+              Name="SysRole"
+              idref="56e1db7e-00b4-4273-bb39-1e8ad181328b" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
       <Class>
-        <Class Name="SysUserRole" idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
+        <Class
+          Name="SysUserRole"
+          idref="0f3cc3a3-8d73-463c-83f0-abf087ba0aaf" />
       </Class>
     </Association>
-    <Class Name="SysGraphAPIResultRow" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="cefde719-fab1-4589-a948-5e415eec2a0d">
+    <Class
+      Name="SysGraphAPIResultRow"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="cefde719-fab1-4589-a948-5e415eec2a0d">
       <Feature>
-        <Method Name="SendInvite" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="0f08441e-09a5-497e-b4cc-a5d58a4e92c2">
+        <Method
+          Name="SendInvite"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="0f08441e-09a5-497e-b4cc-a5d58a4e92c2">
           <Parameter>
-            <Parameter Name="email" Kind="In">
+            <Parameter
+              Name="email"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="message" Kind="In">
+            <Parameter
+              Name="message"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="writeaccess" Kind="In">
+            <Parameter
+              Name="writeaccess"
+              Kind="In">
               <Type>
-                <Datatype idref="Boolean" />
+                <Datatype
+                  idref="Boolean" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="NavigateUpToParentFolder" CodeComment="Clears adds to SysGraphAPIResultRows and adds new" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="3f58a64e-412a-4685-8c21-230a2fb6e518">
+        <Method
+          Name="NavigateUpToParentFolder"
+          CodeComment="Clears adds to SysGraphAPIResultRows and adds new"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="3f58a64e-412a-4685-8c21-230a2fb6e518">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Attribute Name="WebUrl" Multiplicity="" Visibility="Public" id="40b319dd-53ae-4d40-bb3a-dd43b254e970">
+        <Attribute
+          Name="WebUrl"
+          Multiplicity=""
+          Visibility="Public"
+          id="40b319dd-53ae-4d40-bb3a-dd43b254e970">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Method Name="GetPermissionsAsJson" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="420cf90b-cf9d-4cde-8153-102bc865e8a0">
+        <Method
+          Name="GetPermissionsAsJson"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="420cf90b-cf9d-4cde-8153-102bc865e8a0">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Method Name="PatchField" CodeComment="" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="47987b88-fa1a-45eb-bb39-12845929c445">
+        <Method
+          Name="PatchField"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="47987b88-fa1a-45eb-bb39-12845929c445">
           <Parameter>
-            <Parameter Name="name" Kind="In">
+            <Parameter
+              Name="name"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
-            <Parameter Name="value" Kind="In">
+            <Parameter
+              Name="value"
+              Kind="In">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </Parameter>
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="String" />
+                <Datatype
+                  idref="String" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Attribute Name="DriveId" Multiplicity="" Visibility="Public" id="725a5a53-a0a6-4f71-a4ef-215abf2118eb">
+        <Attribute
+          Name="DriveId"
+          Multiplicity=""
+          Visibility="Public"
+          id="725a5a53-a0a6-4f71-a4ef-215abf2118eb">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Name" Multiplicity="" Visibility="Public" id="7423370e-8383-4acd-af35-7a67bd2d878f">
+        <Attribute
+          Name="Name"
+          Multiplicity=""
+          Visibility="Public"
+          id="7423370e-8383-4acd-af35-7a67bd2d878f">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Type" Multiplicity="" Visibility="Public" id="845015f2-9451-434d-8502-16c19ee1f347">
+        <Attribute
+          Name="Type"
+          Multiplicity=""
+          Visibility="Public"
+          id="845015f2-9451-434d-8502-16c19ee1f347">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="ParentItemId" Multiplicity="" Visibility="Public" id="91b48ffa-7d8d-4dee-aa98-8c5cd2be30c2">
+        <Attribute
+          Name="ParentItemId"
+          Multiplicity=""
+          Visibility="Public"
+          id="91b48ffa-7d8d-4dee-aa98-8c5cd2be30c2">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="ItemId" Multiplicity="" Visibility="Public" id="9f1dc01b-f016-4717-9e7a-0bea6c56e1f3">
+        <Attribute
+          Name="ItemId"
+          Multiplicity=""
+          Visibility="Public"
+          id="9f1dc01b-f016-4717-9e7a-0bea6c56e1f3">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Rank" Multiplicity="" Visibility="Public" id="9f6d17a3-4683-430c-b2e1-deb3fa2745dc">
+        <Attribute
+          Name="Rank"
+          Multiplicity=""
+          Visibility="Public"
+          id="9f6d17a3-4683-430c-b2e1-deb3fa2745dc">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="Integer" />
+            <Datatype
+              idref="Integer" />
           </Type>
         </Attribute>
-        <Attribute Name="VersionNumber" Multiplicity="" Visibility="Public" id="b2e064d7-d037-40ac-a635-39c11a227724">
+        <Attribute
+          Name="VersionNumber"
+          Multiplicity=""
+          Visibility="Public"
+          id="b2e064d7-d037-40ac-a635-39c11a227724">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="SharepointDocId" Multiplicity="" Visibility="Public" id="b5921264-25a7-40b2-a3f9-4ca553d67849">
+        <Attribute
+          Name="SharepointDocId"
+          Multiplicity=""
+          Visibility="Public"
+          id="b5921264-25a7-40b2-a3f9-4ca553d67849">
           <TaggedValue>
-            <TaggedValue Tag="Eco.AllowNULL" Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
           </TaggedValue>
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Method Name="NavigateDownInFolder" CodeComment="Clears adds to SysGraphAPIResultRows and adds new" IsAbstract="False" IsConstructor="False" IsNew="False" IsOverride="False" IsQuery="False" IsSealed="False" IsStatic="False" IsVirtual="False" Postcondition="" Precondition="" Visibility="Public" id="b8332978-0c7b-4fe3-a71b-f0c9198dbb07">
+        <Method
+          Name="NavigateDownInFolder"
+          CodeComment="Clears adds to SysGraphAPIResultRows and adds new"
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="b8332978-0c7b-4fe3-a71b-f0c9198dbb07">
           <ReturnParameter>
-            <Parameter Name="returnparam" Kind="Out">
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
               <Type>
-                <Datatype idref="Integer" />
+                <Datatype
+                  idref="Integer" />
               </Type>
             </Parameter>
           </ReturnParameter>
           <TaggedValue>
-            <TaggedValue Tag="Eco.ExternalLateBound" Value="Existence" />
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
           </TaggedValue>
         </Method>
-        <Attribute Name="IsFolder" Multiplicity="" Visibility="Public" id="d5589be4-f17c-4e7d-9dac-8a1d0fb6e22e">
+        <Attribute
+          Name="Modified"
+          Multiplicity=""
+          Visibility="Public"
+          id="d2c0da11-4e34-4669-ab4d-a17b7f0800cd">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
           <Type>
-            <Datatype idref="Boolean" />
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="IsFolder"
+          Multiplicity=""
+          Visibility="Public"
+          id="d5589be4-f17c-4e7d-9dac-8a1d0fb6e22e">
+          <Type>
+            <Datatype
+              idref="Boolean" />
           </Type>
         </Attribute>
       </Feature>
       <TaggedValue>
-        <TaggedValue Tag="persistence" Value="transient" />
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
       </TaggedValue>
     </Class>
-    <Association Name="" EffectiveName="SysGraphAPISysGraphAPISysGraphAPIResultRowSysGraphAPIResultRows" id="d17153ec-56ee-4854-995f-fddafe60c9c4">
+    <Association
+      Name=""
+      EffectiveName="SysGraphAPISysGraphAPISysGraphAPIResultRowSysGraphAPIResultRows"
+      id="d17153ec-56ee-4854-995f-fddafe60c9c4">
       <AssociationEnd>
-        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="ef37d529-6bce-4728-a32f-4ffeeb6c3280">
+        <AssociationEnd
+          Name="SysGraphAPI"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="ef37d529-6bce-4728-a32f-4ffeeb6c3280">
           <Participant>
-            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+            <Class
+              Name="SysGraphAPI"
+              idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIResultRows" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
+        <AssociationEnd
+          Name="SysGraphAPIResultRows"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="c588f976-ed79-453d-b0b1-cb07cf08f5c3">
           <Participant>
-            <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+            <Class
+              Name="SysGraphAPIResultRow"
+              idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Association Name="" EffectiveName="SysGraphAPISysGraphAPIsSysUserSysUser" id="d241fdf8-249b-4f3b-9d06-9260e71b2505">
+    <Association
+      Name=""
+      EffectiveName="SysGraphAPISysGraphAPIsSysUserSysUser"
+      id="d241fdf8-249b-4f3b-9d06-9260e71b2505">
       <AssociationEnd>
-        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="a5ba284c-8c93-4216-b452-8ed552ef9ee4">
+        <AssociationEnd
+          Name="SysUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="a5ba284c-8c93-4216-b452-8ed552ef9ee4">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIs" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="c50fa121-92c6-4654-a077-429f475455c6">
+        <AssociationEnd
+          Name="SysGraphAPIs"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="c50fa121-92c6-4654-a077-429f475455c6">
           <Participant>
-            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+            <Class
+              Name="SysGraphAPI"
+              idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Class Name="SysUserClaim" AdditionalNamespaces="" IsAbstract="False" IsSealed="False" id="d463013a-d624-45c4-80fd-73d63fd488fa">
+    <Class
+      Name="SysUserClaim"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="d463013a-d624-45c4-80fd-73d63fd488fa">
       <Feature>
-        <Attribute Name="ClaimType" Multiplicity="" Visibility="Public" id="8dbb3aee-5e29-48c2-a7e8-deb982109222">
+        <Attribute
+          Name="ClaimType"
+          Multiplicity=""
+          Visibility="Public"
+          id="8dbb3aee-5e29-48c2-a7e8-deb982109222">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="ClaimValue" Multiplicity="" Visibility="Public" id="a98174fb-623a-4177-9191-f06c82330fd2">
+        <Attribute
+          Name="ClaimValue"
+          Multiplicity=""
+          Visibility="Public"
+          id="a98174fb-623a-4177-9191-f06c82330fd2">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="OriginalIssuer" Multiplicity="" Visibility="Public" id="b040b369-b8a5-4a40-bece-f3e8b3904071">
+        <Attribute
+          Name="OriginalIssuer"
+          Multiplicity=""
+          Visibility="Public"
+          id="b040b369-b8a5-4a40-bece-f3e8b3904071">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="ValueType" Multiplicity="" Visibility="Public" id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a">
+        <Attribute
+          Name="ValueType"
+          Multiplicity=""
+          Visibility="Public"
+          id="c2e1a1fc-12fa-49e2-9c7d-0d96530bde2a">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
-        <Attribute Name="Issuer" Multiplicity="" Visibility="Public" id="d2c02585-f187-40de-a32d-6682b908712d">
+        <Attribute
+          Name="Issuer"
+          Multiplicity=""
+          Visibility="Public"
+          id="d2c02585-f187-40de-a32d-6682b908712d">
           <Type>
-            <Datatype idref="String" />
+            <Datatype
+              idref="String" />
           </Type>
         </Attribute>
       </Feature>
     </Class>
-    <Association Name="" EffectiveName="SysGraphAPIResultUserSysGraphAPIResultUsersSysGraphAPISysGraphAPI" id="da806511-13d2-4015-bc3d-84c4cdda7466">
+    <Association
+      Name=""
+      EffectiveName="SysGraphAPIResultUserSysGraphAPIResultUsersSysGraphAPISysGraphAPI"
+      id="da806511-13d2-4015-bc3d-84c4cdda7466">
       <AssociationEnd>
-        <AssociationEnd Name="SysGraphAPI" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="34394b07-c2d7-40b1-b13d-40d64478fe27">
+        <AssociationEnd
+          Name="SysGraphAPI"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="34394b07-c2d7-40b1-b13d-40d64478fe27">
           <Participant>
-            <Class Name="SysGraphAPI" idref="38553568-7d6a-4c34-9438-9f599d552420" />
+            <Class
+              Name="SysGraphAPI"
+              idref="38553568-7d6a-4c34-9438-9f599d552420" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysGraphAPIResultUsers" Aggregation="Composite" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="67bb9d4b-2850-4358-8ce5-ca4872d65289">
+        <AssociationEnd
+          Name="SysGraphAPIResultUsers"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="67bb9d4b-2850-4358-8ce5-ca4872d65289">
           <Participant>
-            <Class Name="SysGraphAPIResultUser" idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
+            <Class
+              Name="SysGraphAPIResultUser"
+              idref="647b4764-a507-43dd-9c7e-a09f9854bdb1" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
-    <Association Name="" EffectiveName="SysUserClaimSysUserClaimsSysUserSysUser" id="f285e989-16c8-4fc7-b9bc-9c6ff5ca5e0d">
+    <Association
+      Name=""
+      EffectiveName="SysUserClaimSysUserClaimsSysUserSysUser"
+      id="f285e989-16c8-4fc7-b9bc-9c6ff5ca5e0d">
       <AssociationEnd>
-        <AssociationEnd Name="SysUser" IsNavigable="True" Multiplicity="0..1" Visibility="Public" id="12532b0d-4a51-478d-aac8-906470b9eac5">
+        <AssociationEnd
+          Name="SysUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="12532b0d-4a51-478d-aac8-906470b9eac5">
           <Participant>
-            <Class Name="SysUser" idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
           </Participant>
         </AssociationEnd>
-        <AssociationEnd Name="SysUserClaims" IsNavigable="True" Multiplicity="0..*" Visibility="Public" id="1ff32c2d-8e59-4b68-8250-3f08182d12ba">
+        <AssociationEnd
+          Name="SysUserClaims"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="1ff32c2d-8e59-4b68-8250-3f08182d12ba">
           <Participant>
-            <Class Name="SysUserClaim" idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
+            <Class
+              Name="SysUserClaim"
+              idref="d463013a-d624-45c4-80fd-73d63fd488fa" />
           </Participant>
         </AssociationEnd>
       </AssociationEnd>
     </Association>
   </OwnedElement>
   <TaggedValue>
-    <TaggedValue Tag="Eco.DefaultSuperClass" Value="SysSuperclass" />
+    <TaggedValue
+      Tag="Eco.DefaultSuperClass"
+      Value="SysSuperclass" />
   </TaggedValue>
 </Package>

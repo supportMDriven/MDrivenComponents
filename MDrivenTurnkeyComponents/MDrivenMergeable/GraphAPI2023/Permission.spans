@@ -1,50 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="Permission" ColCount="0" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RequiresRootObject="True" RowCount="0" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="4735996d-1dd2-4cb5-a2bd-a8ad0d54c04f">
+<Span
+  Name="Permission"
+  ColCount="0"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="0"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="4735996d-1dd2-4cb5-a2bd-a8ad0d54c04f">
   <Class>
-    <Class Name="SysGraphAPIResultRow" idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
+    <Class
+      Name="SysGraphAPIResultRow"
+      idref="cefde719-fab1-4589-a948-5e415eec2a0d" />
   </Class>
   <OwnedColumns>
-    <Column Name="Name" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.Name" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="0" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="0" id="babd0de3-ca90-4685-b448-33abd04b14cf">
+    <Column
+      Name="Name"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="self.Name"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="babd0de3-ca90-4685-b448-33abd04b14cf">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
-    <Column Name="DriveId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.DriveId" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="1" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="1" id="5672922a-401c-45e2-8855-6e666fc3b765">
+    <Column
+      Name="DriveId"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="self.DriveId"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="1"
+      id="5672922a-401c-45e2-8855-6e666fc3b765">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
-    <Column Name="ItemId" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="self.ItemId" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="2" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="1" YPos="2" id="055fd037-7c72-4a67-8fbb-850e2da2eec9">
+    <Column
+      Name="ItemId"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="self.ItemId"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="2"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="2"
+      id="055fd037-7c72-4a67-8fbb-850e2da2eec9">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
-    <Column Name="GetPermissionInfo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vJsonForPermissions:= self.GetPermissionsAsJson" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="3" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="7" id="e4fdf207-00cd-404f-9a40-914b023b2c44">
+    <Column
+      Name="GetPermissionInfo"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="vJsonForPermissions:= self.GetPermissionsAsJson"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="3"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="0"
+      YPos="7"
+      id="e4fdf207-00cd-404f-9a40-914b023b2c44">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
-    <Column Name="JsonForPermissions" ActionPeriodicityMillisec="-1" ColSpan="1" ColSpanWhenInGrid="1" Expression="vJsonForPermissions" ExpressionForReadOnly="" ExpressionForVisible="not vJsonForPermissions-&gt;isnullorempty" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="4" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="3" StyleRef="" XPos="1" YPos="3" id="bc4c7d5a-3ba2-4653-b329-bf05003000e9">
+    <Column
+      Name="JsonForPermissions"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="vJsonForPermissions"
+      ExpressionForReadOnly=""
+      ExpressionForVisible="not vJsonForPermissions-&gt;isnullorempty"
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="4"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="3"
+      StyleRef=""
+      XPos="1"
+      YPos="3"
+      id="bc4c7d5a-3ba2-4653-b329-bf05003000e9">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
-    <Column Name="SendInvite" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="self.SendInvite( vEmail,  'Invite to write this doc' ,  true)" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="True" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="6" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="0" id="10596838-4c75-46c4-a70f-6c0257dca4e0">
+    <Column
+      Name="SendInvite"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="self.SendInvite( vEmail,  'Invite to write this doc' ,  true)"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="6"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="0"
+      YPos="0"
+      id="10596838-4c75-46c4-a70f-6c0257dca4e0">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
-    <Column Name="EmailToSendInviteTo" ActionPeriodicityMillisec="-1" ColSpan="2" ColSpanWhenInGrid="1" Expression="vEmail" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="False" NullRowMode="None" NullRowRepresentation="" PCIndex="5" PresentationString="&lt;Name&gt;" PresentationStringColSpan="1" RowSpan="1" StyleRef="" XPos="0" YPos="8" id="5ef2c719-d0e4-42e8-b972-ab28da9915b9">
+    <Column
+      Name="EmailToSendInviteTo"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="vEmail"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="5"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="0"
+      YPos="8"
+      id="5ef2c719-d0e4-42e8-b972-ab28da9915b9">
       <PlacingContainer>
-        <PlacingContainer idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+        <PlacingContainer
+          idref="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
       </PlacingContainer>
     </Column>
   </OwnedColumns>
   <PlacingContainer>
-    <PlacingContainer Name="" AlignContent="Start" AlignItem="NotSet" CanScroll="False" HideInDesign="False" HideOverflow="False" JustifyContent="Start" Reverse="False" SelfAlign="NotSet" StyleExpression="" Type="Column" VisibleExpression="" Wrap="False" id="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Column"
+      VisibleExpression=""
+      Wrap="False"
+      id="fb1ae2fc-83f4-4847-90e9-fe6332d0565e" />
   </PlacingContainer>
   <SpanVariables>
-    <SpanVariable Name="vEmail" InitialValue="" TypeName="String" UserData="" />
-    <SpanVariable Name="vJsonForPermissions" InitialValue="" TypeName="String" UserData="" />
+    <SpanVariable
+      Name="vEmail"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
+    <SpanVariable
+      Name="vJsonForPermissions"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
   </SpanVariables>
 </Span>
