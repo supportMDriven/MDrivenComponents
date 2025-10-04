@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Span Name="Index" ColCount="12" ColWidth="50" ExpressionActAsForActions="" ExpressionForAccess="" RowCount="10" RowHeight="20" TabOrder="DisplayOrderYBeforeX" id="a288839f-fdce-4715-9d3e-84b69ba73032">
+<Span
+  Name="Index"
+  ColCount="12"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="10"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="a288839f-fdce-4715-9d3e-84b69ba73032">
   <Class>
-    <Class Name="SysSingleton" idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+    <Class
+      Name="SysSingleton"
+      idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
   </Class>
   <OwnedColumns>
-    <Column Name="Col1" ActionPeriodicityMillisec="-1" ColSpan="9" ColSpanWhenInGrid="1" Expression="'This is the Index viewmodel, which all apps must have.'" ExpressionForReadOnly="" ExpressionForVisible="" IsAction="False" IsStatic="True" NullRowMode="None" NullRowRepresentation="" PresentationString="" PresentationStringColSpan="1" RowSpan="1" StyleRef="h1" XPos="2" YPos="4" id="13eb728d-d3af-4887-ad16-27a98192cfd4" />
+    <Column
+      Name="Col1"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="9"
+      ColSpanWhenInGrid="1"
+      Expression="'This is the Index viewmodel, which all apps must have.'"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h1"
+      XPos="2"
+      YPos="4"
+      id="13eb728d-d3af-4887-ad16-27a98192cfd4" />
   </OwnedColumns>
 </Span>
