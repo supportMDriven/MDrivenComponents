@@ -12,7 +12,7 @@
   SnapGridSize="8"
   SquareNewAssociations="False"
   SquareNewGeneralizations="False"
-  ZoomScaleFactor="1.1025"
+  ZoomScaleFactor="1.21550625"
   Id="05d967d4-0f1f-4fbe-9c80-c230a8ea7b48">
   <PlacedClass>
     <PlacedClass
@@ -73,7 +73,7 @@
       Color="1692800256"
       LastKnownName="SysCultureSettingsSingleton"
       PickedFeatureVisibility="ShowAll"
-      RenderedHeight="85"
+      RenderedHeight="145"
       RenderedWidth="213"
       ShowAttributes="False"
       ShowMethods="False"

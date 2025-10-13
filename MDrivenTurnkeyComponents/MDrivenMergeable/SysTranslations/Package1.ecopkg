@@ -18,6 +18,28 @@
       id="3e1fb7bb-4642-47d2-9350-8a45c4f31187">
       <Feature>
         <Attribute
+          Name="MetricNotImperial_Volume"
+          InitialValue="true"
+          Multiplicity=""
+          Visibility="Public"
+          id="024b53b0-b3f6-42ef-9df3-a2d62f95c4fb">
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="MetricNotImperial_Temperature"
+          InitialValue="true"
+          Multiplicity=""
+          Visibility="Public"
+          id="065603dd-60cb-414f-a834-90769d500ef0">
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
           Name="TranslationCulture"
           Multiplicity=""
           Visibility="Public"
@@ -30,6 +52,28 @@
           <Type>
             <Datatype
               idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="MetricNotImperial_Velocity"
+          InitialValue="true"
+          Multiplicity=""
+          Visibility="Public"
+          id="13b32d3c-b781-450e-999d-00476e1b2747">
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="MetricNotImperial_Area"
+          InitialValue="true"
+          Multiplicity=""
+          Visibility="Public"
+          id="23fbd07d-30c6-4f91-bac3-966941026f85">
+          <Type>
+            <Datatype
+              idref="Boolean" />
           </Type>
         </Attribute>
         <Attribute
@@ -64,11 +108,22 @@
           </Type>
         </Attribute>
         <Attribute
-          Name="MetricNotImperial"
+          Name="MetricNotImperial_Length"
           InitialValue="true"
           Multiplicity=""
           Visibility="Public"
           id="80fb66e5-6cd8-4cd0-b59e-b8fcd8b56c55">
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="MetricNotImperial_Weight"
+          InitialValue="true"
+          Multiplicity=""
+          Visibility="Public"
+          id="95539aab-3620-4129-a59b-26783396e932">
           <Type>
             <Datatype
               idref="Boolean" />
