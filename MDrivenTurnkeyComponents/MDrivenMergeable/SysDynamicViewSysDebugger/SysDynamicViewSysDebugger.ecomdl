@@ -1,0 +1,17 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="dd9442a4-a948-443c-8307-167f1e6a5429" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="DiagramSysDynamicView" FileName="DiagramSysDynamicView" GUID="56a88f12-99d5-4b05-8d49-ccbf3bc36f6c" />
+  </Diagrams>
+  <Spans>
+    <Span Name="SysDebuggerView" FileName="SysDebuggerView" GUID="18d9541b-717a-48da-bbd5-6b02b1369be0" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

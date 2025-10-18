@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  Name="Package1"
+  AdditionalNamespaces=""
+  CodeGenCharacterMode="AllowUnicode"
+  DefaultLength="255"
+  GenerateNullableTypes="True"
+  NameSpace="&lt;Default&gt;"
+  ORMappingConfigMode="Medium"
+  PluralSuffix=""
+  id="dd9442a4-a948-443c-8307-167f1e6a5429">
+  <OwnedElement>
+    <Class
+      Name="SysDynamicListColumn"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="13269ec8-06d0-4a16-90f4-883d8837b0a1">
+      <Feature>
+        <Attribute
+          Name="Name"
+          Multiplicity=""
+          Visibility="Public"
+          id="df6ef342-74a9-4137-820d-7a5ac3782154">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Expression"
+          Multiplicity=""
+          Visibility="Public"
+          id="e5ce0edd-9ce3-4f7d-a6e4-fbfe0259269d">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class
+      Name="SysDynamicView"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="1977778b-e39d-4127-a326-4718eede1bf0">
+      <Feature>
+        <Attribute
+          Name="ExpressionFromRootForContent"
+          Multiplicity=""
+          Visibility="Public"
+          id="04df5fdb-db27-4cfa-8a73-c6cb726f3650">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ViewPrefix"
+          Multiplicity=""
+          Visibility="Public"
+          id="77245491-2d75-4b3f-963e-3831ce58f3c5">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="TheRealRootExternalId"
+          Multiplicity=""
+          Visibility="Public"
+          id="b4358942-a557-4a43-918a-b4d00a7af176">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="SysDebuggerObjRefResultsSysDebuggerSysDebugger"
+      id="7dd9acf0-5ef2-4ff4-9933-f336a91933a0">
+      <AssociationEnd>
+        <AssociationEnd
+          Name=""
+          EffectiveName="SysDebugger"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="78629e18-9ea1-4e9b-806b-5048e2bdb96a">
+          <Participant>
+            <Class
+              Name="SysDebugger"
+              idref="e7f540ee-bf2a-43ed-9755-782c1f3a9800" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="Results"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="baa5b0ca-b1ba-4565-af1c-68c2bd7230f8">
+          <Participant>
+            <Class
+              Name="SysDebuggerObjRef"
+              idref="88519c50-394f-43d8-a299-27409c977834" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
+      Name="SysDebuggerObjRef"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="88519c50-394f-43d8-a299-27409c977834">
+      <Feature>
+        <Attribute
+          Name="TheValueAsString"
+          Multiplicity=""
+          Visibility="Public"
+          id="d01d2591-48dc-40bc-a68d-6cce3682bc95">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="TheId"
+          Multiplicity=""
+          Visibility="Public"
+          id="f8574808-d3e3-4895-a1a9-e4b16355e25f">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class
+      Name="SysDebugger"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="e7f540ee-bf2a-43ed-9755-782c1f3a9800">
+      <Feature>
+        <Method
+          Name="EvaluateAsAction"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="1264b1b4-ebf3-4c51-aec8-7e38b1798e31">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="EvaluateAsOCLPS"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="19b7d85a-6d81-4386-8db2-5ac5c18fb2fa">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ShowResultListAutoForm"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="3d77532f-975e-4b95-8808-2236d57df97b">
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="SysDynamicView" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Variables"
+          Multiplicity=""
+          Visibility="Public"
+          id="5bd1b1be-00b2-4cbe-8908-faae913de195">
+          <Type>
+            <Datatype
+              idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ClassReference"
+          Multiplicity=""
+          Visibility="Public"
+          id="5da21b0a-01de-4386-a435-ec68b16156e6">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ResultType"
+          Multiplicity=""
+          Visibility="Public"
+          id="86c658e9-ba51-4328-8895-5b25fe24f8a8">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Expression"
+          Multiplicity=""
+          Visibility="Public"
+          id="87dc3bb6-6d03-4a34-b53b-6396952defba">
+          <Type>
+            <Datatype
+              idref="Text" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="MaxCount"
+          InitialValue="100"
+          Multiplicity=""
+          Visibility="Public"
+          id="8bf5f701-6382-497a-bd83-2ebbaa013286">
+          <Type>
+            <Datatype
+              idref="Integer" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="EvaluateAsOCL"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="9188b252-56e3-463b-9d74-4e3dd52b9667">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Error"
+          Multiplicity=""
+          Visibility="Public"
+          id="f9a82f6e-ec52-42a9-ab77-3cd46b8b5eed">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="SysDynamicViewSysDynamicViewSysDynamicListColumnDynamicColumns"
+      id="f104900e-b0d6-40b2-a4a7-064960c627bf">
+      <AssociationEnd>
+        <AssociationEnd
+          Name=""
+          EffectiveName="SysDynamicView"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="7372fdba-1e5a-4e49-a826-3dca90485936">
+          <Participant>
+            <Class
+              Name="SysDynamicView"
+              idref="1977778b-e39d-4127-a326-4718eede1bf0" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="DynamicColumns"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="6c45fb5b-8689-4c9e-87b9-1a6480d9b880">
+          <Participant>
+            <Class
+              Name="SysDynamicListColumn"
+              idref="13269ec8-06d0-4a16-90f4-883d8837b0a1" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue
+      Tag="Eco.DefaultSuperClass"
+      Value="SysSuperClass" />
+  </TaggedValue>
+</Package>
