@@ -119,8 +119,7 @@
       id="7dd9acf0-5ef2-4ff4-9933-f336a91933a0">
       <AssociationEnd>
         <AssociationEnd
-          Name=""
-          EffectiveName="SysDebugger"
+          Name="SysDebugger"
           IsNavigable="True"
           Multiplicity="0..1"
           Visibility="Public"
@@ -379,8 +378,7 @@
       id="f104900e-b0d6-40b2-a4a7-064960c627bf">
       <AssociationEnd>
         <AssociationEnd
-          Name=""
-          EffectiveName="SysDynamicView"
+          Name="SysDynamicView"
           IsNavigable="True"
           Multiplicity="0..1"
           Visibility="Public"

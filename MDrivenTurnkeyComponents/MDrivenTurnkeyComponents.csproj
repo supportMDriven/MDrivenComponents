@@ -95,6 +95,8 @@
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
+    <None Remove="MDrivenMergeable\SysDynamicViewSysDebugger\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysDynamicViewSysDebugger\SysDebuggerView.spans" />
     <None Remove="MDrivenMergeable\SysTranslations\Actions.actions" />
     <None Remove="MDrivenMergeable\SysTranslations\LocalizationAdmin.spans" />
     <None Remove="MDrivenMergeable\SysTurnkeyTrace\Actions.actions" />
@@ -110,7 +112,6 @@
     <Folder Include="EXT_Components\Cards\" />
     <Folder Include="EXT_Components\SharepointDocumentsInteractionWeb\" />
     <Folder Include="EXT_Components\PivotDataGrid\" />
-    <Folder Include="MDrivenMergeable\SysDynamicViewSysDebugger\" />
     <Folder Include="MDrivenSnippets\" />
   </ItemGroup>
 
@@ -373,6 +374,12 @@
     <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysDynamicViewSysDebugger\Actions.actions">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysDynamicViewSysDebugger\SysDebuggerView.spans">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysTranslations\Actions.actions">
       <DependentUpon>SysTranslations.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +436,9 @@
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysDynamicViewSysDebugger\ModlrProject.mproj">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysTranslations\ModlrProject.mproj">
       <DependentUpon>SysTranslations.ecomdl</DependentUpon>
@@ -600,6 +610,18 @@
     </None>
     <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDynamicViewSysDebugger\DiagramSysDynamicView.ecodiag">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDynamicViewSysDebugger\documentation.modlrdoc">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDynamicViewSysDebugger\Package1.ecopkg">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDynamicViewSysDebugger\Snippets.snippets">
+      <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysTranslations\DiagramTranslation.ecodiag">
       <DependentUpon>SysTranslations.ecomdl</DependentUpon>
