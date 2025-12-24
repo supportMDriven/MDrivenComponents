@@ -74,6 +74,12 @@ export class DateScaler {
     GetStop() {
         return this._stop.toISOString();
     }
+    GetStartStop() {
+        return {
+            start: this._start.toISOString(),
+            stop: this._stop.toISOString()
+        };
+    }
     get Start() {
         return this._start;
     }
