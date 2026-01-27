@@ -1941,6 +1941,22 @@
               Value="Existence" />
           </TaggedValue>
         </Method>
+        <Attribute
+          Name="QuickXorHash"
+          CodeComment="A hash of the content that office365 holds stable even if a document shift tennant. This will only be set when using LookUpFromDriveIdAndIdAndVersion or LookUpFromDriveIdAndId"
+          Multiplicity=""
+          Visibility="Public"
+          id="4315228f-09bb-45cf-a33d-744c4072bd52">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
         <Method
           Name="PatchField"
           CodeComment=""
@@ -2164,6 +2180,21 @@
           <Type>
             <Datatype
               idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="FileSize"
+          Multiplicity=""
+          Visibility="Public"
+          id="f2fda61a-6280-4fd3-b544-fce83f9417ce">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Int64" />
           </Type>
         </Attribute>
       </Feature>
