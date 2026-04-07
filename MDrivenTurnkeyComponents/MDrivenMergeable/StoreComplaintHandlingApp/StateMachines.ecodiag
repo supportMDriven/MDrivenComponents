@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram
+  Name="StateMachines"
+  ChangeDate="0001-01-01 00:00:00"
+  ColorOnNew="0"
+  Comment=""
+  Designer=""
+  ShowAssociationNames="DimDefaults"
+  ShowMethodReturnTypes="False"
+  ShowMethodSignatures="False"
+  ShowVisibility="False"
+  SnapGridSize="8"
+  SquareNewAssociations="False"
+  SquareNewGeneralizations="False"
+  ZoomScaleFactor="0.822702474791884"
+  Id="bf116556-16e2-4198-b6ca-2f7d85663f77">
+  <PlacedDiagrams>
+    <PlacedDiagram
+      Color="-1765226296"
+      Height="704.59398125"
+      LastKnownName=""
+      RenderedHeight="704.59398125"
+      RenderedWidth="828.2234125"
+      Size="1"
+      Width="828.2234125"
+      x="744"
+      y="16"
+      id="02a4a350-7ed9-411a-8dc8-c9bd394057cd">
+      <DrawnDiagram>
+        <AttributeStateDiagram
+          idref="9c12414c-fda9-4fc7-959e-3a5144762baf" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+    <PlacedDiagram
+      Color="-1765226296"
+      Height="284.7753125"
+      LastKnownName=""
+      RenderedHeight="284.7753125"
+      RenderedWidth="248.2234125"
+      Size="1"
+      Width="248.2234125"
+      x="144"
+      y="40"
+      id="5ab6537f-410b-4b3b-bea8-449a47c04b17">
+      <DrawnDiagram>
+        <AttributeStateDiagram
+          idref="0839d335-f8f7-4b2c-91bd-8d401a804d43" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+    <PlacedDiagram
+      Color="-1765226296"
+      Height="326"
+      LastKnownName=""
+      RenderedHeight="326"
+      RenderedWidth="568"
+      Size="1"
+      Width="568"
+      x="360"
+      y="760"
+      id="638c25a0-0e51-4f54-be94-091b86d02fc0">
+      <DrawnDiagram>
+        <AttributeStateDiagram
+          idref="684bb1ce-db34-43d1-aec4-596adc264489" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+    <PlacedDiagram
+      Color="-1765226296"
+      Height="381"
+      LastKnownName=""
+      RenderedHeight="381"
+      RenderedWidth="404"
+      Size="1"
+      Width="404"
+      x="1408"
+      y="704"
+      id="9ed3a513-45b2-4870-8c4c-d5fdf82396ca">
+      <DrawnDiagram>
+        <AttributeStateDiagram
+          idref="b958bf59-c48c-4054-b6b7-445b2103378c" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+    <PlacedDiagram
+      Color="-1765226296"
+      Height="302.4651875"
+      LastKnownName=""
+      RenderedHeight="302.4651875"
+      RenderedWidth="203.758225"
+      Size="1"
+      Width="203.758225"
+      x="1472"
+      y="296"
+      id="a908dd75-9f26-4716-abac-83aece821c6b">
+      <DrawnDiagram>
+        <AttributeStateDiagram
+          idref="6967d9ed-c1ef-4bd1-96f6-1f46fa0ca504" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+    <PlacedDiagram
+      Color="-1765226296"
+      Height="332.14588125"
+      LastKnownName=""
+      RenderedHeight="332.14588125"
+      RenderedWidth="347.51645"
+      Size="1"
+      Width="347.51645"
+      x="872"
+      y="752"
+      id="e749ee03-67bb-48ed-a29e-a193f36c5866">
+      <DrawnDiagram>
+        <AttributeStateDiagram
+          idref="03cb6b3d-fa9e-4c47-a229-772fc6eab476" />
+      </DrawnDiagram>
+    </PlacedDiagram>
+  </PlacedDiagrams>
+</Diagram>

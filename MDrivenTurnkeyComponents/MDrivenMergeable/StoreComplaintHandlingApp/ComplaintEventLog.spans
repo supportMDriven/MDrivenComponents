@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="ComplaintEventLog"
+  ColCount="8"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="0"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="54b8b30f-7841-48df-adae-a1c35eeb8c66">
+  <Class>
+    <Class
+      Name="Complaint"
+      idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="ComplaintEventsList"
+      ExpressionActAsForActions=""
+      id="f1038275-c795-44ea-89f3-a2ac16eab25b">
+      <Class>
+        <Class
+          Name="ComplaintEvent"
+          idref="2112e2f6-b3e5-4447-a9d2-037ca60db6af" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="DeleteComplaint"
+              idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ShowEventLog"
+              idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldInStore"
+              idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldUsingTelephone"
+              idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ReadCustomerMessages"
+              idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Date"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.Date"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef="{medium}"
+          XPos="2"
+          YPos="24"
+          id="da6e27d7-0b57-4096-9dee-7911a108e7c1" />
+        <Column
+          Name="LogText"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="8"
+          Expression="self.LogText"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="2"
+          YPos="24"
+          id="c96e4ef9-6cd7-43d1-8313-9f4e239d61b4" />
+        <Column
+          Name="Signature"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.Signature"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="2"
+          YPos="24"
+          id="7d94ac31-b335-406a-870e-d35747ff8168" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="ComplaintEvents"
+          idref="4e681ea2-d63b-411d-a9ad-6e3c5017f2ca" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_FromRepairerWithoutMeasure"
+          idref="1646f931-28b1-4b3b-aa94-92c3b436aa89" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_FromRepairerFixed"
+          idref="4196de35-7b52-41b5-b148-6cec33598fa0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_GivenToRepairer"
+          idref="11c94896-07b7-4551-8bfb-b8d939fa7f73" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SentToSupplier"
+          idref="ecde3a58-9263-4ed0-8871-dc5b06526875" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReturnedToCustomer"
+          idref="4d07655b-d9d1-4284-baf5-2d7f86b3a45c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ExchangeInStore"
+          idref="fdb0bd2d-f8a2-4689-8889-73f5ce7e0bd9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimburseCustomer"
+          idref="11754434-4b12-4e60-9b91-a52b5c59e226" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierExchange"
+          idref="d72605cc-f030-48e4-bb60-8ce49bd73850" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ComplaintDenied"
+          idref="7c92a306-87ca-485e-aad1-4437c2dff421" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_Repair"
+          idref="4a426dc2-0af2-49c4-aeeb-a072e0b167b4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_Credit"
+          idref="cb1d359c-ef16-4155-9ebc-05fe9e935f59" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimbursedWithProduct"
+          idref="4fcddb36-1611-4244-bef5-80266eae93e4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementReceived"
+          idref="eda540ca-f45e-4064-abc1-73aaf2542992" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementOrdered"
+          idref="fc36ee0b-6049-403d-937a-45eb809731fa" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_CreditReceived"
+          idref="4b869803-3efb-401b-8a13-06f2b416e3e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_PutAsideInStore"
+          idref="322e8004-887f-4252-9c01-f0a4456ccdf4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementToCustomer"
+          idref="5a1477c9-2135-4270-ab03-7b78baec86dc" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementReceived"
+          idref="864969d0-d596-4692-8b40-c74212ecc472" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_PutAside"
+          idref="9adc4b20-02d8-4385-8046-947aa809f47a" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ContactSupplierAgain"
+          idref="5bacb9f8-2323-4a03-bf1d-46a2ff815a9b" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierContactDontSend"
+          idref="e3b7da59-5b13-490a-810b-9ca8ab2b3576" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierContactSendReturned"
+          idref="05f3d661-7e4b-4ce6-93a2-50a8d9bbd06c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimbursementToCustomer"
+          idref="f63be77a-bd92-40cd-b077-2ef5be4d1f46" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_End"
+          idref="c66f126a-a42a-45d0-afd2-5aef2282ddae" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_NewAssessmentWanted"
+          idref="be07f7f1-96aa-4fdb-b7fa-d18059e052a5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ComplaintPrintout"
+          idref="c84c851e-4232-44aa-9439-c80596875bd3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowComplaint"
+          idref="e626aa12-b149-4b0e-8c0c-80b1be6acb99" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteComplaint"
+          idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowEventLog"
+          idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowEventLog"
+          idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldInStore"
+          idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldUsingTelephone"
+          idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ReadCustomerMessages"
+          idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_DecidedBySupplier"
+          idref="d2404a38-48b9-42f2-911e-d5f4a14e1106" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="ComplaintHeader"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="8"
+      ColSpanWhenInGrid="1"
+      Expression="if self.SequenceNumber.isNull and self.IsNew and self.isDirty then&#xD;&#xA;  'New complaint, save and wait for a sequence number'&#xD;&#xA;else&#xD;&#xA;  if not self.oclIsInState(#Ended) then&#xD;&#xA;    'Complaint ' + self.SequenceNumber.asString&#xD;&#xA;  else&#xD;&#xA;    'Ended Complaint ' + self.SequenceNumber.asString&#xD;&#xA;  endif&#xD;&#xA;endif"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h3"
+      XPos="0"
+      YPos="0"
+      id="44e4e1a2-78f5-4100-8f05-70c5cddf5395">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="ea8da1e0-f7db-48b1-91af-04448db3bf2d" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="ComplaintEvents"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="8"
+      ColSpanWhenInGrid="1"
+      Expression="self.ComplaintEvents-&gt;orderDescending(h|h.Date)"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PCMinSize="800"
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="5"
+      StyleRef=""
+      XPos="0"
+      YPos="2"
+      id="4e681ea2-d63b-411d-a9ad-6e3c5017f2ca">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="e454dca5-4e17-43b2-891c-e97d9faa8b9c" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="ComplaintEventsList"
+          idref="f1038275-c795-44ea-89f3-a2ac16eab25b" />
+      </ReferedNesting>
+    </Column>
+    <Column
+      Name="EventLog"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="8"
+      ColSpanWhenInGrid="1"
+      Expression="'EventLog'"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h4"
+      XPos="0"
+      YPos="1"
+      id="fe53e952-8515-4ee6-a787-038808d1bbe9">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="ea8da1e0-f7db-48b1-91af-04448db3bf2d" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="True"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      MaxSize="400"
+      MinSize="360"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Row"
+      VisibleExpression=""
+      Wrap="False"
+      id="0e2c2361-4cc0-4653-a1d8-1c066a9d5131">
+      <ChildContainers>
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          Grow="2"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="3d5e3ef0-09e1-4dd7-ade7-4dcccccd31d0">
+          <ChildContainers>
+            <PlacingContainer
+              Name=""
+              AlignContent="Start"
+              AlignItem="NotSet"
+              CanScroll="False"
+              HideInDesign="False"
+              HideOverflow="False"
+              JustifyContent="Start"
+              Reverse="False"
+              SelfAlign="NotSet"
+              StyleExpression=""
+              Type="Column"
+              VisibleExpression=""
+              Wrap="False"
+              id="ea8da1e0-f7db-48b1-91af-04448db3bf2d" />
+            <PlacingContainer
+              Name=""
+              AlignContent="Start"
+              AlignItem="NotSet"
+              CanScroll="True"
+              Grow="2"
+              HideInDesign="False"
+              HideOverflow="False"
+              JustifyContent="Start"
+              Reverse="False"
+              SelfAlign="NotSet"
+              StyleExpression=""
+              Type="Row"
+              VisibleExpression=""
+              Wrap="False"
+              id="e454dca5-4e17-43b2-891c-e97d9faa8b9c" />
+          </ChildContainers>
+        </PlacingContainer>
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

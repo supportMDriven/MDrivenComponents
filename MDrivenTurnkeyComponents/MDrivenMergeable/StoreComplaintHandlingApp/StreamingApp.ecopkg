@@ -1,0 +1,5422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  Name="StreamingApp"
+  AdditionalNamespaces=""
+  CodeGenCharacterMode="AllowUnicode"
+  DefaultLength="255"
+  GenerateNullableTypes="True"
+  NameSpace="&lt;Default&gt;"
+  ORMappingConfigMode="Medium"
+  PluralSuffix="s"
+  id="d440fce7-5440-47b3-97be-d0c11fe3d64a">
+  <DefaultSuperClass>
+    <Class
+      Name="SuperClass"
+      idref="4fb836f3-d37d-4614-b152-3863540e2f8b" />
+  </DefaultSuperClass>
+  <OwnedElement>
+    <Class
+      Name="ComplaintNote"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="003158e6-f427-4306-91d7-f354e040db15">
+      <Feature>
+        <Attribute
+          Name="Signature"
+          Multiplicity=""
+          Visibility="Public"
+          id="2187d270-ff7c-47ea-a0db-3a6c80feccf2">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="6" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Note"
+          Multiplicity=""
+          Visibility="Public"
+          id="54b992e3-a4b5-4720-a7e4-afddb71d2b08">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Date"
+          Multiplicity=""
+          Visibility="Public"
+          id="fe6e056d-b5d4-4246-9843-3add5e1e8f26">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="StateDescriptionCustomerReplacementDescriptionComplaintComplaintsCustomerReplacementDescription"
+      id="03b41b39-4376-42da-ab8e-a3ce1acce895">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="CustomerReplacementDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="346e2b0a-4e27-44dc-a5ed-be717ae2fa4e">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('CustomerReplacement.' + self.CustomerReplacement).toLower)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsCustomerReplacementDescription"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="145083e7-52c1-48e3-8ff3-d82b0f7076c5">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="CustomerMessageCustomerMessagesComplaintComplaint"
+      id="0939f101-e330-48b0-8bd4-7f78a5ecba19">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Complaint"
+          IsNavigable="True"
+          Multiplicity="1"
+          Visibility="Public"
+          id="9cfb70fe-decb-4c4e-ba83-cc5d53ad532f">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="CustomerMessages"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="c88f0096-628d-4864-a000-7399da52a562">
+          <Participant>
+            <Class
+              Name="CustomerMessage"
+              idref="6656991d-d7d4-4b05-833b-111ea579a13b" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
+      Name="ComplaintEvent"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="2112e2f6-b3e5-4447-a9d2-037ca60db6af">
+      <Feature>
+        <Attribute
+          Name="Date"
+          Multiplicity=""
+          Visibility="Public"
+          id="0edd80cb-a5ff-4e58-9615-ab451cfb4536">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Signature"
+          Multiplicity=""
+          Visibility="Public"
+          id="690f2ef9-a448-4d97-9c93-1db6d8c2fd53">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="6" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="LogText"
+          Multiplicity=""
+          Visibility="Public"
+          id="d5752589-b503-4c74-aa86-c9b4d52caa20">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Class
+      Name="Complaint"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="22099cf0-922d-45f1-8188-fbf881a5191b">
+      <Constraint>
+        <Constraint
+          Name="RequireCustomerName"
+          Body="OCL: not self.CustomerName.isNullOrEmpty"
+          Description="The complaint needs a CustomerName"
+          ErrorLevel="Error"
+          IsDeleteConstraint="False"
+          id="7bf6cec1-31b7-498f-9a26-481e65726d4e">
+          <ConstrainedTarget>
+            <Attribute
+              Name="CustomerName"
+              idref="b919512c-6869-4f8b-8a66-df88a54249db" />
+          </ConstrainedTarget>
+        </Constraint>
+      </Constraint>
+      <Feature>
+        <Attribute
+          Name="ContactCustomerUsingEmail"
+          Multiplicity=""
+          Visibility="Public"
+          id="005dbde8-2104-47db-8379-315e1d511c6a">
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="SupplierName"
+          Multiplicity=""
+          Visibility="Public"
+          id="0665eef8-afb0-452c-bfa7-3ab9dbe59554">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="30" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="CustomerReplacement"
+          Multiplicity=""
+          Visibility="Public"
+          id="10bdc3a0-1414-4dd1-a88a-c117922530b5">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="6967d9ed-c1ef-4bd1-96f6-1f46fa0ca504" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsStateAttribute"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="40" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ReasonForDecision"
+          Multiplicity=""
+          Visibility="Public"
+          id="11ed0fc0-9498-4303-b7d9-615aa0a3fdb2">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="CreditStoreExchange"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="15a539a4-2141-4779-b5bf-9b43b86e42e9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SupplierExchange"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="17090769-363b-4bbd-a121-9de01ab6f76c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="CreditReceived"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="18db3f73-ae8c-42a5-8b91-5109f800cc45">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Decision"
+          Multiplicity=""
+          Visibility="Public"
+          id="1a2b8944-4b10-4f31-96b7-fc7f2c89b242">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="9c12414c-fda9-4fc7-959e-3a5144762baf" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsStateAttribute"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="40" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Size"
+          Multiplicity=""
+          Visibility="Public"
+          id="1f24f4d3-093c-4dbb-9f7e-06de2fb9877d">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="10" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ReplacementProduct"
+          Multiplicity=""
+          Visibility="Public"
+          id="227e9a82-16ff-407e-a3cc-e511e22b1a34">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="b958bf59-c48c-4054-b6b7-445b2103378c" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsStateAttribute"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="AddMessageToCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="256edff5-5a70-4714-8136-d28e374bc8b1">
+          <Parameter>
+            <Parameter
+              Name="aMessage"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="AddMessageToCustomer(aMessage, String.nullValue)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ComplaintState"
+          Multiplicity=""
+          Visibility="Public"
+          id="2e2ee6fb-2fd0-48e0-9ead-2d340cd1e98e">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="0839d335-f8f7-4b2c-91bd-8d401a804d43" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsStateAttribute"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="50" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Colour"
+          Multiplicity=""
+          Visibility="Public"
+          id="2f2e89e6-5789-4e3c-9b2a-683985cc0f87">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="30" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="ReimbursedWithProduct"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="2f3eaaad-2b54-4743-a59b-4ae8480e5ed5">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="CustomerPhone"
+          Multiplicity=""
+          Visibility="Public"
+          id="34b22507-d5c3-4236-9f95-57282ac334a8">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="20" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="ComplaintDenied"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="37435a1b-355b-471e-8096-b222b4acfd61">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="PutAsideInStore"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="3bd2413d-1ffb-43fd-9fe4-97d94a92f64e">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="CustomerAccessID"
+          Multiplicity=""
+          Visibility="Public"
+          id="3c39e131-1c1c-47a0-a1a2-7959c28552bc">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="40" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ArticleName"
+          Multiplicity=""
+          Visibility="Public"
+          id="3dadfca9-6196-4ba8-aaf3-b7376240f4f9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="50" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="AddMessageFromCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="4612cae4-606d-4a51-a4c0-57828670e8b9">
+          <Parameter>
+            <Parameter
+              Name="aMessage"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="let h = CustomerMessage.Create in&#xD;&#xA;(&#xD;&#xA;  self.CustomerMessages.add(h);&#xD;&#xA;  h.Date := DateTime.Now;&#xD;&#xA;  h.Message := aMessage;&#xD;&#xA;  h.Signature :=   'Customer';&#xD;&#xA;  h.Direction := #FromCustomer;&#xD;&#xA;  h&#xD;&#xA;);&#xD;&#xA;self.CustomerNotified(#UsingWeb)" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReplacementToCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="46435427-341d-4499-b36f-e1b27350f603">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SupplierWillExchange"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="4b02f065-22a0-4ebf-a73e-f28c5e3fd9f5">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ConditionOfComplaintProduct"
+          InitialValue="Broken"
+          Multiplicity=""
+          Visibility="Public"
+          id="4d2f9777-22d0-48a7-8e40-928fd282b89c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="10" />
+          </TaggedValue>
+          <Type>
+            <Enumeration
+              idref="ProductCondition" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="ComplaintProductToCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="4dc3c35c-e488-45b6-9f37-98f294aad362">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="NewInformationToCustomer"
+          Multiplicity=""
+          Visibility="Public"
+          id="4e7cad0d-42a2-4152-a0a5-0d1b867cc43d">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.CustomerNotNotified-&gt;last.Message" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="SentToSupplier"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="4f2ace4d-cf49-4c02-a445-ac248984eeb8">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="DecidedBySupplier"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="525c4d69-fc65-444a-bf68-8db6d83b5aa4">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="EffectiveCustomerContact"
+          Multiplicity=""
+          Visibility="Public"
+          id="5675c6cc-6c2a-408a-9242-711127df9043">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="if self.ContactCustomerUsingEmail and (self.CustomerEmail.Trim &lt;&gt; '') then&#xD;&#xA;  self.CustomerEmail&#xD;&#xA;else&#xD;&#xA;  self.CustomerPhone&#xD;&#xA;endif" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="NewDecisionWanted"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="578e686f-b3ae-4f6f-9ed1-2b598b406e64">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ComplaintProductToRepairer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="5a5b28c3-2456-4611-a269-470a8f9d7115">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="FromRepairerFixed"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="5aa67690-8290-4a2b-b307-a97898a822b3">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ReasonForComplaint"
+          Multiplicity=""
+          Visibility="Public"
+          id="68768590-cad2-4fb7-9826-e2f319833878">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ActNow"
+          Multiplicity=""
+          Visibility="Public"
+          id="6d3b5ab0-0b32-4c9b-b9fc-81c240463af9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.oclIsInState(#Decision.ContactSupplier) or&#xD;&#xA;self.oclIsInState(#ComplaintProduct.ShouldBeSentToSupplier) or&#xD;&#xA;self.oclIsInState(#ComplaintProduct.ShouldBeGivenToRepairer) or&#xD;&#xA;self.oclIsInState(#ComplaintProduct.ShouldBeReturnedToCustomer) or&#xD;&#xA;self.oclIsInState(#ExchangeProduct.InStore) or&#xD;&#xA;self.oclIsInState(#ExchangeProduct.ShouldBePutAside) or&#xD;&#xA;self.oclIsInState(#ReplacementProduct.ChooseTypeOfReimbursement) or&#xD;&#xA;self.oclIsInState(#ReplacementProduct.OrderReplacement) or&#xD;&#xA;self.CustomerNotNotified-&gt;notEmpty or&#xD;&#xA;self.NotReadByCustomer-&gt;notEmpty" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="CustomerQRLink"
+          Multiplicity=""
+          Visibility="Public"
+          id="7eac30ba-a766-4e67-8df9-b144a11c12f6">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="SysSingleton.oclSingleton.SiteURL + '/Turnkey/DisplayWithVariables?view=ComplaintCustomerView&amp;id=$null$&amp;vCustomerAccessID='+self.CustomerAccessID" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="CustomerNotified"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="8c591394-bf0c-467b-a499-ee76daf88d35">
+          <Parameter>
+            <Parameter
+              Name="aNotifiedUsing"
+              Kind="In">
+              <Type>
+                <Enumeration
+                  idref="NotifiedUsing" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.CustomerMessages-&gt;select(m|m.Notified.isNull and (m.Direction=#ToCustomer))-&gt;collect(m|m.Notified := DateTime.Now; m.NotifiedUsing := aNotifiedUsing)" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="PutAside"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="8e038b33-d8fa-4236-9869-1f3a55d581bb">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Image"
+          Multiplicity=""
+          Visibility="Public"
+          id="93ee42d7-45ab-47d6-b090-77114676e737">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Image" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="CancelDecision"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="99af34b8-8e30-429d-a130-e15042cf8e96">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ComplaintProductShouldBeReturned"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="a1c3d54e-bb45-4bc7-bbd5-523686d4e3e0">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="OnStateChange"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="a632dab1-eba2-4d39-90c4-929a73ce46ae">
+          <Parameter>
+            <Parameter
+              Name="attrib"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="oldstate"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="newstate"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="let besk = StateDescription.allInstances-&gt;select(sb|sb.Status = attrib+'.'+newstate)-&gt;first.Description in&#xD;&#xA;(&#xD;&#xA;  if besk &lt;&gt; '' then&#xD;&#xA;    self.AddEvent(besk, String.nullValue)&#xD;&#xA;  else&#xD;&#xA;    self.AddEvent(attrib+'.'+newstate, String.nullValue)&#xD;&#xA;  endif&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReimburseCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="ace785c8-b581-4250-bd47-bc4515c708f1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ArticleNumber"
+          Multiplicity=""
+          Visibility="Public"
+          id="aeb2f047-3b8c-490c-9abd-ef13c082f128">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="50" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="AddMessageToCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="af514cf9-e3df-495a-b763-d3c912500231">
+          <Parameter>
+            <Parameter
+              Name="aMessage"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="aSignature"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="let h = CustomerMessage.Create in&#xD;&#xA;(&#xD;&#xA;  self.CustomerMessages.add(h);&#xD;&#xA;  h.Date := DateTime.Now;&#xD;&#xA;  h.Message := aMessage;&#xD;&#xA;  if aSignature.isNullOrEmpty then&#xD;&#xA;    h.Signature :=   SysSingleton.oclSingleton.EffectiveUser.Signature&#xD;&#xA;  else&#xD;&#xA;    h.Signature := aSignature&#xD;&#xA;  endif;&#xD;&#xA;  h.Direction := #ToCustomer;&#xD;&#xA;  h&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="CustomerQRCode"
+          Multiplicity=""
+          Visibility="Public"
+          id="b18149d1-9959-41d9-88c1-dbef10a78e22">
+          <TaggedValue>
+            <TaggedValue
+              Tag="persistence"
+              Value="transient" />
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="ZXing.QRImage(300,300,self.CustomerQRLink)" />
+            <TaggedValue
+              Tag="Eco.BlobType"
+              Value="Image" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Blob" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="StoreWillExchange"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="b5b4a29f-162f-4052-86a0-18a8702cf1ca">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SupplierContactDontSend"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="b7769f6f-f2e6-48b7-9b42-15e1314f80fd">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="CustomerName"
+          Multiplicity=""
+          Visibility="Public"
+          id="b919512c-6869-4f8b-8a66-df88a54249db">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="50" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ToDo"
+          Multiplicity=""
+          Visibility="Public"
+          id="ba83c054-7582-4a78-a72d-50f1ebd70b7e">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.AllDescriptions-&gt;select(b|b.ToDoHeader &lt;&gt; '').ToDoHeader-&gt;&#xD;&#xA;  union(if self.CustomerNotNotified-&gt;notEmpty then 'Notify customer' else String.nullValue endif)-&gt;&#xD;&#xA;    union(if self.NotReadByCustomer-&gt;notEmpty then 'Read customer message' else String.nullValue endif)-&gt;&#xD;&#xA;      asCommaList" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="CustomerReimbursed"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="ba8f42f4-61fe-4762-a0e6-408647422bc8">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="AddEvent"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="bb66141c-f878-44d4-b60b-49ed586c748d">
+          <Parameter>
+            <Parameter
+              Name="aLogText"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="aSignature"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="let h = ComplaintEvent.Create in&#xD;&#xA;(&#xD;&#xA;  self.ComplaintEvents.add(h);&#xD;&#xA;  h.Date := DateTime.Now;&#xD;&#xA;  h.LogText := aLogText;&#xD;&#xA;  if aSignature.isNullOrEmpty then&#xD;&#xA;    h.Signature :=   SysSingleton.oclSingleton.EffectiveUser.Signature&#xD;&#xA;  else&#xD;&#xA;    h.Signature := aSignature&#xD;&#xA;  endif;&#xD;&#xA;  h&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ExchangeProduct"
+          Multiplicity=""
+          Visibility="Public"
+          id="beb3a1d3-fbd6-4878-8aa3-bd5918b2887a">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="03cb6b3d-fa9e-4c47-a229-772fc6eab476" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsStateAttribute"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="30" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="OnCreate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="True"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="beff9293-5ded-4d0a-9816-98c35f50dbfa">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.base.onCreate;&#xD;&#xA;self.ComplaintDate := DateTime.Today;&#xD;&#xA;self.CustomerAccessID := self.Guid.asString;&#xD;&#xA;self.AddEvent('Complaint craeted', '');&#xD;&#xA;self.Store := SysSingleton.oclSingleton.EffectiveUser.Store" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="End"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="c2dc8c52-9da9-4812-99b6-b62f288e6aff">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReplacementReceived"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="c7bc93b9-6125-493d-af50-e8153df87617">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ReceivedBy"
+          Multiplicity=""
+          Visibility="Public"
+          id="cadc3f17-1662-4174-a9a9-0223f3bef815">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="10" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="ReadCustomerMessages"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="d657c9b8-9d1b-4ceb-8569-236da5db1a32">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.NotReadByCustomer-&gt;collect(m |&#xD;&#xA;  m.Notified := DateTime.Now;&#xD;&#xA;  m.Signature :=   SysSingleton.oclSingleton.EffectiveUser.Signature&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ComplaintProduct"
+          Multiplicity=""
+          Visibility="Public"
+          id="d6ce598d-6c0b-4ac7-bded-5cad51c6d9e9">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="684bb1ce-db34-43d1-aec4-596adc264489" />
+          </AttributeStateDiagram>
+          <StateAttributeFor>
+            <Region />
+          </StateAttributeFor>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsStateAttribute"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ComplaintDate"
+          Multiplicity=""
+          Visibility="Public"
+          id="de6741c4-e139-4e73-8e21-c0b956a0ad17">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="ReplacementProductReceived"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="deca7bd0-fecf-42cb-b9c2-36ca26981d12">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="AddNote"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e00d1794-21e2-4019-9fde-886d364fda2d">
+          <Parameter>
+            <Parameter
+              Name="aNote"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="aSignature"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="let h = ComplaintNote.Create in&#xD;&#xA;(&#xD;&#xA;  self.ComplaintNotes.add(h);&#xD;&#xA;  h.Date := DateTime.Now;&#xD;&#xA;  h.Note := aNote;&#xD;&#xA;  if aSignature.isNullOrEmpty then&#xD;&#xA;    h.Signature :=   SysSingleton.oclSingleton.EffectiveUser.Signature&#xD;&#xA;  else&#xD;&#xA;    h.Signature := aSignature&#xD;&#xA;  endif;&#xD;&#xA;  h&#xD;&#xA;)" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReplacementOrdered"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e00e43c7-c82d-4bf4-8de1-c6fa336e5a7c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReimbursementToCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e58cb05d-5e45-4f44-b4a5-b54bea997216">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="DecisionMade"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e621f7c4-1fc2-48ef-9a61-5cbfad4ba2b9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReturnedToCustomer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e6defa23-c01e-4f17-8eef-cf8710bde163">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ReimbursementNeeded"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e74eae8c-4a5c-4888-b520-53609611bc6c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="StoreExchange"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="e75062b7-7cf6-4667-8f66-c5f4b31282e1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="NewAssessmentWanted"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="eae451c0-9d15-4ad8-b2f9-1e95c15f2c38">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="Credit"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="ed97aa7a-51f3-474b-b975-062320e78c08">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SupplierContactSendReturned"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="f0b623bb-0a6b-4f4a-b0e3-ab0f8afca6d9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="CustomerEmail"
+          Multiplicity=""
+          Visibility="Public"
+          id="f1706540-3e66-4c2a-8006-8db1043cff3e">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="50" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="ExchangesVaraFrånLeverantör"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="f2f90270-a2e8-486f-9f57-fa531878fab7">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="Repair"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="f4ac7d6c-2fc8-4df5-9ef8-d0f2629b7788">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="GivenToRepairer"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="fa7efc1e-cf3e-4369-9e72-a1d1462c63e5">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="FromRepairerWithoutMeasure"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="fd3f0f2d-b089-4e51-bb23-828c176c16b4">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ContactSupplierAgain"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="fe9f68cd-675a-4af3-a5e0-9f245127eb7a">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.IsTrigger"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="SequenceNumber"
+          Multiplicity=""
+          Visibility="Public"
+          id="ff4ae5f2-036c-42d2-8882-c1c4a9ba1ade">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="10" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Integer" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <StateMachine>
+        <StateMachine
+          Name="ComplaintProduct"
+          id="0ee76179-5074-45c5-be31-c07fd6128f16">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="684bb1ce-db34-43d1-aec4-596adc264489" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region
+              Name="RootRegion">
+              <StateAttribute>
+                <Attribute
+                  Name="ComplaintProduct"
+                  idref="d6ce598d-6c0b-4ac7-bded-5cad51c6d9e9" />
+              </StateAttribute>
+              <Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="06758801-27a4-4113-952f-fa214dfeb740">
+                  <Source>
+                    <State
+                      Name="WithRepairer"
+                      idref="bdc34044-c5d8-4001-815d-0a664279cda1" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="InStore"
+                      idref="5228b489-324c-4fb3-8db4-bc391925b16a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="FromRepairerWithoutMeasure"
+                          idref="fd3f0f2d-b089-4e51-bb23-828c176c16b4" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="227de5e3-c858-438f-9f50-f2ed9c5ca7d2">
+                  <Source>
+                    <PseudoState
+                      Name="Start6"
+                      idref="c48cbcdc-764b-4522-99f2-fe54b9d8ea55" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="InStore"
+                      idref="5228b489-324c-4fb3-8db4-bc391925b16a" />
+                  </Target>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.oclIsInState(#DecisionMade.Repair) and (self.ConditionOfComplaintProduct &lt;&gt; #Repaired)"
+                  id="62d8cf2a-2559-4842-865d-37fc17028973">
+                  <Source>
+                    <State
+                      Name="ShouldBeGivenToRepairer"
+                      idref="d1b0b4f4-8694-4bde-8578-ff6d85e70d43" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="WithRepairer"
+                      idref="bdc34044-c5d8-4001-815d-0a664279cda1" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="GivenToRepairer"
+                          idref="fa7efc1e-cf3e-4369-9e72-a1d1462c63e5" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="6f64ec6a-b8fd-49e5-943b-091a997c7b61">
+                  <Effect>
+                    <Activity
+                      Body="self.ConditionOfComplaintProduct := #Repaired;&#xD;&#xA;self.AddMessageToCustomer('Repaired vara åter i Storeen')&#xD;&#xA;" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="WithRepairer"
+                      idref="bdc34044-c5d8-4001-815d-0a664279cda1" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ShouldBeReturnedToCustomer"
+                      idref="89c552a1-c357-421b-a932-5c02534a7703" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="FromRepairerFixed"
+                          idref="5aa67690-8290-4a2b-b307-a97898a822b3" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="74248e3c-c0e1-4803-ba41-3ff359a84c34">
+                  <Source>
+                    <State
+                      Name="Waiting"
+                      idref="c575cfd9-7278-4a76-a66d-5ee408e58683" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ShouldBeGivenToRepairer"
+                      idref="d1b0b4f4-8694-4bde-8578-ff6d85e70d43" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ComplaintProductToRepairer"
+                          idref="5a5b28c3-2456-4611-a269-470a8f9d7115" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="95e810a7-f1b1-4034-9453-94bebf825dd2">
+                  <Source>
+                    <State
+                      Name="Waiting"
+                      idref="c575cfd9-7278-4a76-a66d-5ee408e58683" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ShouldBeSentToSupplier"
+                      idref="67eaee60-3540-4fa1-ad02-e4309cbd1087" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ComplaintProductShouldBeReturned"
+                          idref="a1c3d54e-bb45-4bc7-bbd5-523686d4e3e0" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="a7bd31dd-b0ad-47ee-b1ee-beb6b728658c">
+                  <Source>
+                    <State
+                      Name="InStore"
+                      idref="5228b489-324c-4fb3-8db4-bc391925b16a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="InStore"
+                      idref="5228b489-324c-4fb3-8db4-bc391925b16a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CancelDecision"
+                          idref="99af34b8-8e30-429d-a130-e15042cf8e96" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="ae75697b-3f2b-46a7-b5f0-55b844fe24c9">
+                  <Source>
+                    <State
+                      Name="ShouldBeReturnedToCustomer"
+                      idref="89c552a1-c357-421b-a932-5c02534a7703" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="WithCustomer"
+                      idref="a725f9de-3bdb-4f26-ad0f-ed2af8f7e446" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReturnedToCustomer"
+                          idref="e6defa23-c01e-4f17-8eef-cf8710bde163" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="c6e9165b-36f6-41bc-a46a-cf7dadbb0c32">
+                  <Source>
+                    <State
+                      Name="ShouldBeSentToSupplier"
+                      idref="67eaee60-3540-4fa1-ad02-e4309cbd1087" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="SendToSupplier"
+                      idref="d0ea0a50-f4ff-47db-ac3a-ff9fd03cab8a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="SentToSupplier"
+                          idref="4f2ace4d-cf49-4c02-a445-ac248984eeb8" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.ConditionOfComplaintProduct = #Repaired"
+                  id="cdcdde31-0bc6-4260-b38c-b4f7d20b9112">
+                  <Source>
+                    <State
+                      Name="Waiting"
+                      idref="c575cfd9-7278-4a76-a66d-5ee408e58683" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ShouldBeReturnedToCustomer"
+                      idref="89c552a1-c357-421b-a932-5c02534a7703" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ComplaintProductToCustomer"
+                          idref="4dc3c35c-e488-45b6-9f37-98f294aad362" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <State
+                  Name="InStore"
+                  CodeComment=""
+                  id="5228b489-324c-4fb3-8db4-bc391925b16a">
+                  <PlacedState>
+                    <PlacedState
+                      idref="0f476d63-490e-4a76-b017-9c266832a27c" />
+                  </PlacedState>
+                  <Region>
+                    <Region
+                      Name="">
+                      <Transition>
+                        <Transition
+                          Guard="OCL: "
+                          id="3136909f-587e-4d98-9d64-98478f4c4ec8">
+                          <Source>
+                            <PseudoState
+                              Name="Start8"
+                              idref="4bd181d7-9222-4b52-ae65-b26b7a4d12a7" />
+                          </Source>
+                          <Target>
+                            <State
+                              Name="Waiting"
+                              idref="c575cfd9-7278-4a76-a66d-5ee408e58683" />
+                          </Target>
+                        </Transition>
+                      </Transition>
+                      <Vertex>
+                        <PseudoState
+                          Name="Start8"
+                          CodeComment=""
+                          id="4bd181d7-9222-4b52-ae65-b26b7a4d12a7">
+                          <PlacedState>
+                            <PlacedState
+                              idref="03b3a81f-9e5b-4fa9-aa65-80e90c8366f6" />
+                          </PlacedState>
+                        </PseudoState>
+                        <State
+                          Name="ShouldBeSentToSupplier"
+                          CodeComment=""
+                          id="67eaee60-3540-4fa1-ad02-e4309cbd1087">
+                          <PlacedState>
+                            <PlacedState
+                              idref="c2de8a7d-14f6-4a7d-a7e3-5c9580830902" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="ShouldBeReturnedToCustomer"
+                          CodeComment=""
+                          id="89c552a1-c357-421b-a932-5c02534a7703">
+                          <PlacedState>
+                            <PlacedState
+                              idref="c18605a2-459a-463d-bef3-efa183ac29da" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="Waiting"
+                          CodeComment=""
+                          id="c575cfd9-7278-4a76-a66d-5ee408e58683">
+                          <PlacedState>
+                            <PlacedState
+                              idref="8956ef50-75c1-4287-a8d2-e206f5fb5bc4" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="ShouldBeGivenToRepairer"
+                          CodeComment=""
+                          id="d1b0b4f4-8694-4bde-8578-ff6d85e70d43">
+                          <PlacedState>
+                            <PlacedState
+                              idref="1f8c460f-6d87-4789-94e5-faebf47631e4" />
+                          </PlacedState>
+                        </State>
+                      </Vertex>
+                    </Region>
+                  </Region>
+                </State>
+                <State
+                  Name="WithCustomer"
+                  CodeComment=""
+                  id="a725f9de-3bdb-4f26-ad0f-ed2af8f7e446">
+                  <Entry>
+                    <Activity
+                      Body="if self.End? then&#xD;&#xA;  self.End&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="60ea6ccd-5eb3-4eb2-abab-a9258088d98e" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="WithRepairer"
+                  CodeComment=""
+                  id="bdc34044-c5d8-4001-815d-0a664279cda1">
+                  <PlacedState>
+                    <PlacedState
+                      idref="72f84b42-6fe4-4696-888c-837945580a13" />
+                  </PlacedState>
+                </State>
+                <PseudoState
+                  Name="Start6"
+                  CodeComment=""
+                  id="c48cbcdc-764b-4522-99f2-fe54b9d8ea55">
+                  <PlacedState>
+                    <PlacedState
+                      idref="f0e3d937-4611-49e9-a293-6a1bca32bcf2" />
+                  </PlacedState>
+                </PseudoState>
+                <State
+                  Name="SendToSupplier"
+                  CodeComment=""
+                  id="d0ea0a50-f4ff-47db-ac3a-ff9fd03cab8a">
+                  <PlacedState>
+                    <PlacedState
+                      idref="743ec202-5c9c-4edc-8cf4-366b8061fa13" />
+                  </PlacedState>
+                </State>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+        <StateMachine
+          Name="ExchangeProduct"
+          id="a08eb0c6-d839-4a0f-8f5b-af99fb39c44f">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="03cb6b3d-fa9e-4c47-a229-772fc6eab476" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region
+              Name="RootRegion">
+              <StateAttribute>
+                <Attribute
+                  Name="ExchangeProduct"
+                  idref="beb3a1d3-fbd6-4878-8aa3-bd5918b2887a" />
+              </StateAttribute>
+              <Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="159d827a-95f0-4346-83fb-e1a8a2d5277a">
+                  <Effect>
+                    <Activity
+                      Body="self.AddMessageToCustomer('The exchange product is in the store to be collected (from the store).')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="ShouldBePutAside"
+                      idref="21ba8ab2-fad5-429c-aaf6-46e34d6ca249" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="InStore"
+                      idref="581e46e0-32a7-4a41-bf7f-45c6cb5b8316" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="PutAside"
+                          idref="8e038b33-d8fa-4236-9869-1f3a55d581bb" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="2cb859b9-8544-44e1-8f55-e1abb8e2fd4a">
+                  <Source>
+                    <State
+                      Name="NoExchange"
+                      idref="e83ceaad-aa95-4f36-be25-1530f8b05804" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="WithSupplier"
+                      idref="b052555d-70b1-4cd8-883a-d4389fc7b32a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="SupplierWillExchange"
+                          idref="4b02f065-22a0-4ebf-a73e-f28c5e3fd9f5" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="39b664ef-90ec-4c86-b9b4-6b34e041b1b3">
+                  <Source>
+                    <PseudoState
+                      Name="Start9"
+                      idref="af3adfa2-f609-4755-8bed-eb6980487ebf" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NoExchange"
+                      idref="e83ceaad-aa95-4f36-be25-1530f8b05804" />
+                  </Target>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="961d930e-2d55-4a86-9f34-588fd2dffd4e">
+                  <Source>
+                    <State
+                      Name="Exchange"
+                      idref="6a740672-0c6a-4731-a782-a60fc52bd027" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NoExchange"
+                      idref="e83ceaad-aa95-4f36-be25-1530f8b05804" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CancelDecision"
+                          idref="99af34b8-8e30-429d-a130-e15042cf8e96" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="97a0d2ea-350b-46ee-930b-130647712620">
+                  <Source>
+                    <State
+                      Name="NoExchange"
+                      idref="e83ceaad-aa95-4f36-be25-1530f8b05804" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="StoreExchange"
+                      idref="421a5e34-d19e-4177-ace8-984c87fdd40d" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="StoreWillExchange"
+                          idref="b5b4a29f-162f-4052-86a0-18a8702cf1ca" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="a74bfc50-aad6-4a6e-8d7e-276ff88f9133">
+                  <Source>
+                    <State
+                      Name="InStore"
+                      idref="581e46e0-32a7-4a41-bf7f-45c6cb5b8316" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="WithCustomer"
+                      idref="68a4c483-0a40-41a8-8f8a-93fa69afbe31" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReplacementToCustomer"
+                          idref="46435427-341d-4499-b36f-e1b27350f603" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="bd4b6d59-6c9e-40eb-a3a6-3208ace69b25">
+                  <Effect>
+                    <Activity
+                      Body="self.AddMessageToCustomer('The exchange product is in the store to be collected (from the supplier).')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="WithSupplier"
+                      idref="b052555d-70b1-4cd8-883a-d4389fc7b32a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="InStore"
+                      idref="581e46e0-32a7-4a41-bf7f-45c6cb5b8316" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReplacementReceived"
+                          idref="c7bc93b9-6125-493d-af50-e8153df87617" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="cdd2898d-26b6-4782-aab4-2860869550e8">
+                  <Effect>
+                    <Activity
+                      Body="self.ReimbursementNeeded" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="StoreExchange"
+                      idref="421a5e34-d19e-4177-ace8-984c87fdd40d" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="WithCustomer"
+                      idref="68a4c483-0a40-41a8-8f8a-93fa69afbe31" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReplacementToCustomer"
+                          idref="46435427-341d-4499-b36f-e1b27350f603" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="e9d6c108-98c8-424a-a960-1e0fce452e7b">
+                  <Effect>
+                    <Activity
+                      Body="self.ReimbursementNeeded" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="StoreExchange"
+                      idref="421a5e34-d19e-4177-ace8-984c87fdd40d" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ShouldBePutAside"
+                      idref="21ba8ab2-fad5-429c-aaf6-46e34d6ca249" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="PutAsideInStore"
+                          idref="3bd2413d-1ffb-43fd-9fe4-97d94a92f64e" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <State
+                  Name="WithCustomer"
+                  CodeComment=""
+                  id="68a4c483-0a40-41a8-8f8a-93fa69afbe31">
+                  <Entry>
+                    <Activity
+                      Body="if self.End? then&#xD;&#xA;  self.End&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="fa2f5a05-0211-49e7-9bb7-de277680c1e4" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="Exchange"
+                  CodeComment=""
+                  id="6a740672-0c6a-4731-a782-a60fc52bd027">
+                  <PlacedState>
+                    <PlacedState
+                      idref="ea719fb8-183e-47bd-9a2a-50168f69e4f3" />
+                  </PlacedState>
+                  <Region>
+                    <Region
+                      Name="">
+                      <Vertex>
+                        <State
+                          Name="ShouldBePutAside"
+                          CodeComment=""
+                          id="21ba8ab2-fad5-429c-aaf6-46e34d6ca249">
+                          <PlacedState>
+                            <PlacedState
+                              idref="257008e5-8edd-4c74-863f-0cff7b0e9ac3" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="StoreExchange"
+                          CodeComment=""
+                          id="421a5e34-d19e-4177-ace8-984c87fdd40d">
+                          <PlacedState>
+                            <PlacedState
+                              idref="0cf6cb9c-6f5c-431e-91d9-1c6ed60037c7" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="InStore"
+                          CodeComment=""
+                          id="581e46e0-32a7-4a41-bf7f-45c6cb5b8316">
+                          <PlacedState>
+                            <PlacedState
+                              idref="2a4fb496-c1e7-49ab-936d-81f7f4537186" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="WithSupplier"
+                          CodeComment=""
+                          id="b052555d-70b1-4cd8-883a-d4389fc7b32a">
+                          <PlacedState>
+                            <PlacedState
+                              idref="8b5e3a82-e742-40b1-bc97-4e9791868ffc" />
+                          </PlacedState>
+                        </State>
+                      </Vertex>
+                    </Region>
+                  </Region>
+                </State>
+                <PseudoState
+                  Name="Start9"
+                  CodeComment=""
+                  id="af3adfa2-f609-4755-8bed-eb6980487ebf">
+                  <PlacedState>
+                    <PlacedState
+                      idref="e4cc8e26-f560-4b98-9050-6e7208e00379" />
+                  </PlacedState>
+                </PseudoState>
+                <State
+                  Name="NoExchange"
+                  CodeComment=""
+                  id="e83ceaad-aa95-4f36-be25-1530f8b05804">
+                  <PlacedState>
+                    <PlacedState
+                      idref="04031eb6-6b3d-43fc-9cf0-7c2b36ccc3a4" />
+                  </PlacedState>
+                </State>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+        <StateMachine
+          Name="CustomerReplacement"
+          id="afad5471-d29d-44f7-bd03-499eade7c6b2">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="6967d9ed-c1ef-4bd1-96f6-1f46fa0ca504" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region
+              Name="RootRegion">
+              <StateAttribute>
+                <Attribute
+                  Name="CustomerReplacement"
+                  idref="10bdc3a0-1414-4dd1-a88a-c117922530b5" />
+              </StateAttribute>
+              <Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="2b6a2492-b43c-44f4-9da7-9ad19546edd1">
+                  <Source>
+                    <State
+                      Name="NoCustomerReimbursement"
+                      idref="6468e39e-7604-46ea-aa6e-a717dd7fdae7" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="Reimbursed"
+                      idref="81335723-3d3c-412a-aaef-824a159a2da1" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReimburseCustomer"
+                          idref="ace785c8-b581-4250-bd47-bc4515c708f1" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="645f1fdb-8982-4bc3-9a66-8c09981ebc45">
+                  <Source>
+                    <State
+                      Name="Reimbursed"
+                      idref="81335723-3d3c-412a-aaef-824a159a2da1" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="WithCustomer"
+                      idref="83062fcc-8624-462f-8247-c989ba223c73" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReimbursementToCustomer"
+                          idref="e58cb05d-5e45-4f44-b4a5-b54bea997216" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="8cfeacba-4941-48da-afb7-7f0f555c9550">
+                  <Source>
+                    <PseudoState
+                      Name="Start11"
+                      idref="a8e31c4c-a89b-4fcc-ada5-399f39c46ab2" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NoCustomerReimbursement"
+                      idref="6468e39e-7604-46ea-aa6e-a717dd7fdae7" />
+                  </Target>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="df03caad-a67d-4914-91b6-1fb31bbfca4f">
+                  <Source>
+                    <State
+                      Name="Reimbursed"
+                      idref="81335723-3d3c-412a-aaef-824a159a2da1" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NoCustomerReimbursement"
+                      idref="6468e39e-7604-46ea-aa6e-a717dd7fdae7" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CancelDecision"
+                          idref="99af34b8-8e30-429d-a130-e15042cf8e96" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <State
+                  Name="NoCustomerReimbursement"
+                  CodeComment=""
+                  id="6468e39e-7604-46ea-aa6e-a717dd7fdae7">
+                  <PlacedState>
+                    <PlacedState
+                      idref="48237293-4982-40be-b77a-2a20a69e219d" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="Reimbursed"
+                  CodeComment=""
+                  id="81335723-3d3c-412a-aaef-824a159a2da1">
+                  <PlacedState>
+                    <PlacedState
+                      idref="ac68afca-e589-4d3a-b1e4-52be13c43f42" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="WithCustomer"
+                  CodeComment=""
+                  id="83062fcc-8624-462f-8247-c989ba223c73">
+                  <Entry>
+                    <Activity
+                      Body="if self.End? then&#xD;&#xA;  self.End&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="94ca8b6b-2a17-44e5-ac93-dcc9c7dc7229" />
+                  </PlacedState>
+                </State>
+                <PseudoState
+                  Name="Start11"
+                  CodeComment=""
+                  id="a8e31c4c-a89b-4fcc-ada5-399f39c46ab2">
+                  <PlacedState>
+                    <PlacedState
+                      idref="096084bd-440c-4d6c-b08a-fee016c29076" />
+                  </PlacedState>
+                </PseudoState>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+        <StateMachine
+          Name="Decision"
+          id="b199bd19-3be1-4ab0-8e63-4aee5e76402c">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="9c12414c-fda9-4fc7-959e-3a5144762baf" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region
+              Name="RootRegion">
+              <StateAttribute>
+                <Attribute
+                  Name="Decision"
+                  idref="1a2b8944-4b10-4f31-96b7-fc7f2c89b242" />
+              </StateAttribute>
+              <Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="2ad48707-7d20-44e9-a039-c1467eb2d537">
+                  <Source>
+                    <PseudoState
+                      Name="Start7"
+                      idref="ce8a5ef0-4e9f-454e-aebe-cea9935874bc" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Target>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="326054d8-5236-4445-8f3b-9359f92684f3">
+                  <Source>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="NewAssessmentWanted"
+                          idref="eae451c0-9d15-4ad8-b2f9-1e95c15f2c38" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="4ec0ddbf-ad93-4798-ab2c-55c8777b190e">
+                  <Source>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="DecidedBySupplier"
+                          idref="525c4d69-fc65-444a-bf68-8db6d83b5aa4" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: (self.ConditionOfComplaintProduct = #Broken) and&#xD;&#xA;self.oclIsInState(#InStore.Waiting)"
+                  id="71b683a9-e96f-43c2-89f8-65a5facc2b23">
+                  <Source>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="Repair"
+                      idref="b0e51eed-9c63-4ba6-917e-6f6319137776" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="Repair"
+                          idref="f4ac7d6c-2fc8-4df5-9ef8-d0f2629b7788" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.oclIsInState(#NoExchange) and &#xD;&#xA;self.oclIsInState(#SupplierDecision.WaitingForAnswer)"
+                  id="82994c5c-5413-4cb7-b1fd-992942ebe144">
+                  <Effect>
+                    <Activity
+                      Body="self.StoreWillExchange;&#xD;&#xA;self.PutAsideInStore;&#xD;&#xA;self.AddMessageToCustomer('The supplier has decided to replace the complaint product.')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="StoreExchange"
+                      idref="c8d65cf1-df5b-42f6-a060-818d50f99585" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="StoreExchange"
+                          idref="e75062b7-7cf6-4667-8f66-c5f4b31282e1" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.oclIsInState(#Exchange.InStore) and &#xD;&#xA;(self.ConditionOfComplaintProduct = #Broken) and &#xD;&#xA;self.oclIsInState(#SupplierDecision.WaitingForAnswer) and&#xD;&#xA;self.oclIsInState(#InStore.Waiting)"
+                  id="8bda9e43-36e3-4b93-9517-aba2a97eeae8">
+                  <Source>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="Repair"
+                      idref="b0e51eed-9c63-4ba6-917e-6f6319137776" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="Repair"
+                          idref="f4ac7d6c-2fc8-4df5-9ef8-d0f2629b7788" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.oclIsInState(#SupplierDecision.WaitingForAnswer)"
+                  id="8c827e63-74b4-4c9c-a608-4275cd4f931f">
+                  <Source>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="CustomerReimbursement"
+                      idref="153e235c-c31f-4af4-980b-c95ad421d10a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CustomerReimbursed"
+                          idref="ba8f42f4-61fe-4762-a0e6-408647422bc8" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.oclIsInState(#SupplierDecision.WaitingForAnswer)"
+                  id="a515469e-cf1d-4b5a-b1fc-9c545121e51b">
+                  <Effect>
+                    <Activity
+                      Body="self.AddMessageToCustomer('The supplier doesn\'t accept the complaint (see note for details).')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ComplaintDenied"
+                      idref="f87790b5-f0e9-415c-90f7-89e56d85bb9e" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ComplaintDenied"
+                          idref="37435a1b-355b-471e-8096-b222b4acfd61" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="c998073f-e9a3-4e43-beea-f7eac0acaf04">
+                  <Effect>
+                    <Activity
+                      Body="self.StoreWillExchange;&#xD;&#xA;self.AddMessageToCustomer('Decision to replace the complaint product has been taken.')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="StoreExchange"
+                      idref="c8d65cf1-df5b-42f6-a060-818d50f99585" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="StoreExchange"
+                          idref="e75062b7-7cf6-4667-8f66-c5f4b31282e1" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="d7d02145-908c-4255-a012-0f1ed9d33c02">
+                  <Effect>
+                    <Activity
+                      Body="self.AddMessageToCustomer('The store doesn\'t accept the complaint (see assessment for details).')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ComplaintDenied"
+                      idref="f87790b5-f0e9-415c-90f7-89e56d85bb9e" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ComplaintDenied"
+                          idref="37435a1b-355b-471e-8096-b222b4acfd61" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: self.oclIsInState(#NoExchange) and &#xD;&#xA;self.oclIsInState(#SupplierDecision.WaitingForAnswer)"
+                  id="daa445a6-d80f-4190-94dc-78e2e94c95b2">
+                  <Effect>
+                    <Activity
+                      Body="self.SupplierExchange" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="SupplierDecision"
+                      idref="a05d8137-4450-4407-ad45-7829a81ccbe4" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="SupplierExchange"
+                      idref="cf54dbfd-a9e3-45e0-87c8-a48129f89078" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="SupplierExchange"
+                          idref="17090769-363b-4bbd-a121-9de01ab6f76c" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="e1961fb0-c4b6-47c5-b347-5b985500c6a4">
+                  <Effect>
+                    <Activity
+                      Body="self.AddMessageToCustomer('A new assessment will be done.')" />
+                  </Effect>
+                  <Source>
+                    <State
+                      Name="DecisionMade"
+                      idref="c42666b5-7109-4e19-99f7-c87d62536f3b" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="NewAssessmentWanted"
+                          idref="eae451c0-9d15-4ad8-b2f9-1e95c15f2c38" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="e8077a18-adc9-44a2-9a13-7b6536ba9e79">
+                  <Source>
+                    <State
+                      Name="StoreAssessment"
+                      idref="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="CustomerReimbursement"
+                      idref="153e235c-c31f-4af4-980b-c95ad421d10a" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CustomerReimbursed"
+                          idref="ba8f42f4-61fe-4762-a0e6-408647422bc8" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <State
+                  Name="StoreAssessment"
+                  CodeComment=""
+                  id="3bb06a8e-d88f-4da4-b738-ea8b3d231f2a">
+                  <Entry>
+                    <Activity
+                      Body="if self.NewDecisionWanted? then&#xD;&#xA;  self.NewDecisionWanted&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="ea51464a-314a-457a-ab4a-c4d29a9c8311" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="SupplierDecision"
+                  CodeComment=""
+                  id="a05d8137-4450-4407-ad45-7829a81ccbe4">
+                  <PlacedState>
+                    <PlacedState
+                      idref="4d6234a5-4e48-4c98-a78e-eb7b4f8df425" />
+                  </PlacedState>
+                  <Region>
+                    <Region
+                      Name="Decision">
+                      <Transition>
+                        <Transition
+                          Guard="OCL: "
+                          id="502a0cf2-9a0b-4d65-9907-f6323e292ef0">
+                          <Source>
+                            <State
+                              Name="WaitingForAnswer"
+                              idref="3d43aef6-d089-4737-8b30-f13fd383bff0" />
+                          </Source>
+                          <Target>
+                            <State
+                              Name="ContactSupplier"
+                              idref="7f459cbe-852e-4b0f-b3ba-45c0fea666d4" />
+                          </Target>
+                          <Trigger>
+                            <MethodTrigger>
+                              <Method>
+                                <Method
+                                  Name="ContactSupplierAgain"
+                                  idref="fe9f68cd-675a-4af3-a5e0-9f245127eb7a" />
+                              </Method>
+                            </MethodTrigger>
+                          </Trigger>
+                        </Transition>
+                        <Transition
+                          Guard="OCL: "
+                          id="9b6c2e2f-cab2-4727-840c-5d415eb89650">
+                          <Source>
+                            <PseudoState
+                              Name="Start5"
+                              idref="39f33037-998d-4269-b386-0cdcd07a2f76" />
+                          </Source>
+                          <Target>
+                            <State
+                              Name="ContactSupplier"
+                              idref="7f459cbe-852e-4b0f-b3ba-45c0fea666d4" />
+                          </Target>
+                        </Transition>
+                        <Transition
+                          Guard="OCL: "
+                          id="ccc7e705-53bc-4e62-8cdf-b0f31d02f821">
+                          <Effect>
+                            <Activity
+                              Body="if self.ComplaintProductShouldBeReturned? then&#xD;&#xA;  self.ComplaintProductShouldBeReturned;&#xD;&#xA;  self.AddMessageToCustomer('The store will send the complaint product to the supplier for decision.')&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                          </Effect>
+                          <Source>
+                            <State
+                              Name="ContactSupplier"
+                              idref="7f459cbe-852e-4b0f-b3ba-45c0fea666d4" />
+                          </Source>
+                          <Target>
+                            <State
+                              Name="WaitingForAnswer"
+                              idref="3d43aef6-d089-4737-8b30-f13fd383bff0" />
+                          </Target>
+                          <Trigger>
+                            <MethodTrigger>
+                              <Method>
+                                <Method
+                                  Name="SupplierContactSendReturned"
+                                  idref="f0b623bb-0a6b-4f4a-b0e3-ab0f8afca6d9" />
+                              </Method>
+                            </MethodTrigger>
+                          </Trigger>
+                        </Transition>
+                        <Transition
+                          Guard="OCL: self.oclIsInState(#Exchange.InStore)"
+                          id="dd4a7775-0880-413a-8fa3-d3f4e0c0c4d9">
+                          <Effect>
+                            <Activity
+                              Body="self.AddMessageToCustomer('The store is waiting for the supplier\'s decision.')" />
+                          </Effect>
+                          <Source>
+                            <State
+                              Name="ContactSupplier"
+                              idref="7f459cbe-852e-4b0f-b3ba-45c0fea666d4" />
+                          </Source>
+                          <Target>
+                            <State
+                              Name="WaitingForAnswer"
+                              idref="3d43aef6-d089-4737-8b30-f13fd383bff0" />
+                          </Target>
+                          <Trigger>
+                            <MethodTrigger>
+                              <Method>
+                                <Method
+                                  Name="SupplierContactDontSend"
+                                  idref="b7769f6f-f2e6-48b7-9b42-15e1314f80fd" />
+                              </Method>
+                            </MethodTrigger>
+                          </Trigger>
+                        </Transition>
+                      </Transition>
+                      <Vertex>
+                        <PseudoState
+                          Name="Start5"
+                          CodeComment=""
+                          id="39f33037-998d-4269-b386-0cdcd07a2f76">
+                          <PlacedState>
+                            <PlacedState
+                              idref="e8f4cfe0-fd6d-46c0-91f2-4f9fb7a2eb49" />
+                          </PlacedState>
+                        </PseudoState>
+                        <State
+                          Name="WaitingForAnswer"
+                          CodeComment=""
+                          id="3d43aef6-d089-4737-8b30-f13fd383bff0">
+                          <PlacedState>
+                            <PlacedState
+                              idref="73aad28e-9acb-4295-aab3-08316feb5888" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="ContactSupplier"
+                          CodeComment=""
+                          id="7f459cbe-852e-4b0f-b3ba-45c0fea666d4">
+                          <PlacedState>
+                            <PlacedState
+                              idref="aeb2e4d8-d5c2-48f1-a16e-2d6aa22b53fd" />
+                          </PlacedState>
+                        </State>
+                      </Vertex>
+                    </Region>
+                  </Region>
+                </State>
+                <State
+                  Name="DecisionMade"
+                  CodeComment=""
+                  id="c42666b5-7109-4e19-99f7-c87d62536f3b">
+                  <Entry>
+                    <Activity
+                      Body="if self.DecisionMade? then&#xD;&#xA;  self.DecisionMade&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="36c2112c-f2f6-444c-af14-92915fb663f3" />
+                  </PlacedState>
+                  <Region>
+                    <Region
+                      Name="Decision">
+                      <Vertex>
+                        <State
+                          Name="CustomerReimbursement"
+                          CodeComment=""
+                          id="153e235c-c31f-4af4-980b-c95ad421d10a">
+                          <Entry>
+                            <Activity
+                              Body="self.ReimburseCustomer;&#xD;&#xA;self.CreditStoreExchange;&#xD;&#xA;self.AddMessageToCustomer('Reimbursement with credit receipt.')" />
+                          </Entry>
+                          <PlacedState>
+                            <PlacedState
+                              idref="4531f119-2945-4513-b822-ba4dcca4aa98" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="Repair"
+                          CodeComment=""
+                          id="b0e51eed-9c63-4ba6-917e-6f6319137776">
+                          <Entry>
+                            <Activity
+                              Body="self.ComplaintProductToRepairer;&#xD;&#xA;self.AddMessageToCustomer('Decision to repair the complaint product has been taken.')" />
+                          </Entry>
+                          <PlacedState>
+                            <PlacedState
+                              idref="7d79234e-a68c-4aa7-aec6-60a2caf48c14" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="StoreExchange"
+                          CodeComment=""
+                          id="c8d65cf1-df5b-42f6-a060-818d50f99585">
+                          <PlacedState>
+                            <PlacedState
+                              idref="e2e6a0e9-e334-4203-85ca-c1e6554016c3" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="SupplierExchange"
+                          CodeComment=""
+                          id="cf54dbfd-a9e3-45e0-87c8-a48129f89078">
+                          <PlacedState>
+                            <PlacedState
+                              idref="281aaa35-bf65-4d68-90e4-4d2b6176d155" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="ComplaintDenied"
+                          CodeComment=""
+                          id="f87790b5-f0e9-415c-90f7-89e56d85bb9e">
+                          <PlacedState>
+                            <PlacedState
+                              idref="44f254de-c350-4aa6-8c0c-10b95358882f" />
+                          </PlacedState>
+                        </State>
+                      </Vertex>
+                    </Region>
+                  </Region>
+                </State>
+                <PseudoState
+                  Name="Start7"
+                  CodeComment=""
+                  id="ce8a5ef0-4e9f-454e-aebe-cea9935874bc">
+                  <PlacedState>
+                    <PlacedState
+                      idref="1c9ea703-cbc4-4b49-8eeb-d824b0282874" />
+                  </PlacedState>
+                </PseudoState>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+        <StateMachine
+          Name="ReplacementProduct"
+          id="e2a7c28e-7646-4a79-8718-5d1afc5b0663">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="b958bf59-c48c-4054-b6b7-445b2103378c" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region
+              Name="RootRegion">
+              <StateAttribute>
+                <Attribute
+                  Name="ReplacementProduct"
+                  idref="227e9a82-16ff-407e-a3cc-e511e22b1a34" />
+              </StateAttribute>
+              <Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="096b346c-d029-49a2-b69d-af7e792dcf3f">
+                  <Source>
+                    <State
+                      Name="ReimbursedWithCredit"
+                      idref="606f00d5-12d7-4cbb-a77f-ffec92f052b0" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="CreditReceived"
+                      idref="6cb0230e-4f21-4b06-b25e-cf50da202774" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CreditReceived"
+                          idref="18db3f73-ae8c-42a5-8b91-5109f800cc45" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="0af89488-2133-48e9-a8bd-f1dcf7552707">
+                  <Source>
+                    <State
+                      Name="ExpectedFromSupplier"
+                      idref="3258dc6e-3d06-462c-9479-fb9acbf67fc8" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="InStore"
+                      idref="3a2438c7-2fae-47d8-9b70-3b2c39ec67e8" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReplacementProductReceived"
+                          idref="deca7bd0-fecf-42cb-b9c2-36ca26981d12" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="13fb7686-ea61-4b59-a11c-087b065d875d">
+                  <Source>
+                    <State
+                      Name="NoSupplierReimbursement"
+                      idref="a934b1ce-8256-47d6-bac9-4db9d13fbc98" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ReimbursedWithCredit"
+                      idref="606f00d5-12d7-4cbb-a77f-ffec92f052b0" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CreditStoreExchange"
+                          idref="15a539a4-2141-4779-b5bf-9b43b86e42e9" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="19cb9c31-c0b1-4af1-bbc1-0f7c6534c657">
+                  <Source>
+                    <State
+                      Name="ChooseTypeOfReimbursement"
+                      idref="94e90dbf-f0fd-4772-a6d2-45166a846b07" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="OrderReplacement"
+                      idref="c5354556-571b-4dd5-b5e6-17580b60bfbc" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReimbursedWithProduct"
+                          idref="2f3eaaad-2b54-4743-a59b-4ae8480e5ed5" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="2e6cf0d5-9342-434f-9a1d-7fd009f10808">
+                  <Source>
+                    <State
+                      Name="OrderReplacement"
+                      idref="c5354556-571b-4dd5-b5e6-17580b60bfbc" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ExpectedFromSupplier"
+                      idref="3258dc6e-3d06-462c-9479-fb9acbf67fc8" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReplacementOrdered"
+                          idref="e00e43c7-c82d-4bf4-8de1-c6fa336e5a7c" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="320fafe9-ed58-485c-80c9-d1d5d9abfc0e">
+                  <Source>
+                    <State
+                      Name="NoSupplierReimbursement"
+                      idref="a934b1ce-8256-47d6-bac9-4db9d13fbc98" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ChooseTypeOfReimbursement"
+                      idref="94e90dbf-f0fd-4772-a6d2-45166a846b07" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="ReimbursementNeeded"
+                          idref="e74eae8c-4a5c-4888-b520-53609611bc6c" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="42922c0a-d994-46f7-adb4-98b8918c3dfc">
+                  <Source>
+                    <PseudoState
+                      Name="Start3"
+                      idref="81f4f5b9-e21f-453b-84d9-e92be1f59925" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NoSupplierReimbursement"
+                      idref="a934b1ce-8256-47d6-bac9-4db9d13fbc98" />
+                  </Target>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="76d241ef-abf1-43a6-b3ca-4c0f28d8ef74">
+                  <Source>
+                    <State
+                      Name="ChooseTypeOfReimbursement"
+                      idref="94e90dbf-f0fd-4772-a6d2-45166a846b07" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="ReimbursedWithCredit"
+                      idref="606f00d5-12d7-4cbb-a77f-ffec92f052b0" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="Credit"
+                          idref="ed97aa7a-51f3-474b-b975-062320e78c08" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="bdc446db-9a92-46b9-bbb8-75e9c7f2ddc6">
+                  <Source>
+                    <State
+                      Name="MonitorReimbursement"
+                      idref="251e232d-bc1d-4232-9daf-4e3b9d038b3c" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NoSupplierReimbursement"
+                      idref="a934b1ce-8256-47d6-bac9-4db9d13fbc98" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="CancelDecision"
+                          idref="99af34b8-8e30-429d-a130-e15042cf8e96" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <State
+                  Name="MonitorReimbursement"
+                  CodeComment=""
+                  id="251e232d-bc1d-4232-9daf-4e3b9d038b3c">
+                  <PlacedState>
+                    <PlacedState
+                      idref="65f0c428-2dda-437d-ab34-e41b56997308" />
+                  </PlacedState>
+                  <Region>
+                    <Region
+                      Name="">
+                      <Vertex>
+                        <State
+                          Name="ExpectedFromSupplier"
+                          CodeComment=""
+                          id="3258dc6e-3d06-462c-9479-fb9acbf67fc8">
+                          <PlacedState>
+                            <PlacedState
+                              idref="25aa848c-3c37-401f-8873-f28dafe49934" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="ReimbursedWithCredit"
+                          CodeComment=""
+                          id="606f00d5-12d7-4cbb-a77f-ffec92f052b0">
+                          <PlacedState>
+                            <PlacedState
+                              idref="3d363033-73b5-4a4e-9e7c-0e6eaa049a17" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="ChooseTypeOfReimbursement"
+                          CodeComment=""
+                          id="94e90dbf-f0fd-4772-a6d2-45166a846b07">
+                          <PlacedState>
+                            <PlacedState
+                              idref="ad725284-e908-44da-84de-2bd752f2b3ec" />
+                          </PlacedState>
+                        </State>
+                        <State
+                          Name="OrderReplacement"
+                          CodeComment=""
+                          id="c5354556-571b-4dd5-b5e6-17580b60bfbc">
+                          <PlacedState>
+                            <PlacedState
+                              idref="13dec8bd-d3bb-4875-bfbb-d0fd11a9cfbe" />
+                          </PlacedState>
+                        </State>
+                      </Vertex>
+                    </Region>
+                  </Region>
+                </State>
+                <State
+                  Name="InStore"
+                  CodeComment=""
+                  id="3a2438c7-2fae-47d8-9b70-3b2c39ec67e8">
+                  <Entry>
+                    <Activity
+                      Body="if self.End? then&#xD;&#xA;  self.End&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="1b4857cb-a6df-4ff8-ace8-62ed5eb8a03f" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="CreditReceived"
+                  CodeComment=""
+                  id="6cb0230e-4f21-4b06-b25e-cf50da202774">
+                  <Entry>
+                    <Activity
+                      Body="if self.End? then&#xD;&#xA;  self.End&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="926b9725-f3ed-41b1-9d26-7979e765559a" />
+                  </PlacedState>
+                </State>
+                <PseudoState
+                  Name="Start3"
+                  CodeComment=""
+                  id="81f4f5b9-e21f-453b-84d9-e92be1f59925">
+                  <PlacedState>
+                    <PlacedState
+                      idref="45a20067-7616-4de2-ac24-d7827182120d" />
+                  </PlacedState>
+                </PseudoState>
+                <State
+                  Name="NoSupplierReimbursement"
+                  CodeComment=""
+                  id="a934b1ce-8256-47d6-bac9-4db9d13fbc98">
+                  <PlacedState>
+                    <PlacedState
+                      idref="1424e535-2543-436f-a31f-8f17a64423a4" />
+                  </PlacedState>
+                </State>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+        <StateMachine
+          Name="ComplaintState"
+          id="f7ea8656-9328-4d5a-a3d9-1880f6e7e0bc">
+          <AttributeStateDiagram>
+            <AttributeStateDiagram
+              idref="0839d335-f8f7-4b2c-91bd-8d401a804d43" />
+          </AttributeStateDiagram>
+          <Region>
+            <Region
+              Name="RootRegion">
+              <StateAttribute>
+                <Attribute
+                  Name="ComplaintState"
+                  idref="2e2ee6fb-2fd0-48e0-9ead-2d340cd1e98e" />
+              </StateAttribute>
+              <Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="9529d6bc-dbd8-45fa-a909-5e5215029231">
+                  <Source>
+                    <State
+                      Name="NotDecided"
+                      idref="b8f3f89b-daa9-4865-b41d-841a013c9601" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="Decided"
+                      idref="d6c3b415-748b-4329-b4e0-30190c303c57" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="DecisionMade"
+                          idref="e621f7c4-1fc2-48ef-9a61-5cbfad4ba2b9" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="ac158efd-a509-46dc-821c-95201f7f6198">
+                  <Source>
+                    <State
+                      Name="Ended"
+                      idref="c585646f-ed5b-42ae-afdd-7290cb3c5f13" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NotDecided"
+                      idref="b8f3f89b-daa9-4865-b41d-841a013c9601" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="NewDecisionWanted"
+                          idref="578e686f-b3ae-4f6f-9ed1-2b598b406e64" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="c217ce35-1547-4eb2-916b-ca42868d0093">
+                  <Source>
+                    <State
+                      Name="Decided"
+                      idref="d6c3b415-748b-4329-b4e0-30190c303c57" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NotDecided"
+                      idref="b8f3f89b-daa9-4865-b41d-841a013c9601" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="NewDecisionWanted"
+                          idref="578e686f-b3ae-4f6f-9ed1-2b598b406e64" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: not self.oclIsInState(#MonitorReimbursement) and &#xD;&#xA;  (self.oclIsInState(#ComplaintProduct.WithCustomer) or &#xD;&#xA;    self.oclIsInState(#ExchangeProduct.WithCustomer) or&#xD;&#xA;    self.oclIsInState(#CustomerReplacement.WithCustomer))"
+                  id="ebc4b0a1-82dc-4958-95a1-e9d5bfbcd78d">
+                  <Source>
+                    <State
+                      Name="Decided"
+                      idref="d6c3b415-748b-4329-b4e0-30190c303c57" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="Ended"
+                      idref="c585646f-ed5b-42ae-afdd-7290cb3c5f13" />
+                  </Target>
+                  <Trigger>
+                    <MethodTrigger>
+                      <Method>
+                        <Method
+                          Name="End"
+                          idref="c2dc8c52-9da9-4812-99b6-b62f288e6aff" />
+                      </Method>
+                    </MethodTrigger>
+                  </Trigger>
+                </Transition>
+                <Transition
+                  Guard="OCL: "
+                  id="ffd38e1c-4d39-452f-b7b0-d653215b8dea">
+                  <Source>
+                    <PseudoState
+                      Name="Start10"
+                      idref="94af0917-9194-4a67-bcce-bcbcb8cbc24a" />
+                  </Source>
+                  <Target>
+                    <State
+                      Name="NotDecided"
+                      idref="b8f3f89b-daa9-4865-b41d-841a013c9601" />
+                  </Target>
+                </Transition>
+              </Transition>
+              <Vertex>
+                <PseudoState
+                  Name="Start10"
+                  CodeComment=""
+                  id="94af0917-9194-4a67-bcce-bcbcb8cbc24a">
+                  <PlacedState>
+                    <PlacedState
+                      idref="b6729921-8abe-47fb-86fe-528404ed51e9" />
+                  </PlacedState>
+                </PseudoState>
+                <State
+                  Name="NotDecided"
+                  CodeComment=""
+                  id="b8f3f89b-daa9-4865-b41d-841a013c9601">
+                  <Entry>
+                    <Activity
+                      Body="if self.CancelDecision? then &#xD;&#xA;  self.CancelDecision&#xD;&#xA;else&#xD;&#xA;  false&#xD;&#xA;endif" />
+                  </Entry>
+                  <PlacedState>
+                    <PlacedState
+                      idref="9cb4df1d-aa5d-40b8-b559-37fd031ba4cc" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="Ended"
+                  CodeComment=""
+                  id="c585646f-ed5b-42ae-afdd-7290cb3c5f13">
+                  <PlacedState>
+                    <PlacedState
+                      idref="4c95dbb3-7249-4895-ae54-5f3a15841a71" />
+                  </PlacedState>
+                </State>
+                <State
+                  Name="Decided"
+                  CodeComment=""
+                  id="d6c3b415-748b-4329-b4e0-30190c303c57">
+                  <PlacedState>
+                    <PlacedState
+                      idref="c3cb9a6b-7f80-45fb-ba0e-776dd51d510a" />
+                  </PlacedState>
+                </State>
+              </Vertex>
+            </Region>
+          </Region>
+        </StateMachine>
+      </StateMachine>
+    </Class>
+    <Enumeration
+      Name="NotifiedUsing"
+      CodeComment=""
+      FromDictionary="False"
+      IncludeInCodeGen="False"
+      IsAbstract="False"
+      id="230f4b11-e0e3-4416-ac4a-6b947978673e">
+      <EnumValues>
+        <EnumValue
+          Name="NotNotified"
+          CodeComment=""
+          IntValue="0" />
+        <EnumValue
+          Name="UsingTelephone"
+          CodeComment=""
+          IntValue="1" />
+        <EnumValue
+          Name="UsingEmail"
+          CodeComment=""
+          IntValue="2" />
+        <EnumValue
+          Name="UsingWeb"
+          CodeComment=""
+          IntValue="3" />
+        <EnumValue
+          Name="InStore"
+          CodeComment=""
+          IntValue="4" />
+      </EnumValues>
+    </Enumeration>
+    <Class
+      Name="Notification"
+      AdditionalNamespaces=""
+      IsAbstract="True"
+      IsSealed="False"
+      id="46bb4e39-4d2e-4e19-87f5-b7d39518adfe">
+      <Feature>
+        <Method
+          Name="RefreshNotification"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="0ca6546a-1ab3-47fb-8220-c1b3a5c9b1f1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.ShowAfter := DateTime.UtcNow;&#xD;&#xA;self.ShowUntil := self.ShowAfter.addDays(30)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="EffectivePicture"
+          Multiplicity=""
+          Visibility="Public"
+          id="0d102e8e-5e2a-41ef-aeab-ddf364aa7f4f">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="Blob.nullValue" />
+            <TaggedValue
+              Tag="Eco.BlobType"
+              Value="Image" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Blob" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="GetMessage"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="True"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="2a8dcd79-70ed-450e-adec-82c9b75d2a7b">
+          <Parameter>
+            <Parameter
+              Name="aUserNotification"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="UserNotification" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="'&lt;not defined&gt;'" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ShowUntil"
+          Multiplicity=""
+          Visibility="Public"
+          id="4de10ca5-dce3-4d56-a00e-d8d1db8d4e0b">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Cleared"
+          Multiplicity=""
+          Visibility="Public"
+          id="9d81eac6-0ed6-406a-84d3-ec69f1be0fb4">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ShowAfter"
+          Multiplicity=""
+          Visibility="Public"
+          id="ae2d6c28-4de3-403e-a293-c2bf3a23a80c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="OnCreate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="b520166a-443f-4150-b82e-4293a9ebd425">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.base.OnCreate;&#xD;&#xA;self.RefreshNotification" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.DefaultStringRepresentation"
+          Value="self.oclType.asString" />
+      </TaggedValue>
+    </Class>
+    <Class
+      Name="User"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="4ea44c57-b635-4c67-80ee-108c04853b48">
+      <Feature>
+        <Attribute
+          Name="Signature"
+          Multiplicity=""
+          Visibility="Public"
+          id="0cf685f4-1065-488c-ba5b-8489fbf0fdf5">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="5" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="OverrideUserToSelf"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="5f739080-32b1-4654-a286-6d97a0bc8620">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="SysSingleton.oclSingleton.UserOverride := self" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="ClearUserOverride"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="77823424-d9b5-4b0c-822c-6ea99544704b">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="SysSingleton.oclSingleton.UserOverride := User.nullValue" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Name"
+          Multiplicity=""
+          Visibility="Public"
+          id="88da1443-f6ee-4c17-8f0f-c22dae3e2cb1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Nickname"
+          Multiplicity=""
+          Visibility="Public"
+          id="8d8d0ba2-88c0-4276-a181-090750e5009f">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="20" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="OnCreate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="a6e2bd9f-cff9-481e-a1cc-8f4066bc6153">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.base.onCreate" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.DefaultStringRepresentation"
+          Value="if self.Name.Trim &lt;&gt; '' then&#xD;&#xA;  self.Name.Trim&#xD;&#xA;else&#xD;&#xA;  '&lt;Name missing&gt;'&#xD;&#xA;endif" />
+        <TaggedValue
+          Tag="Eco.FormerNames"
+          Value="Person" />
+      </TaggedValue>
+    </Class>
+    <Class
+      Name="SuperClass"
+      AdditionalNamespaces=""
+      IsAbstract="True"
+      IsSealed="False"
+      id="4fb836f3-d37d-4614-b152-3863540e2f8b">
+      <Feature>
+        <Method
+          Name="OnCreate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="0977fc12-eeed-480a-935b-55bf80ec2212">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="Created:=DateTime.UtcNow;&#xD;&#xA;self.Guid.newGuid()" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="OnDelete"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="118e4d8b-420c-49e8-a6f4-06789f81cb8a" />
+        <Attribute
+          Name="Created"
+          Multiplicity=""
+          Visibility="Public"
+          id="17d93f06-3278-4da1-9a52-b07f69dbdd5b">
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="OnUpdate"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="1e8215bf-1c63-4a41-832c-0a5b2b3dce95">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.Changed:=DateTime.UtcNow" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Changed"
+          Multiplicity=""
+          Visibility="Public"
+          id="acea6bf8-d34e-4c9c-8993-13585fe2e9e6">
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Guid"
+          Multiplicity=""
+          Visibility="Public"
+          id="e3ffc2a7-6bb0-4044-b155-229349832803">
+          <Type>
+            <Datatype
+              idref="Guid" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.TableMapping"
+          Value="Children" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="ComplaintComplaints2StateDescriptionComplaintProductDescription"
+      id="53115c60-2a9b-4419-9ddb-a570303ea6f2">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintProductDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="60fb2a91-9284-4b7a-b36a-b7dc87aec738">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('ComplaintProduct.' + self.ComplaintProduct).toLower)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="Complaints2"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="e7d088f7-a834-479d-a9df-c5feebf1c75f">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="NotificationNotifications2UserClearedBy"
+      id="58b7600b-c381-4ef7-86a2-93423331aa31">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="ClearedBy"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="43e9e518-ddad-4585-bfdc-b777ed213a47">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="Notifications2"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="e2e053eb-1502-4bdc-8515-e5e5959eb426">
+          <Participant>
+            <Class
+              Name="Notification"
+              idref="46bb4e39-4d2e-4e19-87f5-b7d39518adfe" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="UserUsersStoreStore"
+      id="5a2be998-66d2-4d16-9f8e-21fe64ec2f27">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Store"
+          IsNavigable="True"
+          Multiplicity="1"
+          Visibility="Public"
+          id="5484b0d0-36e5-41f1-8eac-b6e09e6efec9">
+          <Participant>
+            <Class
+              Name="Store"
+              idref="ef29101d-0755-4c27-90bf-d51eb3171e8c" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="Users"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="ac9b98cc-e11b-4984-9910-566b7e5a06f8">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
+      Name="CustomerMessage"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="6656991d-d7d4-4b05-833b-111ea579a13b">
+      <Feature>
+        <Attribute
+          Name="Notified"
+          Multiplicity=""
+          Visibility="Public"
+          id="2081293f-f6c8-486a-9759-b38251f1cc2a">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Date"
+          Multiplicity=""
+          Visibility="Public"
+          id="24b06bff-a751-4ffc-ad33-abe4c5cee1d0">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="NotifiedUsing"
+          Multiplicity=""
+          Visibility="Public"
+          id="41bdc1f0-5302-47f9-b64e-fb44f52488f1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Enumeration
+              idref="NotifiedUsing" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Signature"
+          Multiplicity=""
+          Visibility="Public"
+          id="f57a911c-e678-4237-b4a1-8409fd2d8129">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="6" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Message"
+          Multiplicity=""
+          Visibility="Public"
+          id="f6843412-c61c-4c26-a46e-8ba2911a136e">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Direction"
+          InitialValue="NotInitialized"
+          Multiplicity=""
+          Visibility="Public"
+          id="fe2a5082-4620-4486-9339-7e641cdc5db9">
+          <Type>
+            <Enumeration
+              idref="CustomerMessageDirection" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="StateDescriptionAllDescriptionsComplaintComplaintsAllDescriptions"
+      id="72f729ce-053b-41c6-a8ac-5f4d422d6c2e">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="AllDescriptions"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="a4848f6f-1c9d-4beb-8f2d-eaaf3e7f588e">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.DecisionDescription -&gt;&#xD;&#xA;union(self.ExchangeProductDescription) -&gt;&#xD;&#xA;union(self.ReplacementProductDescription) -&gt;&#xD;&#xA;union(self.CustomerReplacementDescription) -&gt;&#xD;&#xA;union(self.ComplaintStateDescription) -&gt;&#xD;&#xA;union(self.ComplaintProductDescription)" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsAllDescriptions"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="43db6f53-4588-4b0a-880a-cda2879658c1">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="ComplaintComplaintsStoreStore"
+      id="7afa6c23-eed9-4bd7-a4cb-7c75691ca46a">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Store"
+          IsNavigable="True"
+          Multiplicity="1"
+          Visibility="Public"
+          id="0f2a1377-ff0d-49f6-a9c8-fde0cca7c3da">
+          <Participant>
+            <Class
+              Name="Store"
+              idref="ef29101d-0755-4c27-90bf-d51eb3171e8c" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="Complaints"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="68421f33-bc18-4158-9cd1-ArticleName">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="MustBeEmpty" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="SysUserSysUsersEffectiveUserUserEffectiveUser"
+      id="7b975bcc-c966-4263-93d9-034aecbdd36c">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="EffectiveUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="1041f1aa-eabb-4e9b-81b2-f1590349082f">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.Users-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="SysUsersEffectiveUser"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="6d6f4d4f-55af-450d-826c-645bf774329b">
+          <Participant>
+            <Class
+              Name="SysUser"
+              idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="ComplaintComplaintsExchangeProductDescriptionStateDescriptionExchangeProductDescription"
+      id="7f571c09-f1db-472a-8f20-0177eb346e0d">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="ExchangeProductDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="0d075588-c625-4bc0-82b2-c4c842770493">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('ExchangeProduct.' + self.ExchangeProduct).toLower)-&gt;first&#xD;&#xA;" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsExchangeProductDescription"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="7cd55fc5-d7d8-444c-93b6-89a122971477">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="CustomerMessageCustomerNotNotifiedComplaintComplaintsCustomerNotNotified"
+      id="8cba2a79-9315-4ae8-becf-8d628a9b6a14">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="CustomerNotNotified"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="9a0bcc7a-39f7-4fe7-9884-82f5d2610af8">
+          <Participant>
+            <Class
+              Name="CustomerMessage"
+              idref="6656991d-d7d4-4b05-833b-111ea579a13b" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.CustomerMessages-&gt;select(m|m.Notified.isNull and (m.Direction=#ToCustomer))-&gt;orderBy(m|m.Date)" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsCustomerNotNotified"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="0e704d2d-2ddb-427d-bb80-7ff56cac98cf">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="UserCreatedByUserCreatedUsers"
+      id="8e2ef8e2-7ba8-4441-9cf3-41d80cdde99f">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="CreatedBy"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="7d92bba2-80ca-43e0-ac04-e13bfaa96cc1">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="CreatedUsers"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="0ee03af8-4dbe-4018-a122-eb8043cf19d9">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="StateDescriptionComplaintStateDescriptionComplaintComplaintsComplaintStateDescription"
+      id="9038f5b5-ed31-433b-a098-4959cdcb38c5">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintStateDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="7d27e727-76d0-4f80-b8dd-81a0a6a90bd2">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('ComplaintState.' + self.ComplaintState).toLower)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsComplaintStateDescription"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="34bfc5f6-08f6-426a-b0f5-8c8f208d9235">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="ComplaintComplaintComplaintEventComplaintEvents"
+      id="a39f72f8-d0d5-4ce3-8ccd-0c7d52de3c27">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Complaint"
+          IsNavigable="True"
+          Multiplicity="1"
+          Visibility="Public"
+          id="83ea019d-d7ae-4895-a72c-db80af8244d3">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintEvents"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="613bba1b-b141-4d60-8f78-4009d30e3ff5">
+          <Participant>
+            <Class
+              Name="ComplaintEvent"
+              idref="2112e2f6-b3e5-4447-a9d2-037ca60db6af" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
+      Name="ZXing"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="a3e74e74-7130-4a81-9d1c-c11b6c6da3d6">
+      <Feature>
+        <Method
+          Name="QRImage"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="True"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="37daa629-d5ae-491d-8009-1634b6deb9bd">
+          <Parameter>
+            <Parameter
+              Name="width"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="Integer" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="height"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="Integer" />
+              </Type>
+            </Parameter>
+            <Parameter
+              Name="value"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="Image" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="True" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+        <TaggedValue
+          Tag="Eco.DefaultColor"
+          Value="-922747136" />
+      </TaggedValue>
+    </Class>
+    <Class
+      Name="UserNotification"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="a6a4bb2e-ca4f-4600-8442-49828e9e4d22" />
+    <Association
+      Name=""
+      EffectiveName="UserUsersWithRightsUserHandledUsers"
+      id="bc78daa6-2e64-42c0-80d0-745885ff678c">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="UsersWithRights"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="83874566-5566-4f5d-834e-099754dbd08c">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.LinkRoleName"
+              Value="MyRightsToOthers" />
+            <TaggedValue
+              Tag="Eco.InnerLinkName"
+              Value="UserWithRights" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="HandledUsers"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="42ce0837-0567-4397-9382-6003ba3d206e">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.InnerLinkName"
+              Value="HandledUser" />
+            <TaggedValue
+              Tag="Eco.LinkRoleName"
+              Value="OthersRightsToMe" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="UserUserOverrideSysSingletonSysSingletonsUserOverride"
+      id="c059bbee-72c6-4292-9a4b-cc59ba4ac821">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="UserOverride"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="9c2b5833-8f40-41a0-9b08-f70e9854c2d7">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="SysSingletonsUserOverride"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="11c7a0d1-b0a3-4b8b-ad71-c4f6be0ca44e">
+          <Participant>
+            <Class
+              Name="SysSingleton"
+              idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="UserEffectiveUserSysSingletonSysUser2"
+      id="c708f594-94b2-4a31-8b09-e81e8aa4b25a">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="EffectiveUser"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="f98b4d7e-6819-4c65-a7a3-c33a543c8200">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="if self.UserOverride-&gt;notEmpty then&#xD;&#xA;  self.UserOverride&#xD;&#xA;else&#xD;&#xA;  self.CurrentUser.Users-&gt;first&#xD;&#xA;endif&#xD;&#xA;" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="SysUser2"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="48a7e020-aefd-40e7-a893-6324f75f3377">
+          <Participant>
+            <Class
+              Name="SysSingleton"
+              idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Class
+      Name="StateDescription"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="d8936491-3db1-4c37-a571-7426eb8c6486">
+      <Feature>
+        <Attribute
+          Name="CustomerMessage"
+          Multiplicity=""
+          Visibility="Public"
+          id="72673567-e3d7-4983-a45f-9e015f7d83bb">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="512" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Status"
+          Multiplicity=""
+          Visibility="Public"
+          id="a5149bd7-cf29-4372-b68b-d89714cb7811">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ToDoHeader"
+          Multiplicity=""
+          Visibility="Public"
+          id="b760c0c1-1975-4153-8c6b-58b9ed0dac77">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="100" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Description"
+          Multiplicity=""
+          Visibility="Public"
+          id="c1b80e79-9602-4359-ae5a-dab10cb064ad">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="250" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="NotCurrent"
+          Multiplicity=""
+          Visibility="Public"
+          id="dbf3bb25-8073-430c-9edb-69cbcd5de3f6">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+      </Feature>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="StateDescriptionDecisionDescriptionComplaintComplaintsDecisionDescription"
+      id="dae2684d-ee3a-49f4-bcfd-890a8f7a841a">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="DecisionDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="d3bad54c-ff89-4249-a1a0-352fea92a33c">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('Decision.' + self.Decision).toLower)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsDecisionDescription"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="d3910260-2918-418a-9f10-95f9013f10e2">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="CustomerMessageNotReadByCustomerComplaintComplaintsNotReadByCustomer"
+      id="dc51bf67-a95e-4da9-a3d1-ebb3007cb40a">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="NotReadByCustomer"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="87cecb12-1877-42c3-b000-430be1aa4670">
+          <Participant>
+            <Class
+              Name="CustomerMessage"
+              idref="6656991d-d7d4-4b05-833b-111ea579a13b" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.CustomerMessages-&gt;select(m|m.Notified.isNull and (m.Direction=#FromCustomer))-&gt;orderBy(m|m.Date)" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsNotReadByCustomer"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="7f5a1007-62b4-4087-a872-c9a7819ac6f7">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="ComplaintComplaintsProductConditionDescriptionStateDescriptionProductConditionDescription"
+      id="de039ff5-3387-4002-888f-b5eba455c7bb">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="ProductConditionDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="48c3317d-6662-4eb3-ac8c-c658a7013d28">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('ProductCondition.' + self.ConditionOfComplaintProduct.asString).toLower)-&gt;first" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsProductConditionDescription"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="fca6d66d-08db-4566-b5a8-8790fefc6494">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="NotificationNotificationsUserNotifiedUsers"
+      id="e0e9a4cf-6ae4-499b-b6ba-54c0ca4ce78e">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Notifications"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="7568aad6-b44a-4ecc-9315-ad1acf0e960c">
+          <Participant>
+            <Class
+              Name="Notification"
+              idref="46bb4e39-4d2e-4e19-87f5-b7d39518adfe" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+            <TaggedValue
+              Tag="Eco.InnerLinkName"
+              Value="Notification" />
+            <TaggedValue
+              Tag="Eco.LinkRoleName"
+              Value="UserNotifications" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="NotifiedUsers"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="63b70acc-596f-4fa8-9387-eec186a82dd4">
+          <Participant>
+            <Class
+              Name="User"
+              idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+            <TaggedValue
+              Tag="Eco.InnerLinkName"
+              Value="User" />
+            <TaggedValue
+              Tag="Eco.LinkRoleName"
+              Value="UserNotifications" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
+      Name="Store"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="ef29101d-0755-4c27-90bf-d51eb3171e8c">
+      <Feature>
+        <Attribute
+          Name="Name"
+          Multiplicity=""
+          Visibility="Public"
+          id="51b9edf3-5c98-4fe3-831b-aa65885e8e37">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="50" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="PhoneNumber"
+          Multiplicity=""
+          Visibility="Public"
+          id="b2f56bc9-9205-479d-8dca-fa70b60449a4">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="40" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Presentation"
+          Multiplicity=""
+          Visibility="Public"
+          id="bfb362aa-2854-4d42-8a58-086aede35073">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.Length"
+              Value="1024" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Logo"
+          Multiplicity=""
+          Visibility="Public"
+          id="c177ebe5-8ca6-4c77-9455-f163970bda6c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Image" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.DefaultStringRepresentation"
+          Value="self.Name" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="ComplaintNoteComplaintNotesComplaintComplaint"
+      id="f18d1375-794d-4c24-b67e-3a9df2998821">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Complaint"
+          IsNavigable="True"
+          Multiplicity="1"
+          Visibility="Public"
+          id="b2524fd6-a4f3-4fae-b6a6-de59eca3c72d">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintNotes"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="b9e324f1-e081-470a-b150-658dd32e4c0e">
+          <Participant>
+            <Class
+              Name="ComplaintNote"
+              idref="003158e6-f427-4306-91d7-f354e040db15" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Association
+      Name=""
+      EffectiveName="StateDescriptionReplacementProductDescriptionComplaintComplaintsReplacementProductDescription"
+      id="f7c9fb3f-89c2-4a2e-bd22-7d5b77403247">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="ReplacementProductDescription"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="d740852d-cb82-49c5-9330-0fa9b40ecb13">
+          <Participant>
+            <Class
+              Name="StateDescription"
+              idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="StateDescription.allInstances-&gt;select(sb | sb.Status.toLower = ('ReplacementProduct.' + self.ReplacementProduct).toLower)-&gt;first&#xD;&#xA;" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="ComplaintsReplacementProductDescription"
+          IsNavigable="False"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="a966b740-85df-4bf1-9cc4-7fb0692d9fae">
+          <Participant>
+            <Class
+              Name="Complaint"
+              idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+      <TaggedValue>
+        <TaggedValue
+          Tag="derived"
+          Value="True" />
+      </TaggedValue>
+    </Association>
+    <Enumeration
+      Name="ProductCondition"
+      CodeComment=""
+      FromDictionary="False"
+      IncludeInCodeGen="False"
+      IsAbstract="False"
+      id="fb930415-27ca-4dfe-bca8-012b11b3f0df">
+      <EnumValues>
+        <EnumValue
+          Name="Broken"
+          CodeComment=""
+          IntValue="0" />
+        <EnumValue
+          Name="Repaired"
+          CodeComment=""
+          IntValue="1" />
+      </EnumValues>
+    </Enumeration>
+    <Enumeration
+      Name="CustomerMessageDirection"
+      CodeComment=""
+      FromDictionary="False"
+      IncludeInCodeGen="False"
+      IsAbstract="False"
+      id="fbd7634c-8036-4095-b5c7-440656147ebb">
+      <EnumValues>
+        <EnumValue
+          Name="ToCustomer"
+          CodeComment=""
+          IntValue="1" />
+        <EnumValue
+          Name="NotInitialized"
+          CodeComment=""
+          IntValue="0" />
+        <EnumValue
+          Name="FromCustomer"
+          CodeComment=""
+          IntValue="2" />
+      </EnumValues>
+    </Enumeration>
+  </OwnedElement>
+  <TaggedValue>
+    <TaggedValue
+      Tag="Eco.DefaultSuperClass"
+      Value="SuperClass" />
+  </TaggedValue>
+</Package>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="SysUserForm"
+  ColCount="0"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="0"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="8289bfce-ad0c-41be-818b-7c9eec10c4ef">
+  <AccessGroups>
+    <AccessGroup
+      Name="IsAdmin"
+      idref="a076b6fc-73e1-471a-ae2e-3a45764ef242" />
+  </AccessGroups>
+  <Class>
+    <Class
+      Name="SysUser"
+      idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="UsersList"
+      ExpressionActAsForActions=""
+      id="03e0ed74-d1bf-4531-8243-fce6bba0277c">
+      <Class>
+        <Class
+          Name="User"
+          idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Nickname"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.Nickname"
+          ExpressionForReadOnly="true"
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PCIndex="0"
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="b751e00a-460c-45ed-9cd1-e402fe6b552e" />
+        <Column
+          Name="Name"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.Name"
+          ExpressionForReadOnly="true"
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PCIndex="1"
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="04c645a0-4c2c-4dd5-90f8-af170efe3d31" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="UsersList"
+          idref="1756ceda-00c9-4bed-8ed2-9ec95caf6346" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting
+      Name="SysExternalLoginsList"
+      ExpressionActAsForActions=""
+      id="2a20bf35-c82b-46e4-b524-a5c4528098bd">
+      <Class>
+        <Class
+          Name="SysExternalLogin"
+          idref="8ea431b6-73df-4536-a07a-751b01f5dd17" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="UserSettings"
+              idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="LoginProvider"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.LoginProvider"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PCIndex="0"
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="5666cc4a-5e2c-41e7-a4a9-99b2ed842bc4" />
+        <Column
+          Name="ProviderKey"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="3"
+          Expression="self.ProviderKey"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PCIndex="1"
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="00e6a87c-0116-40d8-b57c-9c6d6f692580" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="SysExternalLoginsList"
+          idref="55e25951-85b7-480b-938a-ee86b4946320" />
+      </ReferedByColumn>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.AlwaysShowActions"
+          Value="True" />
+      </TaggedValue>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowSysUser"
+          idref="9e2c2dca-31aa-4dfc-947d-2907dc8b1b1d" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="UserSettings"
+          idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="UserName"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="self.UserName"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="4b047a39-31f0-42b2-8ffb-a874ed2a0e6e">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="9fa487cf-2eed-4405-9e8c-b89c7584f686" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="Id"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="self.Id"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="1"
+      id="25388d89-fa0f-4643-adb5-b9205018c96f">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="9fa487cf-2eed-4405-9e8c-b89c7584f686" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="IsAdmin"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="self.IsAdmin"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="2"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="2"
+      id="ee345943-b3d7-4fb7-acec-79b55551fcb6">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="9fa487cf-2eed-4405-9e8c-b89c7584f686" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="UsersList"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="self.Users"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="5"
+      StyleRef=""
+      XPos="0"
+      YPos="8"
+      id="1756ceda-00c9-4bed-8ed2-9ec95caf6346">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="950dcd96-14dd-4ee5-988e-2fd5b578294b" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="UsersList"
+          idref="03e0ed74-d1bf-4531-8243-fce6bba0277c" />
+      </ReferedNesting>
+    </Column>
+    <Column
+      Name="SysExternalLoginsList"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="self.SysExternalLogins"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="4"
+      StyleRef=""
+      XPos="0"
+      YPos="4"
+      id="55e25951-85b7-480b-938a-ee86b4946320">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="e36c2729-b605-4966-92c9-5157ee14cb10" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="SysExternalLoginsList"
+          idref="2a20bf35-c82b-46e4-b524-a5c4528098bd" />
+      </ReferedNesting>
+    </Column>
+    <Column
+      Name="IsStaff"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="2"
+      ColSpanWhenInGrid="1"
+      Expression="self.IsStaff"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="3"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="3"
+      id="fa30a141-0a8c-4461-b1ee-f52af255b710">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="9fa487cf-2eed-4405-9e8c-b89c7584f686" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Column"
+      VisibleExpression=""
+      Wrap="False"
+      id="83cfc942-d6d1-4175-9067-eb35b71de436">
+      <ChildContainers>
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="9fa487cf-2eed-4405-9e8c-b89c7584f686" />
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="e36c2729-b605-4966-92c9-5157ee14cb10" />
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="950dcd96-14dd-4ee5-988e-2fd5b578294b" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

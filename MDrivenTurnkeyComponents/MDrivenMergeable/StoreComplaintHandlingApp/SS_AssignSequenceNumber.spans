@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="SS_AssignSequenceNumber"
+  ColCount="0"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="0"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  UsePlacingHints="False"
+  id="f0d94f43-d0c4-4762-9d09-45e716a5328b">
+  <Class>
+    <Class
+      Name="Complaint"
+      idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+  </Class>
+  <CriteriaForServerSideExecute>
+    <CriteriaForServerSideExecute
+      Interval="3"
+      MaxAnswers="1"
+      PreEAL=""
+      PSOcl="Complaint.allInstances-&gt;select(r | r.SequenceNumber.isNull)"
+      SerializedBlocking="True" />
+  </CriteriaForServerSideExecute>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ComplaintPrintout"
+          idref="c84c851e-4232-44aa-9439-c80596875bd3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteComplaint"
+          idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowEventLog"
+          idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldInStore"
+          idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldUsingTelephone"
+          idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ReadCustomerMessages"
+          idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="SequenceNumber"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="self.SequenceNumber"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="75da6f86-62be-4872-96aa-9f3c6d771ceb" />
+    <Column
+      Name="SattSequenceNumber"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="self.SequenceNumber := SysSingleton.oclSingleton.GetNextSequenceNumber"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;ActionName&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="1"
+      id="8a4d2029-3563-4e6d-9cb9-abf26fc3e236" />
+  </OwnedColumns>
+</Span>

@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="ComplaintCustomerView"
+  ColCount="12"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="15"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="df25c799-fabb-4385-99a9-397450034b77">
+  <Class>
+    <Class
+      Name="Complaint"
+      idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="SearchExpression"
+      ExpressionActAsForActions=""
+      UsedForSeekerColumns="True"
+      id="ea2f461b-5943-4a8f-a670-137e9257dac6">
+      <Class>
+        <Class
+          Name="Complaint"
+          idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="DeleteComplaint"
+              idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ShowEventLog"
+              idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldInStore"
+              idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldUsingTelephone"
+              idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ReadCustomerMessages"
+              idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Crit1"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="Complaint.allinstances-&gt;select(a|a.CustomerAccessID=vCustomerAccessID)"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="0"
+          id="2b6f7bcb-5261-47cf-8e19-5e9b775cfba5" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting
+      Name="CustomerComplaint"
+      ExpressionActAsForActions=""
+      id="95a70d8d-ce25-4330-8380-ee32fae76111">
+      <Class>
+        <Class
+          Name="Complaint"
+          idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="DeleteComplaint"
+              idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ShowEventLog"
+              idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldInStore"
+              idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldUsingTelephone"
+              idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ReadCustomerMessages"
+              idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="ComplaintDate"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="4"
+          ColSpanWhenInGrid="1"
+          Expression="self.ComplaintDate"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="3"
+          YPos="2"
+          id="d16b3267-99cb-4646-8324-87ea494168af" />
+        <Column
+          Name="CustomerName"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="4"
+          ColSpanWhenInGrid="1"
+          Expression="self.CustomerName"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="Complaint made by"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="3"
+          YPos="3"
+          id="866f86dc-a916-41ad-869d-ac4afc875576" />
+        <Column
+          Name="ArticleName"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="4"
+          ColSpanWhenInGrid="1"
+          Expression="self.ArticleName"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="3"
+          YPos="4"
+          id="02ef8d97-e883-481d-98cb-72cef53c7644" />
+        <Column
+          Name="Decision"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="10"
+          ColSpanWhenInGrid="1"
+          Expression="self.DecisionDescription.Description"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="3"
+          YPos="5"
+          id="13b51e12-09ee-412c-a8ed-f14facc0daeb" />
+        <Column
+          Name="SequenceNumber"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="7"
+          ColSpanWhenInGrid="1"
+          Expression="'Complaint ' + self.SequenceNumber.asString"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString=""
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef="h4"
+          XPos="0"
+          YPos="1"
+          id="b2080c7b-4df9-426c-9cbd-39f5a13402d3" />
+        <Column
+          Name="CustomerMessagesList"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="13"
+          ColSpanWhenInGrid="1"
+          Expression="self.CustomerMessages-&gt;orderBy(h|h.Date)"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString=""
+          PresentationStringColSpan="3"
+          RowSpan="3"
+          StyleRef=""
+          XPos="0"
+          YPos="8"
+          id="77523baf-081f-474d-9867-d4bdbff6197d">
+          <ReferedNesting>
+            <Nesting
+              Name="CustomerMessagesList"
+              idref="63511b1b-5673-4c70-bef0-a04eac80354f" />
+          </ReferedNesting>
+        </Column>
+        <Column
+          Name="Send"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="2"
+          ColSpanWhenInGrid="1"
+          Expression="if vMessagetext.Trim &lt;&gt; '' then&#xD;&#xA;  self.AddMessageFromCustomer(vMessagetext);&#xD;&#xA;  vMessagetext := String.nullValue&#xD;&#xA;else&#xD;&#xA;  ''&#xD;&#xA;endif;&#xD;&#xA;selfVM.Save"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="True"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;ActionName&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="11"
+          YPos="11"
+          id="9ff40153-4cee-4a5a-a673-f66b7e2d80e8" />
+        <Column
+          Name="MessageToTheStore"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="8"
+          ColSpanWhenInGrid="1"
+          Expression="vMessagetext"
+          ExpressionForReadOnly=""
+          ExpressionForVisible="vSeekerResult-&gt;notEmpty"
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="3"
+          YPos="11"
+          id="ffe0d9b7-6fab-4021-a986-7716b5f61597" />
+        <Column
+          Name="MarkAsNotified"
+          ActionPeriodicityMillisec="3000"
+          ColSpan="8"
+          ColSpanWhenInGrid="1"
+          Expression="self.CustomerNotified(#UsingWeb);&#xD;&#xA;selfVM.Save&#xD;&#xA;"
+          ExpressionForReadOnly="self.CustomerNotNotified-&gt;isEmpty"
+          ExpressionForVisible=""
+          IsAction="True"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;ActionName&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="1"
+          StyleRef=""
+          XPos="3"
+          YPos="-11"
+          id="dc6cd15b-668e-46d3-81e3-488989c3d95b" />
+        <Column
+          Name="ReasonForDecision"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="10"
+          ColSpanWhenInGrid="1"
+          Expression="self.ReasonForDecision"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="3"
+          RowSpan="2"
+          StyleRef=""
+          XPos="3"
+          YPos="6"
+          id="2b2f8ddf-a47d-4f36-b3af-462746301ffa" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="SearchResults"
+          idref="7983ae01-b68b-47c6-861d-57524f01d471" />
+      </ReferedByColumn>
+    </Nesting>
+    <Nesting
+      Name="CustomerMessagesList"
+      ExpressionActAsForActions=""
+      id="63511b1b-5673-4c70-bef0-a04eac80354f">
+      <Class>
+        <Class
+          Name="CustomerMessage"
+          idref="6656991d-d7d4-4b05-833b-111ea579a13b" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ShowEventLog"
+              idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldInStore"
+              idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ToldUsingTelephone"
+              idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ReadCustomerMessages"
+              idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Date"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.Date"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef="{short}"
+          XPos="1"
+          YPos="1"
+          id="5b41bc80-fc1a-4c9a-a934-825bf2f82c6d" />
+        <Column
+          Name="Direction"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="if Direction=#ToCustomer then&#xD;&#xA;  'From the store'&#xD;&#xA;else&#xD;&#xA;  'You sent'&#xD;&#xA;endif"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString=""
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="3"
+          id="92d18f8a-c526-4f09-baa4-b7647643cc01" />
+        <Column
+          Name="Message"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="8"
+          Expression="self.Message"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="db22c8b0-81cc-4a5f-9705-04e4002c41dc" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="CustomerMessagesList"
+          idref="77523baf-081f-474d-9867-d4bdbff6197d" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_FromRepairerFixed"
+          idref="4196de35-7b52-41b5-b148-6cec33598fa0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_FromRepairerWithoutMeasure"
+          idref="1646f931-28b1-4b3b-aa94-92c3b436aa89" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_GivenToRepairer"
+          idref="11c94896-07b7-4551-8bfb-b8d939fa7f73" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SentToSupplier"
+          idref="ecde3a58-9263-4ed0-8871-dc5b06526875" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReturnedToCustomer"
+          idref="4d07655b-d9d1-4284-baf5-2d7f86b3a45c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_DecidedBySupplier"
+          idref="d2404a38-48b9-42f2-911e-d5f4a14e1106" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ExchangeInStore"
+          idref="fdb0bd2d-f8a2-4689-8889-73f5ce7e0bd9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimburseCustomer"
+          idref="11754434-4b12-4e60-9b91-a52b5c59e226" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierExchange"
+          idref="d72605cc-f030-48e4-bb60-8ce49bd73850" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ComplaintDenied"
+          idref="7c92a306-87ca-485e-aad1-4437c2dff421" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_Repair"
+          idref="4a426dc2-0af2-49c4-aeeb-a072e0b167b4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_Credit"
+          idref="cb1d359c-ef16-4155-9ebc-05fe9e935f59" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimbursedWithProduct"
+          idref="4fcddb36-1611-4244-bef5-80266eae93e4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementReceived"
+          idref="eda540ca-f45e-4064-abc1-73aaf2542992" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementOrdered"
+          idref="fc36ee0b-6049-403d-937a-45eb809731fa" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_CreditReceived"
+          idref="4b869803-3efb-401b-8a13-06f2b416e3e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementReceived"
+          idref="864969d0-d596-4692-8b40-c74212ecc472" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementToCustomer"
+          idref="5a1477c9-2135-4270-ab03-7b78baec86dc" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ContactSupplierAgain"
+          idref="5bacb9f8-2323-4a03-bf1d-46a2ff815a9b" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierContactDontSend"
+          idref="e3b7da59-5b13-490a-810b-9ca8ab2b3576" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierContactSendReturned"
+          idref="05f3d661-7e4b-4ce6-93a2-50a8d9bbd06c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimbursementToCustomer"
+          idref="f63be77a-bd92-40cd-b077-2ef5be4d1f46" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_End"
+          idref="c66f126a-a42a-45d0-afd2-5aef2282ddae" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_NewAssessmentWanted"
+          idref="be07f7f1-96aa-4fdb-b7fa-d18059e052a5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ComplaintPrintout"
+          idref="c84c851e-4232-44aa-9439-c80596875bd3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowComplaint"
+          idref="e626aa12-b149-4b0e-8c0c-80b1be6acb99" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteComplaint"
+          idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_PutAsideInStore"
+          idref="322e8004-887f-4252-9c01-f0a4456ccdf4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_PutAside"
+          idref="9adc4b20-02d8-4385-8046-947aa809f47a" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowEventLog"
+          idref="d56faa1b-1ab8-4c77-9807-800f2f501ad0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldInStore"
+          idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldUsingTelephone"
+          idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ReadCustomerMessages"
+          idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="vCustomerAccessID"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="5"
+      ColSpanWhenInGrid="1"
+      Expression="vCustomerAccessID"
+      ExpressionForReadOnly=""
+      ExpressionForVisible="false"
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="3"
+      YPos="12"
+      id="1de8b141-5404-4591-a2ee-d352da487365" />
+    <Column
+      Name="vSearchPerformedOn"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="5"
+      ColSpanWhenInGrid="1"
+      Expression="vSearchPerformedOn"
+      ExpressionForReadOnly=""
+      ExpressionForVisible="false"
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="2"
+      RowSpan="1"
+      StyleRef=""
+      XPos="3"
+      YPos="13"
+      id="df9668a7-f257-4a1f-b8f2-a72dcac32ec9" />
+    <Column
+      Name="NothingFound"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="13"
+      ColSpanWhenInGrid="1"
+      Expression="'No complaint was found using the provided information.'"
+      ExpressionForReadOnly=""
+      ExpressionForVisible="(vSeekerResult-&gt;isEmpty) and (vCustomerAccessID.asString = vSearchPerformedOn.asString)"
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h2"
+      XPos="0"
+      YPos="0"
+      id="224583fe-42f8-456b-af55-5539954664bf" />
+    <Column
+      Name="SearchResults"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="vSeekerResult-&gt;first"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="4"
+      StyleRef=""
+      XPos="0"
+      YPos="2"
+      id="7983ae01-b68b-47c6-861d-57524f01d471">
+      <ReferedNesting>
+        <Nesting
+          Name="CustomerComplaint"
+          idref="95a70d8d-ce25-4330-8380-ee32fae76111" />
+      </ReferedNesting>
+    </Column>
+    <Column
+      Name="Search"
+      ActionPeriodicityMillisec="100"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="vSeekerResult-&gt;clear;&#xD;&#xA;selfVM.Search;&#xD;&#xA;vSearchPerformedOn := vCustomerAccessID"
+      ExpressionForReadOnly="(vCustomerAccessID.Trim = '') or (vSearchPerformedOn = vCustomerAccessID)"
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="-13"
+      id="930973d0-fc1f-4b0b-85e0-46c14aa97d0d" />
+  </OwnedColumns>
+  <SpanVariables>
+    <SpanVariable
+      Name="vCustomerAccessID"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
+    <SpanVariable
+      Name="vMessagetext"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
+    <SpanVariable
+      Name="vSearchPerformedOn"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
+  </SpanVariables>
+</Span>
