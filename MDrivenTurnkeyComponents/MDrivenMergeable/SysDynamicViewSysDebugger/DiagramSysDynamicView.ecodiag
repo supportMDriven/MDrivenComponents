@@ -141,6 +141,127 @@
       </Class>
     </PlacedClass>
     <PlacedClass
+      ClassId="a551442a-6b8e-4491-beb3-5691db0b4dec"
+      Color="1692800256"
+      LastKnownName="SysTransientSession"
+      PickedFeatureVisibility="ShowAll"
+      RenderedHeight="84"
+      RenderedWidth="154"
+      ShowAttributes="False"
+      ShowMethods="False"
+      Size="1"
+      x="744"
+      y="552"
+      id="805ebea1-4e19-4690-ad83-de0bdcd3d5e9">
+      <AssociationEndConnection>
+        <AssociationEndConnection
+          LabelAngle="-0.785398163397448"
+          LabelDistance="15"
+          NextLegDrawKind="0"
+          SideToUse="2"
+          ViaPointsStartsHere="True"
+          x="-24"
+          y="84"
+          id="50800811-738a-4ce1-aaa7-37416a0cdf01">
+          <AssociationEnd>
+            <AssociationEnd
+              Name="SysTransientSession"
+              idref="0f7e3166-874b-4efb-be68-41f08824a552" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection
+              LabelAngle="-0.785398163397448"
+              LabelDistance="15"
+              NextLegDrawKind="0"
+              SideToUse="0"
+              ViaPointsStartsHere="False"
+              x="-32"
+              y="0"
+              id="a950a534-cd72-4284-ab41-5e0b9e7a7648">
+              <AssociationEnd>
+                <AssociationEnd
+                  Name="SysTransientViews"
+                  idref="dd6c4eeb-c156-4f47-bb65-4f386b66b205" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+        <AssociationEndConnection
+          LabelAngle="-0.785398163397448"
+          LabelDistance="15"
+          NextLegDrawKind="0"
+          SideToUse="0"
+          ViaPointsStartsHere="False"
+          x="-24"
+          y="0"
+          id="d7e41025-0f4e-4ce8-8f5a-7dd7764e5e2f">
+          <AssociationEnd>
+            <AssociationEnd
+              Name="SysTransientSessions"
+              idref="e76cb75d-390e-4647-9dcd-794edabd3a97" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class
+          Name="SysTransientSession"
+          idref="a551442a-6b8e-4491-beb3-5691db0b4dec" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass
+      ClassId="07c38ad2-e6c8-4ea1-9af3-0884a44b9d10"
+      Color="1692800256"
+      LastKnownName="SysTransientTKStatusSingleton"
+      PickedFeatureVisibility="ShowAll"
+      RenderedHeight="61"
+      RenderedWidth="228"
+      ShowAttributes="False"
+      ShowMethods="False"
+      Size="1"
+      x="760"
+      y="408"
+      id="9df46d7b-22e3-41a6-a0a8-fb7c17a18d45">
+      <AssociationEndConnection>
+        <AssociationEndConnection
+          LabelAngle="-0.785398163397448"
+          LabelDistance="15"
+          NextLegDrawKind="0"
+          SideToUse="2"
+          ViaPointsStartsHere="True"
+          x="-40"
+          y="61"
+          id="079c12fa-b347-4fb7-87a9-3280e4b6b98a">
+          <AssociationEnd>
+            <AssociationEnd
+              Name="SysTransientTKStatusSingleton"
+              idref="c29e6112-b9bf-4ea2-b532-617f7278e887" />
+          </AssociationEnd>
+          <next>
+            <AssociationEndConnection
+              LabelAngle="-0.785398163397448"
+              LabelDistance="15"
+              NextLegDrawKind="0"
+              SideToUse="0"
+              ViaPointsStartsHere="False"
+              x="-24"
+              y="0"
+              id="d7e41025-0f4e-4ce8-8f5a-7dd7764e5e2f">
+              <AssociationEnd>
+                <AssociationEnd
+                  Name="SysTransientSessions"
+                  idref="e76cb75d-390e-4647-9dcd-794edabd3a97" />
+              </AssociationEnd>
+            </AssociationEndConnection>
+          </next>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class
+          Name="SysTransientTKStatusSingleton"
+          idref="07c38ad2-e6c8-4ea1-9af3-0884a44b9d10" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass
       ClassId="e7f540ee-bf2a-43ed-9755-782c1f3a9800"
       Color="1692800256"
       LastKnownName="SysDebugger"
@@ -191,6 +312,42 @@
         <Class
           Name="SysDebugger"
           idref="e7f540ee-bf2a-43ed-9755-782c1f3a9800" />
+      </Class>
+    </PlacedClass>
+    <PlacedClass
+      ClassId="809edecf-6ae8-4f3d-85bb-ff1a5c2be737"
+      Color="1692800256"
+      LastKnownName="SysTransientView"
+      PickedFeatureVisibility="ShowAll"
+      RenderedHeight="108"
+      RenderedWidth="135"
+      ShowAttributes="False"
+      ShowMethods="False"
+      Size="1"
+      x="752"
+      y="704"
+      id="ea8d9b20-1cde-49b9-85d3-dfe9cbf66b23">
+      <AssociationEndConnection>
+        <AssociationEndConnection
+          LabelAngle="-0.785398163397448"
+          LabelDistance="15"
+          NextLegDrawKind="0"
+          SideToUse="0"
+          ViaPointsStartsHere="False"
+          x="-32"
+          y="0"
+          id="a950a534-cd72-4284-ab41-5e0b9e7a7648">
+          <AssociationEnd>
+            <AssociationEnd
+              Name="SysTransientViews"
+              idref="dd6c4eeb-c156-4f47-bb65-4f386b66b205" />
+          </AssociationEnd>
+        </AssociationEndConnection>
+      </AssociationEndConnection>
+      <Class>
+        <Class
+          Name="SysTransientView"
+          idref="809edecf-6ae8-4f3d-85bb-ff1a5c2be737" />
       </Class>
     </PlacedClass>
   </PlacedClass>

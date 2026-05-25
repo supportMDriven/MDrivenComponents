@@ -11,6 +11,97 @@
   id="dd9442a4-a948-443c-8307-167f1e6a5429">
   <OwnedElement>
     <Class
+      Name="SysTransientTKStatusSingleton"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="07c38ad2-e6c8-4ea1-9af3-0884a44b9d10">
+      <Feature>
+        <Method
+          Name="RefreshAll"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="25a3e4bf-ff03-406b-adb0-273b05578a95">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="RefreshCurrentUser"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="fd6306fc-6c1a-430e-8e0c-232094242142">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+        <TaggedValue
+          Tag="Eco.IsSingleton"
+          Value="True" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="SysTransientSessionSysTransientSessionsSysTransientTKStatusSingletonSysTransientTKStatusSingleton"
+      id="11ad817a-46be-4b22-b668-663a1e82c3e7">
+      <AssociationEnd>
+        <AssociationEnd
+          Name=""
+          EffectiveName="SysTransientTKStatusSingleton"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="c29e6112-b9bf-4ea2-b532-617f7278e887">
+          <Participant>
+            <Class
+              Name="SysTransientTKStatusSingleton"
+              idref="07c38ad2-e6c8-4ea1-9af3-0884a44b9d10" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="SysTransientSessions"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="e76cb75d-390e-4647-9dcd-794edabd3a97">
+          <Participant>
+            <Class
+              Name="SysTransientSession"
+              idref="a551442a-6b8e-4491-beb3-5691db0b4dec" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
       Name="SysDynamicListColumn"
       AdditionalNamespaces=""
       IsAbstract="False"
@@ -145,6 +236,96 @@
       </AssociationEnd>
     </Association>
     <Class
+      Name="SysTransientView"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="809edecf-6ae8-4f3d-85bb-ff1a5c2be737">
+      <Feature>
+        <Attribute
+          Name="VMId"
+          Multiplicity=""
+          Visibility="Public"
+          id="7e4c1b39-eca8-4101-997c-fd2ec662c0b1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="Reset"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="891a25e2-f088-4b36-9bfe-156fb85bdbf9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ViewName"
+          Multiplicity=""
+          Visibility="Public"
+          id="93a7449c-db09-4d99-b242-50c004bb7354">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="RootExternalId"
+          Multiplicity=""
+          Visibility="Public"
+          id="d62c004b-68a0-4a63-989e-8dfc95c0cfe0">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="Variables"
+          Multiplicity=""
+          Visibility="Public"
+          id="e8682241-ecde-464a-9e3e-9ecff6e4b7fa">
+          <Type>
+            <Datatype
+              idref="Text" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Class
       Name="SysDebuggerObjRef"
       AdditionalNamespaces=""
       IsAbstract="False"
@@ -171,6 +352,104 @@
           Multiplicity=""
           Visibility="Public"
           id="f8574808-d3e3-4895-a1a9-e4b16355e25f">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="SysTransientViewSysTransientViewsSysTransientSessionSysTransientSession"
+      id="91778da4-4e2b-4053-973d-81f2a14d931e">
+      <AssociationEnd>
+        <AssociationEnd
+          Name=""
+          EffectiveName="SysTransientSession"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="0f7e3166-874b-4efb-be68-41f08824a552">
+          <Participant>
+            <Class
+              Name="SysTransientSession"
+              idref="a551442a-6b8e-4491-beb3-5691db0b4dec" />
+          </Participant>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="SysTransientViews"
+          Aggregation="Composite"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="dd6c4eeb-c156-4f47-bb65-4f386b66b205">
+          <Participant>
+            <Class
+              Name="SysTransientView"
+              idref="809edecf-6ae8-4f3d-85bb-ff1a5c2be737" />
+          </Participant>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+    <Class
+      Name="SysTransientSession"
+      AdditionalNamespaces=""
+      IsAbstract="False"
+      IsSealed="False"
+      id="a551442a-6b8e-4491-beb3-5691db0b4dec">
+      <Feature>
+        <Attribute
+          Name="UserName"
+          Multiplicity=""
+          Visibility="Public"
+          id="45c0cfd2-205b-4bbf-8f28-0cbf65fbfb7d">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="Reset"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="5c75cc6b-ae1d-4135-866a-551e5f12855c">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.ExternalLateBound"
+              Value="Existence" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="SessionId"
+          Multiplicity=""
+          Visibility="Public"
+          id="69a00371-13b2-4d6d-b2d7-fab3b2bdf008">
           <TaggedValue>
             <TaggedValue
               Tag="Eco.AllowNULL"

@@ -9,6 +9,7 @@
   RowCount="10"
   RowHeight="20"
   TabOrder="DisplayOrderYBeforeX"
+  UseSubColumnDisplay="True"
   id="18d9541b-717a-48da-bbd5-6b02b1369be0">
   <Class>
     <Class
