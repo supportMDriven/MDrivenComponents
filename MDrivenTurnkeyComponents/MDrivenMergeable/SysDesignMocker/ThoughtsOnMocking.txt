@@ -1,0 +1,307 @@
+C:\Users\hans\source\repos\MDrivenComponents\MDrivenTurnkeyComponents\MDrivenMergeable\SysDesignMocker\SysDesignMocker
+
+    public static Func<Span,string> OnGetCurrentDemoDataForRuntimeAccess;
+    public static Action<Span> OnGetDemoDataPromptFromPlanToClipBoard;
+    public static Action<Span, string> OnApplyDemoDataForRuntimeAccessAndEnsureModelPattern;
+    public static Action<Span> OnPromptForUISpecificationThatFitsDemoMockDataToClipBoard;
+    public static Action<Span, string> OnApplyUISpecificationToViewModelAndBindToDemoMockData;
+
+
+
+
+
+
+You are a UI Architecture AI. Your task is to analyze a sample JSON data structure and generate a abstract, programmatic page layout definition using Flexbox principles. 
+
+Do not generate HTML or CSS. Instead, generate a structured JSON layout tree that I can parse programmatically to build the UI.
+
+### 1. The Core UI Primitives
+You must build the layout tree using only these primitives:
+- **FlexContainer**: A structural box. Attributes: `direction` (row|column), `wrap` (wrap|nowrap), `justifyContent`, `alignItems`, `flexGrow` (1,2,...), `children` (other FlexContainers or FlexItems).
+- **Repeater**: Used when looping over an array in the data. Same attributes as FlexContainer minus `children` plus `datasource` (the JSON path) and `childLayout` (the template for items starting with a FlexContainer).
+- **FlexItem**: A terminal node that displays data or a control. Attributes: `flexGrow` (1,2,...), `controlType` ("Heading", "Text", "Image", "Button", "InputField", "Select")), `controlBind` (the JSON key it displays), `label` (if appropriate add info on what the item is), if controlType "Button" add attribute `action` ("Create","Delete") and `actionTarget` ("This","RepeaterBelow","RepeaterAbove").
+- Ensure FlexContainers either only contain all FlexItems+Repeater or all FlexContainers - do not mix
+
+ 
+### 2. The Mock Data
+Here is the sample JSON data you need to visualize:
+[MOCKJSON]
+
+### 3. Layout Requirements
+- Design a clean, modern, responsive dashboard/page layout appropriate for this specific data.
+- Use a logical hierarchy (e.g., Header, group data controls based on meaning of key , Cards for lists).
+- Ensure lists or arrays in the data use the `Repeater` primitive.
+- Include intuitive input controls (like add and delete on lists ) where they logically make sense for interacting with this data.
+
+### 4. Expected Output Format
+Return ONLY a valid JSON object representing the root layout container. Follow this exact shape:
+{
+  "primitive": "FlexContainer",
+  "direction": "column",
+  "flexGrow": "2",
+  "children": [
+    {
+      "primitive": "FlexContainer",
+      "direction": "row",
+      "children": [ 
+	{
+		"primitive": "FlexItem",
+		"controlType": "InputField",
+		"controlBind": "..."
+	},
+	{
+		"primitive": "Repeater",
+		"datasource": "...",
+		"childLayout": {...}
+	}
+	]
+    }
+  ]
+}
+
+
+
+
+----
+
+{
+  "primitive": "FlexContainer",
+  "direction": "column",
+  "flexGrow": "2",
+  "children": [
+
+    {
+      "primitive": "FlexContainer",
+      "direction": "row",
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "children": [
+        {
+          "primitive": "FlexItem",
+          "flexGrow": "1",
+          "controlType": "Heading",
+          "controlBind": "invoice.invoice_number"
+        },
+        {
+          "primitive": "FlexItem",
+          "flexGrow": "1",
+          "controlType": "Select",
+          "controlBind": "invoice.status"
+        }
+      ]
+    },
+
+    {
+      "primitive": "FlexContainer",
+      "direction": "row",
+      "wrap": "wrap",
+      "children": [
+        {
+          "primitive": "FlexContainer",
+          "direction": "column",
+          "flexGrow": "1",
+          "children": [
+            {
+              "primitive": "FlexItem",
+              "controlType": "Heading",
+              "controlBind": "invoice.issuer.company_name"
+            },
+            {
+              "primitive": "FlexItem",
+              "controlType": "Text",
+              "controlBind": "invoice.issuer.address.street"
+            },
+            {
+              "primitive": "FlexItem",
+              "controlType": "Text",
+              "controlBind": "invoice.issuer.address.city"
+            },
+            {
+              "primitive": "FlexItem",
+              "controlType": "Text",
+              "controlBind": "invoice.issuer.contact.email"
+            }
+          ]
+        },
+        {
+          "primitive": "FlexContainer",
+          "direction": "column",
+          "flexGrow": "1",
+          "children": [
+            {
+              "primitive": "FlexItem",
+              "controlType": "Heading",
+              "controlBind": "invoice.client.company_name"
+            },
+            {
+              "primitive": "FlexItem",
+              "controlType": "Text",
+              "controlBind": "invoice.client.address.street"
+            },
+            {
+              "primitive": "FlexItem",
+              "controlType": "Text",
+              "controlBind": "invoice.client.address.city"
+            },
+            {
+              "primitive": "FlexItem",
+              "controlType": "Text",
+              "controlBind": "invoice.client.contact.email"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "primitive": "FlexContainer",
+      "direction": "column",
+      "children": [
+        {
+          "primitive": "Repeater",
+          "datasource": "invoice.line_items",
+          "childLayout": {
+            "primitive": "FlexContainer",
+            "direction": "row",
+            "justifyContent": "space-between",
+            "alignItems": "center",
+            "children": [
+              {
+                "primitive": "FlexItem",
+                "flexGrow": "2",
+                "controlType": "Text",
+                "controlBind": "description"
+              },
+              {
+                "primitive": "FlexItem",
+                "flexGrow": "1",
+                "controlType": "InputField",
+                "controlBind": "quantity"
+              },
+              {
+                "primitive": "FlexItem",
+                "flexGrow": "1",
+                "controlType": "InputField",
+                "controlBind": "unit_price"
+              },
+              {
+                "primitive": "FlexItem",
+                "flexGrow": "1",
+                "controlType": "Text",
+                "controlBind": "subtotal"
+              },
+              {
+                "primitive": "FlexItem",
+                "flexGrow": "1",
+                "controlType": "Button",
+                "controlBind": "delete_line_item"
+              }
+            ]
+          }
+        },
+        {
+          "primitive": "FlexItem",
+          "flexGrow": "1",
+          "controlType": "Button",
+          "controlBind": "add_line_item"
+        }
+      ]
+    },
+
+    {
+      "primitive": "FlexContainer",
+      "direction": "column",
+      "children": [
+        {
+          "primitive": "FlexItem",
+          "controlType": "Heading",
+          "controlBind": "summary_header"
+        },
+        {
+          "primitive": "FlexContainer",
+          "direction": "row",
+          "children": [
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Text",
+              "controlBind": "invoice.summary.subtotal_gross"
+            },
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Text",
+              "controlBind": "invoice.summary.total_discount"
+            },
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Text",
+              "controlBind": "invoice.summary.total_tax"
+            },
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Heading",
+              "controlBind": "invoice.summary.total_amount"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "primitive": "FlexContainer",
+      "direction": "column",
+      "children": [
+        {
+          "primitive": "FlexItem",
+          "controlType": "Heading",
+          "controlBind": "payment_details_header"
+        },
+        {
+          "primitive": "FlexContainer",
+          "direction": "row",
+          "children": [
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Text",
+              "controlBind": "invoice.payment_details.method"
+            },
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Text",
+              "controlBind": "invoice.payment_details.bank_name"
+            },
+            {
+              "primitive": "FlexItem",
+              "flexGrow": "1",
+              "controlType": "Text",
+              "controlBind": "invoice.payment_details.transaction_reference"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "primitive": "FlexContainer",
+      "direction": "column",
+      "children": [
+        {
+          "primitive": "FlexItem",
+          "controlType": "Text",
+          "controlBind": "invoice.notes"
+        },
+        {
+          "primitive": "FlexItem",
+          "controlType": "Text",
+          "controlBind": "invoice.terms_and_conditions"
+        }
+      ]
+    }
+
+  ]
+}
