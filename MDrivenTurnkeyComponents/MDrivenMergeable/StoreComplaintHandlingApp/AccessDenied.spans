@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="AccessDenied"
+  ColCount="3"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="3"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="850cbef7-1108-4eab-b864-1d12e95e39f8">
+  <Class>
+    <Class
+      Name="SysUser"
+      idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="MergeSysUsers"
+          idref="ad623c3f-b1d5-4019-86c0-73f436030405" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowSysUser"
+          idref="9e2c2dca-31aa-4dfc-947d-2907dc8b1b1d" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="SetAsCurrentUser"
+          idref="4af32376-ca1b-4f9c-a290-8931a417fec3" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteSysUser"
+          idref="6dc871a8-8408-4da5-9d12-48897ff3be27" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="AccessDeniedMessage"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="'Access Denied - Please log in.'"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h1"
+      XPos="0"
+      YPos="0"
+      id="4d82498c-9fc4-44a2-bab5-316935ded6ee" />
+  </OwnedColumns>
+</Span>

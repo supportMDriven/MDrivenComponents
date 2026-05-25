@@ -1,0 +1,49 @@
+<Model>
+  <Packages>
+    <Package Name="StreamingApp" FileName="StreamingApp" GUID="d440fce7-5440-47b3-97be-d0c11fe3d64a" />
+    <Package Name="ASPNETIdentity" FileName="ASPNETIdentity" GUID="eb18d545-8d55-4a15-b9ba-13e814742fec" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Complaint.ExchangeProduct" FileName="Complaint.ExchangeProduct" GUID="03cb6b3d-fa9e-4c47-a229-772fc6eab476" />
+    <Diagram Name="Complaint.ComplaintState" FileName="Complaint.ComplaintState" GUID="0839d335-f8f7-4b2c-91bd-8d401a804d43" />
+    <Diagram Name="Notifications" FileName="Notifications" GUID="2a85b58b-1668-47db-8004-5139147e6600" />
+    <Diagram Name="Complaint" FileName="Complaint" GUID="3dbc51e5-22c4-4834-a6ef-3f9f3b61a9c4" />
+    <Diagram Name="Complaint.ComplaintProduct" FileName="Complaint.ComplaintProduct" GUID="684bb1ce-db34-43d1-aec4-596adc264489" />
+    <Diagram Name="Complaint.CustomerReplacement" FileName="Complaint.CustomerReplacement" GUID="6967d9ed-c1ef-4bd1-96f6-1f46fa0ca504" />
+    <Diagram Name="Complaint.Decision" FileName="Complaint.Decision" GUID="9c12414c-fda9-4fc7-959e-3a5144762baf" />
+    <Diagram Name="Complaint.ReplacementProduct" FileName="Complaint.ReplacementProduct" GUID="b958bf59-c48c-4054-b6b7-445b2103378c" />
+    <Diagram Name="StateMachines" FileName="StateMachines" GUID="bf116556-16e2-4198-b6ca-2f7d85663f77" />
+    <Diagram Name="SystemClasses" FileName="SystemClasses" GUID="d2b12ea9-3777-4416-8f92-e7bf963e7544" />
+  </Diagrams>
+  <Spans>
+    <Span Name="ComplaintView" FileName="ComplaintView" GUID="01a44088-2793-4f20-9d08-d9a903d9cc73" />
+    <Span Name="UserSeeker" FileName="UserSeeker" GUID="103e8f78-6661-454b-85a2-e387bd7702e3" />
+    <Span Name="Index" FileName="Index" GUID="128cc0ef-9c26-4269-b43e-7c610c0e48eb" />
+    <Span Name="SysUsersBrowser" FileName="SysUsersBrowser" GUID="19b46de0-62dc-41ad-9690-4ad13c5f5ae0" />
+    <Span Name="SysUserMerge" FileName="SysUserMerge" GUID="25234300-b31a-4ecb-9fe1-81f72c129c4b" />
+    <Span Name="ComplaintPrint" FileName="ComplaintPrint" GUID="25ba7192-6c77-4b57-8a69-c4aea9154879" />
+    <Span Name="StateDescriptionBrowser" FileName="StateDescriptionBrowser" GUID="3a66c546-dd23-4af5-8589-d21de6da20f7" />
+    <Span Name="ComplaintSeeker" FileName="ComplaintSeeker" GUID="433ae0a0-5870-437e-a921-265e7f1204ec" />
+    <Span Name="ImportExport" FileName="ImportExport" GUID="45074373-aced-420f-8e07-fa0ac32f556e" />
+    <Span Name="ComplaintEventLog" FileName="ComplaintEventLog" GUID="54b8b30f-7841-48df-adae-a1c35eeb8c66" />
+    <Span Name="UserSettings" FileName="UserSettings" GUID="75da13d3-f01c-482d-bdf1-7f397d94a7c1" />
+    <Span Name="SysUserForm" FileName="SysUserForm" GUID="8289bfce-ad0c-41be-818b-7c9eec10c4ef" />
+    <Span Name="AccessDenied" FileName="AccessDenied" GUID="850cbef7-1108-4eab-b864-1d12e95e39f8" />
+    <Span Name="SysSingletonView" FileName="SysSingletonView" GUID="8eb79b79-e3a6-45ca-a91b-c80f9863b3d8" />
+    <Span Name="StateDescriptionView" FileName="StateDescriptionView" GUID="93eb57fb-82b2-4d19-8800-3291c5fde0b9" />
+    <Span Name="StartScreen" FileName="StartScreen" GUID="96c30a54-f239-4670-a925-fe8db7a2cb06" />
+    <Span Name="StoreSeeker" FileName="StoreSeeker" GUID="a05703a1-087a-41b5-bd76-146e4588a310" />
+    <Span Name="StoreView" FileName="StoreView" GUID="a491cada-03db-42b7-ad0d-d1225565f10b" />
+    <Span Name="TestQRCode" FileName="TestQRCode" GUID="bbedd028-3a81-4455-a737-4600e5329a5e" />
+    <Span Name="ComplaintCustomerView" FileName="ComplaintCustomerView" GUID="df25c799-fabb-4385-99a9-397450034b77" />
+    <Span Name="UserBrowser" FileName="UserBrowser" GUID="e4140622-8f4d-47ca-a8f8-8addb4b55639" />
+    <Span Name="TestQRCodeFromVariable" FileName="TestQRCodeFromVariable" GUID="e8aefc67-bdc6-48a4-95b7-44f13098f9ac" />
+    <Span Name="SS_AssignSequenceNumber" FileName="SS_AssignSequenceNumber" GUID="f0d94f43-d0c4-4762-9d09-45e716a5328b" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>

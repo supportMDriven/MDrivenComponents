@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="StateDescriptionBrowser"
+  ColCount="0"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="0"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="3a66c546-dd23-4af5-8589-d21de6da20f7">
+  <Class>
+    <Class
+      Name="StateDescription"
+      idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="AllStateDescription"
+      ExpressionActAsForActions=""
+      id="0d6e2417-b1a5-44e3-b961-d35f7d0f2d0e">
+      <Class>
+        <Class
+          Name="StateDescription"
+          idref="d8936491-3db1-4c37-a571-7426eb8c6486" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ContextAction
+              Name="CreateStateDescription"
+              idref="6a1e253b-8796-4256-9de1-875c742c8eb6" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="DeleteStateDescription"
+              idref="a563cc65-ef8f-4a91-989f-1db2ede99e49" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ViewStateDescription"
+              idref="f62664d7-c23f-4c1f-9b45-a1e41a5b19e5" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Status"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.Status"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="72d95e3d-833c-4c4a-8f52-0b3c084be476" />
+        <Column
+          Name="NotCurrent"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="if self.NotCurrent then&#xD;&#xA;  'Yes, remove'&#xD;&#xA;else&#xD;&#xA;  ''&#xD;&#xA;endif"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="4"
+          id="659c9c62-d7b1-4ab6-a7ba-ff81bce23957" />
+        <Column
+          Name="Description"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.Description"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="16d590d4-bb88-4b6d-8ef2-2d37f0c09eb4" />
+        <Column
+          Name="CustomerMessage"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.CustomerMessage"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="Message till Customer"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="4"
+          id="a2dfcff5-e527-4070-a782-306f861a0986" />
+        <Column
+          Name="ToDoHeader"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="2"
+          Expression="self.ToDoHeader"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="To do"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="5"
+          id="8ea1ccfc-5598-4cb4-807b-aa99f24a8d2b" />
+        <Column
+          Name="View"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression=""
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="True"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef="outlined primary"
+          XPos="1"
+          YPos="4"
+          id="12a02122-f39a-4035-86fb-4e3f1d99c107">
+          <ActionToExecute>
+            <ClassAction
+              Name="ViewStateDescription"
+              idref="f62664d7-c23f-4c1f-9b45-a1e41a5b19e5" />
+          </ActionToExecute>
+          <TaggedValue>
+            <TaggedValue
+              Tag="IconButton"
+              Value="True" />
+            <TaggedValue
+              Tag="Icon"
+              Value="arrow_forward" />
+          </TaggedValue>
+        </Column>
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="AllStateDescription"
+          idref="6bb01066-417d-4cad-b1b3-bd8e4cb25464" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ViewStateDescription"
+          idref="f62664d7-c23f-4c1f-9b45-a1e41a5b19e5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteStateDescription"
+          idref="a563cc65-ef8f-4a91-989f-1db2ede99e49" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ContextAction
+          Name="CreateStateDescription"
+          idref="6a1e253b-8796-4256-9de1-875c742c8eb6" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="AllStateDescription"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="StateDescription.Allinstances-&gt;orderBy(s|s.Status)"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCGrow="2"
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="3"
+      StyleRef=""
+      XPos="0"
+      YPos="0"
+      id="6bb01066-417d-4cad-b1b3-bd8e4cb25464">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="0896bda4-3ac7-4ab8-9438-d64c7b5aff84" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="AllStateDescription"
+          idref="0d6e2417-b1a5-44e3-b961-d35f7d0f2d0e" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Column"
+      VisibleExpression=""
+      Wrap="False"
+      id="0896bda4-3ac7-4ab8-9438-d64c7b5aff84" />
+  </PlacingContainer>
+</Span>

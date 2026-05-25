@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="Index"
+  ColCount="10"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="10"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="128cc0ef-9c26-4269-b43e-7c610c0e48eb">
+  <Class>
+    <Class
+      Name="SysUser"
+      idref="0017d588-d3cf-433b-b763-93ae056419c3" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="SysSingleton"
+      ExpressionActAsForActions=""
+      id="541fe22c-87ea-4398-84b8-7624dc0efdc7">
+      <Class>
+        <Class
+          Name="SysSingleton"
+          idref="ad4cf46f-0195-4197-bef2-9f8dd89a3870" />
+      </Class>
+      <OwnedColumns>
+        <Column
+          Name="CurrentUser"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="2"
+          ColSpanWhenInGrid="1"
+          Expression="self.CurrentUser.UserName"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="True"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PCIndex="0"
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="2"
+          RowSpan="1"
+          StyleRef=""
+          XPos="2"
+          YPos="1"
+          id="f483aba8-1e43-4209-8d93-1b51bb72b4c7">
+          <PlacingContainer>
+            <PlacingContainer
+              idref="2e71de0d-823e-43db-b168-b5d5b8077629" />
+          </PlacingContainer>
+        </Column>
+      </OwnedColumns>
+      <PlacingContainer>
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="2e71de0d-823e-43db-b168-b5d5b8077629" />
+      </PlacingContainer>
+      <ReferedByColumn>
+        <Column
+          Name="EffectiveUser"
+          idref="2cb2a37d-cc15-4462-af72-ee27cfc8c18f" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="MergeSysUsers"
+          idref="ad623c3f-b1d5-4019-86c0-73f436030405" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteSysUser"
+          idref="6dc871a8-8408-4da5-9d12-48897ff3be27" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="Instructions"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="10"
+      ColSpanWhenInGrid="1"
+      Expression="'Please select StartScreen above'"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h1"
+      XPos="0"
+      YPos="0"
+      id="d44003f8-62c9-42f3-9bc5-8a47bc6041d7">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="f8684a0d-9830-4982-ad71-7e2bb18a9f17" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="EffectiveUser"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="SysSingleton.oclSingleton"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="0"
+      YPos="2"
+      id="2cb2a37d-cc15-4462-af72-ee27cfc8c18f">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="f8684a0d-9830-4982-ad71-7e2bb18a9f17" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="SysSingleton"
+          idref="541fe22c-87ea-4398-84b8-7624dc0efdc7" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Column"
+      VisibleExpression=""
+      Wrap="False"
+      id="f8684a0d-9830-4982-ad71-7e2bb18a9f17" />
+  </PlacingContainer>
+  <TaggedValue>
+    <TaggedValue
+      Tag="MVC"
+      Value="true" />
+  </TaggedValue>
+</Span>

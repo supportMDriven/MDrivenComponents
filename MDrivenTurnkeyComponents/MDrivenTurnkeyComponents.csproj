@@ -9,10 +9,13 @@
   <ItemGroup>
     <Compile Remove="MDrivenMergeable\Dashboard\**" />
     <Compile Remove="MDrivenMergeable\Office365\**" />
+    <Compile Remove="MDrivenMergeable\StoreComplaintApp\**" />
     <EmbeddedResource Remove="MDrivenMergeable\Dashboard\**" />
     <EmbeddedResource Remove="MDrivenMergeable\Office365\**" />
+    <EmbeddedResource Remove="MDrivenMergeable\StoreComplaintApp\**" />
     <None Remove="MDrivenMergeable\Dashboard\**" />
     <None Remove="MDrivenMergeable\Office365\**" />
+    <None Remove="MDrivenMergeable\StoreComplaintApp\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -92,6 +95,30 @@
     <None Remove="MDrivenMergeable\NewsApp\ArticleViewModel.spans" />
     <None Remove="MDrivenMergeable\NewsApp\Index.spans" />
     <None Remove="MDrivenMergeable\NewsApp\TokenSeeker.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\AccessDenied.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\Actions.actions" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintCustomerView.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintEventLog.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintPrint.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintSeeker.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintView.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\ImportExport.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\Index.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\SS_AssignSequenceNumber.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\StartScreen.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\StateDescriptionBrowser.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\StateDescriptionView.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\StoreSeeker.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\StoreView.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\SysSingletonView.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\SysUserForm.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\SysUserMerge.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\SysUsersBrowser.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\TestQRCode.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\TestQRCodeFromVariable.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\UserBrowser.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\UserSeeker.spans" />
+    <None Remove="MDrivenMergeable\StoreComplaintHandlingApp\UserSettings.spans" />
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
@@ -365,6 +392,78 @@
     <EmbeddedResource Include="MDrivenMergeable\NewsApp\TokenSeeker.spans">
       <DependentUpon>NewsApp.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\AccessDenied.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\Actions.actions">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintCustomerView.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintEventLog.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintPrint.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintSeeker.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\ComplaintView.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\ImportExport.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\Index.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\SS_AssignSequenceNumber.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\StartScreen.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\StateDescriptionBrowser.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\StateDescriptionView.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\StoreSeeker.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\StoreView.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\SysSingletonView.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\SysUserForm.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\SysUserMerge.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\SysUsersBrowser.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\TestQRCode.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\TestQRCodeFromVariable.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\UserBrowser.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\UserSeeker.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\StoreComplaintHandlingApp\UserSettings.spans">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysCert\Actions.actions">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -433,6 +532,9 @@
     </None>
     <None Include="MDrivenMergeable\NewsApp\ModlrProject.mproj">
       <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\StoreComplaintHandlingApp\ModlrProject.mproj">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
@@ -595,6 +697,48 @@
     </None>
     <None Update="MDrivenMergeable\NewsApp\ViewModel2.ecodiag">
       <DependentUpon>NewsApp.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\ASPNETIdentity.ecopkg">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.ComplaintProduct.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.ComplaintState.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.CustomerReplacement.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.Decision.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.ExchangeProduct.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Complaint.ReplacementProduct.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\documentation.modlrdoc">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Notifications.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\Snippets.snippets">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\StateMachines.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\StreamingApp.ecopkg">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\StoreComplaintHandlingApp\SystemClasses.ecodiag">
+      <DependentUpon>StoreComplaintHandling.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysCert\ASPNETIdentity.ecopkg">
       <DependentUpon>SysCert.ecomdl</DependentUpon>

@@ -600,6 +600,10 @@
     SortKey="003"
     Id="96b1e9f9-2cf6-4ddb-b4fa-630e97cdb9ed" />
   <Symbol
+    Name="constrainedclass"
+    XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;"
+    Id="ConstraintsSymbolID" />
+  <Symbol
     Name="statediagramsymbol"
     XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='130' Foreground='DimGray'&gt;&lt;Run Text='S'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;"
     Id="StateDiagramSymbolID" />
@@ -607,10 +611,6 @@
     Name="triggermethod"
     XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='White' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='Tr'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;"
     Id="TriggerMethodSymbolID" />
-  <Symbol
-    Name="constrainedclass"
-    XamlDefinition="&lt;Grid xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' Width='132' Height='132'&gt;&lt;Ellipse  Fill='LightYellow' Stroke='DimGray' StrokeThickness='5'/&gt;&lt;TextBlock  HorizontalAlignment='Center' VerticalAlignment='Center' FontSize='110' Foreground='DimGray'&gt;&lt;Run Text='!'/&gt;&lt;/TextBlock&gt;&lt;/Grid&gt;"
-    Id="ConstraintsSymbolID" />
   <AccessGroup
     Name="IsLoggedIn"
     ActAsInterestGroup="False"

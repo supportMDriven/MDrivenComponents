@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="UserSeeker"
+  ColCount="0"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="0"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="103e8f78-6661-454b-85a2-e387bd7702e3">
+  <Class>
+    <Class
+      Name="User"
+      idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="SearchExpression"
+      ExpressionActAsForActions=""
+      UsedForSeekerColumns="True"
+      id="7d320ab8-22c4-4720-8e5b-b98c37e0a444">
+      <Class>
+        <Class
+          Name="User"
+          idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="UserSettings"
+              idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Crit1"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="User.allinstances-&gt;select(a|a.Name.SqlLike(vSeekParam+'%'))"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="0"
+          id="ba3890a8-7092-4180-a416-61ba6c8f909e" />
+      </OwnedColumns>
+    </Nesting>
+    <Nesting
+      Name="SearchResultGrid"
+      ExpressionActAsForActions=""
+      id="cd39f96b-a762-49fc-ada3-2c0cdb1c124a">
+      <Class>
+        <Class
+          Name="User"
+          idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting />
+        <OptOutActionInNesting />
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="UserSettings"
+              idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+        <OptOutActionInNesting />
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Name"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="3"
+          Expression="self.Name"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="1"
+          id="026dc30b-70fe-44a2-9910-f9c02b924eab" />
+        <Column
+          Name="Nickname"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="3"
+          Expression="self.Nickname"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="2"
+          id="cd5405e1-7572-4339-857a-c1bcfe6b4306" />
+        <Column
+          Name="SysUser_UserName"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="3"
+          Expression="self.SysUser.UserName"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="3"
+          id="dacff411-65e9-421b-872a-71c63c7f824d" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="SearchResults"
+          idref="6e6ded34-d7a2-4249-a595-ab26c102d6b0" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="UserSettings"
+          idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="SeekValue"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="vSeekParam"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="27a1a61d-8589-403a-af77-86f212916f1a">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="04c4d2ed-c768-4df5-ab19-86f35af52884" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="Search"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression=""
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="True"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="0"
+      id="0bec205d-ef46-4b5c-849e-339ab146af2d">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="04c4d2ed-c768-4df5-ab19-86f35af52884" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="SearchResults"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="vSeekerResult"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="4"
+      StyleRef=""
+      XPos="0"
+      YPos="1"
+      id="6e6ded34-d7a2-4249-a595-ab26c102d6b0">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="7ac98796-5acc-42f3-ad11-ff0b397f6495" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="SearchResultGrid"
+          idref="cd39f96b-a762-49fc-ada3-2c0cdb1c124a" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Column"
+      VisibleExpression=""
+      Wrap="False"
+      id="d988f7ed-c5f9-4247-beed-6b8931b729e9">
+      <ChildContainers>
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="End"
+          CanScroll="False"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Row"
+          VisibleExpression=""
+          Wrap="False"
+          id="04c4d2ed-c768-4df5-ab19-86f35af52884" />
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="7ac98796-5acc-42f3-ad11-ff0b397f6495" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+  <SpanVariables>
+    <SpanVariable
+      Name="vSeekParam"
+      InitialValue=""
+      TypeName="String"
+      UserData="" />
+  </SpanVariables>
+</Span>

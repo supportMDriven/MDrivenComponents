@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="TestQRCode"
+  ColCount="6"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="20"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="bbedd028-3a81-4455-a737-4600e5329a5e">
+  <Class>
+    <Class
+      Name="Complaint"
+      idref="22099cf0-922d-45f1-8188-fbf881a5191b" />
+  </Class>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="DeleteComplaint"
+          idref="7daabe4e-cd77-45a6-bf6b-3f9739bcd583" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_FromRepairerWithoutMeasure"
+          idref="1646f931-28b1-4b3b-aa94-92c3b436aa89" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_FromRepairerFixed"
+          idref="4196de35-7b52-41b5-b148-6cec33598fa0" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_GivenToRepairer"
+          idref="11c94896-07b7-4551-8bfb-b8d939fa7f73" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SentToSupplier"
+          idref="ecde3a58-9263-4ed0-8871-dc5b06526875" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReturnedToCustomer"
+          idref="4d07655b-d9d1-4284-baf5-2d7f86b3a45c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_DecidedBySupplier"
+          idref="d2404a38-48b9-42f2-911e-d5f4a14e1106" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ExchangeInStore"
+          idref="fdb0bd2d-f8a2-4689-8889-73f5ce7e0bd9" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimburseCustomer"
+          idref="11754434-4b12-4e60-9b91-a52b5c59e226" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierExchange"
+          idref="d72605cc-f030-48e4-bb60-8ce49bd73850" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ComplaintDenied"
+          idref="7c92a306-87ca-485e-aad1-4437c2dff421" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_Repair"
+          idref="4a426dc2-0af2-49c4-aeeb-a072e0b167b4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_Credit"
+          idref="cb1d359c-ef16-4155-9ebc-05fe9e935f59" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimbursedWithProduct"
+          idref="4fcddb36-1611-4244-bef5-80266eae93e4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementReceived"
+          idref="eda540ca-f45e-4064-abc1-73aaf2542992" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementOrdered"
+          idref="fc36ee0b-6049-403d-937a-45eb809731fa" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_CreditReceived"
+          idref="4b869803-3efb-401b-8a13-06f2b416e3e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_PutAsideInStore"
+          idref="322e8004-887f-4252-9c01-f0a4456ccdf4" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementToCustomer"
+          idref="5a1477c9-2135-4270-ab03-7b78baec86dc" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReplacementReceived"
+          idref="864969d0-d596-4692-8b40-c74212ecc472" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_PutAside"
+          idref="9adc4b20-02d8-4385-8046-947aa809f47a" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ContactSupplierAgain"
+          idref="5bacb9f8-2323-4a03-bf1d-46a2ff815a9b" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierContactDontSend"
+          idref="e3b7da59-5b13-490a-810b-9ca8ab2b3576" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_SupplierContactSendReturned"
+          idref="05f3d661-7e4b-4ce6-93a2-50a8d9bbd06c" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_ReimbursementToCustomer"
+          idref="f63be77a-bd92-40cd-b077-2ef5be4d1f46" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_End"
+          idref="c66f126a-a42a-45d0-afd2-5aef2282ddae" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="Complaint_Trigger_NewAssessmentWanted"
+          idref="be07f7f1-96aa-4fdb-b7fa-d18059e052a5" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ShowComplaint"
+          idref="e626aa12-b149-4b0e-8c0c-80b1be6acb99" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldInStore"
+          idref="4126f86b-ba92-4770-8d38-180ba14e7316" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ToldUsingTelephone"
+          idref="fefcbf9b-553d-4c06-b70d-513627264c18" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="ReadCustomerMessages"
+          idref="9b1acf32-c128-4b5c-84f2-018ac15b3912" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="ArticleNumber"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.ArticleNumber"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="62f974c7-0fd7-4fa1-a60d-db5c63b01201">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="1caacae2-a7e7-465a-ada7-da65b45894b9" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="SequenceNumber"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.SequenceNumber"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="1"
+      id="facb6f1d-5104-4bb7-911a-75d695851716">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="1caacae2-a7e7-465a-ada7-da65b45894b9" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="CustomerQRCode"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="3"
+      ColSpanWhenInGrid="1"
+      Expression="self.CustomerQRCode "
+      ExpressionForReadOnly="true"
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="2"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="6"
+      StyleRef="qrcode"
+      XPos="1"
+      YPos="2"
+      id="2a78bf1c-98f6-459a-aa97-d6c680c779a6">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="1caacae2-a7e7-465a-ada7-da65b45894b9" />
+      </PlacingContainer>
+      <TaggedValue>
+        <TaggedValue
+          Tag="Eco.BlobType"
+          Value="Image" />
+      </TaggedValue>
+    </Column>
+    <Column
+      Name="CustomerQRLink"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="5"
+      ColSpanWhenInGrid="1"
+      Expression="self.CustomerQRLink"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="4"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="3"
+      StyleRef=""
+      XPos="1"
+      YPos="11"
+      id="684a6c0e-7b46-46a2-834e-fc9a0c5ba0a9">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="1caacae2-a7e7-465a-ada7-da65b45894b9" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="CustomerAccessID"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="5"
+      ColSpanWhenInGrid="1"
+      Expression="self.CustomerAccessID"
+      ExpressionForReadOnly="true"
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="3"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="2"
+      StyleRef=""
+      XPos="1"
+      YPos="12"
+      id="85bfa872-8076-4880-a770-1eeddda1299f">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="1caacae2-a7e7-465a-ada7-da65b45894b9" />
+      </PlacingContainer>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      MinSize="300"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Row"
+      VisibleExpression=""
+      Wrap="False"
+      id="66f04aff-17bb-4ac7-b157-4a781c44db12">
+      <ChildContainers>
+        <PlacingContainer
+          Name=""
+          AlignContent="Start"
+          AlignItem="NotSet"
+          CanScroll="False"
+          Grow="2"
+          HideInDesign="False"
+          HideOverflow="False"
+          JustifyContent="Start"
+          Reverse="False"
+          SelfAlign="NotSet"
+          StyleExpression=""
+          Type="Column"
+          VisibleExpression=""
+          Wrap="False"
+          id="1caacae2-a7e7-465a-ada7-da65b45894b9" />
+      </ChildContainers>
+    </PlacingContainer>
+  </PlacingContainer>
+</Span>

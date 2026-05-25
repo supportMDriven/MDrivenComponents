@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="UserSettings"
+  ColCount="12"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RequiresRootObject="True"
+  RowCount="10"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  id="75da13d3-f01c-482d-bdf1-7f397d94a7c1">
+  <Class>
+    <Class
+      Name="User"
+      idref="4ea44c57-b635-4c67-80ee-108c04853b48" />
+  </Class>
+  <Nesting>
+    <Nesting
+      Name="StorePickList"
+      ExpressionActAsForActions=""
+      id="b13613c0-38b8-478f-b654-96a9cb424c39">
+      <Class>
+        <Class
+          Name="Store"
+          idref="ef29101d-0755-4c27-90bf-d51eb3171e8c" />
+      </Class>
+      <OptOutActionInNesting>
+        <OptOutActionInNesting>
+          <AbstractAction>
+            <ClassAction
+              Name="ShowStoreView"
+              idref="ffa215ee-8a79-4c12-8624-f99aac710506" />
+          </AbstractAction>
+        </OptOutActionInNesting>
+      </OptOutActionInNesting>
+      <OwnedColumns>
+        <Column
+          Name="Presentation"
+          ActionPeriodicityMillisec="-1"
+          ColSpan="1"
+          ColSpanWhenInGrid="1"
+          Expression="self.AsString"
+          ExpressionForReadOnly=""
+          ExpressionForVisible=""
+          IsAction="False"
+          IsStatic="False"
+          NullRowMode="None"
+          NullRowRepresentation=""
+          PresentationString="&lt;Name&gt;"
+          PresentationStringColSpan="1"
+          RowSpan="1"
+          StyleRef=""
+          XPos="1"
+          YPos="0"
+          id="7de0573f-ffeb-4b8c-8af3-1616f3114719" />
+      </OwnedColumns>
+      <ReferedByColumn>
+        <Column
+          Name="StorePickList"
+          idref="4ae7bb05-52a4-4b45-85c5-ced733b06f9f" />
+      </ReferedByColumn>
+    </Nesting>
+  </Nesting>
+  <OptOutActionInSpan>
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan />
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="UserSettings"
+          idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan>
+      <AbstractAction>
+        <ClassAction
+          Name="UserSettings"
+          idref="a37de9ec-8307-417b-add3-ca917aeb08e7" />
+      </AbstractAction>
+    </OptOutActionInSpan>
+    <OptOutActionInSpan />
+  </OptOutActionInSpan>
+  <OwnedColumns>
+    <Column
+      Name="Name"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="6"
+      ColSpanWhenInGrid="1"
+      Expression="'Settings for ' + self.Name"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="True"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="0"
+      PresentationString=""
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef="h4"
+      XPos="0"
+      YPos="0"
+      id="7751f917-3530-48ff-b70b-46176ae9bd30">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="4498d594-390c-4ffc-b2d8-384e14807715" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="Store"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="4"
+      ColSpanWhenInGrid="1"
+      Expression="self.Store"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="First"
+      NullRowRepresentation=""
+      PCIndex="1"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="2"
+      YPos="1"
+      id="0bee3a13-9a0e-4e88-b503-e98af9fc1428">
+      <ColumnForPickList>
+        <Column
+          Name="StorePickList"
+          idref="4ae7bb05-52a4-4b45-85c5-ced733b06f9f" />
+      </ColumnForPickList>
+      <PlacingContainer>
+        <PlacingContainer
+          idref="4498d594-390c-4ffc-b2d8-384e14807715" />
+      </PlacingContainer>
+    </Column>
+    <Column
+      Name="StorePickList"
+      ActionPeriodicityMillisec="-1"
+      ColSpan="1"
+      ColSpanWhenInGrid="1"
+      Expression="Store.allInstances"
+      ExpressionForReadOnly=""
+      ExpressionForVisible=""
+      IsAction="False"
+      IsStatic="False"
+      NullRowMode="None"
+      NullRowRepresentation=""
+      PCIndex="2"
+      PresentationString="&lt;Name&gt;"
+      PresentationStringColSpan="1"
+      RowSpan="1"
+      StyleRef=""
+      XPos="1"
+      YPos="0"
+      id="4ae7bb05-52a4-4b45-85c5-ced733b06f9f">
+      <PlacingContainer>
+        <PlacingContainer
+          idref="4498d594-390c-4ffc-b2d8-384e14807715" />
+      </PlacingContainer>
+      <ReferedNesting>
+        <Nesting
+          Name="StorePickList"
+          idref="b13613c0-38b8-478f-b654-96a9cb424c39" />
+      </ReferedNesting>
+    </Column>
+  </OwnedColumns>
+  <PlacingContainer>
+    <PlacingContainer
+      Name=""
+      AlignContent="Start"
+      AlignItem="NotSet"
+      CanScroll="False"
+      HideInDesign="False"
+      HideOverflow="False"
+      JustifyContent="Start"
+      Reverse="False"
+      SelfAlign="NotSet"
+      StyleExpression=""
+      Type="Column"
+      VisibleExpression=""
+      Wrap="False"
+      id="4498d594-390c-4ffc-b2d8-384e14807715" />
+  </PlacingContainer>
+</Span>
