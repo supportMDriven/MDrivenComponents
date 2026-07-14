@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  Name="Package1"
+  AdditionalNamespaces=""
+  CodeGenCharacterMode="AllowUnicode"
+  DefaultLength="255"
+  GenerateNullableTypes="True"
+  NameSpace="&lt;Default&gt;"
+  ORMappingConfigMode="Medium"
+  PluralSuffix="s"
+  id="cb098c6b-653e-4b11-b13f-a4af4c35d296">
+  <OwnedElement>
+    <Class
+      Name="SysJSONNode"
+      AdditionalNamespaces=""
+      CodeComment="Strings are quoted in json, bool and numbers are not"
+      IsAbstract="False"
+      IsSealed="False"
+      id="71f2f10f-fece-45df-b0d6-4d946e5e9e13">
+      <Feature>
+        <Method
+          Name="GetAsBool"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="0b38923b-898e-4a67-8d77-f2ec1a49c38f">
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="Boolean" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.Value.tolower='true'" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="NodeType"
+          CodeComment="object,array,primitive"
+          Multiplicity=""
+          Visibility="Public"
+          id="0e2776d0-aeca-46b6-b11d-b6f1d1af5700">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ValueAsDateTime"
+          Multiplicity=""
+          Visibility="Public"
+          id="2b63ec9c-c0cf-4b64-b197-6e71112642f5">
+          <TaggedValue>
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="persistence"
+              Value="transient" />
+            <TaggedValue
+              Tag="Eco.DerivedSettable"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCLSet"
+              Value="self.SetAsDateTime(vInputParameter)" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.GetAsDateTime" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="DateTime" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ValueAsBool"
+          Multiplicity=""
+          Visibility="Public"
+          id="35ed2c54-ef05-4ead-af71-6a4a725426f9">
+          <TaggedValue>
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCLSet"
+              Value="self.SetAsBool(vInputParameter)" />
+            <TaggedValue
+              Tag="persistence"
+              Value="transient" />
+            <TaggedValue
+              Tag="Eco.DerivedSettable"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.GetAsBool" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Boolean" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="GetProperty"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="381e13e1-bf1c-4fa0-8ca4-e634e19f3ea9">
+          <Parameter>
+            <Parameter
+              Name="someInput"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="SysJSONNode" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="someInput-&gt;isnullorempty-&gt;casetruefalse(&#xD;&#xA;  self,&#xD;&#xA;  &#xD;&#xA;&#x9;let parts=someInput.Split('.'.tochararray.at0(0)) in&#xD;&#xA;&#x9;(&#xD;&#xA;&#x9;    let res=self.Children-&gt;select(x|x.Key=parts.at0(0))-&gt;first in&#xD;&#xA;&#x9;    (&#xD;&#xA;&#x9;      res.GetProperty(parts-&gt;difference(parts.at0(0)-&gt;asset).asSeparatedList('.'))&#xD;&#xA;&#x9;&#x9;)&#xD;&#xA;&#x9;)&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SetAsDouble"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="4bb0681d-6fc7-4680-8f07-051cccba4fab">
+          <Parameter>
+            <Parameter
+              Name="value"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="Double?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="value.isnull-&gt;casetruefalse(self.Value:='',self.Value:=value.ToString())" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Key"
+          Multiplicity=""
+          Visibility="Public"
+          id="5776faac-ef84-4efe-864a-19b2544693af">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ValueAsDouble"
+          Multiplicity=""
+          Visibility="Public"
+          id="5dc72df6-bd09-4034-a370-9ca2d1f571c1">
+          <TaggedValue>
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="persistence"
+              Value="transient" />
+            <TaggedValue
+              Tag="Eco.DerivedSettable"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCLSet"
+              Value="self.SetAsDouble(vInputParameter)" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.GetAsDouble" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Double" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="SetAsString"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="60e71760-3dbf-4b2e-8c39-4a74affb33d6">
+          <Parameter>
+            <Parameter
+              Name="theValue"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="(theValue.StartsWith( '&quot;' ) and theValue.EndsWith( '&quot;' ))-&gt;casetruefalse(theValue,theValue-&gt;isnullorempty-&gt;casetruefalse(self.Value:='',self.Value:='&quot;'+theValue+'&quot;'))" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SetAsDateTime"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="7282cac1-4a1a-4000-82df-a4688be5912d">
+          <Parameter>
+            <Parameter
+              Name="value"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="DateTime?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="value.isnull-&gt;casetruefalse(self.Value:='',self.Value:=value.ToString('yyyy-MM-ddTHH:mm:ss.fffZ'))" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="GetAsDouble"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="75c11ae8-c200-4700-8855-ffa4a0261e33">
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="Double?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="Double.Parse(self.Value)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="Value"
+          Multiplicity=""
+          Visibility="Public"
+          id="87534ae9-4d26-491b-940b-2f4cf1250f59">
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="GetAsDateTime"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="8a297346-fc71-4b21-b627-b38683125eb7">
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="DateTime?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="DateTime.Parse(self.Value)" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="GetAsString"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="95112454-b400-4f1b-8301-5addc8307b57">
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="String?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="(self.Value.StartsWith( '&quot;' ) and self.Value.EndsWith( '&quot;' ))-&gt;casetruefalse(self.value.clrSubString(1,self.Value.length-2),self.Value)" />
+          </TaggedValue>
+        </Method>
+        <Attribute
+          Name="ValueAsInt"
+          Multiplicity=""
+          Visibility="Public"
+          id="da1b360f-b2dc-4885-8b07-61013065b702">
+          <TaggedValue>
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="persistence"
+              Value="transient" />
+            <TaggedValue
+              Tag="Eco.DerivedSettable"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCLSet"
+              Value="self.SetAsInt(vInputParameter)" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.GetAsInt" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="Integer" />
+          </Type>
+        </Attribute>
+        <Attribute
+          Name="ValueAsString"
+          Multiplicity=""
+          Visibility="Public"
+          id="ee5011b3-3d45-4756-ade8-8635cec7cbcb">
+          <TaggedValue>
+            <TaggedValue
+              Tag="derived"
+              Value="True" />
+            <TaggedValue
+              Tag="persistence"
+              Value="transient" />
+            <TaggedValue
+              Tag="Eco.DerivedSettable"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.AllowNULL"
+              Value="True" />
+            <TaggedValue
+              Tag="Eco.DerivationOCLSet"
+              Value="self.SetAsString(vInputParameter)" />
+            <TaggedValue
+              Tag="Eco.DerivationOCL"
+              Value="self.GetAsString" />
+          </TaggedValue>
+          <Type>
+            <Datatype
+              idref="String" />
+          </Type>
+        </Attribute>
+        <Method
+          Name="Qualify_Children"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="f0ac2171-2275-41e8-94d0-b3fcf5f8652b">
+          <Parameter>
+            <Parameter
+              Name="someInput"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="String" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="Collection(SysJSONNode)" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="self.Children-&gt;select(x|x.Key=someInput)" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="GetAsInt"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="True"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="f633d492-1728-4110-a5a4-321838a0d758">
+          <ReturnParameter>
+            <Parameter
+              Name="returnparam"
+              Kind="Out">
+              <Type>
+                <Datatype
+                  idref="Integer?" />
+              </Type>
+            </Parameter>
+          </ReturnParameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="Integer.Parse(self.Value)" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SetAsBool"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="f7b3d17e-fd5d-4408-a3b7-e9fe8009f927">
+          <Parameter>
+            <Parameter
+              Name="value"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="Boolean" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="value-&gt;casetruefalse(self.Value:='true',self.Value:='false')" />
+          </TaggedValue>
+        </Method>
+        <Method
+          Name="SetAsInt"
+          CodeComment=""
+          IsAbstract="False"
+          IsConstructor="False"
+          IsNew="False"
+          IsOverride="False"
+          IsQuery="False"
+          IsSealed="False"
+          IsStatic="False"
+          IsVirtual="False"
+          Postcondition=""
+          Precondition=""
+          Visibility="Public"
+          id="fb354dd1-5382-4e84-99ac-f7cff7e4a6e3">
+          <Parameter>
+            <Parameter
+              Name="value"
+              Kind="In">
+              <Type>
+                <Datatype
+                  idref="Integer?" />
+              </Type>
+            </Parameter>
+          </Parameter>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.Body"
+              Value="value.isnull-&gt;casetruefalse(self.Value:='',self.Value:=value.ToString())" />
+          </TaggedValue>
+        </Method>
+      </Feature>
+      <TaggedValue>
+        <TaggedValue
+          Tag="persistence"
+          Value="transient" />
+      </TaggedValue>
+    </Class>
+    <Association
+      Name=""
+      EffectiveName="SysJSONNodeParentSysJSONNodeChildren"
+      id="d7c79987-9947-46f6-aa95-4894e62bd7a2">
+      <AssociationEnd>
+        <AssociationEnd
+          Name="Parent"
+          IsNavigable="True"
+          Multiplicity="0..1"
+          Visibility="Public"
+          id="25c88050-7015-427a-b9de-20bd18f4e1e5">
+          <Participant>
+            <Class
+              Name="SysJSONNode"
+              idref="71f2f10f-fece-45df-b0d6-4d946e5e9e13" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+        <AssociationEnd
+          Name="Children"
+          IsNavigable="True"
+          Multiplicity="0..*"
+          Visibility="Public"
+          id="1df7fd77-a453-4d3c-8fc1-304e443f04a5">
+          <Participant>
+            <Class
+              Name="SysJSONNode"
+              idref="71f2f10f-fece-45df-b0d6-4d946e5e9e13" />
+          </Participant>
+          <TaggedValue>
+            <TaggedValue
+              Tag="Eco.BusinessDeleteRule"
+              Value="NeedNotBeEmptyNoWarning" />
+          </TaggedValue>
+        </AssociationEnd>
+      </AssociationEnd>
+    </Association>
+  </OwnedElement>
+</Package>

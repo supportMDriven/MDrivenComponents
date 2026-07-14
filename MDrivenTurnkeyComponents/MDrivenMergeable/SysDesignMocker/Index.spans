@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Span
+  Name="Index"
+  ColCount="12"
+  ColWidth="50"
+  ExpressionActAsForActions=""
+  ExpressionForAccess=""
+  RowCount="10"
+  RowHeight="20"
+  TabOrder="DisplayOrderYBeforeX"
+  UseSubColumnDisplay="True"
+  id="48140402-e32d-423b-bf0b-cdfe898fa9aa">
+  <Class>
+    <Class
+      Name="SysJSONNode"
+      idref="71f2f10f-fece-45df-b0d6-4d946e5e9e13" />
+  </Class>
+</Span>

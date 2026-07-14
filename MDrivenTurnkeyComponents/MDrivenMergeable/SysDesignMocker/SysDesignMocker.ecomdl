@@ -1,0 +1,20 @@
+<Model>
+  <Packages>
+    <Package Name="Package1" FileName="Package1" GUID="cb098c6b-653e-4b11-b13f-a4af4c35d296" />
+  </Packages>
+  <ReferencedPackages />
+  <TagExtensions />
+  <Diagrams>
+    <Diagram Name="Diagram1" FileName="Diagram1" GUID="4411a383-35fa-4b35-afad-b223b5a4c30b" />
+  </Diagrams>
+  <Spans>
+    <Span Name="Index" FileName="Index" GUID="48140402-e32d-423b-bf0b-cdfe898fa9aa" />
+    <Span Name="ViewModel2" FileName="ViewModel2" GUID="7698b30f-8611-4514-9cf7-a74a14bf82db" />
+    <Span Name="ViewModel3" FileName="ViewModel3" GUID="a9c01e54-6607-46a7-877f-0c67e9de0e64" />
+    <Span Name="ViewModel1" FileName="ViewModel1" GUID="f62b0180-3580-48d8-88f7-e05951d55185" />
+  </Spans>
+  <Report />
+  <ModlrProject>
+    <ModlrProject Name="ModlrProject" FileName="ModlrProject" GUID="{ModlrProject}" />
+  </ModlrProject>
+</Model>
