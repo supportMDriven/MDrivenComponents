@@ -34,39 +34,6 @@
     </MenuGroup>
   </GlobalAction>
   <GlobalAction
-    Name="ShowViewModel2"
-    AreYouSureCancelVerb=""
-    AreYouSureExecuteVerb=""
-    AreYouSureQuestion=""
-    CodeComment=""
-    DividerGroupTag=""
-    DividerGroupTagSortKey=""
-    EnableExpression=""
-    ExecuteExpression=""
-    ExecuteFrameworkRuntimeAction="None"
-    HintWhenDisabled=""
-    HintWhenEnabled=""
-    Presentation="&lt;Name&gt;"
-    ShortcutKey=""
-    ShortcutKeyModifierAlt="False"
-    ShortcutKeyModifierControl="False"
-    ShortcutKeyModifierShift="False"
-    ShortcutKeyModifierWindows="False"
-    SubMenuGroup=""
-    SubMenuGroupSortKey=""
-    ViewModelExecuteExpressionAfterModalOk=""
-    ViewModelExecuteExpressionOnShow=""
-    ViewModelIsModal="False"
-    ViewModelModalOkEnableExpression=""
-    ViewModelRootObjectExpression=""
-    Id="335e65b4-edf9-44b7-9a3a-fa1524fba9ed">
-    <BringUpViewModel>
-      <Span
-        Name="ViewModel2"
-        idref="7698b30f-8611-4514-9cf7-a74a14bf82db" />
-    </BringUpViewModel>
-  </GlobalAction>
-  <GlobalAction
     Name="Refresh"
     AreYouSureCancelVerb=""
     AreYouSureExecuteVerb=""
@@ -98,39 +65,6 @@
         Name="File"
         idref="4afe9cb7-a7df-4eca-a38d-84c48fbadd7e" />
     </MenuGroup>
-  </GlobalAction>
-  <GlobalAction
-    Name="ShowViewModel3"
-    AreYouSureCancelVerb=""
-    AreYouSureExecuteVerb=""
-    AreYouSureQuestion=""
-    CodeComment=""
-    DividerGroupTag=""
-    DividerGroupTagSortKey=""
-    EnableExpression=""
-    ExecuteExpression=""
-    ExecuteFrameworkRuntimeAction="None"
-    HintWhenDisabled=""
-    HintWhenEnabled=""
-    Presentation="&lt;Name&gt;"
-    ShortcutKey=""
-    ShortcutKeyModifierAlt="False"
-    ShortcutKeyModifierControl="False"
-    ShortcutKeyModifierShift="False"
-    ShortcutKeyModifierWindows="False"
-    SubMenuGroup=""
-    SubMenuGroupSortKey=""
-    ViewModelExecuteExpressionAfterModalOk=""
-    ViewModelExecuteExpressionOnShow=""
-    ViewModelIsModal="False"
-    ViewModelModalOkEnableExpression=""
-    ViewModelRootObjectExpression=""
-    Id="3eaf1fdf-0d13-4de8-80db-f5e8c10d0055">
-    <BringUpViewModel>
-      <Span
-        Name="ViewModel3"
-        idref="a9c01e54-6607-46a7-877f-0c67e9de0e64" />
-    </BringUpViewModel>
   </GlobalAction>
   <GlobalAction
     Name="Exit"
@@ -194,7 +128,7 @@
     Id="6fd56964-1ac3-4303-8235-e21dc5026369">
     <BringUpViewModel>
       <Span
-        Name="ViewModel1"
+        Name="ViewModelExampleOfMockData"
         idref="f62b0180-3580-48d8-88f7-e05951d55185" />
     </BringUpViewModel>
   </GlobalAction>

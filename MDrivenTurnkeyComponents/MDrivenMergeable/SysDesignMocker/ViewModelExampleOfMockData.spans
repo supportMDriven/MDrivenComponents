@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Span
-  Name="ViewModel1"
+  Name="ViewModelExampleOfMockData"
   ColCount="12"
   ColWidth="50"
   ExpressionActAsForActions=""

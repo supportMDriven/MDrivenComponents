@@ -128,7 +128,7 @@
       id="b0fd2324-2169-4703-80e9-9bbed105aba6">
       <Span>
         <Span
-          Name="ViewModel1"
+          Name="ViewModelExampleOfMockData"
           idref="f62b0180-3580-48d8-88f7-e05951d55185" />
       </Span>
     </PlacedViewModel>
