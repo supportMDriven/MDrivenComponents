@@ -122,6 +122,8 @@
     <None Remove="MDrivenMergeable\SysCert\Actions.actions" />
     <None Remove="MDrivenMergeable\SysCert\Index.spans" />
     <None Remove="MDrivenMergeable\SysCert\ShowSysCert.spans" />
+    <None Remove="MDrivenMergeable\SysDesignMocker\Actions.actions" />
+    <None Remove="MDrivenMergeable\SysDesignMocker\Index.spans" />
     <None Remove="MDrivenMergeable\SysDynamicViewSysDebugger\Actions.actions" />
     <None Remove="MDrivenMergeable\SysDynamicViewSysDebugger\SysDebuggerView.spans" />
     <None Remove="MDrivenMergeable\SysTranslations\Actions.actions" />
@@ -473,6 +475,12 @@
     <EmbeddedResource Include="MDrivenMergeable\SysCert\ShowSysCert.spans">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysDesignMocker\Actions.actions">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDrivenMergeable\SysDesignMocker\Index.spans">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDrivenMergeable\SysDynamicViewSysDebugger\Actions.actions">
       <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
     </EmbeddedResource>
@@ -538,6 +546,9 @@
     </None>
     <None Include="MDrivenMergeable\SysCert\ModlrProject.mproj">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Include="MDrivenMergeable\SysDesignMocker\ModlrProject.mproj">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
     </None>
     <None Include="MDrivenMergeable\SysDynamicViewSysDebugger\ModlrProject.mproj">
       <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>
@@ -754,6 +765,18 @@
     </None>
     <None Update="MDrivenMergeable\SysCert\SysCert.ecodiag">
       <DependentUpon>SysCert.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDesignMocker\Diagram1.ecodiag">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDesignMocker\documentation.modlrdoc">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDesignMocker\Package1.ecopkg">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
+    </None>
+    <None Update="MDrivenMergeable\SysDesignMocker\Snippets.snippets">
+      <DependentUpon>SysDesignMocker.ecomdl</DependentUpon>
     </None>
     <None Update="MDrivenMergeable\SysDynamicViewSysDebugger\DiagramSysDynamicView.ecodiag">
       <DependentUpon>SysDynamicViewSysDebugger.ecomdl</DependentUpon>

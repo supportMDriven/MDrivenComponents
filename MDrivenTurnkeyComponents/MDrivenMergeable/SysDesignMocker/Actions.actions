@@ -100,39 +100,6 @@
     </MenuGroup>
   </GlobalAction>
   <GlobalAction
-    Name="ShowViewModel1"
-    AreYouSureCancelVerb=""
-    AreYouSureExecuteVerb=""
-    AreYouSureQuestion=""
-    CodeComment=""
-    DividerGroupTag=""
-    DividerGroupTagSortKey=""
-    EnableExpression=""
-    ExecuteExpression=""
-    ExecuteFrameworkRuntimeAction="None"
-    HintWhenDisabled=""
-    HintWhenEnabled=""
-    Presentation="&lt;Name&gt;"
-    ShortcutKey=""
-    ShortcutKeyModifierAlt="False"
-    ShortcutKeyModifierControl="False"
-    ShortcutKeyModifierShift="False"
-    ShortcutKeyModifierWindows="False"
-    SubMenuGroup=""
-    SubMenuGroupSortKey=""
-    ViewModelExecuteExpressionAfterModalOk=""
-    ViewModelExecuteExpressionOnShow=""
-    ViewModelIsModal="False"
-    ViewModelModalOkEnableExpression=""
-    ViewModelRootObjectExpression=""
-    Id="6fd56964-1ac3-4303-8235-e21dc5026369">
-    <BringUpViewModel>
-      <Span
-        Name="ViewModelExampleOfMockData"
-        idref="f62b0180-3580-48d8-88f7-e05951d55185" />
-    </BringUpViewModel>
-  </GlobalAction>
-  <GlobalAction
     Name="Save"
     AreYouSureCancelVerb=""
     AreYouSureExecuteVerb=""
@@ -216,5 +183,66 @@
     Id="ac43a265-f0b0-42fe-b6a2-d32c73c8bc63" />
   <StylesInModel
     FastTrackCSS=""
-    id="4a907340-9cc9-4a70-8746-5b9e1e669a3c" />
+    id="4a907340-9cc9-4a70-8746-5b9e1e669a3c">
+    <StyleColorProperties>
+      <StyleColorProperties
+        A="255"
+        Name="CardBackground"
+        B="235"
+        G="227"
+        R="219"
+        WikiDescription=""
+        id="3bbea4f7-bce0-44f6-89dd-7457e42ccecd" />
+    </StyleColorProperties>
+    <StyleDefinitions>
+      <StyleDefinition
+        Name="CardStyle"
+        id="c83588a2-f1e5-4de7-b468-3867f647d9f5">
+        <StyleTargets>
+          <StyleTarget
+            AlignHorizontal=""
+            AlignVertical=""
+            Animation=""
+            BorderBottom="5"
+            BorderLeft="5"
+            BorderRight="5"
+            BorderTop="5"
+            MarginBottom="2"
+            MarginLeft="2"
+            MarginRight="2"
+            MarginTop="2"
+            id="c6888598-82e3-4bac-94d6-7bb3a381df4d">
+            <StyleTargetType>
+              <StyleTargetType
+                Name="placingcontainer"
+                idref="placingcontainer" />
+            </StyleTargetType>
+          </StyleTarget>
+        </StyleTargets>
+      </StyleDefinition>
+    </StyleDefinitions>
+    <StyleTargetTypes>
+      <StyleTargetType
+        Name="component"
+        id="component" />
+      <StyleTargetType
+        Name="componentcontent"
+        id="componentcontent" />
+      <StyleTargetType
+        Name="componentlabel"
+        id="componentlabel" />
+      <StyleTargetType
+        Name="gridcell"
+        id="gridcell" />
+      <StyleTargetType
+        Name="gridcellcontent"
+        id="gridcellcontent" />
+      <StyleTargetType
+        Name="gridheader"
+        id="gridheader" />
+      <StyleTargetType
+        Name="placingcontainer"
+        id="placingcontainer" />
+    </StyleTargetTypes>
+  </StylesInModel>
 </allactions>

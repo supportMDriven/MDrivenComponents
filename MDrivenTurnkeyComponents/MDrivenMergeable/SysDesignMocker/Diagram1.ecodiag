@@ -105,32 +105,13 @@
       Color="-922747136"
       Height="104"
       LastKnownName=""
-      NoteContent=""
+      NoteContent="UEsDBBQAAAAIAE5/+FyQvyf0gQIAAO8HAAASAAAAWGFtbC9Eb2N1bWVudC54YW1shZVtb9owEMe/ipW9LiFs6zYESKiUtRtlU8NWae+uyTWx6tiRfS6kn3420C6MUOddzr978N/23SjFjLiSbFMJacZRSVQP49hkJVZgehXPtDLqgXqZquI1lw+beNDvn8cbqERcazQoCXyAyEcYmhoyHEfbBf2EEVvhhqaCF7Jy4Dha4ANFbMElXiEvSmeZWlIRuzZXTV2i3Ia6lHAvMB9HcxAGd4EFyGIcoTyzJmJzodYzrneV74Ku1K2PF7Glre5Rp/beECfrgd6FFWQ1pspqX5wvqZNr/7jCzN7P5VOS5lBx0YyjFAuF7Nf1zppSI1zIpdIViJ3pbr+xti0ljZSV/xn5s3NNBv5PY6GVlW7P7+bz/vZz2jW1KjTUZdNLCWQOOl/wAnxN7qRW2uIBc+Fiuq1ZEG9RM24yV4zbIuimBe61bpFX3JDSPDuId4xNpVS7KzAVhNodoef6J0prM0e1/cvoFKk6s3133txfhePtQ80JROpu4BY49r0AgylKw4k/4ckM/khdHTxLkZIQMAgB70PAhxDwMQSch4BPIeBzCPgSFKofJIJaJkExk6CaSVDOJKhnEhQ0CSqaBCVNgpoOOjWda9i3vZde0nYXYErM/6BWXb43QL6tk39hXzXiYxd0CYamhoO83NSo6eQ7+Q3aQWQ6C9k/xu5F13pRu5d62DuPgdbc6IBe67zjOZXdmV6ZhRsfForudC/NNV179d5oXieA10M7bICT0U/QsGUmo1srJ6sSWdqYb+mP5VLlyLhh1mDOSLFKZY8sBwJ2xjRC7gwamR/Gxk3jNX/kvSrXrm3JnkSKZyqz1cvkHbqYMzROqxsXBfUo9slGcSt7vJ/yk79QSwMEFAAAAAgATn/4XG85Wy8RAQAADAEAAAsAAABfcmVscy8ucmVscwEMAfP+77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48UmVsYXRpb25zaGlwcyB4bWxucz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzIj48UmVsYXRpb25zaGlwIFR5cGU9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3BmLzIwMDUvMTAveGFtbC9lbnRyeSIgVGFyZ2V0PSIvWGFtbC9Eb2N1bWVudC54YW1sIiBJZD0iUmQyYTI5NjZjNzRkMDRlNDQiIC8+PC9SZWxhdGlvbnNoaXBzPlBLAwQUAAAACABOf/hcNc31dy8BAAAqAQAAEwAAAFtDb250ZW50X1R5cGVzXS54bWwBKgHV/u+7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFR5cGVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFja2FnZS8yMDA2L2NvbnRlbnQtdHlwZXMiPjxEZWZhdWx0IEV4dGVuc2lvbj0ieGFtbCIgQ29udGVudFR5cGU9ImFwcGxpY2F0aW9uL3ZuZC5tcy13cGYueGFtbCt4bWwiIC8+PERlZmF1bHQgRXh0ZW5zaW9uPSJyZWxzIiBDb250ZW50VHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLXBhY2thZ2UucmVsYXRpb25zaGlwcyt4bWwiIC8+PC9UeXBlcz5QSwECFAAUAAAACABOf/hckL8n9IECAADvBwAAEgAAAAAAAAAAAAAAAAAAAAAAWGFtbC9Eb2N1bWVudC54YW1sUEsBAhQAFAAAAAgATn/4XG85Wy8RAQAADAEAAAsAAAAAAAAAAAAAAAAAsQIAAF9yZWxzLy5yZWxzUEsBAhQAFAAAAAgATn/4XDXN9XcvAQAAKgEAABMAAAAAAAAAAAAAAAAA6wMAAFtDb250ZW50X1R5cGVzXS54bWxQSwUGAAAAAAMAAwC6AAAASwUAAAAA"
       RenderedHeight="114"
       RenderedWidth="221"
       Size="1"
       Width="211"
-      x="528"
-      y="400"
+      x="656"
+      y="200"
       id="a71417f3-51d3-4fc9-9ad5-dd2871a1e18e" />
   </PlacedNote>
-  <PlacedViewModels>
-    <PlacedViewModel
-      Color="-1765226296"
-      Height="202"
-      LastKnownName=""
-      RenderedHeight="212"
-      RenderedWidth="338"
-      Size="1"
-      Width="328"
-      x="728"
-      y="152"
-      id="b0fd2324-2169-4703-80e9-9bbed105aba6">
-      <Span>
-        <Span
-          Name="ViewModelExampleOfMockData"
-          idref="f62b0180-3580-48d8-88f7-e05951d55185" />
-      </Span>
-    </PlacedViewModel>
-  </PlacedViewModels>
 </Diagram>
