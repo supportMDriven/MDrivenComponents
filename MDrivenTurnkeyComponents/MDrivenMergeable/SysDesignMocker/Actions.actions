@@ -203,15 +203,20 @@
             AlignHorizontal=""
             AlignVertical=""
             Animation=""
-            BorderBottom="5"
-            BorderLeft="5"
-            BorderRight="5"
-            BorderTop="5"
+            BorderBottomLeftRadius="5"
+            BorderBottomRightRadius="5"
+            BorderTopLeftRadius="5"
+            BorderTopRightRadius="5"
             MarginBottom="2"
             MarginLeft="2"
             MarginRight="2"
             MarginTop="2"
             id="c6888598-82e3-4bac-94d6-7bb3a381df4d">
+            <StyleColorPropertiesFill>
+              <StyleColorProperties
+                Name="CardBackground"
+                idref="3bbea4f7-bce0-44f6-89dd-7457e42ccecd" />
+            </StyleColorPropertiesFill>
             <StyleTargetType>
               <StyleTargetType
                 Name="placingcontainer"
